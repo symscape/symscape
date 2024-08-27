@@ -1,0 +1,329 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1547 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>CFD over an (imported geometry) structure touching the flow volume bottom plane | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-forum page-node-1547 section-node one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../forum.html">Forums</a> › <a href="../forum/46.html">Questions</a></div>                  <h1 class="title">CFD over an (imported geometry) structure touching the flow volume bottom plane</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1547" class="node node-type-forum clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by nkAlex on November 27, 2014 - 17:33        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_46 first last"><a href="../forum/46.html" rel="tag" title="Get answers to product (e.g., Caedium) questions. View Ratings">Questions</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>Hello,</p>
+<p>I'm trying to simulate the wind flow over a membrane structure according to your "Double-Sided Membrane" and "Flow Over a Double-Sided Membrane" tutorials and I've run into a problem with correctly defining geometry in case the structure is standing on the ground.</p>
+<p>My structure is a saddlespan with 2 side walls which are anchored directly to the ground. The geometry is imported from an .obj file. I'm doing everything according to the tutorials, but on the mesh generation stage there is always an error like this: "Warning: Flow volume [www.72755.5] Tetulator: Failed: Front advance failed: 3028 faces remain". When looking on the Area color map I can see that the mesh on the structure and on the ground plane is not actually continuous at the edges which touch the ground (screenshot: <a href="https://www.dropbox.com/s/0f8vy3z434ol8io/Captured_105.png?dl=0" title="https://www.dropbox.com/s/0f8vy3z434ol8io/Captured_105.png?dl=0">https://www.dropbox.com/s/0f8vy3z434ol8io/Captured_105.png?dl=0</a> ), so I believe it most probably is the problem. Although it seems logical to me that when I subtract my structure faces from the flow volume all the intersection edges should also be generated. I even tried to move the flow volume a bit higher to make sure that my structure actually intersects the ground plane, but the same error occurs. But when I move the volume lower so that the structure is floating in the air — the mesh is generated just fine. So I'm a bit of at a loss here, how should this intersection be properly done?</p>
+<p>Here are some links to the simulation files:<br />
+The file with all the geometry right before subtracting imported mesh from the volume:<br />
+<a href="https://www.dropbox.com/s/4lp2k8imay0v5bd/CAS_18x30_geometry.sym?dl=0" title="https://www.dropbox.com/s/4lp2k8imay0v5bd/CAS_18x30_geometry.sym?dl=0">https://www.dropbox.com/s/4lp2k8imay0v5bd/CAS_18x30_geometry.sym?dl=0</a></p>
+<p>The file ready to run the mesh generation (where the error occurs):<br />
+<a href="https://www.dropbox.com/s/0u28ku4e4dnqrqu/CAS_18x30_pre-analysis.sym?dl=0" title="https://www.dropbox.com/s/0u28ku4e4dnqrqu/CAS_18x30_pre-analysis.sym?dl=0">https://www.dropbox.com/s/0u28ku4e4dnqrqu/CAS_18x30_pre-analysis.sym?dl=0</a></p>
+  <div class="forum-topic-navigation clear-block">
+          <a href="1498.html" class="topic-previous" title="Go to previous forum topic">‹ Room Fan </a>
+              <a href="1533.html" class="topic-next" title="Go to next forum topic">Inlet properties don&#039;t work ›</a>
+      </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+  
+  <a id="comment-2132"></a>
+<div class="comment comment-published first odd clearfix">
+  
+      <h3 class="title">
+      <a href="1547.html#comment-2132" class="active">Topology only Boolean operations are restricted</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on November 27, 2014 - 20:04.  </div>
+
+  <div class="content">
+    <p>Topology only Boolean operations are restricted to only include the geometry explicitly selected for the operation, so in your case it will not imprint edges on a coincident face.</p>
+<p>Anyway, it appears that your structure is closed, i.e., there is no path for air to enter it. In this case you need to have a base face that closes your structure, then:</p>
+<ol>
+<li>Subtract (Topology Only) the structure's base face from the outer boundary base face</li>
+<li>Stitch (Topology Only) the remaining faces including the top portion of your structure to form the final flow volume</li>
+</ol>
+<p>The double-sided face conversion is not applicable to your geometry if it is in fact closed.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2133"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1547.html#comment-2133" class="active">Thanks!
+I&#039;ve tried that and</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by nkAlex on November 28, 2014 - 13:11.  </div>
+
+  <div class="content">
+    <p>Thanks!</p>
+<p>I've tried that and now the mesh on the ground and on the structure seems to be stitched together, but I'm still getting the same type of error: "Warning: Flow volume [www.86678.5] Tetulator: Failed: Front advance failed: 48 faces remain". I've checked everything I could think of and the mesh seems to look nice and smooth, I can't see any sliver elements or major size inconsistencies. Vol ratio doesn't even show any "blue" elements, the worst values are about 0.3.<br />
+Here are the screenshot of the E ratio:<br />
+<a href="https://www.dropbox.com/s/nrmpteym3jm60jc/Captured_106.png?dl=0" title="https://www.dropbox.com/s/nrmpteym3jm60jc/Captured_106.png?dl=0">https://www.dropbox.com/s/nrmpteym3jm60jc/Captured_106.png?dl=0</a></p>
+<p>and the troubled model file:<br />
+<a href="https://www.dropbox.com/s/olglmdlygg8h7gn/CAS_18x30_tetulator_error.sym?dl=0" title="https://www.dropbox.com/s/olglmdlygg8h7gn/CAS_18x30_tetulator_error.sym?dl=0">https://www.dropbox.com/s/olglmdlygg8h7gn/CAS_18x30_tetulator_error.sym?...</a></p>
+<p>Also I have a further question about modeling: what should I do when my structure is not closed and partially touches the ground? I.e. this saddlespan can be made with one, two or no side walls, so all these variants have to be analyzed.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2134"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="1547.html#comment-2134" class="active">Unconnected edges present</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on November 28, 2014 - 14:43.  </div>
+
+  <div class="content">
+    <p>It appears there are unconnected edges in your volume. To correct, use the <strong>Edge-&gt;Connect</strong> tool on all edges and setup the Substance again, this produced a volume mesh without errors for me.</p>
+<p>For your open membrane cases you need to:</p>
+<ol>
+<li>Subtract (Topology Only) all the edges (attached to the membranes that touch the ground) from the boundary base face in one operation</li>
+<li>Stitch (Topology Only) all the faces except for the membranes to reform the flow volume</li>
+<li>Subtract (Topology Only) the membrane face from the flow volume in one operation</li>
+<li>Assign all the membranes as 2-sided in one operation</li>
+</ol>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2135"></a>
+<div class="comment comment-published last even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1547.html#comment-2135" class="active">Thank you!
+The unconnected</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by nkAlex on November 29, 2014 - 09:10.  </div>
+
+  <div class="content">
+    <p>Thank you!</p>
+<p>The unconnected edges happened to be the problem in each case.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div></div></div></div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1547 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:10 GMT -->
+</html>

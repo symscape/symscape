@@ -1,0 +1,419 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1257 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Transient Water and Air Flow in a Tank | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="1255.html" />
+<link rel="up" href="817.html" />
+<link rel="next" href="1718.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-1257 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="817.html">RANS Flow</a></div>                  <h1 class="title">Transient Water and Air Flow in a Tank</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1257" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on May 27, 2013 - 13:06        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Simulate incompressible, transient (unsteady), turbulent water and air flow through a tank in pseudo 2D using the Volume Of Fluid (VOF) solver. View velocity vectors, visualize the interface between the air and the water, and create a movie.</p>
+<p><img src="../files/tutorials/voftank/final-state.png" width="484" height="363" alt="Final State" /></p>
+<p>This tutorial is classed as <strong>advanced</strong> and you should consider completing other simpler RANS Flow tutorials as a prerequisite, such as <a href="818.html">&quot;Incompressible Flow Through a Pipe into a Box&quot;</a>.</p>
+<h3>Goals</h3>
+<p>In this tutorial, you will learn how to:</p>
+<ul>
+<li>Specify fluid conditions on a multiple-volume flow domain for an incompressible, transient, turbulent, multiphase flow simulation </li>
+<li>Specify boundary conditions on faces </li>
+<li>Specify meshing parameters </li>
+<li>Generate an air-water interface color map </li>
+<li>Generate velocity vectors </li>
+<li>Monitor residuals </li>
+<li>Create a movie </li>
+</ul>
+<h3>Assumptions</h3>
+<ol>
+<li>You have <a href="15.html">activated</a> the <a href="../product/rans.html">Caedium RANS Flow</a> add-on, or <a href="../product/professional.html">Caedium Professional</a>. </li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>. </li>
+<li>You have completed simpler RANS Flow tutorials. </li>
+<li>You have either:
+<ul>
+<li>Launched Caedium with the project file (<a href="../files/tutorials/tank/water-tank-geom.sym">water-tank-geom.sym</a>) containing the geometry for this tutorial </li>
+<li>Created the geometry by following the tutorial <a href="1256.html">&quot;Water Tank&quot;</a> </li>
+</ul>
+</li>
+</ol>
+<p>The geometry within Caedium should appear as shown below.</p>
+<p><img src="../files/tutorials/voftank/geometry.png" width="484" height="363" alt="Geometry" /></p>
+<p>The geometry for this tutorial is specially configured so that you can generate a multi-block hexahedra mesh one cell thick to perform a pseudo 2D simulation. The multiple volumes are connected through common faces that were configured in the geometry creation tutorial using the <strong>Faces-&gt;Connect</strong> tool in the <strong>Geometry</strong> <a href="../tutorials/essentials.html#toolpalette">Tool Palette</a>.</p>
+<h2 class="tutorial-heading">Group the Geometry</h2>
+<p>For more details on the advanced multi-selection technique used in this section see <a href="827.html">&quot;Camera View Control and Entity Selection&quot;</a>.</p>
+<h3>Group Volumes</h3>
+<p>Right-click on the <a href="../tutorials/essentials.html#viewwindow">View Window</a> (<strong>view</strong>) background, double-click <strong>sim-&gt;Volumes</strong> in the <strong>Select</strong> dialog, select <strong>Group </strong>from the menu, and select <strong>Properties</strong> from the menu.</p>
+<p>In the <a href="../tutorials/essentials.html#propertiespanel">Properties Panel</a>, select the Group tab <img alt="" src="../files/tutorials/shared/group-tab.png" /> and set <strong>Name</strong> to <strong>flow-domain</strong>. Press Enter on the keyboard to apply the changes to the Properties Panel.</p>
+<p><img src="../files/tutorials/voftank/flow-domain-props.png" width="214" height="247" alt="flow-domain Properties" /></p>
+<p>To shade the geometry faces, right-click on the View Window background, double-click <strong>sim-&gt;Faces</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel, turn off the <strong>Transparent</strong> property to make all faces visible (shaded).</p>
+<p><img src="../files/tutorials/voftank/shaded-faces.png" width="484" height="363" alt="Faces Shaded" /></p>
+<h3>Group Front Faces</h3>
+<p>The 6 front faces are shown below in green:</p>
+<p><img src="../files/tutorials/voftank/front-faces.png" width="400" height="296" alt="Front Faces" /></p>
+<p>In the View Window, ensure that only the background is selected (i.e., no geometry is selected). Hold down both the <strong>Shift</strong> key (to suppress the <strong>Select</strong> dialog) and the <strong>Ctrl</strong> key (to add pick to the current selection), and use successive right-clicks to select all the front faces as shown above. Be sure to confirm that you have selected a face by looking for all the face edges being highlighted. On the last selection, select <strong>Group</strong> from the menu. In the Properties Panel, select the Group tab and set the <strong>Name</strong> to <strong>front</strong>. The <strong>front</strong> group should now contain the following faces: <strong>face_45, face_50, face_55, face_59, face_63, face_68</strong>.</p>
+<h3>Group Back Faces</h3>
+<p>The 6 back faces are shown below in blue:</p>
+<p><img src="../files/tutorials/voftank/back-faces.png" width="400" height="296" alt="Back Faces" /></p>
+<p>Perform the same multi-select process to create the <strong>back</strong> group for faces: <strong>face_44, face_49, face_54, face_58, face_62, face_67</strong>.</p>
+<h3>Group Side Faces</h3>
+<p>The side faces are shown below in red:</p>
+<p><img src="../files/tutorials/voftank/side-faces.png" width="400" height="296" alt="Side Faces" /></p>
+<p>Multi-select all <strong>sim-&gt;Faces</strong>, <strong>Deselect</strong> (by selecting) the <strong>front</strong> group and the <strong>back</strong> group. Select the <strong>Results</strong> Tool Palette. Select the <strong>Selection Filters-&gt;Connected Topology</strong> tool. In the Properties Panel set <strong>Connected</strong> to <strong>1</strong> (if it is not 1 already), click the <strong>Add Connected Topology</strong> button and select <strong>Done</strong>.</p>
+<p><img src="../files/tutorials/voftank/connected-top-props.png" width="245" height="497" alt="Connected Topology Tool Properties" /></p>
+<p>Press and hold the <strong>Ctrl</strong> key, right-click on the View Window background, double-click <strong>sim</strong>, select <strong>Group</strong> to create the <strong>sides</strong> group (red).</p>
+<h2 class="tutorial-heading">Specify the Substance Settings</h2>
+<h3>Specify the Fluid Conditions</h3>
+<p>Select the <strong>Physics</strong> Tool Palette.</p>
+<p>Select <strong>Multiphases-&gt;Air + Water</strong>. The Properties Panel will show the default properties for a multiphase substance consisting of air and water. To enable incompressible turbulent (viscous) multiphase flow the <strong>State-&gt;Viscous</strong> property should be set to <strong>Yes</strong> (its default value). Set <strong>State-&gt;Transient</strong> to <strong>Yes</strong> for an unsteady simulation.</p>
+<p><img src="../files/tutorials/voftank/air-water-props.png" width="285" height="601" alt="Air + Water Tool Properties" /></p>
+<p>Drag and drop the <strong>Air + Water</strong> tool onto a face of a volume, double-click the <strong>flow-domain</strong> group in the <strong>Select</strong> dialog, and select <strong>Done</strong> to set air and water as the fluid inside the flow domain.</p>
+<p><img src="../files/tutorials/voftank/air-water-flow-domain-props.png" width="245" height="248" alt="flow-domain Properties" /></p>
+<h3>Set the Reference Properties for the Simulation</h3>
+<p class="note">The reference properties are used by the flow solver, boundary conditions, and initial conditions. The reference velocity is used to initialize primary simulation variables, such as the turbulent scalar field k. </p>
+<p>In the Properties Panel set <strong>Substance: Air + Water-&gt;Properties-&gt;Phase: All-&gt;Reference-&gt;U: Fixed Value-&gt;Value</strong> to [<strong>1 0 0</strong>].</p>
+<p>For this case gravity acts in the negative Y-direction, so set <strong>Substance: Air + Water-&gt;Properties-&gt;Phase: All-&gt;Reference-&gt;g</strong> to [<strong>0 -9.81 0</strong>].</p>
+<p><img src="../files/tutorials/voftank/ref-u-props.png" width="283" height="293" alt="Reference Properties" /></p>
+<h3>Set Flow Solver Properties</h3>
+<p>Within the <strong>Substance: Air + Water</strong> property, expand the <strong>Solver: RANS Flow </strong>property and set <strong>Iterations</strong> to <strong>10</strong>.</p>
+<p>Expand the <strong>Control</strong> property and set <strong>Time Step</strong> to <strong>0.001</strong>.</p>
+<p><img src="../files/tutorials/voftank/time-step-props.png" width="291" height="292" alt="Solver Properties" /></p>
+<p class="note">The Time Step property is used by the flow solver to determine how far to advance the simulation in time per iteration. If the time step is too large, the simulation will become unstable and report an error. The Iterations property controls the results update frequency by specifying the number of iterations per simulation time step.</p>
+<h3>Set the Initial Properties for the Simulation</h3>
+<p class="note">Initial values are used by the flow (simulation) solver to initialize primary fields (e.g., pressure, velocity). For a transient simulation, the initial values should reflect the conditions of the primary fields at time = zero (e.g., velocity = [0 0 0]). For a steady-state simulation the initial values should be as close as possible to the final steady-state conditions of the primary fields (e.g., the inlet or free-stream velocity is typically used to initialize velocity for internal flows).</p>
+<p>With the flow domain already selected from the previous step, expand the <strong>Physics: Initial</strong> property in the Properties Panel and set the <strong>U</strong> property to <strong>Fixed Value</strong>. Set <strong>U: Fixed Value-&gt;Value</strong> to [<strong>0 0 0</strong>]. </p>
+<p><img src="../files/tutorials/voftank/initial-u-props.png" width="291" height="292" alt="Initial Properties" /></p>
+<p>Initially there will be water, bounded by the baffles, in the lower middle volume (shown below), so the initial value for alpha1 (where 0 = air and 1 = water) will be set accordingly.</p>
+<p><img src="../files/tutorials/voftank/lower-middle-volume.png" width="400" height="296" alt="Lower Middle Volume" /></p>
+<p>Right click on a face of the lower middle volume (green), double-click <strong>volume_7</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel, select the Volume tab <img alt="" src="../files/tutorials/shared/volume-entity-tab.png" /> and set <strong>Physics: Initial-&gt;alpha1</strong> to <strong>Fixed Value</strong>. Set <strong>alpha1: Fixed Value-&gt;Value</strong> to <strong>1</strong> (water).</p>
+<p><img src="../files/tutorials/voftank/initial-alpha1-props.png" width="270" height="245" alt="Lower Middle Volume Initial Properties" /></p>
+<h2 class="tutorial-heading">Specify the Boundary Conditions</h2>
+<p>By creating a one cell thick mesh and not creating any boundary conditions on the front and back face groups the flow solver will perform a pseudo 2D flow simulation.</p>
+<h3>Wall Conditions</h3>
+<p>Drag and drop the <strong>Faces-&gt;Wall</strong> tool onto a face of the sides group. Double-click <strong>sides </strong>in the <strong>Select</strong> dialog and select <strong>Done</strong> to create walls on the sides of the flow domain.</p>
+<p class="note">A wall is a solid surface through which fluid cannot flow.</p>
+<p><img src="../files/tutorials/voftank/wall-props.png" width="270" height="246" alt="Wall Properties" /></p>
+<h3>Inlet Condition</h3>
+<p>The inlet (blue) and outlet (green) are shown below:</p>
+<p><img src="../files/tutorials/voftank/inlet-outlet.png" width="400" height="296" alt="Inlet and Outlet" /></p>
+<p>To create an inlet, drag and drop the <strong>Faces-&gt;Inlet</strong> tool onto the face shown above in blue. Double-click <strong>face_52</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong> to create the inlet.</p>
+<p class="note">An inlet is a boundary condition that specifies the properties of the fluid as it enters the flow volume.</p>
+<p>Water enters the flow domain through the inlet, so in the Properties Panel set <strong>Physics: Inlet-&gt;Type: Default-&gt;alpha1</strong> to <strong>Fixed Value</strong>. Set <strong>alpha1: Fixed Value-&gt;Value</strong> to <strong>1</strong> (water).</p>
+<p><img src="../files/tutorials/voftank/inlet-props.png" width="270" height="244" alt="Inlet Properties" /></p>
+<h3>Outlet Condition</h3>
+<p>The outlet is shown below in green:</p>
+<p><img src="../files/tutorials/voftank/inlet-outlet.png" width="400" height="296" alt="Inlet and Outlet" /></p>
+<p class="note">An outlet is a boundary condition that specifies the properties of the fluid as it leaves the flow volume.</p>
+<p>To create an outlet, drag and drop the <strong>Faces-&gt;Outlet</strong> tool onto the face shown above in green. Double-click <strong>face_65</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong> to create the outlet.</p>
+<p><img src="../files/tutorials/voftank/outlet-props.png" width="270" height="245" alt="Outlet Properties" /></p>
+<h2 class="tutorial-heading">Specify Meshing Parameters</h2>
+<p>The automated meshing topology recognition system will identify which meshing algorithm is best suited to a given configuration. In this case the geometry was constructed to be compatible with the multi-block hexahedra meshing algorithms.</p>
+<p>You do not need to apply any volume or boundary condition prior to focusing on the meshing process - all that is required is an active Substance on your flow domain.</p>
+<p>First we will focus on the surface mesh to avoid the extra time required to create the volume mesh.</p>
+<p>To see individual surface mesh elements during the meshing process right-click on the View Window background, double-click <strong>sim-&gt;Faces</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel, turn off the <strong>Transparent</strong> property and set the <strong>Style</strong> property to <strong>Flat</strong>.</p>
+<p>Select the <strong>Results</strong> Tool Palette. With all faces still selected from the previous operation select the <strong>Scalar Fields-&gt;A</strong> (area) tool, click <strong>Add A </strong>at the bottom of the Properties Panel and select <strong>Color Map</strong>.</p>
+<p>The request for the area color map will cause all the faces to be meshed.</p>
+<p><img src="../files/tutorials/voftank/mesh-area.png" width="484" height="363" alt="Mesh Area Color Map" /></p>
+<h3>Specify Accuracy</h3>
+<p>You can control the mesh resolution of a flow domain by using the <a href="723.html">Accuracy tool</a>, as shown in this section.</p>
+<h4>Depth Edge</h4>
+<p>To make a one cell thick flow domain, select the <strong>Physics</strong> Tool Palette and select the <strong>Special-&gt;Accuracy </strong>tool. In the Properties Panel set <strong>Accuracy</strong> to <strong>Custom</strong> and set <strong>Resolution</strong> to <strong>1</strong>.</p>
+<p><img src="../files/tutorials/voftank/accuracy-props.png" width="285" height="600" alt="Accuracy Properties" /></p>
+<p>The edge used in this step is shown below in red:</p>
+<p><img src="../files/tutorials/voftank/accuracy-edges.png" width="400" height="296" alt="Accuracy Edges" /></p>
+<p>Drag and drop the <strong>Accuracy</strong> tool onto the red edge shown above, double-click <strong>edge_32</strong> in the <strong>Select</strong> dialog, and select <strong>Done</strong>.</p>
+<p><img src="../files/tutorials/voftank/one-cell-thick.png" width="484" height="363" alt="1 Cell Thick Mesh" /></p>
+<h4>Top Edges</h4>
+<p>The 3 top edges used in this step are shown below in green:</p>
+<p><img src="../files/tutorials/voftank/accuracy-edges.png" width="400" height="296" alt="Accuracy Edges" /></p>
+<p>Select the <strong>Special-&gt;Accuracy </strong>tool. In the Properties Panel set <strong>Accuracy:</strong> <strong>Custom-&gt;</strong><strong>Resolution</strong> to <strong>20</strong>. Drag and drop the <strong>Accuracy</strong> tool onto the 3 green edges shown above using multi-select, and select <strong>Done</strong>.</p>
+<p><img src="../files/tutorials/voftank/accuracy-top-edges.png" width="484" height="363" alt="Top Edges Mesh" /></p>
+<h4>Side Edges</h4>
+<p>The 3 side edges used in this step are shown below in blue:</p>
+<p><img src="../files/tutorials/voftank/accuracy-edges.png" width="400" height="296" alt="Accuracy Edges" /></p>
+<p>Select the <strong>Special-&gt;Accuracy </strong>tool. In the Properties Panel set <strong>Accuracy:</strong> <strong>Custom-&gt;</strong><strong>Resolution</strong> to <strong>10</strong>. Drag and drop the <strong>Accuracy</strong> tool onto the 3 blue edges shown above using multi-select, and select <strong>Done</strong>.</p>
+<p><img src="../files/tutorials/voftank/accuracy-side-edges.png" width="484" height="363" alt="Side Edges Mesh" /></p>
+<h2 class="tutorial-heading">Generate Initial Flow Results</h2>
+<p>To better see the velocity vectors (created in a subsequent operation), right-click on one of the front faces in the View Window, double-click <strong>front</strong> in the <strong>Select</strong> dialog, and then select <strong>Properties</strong> from the menu. In the Properties Panel, turn on the <strong>Transparent</strong> property.</p>
+<p>To show velocity vectors on the front faces, select the <strong>Results </strong>Tool Palette and drag and drop <strong>Vector Fields-&gt;U</strong> (velocity) onto any front face. Double click <strong>front </strong>in the <strong>Select </strong>dialog and select <strong>Arrows</strong>.</p>
+<p>The request for the velocity color map will cause the volumes to be meshed.</p>
+<p>With an initial velocity of zero the arrows will not be visible.</p>
+<p>In the View Legend, left-click on the title <strong>Arrows</strong> <img alt="" src="../files/tutorials/shared/arrows-legend.png" />, and in the Properties Panel set <strong>Scale</strong> to <strong>0.1</strong>.</p>
+<p><img src="../files/tutorials/voftank/arrows.png" width="484" height="363" alt="Arrows" /></p>
+<p>Drag and drop <strong>Scalar Fields-&gt;alpha1</strong> onto any back face. Double click <strong>back</strong> in the <strong>Select</strong> dialog and select <strong>Color Map</strong>. In the Properties Panel set <strong>Style</strong> to <strong>Smooth</strong> and turn off the <strong>Transparent</strong> property.</p>
+<p><img src="../files/tutorials/voftank/alpha1-colormap.png" width="484" height="363" alt="Accuracy Edges" /></p>
+<p>In the View Legend, left-click on the title <strong>Color Map</strong> <img alt="" src="../files/tutorials/shared/colormap-legend.png" />, and in the Properties Panel set <strong>Colors</strong> to <strong>2</strong>, set <strong>Range</strong> to <strong>Manual</strong>, set the associated <strong>Bounds</strong> to [<strong>0.49 0.51</strong>], and turn on the <strong>Reverse</strong> property.</p>
+<p><img src="../files/tutorials/voftank/alpha1-colormap-props.png" width="484" height="363" alt="Alpha1 Color Map Properties" /></p>
+<p>Water is shown in blue and air is shown in red.</p>
+<h2 class="tutorial-heading">Create Residuals Monitor</h2>
+<p>Left-click in the View Window to give it focus. Drag and drop the <strong>Special-&gt;Residuals</strong> tool onto a face of the flow domain. Double-click <strong>flow-domain</strong> in the <strong>Select</strong> dialog and select <strong>Monitor</strong> to create the residuals monitor.</p>
+<p>Drag and drop the <strong>Residuals</strong> tab over to the right-hand edge of the Caedium application window to split the window into two parts as shown below.</p>
+<p><img src="../files/tutorials/voftank/residuals.png" width="484" height="363" alt="Residuals Monitor" /></p>
+<h2 class="tutorial-heading">Run the Flow Solver and Create a Movie</h2>
+<p class="note">The number of flow (simulation) solver iterations is determined by multiplying the number of simulation time-steps (default = 5) by the number of iterations per simulation time-step (default = 100). After each simulation time-step (equivalent to 100 iterations by default) the results will be refreshed.</p>
+<p>In the &quot;Set Flow Solver Properties&quot; section you set the number of iterations per simulation time-step (Iterations property) to 10, and so for this simulation you will set the number of simulation time-steps to 250, for a total of 2500 iterations.</p>
+<p>This simulation is transient, therefore each iteration is equivalent to <strong>Solver: RANS Flow-&gt;Control-&gt;Time Step</strong> (0.001s) you set earlier. In total you will simulate 2.5s (2500 * 0.001s) in real time.</p>
+<p>Right-click on the View Window background, double-click <strong>sim</strong>, and select <strong>Properties</strong> from the menu. Select the Simulation tab <img alt="" src="../files/tutorials/shared/simulation-tab.png" /> in the Properties Panel and set <strong>Time-&gt;Duration</strong> to <strong>250</strong>.</p>
+<p><img src="../files/tutorials/voftank/sim-time-props.png" width="222" height="245" alt="Duration Property" /></p>
+<p>In the <strong>Home</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> click the <strong>Record</strong> button <img alt="" src="../files/tutorials/shared/record.png" />. Enter the movie filename in the <strong>Record Movie</strong> dialog, and click <strong>Save</strong>.</p>
+<p class="note">You can record a movie of any View Window, Plot Window, or Monitor Window. You can also record movies simultaneously of any number of Windows. The <strong>Record</strong> button reflects the record-state of the current selected Window.</p>
+<p>In the <strong>Home</strong> Toolbar click the <strong>Run</strong> button <img alt="" src="../files/tutorials/shared/play.png" /> to run the flow solver.</p>
+<p class="note">If you wanted to interrupt the flow solver, you would re-click the <strong>Run</strong> button; the solver would then stop at the end of the current simulation time-step.</p>
+<p>Let the solver complete its run. Note the updates of the velocity arrows, the alpha1 color map, and the residuals monitor as the simulation progresses.</p>
+<p>Toggle the <strong>Record</strong> button to complete the movie.</p>
+<p><img src="../files/tutorials/voftank/final-state.png" width="484" height="363" alt="Final State" /></p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="1255.html" class="page-previous" title="Go to previous page">‹ Rotating Paddle using Moving Reference Frame</a>
+                    <a href="817.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="1718.html" class="page-next" title="Go to next page">Conjugate Heat Transfer for a Heat Sink ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="expanded active-trail"><a href="817.html">RANS Flow</a><ul class="menu"><li class="leaf first"><a href="818.html">Incompressible Flow Through a Pipe into a Box</a></li>
+<li class="leaf"><a href="816.html">Incompressible Transient Flow with Heat Transfer</a></li>
+<li class="leaf"><a href="819.html">Transonic Flow Over the NACA 0012 Airfoil</a></li>
+<li class="leaf"><a href="831.html">Flow Over a Rotating Wheel with Moving Ground</a></li>
+<li class="leaf"><a href="1082.html">Flow Over a CO2 Dragster</a></li>
+<li class="leaf"><a href="1255.html">Rotating Paddle using Moving Reference Frame</a></li>
+<li class="leaf active-trail"><a href="1257.html" class="active">Transient Water and Air Flow in a Tank</a></li>
+<li class="leaf"><a href="1718.html">Conjugate Heat Transfer for a Heat Sink</a></li>
+<li class="leaf last"><a href="1281.html">Flow Over a Double-Sided Membrane</a></li>
+</ul></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="collapsed last"><a href="../tips.html">Tips</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1257 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:52 GMT -->
+</html>

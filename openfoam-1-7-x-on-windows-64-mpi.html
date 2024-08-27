@@ -1,0 +1,320 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/openfoam-1-7-x-on-windows-64-mpi by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:25:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>OpenFOAM 1.7.x on Windows 64-bit with Native MPI | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-openfoam-1-7-x-on-windows-64-mpi section-openfoam-1-7-x-on-windows-64-mpi one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="index.html" title="Home" rel="home"><img src="files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="index.html">Home</a> › <a href="articles.html">Articles</a></div>                  <h1 class="title">OpenFOAM 1.7.x on Windows 64-bit with Native MPI</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-947" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on August 31, 2010 - 08:46        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_15 first last"><a href="articles.html" rel="tag" title="General interest">Articles</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p><em>For the <strong>latest version</strong> of our Windows patch for OpenFOAM visit <a href="openfoam-2-2-x-on-windows.html">"OpenFOAM 2.2.x on Windows"</a>.</em></p>
+<p>We have updated our Windows patch for the latest <strong>OpenFOAM&reg; release (v1.7.x)</strong>. As with the previous patch version this also supports <strong>64-bit</strong> compilation using the <strong>MinGW-w64 cross-compiler</strong> and <strong>parallel</strong> computation using the native Windows MPI implementation provided by the <strong>free Microsoft HPC SDK</strong> and also available on <a href="http://www.microsoft.com/hpc">Microsoft Windows HPC Server 2008</a> for clusters.</p>
+<h3>OpenFOAM GUI</h3>
+<p><em>Are you looking for a <strong>GUI driven, integrated simulation environment for Windows, Linux, and Mac</strong> incorporating a selection of the <strong>RANS OpenFOAM solvers</strong> and various import/export filters?</em></p>
+<p><span class="inline inline-center"><a href="get-started-with-caedium.html"><img title="Get Started With Caedium Now" alt="Get Started With Caedium Now" src="files/flair/get-started-button.png" width="177" height="43" /></a></span></p>
+<h3><a name="patch-build-process"></a>Patch Build Process</h3>
+<p><em>To build OpenFOAM for Windows with a cross-compiler requires expert knowledge of Windows and Linux utilities and compilers.</em></p>
+<p>The following steps are required to produce a native Windows version of OpenFOAM 1.7.x 64-bit with [optional] native Windows MPI:</p>
+<ol>
+<li>Install <a href="http://sourceforge.net/projects/mingw-w64/">MinGW-w64 cross-compiler and zlib</a> on Linux</li>
+<li>Install zlib files into following locations:
+<ul>
+<li><code>&lt;mingw-w64&gt;/x86_64-w64-mingw32/include/zconf.h</code></li>
+<li><code>&lt;mingw-w64&gt;/x86_64-w64-mingw32/include/zlib.h</code></li>
+<li><code>&lt;mingw-w64&gt;/bin/zlib1.dll</code></li>
+<li><code>&lt;mingw-w64&gt;/x86_64-w64-mingw32/lib/libz.a</code></li>
+<li><code>&lt;mingw-w64&gt;/x86_64-w64-mingw32/lib/libzdll.a</code></li>
+</ul>
+</li>
+<li>May need to add <code>#include_next &lt;float.h&gt;</code> to the end of<br />
+<code>&lt;mingw-w64&gt;/lib/gcc/x86_64-w64-mingw32/&lt;gcc-version&gt;/include/float.h</code> and remove it from<br />
+<code>&lt;mingw-w64&gt;/x86_64-w64-mingw32/include/float.h</code> to include the right float.h</li>
+<li>[optional] Create <a href="configure-msmpi-for-mingw-w64.html">libmsmpi.a from Microsoft HPC SDK</a></li>
+<li>Install the <a href="http://github.com/OpenCFD/OpenFOAM-1.7.x.git">OpenFOAM 1.7.x source</a> distribution on Linux - <strong>git commit: 14b79332ee4a1827656951db39fe81cc5ba52d78, Date: Tue Nov 16 20:41:48 2010</strong>.</li>
+<li>Patch (using the Linux patch command) the OpenFOAM 1.7.x source distribution with our <a href="files/articles/openfoam17x-windows/v7-mingw-openfoam-1-7-x.patch.zip">MinGW Windows modifications</a> [last updated May 3, 2011 to v7]</li>
+<li>At various stages during this process you will need to set OpenFOAM MinGW-w64 environment variables and source etc/bashrc. As an example:<br />
+<code>export FOAM_INST_DIR="$HOME/projects/of/of1.7"<br />
+export WM_OSTYPE=MSwindows<br />
+export WM_COMPILER=mingw-w64<br />
+export WM_ARCH_OPTION=64<br />
+export WM_CC='x86_64-w64-mingw32-gcc'<br />
+export WM_CXX='x86_64-w64-mingw32-g++'<br />
+export compilerInstall=system<br />
+export WM_MPLIB='NONE' or [optional] export WM_MPLIB='MSMPI'<br />
+[optional] export MPI_ARCH_PATH="$HOME/projects/msmpi/install"<br />
+source "$FOAM_INST_DIR/OpenFOAM-1.7.x/etc/bashrc"</code>
+</li>
+<li>[optional] Install the <a href="http://downloads.sourceforge.net/foam/ThirdParty-1.7.x.gtgz?use_mirror=mesh">ThirdParty-1.7.x source</a> and build scotch according to:
+<ul>
+<li><code>cp &lt;OpenFOAM-1.7.x&gt;/mingw-extra/scotch/src/Make.inc/* &lt;ThirdParty-1.7.x&gt;/scotch_5.1/src/Make.inc/.</code></li>
+<li><code>cp &lt;OpenFOAM-1.7.x&gt;/mingw-extra/scotch/src/libscotch/* &lt;ThirdParty-1.7.x&gt;/scotch_5.1/src/libscotch/.</code></li>
+<li>source the OpenFOAM native linux environment variables</li>
+<li>Build scotch for Linux in the usual way</li>
+<li>source the OpenFOAM MinGW-w64 environment variables</li>
+<li><code>cd &lt;ThirdParty-1.7.x&gt;/scotch_5.1/src</code></li>
+<li><code>rm Makefile.inc</code></li>
+<li><code>ln -s Make.inc/Makefile.inc.mingw-w64 Makefile.inc</code></li>
+<li><code>cd libscotch</code></li>
+<li><code>make</code></li>
+<li><code>mkdir -p $FOAM_LIBBIN</code></li>
+<li><code>cp libscotch.* $FOAM_LIBBIN</code></li>
+</ul>
+</li>
+<li>To build OpenFOAM:
+<ul>
+<li>source the OpenFOAM native linux environment variables</li>
+<li><code>cd &lt;OpenFOAM-1.7.x&gt;/wmake/src; make</code></li>
+<li><code>ln -s &lt;OpenFOAM-1.7.x&gt;/wmake/bin/linux64Gcc &lt;OpenFOAM-1.7.x&gt;/wmake/bin/linux64mingw-w64</code></li>
+<li>source the OpenFOAM MinGW-w64 environment variables</li>
+<li><code>cd &lt;OpenFOAM-1.7.x&gt;;./Allwmake</code></li>
+</ul>
+</li><li>Transfer the OpenFOAM etc directory (&lt;OpenFOAM-1.7.x&gt;/etc), executables (&lt;OpenFOAM-1.7.x&gt;/applications/bin/linux64mingw-w64*/*.exe), and libraries (&lt;OpenFOAM-1.7.x&gt;/lib/linux64mingw-w64*/*.dll and &lt;OpenFOAM-1.7.x&gt;/lib/linux64mingw-w64*/*/*.dll) to the Windows computer</li>
+<li>Transfer the MinGW-w64 libraries:
+<ul>
+<li><code>&lt;mingw-w64&gt;/bin/zlib1.dll</code></li>
+<li><code>&lt;mingw-w64&gt;/bin/libgcc_s_sjlj-1.dll</code></li>
+<li><code>&lt;mingw-w64&gt;/bin/libstdc++-6.dll</code></li>
+</ul>
+<p>to the Windows computer</p></li>
+<li>On the Windows computer ensure the following environment variables are set:
+<ul>
+<li>The WM_PROJECT_DIR and USERNAME variables are set.</li>
+<li>The PATH variable is set to include the OpenFOAM executable and library locations (including &lt;OpenFOAM-1.7.x&gt;/lib/linux64mingw-w64*/dummy or [optional] &lt;OpenFOAM-1.7.x&gt;/lib/linux64mingw-w64*/msmpi).</li>
+</ul>
+</li>
+<li>Launch a Windows command prompt to run OpenFOAM solvers and utilities, such as simpleFoam.exe.</li>
+</ol>
+<h3><a name="win-hpc-server" id="win-hpc-server"></a>Windows HPC Server 2008</h3>
+<p><strong>job submit</strong> example on <strong>Windows HPC Server 2008</strong> for simpleFoam:</p>
+<p><code>job submit /jobname:simpleFoam-jobName /name:simpleFoam-taskName /numprocessors:16 /stdout:\\CRAY01\&lt;of-case&gt;\stdout.txt /stderr:\\CRAY01\&lt;of-case&gt;\stderr.txt mpiexec -env WM_PROJECT_DIR \\CRAY01\&lt;OpenFOAM-1.7.x&gt; -env MPI_BUFFER_SIZE 20000000 -env USERNAME openfoam -env PATH \\CRAY01\&lt;OpenFOAM-1.7.x&gt;\lib\linux64mingw-w64*;\\CRAY01\&lt;OpenFOAM-1.7.x&gt;\lib\linux64mingw-w64*\msmpi \\CRAY01\&lt;OpenFOAM-1.7.x&gt;\applications\bin\linux64mingw-w64*\simpleFoam -parallel -case \\CRAY01\&lt;of-case&gt;\pitzDaily</code></p>
+<p>Note you need to share both the case (\\CRAY01\&lt;of-case&gt; - arbitrary name of your choosing) and application directories (\\CRAY01\&lt;OpenFOAM-1.7.x&gt;) so all nodes on the cluster can access them.</p>
+<h3>Constraints</h3>
+<p>With this method of building OpenFOAM for Windows the job control scripts in &lt;OpenFOAM-1.7.x&gt;/bin (such as foamSolverSweeps) are unavailable. Also the libccmio library is not built.</p>
+<h4>Notes</h4>
+<ul>
+<li><a href="node/808.html">OpenFOAM</a> is a registered trademark of OpenCFD and is unaffiliated with Symscape</li>
+<li>The OpenFOAM Windows patch provided here is licensed under the <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License (GPL)</a></li>
+</ul>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="products.html">Products</a><ul class="menu"><li class="leaf first"><a href="product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="news.html">News</a></li>
+<li class="collapsed"><a href="blog.html">Blog</a></li>
+<li class="leaf"><a href="about.html" title="">About</a></li>
+<li class="expanded last"><a href="resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="articles.html">Articles</a></li>
+<li class="leaf"><a href="image.html">Gallery</a></li>
+<li class="leaf"><a href="support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="forum.html">Forums</a></li>
+<li class="leaf"><a href="downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="partners.html">Partners</a></li>
+<li class="leaf"><a href="poll.html">Polls</a></li>
+<li class="leaf last"><a href="links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="forum.html"><img title="Forums" alt="Forums" src="files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="contact.html">Contact</a> | <a href="trademarks.html">Trademarks</a> | <a href="privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/openfoam-1-7-x-on-windows-64-mpi by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:25:01 GMT -->
+</html>

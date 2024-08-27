@@ -1,0 +1,247 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/reynolds-averaged-navier-stokes-equations by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:02:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Reynolds-Averaged Navier-Stokes Equations | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-reynolds-averaged-navier-stokes-equations section-reynolds-averaged-navier-stokes-equations one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="index.html" title="Home" rel="home"><img src="files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="index.html">Home</a> › <a href="articles.html">Articles</a></div>                  <h1 class="title">Reynolds-Averaged Navier-Stokes Equations</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-777" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on June 9, 2009 - 10:18        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_15 first last"><a href="articles.html" rel="tag" title="General interest">Articles</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>Most people are intuitively aware that the fluid flow of both gases and liquids is inherently transient (unsteady) by nature. As an example, just ponder the movement of leaves on a tree in a breeze or the flow of <a href="blog/the-complexity-and-beauty-of-fluid-dynamics.html">water from a tap</a>. Less intuitive is that even a relatively steady flow in a <a href="blog/wind-tunnels-and-cfd.html">wind tunnel</a> has transient velocities that vary at scales and frequencies that our human senses are unable to discern. Such variations are known as <a href="blog/turbulence.html">turbulence</a>. The treatment of turbulence in the <a href="http://en.wikipedia.org/wiki/Reynolds-averaged_Navier-Stokes_equations">Reynolds-Averaged Navier-Stokes (RANS) equations</a> lies at the heart of most practical <a href="computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> approaches.</p>
+<p><span class="inline inline-center"><img src="files/images/cyclone-shared.png" alt="Cyclone Flow Simulation: Solving the RANS equations" width="640" height="480" /><span class="caption"><strong>Cyclone Flow Simulation:</strong> Solving the RANS equations</span></span></p>
+<h3>Affordable RANS Analysis Available Now</h3>
+<p>Are you ready for a 30-day free trial of Caedium Professional?</p>
+<p><span class="inline inline-center"><a href="get-started-with-caedium.html"><img title="Get Started With Caedium Now" alt="Get Started With Caedium Now" src="files/flair/get-started-button.png" width="177" height="43" /></a></span></p>
+<h3>Navier-Stokes Equations</h3>
+<p>The <a href="blog/navier_stokes_equations.html">Navier-Stokes equations</a> accurately describe fluid flow for a remarkably large class of problems, by assuming that fluid behaves as a continuum rather than as discrete particles. However, inherent in these equations is the representation of velocity scales and variations that make solving them nearly impossible on present-day computers except for the simplest of flows using <a href="http://en.wikipedia.org/wiki/Direct_numerical_simulation">Direct Numerical Simulation (DNS)</a>. The Navier-Stokes equations are also inherently unsteady (varying with time), which means averaging multiple solutions at a series of time steps is required to produce engineering quantities such as <a href="lift-force-and-drag-force.html">lift and drag</a> from a pressure solution (or field).</p>
+<h3>Reynolds-Averaged Navier-Stokes Equations</h3>
+<p>Decomposing the Navier-Stokes equations into the RANS equations makes it possible to simulate practical engineering flows, such as the airflow over an airplane. The assumption (known as the Reynolds decomposition) behind the RANS equations is that the time-dependent turbulent (chaotic) velocity fluctuations can be separated from the mean flow velocity. This transform then introduces a set of unknowns called the Reynolds stresses, which are functions of the velocity fluctuations, and which require a <a href="http://www.cfd-online.com/Wiki/Turbulence_modeling">turbulence model</a> (e.g., the <a href="http://www.cfd-online.com/Wiki/Standard_k-epsilon_model">two-equation k-epsilon</a> model) to produce a closed system of solvable equations. The reduced computational requirements for the RANS equations, while still significant, are orders of magnitude less than that required for the original Navier-Stokes equations. Another advantage of using the RANS equations for steady fluid flow simulation is that the mean flow velocity is calculated as a direct result without the need to average the instantaneous velocity over a series of time steps.</p>
+<p>It is a relatively straightforward process to produce an unsteady variant of the RANS equations (sometimes referred to as URANS) for transient flows, while still solving for the mean flow velocity separately from the turbulent velocity fluctuations.</p>
+<h3>Computational Fluid Dynamics</h3>
+<p>Combining the RANS equations with assumptions that enforce the conservation of mass and energy produces the mainstream approach used within CFD to simulate a wide variety of practical fluid flows. CFD breaks down a fluid domain into discrete cells (a <a href="node/244.html">mesh</a>) and then solves the RANS and conservation laws in each cell. The accuracy of a typical CFD simulation is primarily determined by the mesh resolution (usually the higher the better, but at the cost of more computing resources and slower turnaround times) and the turbulence model.</p>
+<p><span class="inline inline-center"><img src="files/articles/meshing/tri_surface_grid.png" alt="Surface Mesh Elements" /><span class="caption"><strong>Surface Mesh Elements</strong></span></span></p>
+<h3>Turbulence Model Tuning</h3>
+<p>The requirement of a turbulence model in the RANS equations is an inherent weakness. Turbulence models are typically tuned empirically for specific cases, such as attached flow on an airfoil, or the massively detached flow behind a bluff body, or the high swirl encountered in a cyclone. These problems have driven the development of the <a href="http://en.wikipedia.org/wiki/Large_eddy_simulation">Large Eddy Simulation (LES)</a> method as an alternative to the RANS equations, resulting in a massive increase in the required computing resources - but that's a whole other story...</p>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="products.html">Products</a><ul class="menu"><li class="leaf first"><a href="product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="news.html">News</a></li>
+<li class="collapsed"><a href="blog.html">Blog</a></li>
+<li class="leaf"><a href="about.html" title="">About</a></li>
+<li class="expanded last"><a href="resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="articles.html">Articles</a></li>
+<li class="leaf"><a href="image.html">Gallery</a></li>
+<li class="leaf"><a href="support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="forum.html">Forums</a></li>
+<li class="leaf"><a href="downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="partners.html">Partners</a></li>
+<li class="leaf"><a href="poll.html">Polls</a></li>
+<li class="leaf last"><a href="links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="forum.html"><img title="Forums" alt="Forums" src="files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="contact.html">Contact</a> | <a href="trademarks.html">Trademarks</a> | <a href="privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/reynolds-averaged-navier-stokes-equations by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:02:48 GMT -->
+</html>

@@ -1,0 +1,396 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/openfoam-1-5-x-on-windows by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:25:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>OpenFOAM 1.5.x on Windows | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-openfoam-1-5-x-on-windows section-openfoam-1-5-x-on-windows one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="index.html" title="Home" rel="home"><img src="files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="index.html">Home</a> › <a href="articles.html">Articles</a></div>                  <h1 class="title">OpenFOAM 1.5.x on Windows</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-711" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on October 9, 2008 - 14:49        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_15 first last"><a href="articles.html" rel="tag" title="General interest">Articles</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p><em>For the <strong>latest version</strong> of our Windows patch for OpenFOAM visit <a href="openfoam-2-2-x-on-windows.html">"OpenFOAM 2.2.x on Windows"</a>.</em></p>
+<p>We have updated our Windows patch for OpenFOAM to match the latest OpenFOAM release (v1.5.x). Be warned - to build OpenFOAM for Windows with a cross compiler requires expert knowledge of Linux utilities and compilers.</p>
+<h3>OpenFOAM GUI</h3>
+<p><em>Are you looking for a <strong>GUI driven, integrated simulation environment for Windows, Linux, and Mac</strong> incorporating a selection of the <strong>RANS OpenFOAM solvers</strong> and various import/export filters?</em></p>
+<p><span class="inline inline-center"><a href="get-started-with-caedium.html"><img title="Get Started With Caedium Now" alt="Get Started With Caedium Now" src="files/flair/get-started-button.png" width="177" height="43" /></a></span></p>
+<h3><a name="patch-build-process"></a>Patch Build Process</h3>
+<p>The following steps are required to produce a native Windows version of OpenFOAM 1.5.x using a cross compiler:</p>
+<ol>
+<li>Configure, build, install and test a <a href="http://www.mingw.org/wiki/LinuxCrossMinGW">MinGW cross compiler</a> for Windows running on Linux. I used the <a href="files/articles/openfoam-windows/build-mingw.html">build-mingw</a> script.</li>
+<li>Add <code>#include_next &lt;float.h&gt;</code> to the end of<br />
+"lib/gcc/mingw32/4.2.3/include/float.h" and remove it from<br />
+"mingw32/include/float.h" to include the right "float.h".</li>
+<li>Install the <a href="http://www.opencfd.co.uk/openfoam/download.html">OpenFOAM 1.5.x source</a> (git Commit: 316c16a7cda8318061508cd4822037bf4685033c, Date: March 25, 2009) distribution on Linux</li>
+<li>Install the <a href="http://www.opencfd.co.uk/openfoam/other.html">Third Party source pack</a> and only compile the zlib library.</li>
+<li>Patch (using the Linux patch command) the OpenFOAM 1.5.x source distribution with our <a href="files/articles/openfoam-windows/v3-mingw-openfoam-1-5-x.patch.zip">MinGW Windows modifications</a> [last updated April 16, 2009 to v3].</li>
+<li>Copy wmkdep and dirToString from wmake/rules/linuxGcc to wmake/rules/linuxmingw32.</li>
+<li>Modify (or set environment variables) and source the etc/bashrc-mingw32 script to match your OpenFOAM 1.5.x source location.</li>
+<li>Build using Allwmake in the OpenFOAM-1.5.x directory on Linux.</li>
+<li>Transfer the OpenFOAM executables (applications/bin/linuxmingw32DPOpt/*.exe) and libraries (lib/linuxmingw32DPOpt/*.dll) to the Windows computer.</li>
+<li>Launch a Windows command prompt to run OpenFOAM.</li>
+</ol>
+<p>Note that this latest version (v3) can now compile snappyHexMesh.</p>
+<p>On the Windows computer ensure the following:</p>
+<ul>
+<li>The WM_PROJECT_DIR and USERNAME variables are set.</li>
+<li>The etc directory from the original source distribution is within the WM_PROJECT_DIR.</li>
+<li>The PATH variable is set to include the OpenFOAM executable and library locations.</li>
+</ul>
+<h3>Constraints</h3>
+<p>With this method of building OpenFOAM for Windows the following features (there maybe more) are unavailable:</p>
+<ul>
+<li>job control scripts in bin (such as foamSolverSweeps)</li>
+<li>parallel</li>
+</ul>
+<p>The following applications and libraries are unlikely to build:</p>
+<ul>
+<li>libccmio</li>
+<li>metis and any dependents</li>
+</ul>
+<h3>Tips</h3>
+<p>You may need to copy foamFlex++ from a Linux OpenFOAM build to the MinGW build (applications/bin/linuxmingw32DPOpt).</p>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-222"></a>
+<div class="comment comment-published first odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-5-x-on-windows.html#comment-222" class="active">OpenFOAM 1.5.x Windows Patch v2 Available</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on December 29, 2008 - 18:02.  </div>
+
+  <div class="content">
+    <p>The latest patch (v2), in the build process above, ensures that <em>readline</em> is disabled in <code>applications/utilities/mesh/manipulation/setSet</code> for MinGW. If a system has <code>/usr/include/readline/readline.h</code> then prior to this patch <em>readline</em> would be enabled and cause the build to fail. Thanks to Alexandre Pereira for reporting this problem.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-224"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-5-x-on-windows.html#comment-224" class="active">Windows OpenFOAM </a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by MarcosAckel (not verified) on January 1, 2009 - 10:04.  </div>
+
+  <div class="content">
+    <p>Hello,<br />
+couldn't you make available the built windows version? It would be of great help to many interested people (like me :) ). Thanks</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-225"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-5-x-on-windows.html#comment-225" class="active">Good Question</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on January 5, 2009 - 09:42.  </div>
+
+  <div class="content">
+    <p>We are currently developing a new <a href="product/caedium.html">Caedium</a> add-on <a href="newsletters/september-2008.html">RANS Flow</a> that will use a subset of the OpenFOAM solvers and libraries (binaries) for both Windows and Linux.</p>
+<p>We aren't planning on releasing the entire standalone OpenFOAM system for Windows (600MB) due to bandwidth constraints and limited support resources - our focus is on developing Caedium.</p>
+<p>As with all <a href="http://www.gnu.org/copyleft/gpl.html">GPL software</a>, anyone is welcome to use or modify our patch and release binaries at their expense.</p>
+<p>The best option would be to incorporate our patch into the official OpenFOAM source and binary release. If are willing to fund this effort (either in-part or entirely) please contact <a href="http://www.opencfd.co.uk/">OpenCFD</a> directly.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-229"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-5-x-on-windows.html#comment-229" class="active">Getting more things building and running</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://www.bluecape.com.pt/" rel="nofollow">Bruno Santos</a> (not verified) on January 16, 2009 - 17:07.  </div>
+
+  <div class="content">
+    <p>Hello to you good people at Symscape,</p>
+<p>Thank you very much for your patches and tutorials, and in the spirit of sharing, I've posted my findings.<br />
+I've managed to get a bit further into cross-compiling OpenFOAM-1.5.x, and posted my developments here:<br />
+<a href="http://openfoam.cfd-online.com/forum/messages/1/7046.html?1232142105#POST30776" title="http://openfoam.cfd-online.com/forum/messages/1/7046.html?1232142105#POST30776">http://openfoam.cfd-online.com/forum/messages/1/7046.html?1232142105#POS...</a></p>
+<p>I hope you can trim the edges and merge my patches with your patch, because with all of these, OpenFOAM 1.5.x can run even nearer of it's Linux capability in Windows! Sadly, except for speed...</p>
+<p>Any questions you may have, you've got my email. And there is always the forum!</p>
+<p>Once again, thank you very much!</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-230"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-5-x-on-windows.html#comment-230" class="active">Getting more things building and running - cleaner patches</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://www.bluecape.com.pt/" rel="nofollow">Bruno Santos</a> (not verified) on January 21, 2009 - 11:19.  </div>
+
+  <div class="content">
+    <p>Hello again,</p>
+<p>I've updated the patches and created a <a href="http://openfoam.cfd-online.com/cgi-bin/forum/board-auth.cgi?file=/1/7046.html#POST30979">tutorial</a> for them, based on Symscape's v2 patch, and will enable building more stuff that was missing on the cross-compiled OpenFOAM 1.5.x, including using snappyHexMesh and parallel. Sadly, I couldn't get MPI to run properly, probably due to firewall issues.</p>
+<p>Feel free to incorporate the total or part of these patches into yours!</p>
+<p>Thank you very much and I hope these can help furthermore!</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-253"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-5-x-on-windows.html#comment-253" class="active">New Policy</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on April 16, 2009 - 16:45.  </div>
+
+  <div class="content">
+    <p>After numerous requests for the Windows binaries, we are pleased to announce a Windows installer is now available for purchase at <a href="product/openflow.html">"OpenFlow: OpenFOAM for Windows."</a></p>
+<p>It turns out by stripping the binaries of symbols and using aggressive compression within the installer the entire package can be reduced down to 41.3MB.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-254"></a>
+<div class="comment comment-published last odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-5-x-on-windows.html#comment-254" class="active">OpenFOAM 1.5.x Windows Patch v3 Available</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on April 17, 2009 - 09:03.  </div>
+
+  <div class="content">
+    <p>The latest patch (v3), is based on a more recent OpenFOAM 1.5.x update (see the main article for details) from the git repository. Noteworthy is that snappyHexMesh no longer depends directly on Metis and can therefore be compiled for Windows.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="products.html">Products</a><ul class="menu"><li class="leaf first"><a href="product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="news.html">News</a></li>
+<li class="collapsed"><a href="blog.html">Blog</a></li>
+<li class="leaf"><a href="about.html" title="">About</a></li>
+<li class="expanded last"><a href="resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="articles.html">Articles</a></li>
+<li class="leaf"><a href="image.html">Gallery</a></li>
+<li class="leaf"><a href="support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="forum.html">Forums</a></li>
+<li class="leaf"><a href="downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="partners.html">Partners</a></li>
+<li class="leaf"><a href="poll.html">Polls</a></li>
+<li class="leaf last"><a href="links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="forum.html"><img title="Forums" alt="Forums" src="files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="contact.html">Contact</a> | <a href="trademarks.html">Trademarks</a> | <a href="privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/openfoam-1-5-x-on-windows by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:25:02 GMT -->
+</html>

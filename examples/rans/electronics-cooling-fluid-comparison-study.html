@@ -1,0 +1,340 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/examples/rans/electronics-cooling-fluid-comparison-study by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:07:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Electronics Cooling Fluid Comparison Study | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-examples-rans-electronics-cooling-fluid-comparison-study section-examples one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../../index.html" title="Home" rel="home"><img src="../../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../../index.html">Home</a> › <a href="../../examples.html">Examples</a> › <a href="../rans.html">RANS Flow</a></div>                  <h1 class="title">Electronics Cooling Fluid Comparison Study</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1278" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on September 11, 2012 - 15:07        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_54 first last"><a href="../rans.html" rel="tag" title="RANS Flow add-on examples">RANS Flow</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>Your choice of cooling fluid for an electronic device, can have a profound effect on its overall design and operation costs. So it's interesting to note that recent cooling strategies for computers include <a href="../../blog/computers-cooled-in-mineral-oil.html">immersion of the entire computer in mineral oil</a> as a cost-effective alternative to traditional air cooling. Which strategy do you pursue? Let CFD guide your decision - it is easy to switch the cooling fluid in a <a href="../../product/professional.html">Caedium</a> CFD simulation so you can make easy comparisons.</p>
+<p><span class="inline inline-center"><img src="../../files/examples/coolingfluids/mineral-oil-cooled-streamlines.png" alt="Caedium CFD Electronics Cooling Simulation" width="500" height="402" /><span class="caption"><strong>Caedium CFD Electronics Cooling Simulation</strong></span>Mineral oil streamlines colored by temperature</span></p>
+<p>Let's perform a study of an electronics package and compare the cooling performance of air, mineral oil, and (because this is the virtual world without risk of electric shock) water. I'll define the performance measure as the average temperature on the surface of the heat sinks, where the lower the temperature the better.</p>
+<h3>Model Building in Caedium</h3>
+<p>To represent our electronics package I used Caedium's geometry creation tools to construct a simple box with inlets (red), outlets (green), a baffle (blue), and heat sinks (gray).</p>
+<p><span class="inline inline-center"><img src="../../files/examples/coolingfluids/geometry.png" alt="Geometry Created in Caedium" width="499" height="392" /><span class="caption"><strong>Geometry Created in Caedium</strong></span></span></p>
+<p>The final flow volume consisted of:</p>
+<ul>
+<li>1 volume </li>
+<li>228 faces </li>
+<li>544 edges </li>
+<li>328 vertices </li>
+</ul>
+<h3>CFD Simulations Using Caedium RANS Flow</h3>
+<p>I used Caedium's intuitive drag and drop approach to define the physics (e.g., substance and boundary conditions), create the mesh, run each simulation and extract results.</p>
+<h4>Physics</h4>
+<p>I initially set air as the fluid and configured the simulation as incompressible, steady-state flow with heat transfer. For the heat sinks I specified a heat flux of 300 W/m<sup>2</sup> as the temperature condition. For the inlets I set the normal surface speed as 0.05 m/s.</p>
+<p>To assess the performance of each fluid I created a new result variable to use as a monitor that corresponded to an area-weighted average temperature:</p>
+<p>T<sub>average</sub> = Sum(A.T) / Sum(A)</p>
+<p>where A = area and T = temperature</p>
+<p>After completing the first simulation using air I reconfigured and reran the simulation using the reference quantities for mineral oil and then water.</p>
+<table border="1" cellspacing="0" cellpadding="2">
+<tbody>
+<tr>
+<td valign="top"></td>
+<td valign="top"><strong>Air</strong></td>
+<td valign="top"><strong>Mineral Oil</strong></td>
+<td valign="top"><strong>Water</strong></td>
+</tr>
+<tr>
+<td valign="top"><strong>Specific Heat Capacity (Cp) J.kg<sup>-1</sup>.K<sup>-1</sup></strong></td>
+<td valign="top">1005</td>
+<td valign="top">1670</td>
+<td valign="top">4183</td>
+</tr>
+<tr>
+<td valign="top"><strong>Thermal Expansion Coefficient (beta) K<sup>-1</sup></strong></td>
+<td valign="top">0.00343</td>
+<td valign="top">0.00064</td>
+<td valign="top">0.000207</td>
+</tr>
+<tr>
+<td valign="top"><strong>Thermal Conductivity (k) W.m<sup>-1</sup>.K<sup>-1</sup></strong></td>
+<td valign="top">0.0257</td>
+<td valign="top">0.162</td>
+<td valign="top">0.67</td>
+</tr>
+<tr>
+<td valign="top"><strong>Dynamic Viscosity (mu) Pa.s</strong></td>
+<td valign="top">1.821e-5</td>
+<td valign="top">0.2</td>
+<td valign="top">0.001002</td>
+</tr>
+<tr>
+<td valign="top"><strong>Density (rho) kg.m<sup>-3</sup> </strong></td>
+<td valign="top">1.205</td>
+<td valign="top">800</td>
+<td valign="top">998.2</td>
+</tr>
+</tbody>
+</table>
+<h4>Mesh</h4>
+<ul>
+<li>223,286 tetrahedral volume elements</li>
+<li>25,256 triangular face elements</li>
+</ul>
+<p><span class="inline inline-center"><img src="../../files/examples/coolingfluids/mesh.png" alt="Mesh Created in Caedium" width="499" height="384" /><span class="caption"><strong>Mesh Created in Caedium</strong></span></span></p>
+<h3>Results</h3>
+<p><span class="inline inline-center"><img src="../../files/examples/coolingfluids/air-cooled-streamlines.png" alt="Air Streamlines Colored by Temperature" width="500" height="403" /><span class="caption"><strong>Air Streamlines Colored by Temperature</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../../files/examples/coolingfluids/mineral-oil-cooled-streamlines.png" alt="Mineral Oil Streamlines Colored by Temperature" width="500" height="402" /><span class="caption"><strong>Mineral Oil Streamlines Colored by Temperature</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../../files/examples/coolingfluids/water-cooled-streamlines.png" alt="Water Streamlines Colored by Temperature" width="500" height="402" /><span class="caption"><strong>Water Streamlines Colored by Temperature</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../../files/examples/coolingfluids/average-temp.png" alt="Average Heat Sink Temperature per Fluid" width="502" height="364" /><span class="caption"><strong>Average Heat Sink Temperature per Fluid</strong></span>Lower temperature is better</span></p>
+<h3>Conclusion</h3>
+<p>The average temperature results clearly show that water and mineral oil cooling are superior to air cooling for this application. Of the two liquids, mineral oil is the clear winner, not in heat transfer terms, but because it is a good electrical insulator. The excellent fluid cooling characteristics of water are well known and that is why you'll find it used extensively in mechanical cooling applications.</p>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-2224"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="electronics-cooling-fluid-comparison-study.html#comment-2224" class="active">Baffles</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Sam (not verified) on May 16, 2015 - 12:55.  </div>
+
+  <div class="content">
+    <p>Does Caedium support the use of baffles (porous, conducting, etc). Also the use of convective heat transfer coefficients?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2225"></a>
+<div class="comment comment-published last even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="electronics-cooling-fluid-comparison-study.html#comment-2225" class="active">Baffles = zero thickness</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 18, 2015 - 06:46.  </div>
+
+  <div class="content">
+    <p>Caedium supports zero-thickness porous media, fans, and walls. Caedium does not currently support shell conduction.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../../news.html">News</a></li>
+<li class="collapsed"><a href="../../blog.html">Blog</a></li>
+<li class="leaf"><a href="../../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../../articles.html">Articles</a></li>
+<li class="leaf"><a href="../../image.html">Gallery</a></li>
+<li class="leaf"><a href="../../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../../forum.html">Forums</a></li>
+<li class="leaf"><a href="../../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../../partners.html">Partners</a></li>
+<li class="leaf"><a href="../../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../../forum.html"><img title="Forums" alt="Forums" src="../../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../../contact.html">Contact</a> | <a href="../../trademarks.html">Trademarks</a> | <a href="../../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/examples/rans/electronics-cooling-fluid-comparison-study by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:07:15 GMT -->
+</html>

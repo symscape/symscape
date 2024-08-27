@@ -1,0 +1,288 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/physics-and-solver-setup-for-cfd by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:17:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Physics and Solver Setup for CFD | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-physics-and-solver-setup-for-cfd section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">Physics and Solver Setup for CFD</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1609" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on December 2, 2015 - 14:30        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>A <a href="../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> simulation requires that you configure physics and solver values based on your knowledge of your fluid application. Primarily this setup stage requires defining your fluid state, reference values (e.g., velocity), initial values, boundary conditions, and solver parameters. Follow along as I describe each stage and relate it to a CFD simulation of the external airflow over an idealized car.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/physics-solver-setup/ahmed-35-iso-surface-pressure.png" alt="CFD Simulation of the External Airflow Over an Idealized Car" width="600" height="362" /><span class="caption"><strong>CFD Simulation of the External Airflow Over an Idealized Car</strong></span>Pressure iso-surfaces</span></p>
+<h3>Fluid State</h3>
+<p>The more knowledge you have of your particular fluid application the better, so you can guide your CFD software to select the most efficient solver. For instance, selecting a steady state simulation over an <a href="../steady-state-or-unsteady-cfd-simulation.html">unsteady state (time dependent or transient) simulation</a> will make for a significantly (orders of magnitude) faster turnaround time. However, you have to be relatively confident that your fluid application has a steady state, and if not then you have to be willing to pursue the unsteady option. A similar primary decision as to whether your fluid will behave as incompressible or compressible is important to again select the most efficient solver. Remember that liquids are incompressible, as are gases at low speeds below <a href="../mach-number.html">Mach</a> 0.3.</p>
+<p>Secondary state decisions, such as including or excluding <a href="../convection-and-heat-transfer.html">heat transfer</a>, will provide greater insights, but at greater computational cost above and beyond your primary state selections.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/physics-solver-setup/fluid-state.png" alt="Fluid State Options" width="280" height="320" /><span class="caption"><strong>Fluid State Options</strong></span></span></p>
+<p>Unique to <a href="../reynolds-averaged-navier-stokes-equations.html">Reynolds-Averaged Navier-Stokes (RANS) CFD</a> is the requirement for a turbulence model. Though often the default turbulence model will be adequate for most needs, there might be a case to select another model. In addition to typical primary flow variables, such as velocity and pressure, turbulence models introduce&nbsp; their own primary flow variables, such as k and omega or epsilon.</p>
+<p>The airflow over a car is typically performed as a steady CFD simulation. Within the RANS assumptions small turbulent oscillations are taken care of by the turbulence model. If we were to run an unsteady simulation then we would have to perform a time-averaged calculation across a series of full results at each time step to obtain pseudo-steady values for <a href="../lift-force-and-drag-force.html">lift (or downforce) and drag</a> requiring a significantly longer turnaround time than a steady simulation and with likely little, if any, improvement in accuracy.</p>
+<h3>Reference Values</h3>
+<p>You need to define reference values for primary variables, such as velocity and pressure, that represent the bulk values (free stream or inlet values) for your fluid application. </p>
+<p><span class="inline inline-center"><img src="../files/pictures/physics-solver-setup/reference-values.png" alt="Reference Values" width="280" height="323" /><span class="caption"><strong>Reference Values</strong></span></span></p>
+<p>For an external airflow analysis over a car the reference velocity will be the speed of the car and the pressure (assuming incompressible flow with relative pressure) will be zero. These reference values are used internally by the solver and can be reused by initial values and boundary conditions, which are discussed below.</p>
+<h3>Initial Values</h3>
+<p>Iterative solvers work by making an initial guess for a solution and then incrementally improving it. The closer the initial guess is to the final solution, the faster the algorithm will converge to that final solution. In practical terms this means that if you can define your initial primary variables (e.g., velocity, pressure) close to their final values, you can get your results quicker. </p>
+<p><span class="inline inline-center"><img src="../files/pictures/physics-solver-setup/initial-values.png" alt="Initial Values" width="279" height="321" /><span class="caption"><strong>Initial Values</strong></span></span></p>
+<p>Returning to the example of the external airflow over a car, we know that the majority of the flow will be at the free stream speed and pressure (assuming a relative reference frame as in a wind tunnel with the car stationary), with local variations close to the car and in its wake. Therefore, the reference values can also serve as initial values for a steady state simulation. </p>
+<p><span class="inline inline-center"><img src="../files/pictures/physics-solver-setup/initialized.png" alt="Initialized Flow Field" width="600" height="377" /><span class="caption"><strong>Initialized Flow Field</strong></span></span></p>
+<p>If we were to simulate the airflow around the car in an unsteady state, then the initial speed should be defined as zero (which would be different to the reference velocity), i.e., as if the car was in a wind tunnel just prior to switching on the fans.</p>
+<h3>Boundary Conditions</h3>
+<p>In CFD every surface bounding the flow volume needs to define either the primary flow variables directly or how they vary. Each primary flow variable (e.g., velocity and pressure) typically has a multitude of ways to be defined, usually encapsulated in specific types, such as walls, inlets, outlets.</p>
+<p>For the external airflow over a car the surface of the car and the ground are defined as walls, i.e., they are impenetrable by the fluid. </p>
+<p>Given a half model (due to symmetry) the dividing surface is assigned as a symmetry plane, which acts like a mirror for all the primary flow variables.</p>
+<p>The entrance to the flow volume is assigned as an inlet and the exit is assigned as an outlet. The inlet requires a velocity definition, which simply mimics the reference value (car speed). On the outlet the reference pressure is assigned, then during the simulation the inlet pressure will adjust until it supports the specified inlet velocity. By monitoring the average inlet pressure you can determine how well the simulation has converged. For an internal flow the inlet pressure is equivalent to the pressure drop for the system.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/physics-solver-setup/boundary-conditions.png" alt="Boundary Conditions" width="600" height="357" /><span class="caption"><strong>Boundary Conditions</strong></span></span></p>
+<p>In our example the remaining surfaces (top and side) are assigned as slip surfaces, which is similar to a symmetry condition with the exception that the velocity is constrained to be tangential to the surface.</p>
+<h3>Solver Parameters</h3>
+<p>There are a number of parameters that govern solver performance and accuracy. The default values are usually good enough to ensure a robust path to a converged simulation. However, occasionally it may be necessary to modify these parameters to achieve better convergence for steady state simulations via <a href="../node/934.html">relaxation factors</a>, and/or higher accuracy via differencing schemes. Typically these parameters are the domain of advanced users.</p>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/physics-and-solver-setup-for-cfd by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:17:56 GMT -->
+</html>

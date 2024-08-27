@@ -1,0 +1,341 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/cfd-analysis-of-homemade-cyclone by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:18:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>CFD Analysis of a Homemade Cyclone | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-cfd-analysis-of-homemade-cyclone section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">CFD Analysis of a Homemade Cyclone</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1565" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on February 27, 2015 - 15:25        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Hot on the heels of my recent <a href="../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> analysis of the <a href="cfd-analysis-of-a-blower-for-a-small-dust-collector.html">blower</a> for <a href="http://woodgears.ca/dust_collector/">Matthias Wandel's &quot;Small Dust Collector&quot;</a> comes a new CFD study of his cyclone. <a href="../examples/rans/cyclone.html">Cyclones</a> are used in many industries to separate fluids from particles. In Matthias' case he wanted to separate sawdust and wood shavings from air collected from the working area of various woodworking machines.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/dust-collector/cyclone/cyclone-streamlines-zoom-0-05.png" alt="CFD Simulation of a Dust Collector Cyclone" width="600" height="408" /><span class="caption"><strong>CFD Simulation of a Dust Collector Cyclone</strong></span>Streamlines</span></p>
+<h3>3D Model Construction</h3>
+<p>Given the relatively simple geometry derived from a standard 5 gallon plastic bucket it was relatively easy to construct the 3D cyclone flow domain from scratch using Matthias' plans. </p>
+<p><span class="inline inline-center"><img src="../files/pictures/dust-collector/cyclone/cyclone-assembly.png" alt="Dust Collector Cyclone" width="502" height="484" /><span class="caption"><strong>Dust Collector Cyclone</strong></span>SketchUp Assembly Model</span></p>
+<p>The interesting feature of this cyclone is the marginal taper provided by the bucket, rather than the more pronounced conic section found in most cyclones. Also this cyclone uses a specially shaped baffle that acts as a non-return valve for the collected shavings.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/dust-collector/cyclone/cyclone-flow-domain.png" alt="CFD Cyclone Flow Volume" width="600" height="416" /><span class="caption"><strong>CFD Cyclone Flow Volume</strong></span></span></p>
+<h3>Performance Test</h3>
+<p>While performing a fully coupled fluid and particle CFD simulation is currently beyond the capabilities of Caedium, I can do the next best thing which is to model just the air flow through the cyclone. By running a series of simulations (14 in all) I can determine the pressure drop across the cyclone for a range of volume flow rates. With these results and those of later studies for the remaining components of the dust collector I will be able to determine the overall system pressure drop and see how well the blower matches the system flow requirements.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/dust-collector/cyclone/cyclone-pressure-drop.png" alt="Cyclone Pressure Drop vs Volume Flow Rate" width="552" height="342" /><span class="caption"><strong>Cyclone Pressure Drop vs Volume Flow Rate</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/dust-collector/cyclone/cyclone-pressure-drop-zoom.png" alt="Zoomed Cyclone Pressure Drop vs Volume Flow Rate" width="552" height="342" /><span class="caption"><strong>Zoomed Cyclone Pressure Drop vs Volume Flow Rate</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/dust-collector/cyclone/cyclone-velocity-ratio.png" alt="Velocity Ratio (Maximum/Inlet) vs Volume Flow Rate" width="552" height="342" /><span class="caption"><strong>Velocity Ratio (Maximum/Inlet) vs Volume Flow Rate</strong></span></span></p>
+<h3>Summary</h3>
+<p>The results show that as the flow-rate increases through the cyclone the pressure-drop increases. Further as the flow-rate increases the rate of pressure-drop-increase accelerates (non-linear relationship). The velocity ratio (maximum/inlet) also increases as the flow-rate increases, but at a decreasing rate.</p>
+<p>If we just consider the blower and cyclone for moment, i.e., ignore the pressure drops arising from the other dust collector components (e.g., filters), then we can determine the operating conditions of this reduced system by finding the intersection of the cyclone pressure drop curve with the blower fan curve.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/dust-collector/cyclone/blower-cyclone-matching.png" alt="Pressure Drop for Cyclone and Pressure Rise for Blower" width="552" height="342" /><span class="caption"><strong>Pressure Drop for Cyclone and Pressure Rise for Blower</strong></span>Intersection represents operating condition</span></p>
+<p>The pressure drop from the cyclone matches the pressure rise from the blower at approximately 3000 N/m<sup>2</sup> corresponding to a flow rate of 0.065 m<sup>3</sup>/s and a blower efficiency of 47%. Recall that the <a href="cfd-analysis-of-a-blower-for-a-small-dust-collector.html">maximum blower efficiency</a> of 49% occurred at a pressure rise of 2720 N/m<sup>2</sup> and a flow rate of 0.085 m<sup>3</sup>/s. </p>
+<p>For the complete dust collector we can expect a larger overall pressure drop than that for the cyclone alone and therefore a lower flow rate and lower blower efficiency - how much lower? That's a good question for another blog post, so stay tuned.</p>
+<h3>Flow Visualization</h3>
+<p><span class="inline inline-center"><img src="../files/pictures/dust-collector/cyclone/cyclone-streamlines-0-05.png" alt="Streamlines" width="600" height="429" /><span class="caption"><strong>Streamlines</strong></span>Cyclone CFD simulation for 0.05 m<sup>3</sup>/s flow rate</span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/dust-collector/cyclone/cyclone-streamlines-zoom-0-05.png" alt="Zoomed Streamlines" width="600" height="408" /><span class="caption"><strong>Zoomed Streamlines</strong></span>Cyclone CFD simulation for 0.05 m<sup>3</sup>/s flow rate</span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/dust-collector/cyclone/cyclone-arrows-0-05.png" alt="Velocity Vectors" width="600" height="408" /><span class="caption"><strong>Velocity Vectors</strong></span>Cyclone CFD simulation for 0.05 m<sup>3</sup>/s flow rate</span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/dust-collector/cyclone/cyclone-pressure-iso-surfaces-0-05.png" alt="Pressure Iso-Surfaces" width="600" height="429" /><span class="caption"><strong>Pressure Iso-Surfaces</strong></span>Cyclone CFD simulation for 0.05 m<sup>3</sup>/s flow rate</span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/dust-collector/cyclone/cyclone-section-pressure-iso-surfaces-0-05.png" alt="Clipped Internal Pressure Iso-Surfaces" width="600" height="460" /><span class="caption"><strong>Clipped Internal Pressure Iso-Surfaces</strong></span>Cyclone CFD simulation for 0.05 m<sup>3</sup>/s flow rate</span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/dust-collector/cyclone/cyclone-section-velocity-iso-surfaces-0-05.png" alt="Clipped Internal Velocity Iso-Surfaces" width="600" height="460" /><span class="caption"><strong>Clipped Internal Velocity Iso-Surfaces</strong></span>Cyclone CFD simulation for 0.05 m<sup>3</sup>/s flow rate</span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/dust-collector/cyclone/cyclone-section-arrows-0-05.png" alt="Clipped Internal Velocity Vectors" width="600" height="460" /><span class="caption"><strong>Clipped Internal Velocity Vectors</strong></span>Cyclone CFD simulation for 0.05 m<sup>3</sup>/s flow rate</span></p>
+<h3>Notes</h3>
+<p>The cyclone geometry was created in <a href="../product/professional.html">Caedium Professional</a>. The CFD simulations were automated using a Python script and were performed using the incompressible, steady-state RANS solver, and the k-omega SST turbulence model.</p>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-2183"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-analysis-of-homemade-cyclone.html#comment-2183" class="active">EXCELENTE !</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Federico (not verified) on March 9, 2015 - 12:25.  </div>
+
+  <div class="content">
+    <p>EXCELENTE !</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2263"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-analysis-of-homemade-cyclone.html#comment-2263" class="active">Small Dust Collector Analysis</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Don Bomer (not verified) on September 23, 2015 - 09:41.  </div>
+
+  <div class="content">
+    <p>Very interesting and thought-provoking Richard. </p>
+<p>I would be interested to see analysis of this DC using a bellmouth outflow tube at several depths should you continue this investigation.</p>
+<p>Warm regards,</p>
+<p>Don Bomer</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2291"></a>
+<div class="comment comment-published last odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-analysis-of-homemade-cyclone.html#comment-2291" class="active">intresting and fun.</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by John H (not verified) on March 19, 2016 - 04:49.  </div>
+
+  <div class="content">
+    <p>I wonder how much the pressure drop would change with a spiral diffusor instead of the 90 degree exit elbow. The concept is to recapture some of the momentum in the swirling cyclone. Or even better if the blower inlet is mounted at the cyclone outlet. (motor axis vertical)</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/cfd-analysis-of-homemade-cyclone by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:18:17 GMT -->
+</html>

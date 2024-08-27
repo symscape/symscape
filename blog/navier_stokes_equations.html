@@ -1,0 +1,341 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/navier_stokes_equations by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Navier-Stokes Equations | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-navier-stokes-equations section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">Navier-Stokes Equations</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-334" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on March 21, 2007 - 20:41        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Readers of Physics World, published by the <a href="http://www.iop.org/">Institute of Physics</a>, voted <a href="http://en.wikipedia.org/wiki/Maxwell%27s_equations">Maxwell's equations</a> and <a href="http://en.wikipedia.org/wiki/Euler%27s_identity">Euler's identity</a> the <a href="http://physicsworld.com/cws/article/print/2004/oct/06/the-greatest-equations-ever">greatest equations of all time</a>.  I guarantee if you posed the same question to mechanical engineers the <a href="http://en.wikipedia.org/wiki/Navier-Stokes_equations">Navier-Stokes equations</a> would figure near the top, probably second to <a href="http://en.wikipedia.org/wiki/Newton%27s_laws_of_motion">Newton's F = ma</a>.</p>
+<h3>Computational Fluid Dynamics Available Now</h3>
+<p>Are you ready for a 30-day free trial of Caedium Professional?</p>
+<p><span class="inline inline-center"><a href="../get-started-with-caedium.html"><img title="Get Started With Caedium Now" alt="Get Started With Caedium Now" src="../files/flair/get-started-button.png" width="177" height="43" /></a></span></p>
+<h3>Navier Stokes Equations</h3>
+<p>The Navier-Stokes equations assume a fluid to be a continuum, whereas in reality a fluid is a collection of discrete molecules.  This continuum assumption holds up remarkably well and, when combined with <a href="http://en.wikipedia.org/wiki/Momentum#Conservation_of_momentum">linear</a> and <a href="http://en.wikipedia.org/wiki/Angular_momentum#Conservation_of_angular_momentum">angular</a> momentum conservation laws, results in the Navier-Stokes equations:</p>
+<p><span class="inline inline-center"><a href="http://en.wikipedia.org/wiki/Navier-Stokes_equations"><img src="../files/images/navier_stokes_equation.png" alt="Navier-Stokes Equations" width="500" height="343" /></a><span class="caption"><strong>Navier-Stokes Equations</strong></span></span></p>
+<p>The Navier-Stokes equations mimic gas and liquid flow in all their <a href="turbulence.html">turbulent</a> complexity.  It's a shame that there isn’t a single known analytic solution for them.  However, if you happen upon such a solution or you can confirm there isn't a solution, be sure to claim the $1,000,000 prize on offer by the Clay Mathematics Institute as part of its <a href="http://www.claymath.org/millennium-problems/navier–stokes-equation">Millennium Prize Problems</a>.</p>
+<h3>CFD</h3>
+<p>Fortunately for aircraft designers and <a href="f1_aero.html">Formula 1 racecar</a> aerodynamicists the discipline known as <a href="../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> solves simplified versions of the Navier-Stokes equations using <a href="../analysis-techniques.html">numerical techniques</a> on powerful computers.  CFD applied to complex geometry and physics can take days or even weeks to produce results.  For forced convection problems, such as the airflow over a wing or the water flow along a pipe, CFD can accurately mimic the real world, in terms of predicted fluid velocity and pressures.</p>
+<p><span class="inline inline-center"><img src="../files/images/advantage_cfd_example.jpg" alt="CFD Flow Calculation" width="640" height="512" /><span class="caption"><strong>CFD Flow Calculation</strong></span>Symscape does not hold the copyright on this picture</span></p>
+<p>Numerical models of the Navier-Stokes equations are also the basis for <a href="http://en.wikipedia.org/wiki/Numerical_weather_prediction">weather forecasts</a>.  Wait, I hear you say, aren't forecasts notoriously inaccurate?  Correct, but that is due to the chaotic nature of the underlying physics which the Navier-Stokes equations mimic.  It's the uncertainty of the initial conditions in weather forecasting that leads to inaccuracy.   Compounding the problem is the need to produce a timely forecast &ndash; today's forecast is useless if it arrives tomorrow.</p>
+<h3>Global Warming</h3>
+<p>The Navier-Stokes equations also play a leading role in <a href="http://en.wikipedia.org/wiki/Global_climate_model">global climate modeling</a> and its prediction of <a href="http://en.wikipedia.org/wiki/Global_warming">Global Warming</a> due to <a href="http://en.wikipedia.org/wiki/Greenhouse_gas">greenhouse gases</a> such as carbon dioxide.  Unlike weather forecast models, climate models are not constrained to make a prediction about tomorrow's weather.   Liberated from immediate predictions, climate models can take more time to compute results and can be tuned to match eons of existing data.</p>
+<h3>History</h3>
+<p>With all the relatively recent activity in modeling the Navier-Stokes equations, instigated by the introduction of computers, you'd think they were a new discovery.  You'd be wrong.  The Navier-Stokes equations have been around since 1845, resulting from an intense effort over 18 years, when <a href="http://en.wikipedia.org/wiki/Claude-Louis_Navier">Navier</a>, <a href="http://en.wikipedia.org/wiki/Augustin_Louis_Cauchy">Cauchy</a>, <a href="http://en.wikipedia.org/wiki/Siméon_Denis_Poisson">Poisson</a>, <a href="http://en.wikipedia.org/wiki/Adhémar_Jean_Claude_Barré_de_Saint-Venant">St. Venant</a> and <a href="http://en.wikipedia.org/wiki/George_Gabriel_Stokes">Stokes</a> introduced the idea of friction (viscosity) into the frictionless <a href="http://en.wikipedia.org/wiki/Bernoulli%27s_principle">Bernoulli's equation</a> derived by <a href="http://en.wikipedia.org/wiki/Leonhard_Euler">Euler</a> in 1755.  There the equations stood, a full and complete description of fluid flow, including the enigmatic turbulence, without any means of solution until the advent of computers.</p>
+<h3>Numerical Modeling</h3>
+<p>The first phase of numerical modeling for the Navier-Stokes equations requires a transformation to the <a href="../reynolds-averaged-navier-stokes-equations.html">Reynolds Averaged Navier-Stokes (RANS) equations</a>.  The RANS equations assume that time varying chaotic (turbulent) velocity fluctuations can be separated from the mean velocity.  Once broken apart, the next step is to introduce a turbulence model to mimic the chaotic velocity fluctuations.  With these two modifications the resources required to numerically solve the Navier-Stokes equations are greatly reduced to the extent that present day computers can perform meaningful calculations.  However, turbulence models are still an open area for research.  Turbulence models are typically tuned for particular applications such as problems with <a href="../boundary-layers.html">boundary layers</a>, or shear layers, or mixing layers around jets.  When the RANS equations are combined with the classical <a href="http://en.wikipedia.org/wiki/Conservation_law">conservation laws</a> (<a href="http://en.wikipedia.org/wiki/Conservation_of_mass">mass conservation</a> and <a href="http://en.wikipedia.org/wiki/Conservation_of_energy">energy conservation</a>) a powerful means to simulate real world fluid problems is possible.  This form of modeling is the basis for nearly all engineering fluids simulations and has proven extremely effective.  Everything from blood flow through the body to spacecraft re-entering the atmosphere have been simulated.</p>
+<h3>Worthy</h3>
+<p>Given the scope of the Navier-Stokes equations, I hope you agree they are worthy of a place in the greatest equations of all time, at least until the unified <a href="http://en.wikipedia.org/wiki/Theory_of_everything">theory of everything</a> is discovered, which will make all equations redundant.</p>
+<h3>Navier Stokes Lite</h3>
+<p>If you are interested in a lighter version of the Navier-Stokes equations that can run in a reasonable time on a laptop, then consider falling back to Bernoulli's equation.  By assuming negligible viscosity and incompressible flow, a <a href="../panel-method.html">panel method</a> (such as our <a href="../product/panel.html">Panel Flow add-on</a>) can solve Bernoulli's equation to calculate the <a href="../lift-force-and-drag-force.html">lift force</a> around streamlined shapes such as an <a href="../examples/panel/dlr_f4.html">aircraft</a>.</p>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-19"></a>
+<div class="comment comment-published first odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="navier_stokes_equations.html#comment-19" class="active">Another Vote for Euler&#039;s Identity</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Richard Smith on April 24, 2007 - 16:27.  </div>
+
+  <div class="content">
+    <p>The journal <a href="http://en.wikipedia.org/wiki/The_Mathematical_Intelligencer">Mathematical Intelligencer</a> voted Euler's Identity (also known as Euler's Formula) the most beautiful equation of all time.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-119"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="navier_stokes_equations.html#comment-119" class="active">MILLENNIUM PRIZE PROBLEM  (NAVIER– STOKES EQUATIONS)</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://continuum-paradoxes.narod.ru/" rel="nofollow">Alexandr Kozachok</a> (not verified) on February 21, 2008 - 13:53.  </div>
+
+  <div class="content">
+    <p>MILLENNIUM PRIZE PROBLEM  (NAVIER– STOKES EQUATIONS) IS   SOLVABLE   BY CLASSICAL METHODS  </p>
+<p>Kozachok A.A., Kiev, Ukraine</p>
+<p>     Formulated by Clay Mathematics Institute the sixth Millennium Problems   about existence  and smoothness of solutions of the Navier – Stokes               equations periodically was discussed at numerous forums                                         (  <a href="http://grani.ru/Society/Science/m.112524.html" title="http://grani.ru/Society/Science/m.112524.html">http://grani.ru/Society/Science/m.112524.html</a> ). On recognition of some commentators the complete presentation of problem’s solution can                demand about thousand pages for mathematical formulas                                                       ( <a href="http://lib.mexmat.ru/forum/viewtopic.php?t=4289" title="http://lib.mexmat.ru/forum/viewtopic.php?t=4289">http://lib.mexmat.ru/forum/viewtopic.php?t=4289</a> ). The author of Official Problem Description–Charles Fefferman  has set the task about demonstration of existence and smoothness of the solution, instead of solution’s obtaining.   However,   the Navier-Stokes equations can be reduced  correctly to more simple classical equations of mathematical physics .   The problem of an existence proof of solutions of such equations is not so actual.<br />
+       It is known, divu and divv are identical to infinitesimal  magnitude and velocity of the relative modification of a volume element of the strained medium. Therefore divergency of acceleration divw, probably, there is a magnitude, identical to a acceleration of the relative modification of the same volume. In that case for incompressible liquid alongside with requirements divu=0, divv=0  it is necessary to accept divw=0.<br />
+     The requirement divw=0 for incompressible liquid is formulated by analogy and proved.  Operation  div will convert  the Navier – Stokes equations to the three-dimensional Laplace equation for pressure p=p(x,y,z,t) at some limitations of a mass force vector. The time   enters into Laplace equation  as parameter.<br />
+  Laplacian of the Navier – Stokes equations (pressure p=p(x,y,z,t) –  harmonic function) and a change of a variable (velocity on acceleration) allow to gain system of conventionally independent integro-differential equations with acceleration’s components w. In that case components of the acceleration for ideal incompressible liquid are harmonic functions too. The change of a variable allows to use boundary conditions of an adhesion of a fluid absolutely correctly. According to this requirement vectors of acceleration on firm immobile boundary line are equal to null.<br />
+Conversion of the Navier-Stokes equations to more simple equations has actually removed a problem of an existence proof and smooth finish of their solution on a background. Such demonstration in view of that one of required variables is a harmonic function, it is possible to not fulfil. It is possible to use known effects about properties of harmonic functions or representation of the common decision of the Laplace  equation( <a href="http://continuum-paradoxes.narod.ru/" title="http://continuum-paradoxes.narod.ru">http://continuum-paradoxes.narod.ru</a> the link « Manual, p.1 », p. 58).      More in detail on a site <a href="http://continuum-paradoxes.narod.ru/" title="http://continuum-paradoxes.narod.ru">http://continuum-paradoxes.narod.ru</a> the link “Russian pages”, “Sixth Millennium Problems (NAVIER-STOKES equations) is solvable by classical methods (in Russian)”.<br />
+                                      Yours faithfully, Alexandr Kozachok</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1833"></a>
+<div class="comment comment-published last odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="navier_stokes_equations.html#comment-1833" class="active">MILLENNIUM PRIZE PROBLEM (NAVIER– STOKES EQUATIONS) IS SOLVABLE</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Alexandr Kozachok (not verified) on November 17, 2013 - 11:12.  </div>
+
+  <div class="content">
+    <p>Read more here:<br />
+•	Yet another solution proposed?<br />
+<a href="http://en.wikipedia.org/wiki/Talk:Navier–Stokes_existence_and_smoothness#Yet_another_solution_proposed.3F" title="http://en.wikipedia.org/wiki/Talk:Navier%E2%80%93Stokes_existence_and_smoothness#Yet_another_solution_proposed.3F">http://en.wikipedia.org/wiki/Talk:Navier%E2%80%93Stokes_existence_and_sm...</a></p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/navier_stokes_equations by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:00 GMT -->
+</html>

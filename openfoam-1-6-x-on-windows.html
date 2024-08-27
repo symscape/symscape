@@ -1,0 +1,490 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/openfoam-1-6-x-on-windows by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:25:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>OpenFOAM 1.6.x on Windows | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-openfoam-1-6-x-on-windows section-openfoam-1-6-x-on-windows one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="index.html" title="Home" rel="home"><img src="files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="index.html">Home</a> › <a href="articles.html">Articles</a></div>                  <h1 class="title">OpenFOAM 1.6.x on Windows</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-806" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on September 19, 2009 - 11:03        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_15 first last"><a href="articles.html" rel="tag" title="General interest">Articles</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p><em>For the <strong>latest version</strong> of our Windows patch for OpenFOAM visit <a href="openfoam-2-2-x-on-windows.html">"OpenFOAM 2.2.x on Windows"</a>.</em></p>
+<p>We have updated our Windows patch for OpenFOAM to match the latest OpenFOAM release (v1.6.x). Be warned - to build OpenFOAM for Windows with a cross compiler requires expert knowledge of Linux utilities and compilers.</p>
+<h3>OpenFOAM GUI</h3>
+<p><em>Are you looking for a <strong>GUI driven, integrated simulation environment for Windows, Linux, and Mac</strong> incorporating a selection of the <strong>RANS OpenFOAM solvers</strong> and various import/export filters? Then try our <a href="product/rans.html"><strong>Caedium RANS Flow add-on</strong></a>.</em></p>
+<p><span class="inline inline-center"><a href="get-started-with-caedium.html"><img title="Get Started With Caedium Now" alt="Get Started With Caedium Now" src="files/flair/get-started-button.png" width="177" height="43" /></a></span></p>
+<h3><a name="patch-build-process"></a>Patch Build Process</h3>
+<p>The following steps are required to produce a native Windows version of OpenFOAM 1.6.x using a cross compiler:</p>
+<ol>
+<li>Configure, build, install and test a <a href="http://www.mingw.org/wiki/LinuxCrossMinGW">MinGW cross compiler</a> for Windows running on Linux. I used the <a href="files/articles/openfoam16x-windows/build-mingw.sh.txt">build-mingw.sh</a> script.</li>
+<li>Add <code>#include_next &lt;float.h&gt;</code> to the end of<br />
+lib/gcc/mingw32/4.4.1/include/float.h and remove it from<br />
+mingw32/include/float.h to include the right float.h.</li>
+<li>Install the <a href="http://www.opencfd.co.uk/openfoam/download.html">OpenFOAM 1.6.x source</a> distribution on Linux - git Commit: 50d2858505ca00e44776ce89cab97f9a33f098e8 Date: Dec 2 15:26:12 2009.</li>
+<li>Patch (using the Linux patch command) the OpenFOAM 1.6.x source distribution with our <a href="files/articles/openfoam16x-windows/v10-mingw-openfoam-1-6-x.patch.zip">MinGW Windows modifications</a> [last updated March 5, 2010 to v10].</li>
+<li>Copy wmkdep and dirToString from wmake/bin/linuxGcc to wmake/bin/linuxmingw32.</li>
+<li>Export environment variables and source etc/bashrc. As an example:<br />
+<code>export FOAM_INST_DIR="$HOME/projects/of/of1.6"<br />
+export WM_ARCH_OPTION=32<br />
+export WM_OSTYPE=MSwindows<br />
+export WM_COMPILER=mingw32<br />
+export WM_CC=mingw32-gcc<br />
+export WM_CXX=mingw32-g++<br />
+export compilerInstall=System<br />
+export WM_MPLIB=NONE<br />
+source "$FOAM_INST_DIR/OpenFOAM-1.6.x/etc/bashrc"</code>
+</li>
+<li>Build using Allwmake in the OpenFOAM-1.6.x directory on Linux.</li>
+<li>Transfer the OpenFOAM executables (applications/bin/linuxmingw32*/*.exe) and libraries (lib/linuxmingw32*/*.dll) to the Windows computer.</li>
+<li>Launch a Windows command prompt to run OpenFOAM solvers and utilities, such as simpleFoam.exe.</li>
+</ol>
+<p>On the Windows computer ensure the following:</p>
+<ul>
+<li>The WM_PROJECT_DIR and USERNAME variables are set.</li>
+<li>The etc directory from the original source distribution is within the WM_PROJECT_DIR.</li>
+<li>The PATH variable is set to include the OpenFOAM executable and library locations.</li>
+</ul>
+<h3>Constraints</h3>
+<p>With this method of building OpenFOAM for Windows the following features (there maybe more) are unavailable:</p>
+<ul>
+<li>job control scripts in bin (such as foamSolverSweeps)</li>
+<li>parallel</li>
+</ul>
+<p>The following applications and libraries are unlikely to build:</p>
+<ul>
+<li>libccmio</li>
+<li>Scotch, metis, MPI and any dependents</li>
+</ul>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-367"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-6-x-on-windows.html#comment-367" class="active">FOAM FATAL ERROR</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Thomas.G (not verified) on September 26, 2009 - 13:47.  </div>
+
+  <div class="content">
+    <p>Hello,</p>
+<p>thank for your patch for OpenFOAM 1.6.x and Windows. I compiled OpenFOAM for windows and it seems like it is working, BUT if I tried to use the solver in windows command prompt, I got this error:</p>
+<p>FOAM FATAL ERROR in Foam::findEtcFile&lt;&gt; : could not find mandatory file 'controlDict'</p>
+<p>I set up all PATH variable. The etc directory from the original source distribution is within the WM_PROJECT_DIR also.</p>
+<p>Maybe you have some advice???</p>
+<p>Thanks<br />
+Thomas</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-368"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-6-x-on-windows.html#comment-368" class="active">Check etc/controlDict</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on September 26, 2009 - 14:06.  </div>
+
+  <div class="content">
+    <p>So you've set the environment variable WM_PROJECT_DIR and you have the etc directory within WM_PROJECT_DIR. Next ensure that the file WM_PROJECT_DIR/etc/controlDict is in place and valid. Just for reference the etc directory should contain:</p>
+<ul>
+<li>cellModels</li>
+<li>controlDict</li>
+<li>thermoData/BurcatCpData</li>
+<li>thermoData/therm.dat</li>
+</ul>
+<p>Another thought, is to try using Wine under Linux while you are chasing this problem to avoid copying files backwards and forwards.</p>
+<p>Hope this helps.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-369"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-6-x-on-windows.html#comment-369" class="active">etc/controlDict</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Thomas.G (not verified) on September 27, 2009 - 02:39.  </div>
+
+  <div class="content">
+    <p>Hi,</p>
+<p>it is working now! I used it in MS Command Prompt as follow:</p>
+<p>"set WM_PROJECT_DIR=C:\Simulation\OpenFOAM-1.6.x"</p>
+<p>Thanks really a lot!</p>
+<p>Thomas</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-422"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-6-x-on-windows.html#comment-422" class="active">OpenFOAM-1.5-dev</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Thomas.G (not verified) on November 8, 2009 - 05:09.  </div>
+
+  <div class="content">
+    <p>Hi,</p>
+<p>and thanks for the patch.</p>
+<p>Do you have a script to build your patch automatically? I want try to build a MS Windows version of OpenFOAM-1.5-dev also. Maybe you have a path for this version already?1</p>
+<p>Bye<br />
+Thomas</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-423"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-6-x-on-windows.html#comment-423" class="active">Didn&#039;t Try OpenFOAM-1.5-dev</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on November 8, 2009 - 17:22.  </div>
+
+  <div class="content">
+    <p>Sorry I don't have an automatic patch applying-building script.</p>
+<p>The old <a href="openfoam-1-5-x-on-windows.html">OpenFOAM 1.5.x patch</a> is still available, but I haven't tried applying it to OpenFOAM-1.5-dev.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-460"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-6-x-on-windows.html#comment-460" class="active">mingw64</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on December 11, 2009 - 12:50.  </div>
+
+  <div class="content">
+    <p>Hi,</p>
+<p>great job for all the patches! Did you also tried the mingw64?</p>
+<p>Bye<br />
+Thomas</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-461"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-6-x-on-windows.html#comment-461" class="active">Not Yet</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on December 11, 2009 - 13:16.  </div>
+
+  <div class="content">
+    <p>I haven't tried mingw64. If you try it be sure to report back, thanks.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-481"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-6-x-on-windows.html#comment-481" class="active">OpenFOAM-1.5-dev and windows</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by shuminhua (not verified) on December 22, 2009 - 01:18.  </div>
+
+  <div class="content">
+    <p>Hello<br />
+Did you successful build a MS Windows version of OpenFOAM-1.5-dev?I'm more interested in it!</p>
+<p>                                      Thank you !</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-483"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-6-x-on-windows.html#comment-483" class="active">No Longer Supporting 1.5.x</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on December 30, 2009 - 09:41.  </div>
+
+  <div class="content">
+    <p>No, I'm no longer supporting the 1.5.x patch. For more see <a href="#comment-423">"Didn't Try OpenFOAM-1.5-dev"</a></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-494"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-6-x-on-windows.html#comment-494" class="active">Proposed additional fixes and mingw64</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://www.bluecape.com.pt/" rel="nofollow">Bruno Santos</a> (not verified) on January 20, 2010 - 06:42.  </div>
+
+  <div class="content">
+    <p>Hi,</p>
+<p>Just dropping by to:</p>
+<ul>
+<li>say thanks for the patches and tutorial!</li>
+<li>report I've been patching up OpenFOAM 1.6 and cross-compiling with mingw-w64 (also with mingw-w32 and mingw32), and maintaining a wiki page at openfoamwiki.net, <a href="http://openfoamwiki.net/index.php/Tip_Cross_Compiling_OpenFOAM_in_Linux_For_Windows_with_MinGW">here</a>.</li>
+<li>The most recent patch in that wiki page is based on the patch v9 version of yours, and I've discovered at least two more things missing:
+<ul>
+<li>The <strong>multiphaseInterFoam</strong> solver also needs a "Foam::interfaceProperties::initRunTime();" to force <strong>interfaceProperties</strong> to load at run time;</li>
+<li>At <a href="http://openfoamwiki.net/index.php/Tip_Cross_Compiling_OpenFOAM_in_Linux_For_Windows_with_MinGW#chtMultiRegionFoam_doesn.27t_work_properly">this section</a> of the wiki, I described what needs to be done to get <strong>chtMultiRegionFoam</strong> to run properly in Windows, with minor adjustments. I did try the "IOobject::replaceFileName" you've had since 1.5.x, but it didn't work for me.</li>
+</ul>
+</li>
+</ul>
+<p>Best Regards,<br />
+Bruno</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-495"></a>
+<div class="comment comment-published last odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-1-6-x-on-windows.html#comment-495" class="active">Thanks for the Update</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on January 20, 2010 - 09:28.  </div>
+
+  <div class="content">
+    <p>Great work Bruno, getting parallel up and running, the 64-bit compilation, and the documentation on OpenFOAMWiki.</p>
+<p>Thanks too for the feedback on the issues you found with the current (v9) 1.6.x patch.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="products.html">Products</a><ul class="menu"><li class="leaf first"><a href="product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="news.html">News</a></li>
+<li class="collapsed"><a href="blog.html">Blog</a></li>
+<li class="leaf"><a href="about.html" title="">About</a></li>
+<li class="expanded last"><a href="resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="articles.html">Articles</a></li>
+<li class="leaf"><a href="image.html">Gallery</a></li>
+<li class="leaf"><a href="support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="forum.html">Forums</a></li>
+<li class="leaf"><a href="downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="partners.html">Partners</a></li>
+<li class="leaf"><a href="poll.html">Polls</a></li>
+<li class="leaf last"><a href="links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="forum.html"><img title="Forums" alt="Forums" src="files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="contact.html">Contact</a> | <a href="trademarks.html">Trademarks</a> | <a href="privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/openfoam-1-6-x-on-windows by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:25:01 GMT -->
+</html>

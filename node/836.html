@@ -1,0 +1,325 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/836 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Telemetry Posting to TwitPic and Twitter | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="969.html" />
+<link rel="up" href="../tips.html" />
+<link rel="next" href="1147.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-836 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="../tips.html">Tips</a></div>                  <h1 class="title">Telemetry Posting to TwitPic and Twitter</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-836" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on October 16, 2011 - 19:08        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p><strong>Update</strong>: This feature is deprecated in the latest version of Caedium. The TwitPic API that this feature used is no longer available.</p>
+<p>Caedium supports automated simulation telemetry by posting images to <a href="http://twitpic.com/">TwitPic</a> and posting associated messages (tweets) to <a href="http://twitter.com/">Twitter</a>. This is useful if you want to check on the progress of a <a href="../computational-fluid-dynamics.html">Computation Fluid Dynamics (CFD)</a> simulation while you are away from your simulation's host machine and you have access to Twitter. It is also a great way to share CFD simulation progress with other colleagues on Twitter in real-time.</p>
+<p><img alt="TwitPic in Power Twitter" src="../files/tutorials/twitpic/tweetinlinepic-share.png" width="387" height="413" /> </p>
+<h3>Assumptions</h3>
+<ol>
+<li>You have downloaded, installed, and activated <a href="../product/rans.html">Caedium RANS Flow</a> or <a href="../product/professional.html">Caedium Professional</a>. </li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>.</li>
+<li>You have a Twitter account.</li>
+<li>You have configured a RANS flow simulation (e.g., <a href="818.html">&quot;Incompressible Flow Through a Pipe into a Box&quot;</a>), but you have not yet clicked the <strong>Run</strong> button <img alt="" src="../files/tutorials/shared/play.png" /> on the <strong>Home</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a>.</li>
+</ol>
+<h2 class="title">Set Simulation Time Duration and Increment Properties</h2>
+<p class="note">First you need to decide how many posts you are going to send to TwitPic, which is determined by dividing the simulation time duration by the simulation time increment. For example, Duration = 4 and Increment = 1 would result in 4 posts.</p>
+<p>Right-click the <a href="../tutorials/essentials.html#viewwindow">View Window</a> background and double-click <strong>sim</strong> in the <strong>Select</strong> dialog. In the <a href="../tutorials/essentials.html#propertiespanel">Properties Panel</a>, select the Simulation tab <img alt="" src="../files/tutorials/shared/simulation-tab.png" />. Expand the <strong>Time</strong> property. Set the <strong>Duration</strong> and <strong>Increment</strong> properties so that Duration / Increment matches the number of posts you want to send to TwitPic to perform.</p>
+<p><img alt="Simulation Time Properties" src="../files/tutorials/twitpic/timeprops.png" width="260" height="306" /> </p>
+<h2 class="title">Set Iterations per Increment</h2>
+<p>Right-click on an edge of the flow volume in the View Window, double-click the first volume in the <strong>Select</strong> dialog and select <strong>Properties</strong>. In the Properties Panel select the Volume tab <img alt="" src="../files/tutorials/shared/volume-entity-tab.png" />. Set the <strong>Substance: Air-&gt;Solver: RANS Flow-&gt;Iterations</strong> property to the number of iterations per simulation time increment.</p>
+<p class="note">For example, for 400 iterations with duration = 4 and increment = 1, you would set Iterations = 100.</p>
+<p><img alt="Iteration Property" src="../files/tutorials/twitpic/iterationprop.png" width="260" height="306" /> </p>
+<h2 class="title">Set Names</h2>
+<p class="note">It is a good idea to set the name of the window to something meaningful, as the default message will use it as the title in the tweet.</p>
+<p>In a View Window, right-click on the background and double-click <strong>sim</strong> in the <strong>Select</strong> dialog. In the Properties Panel select the View tab <img alt="" src="../files/tutorials/shared/view-tab.png" /> and set the <strong>Name</strong> property to your chosen title, e.g., Pipe-Box Flow Streamlines.</p>
+<p>In a Plot or Monitor Window, right-click on the plot area and select <strong>Properties</strong>. Then in the Properties Panel set the <strong>Name</strong> property to your chosen title, e.g., Pipe-Box Flow Residuals.</p>
+<h2 class="title">Use TwitPic Tool</h2>
+<p>Select the <strong>Results</strong> Tool Palette and select <strong>Telemetrics-&gt;TwitPic</strong>. In the Properties Panel, set <strong>Account</strong> to your Twitter username and <strong>Password</strong> to your Twitter password. Drag and drop the <strong>Other-&gt;TwitPic</strong> tool onto the background of the window (View, Plot or Monitor) that you want to post and select <strong>Done</strong>.</p>
+<p><img alt="TwitPic Properties" src="../files/tutorials/twitpic/twitpicprops.png" width="300" height="609" /></p>
+<p class="note">The TwitPic tool will be added to the View tab <img alt="" src="../files/tutorials/shared/view-tab.png" /> properties for a View Window and will be added to the main properties for a Plot or Monitor. The property will be highlighted in pink, which indicates that it can be deleted.</p>
+<p><img alt="View Properties" src="../files/tutorials/twitpic/viewprops.png" width="299" height="305" /> </p>
+<p>The format of the tweet is determined by the <strong>Message</strong> property, which has the default string <em>'%name:%time by #Caedium'</em>, where %name = &lt;window name&gt; and %time = &lt;simulation time&gt;</p>
+<p>An example of a default tweet for %name = <em>Pipe-Box Flow Streamlines</em> and %time = <em>1</em> is <em>'Pipe-Box Flow Streamlines:1 by #Caedium'</em></p>
+<h2 class="title">Run the Simulation</h2>
+<p>Click <strong>Run</strong> <img alt="" src="../files/tutorials/shared/play.png" /> to run the simulation and automatically post to TwitPic and Twitter.</p>
+<p class="note">Every time the simulation time changes it will trigger a post to TwitPic and Twitter. Posts are triggered by the <strong>Run</strong> button and also by all the other simulation controls, i.e., <strong>Start</strong>, <strong>Previous</strong>, <strong>Next</strong>, and <strong>End</strong>.</p>
+<p>See the image below for an example of the tweets in Twitter for a View Window named &quot;Pipe-Box Flow Streamlines&quot; and a Residuals Monitor named &quot;Pipe-Box Flow Residuals.&quot;</p>
+<p><img alt="Tweets" src="../files/tutorials/twitpic/example.png" width="402" height="483" /> </p>
+<p>Once the simulation run is complete, you will need to delete the <strong>Telemetric: TwitPic</strong> property to stop further tweets. To do this, open the Properties Panel for the associated window, right-click on <strong>Telemetric: TwitPic</strong> and select <strong>Delete</strong>.</p>
+<h3 class="title">Note</h3>
+<p>A similar setup and trigger mechanism is also used for the other Telemetric tools:</p>
+<ul>
+<li><strong>Copy As</strong> - save a copy of the simulation (.sym) when triggered</li>
+<li><strong>Export</strong> - export any file type when triggered</li>
+</ul>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="969.html" class="page-previous" title="Go to previous page">‹ Run, Stop, and Lock Controls</a>
+                    <a href="../tips.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="1147.html" class="page-next" title="Go to next page">Topology Operations ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="collapsed"><a href="817.html">RANS Flow</a></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="expanded last active-trail"><a href="../tips.html">Tips</a><ul class="menu"><li class="leaf first"><a href="723.html">Accuracy Tool</a></li>
+<li class="leaf"><a href="745.html">Clipping a View</a></li>
+<li class="leaf"><a href="1145.html">Cloud Burst Service</a></li>
+<li class="leaf"><a href="1144.html">Cloud Service</a></li>
+<li class="leaf"><a href="779.html">Color Map</a></li>
+<li class="leaf"><a href="411.html">Create an Anaglyph 3D Stereoscopic Image</a></li>
+<li class="leaf"><a href="1247.html">Import a SketchUp Model</a></li>
+<li class="leaf"><a href="838.html">Import an OpenFOAM Mesh</a></li>
+<li class="leaf"><a href="930.html">Microsoft Windows HPC Server 2008 Cluster Configuration</a></li>
+<li class="leaf"><a href="1578.html">Multiple Views</a></li>
+<li class="leaf"><a href="1174.html">Multiple Volume Flow Domain</a></li>
+<li class="leaf"><a href="929.html">Parallel Configuration</a></li>
+<li class="leaf"><a href="984.html">Particles or Streamlines</a></li>
+<li class="leaf"><a href="765.html">Punch a Hole in a Face</a></li>
+<li class="leaf"><a href="934.html">Relaxation Factors in RANS Flow Solvers</a></li>
+<li class="leaf"><a href="969.html">Run, Stop, and Lock Controls</a></li>
+<li class="leaf active-trail"><a href="836.html" class="active">Telemetry Posting to TwitPic and Twitter</a></li>
+<li class="leaf"><a href="1147.html">Topology Operations</a></li>
+<li class="leaf"><a href="766.html">Trim a Face</a></li>
+<li class="leaf"><a href="538.html">Use an Image as a Background</a></li>
+<li class="leaf"><a href="732.html">Using Fields and Variables</a></li>
+<li class="leaf"><a href="532.html">View a Mesh</a></li>
+<li class="leaf"><a href="669.html">Visual Facets Control</a></li>
+<li class="leaf"><a href="668.html">Visual Finish</a></li>
+<li class="leaf last"><a href="667.html">Visualization Preferences</a></li>
+</ul></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/836 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:43 GMT -->
+</html>

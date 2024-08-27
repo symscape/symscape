@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.symscape.com/taxonomy/term/46/0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Questions</title>
+    <link>https://www.symscape.com/taxonomy/term/46/0</link>
+    <description></description>
+    <language>en</language>
+          <item>
+    <title>How do I fix mesh and solver failures?</title>
+    <link>https://www.symscape.com/node/1209</link>
+    <description>&lt;p&gt;Are you experiencing Caedium mesh or solver failures? Then please review our FAQ &lt;a href=&quot;/node/1166&quot;&gt;&quot;How do I fix mesh and solver failures?&quot;&lt;/a&gt;&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1209#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Mon, 02 Apr 2012 14:02:54 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1209 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Fan questions in Caedium</title>
+    <link>https://www.symscape.com/node/1726</link>
+    <description>&lt;p&gt;Hello.&lt;/p&gt;
+&lt;p&gt;I am trying to model a fan entirely within my flow volume.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1726&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1726#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Thu, 26 Sep 2019 22:00:10 +0000</pubDate>
+ <dc:creator>PeterG</dc:creator>
+ <guid isPermaLink="false">1726 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Internal fluid flow </title>
+    <link>https://www.symscape.com/node/1724</link>
+    <description>&lt;p&gt;Does anyone have experience simulating internal fluid flow through a cylinder with internal baffles and side exit holes? I want to see how the fluid acts inside and outside of the cylinder. I can&#039;t seem to get the fluid to come out of the exit holes when the holes are capped.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1724#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Mon, 22 Jul 2019 12:29:21 +0000</pubDate>
+ <dc:creator>bseaborn</dc:creator>
+ <guid isPermaLink="false">1724 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Unable to surface-mesh only?</title>
+    <link>https://www.symscape.com/node/1723</link>
+    <description>&lt;p&gt;Hello.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1723&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1723#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Sun, 30 Jun 2019 02:14:27 +0000</pubDate>
+ <dc:creator>PeterG</dc:creator>
+ <guid isPermaLink="false">1723 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Problems with import of Solid Edge file into Caedium</title>
+    <link>https://www.symscape.com/node/1713</link>
+    <description>&lt;p&gt;We are a F1 in schools team and have not worked with Caedium before. We wanted to assess several models we have created in solid edge. We understand, that we should either use the format type .igs or .step. We believe we have created these files in solid edge, but when trying to import them into Caedium we always fail. Can anybody help us - what are we doing wrong? Many thanks in advance!&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1713#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Sat, 29 Dec 2018 12:50:22 +0000</pubDate>
+ <dc:creator>Optimine</dc:creator>
+ <guid isPermaLink="false">1713 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Using inlet fan option and outlet fan option</title>
+    <link>https://www.symscape.com/node/1712</link>
+    <description>&lt;p&gt;Hello.&lt;br /&gt;
+I am working on a simulation in which I have both inlets modeling fans and outlets modeling fans.&lt;br /&gt;
+The simulation runs fine and converges well when I have both the inlets and outlets set to fixed velocities that are surface normal. However, I do not  get pressure readings that are realistic at all (well beyond what the fans are actually capable of generating).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1712&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1712#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Thu, 04 Oct 2018 23:35:58 +0000</pubDate>
+ <dc:creator>PeterG</dc:creator>
+ <guid isPermaLink="false">1712 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Can I simulate centrifuge with no inlet or outlet?</title>
+    <link>https://www.symscape.com/node/1711</link>
+    <description>&lt;p&gt;I want to spin a closed system with no flow in or out.  Will this simulate?&lt;/p&gt;
+&lt;p&gt;How do I set the RPM rate of the system and how many times it spins?&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1711#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Tue, 21 Aug 2018 19:15:45 +0000</pubDate>
+ <dc:creator>audioengr</dc:creator>
+ <guid isPermaLink="false">1711 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Öffnen von Dateien</title>
+    <link>https://www.symscape.com/node/1696</link>
+    <description>&lt;p&gt;Hey,&lt;/p&gt;
+&lt;p&gt;Ich muss für Formel 1 in der Schule mein Auto im Windkanal testen. Das Auto wurde in Solid Edge konstuiert und ist eine .asm Datei. Ich möchte diese nun in Caedium öffnen. Wie mache ich das?&lt;br /&gt;
+Ich bitte euch um eine schnelle Antwort.&lt;br /&gt;
+Danke schonmal im voraus.&lt;/p&gt;
+&lt;p&gt;LG Honey&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1696#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Thu, 08 Jun 2017 17:44:22 +0000</pubDate>
+ <dc:creator>Honey</dc:creator>
+ <guid isPermaLink="false">1696 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Home workstation for Caedium - Question about Caedium processes</title>
+    <link>https://www.symscape.com/node/1694</link>
+    <description>&lt;p&gt;Hello Dr. Smith,&lt;/p&gt;
+&lt;p&gt;I am considering purchasing a new workstation for Caedium.&lt;br /&gt;
+As I understand it, mesh generation on Caedium uses but one core of even a multi-core computer, so a single (or fewer) core computer with faster processor core speeds is more helpful for mesh generation, whilst having many more cores is more helpful for solver running, even if the processor speeds are slower.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1694&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1694#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Fri, 26 May 2017 18:11:21 +0000</pubDate>
+ <dc:creator>PeterG</dc:creator>
+ <guid isPermaLink="false">1694 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Question about fan inlet and fan outlet with compressible flow</title>
+    <link>https://www.symscape.com/node/1689</link>
+    <description>&lt;p&gt;Hello.&lt;br /&gt;
+I have a simulation involving subsonic compressible flow and a fan inlet as well as a fan outlet.&lt;br /&gt;
+How can I use both compressible flow and a fan inlet and fan outlet?&lt;/p&gt;
+&lt;p&gt;When I changed the simulation from incompressible flow to compressible flow, the option for fan inlet/outlets disappeared from the inlet/outlet properties menu.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1689&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1689#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Thu, 27 Apr 2017 17:13:24 +0000</pubDate>
+ <dc:creator>PeterG</dc:creator>
+ <guid isPermaLink="false">1689 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Importing faces that are not put into volumes</title>
+    <link>https://www.symscape.com/node/1686</link>
+    <description>&lt;p&gt;I would like to import faces without them being put in volumes. With this I can collect them in order and group them later once I combine them all into one volume.&lt;/p&gt;
+&lt;p&gt;Or, if I import them as a volume how can I break them from the volume?&lt;/p&gt;
+&lt;p&gt;Thanks&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1686#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Wed, 12 Apr 2017 20:19:02 +0000</pubDate>
+ <dc:creator>ken</dc:creator>
+ <guid isPermaLink="false">1686 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>HYDRAULIC TEST BENCH?</title>
+    <link>https://www.symscape.com/node/1685</link>
+    <description>&lt;p&gt;Hello&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1685&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1685#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Sat, 08 Apr 2017 16:15:14 +0000</pubDate>
+ <dc:creator>khadija88</dc:creator>
+ <guid isPermaLink="false">1685 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Unexpected process exit</title>
+    <link>https://www.symscape.com/node/1676</link>
+    <description>&lt;p&gt;I am venturing in to using radiation and a simple model of a room with warm body in it runs very well in heat transfer however when I engage radiation it fails. &lt;/p&gt;
+&lt;p&gt;The failure occurs at the time when the program was to update the image and gives and stops cold and give this&lt;/p&gt;
+&lt;p&gt;Warning:&lt;br /&gt;
+volume [www.1836.5] RANS Flow; Failed&lt;br /&gt;
+Unexpected process exit.&lt;/p&gt;
+&lt;p&gt;Any fixes for this?&lt;/p&gt;
+&lt;p&gt;Ken&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1676#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Thu, 09 Feb 2017 23:22:35 +0000</pubDate>
+ <dc:creator>ken</dc:creator>
+ <guid isPermaLink="false">1676 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Setup of Transient Time Values</title>
+    <link>https://www.symscape.com/node/1673</link>
+    <description>&lt;p&gt;I am having trouble understanding the set up of the Simulation&#039;s &quot;Duration&quot; and &quot;Increment&quot; values and the Volume&#039;s &quot;Time Step&quot; and &quot;Iterations&quot; values. &lt;/p&gt;
+&lt;p&gt;I have read through the transient example several times but I am yet confused. &lt;/p&gt;
+&lt;p&gt;Can you define each of these four items and how they relate?  I noticed in examples the Simulation&#039;s Increment value is not defined.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1673&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1673#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Wed, 11 Jan 2017 23:13:26 +0000</pubDate>
+ <dc:creator>ken</dc:creator>
+ <guid isPermaLink="false">1673 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Time Variant Flow Setup</title>
+    <link>https://www.symscape.com/node/1655</link>
+    <description>&lt;p&gt;I am trying to set up a time variant flow at a face but it is not clear to me how set up the values in the parentheses. For example, I am using units of minutes and feet. I want to set up the flow to be zero for 15 seconds then have a vertical flow rate of 250 ft/min after 15 seconds. &lt;/p&gt;
+&lt;p&gt;Are the units that are used in this field the same as my IP units?&lt;/p&gt;
+&lt;p&gt;How do I structure the input?&lt;/p&gt;
+&lt;p&gt;Ken&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1655#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <pubDate>Mon, 22 Aug 2016 15:25:20 +0000</pubDate>
+ <dc:creator>ken</dc:creator>
+ <guid isPermaLink="false">1655 at https://www.symscape.com</guid>
+  </item>
+  </channel>
+</rss>

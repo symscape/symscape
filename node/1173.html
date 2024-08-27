@@ -1,0 +1,280 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1173 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Hex meshing + initial conditions + stability + opening | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-forum page-node-1173 section-node one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../forum.html">Forums</a> › <a href="../forum/46.html">Questions</a></div>                  <h1 class="title">Hex meshing + initial conditions + stability + opening</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1173" class="node node-type-forum clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by JLD on December 19, 2011 - 23:26        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_46 first last"><a href="../forum/46.html" rel="tag" title="Get answers to product (e.g., Caedium) questions. View Ratings">Questions</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>My CFD problem is simply a tube of hot air flowing into an enclosed yet large space (at room conditions) using RANS Flow.</p>
+<p>1)<br />
+March Newsletter:<br />
+"Create a set of interconnected volumes each with 6 faces such that Caedium's structured meshing algorithm can then generate high quality hexahedral elements"</p>
+<p>I've actually created my geometry from an external 3D modelling software and then imported it into Caedium as a step file since the Builder has limited control.<br />
+I've tried multi-block meshing in the past but it is extremely troublesome once there are geometrical complexities.<br />
+Will I be able to to multi-block the simple parts (by creating boxes inside my geometry) then while meshing, leave the automatic mesher to create hex elements (with O,C and L-grids) for the multi-blocks but tetrahedral elements for anything else untouched?</p>
+<p>2)<br />
+March Newsletter:<br />
+"Assign different initial conditions to different volumes within a flow domain to speedup the convergence rate of a simulation."<br />
+How is this done? I only have just one whole fluid volume for air to flow through from start to finish since Caedium doesn't support multiple fluids or conjugate heat transfer.<br />
+Is assigning different conditions throughout the whole domain the same as the multi-block approach? My biggest worry is disrupting the flow continuum.<br />
+Then can I say I specify [u v w] = [0.2 0.3 0.4] for one specified region then [u v w] = [0 0 400] for another?<br />
+I've used  [0.2 0.3 0.4] because [0 0 0] often doesn't work and I need to accurately portray calm ambient conditions.</p>
+<p>3)<br />
+Often when I run a steady state problem involving heat transfer, the residuals will oscillate, then spit out errors such as singularity in Ux, Uy or Uz and stop solving. This is much worse when I enable compressibility.<br />
+This is usually alleviated when I enable transient simulations but it is very time-consuming in reality.<br />
+Another commercial code I used would never have the singularity issue for a similar problem.</p>
+<p>4)<br />
+I am confused at which boundary condition out of Inlet-Outlet or Outlet-Inlet properly represents an opening in reality (e.g. open window to outside or sky).<br />
+In order to avoid not having solutions is to specify Inlet(s) then Outlet(s) for flow rather than Inlet(s) then an Inlet-Outlet/Outlet-Inlet, I want to allow fluid to flow in and out freely and not force it all out.</p>
+  <div class="forum-topic-navigation clear-block">
+          <a href="972.html" class="topic-previous" title="Go to previous forum topic">‹ Mixing two types of fluid</a>
+              <a href="1312.html" class="topic-next" title="Go to next forum topic">vertex question ›</a>
+      </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+  
+  <a id="comment-1255"></a>
+<div class="comment comment-published first last odd clearfix">
+  
+      <h3 class="title">
+      <a href="1173.html#comment-1255" class="active">Multiple Volumes</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on December 20, 2011 - 09:55.  </div>
+
+  <div class="content">
+    <p>Are you assuming incompressible conditions? I ask because you talk about an initial condition of [u v w] = [0 0 400] which for air would be supersonic (Mach = 1 = 340 m/s). In this case you would have to use the Supersonic solver and it is only available as unsteady. If you do have supersonic flow then the incompressible heat transfer setup I discuss below is mute.</p>
+<p>In answer to your questions:</p>
+<p>1) Currently Caedium supports either all hex or all tet meshes in relation to multiple connected volumes, so no Caedium can't produce hybrid meshes.</p>
+<p>2) I just added a tutorial tip to cover multiple-volumes at <a href="1174.html">"Multiple Volume Flow Domain"</a>.</p>
+<p>3) Often solver singularities are caused by a poor mesh - for more details see <a href="1166.html">"How do I fix mesh and solver failures?"</a>. Assuming your mesh is acceptable, I suggest trying steady state incompressible fluid flow without heat transfer - if you can't get a solution for this state then there's no point trying heat transfer. Then try switching on heat transfer. By default the heat transfer option assumes buoyancy - if this is not important then switch it off by setting <strong>Substance-&gt;Properties-&gt;Reference-&gt;g</strong> (gravity) = <strong>[0 0 0]</strong>. Buoyancy driven flows tends to be time dependent and less robust so often steady state doesn't converge.</p>
+<p>4) I suggest trying an <strong>Inlet-Outlet</strong> - which can cope with outlet flow (assumes zero gradients for outgoing quantities) and with inlet flow (you have to specify what the inlet quantities are). Your simulation will be more robust if you can assign specific inlets and outlets.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1173 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:12 GMT -->
+</html>

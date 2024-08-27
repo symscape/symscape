@@ -1,0 +1,526 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog?page=13&%24Version=1&%24Path=%2F by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Blogs | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="alternate" type="application/rss+xml" title="RSS - blogs" href="blog/feed" />
+<link rel="shortcut icon" href="files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="files/css/css_4ba51789bb8c5a1b9c86dba4cb3177c5.css" />
+<link type="text/css" rel="stylesheet" media="print" href="files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in page-blog section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="index.html" title="Home" rel="home"><img src="files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="index.html">Home</a></div>                  <h1 class="title">Blogs</h1>
+                                
+        
+        <div id="content-area">
+          <div class="item-list"></div><div id="node-1410" class="node node-type-blog node-teaser clearfix">
+
+   <div class="list-node">
+  
+      <h2 class="title"><a href="blog/cfd-simulation-pitot-tube-manometer.html">CFD Simulation of a Pitot Tube and Manometer</a></h2>
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on August 15, 2013 - 12:35        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p><a href="http://en.wikipedia.org/wiki/Pitot_tube">Pitot tubes</a> are critical devices used to determine the airspeed of an aircraft. In aerodynamics it is important to know the speed of an aircraft relative to the surrounding air to alert pilots to stall conditions. Pitot tubes are also used in wind tunnels to determine airspeed, sometimes using a <a href="http://en.wikipedia.org/wiki/Pressure_measurement">manometer</a> to measure the pressure difference between <a href="http://en.wikipedia.org/wiki/Static_pressure">static pressure</a> and <a href="http://en.wikipedia.org/wiki/Total_pressure">total pressure</a> to determine the <a href="http://en.wikipedia.org/wiki/Dynamic_pressure">dynamic pressure</a>. I thought it would be interesting to see if we could simulate a pitot tube connected to a manometer (two-phase flow, air + water) using <a href="computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> and to share my findings with you.</p>
+<p><span class="inline inline-center"><img src="files/pictures/pitot-tube/pitot-tube-inner.png" alt="CFD Simulation of a Pitot Tube and Manometer" width="600" height="597" /><span class="caption"><strong>CFD Simulation of a Pitot Tube and Manometer</strong></span>Blue is water and red is air</span></p>
+<div class="read-more"><a href="blog/cfd-simulation-pitot-tube-manometer.html" title="Read the whole post" rel="nofollow"><strong>Read more &raquo;</strong></a></div>  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first"><a href="blog/6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+<li class="comment_comments last"><a href="blog/cfd-simulation-pitot-tube-manometer.html#comments" title="Jump to the first comment of this posting.">1 comment</a></li>
+</ul>  </div>
+
+  </div>
+</div> <!-- /.node -->
+
+
+
+
+  <div id="node-1400" class="node node-type-blog node-teaser clearfix">
+
+   <div class="list-node">
+  
+      <h2 class="title"><a href="blog/virtual-wind-tunnel-and-free-air-cfd-comparison-part-2.html">Virtual Wind Tunnel and Free Air CFD Comparison Part 2/2</a></h2>
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on July 22, 2013 - 07:44        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Welcome to the concluding episode of my two-part project to compare results between the virtual wind tunnel and free air using a series of Computational Fluid Dynamics (CFD) simulations. Recall that the <a href="blog/virtual-wind-tunnel-and-free-air-cfd-comparison-part-1.html">previous post outlined the free air tests and expectations</a> for the comparison. Here I present the results and conclusions.</p>
+<p><span class="inline inline-center"><img src="files/pictures/windtunnel-freeair/wind-tunnel-40-p.png" alt="CFD Simulation of a Racecar in a Wind Tunnel" width="600" height="341" /><span class="caption"><strong>CFD Simulation of a Racecar in a Wind Tunnel</strong></span>Pressure contours on the racecar</span></p>
+<div class="read-more"><a href="blog/virtual-wind-tunnel-and-free-air-cfd-comparison-part-2.html" title="Read the whole post" rel="nofollow"><strong>Read more &raquo;</strong></a></div>  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first"><a href="blog/6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+<li class="comment_comments last"><a href="blog/virtual-wind-tunnel-and-free-air-cfd-comparison-part-2.html#comments" title="Jump to the first comment of this posting.">1 comment</a></li>
+</ul>  </div>
+
+  </div>
+</div> <!-- /.node -->
+
+
+
+
+  <div id="node-1399" class="node node-type-blog node-teaser clearfix">
+
+   <div class="list-node">
+  
+      <h2 class="title"><a href="blog/virtual-wind-tunnel-and-free-air-cfd-comparison-part-1.html">Virtual Wind Tunnel and Free Air CFD Comparison Part 1/2</a></h2>
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on July 16, 2013 - 08:22        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Often the ultimate aim of performing a wind tunnel test on a scale model is to provide data on how the full size equivalent will behave in free air. This is especially true in motor racing (e.g., Formula 1) where teams use a combination of wind tunnels and Computational Fluid Dynamics (CFD) to guide what they hope is a winning racecar design. As a follow on to my project to build a <a href="blog/cfd-simulation-of-racecar-in-wind-tunnel.html">virtual wind tunnel to test an open wheel racecar</a>, here I start a two-part project to compare results between the virtual wind tunnel and free air using a series of CFD simulations.</p>
+<p><span class="inline inline-center"><img src="files/pictures/windtunnel-freeair/wind-tunnel-test-section.png" alt="CFD Test Section for a Racecar in a Wind Tunnel" width="600" height="347" /><span class="caption"><strong>CFD Test Section for a Racecar in a Wind Tunnel</strong></span></span></p>
+<div class="read-more"><a href="blog/virtual-wind-tunnel-and-free-air-cfd-comparison-part-1.html" title="Read the whole post" rel="nofollow"><strong>Read more &raquo;</strong></a></div>  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first"><a href="blog/6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+<li class="comment_comments last"><a href="blog/virtual-wind-tunnel-and-free-air-cfd-comparison-part-1.html#comments" title="Jump to the first comment of this posting.">1 comment</a></li>
+</ul>  </div>
+
+  </div>
+</div> <!-- /.node -->
+
+
+
+
+  <div id="node-1394" class="node node-type-blog node-teaser clearfix">
+
+   <div class="list-node">
+  
+      <h2 class="title"><a href="blog/cfd-simulation-of-racecar-in-wind-tunnel.html">CFD Simulation of a Racecar in a Wind Tunnel</a></h2>
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on July 8, 2013 - 09:51        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Having recently built a <a href="blog/wind-tunnel-explained-with-computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD) simulation of the Honda Wind Tunnel</a> at Imperial College, it seemed only fitting to actually use it to perform a virtual test on a scale model. Clearly, given the wind tunnel's close association with motor racing, the test model had to be a racecar.</p>
+<p><span class="inline inline-center"><img src="files/pictures/windtunnelcar/full-windtunnel.png" alt="CFD Simulation of a Racecar in a Wind Tunnel" width="600" height="404" /><span class="caption"><strong>CFD Simulation of a Racecar in a Wind Tunnel</strong></span>Velocity magnitude iso-surfaces</span></p>
+<div class="read-more"><a href="blog/cfd-simulation-of-racecar-in-wind-tunnel.html" title="Read the whole post" rel="nofollow"><strong>Read more &raquo;</strong></a></div>  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="blog/6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  </div>
+</div> <!-- /.node -->
+
+
+
+
+  <div id="node-1389" class="node node-type-blog node-teaser clearfix">
+
+   <div class="list-node">
+  
+      <h2 class="title"><a href="blog/wind-tunnel-explained-with-computational-fluid-dynamics.html">Wind Tunnel Explained With Computational Fluid Dynamics</a></h2>
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on June 28, 2013 - 13:07        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Have you ever wondered what are the main features of a <a href="blog/wind-tunnels-and-cfd.html">wind tunnel</a> and what purpose do they fulfill? Well wonder no more. With the help of <a href="computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> let's explore a closed return wind tunnel based on the <a href="http://www3.imperial.ac.uk/hondawindtunnel">Honda Wind Tunnel</a> at Imperial College, London.</p>
+<p><span class="inline inline-center"><img src="files/pictures/windtunnel/windtunnel-u-contours.png" alt="Wind Tunnel CFD Simulation" width="600" height="437" /><span class="caption"><strong>Wind Tunnel CFD Simulation</strong></span>Velocity magnitude iso-surfaces</span></p>
+<div class="read-more"><a href="blog/wind-tunnel-explained-with-computational-fluid-dynamics.html" title="Read the whole post" rel="nofollow"><strong>Read more &raquo;</strong></a></div>  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first"><a href="blog/6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+<li class="comment_comments last"><a href="blog/wind-tunnel-explained-with-computational-fluid-dynamics.html#comments" title="Jump to the first comment of this posting.">1 comment</a></li>
+</ul>  </div>
+
+  </div>
+</div> <!-- /.node -->
+
+
+
+
+  <div id="node-1384" class="node node-type-blog node-teaser clearfix">
+
+   <div class="list-node">
+  
+      <h2 class="title"><a href="blog/moving-reference-frame-for-cfd.html">Moving Reference Frame for Computational Fluid Dynamics</a></h2>
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on June 24, 2013 - 08:23        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>A Moving Reference Frame (MRF) is a relatively simple, robust, and efficient steady-state, <a href="computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> modeling technique to simulate rotating machinery. For example, the rotors on a <a href="http://en.wikipedia.org/wiki/Quadcopter">quadcopter</a> can be modeled with MRFs. </p>
+<p><span class="inline inline-center"><img src="files/pictures/quadcopter/quadcopter-streamlines.png" alt="MRF CFD Simulation of a Quadcopter in Flight" width="500" height="373" /><span class="caption"><strong>MRF CFD Simulation of a Quadcopter in Flight</strong></span>Shows streamlines colored by velocity magnitude</span></p>
+<div class="read-more"><a href="blog/moving-reference-frame-for-cfd.html" title="Read the whole post" rel="nofollow"><strong>Read more &raquo;</strong></a></div>  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first"><a href="blog/6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+<li class="comment_comments last"><a href="blog/moving-reference-frame-for-cfd.html#comments" title="Jump to the first comment of this posting.">13 comments</a></li>
+</ul>  </div>
+
+  </div>
+</div> <!-- /.node -->
+
+
+
+
+  <div id="node-1383" class="node node-type-blog node-teaser clearfix">
+
+   <div class="list-node">
+  
+      <h2 class="title"><a href="blog/simulation-for-your-3d-printer.html">Simulation For Your 3D Printer</a></h2>
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on June 20, 2013 - 09:03        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p><a href="http://en.wikipedia.org/wiki/3D_printing">3D printers</a> are <a href="http://en.wikipedia.org/wiki/The_new_black"><em>the new black</em></a>.</p>
+<ul>
+<li><a href="http://www.zdnet.com/chris-anderson-why-i-left-wired-3d-printing-will-be-bigger-than-the-web-7000007535/"><cite>&quot;3D Printing will be bigger than the web&quot;</cite></a>, Chris Anderson, ex-Wired editor</li>
+<li><a href="http://techcrunch.com/2013/06/19/why-makerbot-is-like-apple/"><cite>&quot;Why MakerBot is Like Apple&quot;</cite></a>, John Biggs, TechCrunch</li>
+<li>In US$403M deal <a href="http://www.zdnet.com/3d-printing-goes-mainstream-with-stratasys-403m-makerbot-buy-7000017073/">Stratasys buys MakerBot</a></li>
+</ul>
+<p>Whether 3D printing can live up to the <a href="http://gizmodo.com/why-3d-printing-is-overhyped-i-should-know-i-do-it-fo-508176750">hype</a> remains to be seen. However, making things has been around since time eternal. The fact that 3D printers have reached a price point allowing small businesses and hobbyists, collectively referred to as <a href="http://en.wikipedia.org/wiki/Maker_culture">Makers</a>, to leap on board is <a href="blog/3d-printing-revolution-underway.html">definitely exciting</a>. However, what hasn't changed is that building a physical thing still costs time and money. What can we learn from the millennia of building things prior to the availability of 3D printers?</p>
+<p><span class="inline inline-center"><img src="files/images/fab-at-home.jpg" alt="Fab@Home Fabber" width="417" height="391" /><span class="caption"><strong>First Generation 3D Printer for Hobbyists</strong></span>Courtesy of <a href="http://fabathome.org/wiki/index.php/Main_Page">Fab@Home</a></span></p>
+<div class="read-more"><a href="blog/simulation-for-your-3d-printer.html" title="Read the whole post" rel="nofollow"><strong>Read more &raquo;</strong></a></div>  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="blog/6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  </div>
+</div> <!-- /.node -->
+
+
+
+
+  <div id="node-1376" class="node node-type-blog node-teaser clearfix">
+
+   <div class="list-node">
+  
+      <h2 class="title"><a href="blog/helical-strakes-with-your-chimney.html">Helical Strakes with your Chimney?</a></h2>
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on June 11, 2013 - 10:25        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Helical strakes are often used on chimneys to reduce <a href="http://en.wikipedia.org/wiki/Vortex-induced_vibration">vortex induced vibration (VIV)</a>. However, these strakes also have a significant drawback - they induce massive increases in <a href="lift-force-and-drag-force.html">drag</a> and side forces that have significant structural implications for the chimney. Read on for a Computational Fluid Dynamics (CFD) study that compares a smooth cylindrical chimney to the same chimney with helical strakes.</p>
+<p><span class="inline inline-center"><img src="files/pictures/helical-strakes/helical-strakes-chimney-velmag.png" alt="CFD Simulation of a Helical Strakes Chimney" width="500" height="487" /><span class="caption"><strong>CFD Simulation of a Helical Strakes Chimney</strong></span>Velocity magnitude contours</span></p>
+<div class="read-more"><a href="blog/helical-strakes-with-your-chimney.html" title="Read the whole post" rel="nofollow"><strong>Read more &raquo;</strong></a></div>  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first"><a href="blog/6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+<li class="comment_comments last"><a href="blog/helical-strakes-with-your-chimney.html#comments" title="Jump to the first comment of this posting.">5 comments</a></li>
+</ul>  </div>
+
+  </div>
+</div> <!-- /.node -->
+
+
+
+
+  <div id="node-1375" class="node node-type-blog node-teaser clearfix">
+
+   <div class="list-node">
+  
+      <h2 class="title"><a href="blog/turning-vanes-required.html">Turning Vanes Required</a></h2>
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on June 6, 2013 - 08:32        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Do you want turning vanes with your duct work? Yes, if you are considering a square corner and you want to minimize your fan power requirement. Don't take my word for it, instead consider this Computational Fluid Dynamics (CFD) study that compares a vaneless square corner with both small turning vanes and large turning vanes.</p>
+<p><span class="inline inline-center"><img src="files/pictures/turning-vanes/turning-vanes.png" alt="Turning Vane CFD Study" width="550" height="446" /><span class="caption"><strong>Turning Vane CFD Study</strong></span>Velocity magnitude contours on the symmetry plane</span></p>
+<div class="read-more"><a href="blog/turning-vanes-required.html" title="Read the whole post" rel="nofollow"><strong>Read more &raquo;</strong></a></div>  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first"><a href="blog/6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+<li class="comment_comments last"><a href="blog/turning-vanes-required.html#comments" title="Jump to the first comment of this posting.">1 comment</a></li>
+</ul>  </div>
+
+  </div>
+</div> <!-- /.node -->
+
+
+
+
+  <div id="node-1372" class="node node-type-blog node-teaser clearfix">
+
+   <div class="list-node">
+  
+      <h2 class="title"><a href="blog/elephants-computational-fluid-dynamics.html">Elephants and Computational Fluid Dynamics</a></h2>
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on May 29, 2013 - 18:22        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Zoology professor Warren Porter leads a team of researchers from the University of Wisconsin-Madison that uses <a href="computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> to simulate <a href="convection-and-heat-transfer.html">heat transfer</a> and <a href="lift-force-and-drag-force.html">drag</a>. No big deal you say, until you hear that the subject of his CFD simulations is an elephant!</p>
+<p><span class="inline inline-center"><img src="files/pictures/misc/elephant.png" alt="Caedium CFD Simulation Around an Elephant" width="500" height="363" /><span class="caption"><strong>Caedium CFD Simulation Around an Elephant</strong></span></span></p>
+<div class="read-more"><a href="blog/elephants-computational-fluid-dynamics.html" title="Read the whole post" rel="nofollow"><strong>Read more &raquo;</strong></a></div>  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="blog/6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  </div>
+</div> <!-- /.node -->
+
+
+
+
+  <div class="item-list"><ul class="pager"><li class="pager-first first"><a href="blog7267.html?%24Version=1&amp;%24Path=%2F" title="Go to first page" class="active">« first</a></li>
+<li class="pager-previous"><a href="blog444a.html?page=12&amp;%24Version=1&amp;%24Path=%2F" title="Go to previous page" class="active">‹ previous</a></li>
+<li class="pager-ellipsis">…</li>
+<li class="pager-item"><a href="blog2aa6.html?page=9&amp;%24Version=1&amp;%24Path=%2F" title="Go to page 10" class="active">10</a></li>
+<li class="pager-item"><a href="blogbbc1.html?page=10&amp;%24Version=1&amp;%24Path=%2F" title="Go to page 11" class="active">11</a></li>
+<li class="pager-item"><a href="blog789a.html?page=11&amp;%24Version=1&amp;%24Path=%2F" title="Go to page 12" class="active">12</a></li>
+<li class="pager-item"><a href="blog444a.html?page=12&amp;%24Version=1&amp;%24Path=%2F" title="Go to page 13" class="active">13</a></li>
+<li class="pager-current">14</li>
+<li class="pager-item"><a href="blog587a.html?page=14&amp;%24Version=1&amp;%24Path=%2F" title="Go to page 15" class="active">15</a></li>
+<li class="pager-item"><a href="blog73e2.html?page=15&amp;%24Version=1&amp;%24Path=%2F" title="Go to page 16" class="active">16</a></li>
+<li class="pager-item"><a href="blog301e.html?page=16&amp;%24Version=1&amp;%24Path=%2F" title="Go to page 17" class="active">17</a></li>
+<li class="pager-item"><a href="blog53a0.html?page=17&amp;%24Version=1&amp;%24Path=%2F" title="Go to page 18" class="active">18</a></li>
+<li class="pager-ellipsis">…</li>
+<li class="pager-next"><a href="blog587a.html?page=14&amp;%24Version=1&amp;%24Path=%2F" title="Go to next page" class="active">next ›</a></li>
+<li class="pager-last last"><a href="blog4d1d.html?page=38&amp;%24Version=1&amp;%24Path=%2F" title="Go to last page" class="active">last »</a></li>
+</ul></div>        </div>
+
+        
+                  <div class="feed-icons"><a href="blog/feed" class="feed-icon"><img src="misc/feed.png" alt="Syndicate content" title="RSS - blogs" width="16" height="16" /></a></div>
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="products.html">Products</a><ul class="menu"><li class="leaf first"><a href="product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="news.html">News</a></li>
+<li class="collapsed active-trail"><a href="blog.html" class="active">Blog</a></li>
+<li class="leaf"><a href="about.html" title="">About</a></li>
+<li class="expanded last"><a href="resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="articles.html">Articles</a></li>
+<li class="leaf"><a href="image.html">Gallery</a></li>
+<li class="leaf"><a href="support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="forum.html">Forums</a></li>
+<li class="leaf"><a href="downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="partners.html">Partners</a></li>
+<li class="leaf"><a href="poll.html">Polls</a></li>
+<li class="leaf last"><a href="links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="forum.html"><img title="Forums" alt="Forums" src="files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="blog/feed" rel="alternate" type="application/rss+xml"><img src="files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="contact.html">Contact</a> | <a href="trademarks.html">Trademarks</a> | <a href="privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog?page=13&%24Version=1&%24Path=%2F by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:14 GMT -->
+</html>

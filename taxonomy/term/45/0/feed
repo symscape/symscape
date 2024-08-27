@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.symscape.com/taxonomy/term/45/0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>General</title>
+    <link>https://www.symscape.com/taxonomy/term/45/0</link>
+    <description></description>
+    <language>en</language>
+          <item>
+    <title>Caedium v6.0.0 Released</title>
+    <link>https://www.symscape.com/node/1721</link>
+    <description>&lt;p&gt;The latest version of Caedium (v6.0.0) is out which includes a new conjugate heat transfer (simultaneous fluid and solid heat transfer) capability and a new passive scalar transport solver. For more details checkout the &lt;a href=&quot;/news/enhanced-cfd-simulations-with-conjugate-heat-transfer-and-passive-species-transport&quot;&gt;press release&lt;/a&gt; and the &lt;a href=&quot;/node/1715&quot;&gt;release notes&lt;/a&gt;.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1721#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Thu, 13 Jun 2019 18:56:34 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1721 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>TDR error in Windows event viewer</title>
+    <link>https://www.symscape.com/node/1714</link>
+    <description>&lt;p&gt;Windows 10 imposes a time limit on the rendering of graphics after which it abruptly closes the associated application. This scenario can occur while Caedium is rendering a large number of 3D graphic objects, such as arrows.&lt;/p&gt;
+&lt;p&gt;To remedy this problem you need to increase the rendering time limit for Windows according to:&lt;/p&gt;
+&lt;p&gt;To Change the Graphic device timeout, use the following process.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1714&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1714#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Fri, 08 Feb 2019 22:06:50 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1714 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Turbulence/erosion at sea revetments/embankment support</title>
+    <link>https://www.symscape.com/node/1467</link>
+    <description>&lt;p&gt;I need assistance in simulating the turbulence created by wave impact at the toe of an embankment support. Beach angle, incoming flow and gravity flow must be taken into account. Any assistance will be greatly appreciated.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1467#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Thu, 20 Feb 2014 12:49:09 +0000</pubDate>
+ <dc:creator>tdg</dc:creator>
+ <guid isPermaLink="false">1467 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>leading Edge Vortices</title>
+    <link>https://www.symscape.com/node/1466</link>
+    <description>&lt;p&gt;I would like to model the leading edge vortices around a maple seed. Can u please share the step by step procedure of doing it? Thanks&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1466#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/46">Questions</category>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Thu, 20 Feb 2014 09:22:48 +0000</pubDate>
+ <dc:creator>Sonal Lucy</dc:creator>
+ <guid isPermaLink="false">1466 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium v5.2.0 Released</title>
+    <link>https://www.symscape.com/node/1452</link>
+    <description>&lt;p&gt;The latest version of Caedium (v5.2.0) is out which includes an improved heat transfer capability incorporating radiation, the option to create &#039;bullet time&#039; animations for particles, and various bug fixes. For more details checkout the &lt;a href=&quot;/news/improved-heat-transfer-bullet-time-cfd-simulations&quot;&gt;press release&lt;/a&gt; and the &lt;a href=&quot;/node/1450&quot;&gt;release notes&lt;/a&gt;.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1452#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Wed, 22 Jan 2014 21:58:43 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1452 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>ofgpu v1.1: GPU Linear Solvers for OpenFOAM Released</title>
+    <link>https://www.symscape.com/node/1447</link>
+    <description>&lt;p&gt;The Symscape ofgpu (v1.1) library for OpenFOAM® 2.2.x is now available. ofgpu is a linear solver library that targets NVIDIA CUDA GPU devices on Windows, Linux, and (untested) Mac OS X. &lt;/p&gt;
+&lt;p&gt;For more details see &lt;a href=&quot;/gpu-1-1-openfoam&quot;&gt;&quot;GPU v1.1 Linear Solver Library for OpenFOAM&quot;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/node/808&quot;&gt;OpenFOAM&lt;/a&gt; is a registered trademark of OpenCFD and is unaffiliated with Symscape.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1447#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Fri, 17 Jan 2014 19:04:39 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1447 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>OpenFOAM 2.2.x Windows Patch Released</title>
+    <link>https://www.symscape.com/node/1446</link>
+    <description>&lt;p&gt;The Symscape Windows patch for the latest OpenFOAM® release (v2.2.x) is now available. This patch supports 64-bit compilation using the MinGW-w64 cross-compiler. Parallel computation is provided by the native Windows MS MPI implementation and is also available on Microsoft Windows HPC Server 2012 for clusters.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1446&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1446#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Fri, 17 Jan 2014 18:59:16 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1446 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium v5.1.3 Released</title>
+    <link>https://www.symscape.com/node/1413</link>
+    <description>&lt;p&gt;The latest version of Caedium (v5.1.3) is out which fixes a bug related double sided faces. For more details checkout the &lt;a href=&quot;/node/1388&quot;&gt;release notes&lt;/a&gt;.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1413#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Wed, 26 Jun 2013 18:24:26 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1413 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium v5.1.2 Released</title>
+    <link>https://www.symscape.com/node/1387</link>
+    <description>&lt;p&gt;The latest version of Caedium (v5.1.2) is out which fixes a bug related to stitched volumes. For more details checkout the &lt;a href=&quot;/node/1385&quot;&gt;release notes&lt;/a&gt;.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1387#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Tue, 25 Jun 2013 13:27:29 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1387 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium v5.1.1 Released</title>
+    <link>https://www.symscape.com/node/1382</link>
+    <description>&lt;p&gt;The latest version of Caedium (v5.1.1) is out which fixes a bug related to STL binary format import. For more details checkout the &lt;a href=&quot;/node/1386&quot;&gt;release notes&lt;/a&gt;.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1382#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Mon, 17 Jun 2013 15:40:46 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1382 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium v5.1.0 Released</title>
+    <link>https://www.symscape.com/node/1381</link>
+    <description>&lt;p&gt;The latest version of Caedium (v5.1.0) is out which includes a new Helix tool, and a couple of bug fixes. For more details checkout the &lt;a href=&quot;/news/helix-creation-for-cfd-simulations&quot;&gt;press release&lt;/a&gt; and the &lt;a href=&quot;/node/1379&quot;&gt;release notes&lt;/a&gt;.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1381#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Thu, 13 Jun 2013 15:08:20 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1381 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium v5.0.0 Released</title>
+    <link>https://www.symscape.com/node/1368</link>
+    <description>&lt;p&gt;The latest version of Caedium (v5.0.0) is out which includes a variety of exciting enhancements, including Python scripting support, and bug fixes. For more details checkout the &lt;a href=&quot;/news/automate-cfd-simulations-with-python-scripting&quot;&gt;press release&lt;/a&gt; and the &lt;a href=&quot;/node/1365&quot;&gt;release notes&lt;/a&gt;.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1368#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Wed, 22 May 2013 14:35:08 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1368 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Language localization</title>
+    <link>https://www.symscape.com/node/1353</link>
+    <description>&lt;p&gt;Poor italian language localization. The commands translated in italian are nonsense e.g. &quot;Faces&quot; is translated as &quot;Volti&quot;, which in italian means &quot;human face&quot; the correct word is &quot;Facce&quot;.&lt;br /&gt;
+Another example &quot;Others&quot; is translated as &quot;Altrui&quot;, which in italian means &quot;of somebody else&quot;.&lt;br /&gt;
+As a results I have to continuosly refer to english tutorial for understanding the meaning of italian command!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1353&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1353#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Sun, 17 Mar 2013 13:29:43 +0000</pubDate>
+ <dc:creator>peoporro</dc:creator>
+ <guid isPermaLink="false">1353 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Solving the code on GPU to save time.</title>
+    <link>https://www.symscape.com/node/1326</link>
+    <description>&lt;p&gt;The N-S eqn is solved on GPU for a solver that is 30 times faster&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1326#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Sat, 08 Dec 2012 05:16:18 +0000</pubDate>
+ <dc:creator>mudassar247</dc:creator>
+ <guid isPermaLink="false">1326 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium v4.0.2 Released</title>
+    <link>https://www.symscape.com/node/1264</link>
+    <description>&lt;p&gt;The latest version of Caedium (v4.0.2) is out which includes a variety of exciting enhancements, including support for a free surface Volume Of Fluid (VOF) solver, and bug fixes. For more details checkout the &lt;a href=&quot;/news/simulate-free-surface-flows-using-volume-of-fluid-cfd-solver&quot;&gt;press release&lt;/a&gt; and the &lt;a href=&quot;/node/1258&quot;&gt;release notes&lt;/a&gt;.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1264#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/45">General</category>
+ <pubDate>Tue, 07 Aug 2012 20:12:30 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1264 at https://www.symscape.com</guid>
+  </item>
+  </channel>
+</rss>

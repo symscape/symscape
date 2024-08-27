@@ -1,0 +1,308 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/examples/rans/cfd-electric-race-car by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:07:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Electric Race Car CFD Analysis | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-examples-rans-cfd-electric-race-car section-examples one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../../index.html" title="Home" rel="home"><img src="../../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../../index.html">Home</a> › <a href="../../examples.html">Examples</a> › <a href="../rans.html">RANS Flow</a></div>                  <h1 class="title">Electric Race Car CFD Analysis</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-898" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on March 19, 2010 - 19:40        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_54 first last"><a href="../rans.html" rel="tag" title="RANS Flow add-on examples">RANS Flow</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>Many see the future of automobiles to be electric, so it's only natural to assume that the same may apply to motor racing. Luke Horsfall is one who believes electric race cars have a bright future, having set up Horsfall Racing (along with Laura Horsfall) to build electric race cars and race them in the <a href="http://www.greenpower.co.uk/racing/formula24-plus">F24+ electric race car class</a> in the UK. The restrictions of this particular formula keep budgets and speeds relatively low (at least by Formula 1 standards). Making best use of the limited power in F24+ is crucial, and that places the emphasis on low-drag, aerodynamic race cars. I bet you can guess where this is heading - this is territory ripe for <a href="../../product/professional.html">Caedium's Computational Fluid Dynamics (CFD) capabilities</a>.</p>
+<p><span class="inline inline-center"><img alt="Super Swoosh" src="../../files/examples/electricracecar/super-swoosh.png" width="400" height="208" /> <span class="caption"><strong>Super Swoosh:</strong>Horsfall Racing's 2009 Electric Race Car</span></span></p>
+<h3>Background</h3>
+<p><span class="inline inline-center"><a href="http://www.horsfallracing.co.uk/"><img alt="Horsfall Racing Logo" src="../../files/examples/electricracecar/horsfall-logo.png" width="200" height="70" /></a></span></p>
+<p>Horsfall Racing's chief designer Luke Horsfall has produced 7 generations of electric race cars, dating back to his school days. For his most recent, 8th generation design he has turned to CFD as a cost-effective means to help optimize the <a href="../../blog/intro_aero.html">aerodynamics</a> of his car. Unlike F1 there's little use in sacrificing <a href="../../lift-force-and-drag-force.html">drag for downforce</a> in such relatively low-powered cars, so the aerodynamic design focuses on minimizing drag, which favors a sleek-streamlined exterior. Luke recently enlisted Symscape to help with the CFD analysis of his latest design for the upcoming 2010 season.</p>
+<h3>Geometry</h3>
+<p>Luke's latest race car design was created in a CAD system, so a STEP geometry file was used to transfer the geometry into <a href="../../product/professional.html">Caedium Professional</a>. Using the various geometry creation and fixing tools in Caedium the original geometry was modified in order to represent the volume of air surrounding the car. By assuming a symmetric car and flow field, only half of the flow volume is needed for the CFD simulation. Symmetry allows the simulation to run twice as quickly and only use half the memory that would otherwise be necessary.</p>
+<p><span class="inline inline-center"><img alt="Original Geometry" src="../../files/examples/electricracecar/horsfall-geometry.png" width="400" height="238" /> <span class="caption"><strong>Original Geometry</strong></span></span></p>
+<h3>Physics</h3>
+<p>The CFD simulation setup included: </p>
+<ul>
+<li>Free-stream air speed and moving-ground speed = 15 m/s (54 km/h or 34 mph) </li>
+<li>Wheel rotation speed = 666 rpm </li>
+<li>k-omega SST turbulence model </li>
+</ul>
+<p>The race car, its wheels, and the ground plane were specified as walls (impregnable by air). Additionally the wheels were assigned a rotational speed and the ground plane was configured with a linear speed matching the free-stream air speed. The sides and ceiling of the flow volume were specified as symmetry planes to simulate the other half of the flow volume and mimic free air. The upstream face was specified as an inlet and the downstream face was specified as an outlet.</p>
+<h3>Results</h3>
+<p><span class="inline inline-center"><img src="../../files/images/horsfall-front-U.preview.png" alt="Horsfall Racing Electric Racer Front View of Velocity" width="640" height="480" /><span class="caption"><strong>Front View of Velocity</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../../files/images/horsfall-rear-U.preview.png" alt="Horsfall Racing Electric Racer Rear View of Velocity" width="640" height="480" /><span class="caption"><strong>Rear View of Velocity</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../../files/images/horsfall-front-p.preview.png" alt="Horsfall Racing Electric Racer Front View of Pressure" width="640" height="480" /><span class="caption"><strong>Front View of Pressure</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../../files/images/horsfall-rear-p.preview.png" alt="Horsfall Racing Electric Racer Rear View of Pressure" width="640" height="480" /><span class="caption"><strong>Rear View of Pressure</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../../files/images/horsfall-front-streamlines.preview.png" alt="Horsfall Racing Electric Racer Front View of Streamlines" width="640" height="480" /><span class="caption"><strong>Front View of Streamlines</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../../files/images/horsfall-rear-streamlines.preview.png" alt="Horsfall Racing Electric Racer Rear View of Streamlines" width="640" height="480" /><span class="caption"><strong>Rear View of Streamlines</strong></span></span></p>
+<p>The drag coefficient (C<sub>D</sub>) was 0.19.</p>
+<h3>Conclusion</h3>
+<p>Clearly Luke's experience in designing low-drag race cars is evident in this latest design when you compare its C<sub>D</sub> = 0.19 to that of a typical passenger car, such as a <a href="http://en.wikipedia.org/wiki/Automobile_drag_coefficient#Typical_values_and_examples">Honda Civic with C<sub>D</sub> = 0.31</a>.</p>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-1262"></a>
+<div class="comment comment-published first odd clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-electric-race-car.html#comment-1262" class="active">rotational speed</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by navvabk on December 26, 2011 - 01:11.  </div>
+
+  <div class="content">
+    <p>Would you please let me know how did you define the rotational speed of wheels? What kind of boundary condition did you used for?<br />
+Thanks</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1263"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-electric-race-car.html#comment-1263" class="active">Review rotating wheel tutorial</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on December 26, 2011 - 09:16.  </div>
+
+  <div class="content">
+    <p>Please review the tutorial <a href="../../node/831.html">"Flow Over a Rotating Wheel with Moving Ground"</a>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1266"></a>
+<div class="comment comment-published last odd clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-electric-race-car.html#comment-1266" class="active">Thanks a lot! That was quite</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by navvabk on December 26, 2011 - 23:00.  </div>
+
+  <div class="content">
+    <p>Thanks a lot! That was quite helpful.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../../news.html">News</a></li>
+<li class="collapsed"><a href="../../blog.html">Blog</a></li>
+<li class="leaf"><a href="../../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../../articles.html">Articles</a></li>
+<li class="leaf"><a href="../../image.html">Gallery</a></li>
+<li class="leaf"><a href="../../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../../forum.html">Forums</a></li>
+<li class="leaf"><a href="../../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../../partners.html">Partners</a></li>
+<li class="leaf"><a href="../../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../../forum.html"><img title="Forums" alt="Forums" src="../../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../../contact.html">Contact</a> | <a href="../../trademarks.html">Trademarks</a> | <a href="../../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/examples/rans/cfd-electric-race-car by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:07:26 GMT -->
+</html>

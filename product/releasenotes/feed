@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.symscape.com/product/releasenotes" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Caedium Release Notes</title>
+    <link>https://www.symscape.com/product/releasenotes</link>
+    <description></description>
+    <language>en</language>
+          <item>
+    <title>Caedium Version 6.0.3 Release Notes</title>
+    <link>https://www.symscape.com/node/1728</link>
+    <description>&lt;p&gt;This release contains an update to some of the Caedium subsystems and a number of bug fixes as listed.&lt;/p&gt;
+&lt;h3&gt;New Features and Enhancements&lt;/h3&gt;
+&lt;p&gt;Realize faster and more robust operations with major updates to the Caedium subsystems: Open Cascade, and wxWidgets&lt;/p&gt;
+&lt;h3&gt;Bug Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fan condition failed with an unable to open file error [RANS Flow]&lt;/li&gt;
+&lt;li&gt;Unable to just mesh faces without also meshing attached volumes [RANS Flow]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1728&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1728#comments</comments>
+ <category domain="https://www.symscape.com/product/releasenotes">Release Notes</category>
+ <pubDate>Tue, 24 Mar 2020 15:23:43 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1728 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium Version 6.0.0 Release Notes</title>
+    <link>https://www.symscape.com/node/1715</link>
+    <description>&lt;p&gt;The latest Caedium release has a mix of new features, enhancements and bug fixes. The highlights of this release are a new conjugate heat transfer (simultaneous fluid and solid heat transfer) capability, a new passive scalar transport solver, and major updates to all the Caedium subsystems: Open Cascade, VTK, wxWidgets, and OpenFOAM&amp;reg;. &lt;/p&gt;
+&lt;h3&gt;New Features and Enhancements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Improve your heat transfer predictions with conjugate heat transfer that solves for heat transfer between fluids and solids simultaneously [RANS Flow]&lt;/li&gt;
+&lt;li&gt;Track passive fluids (e.g., smoke) released into a dominant flow with a passive scalar transport capability [RANS Flow]&lt;/li&gt;
+&lt;li&gt;Save and restore custom/modified Substances [RANS Flow|Panel Flow]&lt;/li&gt;
+&lt;li&gt;Provide a fan curve to control a cyclic fan boundary condition [RANS Flow]&lt;/li&gt;
+&lt;li&gt;Improve your plots with anti-alias (smooth) lines&lt;/li&gt;
+&lt;li&gt;Easily identify what tools apply to what entities with new entity-based grouping in the Physics Tool Palette&lt;/li&gt;
+&lt;li&gt;New link geometry tool to couple cyclics and shared boundaries [Builder]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1715&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1715#comments</comments>
+ <category domain="https://www.symscape.com/product/releasenotes">Release Notes</category>
+ <pubDate>Thu, 25 Apr 2019 13:05:10 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1715 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium Version 5.2.0 Release Notes</title>
+    <link>https://www.symscape.com/node/1450</link>
+    <description>&lt;p&gt;The latest Caedium release has a mix of new features, enhancements and bug fixes. The highlights of this release are an improved heat transfer capability and major updates to all the Caedium subsystems.&lt;/p&gt;
+&lt;h3&gt;New Features and Enhancements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Improve your heat transfer predictions with the option to include radiation [RANS Flow] &lt;/li&gt;
+&lt;li&gt;Realize faster and more robust operations with major updates to the Caedium subsystems: Open Cascade, VTK, wxWidgets, and OpenFOAM&amp;reg;&lt;/li&gt;
+&lt;li&gt;Create&lt;em&gt; &#039;bullet time&#039;&lt;/em&gt; animations with the particle freeze option [RANS Flow|Panel Flow]&lt;/li&gt;
+&lt;li&gt;Specify mass flow rate directly for incompressible simulations [RANS Flow] &lt;/li&gt;
+&lt;li&gt;Mark non-rotating Moving Reference Frame (MRF) boundaries for rotating simulations [RANS Flow] &lt;/li&gt;
+&lt;li&gt;Generate better triangle surface meshes that account for poorly aligned face geometry [RANS Flow|Panel Flow] &lt;/li&gt;
+&lt;li&gt;Try the CUDA GPU linear solver option using CUDA 5.5 with support for the latest NVIDIA Tesla cards [RANS Flow] &lt;/li&gt;
+&lt;li&gt;Generate stunning ray-traced images with support for the latest version of POV-Ray 3.7  [Viz Export]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1450&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1450#comments</comments>
+ <category domain="https://www.symscape.com/product/releasenotes">Release Notes</category>
+ <pubDate>Mon, 20 Jan 2014 18:28:47 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1450 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium Version 5.1.3 Release Notes</title>
+    <link>https://www.symscape.com/node/1388</link>
+    <description>&lt;p&gt;This release contains a bug fix for groups containing double-sided faces.&lt;/p&gt;
+&lt;h3&gt;Bug Fix&lt;/h3&gt;
+&lt;p&gt;Saving a group that contained double-sided faces failed to restore [Builder]&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1388#comments</comments>
+ <category domain="https://www.symscape.com/product/releasenotes">Release Notes</category>
+ <pubDate>Tue, 25 Jun 2013 23:28:08 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1388 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium Version 5.1.2 Release Notes</title>
+    <link>https://www.symscape.com/node/1385</link>
+    <description>&lt;p&gt;This release contains a bug fix for stitched volumes.&lt;/p&gt;
+&lt;h3&gt;Bug Fix&lt;/h3&gt;
+&lt;p&gt;Saving a topology only stitched volume with a connected face failed to restore [Builder]&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1385#comments</comments>
+ <category domain="https://www.symscape.com/product/releasenotes">Release Notes</category>
+ <pubDate>Tue, 25 Jun 2013 13:00:57 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1385 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium Version 5.1.1 Release Notes</title>
+    <link>https://www.symscape.com/node/1386</link>
+    <description>&lt;p&gt;This release contains a bug fix for importing STL binary files.&lt;/p&gt;
+&lt;h3&gt;Bug Fix&lt;/h3&gt;
+&lt;p&gt;Importing STL binary format caused a crash [Exchange]&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1386#comments</comments>
+ <category domain="https://www.symscape.com/product/releasenotes">Release Notes</category>
+ <pubDate>Sat, 15 Jun 2013 13:00:40 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1386 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium Version 5.1.0 Release Notes</title>
+    <link>https://www.symscape.com/node/1379</link>
+    <description>&lt;p&gt;The latest &lt;a href=&quot;/news/helix-creation-for-cfd-simulations&quot;&gt;Caedium release&lt;/a&gt; has a new Helix tool, an improved Sweep tool, improved mesh element sizing, and a couple of bug fixes.&lt;/p&gt;
+&lt;h3&gt;New Features and Enhancements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use the Helix tool to create cylindrical or conical helices for your CFD simulations, e.g., helical strakes on a chimney [Builder]&lt;/li&gt;
+&lt;li&gt;Use the improved Sweep tool to better maintain orientation of the source along a path [Builder]&lt;/li&gt;
+&lt;li&gt;Better control your mesh element sizes with improved localized geometry bounding [RANS Flow|Panel Flow]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1379&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1379#comments</comments>
+ <category domain="https://www.symscape.com/product/releasenotes">Release Notes</category>
+ <pubDate>Fri, 14 Jun 2013 00:03:46 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1379 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium 5.0.0 Release Notes</title>
+    <link>https://www.symscape.com/node/1365</link>
+    <description>&lt;p&gt;The &lt;a href=&quot;/news/automate-cfd-simulations-with-python-scripting&quot;&gt;latest Caedium release&lt;/a&gt; has a range of new features, enhancements, and bug fixes. The main theme of this release is improved interaction through the introduction of scripting and the new tabbed toolbar GUI.&lt;/p&gt;
+&lt;h3&gt;New Features and Enhancements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Improved Interaction&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Automate repetitive tasks and perform parameter studies with Python script recording and playback &lt;/li&gt;
+&lt;li&gt;Interact with a more intuitive GUI using ribbon-like tabbed toolbars&lt;/li&gt;
+&lt;li&gt;Link multiple simulations to control them as a group with the option to run them simultaneously&lt;/li&gt;
+&lt;li&gt;Undo and redo multiple levels in a single operation&lt;/li&gt;
+&lt;li&gt;Select standard Fit-All views, such as front and back&lt;/li&gt;
+&lt;li&gt;Use a 3Dconnexion 3D mouse to control the view on Windows. 3Dconnexion Space Navigator donation credit: Per Hassel Sørensen, University of Stavanger, Norway&lt;/li&gt;
+&lt;li&gt;Transfer your license to another computer by first deactivating it on your current computer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;More Physics&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Realize faster and more robust simulation convergence using the polyhedral (dual mesh) conversion option [RANS Flow]&lt;/li&gt;
+&lt;li&gt;Control the mesh size across many entities using a maximum element size for the Accuracy tool [RANS Flow|Panel Flow]&lt;br /&gt;
+&lt;!--EndFragment--&gt;&lt;!--EndFragment--&gt;&lt;/li&gt;
+&lt;li&gt;Set time dependent boundary conditions for primary variables, such as velocity [RANS Flow]&lt;/li&gt;
+&lt;li&gt;Set a partial slip condition for a wall boundary condition [RANS Flow]&lt;/li&gt;
+&lt;li&gt;Use the latest NVIDIA CUDA 5.0 release with support of the Kepler architecture for the CUDA GPU linear solver option [RANS Flow]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Updated Translations&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;French, credit: Pierre Castellani, &lt;a href=&quot;http://www.teotech.fr/&quot;&gt;TEOtech&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;German, credit: Gregor Matl and Niklas Hagenow&lt;/li&gt;
+&lt;li&gt;Italian, credit: Giampiero Porro, &lt;a href=&quot;http://www.datamedsrl.com/&quot;&gt;Datamed srl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Japanese, credit: Sei-Ichi Tanabe-Tanabu, &lt;a href=&quot;http://v-t.jp/jp/hpc/&quot;&gt;Visual Technology&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Portuguese (Brazil), credit: Fernando Prevedello, &lt;a href=&quot;http://xcae.com.br/&quot;&gt;XCAE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Spanish&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1365&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1365#comments</comments>
+ <category domain="https://www.symscape.com/product/releasenotes">Release Notes</category>
+ <pubDate>Tue, 21 May 2013 20:42:05 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1365 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium 4.0.2 Release Notes</title>
+    <link>https://www.symscape.com/node/1258</link>
+    <description>&lt;p&gt;The &lt;a href=&quot;/news/simulate-free-surface-flows-using-volume-of-fluid-cfd-solver&quot;&gt;latest Caedium release&lt;/a&gt; has a broad range of new features, enhancements, and bug fixes. It includes an array of new flow solver options for multiphase, moving reference frames, and porous media. It has new boundary conditions for fans and cyclics. It also includes internationalization support for a selection of popular languages.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1258&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1258#comments</comments>
+ <category domain="https://www.symscape.com/product/releasenotes">Release Notes</category>
+ <pubDate>Tue, 31 Jul 2012 23:14:01 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1258 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium 3.0.2 Release Notes</title>
+    <link>https://www.symscape.com/node/1143</link>
+    <description>&lt;p&gt;The &lt;a href=&quot;/news/hybrid-cfd-modeling-cloud-computing&quot;&gt;latest Caedium release&lt;/a&gt; has a broad range of new features, enhancements, and bug fixes. The new release includes an array of topology-based operations that support a new hybrid modeling scenario where you can build your flow volume from a mixture of faceted and analytic (CAD) geometry. Also there are a selection of new ways to run simulations, with two cloud-based services using Windows Azure and an experimental GPU option for NVIDIA hardware.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1143&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1143#comments</comments>
+ <category domain="https://www.symscape.com/product/releasenotes">Release Notes</category>
+ <pubDate>Sun, 16 Oct 2011 19:57:49 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1143 at https://www.symscape.com</guid>
+  </item>
+  </channel>
+</rss>

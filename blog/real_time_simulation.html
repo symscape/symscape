@@ -1,0 +1,324 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/real_time_simulation by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:18:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Real-Time Simulation | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-real-time-simulation section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">Real-Time Simulation</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-156" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on November 8, 2006 - 21:00        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p><a href="../computer-aided-engineering.html">Computer-Aided Engineering (CAE)</a> software enhances product design and manufacture.  In the parallel world of <a href="http://en.wikipedia.org/wiki/Video_games">video games</a> and <a href="http://en.wikipedia.org/wiki/Movies">movies</a>, CAE-like software gives life to breath-taking effects and virtual realism.</p>
+<p><span class="inline inline-center"><img src="../files/images/plasmapong.png" alt="Plasma Pong" width="640" height="480" /><span class="caption"><strong>Plasma Pong</strong></span></span></p>
+<p>I say <cite>CAE-like software</cite> because the emphasis is less on physical reality and more on the entertainment quotient.  So for movies, such as X-Men, that means presenting physics-warping feats such as weather control.  For games, such as race car simulations, it means faking enough of reality to ensure the game feels real but can perform its limited simulation calculations in real time.  Thanks to <a href="http://en.wikipedia.org/wiki/Moores_law">Moore's Law</a> we have ever more powerful computers available for play and work.</p>
+<p>Movies typically prefer visual accuracy, while games favor real-time response.  The requirement for visual accuracy means render times for movies can take hours per frame, even with massively parallel clusters.  These extended time scales for creating movie virtual reality allows more sophisticated simulations, even physically accurate CAE techniques to be used.  However, the lack of aesthetics exhibited by realism often requires human intervention to bring the fantastical to life.  A whole <a href="http://en.wikipedia.org/wiki/Computer-generated_imagery">industry</a> is dedicated to warping physics to the whims of movie directors, e.g. Spiderman swinging on a thread through Manhattan, much to the delight of moviegoers.  Who, dealing with the ordinary every day, want to see extraordinary feats in their movies.</p>
+<p><a href="http://en.wikipedia.org/wiki/Game_consoles">Game consoles</a> approach what appears to be reality in real-time.  The <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;location=http%3A%2F%2Fwww.amazon.com%2FPhysics-Game-Developers-David-Bourg%2Fdp%2F0596000065%2Fsr%3D8-1%2Fqid%3D1163124644%3Fie%3DUTF8%26s%3Dbooks&amp;tag=symscape-20&amp;linkCode=ur2&amp;camp=1789&amp;creative=9325">physics in games</a> matches the entire range covered by work-related CAE software, e.g.:</p>
+<ul>
+<li>Kinematics of race cars cornering</li>
+<li>Deformable, cartoon-like structures in wacky racing games such as <a href="http://www.pseudointeractive.com/technology-research.php">Cel Damage</a></li>
+<li>Airflow simulation in flight simulators e.g. <a href="http://x-plane.com/default.html">X-Plane</a></li>
+<li>Water flow simulation</li>
+<li>Fluid-structure interactions for character clothing</li>
+</ul>
+<p>The <a href="http://en.wikipedia.org/wiki/Graphics_processing_unit">Graphic Processor Units (GPUs)</a>, which power the <a href="http://en.wikipedia.org/wiki/Graphics_card">graphics cards</a> that deliver near real virtual game worlds, in some cases exceed the raw number crunching abilities of the typical CPU.  This has prompted some people to consider using <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;location=http%3A%2F%2Fwww.amazon.com%2FGPU-Gems-Programming-High-Performance-General-Purpose%2Fdp%2F0321335597%2Fsr%3D1-2%2Fqid%3D1163124767%3Fie%3DUTF8%26s%3Dbooks&amp;tag=symscape-20&amp;linkCode=ur2&amp;camp=1789&amp;creative=9325">GPUs for physics simulations</a>, such as <a href="http://www.cs.sunysb.edu/~vislab/projects/amorphous/WeiWeb/hardwareLBM.htm">real-time flow simulations</a>, with impressive results.  Using the same technique, real-time 2D fluid dynamics was incorporated into a <a href="http://www.plasmapong.com/">game</a>.  There is no question that the <a href="http://www.plasmapong.com/screenshots/">fractal beauty</a> of time-dependent turbulence makes for impressive visuals.  Following the same line of reasoning that led to the graphics card, there is now talk of a <a href="http://www.ageia.com/physx/">physics card</a>.</p>
+<p>Ultimately CAE software and game technology will converge, providing near real-time physics with selectable accuracy.  Already there is plenty to admire and learn from the optimization techniques employed in the latest games.  Very few CAE applications approach real-time response; those that do make assumptions that cover only a limited range of cases e.g. <a href="http://en.wikipedia.org/wiki/Potential_flow">sub-sonic inviscid flow</a>.  Still, when these assumptions are met, the techniques are impressively quick (e.g. <a href="../product/panel.html">panel method</a>) and ideal for early <a href="../node/11.html">concept design analysis</a>.  A <a href="../node/117.html">toolbox of techniques</a> that progressively make fewer assumptions, but typically require more resources and time, is a pragmatic approach until hardware and software developments allow real-time simulations without assumptions.</p>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-14"></a>
+<div class="comment comment-published first odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="real_time_simulation.html#comment-14" class="active">Movie Physics Busted</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Richard Smith on March 6, 2007 - 12:51.  </div>
+
+  <div class="content">
+    <p>Came across an <a href="http://www.neatorama.com/2007/03/06/9-laws-of-physics-that-dont-apply-in-hollywood/">article</a> on the laws of physics that movie makers don't take for granted.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-29"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="real_time_simulation.html#comment-29" class="active">Applied Geometry Lab</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Richard Smith on May 10, 2007 - 08:47.  </div>
+
+  <div class="content">
+    <p>The <a href="http://www.geometry.caltech.edu/">Applied Geometry Lab</a> of Caltech have an extensive <a href="http://www.geometry.caltech.edu/pubs.html">publication list</a> dedicated to "...applications from discrete geometry processing to solid and fluid mechanics."</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-110"></a>
+<div class="comment comment-published last odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="real_time_simulation.html#comment-110" class="active">Oscar for CFD</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Richard Smith on January 31, 2008 - 12:45.  </div>
+
+  <div class="content">
+    <p>Thanks to his contributions in <a href="../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> to movies, such as <em>Pirates of the Caribbean</em> and <em>Harry Potter and the Goblet of Fire</em>, <a href="http://physbam.stanford.edu/~fedkiw/">Ron Fedkiw</a> will be award a <a href="http://www.filmdetail.com/archives/2008/01/31/ron-fedkiw-to-be-awarded-an-oscar-for-his-sfx-work/">SFX 2008 Oscar</a>. Check out some of his work:</p>
+<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/g2lsuk4rybY&rel=1" /><param name="wmode" value="transparent" /><embed src="http://www.youtube.com/v/g2lsuk4rybY&amp;rel=1" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object>      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/real_time_simulation by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:18:27 GMT -->
+</html>

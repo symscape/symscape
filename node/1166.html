@@ -1,0 +1,327 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1166 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:09:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>How do I fix mesh and solver failures? | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="../support.html" />
+<link rel="up" href="../support.html" />
+<link rel="next" href="531.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-1166 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../support.html">Frequently Asked Questions</a></div>                  <h1 class="title">How do I fix mesh and solver failures?</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1166" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on June 27, 2014 - 13:46        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>This FAQ assumes you are having problems with a RANS Flow simulation.</p>
+<p>First check the basics:</p>
+<ul>
+<li>Did you create a single flow volume representing the fluid region in or around your object? For an external flow you will need to subtract your object from a larger outer boundary, such as a box. The solid, in CAD terminology, has to represent the fluid that surrounds your object.</li>
+<li>Did you add a <strong>Substance</strong> to your flow volume?</li>
+<li>Did you create a boundary condition on each flow volume face?</li>
+<li>If you stopped (<strong>Home-&gt;Stop</strong>) the simulation, did you reset (<strong>Home-&gt;Reset</strong>) the simulation?</li>
+</ul>
+<p>90% of all simulation failures relate to mesh problems, even when Caedium reports a solver failure. So before you make any solver changes check your mesh as outlined below.</p>
+<h3>Meshing Problems</h3>
+<h4>Pre-Mesh</h4>
+<p>Before creating a mesh try shading all model faces. Warning and errors will be reported in the <strong>File-&gt;Log</strong>, such as:</p>
+<ul>
+<li><cite><strong>Visual representation (facetting) failed</strong></cite></li>
+</ul>
+<p>Such warnings are an indication that your geometry may be invalid. Try using the <strong>Other-&gt;Fix</strong> tool in the <strong>Geometry</strong> Tool Palette to fix your volume.</p>
+<h4><a name="face-mesh-quality"></a>Face Mesh Quality</h4>
+<p>Next investigate the face meshes. To view the face meshes follow the tutorial <a href="532.html">"View a Mesh."</a> As well as <strong>Scalar Field->A</strong> (area), also look at <strong>Scalar Field->E Ratio</strong> (edge ratio) in the <strong>Results</strong> Tool Palette as a measure of element quality where 1 = ideal, 0 = bad. Keep an eye on the log report for warnings, such as:</p>
+<ul>
+<li><cite><strong>Triangulator: Failed: Front progress failed: 25 edges remain</strong></cite></li>
+<li><cite><strong>Tetulator: Failed: Face already in front</strong></cite></li>
+</ul>
+<p>Use the threshold sliders on the view window legend to examine poor quality elements (and small elements - switch the current color map using the drop down Color Map list on the legend) - look for sliver faces or edges. To remove sliver faces and edges use the <strong>Face->Join</strong> and <strong>Edge->Join</strong> tools in the <strong>Geometry</strong> Tool Palette to join the small entities with larger neighbors.</p>
+<p><span class="inline inline-center"><img src="../files/faq/fixmeshsolver/sliver.png" alt="Sliver Face (Red) on a Model" width="500" height="268" /><span class="caption"><strong>Sliver Face (Red) on a Model</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/faq/fixmeshsolver/joined-sliver.png" alt="Sliver After Joining with Larger Neighbor (Green)" width="500" height="268" /><span class="caption"><strong>Sliver After Joining with Larger Neighbor (Green)</strong></span></span></p>
+<p>Next use the thresholding to look at the large elements and see if there are likely to be any size mismatches - if there are - try using the <a href="723.html">Accuracy tool</a> in the <strong>Physics</strong> Tool Palette to explicitly specify the element size either on edges or faces nearby. </p>
+<p><span class="inline inline-center"><img src="../files/faq/fixmeshsolver/face-mesh-before.png" alt="Poor Face Mesh Elements" width="500" height="375" /><span class="caption"><strong>Poor Face Mesh Elements</strong></span>Identified using E-Ratio and the threshold sliders</span></p>
+<h4><a name="volume-mesh-quality"></a>Volume Mesh Quality</h4>
+<p>If all is well then move on to the volume mesh. Even if the volume meshing fails there will likely be some volume elements to examine. To view the volume mesh follow the same procedure as for viewing the face meshes, except use the <strong>Scalar Fields->Vol Ratio</strong> in the <strong>Results</strong> Tool Palette, and set the volume view properties: <strong>Style</strong> = <strong>Flat</strong> and <strong>Transparent</strong> = <strong>Off</strong>. Also make sure your faces are transparent, otherwise you won't see the interior volume.</p>
+<p>An ideal element will have a Vol Ratio = 1, and so focus on the low valued elements with the threshold sliders to see if there is a particular region causing problems. If you identify problems try using the <strong>Accuracy</strong> tool to locally modify the mesh size on nearby edges/faces.</p>
+<p><span class="inline inline-center"><img src="../files/faq/fixmeshsolver/volume-mesh-before.png" alt="Poor Volume Mesh Elements" width="500" height="375" /><span class="caption"><strong>Poor Volume Mesh Elements</strong></span>Clustered around poor face mesh elements.<br />
+Identified using Vol-Ratio and the threshold sliders.</span></p>
+<p><span class="inline inline-center"><img src="../files/faq/fixmeshsolver/face-mesh-after.png" alt="Improved Face Mesh Elements" width="500" height="375" /><span class="caption"><strong>Improved Face Mesh Elements</strong></span>After Accuracy tool applied to faces with poor elements</span></p>
+<p><span class="inline inline-center"><img src="../files/faq/fixmeshsolver/volume-mesh-after.png" alt="Improved Volume Mesh Elements" width="500" height="374" /><span class="caption"><strong>Improved Volume Mesh Elements</strong></span>No clusters after Accuracy tool applied to faces with poor elements</span></p>
+<h4>Mesh Resolution Using the Accuracy Tool</h4>
+<p>Also use the <strong>Accuracy</strong> tool to ensure you have adequate mesh resolution of your important geometry features and flow regions ready for your flow simulation.</p>
+<h3>Solver Problems</h3>
+<p>Most problems that relate to solver failures are often mesh problems.</p>
+<h4>Mesh Corrupt</h4>
+<p>If the solver reports:</p>
+<p><cite><strong>FOAM FATAL ERROR:</strong></cite><br />
+<cite><strong>Illegal cell label -1 in neighbour addressing for face ...</strong></cite></p>
+<p>it is a sign that the volume meshing failed prior to launching the solver process. To fix the geometry and/or mesh problem review the diagnostics mentioned in the previous sections. Changing Substance properties or boundary conditions will not fix the mesh, only changing the geometry or adding the Accuracy tool to your geometry will fix this error.</p>
+<h4>Physics Mismatches</h4>
+<p>Assuming you are satisfied your mesh is ok, then other likely causes of problems could be:</p>
+<ul>
+<li><strong>Substance-&gt;Properties-&gt;Reference</strong> values - do they reflect your case (e.g., <strong>U</strong>, <strong>Omega:Turbulent Length Scale</strong>)?</li>
+<li>Initial Values - do you have initial values close to the main bulk of the flow? It maybe the <strong>Reference</strong> option for <strong>U</strong> isn't a good choice, so try specifying a <strong>Fixed Value</strong></li>
+<li>Boundary Conditions - are all your walls covered with <strong>Wall</strong> conditions? The most robust combination of inlet and outlet are the defaults, but are you sure the outlet is far enough away from flow gradients?</li>
+</ul>
+<h4>Turbulence Model Selection</h4>
+<p>Another option is to try changing the turbulence model. Try one of the more robust turbulence models, such as <strong>Substance-&gt;Solver:RANS Flow-&gt;Turbulence Model</strong> = <strong>K-Omega SST</strong>.</p>
+<h4>Simulation Runs buts Fails Later</h4>
+<p>To identify a region having problems, run the simulation and make sure a results extraction takes place. E.g., if the simulation fails at 90 iterations according to the Residual Monitor, set the <strong>Substance-&gt;Solver-&gt;Iterations</strong> = 80, and then apply the <strong>Vector Fields-&gt;U</strong> on all faces as a <strong>Color Map</strong>. Run the simulation again, this time you will have extracted results just before it failed. The velocity magnitude is likely to be unrealistically large somewhere, use the sliders (thresholders) in the <strong>View Legend</strong> above and below the <strong>Color Bar</strong> to identify the large values. In general anywhere there is a small gap can be a problem - aim to have regular shaped cells to bridge the gap - not squashed (flat) cells. Apply the <strong>Accuracy</strong> tool with an appropriate setting to either the edges or faces close to the region causing the simulation to fail.</p>
+<h4>Relaxation Factor Modifications</h4>
+<p>As a last resort for steady state simulations you can try modifying the solver relaxation factors, for more details see <a href="934.html">"Relaxation Factors in RANS Flow Solvers"</a>.</p>
+<h4><a name="rollback"></a>Rollback</h4>
+<p>If your simulation fails and you want to try a minor setup change (e.g., modify your Relaxation Factors) then make sure <strong>Substance-&gt;Solver-&gt;Rollback Levels</strong> is set to 2 (default) or more. This allows you to roll back the simulation after a failure. To perform the rollback click the <strong>Previous</strong> button in the <strong>Home</strong> Toolbar. You can always rollback to the most current results on failure independent of the Rollback Levels property setting, beyond that you can rollback upto the number you set in the Rollback Levels property.</p>
+<p>Your aim is to rollback to a good state where the results do not reflect the current failure.</p>
+<p>After rollback you can try just running the simulation again, sometimes the act of rollback helps (rounding error nudge is enough) to get over the failure. More often you should try modifying your <strong>Substance-&gt;Solver-&gt;Relaxation Factors</strong>, then keep repeating this procedure until the simulation succeeds.</p>
+  <div id="book-navigation-432" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="../support.html" class="page-previous" title="Go to previous page">‹ Frequently Asked Questions</a>
+                    <a href="../support.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="531.html" class="page-next" title="Go to next page">Do you offer academic discounts? ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../support.html" class="book-title">Frequently Asked Questions</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="leaf first active-trail"><a href="1166.html" class="active">How do I fix mesh and solver failures?</a></li>
+<li class="leaf"><a href="531.html">Do you offer academic discounts?</a></li>
+<li class="leaf"><a href="240.html">How do I become a registered Symscape member?</a></li>
+<li class="leaf"><a href="14.html">How do I find answers to product questions?</a></li>
+<li class="leaf"><a href="1167.html">How do I reset a RANS Flow simulation?</a></li>
+<li class="leaf"><a href="1168.html">How does selection in Caedium work?</a></li>
+<li class="leaf"><a href="239.html">What is a free trial?</a></li>
+<li class="leaf"><a href="244.html">What is a mesh?</a></li>
+<li class="leaf"><a href="17.html">What is a subscription?</a></li>
+<li class="leaf"><a href="15.html">What is product activation?</a></li>
+<li class="leaf"><a href="1146.html">What is the Linux installation process?</a></li>
+<li class="leaf"><a href="547.html">What is the Windows installation process?</a></li>
+<li class="leaf last"><a href="839.html">Where is the Caedium Manual?</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1166 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:09:30 GMT -->
+</html>

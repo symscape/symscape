@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.symscape.com/news" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>News</title>
+    <link>https://www.symscape.com/news</link>
+    <description></description>
+    <language>en</language>
+          <item>
+    <title>Enhanced CFD Simulations with Conjugate Heat Transfer and Passive Species Transport</title>
+    <link>https://www.symscape.com/news/enhanced-cfd-simulations-with-conjugate-heat-transfer-and-passive-species-transport</link>
+    <description>&lt;p&gt;The highlight of the latest Caedium (v6.0) release is an enhanced Computational Fluid Dynamics (CFD) heat transfer capability with multi-domain support for fluids and solids, known as Conjugate Heat Transfer (CHT). Also Caedium can now simulate the dispersal of secondary species (e.g., smoke or dye) in a primary fluid, known as passive species (or scalar) transport.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/news/cht/heat-sink-t-colormap-arrows.png&quot; alt=&quot;Conjugate Heat Transfer (CHT) Through and Around a Heat Sink&quot; width=&quot;600&quot; height=&quot;394&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Conjugate Heat Transfer (CHT) Through and Around a Heat Sink&lt;/strong&gt;&lt;br /&gt;Simulation shows air vectors and floor colored by temperature&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/news/enhanced-cfd-simulations-with-conjugate-heat-transfer-and-passive-species-transport&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/news/enhanced-cfd-simulations-with-conjugate-heat-transfer-and-passive-species-transport#comments</comments>
+ <category domain="https://www.symscape.com/news">News</category>
+ <pubDate>Thu, 25 Apr 2019 13:07:08 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1716 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Improved Heat Transfer and Bullet Time for CFD Simulations</title>
+    <link>https://www.symscape.com/news/improved-heat-transfer-bullet-time-cfd-simulations</link>
+    <description>&lt;p&gt;The highlights of the latest &lt;a href=&quot;/product/professional&quot;&gt;Caedium (v5.2)&lt;/a&gt; release are an improved heat transfer capability incorporating radiation and the option to create &lt;em&gt;&#039;bullet time&#039;&lt;/em&gt; animations for particles.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/misc/radiation-field.png&quot; alt=&quot;Radiation Field Created in Caedium&quot; width=&quot;548&quot; height=&quot;306&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Radiation Field Created in Caedium&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/news/improved-heat-transfer-bullet-time-cfd-simulations&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/news/improved-heat-transfer-bullet-time-cfd-simulations#comments</comments>
+ <category domain="https://www.symscape.com/news">News</category>
+ <pubDate>Wed, 22 Jan 2014 21:35:42 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1451 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Helix Creation for CFD Simulations</title>
+    <link>https://www.symscape.com/news/helix-creation-for-cfd-simulations</link>
+    <description>&lt;p&gt;The latest version of &lt;a href=&quot;/product/professional&quot;&gt;Caedium (v5.1)&lt;/a&gt; has a new Helix tool for your Computational Fluid Dynamics (CFD) simulations and improved mesh element size control.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/helical-strakes/helical-strakes-chimney-streamlines.png&quot; alt=&quot;Caedium CFD Simulation of Streamlines around a Helical Strakes Chimney&quot; width=&quot;500&quot; height=&quot;434&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Caedium CFD Simulation of Streamlines around a Helical Strakes Chimney&lt;/strong&gt;&lt;/span&gt;Strakes created using new Helix tool&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/news/helix-creation-for-cfd-simulations&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/news/helix-creation-for-cfd-simulations#comments</comments>
+ <category domain="https://www.symscape.com/news">News</category>
+ <pubDate>Thu, 13 Jun 2013 14:59:16 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1380 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Automate CFD Simulations with Python Scripting</title>
+    <link>https://www.symscape.com/news/automate-cfd-simulations-with-python-scripting</link>
+    <description>&lt;p&gt;The latest release of &lt;a href=&quot;/product/professional&quot;&gt;Caedium (v5.0)&lt;/a&gt; introduces Python scripting for Computational Fluid Dynamics (CFD) simulations to automate repetitive tasks and perform parameter studies. This release also has a new Caedium tabbed toolbar GUI which is a more intuitive way to interact with and control your CFD simulations, along with a host of other enhancements.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/news/scripting/caedium-v5-script.png&quot; alt=&quot;Caedium v5.0 in Action&quot; width=&quot;500&quot; height=&quot;392&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Caedium v5 in Action&lt;/strong&gt;&lt;/span&gt;Scripted CFD Simulation for a Wind Direction Sweep (&lt;a href=&quot;/files/news/scripting/caedium-v5-script-hires.png&quot;&gt;high resolution version&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/news/automate-cfd-simulations-with-python-scripting&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/news/automate-cfd-simulations-with-python-scripting#comments</comments>
+ <category domain="https://www.symscape.com/news">News</category>
+ <pubDate>Tue, 21 May 2013 21:08:58 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1366 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium CFD Simulations Help F1 in Schools World Champions</title>
+    <link>https://www.symscape.com/news/caedium-cfd-simulations-help-f1-in-schools-world-champions</link>
+    <description>&lt;p&gt;&lt;a href=&quot;https://www.facebook.com/ColdFusionF1&quot;&gt;Cold Fusion&lt;/a&gt;, the Australian National F1 in Schools champions, are now the &lt;a href=&quot;http://www.formula1.com/news/headlines/2012/11/14005.html&quot;&gt;2012 F1 in Schools World Champions&lt;/a&gt;. The team used &lt;a href=&quot;/product/professional&quot;&gt;Caedium Professional&lt;/a&gt; CFD simulations to optimize the aerodynamics of their world beating CO2 dragster and by all accounts to great effect!&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img alt=&quot;Cold Fusion Team and Booth Display&quot; src=&quot;/files/news/coldfusion/cold-fusion-booth.jpg&quot; width=&quot;500&quot; height=&quot;331&quot; /&gt; &lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Cold Fusion Team at their Booth&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/news/caedium-cfd-simulations-help-f1-in-schools-world-champions&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/news/caedium-cfd-simulations-help-f1-in-schools-world-champions#comments</comments>
+ <category domain="https://www.symscape.com/news">News</category>
+ <pubDate>Mon, 12 Nov 2012 16:44:43 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1305 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Asetek Performs Extreme Caedium CFD Simulations at SC12</title>
+    <link>https://www.symscape.com/news/asetek-performs-extreme-caedium-cfd-simulations-at-sc12</link>
+    <description>&lt;p&gt;Asetek Inc. will perform an &lt;a href=&quot;http://www.asetek.com/press-room/news/371-asetek-to-demonstrate-rackcdu-liquid-cooled-48u-hpc-cluster-at-sc12.html&quot;&gt;extreme live demonstration&lt;/a&gt; of its state-of-the-art power efficient HPC cluster at &lt;a href=&quot;http://sc12.supercomputing.org/&quot;&gt;SC12 in Salt Lake City, Utah on November 12-15, 2012&lt;/a&gt;. To demonstrate their groundbreaking liquid cooling technology, Asetek chose to fully load their showcase cluster by running multiple parallel &lt;a href=&quot;/product/professional&quot;&gt;Caedium Professional&lt;/a&gt; CFD simulations.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/lBEP35H32NE&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/news/asetek-performs-extreme-caedium-cfd-simulations-at-sc12&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/news/asetek-performs-extreme-caedium-cfd-simulations-at-sc12#comments</comments>
+ <category domain="https://www.symscape.com/news">News</category>
+ <pubDate>Fri, 09 Nov 2012 15:55:16 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1304 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Simulate Free Surface Flows Using a Volume of Fluid CFD Solver</title>
+    <link>https://www.symscape.com/news/simulate-free-surface-flows-using-volume-of-fluid-cfd-solver</link>
+    <description>&lt;p&gt;The latest release of Caedium (v4.0) can perform Computational Fluid Dynamics (CFD) simulations for free surfaces, such as those that form between water and air around a ship&#039;s hull. Also the new version of Caedium contains an extensive array of other enhancements that will help you efficiently simulate more physically realistic phenomena.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/news/vof/wigley-vof-free-surface.png&quot; alt=&quot;Caedium VOF CFD Simulation for Wigley Hull&quot; width=&quot;500 &quot; height=&quot;360&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Caedium VOF CFD Simulation for Wigley Hull&lt;/strong&gt;&lt;/span&gt;&lt;a href=&quot;/files/news/vof/wigley-vof-free-surface-1600.png&quot;&gt;High resolution image&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/news/simulate-free-surface-flows-using-volume-of-fluid-cfd-solver&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/news/simulate-free-surface-flows-using-volume-of-fluid-cfd-solver#comments</comments>
+ <category domain="https://www.symscape.com/news">News</category>
+ <pubDate>Tue, 31 Jul 2012 23:23:42 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1260 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Nimbis Services Advances Cloud-Based CFD Simulations with Caedium CFD Accelerator</title>
+    <link>https://www.symscape.com/news/nimbis-services-advances-cloud-based-cfd-simulations-with-caedium-cfd-accelerator</link>
+    <description>&lt;p&gt;MCLEAN, VA, March 26, 2012 - Nimbis Services, Inc. announces the beta release of their on-demand &lt;em&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.nimbisservices.com/product/caedium-cfd-accelerator-beta&quot;&gt;Caedium CFD Accelerator&lt;/a&gt;&lt;/em&gt; cloud product, the first of two &lt;a href=&quot;/product/professional&quot;&gt;Caedium-based&lt;/a&gt; computational fluid dynamics (CFD) service products running on Microsoft’s Windows Azure&amp;reg; cloud platform. Caedium, by Symscape, is a complete desktop CFD workflow environment with an easy to use graphical user interface integrated with OpenFOAM&amp;reg;&lt;sup&gt;1&lt;/sup&gt; CFD solvers. Nimbis extends the use of Caedium beyond the desktop to the Windows Azure cloud with on-demand access and pay-as-you-go billing through a convenient and unique ecommerce technical computing marketplace. Examples of CFD models frequently analyzed with Caedium include airflow over a moving car or an aircraft wing, and water flow through pipes.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/news/nimbis-services-advances-cloud-based-cfd-simulations-with-caedium-cfd-accelerator&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/news/nimbis-services-advances-cloud-based-cfd-simulations-with-caedium-cfd-accelerator#comments</comments>
+ <category domain="https://www.symscape.com/news">News</category>
+ <pubDate>Mon, 26 Mar 2012 14:18:45 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1200 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium CFD Animation Featured as an Art Exhibit at the Barbican</title>
+    <link>https://www.symscape.com/news/caedium-cfd-animation-art-exhibit-barbican</link>
+    <description>&lt;p&gt;On November 24, 2011, &lt;a href=&quot;http://www.barbican.org.uk/artgallery/event-detail.asp?ID=12752&quot;&gt;Off Modern LATE at the Barbican&lt;/a&gt; featured a &lt;a href=&quot;/product/professional&quot;&gt;Caedium Professional&lt;/a&gt; CFD animation video of the air flow through a model of the Barbican. The event was part of the &lt;a href=&quot;http://www.barbican.org.uk/artgallery/event-detail.asp?ID=12472&quot;&gt;OMA/Progress exhibition&lt;/a&gt; and featured music by the London Symphony Orchestra.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/PYMQVGB5yL4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Barbican Art Exhibit based on Caedium CFD Animation&lt;/strong&gt;&lt;br /&gt;For the full effect try the &lt;a href=&quot;http://youtu.be/PYMQVGB5yL4?hd=1&quot;&gt;high definition video at full screen&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/news/caedium-cfd-animation-art-exhibit-barbican&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/news/caedium-cfd-animation-art-exhibit-barbican#comments</comments>
+ <category domain="https://www.symscape.com/news">News</category>
+ <pubDate>Mon, 28 Nov 2011 17:09:21 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1169 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Hybrid CFD Modeling and Cloud Computing</title>
+    <link>https://www.symscape.com/news/hybrid-cfd-modeling-cloud-computing</link>
+    <description>&lt;p&gt;The latest release of Caedium (v3.0) can now create and perform Computational Fluid Dynamics (CFD) simulations using &lt;strong&gt;hybrid models&lt;/strong&gt; that mix faceted geometry (e.g., Google SketchUp models) with analytic geometry (e.g., CAD models). Also Caedium now has the option to use the &lt;strong&gt;Microsoft Windows Azure cloud service&lt;/strong&gt; to perform CFD simulations.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/news/hybridmodelcloud/hybrid-model-cloud.png&quot; alt=&quot;CFD Simulation of Hybrid Geometry Model Performed by Azure&quot; width=&quot;500&quot; height=&quot;375&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;CFD Simulation of Hybrid Geometry Model Performed by Azure&lt;/strong&gt;&lt;/span&gt;UAV model from SketchUp&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/news/hybrid-cfd-modeling-cloud-computing&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/news/hybrid-cfd-modeling-cloud-computing#comments</comments>
+ <category domain="https://www.symscape.com/news">News</category>
+ <pubDate>Sun, 16 Oct 2011 20:52:16 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1148 at https://www.symscape.com</guid>
+  </item>
+  </channel>
+</rss>

@@ -1,0 +1,391 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/laminar-vs-turbulent-flow-over-airfoils by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:27:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Laminar vs Turbulent Flow Over Airfoils | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-laminar-vs-turbulent-flow-over-airfoils section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">Laminar vs Turbulent Flow Over Airfoils</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1439" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on January 13, 2014 - 09:06        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Which is more efficient: laminar or turbulent flow over an airfoil? Find out in this simple <a href="../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> study.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/lam-turb-airfoils/laminar-naca12-alpha-8-velocity.png" alt="CFD Simulation of Laminar Flow Over An Airfoil" width="600" height="494" /><span class="caption"><strong>CFD Simulation of Laminar Flow Over An Airfoil</strong></span>Velocity Magnitude Contours</span></p>
+<h3>Background</h3>
+<p>For streamlined bodies, such as airplanes, maintaining laminar <a href="../boundary-layers.html">boundary layer</a> airflow is a sure way to minimize <a href="../lift-force-and-drag-force.html">drag</a> and so improve efficiency and reduce fuel costs. However, given the speeds and conditions that airplanes encounter, trying to maintain laminar flow is difficult. In addition to a <a href="../reynolds-number.html">Reynolds number</a> dependency, laminar boundary layers are very sensitive to bugs (the squidgy variety) and dirt on airfoil leading edges. These imperfections can cause a transition to turbulence and increased drag. Worse still, a specially designed laminar wing can exhibit abrupt changes in airplane handling when laminar flow breaks down. Most airplane designers instead settle for turbulent boundary layers, sacrificing efficiency for predictable performance characteristics.</p>
+<h3>CFD Simulation</h3>
+<p>Using the NACA 0012 airfoil as the basis for this study it is relatively easy in CFD to compare fully laminar and fully turbulent simulations and assess the performance in terms of <a href="../lift-force-and-drag-force.html">lift and drag</a> at various <a href="http://en.wikipedia.org/wiki/Angle_of_attack">angles of attack</a> below the <a href="http://en.wikipedia.org/wiki/Stall_(flight)">stall condition</a>.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/lam-turb-airfoils/laminar-naca12-alpha-8-cp.png" alt="Laminar Pressure Coefficient (Cp) Contours at 8 Degrees" width="600" height="494" /><span class="caption"><strong>Laminar Pressure Coefficient (Cp) Contours at 8 Degrees</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/lam-turb-airfoils/turbulent-naca12-alpha-8-cp.png" alt="Turbulent Pressure Coefficient (Cp) Contours at 8 Degrees" width="600" height="494" /><span class="caption"><strong>Turbulent Pressure Coefficient (Cp) Contours at 8 Degrees</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/lam-turb-airfoils/laminar-naca12-alpha-8-velocity.png" alt="Laminar Velocity Magnitude Contours at 8 Degrees" width="600" height="494" /><span class="caption"><strong>Laminar Velocity Magnitude Contours at 8 Degrees</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/lam-turb-airfoils/turbulent-naca12-alpha-8-velocity.png" alt="Turbulent Velocity Magnitude Contours at 8 Degrees" width="600" height="494" /><span class="caption"><strong>Turbulent Velocity Magnitude Contours at 8 Degrees</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/lam-turb-airfoils/lift.png" alt="Lift Comparison for Laminar and Turbulent Flow" width="485" height="326" /><span class="caption"><strong>Lift Comparison for Laminar and Turbulent Flow</strong></span></span></p>
+<p>There is very little difference between the lift for the laminar and turbulent simulations.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/lam-turb-airfoils/drag.png" alt="Drag Comparison for Laminar and Turbulent Flow" width="496" height="329" /><span class="caption"><strong>Drag Comparison for Laminar and Turbulent Flow</strong></span></span></p>
+<p>As expected, the turbulent simulation produces more drag than the laminar simulation for all angles of incidence.</p>
+<h3>Conclusion</h3>
+<p>Clearly, if the conditions for laminar flow could be consistently maintained, then a designer would favor the more efficient, low drag, laminar wing. Alas, the real world is messy (remember squidgy bugs and dirt) and so an optimized turbulent wing flow is usually sought.</p>
+<h3>Future</h3>
+<p>Boeing has proposed a <a href="http://www.wired.com/autopia/2013/11/manipulating-airflow-airplane-tail-777x/">leading-edge suction method</a> to maintain laminar flow over the tail of the new 777X. It appears this method relies on tiny holes to suck air from the boundary layer and prevent transition to turbulence. A major issue Boeing designers will need to address is how to keep the holes free of bugs and dirt? Maybe they are looking at a <a href="http://www.space.com/23661-nasa-bug-proof-airplane-wings.html">NASA study on special coatings</a> to reduce bug splats?</p>
+<p>Notes</p>
+<ul>
+<li>NACA 0012 mesh courtesy of <a href="https://home.aero.polimi.it/freecase/?OpenFOAM_%2B_Code_Aster:Aerodynamic_problems:NACA_0012_airfoil">FreeCASE</a> and also used in the Caedium tutorial <a href="../node/819.html">&quot;Transonic Flow Over the NACA 0012 Airfoil&quot;</a>. </li>
+<li>Simulations assume incompressible flow at 10 m/s. </li>
+<li>Simulations set up and performed in <a href="../product/professional.html">Caedium Professional</a> using the incompressible, steady-state RANS solver, without a turbulence model (laminar) and with the k-omega SST turbulence model (turbulent). </li>
+</ul>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-1873"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="laminar-vs-turbulent-flow-over-airfoils.html#comment-1873" class="active">Fluid Flow Around Bluff Bodies</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Fola (not verified) on January 28, 2014 - 21:10.  </div>
+
+  <div class="content">
+    <p>Hello, </p>
+<p>I'm trying to simulate fluid flow around a cylinder in which vortex shedding will also be observed. I've defined the inlet velocity to be constant, assumed no slip conditions for the solid boundaries, but not sure of what the outlet conditions should be. Please I was wondering if anyone is able to provide some ideas on this.</p>
+<p>Thanks.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1874"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="laminar-vs-turbulent-flow-over-airfoils.html#comment-1874" class="active">Boundary Conditions</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Richard Smith on January 29, 2014 - 07:52.  </div>
+
+  <div class="content">
+    <p>Assuming you have constructed a box surrounding the cylinder (diameter = D) then first you need to ensure that the box is at least 10xD away in all directions. Assign boundary conditions according to:</p>
+<ul>
+<li>cylinder - Wall (no-slip)</li>
+<li>inlet - Inlet (specify all variables, except pressure for a velocity inlet)</li>
+<li>outlet - Outlet (specify pressure and zero gradient for all other variables)</li>
+<li>outer boundaries - Symmetry</li>
+</ul>
+<p>You can find a 2D example of vortex shedding around a cylinder at <a href="vortex-shedding-behind-cylinder.html">"Vortex Shedding Behind a Cylinder"</a>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2501"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="laminar-vs-turbulent-flow-over-airfoils.html#comment-2501" class="active">Lift and Drag Calculation in Caedium</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Fernand (not verified) on May 29, 2018 - 00:46.  </div>
+
+  <div class="content">
+    <p>Hi, Caedium is very helpful software, thanks for it<br />
+May you help me how can I calculate Lift and Drag in Caedium! (for 3D especially)</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2503"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="laminar-vs-turbulent-flow-over-airfoils.html#comment-2503" class="active">Review tutorial with lift and drag monitors</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 29, 2018 - 08:01.  </div>
+
+  <div class="content">
+    <p>For lift and drag monitors review the tutorial <a href="../node/831.html">"Flow Over a Rotating Wheel with Moving Ground"</a></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2511"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="laminar-vs-turbulent-flow-over-airfoils.html#comment-2511" class="active">The diagrams</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Riggald (not verified) on June 6, 2018 - 06:07.  </div>
+
+  <div class="content">
+    <p>In those diagrams, what shows that the airflow is turbulent or laminar?</p>
+<p>Is it the flux density of the pressure contour lines?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2512"></a>
+<div class="comment comment-published last even clearfix">
+  
+      <h3 class="title">
+      <a href="laminar-vs-turbulent-flow-over-airfoils.html#comment-2512" class="active">View turbulent velocity</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on June 6, 2018 - 06:46.  </div>
+
+  <div class="content">
+    <p>Visually you do not see the turbulence with a <a href="../reynolds-averaged-navier-stokes-equations.html">Reynolds-Averaged Navier-Stokes</a> (RANS) method. Velocity vectors are modeled (solved) as averages that include turbulent velocity fluctuations in RANS. Large Eddy Simulations (LES) will show some of the 'large' turbulent eddies and Direct Numerical Simulation (DNS) show all relevant turbulent eddies within the velocity vectors.</p>
+<p>Note that large scale recirculation zones (that can appear in laminar and turbulent flows) are distinct and different from turbulent eddies.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/laminar-vs-turbulent-flow-over-airfoils by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:27:52 GMT -->
+</html>

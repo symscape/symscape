@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.symscape.com/taxonomy/term/41/all" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Panel Flow</title>
+    <link>https://www.symscape.com/taxonomy/term/41/all</link>
+    <description></description>
+    <language>en</language>
+          <item>
+    <title>Screencast of Transient Air Flow Over a Pitching Wing</title>
+    <link>https://www.symscape.com/examples/panel/transient-air-flow-over-pitching-wing</link>
+    <description>&lt;p&gt;This screencast shows an &lt;a href=&quot;/node/612&quot;&gt;entire simulation&lt;/a&gt; performed using our &lt;a href=&quot;/product/professional&quot;&gt;Caedium Professional add-on&lt;/a&gt;; starting with geometry creation, motion specification, and physics definition, and finishing with transient 3D pressure coefficient contours on the wing surface. Using our intuitive &lt;a href=&quot;/node/39&quot;&gt;drag-and-drop&lt;/a&gt; tools you&#039;ll see how simple and easy it is to simulate air flow within our Caedium &lt;a href=&quot;/unified-simulation-environment&quot;&gt;unified simulation environment&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/panel/transient-air-flow-over-pitching-wing&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/panel/transient-air-flow-over-pitching-wing#comments</comments>
+ <category domain="https://www.symscape.com/examples/panel">Panel Flow</category>
+ <pubDate>Fri, 08 Aug 2008 16:13:44 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">686 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>DLR F4 Wing-Body Calculation</title>
+    <link>https://www.symscape.com/examples/panel/dlr_f4</link>
+    <description>&lt;p&gt;The &lt;a href=&quot;http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop1/files/geometry.html&quot;&gt;DLR F4&lt;/a&gt; is an idealized wing-body model of a passenger jetliner, such as the Boeing 737, that was tested in &lt;a href=&quot;http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop1/workshop1.html&quot;&gt;multiple wind tunnels&lt;/a&gt; for comparison with &lt;a href=&quot;/computational-fluid-dynamics&quot;&gt;Computational Fluid Dynamics (CFD)&lt;/a&gt; calculations.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/boeing737.jpg&quot; alt=&quot;Boeing 737&quot; width=&quot;640&quot; height=&quot;449&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Boeing 737&lt;/strong&gt;&lt;/span&gt;Image courtesy of Adrian Pingstone&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/panel/dlr_f4&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/panel/dlr_f4#comments</comments>
+ <category domain="https://www.symscape.com/examples/panel">Panel Flow</category>
+ <pubDate>Mon, 26 Mar 2007 15:22:49 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">337 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>NLR 7301 Multi-Element Airfoil Calculation</title>
+    <link>https://www.symscape.com/examples/panel/nlr7301</link>
+    <description>&lt;p&gt;Multi-element airfoils are common sights on open-wheel racing cars and aircraft during take-off and landing.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/honda_2001.jpg&quot; alt=&quot;Honda Formula 1 Car: Multi-element airfoils at front and rear&quot; width=&quot;432&quot; height=&quot;443&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Honda Formula 1 Car:&lt;/strong&gt; Multi-element airfoils at front and rear&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/panel/nlr7301&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/panel/nlr7301#comments</comments>
+ <category domain="https://www.symscape.com/examples/panel">Panel Flow</category>
+ <pubDate>Mon, 12 Mar 2007 20:34:00 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">318 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>NACA 4415 Airfoil Calculation</title>
+    <link>https://www.symscape.com/examples/panel/naca4415</link>
+    <description>&lt;p&gt;Rotor blade design is a key element in determining the efficiency of a &lt;a href=&quot;/blog/anatomy_horizontal_wind_turbine&quot;&gt;wind turbine&lt;/a&gt;.  A crucial precursor to a final rotor blade design is to select one or more 2D airfoil sections to form a smooth blade profile.  A &lt;a href=&quot;http://wind.nrel.gov/airfoils/OSU_data/data/&quot;&gt;wind tunnel study&lt;/a&gt; of a 2D airfoil (NACA 4415), typical of an airfoil used by wind turbine rotors, is compared with predictions made by our &lt;a href=&quot;/product/panel&quot;&gt;Panel Flow add-on&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/panel/naca4415&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/panel/naca4415#comments</comments>
+ <category domain="https://www.symscape.com/examples/panel">Panel Flow</category>
+ <pubDate>Sun, 04 Mar 2007 20:00:51 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">293 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Potential Flow Around an Ellipsoid</title>
+    <link>https://www.symscape.com/examples/panel/potential_flow_ellipsoid</link>
+    <description>&lt;p&gt;Comparing a computation for the flow around an ellipsoid from our &lt;a href=&quot;/product/panel&quot;&gt;Panel Flow add-on&lt;/a&gt; with exact analytic potential theory is a good test (or verification) of our &lt;a href=&quot;/panel-method&quot;&gt;panel method&lt;/a&gt; implementation.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/panel/potential_flow_ellipsoid&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/panel/potential_flow_ellipsoid#comments</comments>
+ <category domain="https://www.symscape.com/examples/panel">Panel Flow</category>
+ <pubDate>Tue, 20 Feb 2007 22:06:36 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">280 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Potential Flow Around a Sphere</title>
+    <link>https://www.symscape.com/examples/panel/potential_flow_sphere</link>
+    <description>&lt;p&gt;Comparing a computation for the flow around a sphere from our &lt;a href=&quot;/product/panel&quot;&gt;Panel Flow add-on&lt;/a&gt; with exact analytic potential theory is a good test (or verification) of our &lt;a href=&quot;/panel-method&quot;&gt;panel method&lt;/a&gt; implementation.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/panel/potential_flow_sphere&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/panel/potential_flow_sphere#comments</comments>
+ <category domain="https://www.symscape.com/examples/panel">Panel Flow</category>
+ <pubDate>Fri, 16 Feb 2007 23:05:42 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">275 at https://www.symscape.com</guid>
+  </item>
+  </channel>
+</rss>

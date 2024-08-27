@@ -1,0 +1,382 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1213 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:28:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Multi-element rear wing for racecar - Failed: Front advance failed | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-forum page-node-1213 section-node one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../forum.html">Forums</a> › <a href="../forum/46.html">Questions</a></div>                  <h1 class="title">Multi-element rear wing for racecar - Failed: Front advance failed</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1213" class="node node-type-forum clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by rickyj on April 11, 2012 - 01:06        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_46 first last"><a href="../forum/46.html" rel="tag" title="Get answers to product (e.g., Caedium) questions. View Ratings">Questions</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>Hello!</p>
+<p>I have created a multi element rear wing for a racecar, simply made of two upside-down NACA 4415 airfoils that comes from the 'Flow Over an Airfoil' tutorial (<a href="561.html" title="www.symscape.com/node/561">www.symscape.com/node/561</a>).</p>
+<p>I want to eventually get some velocity and downforce data by following the 'Flow over a CO2 Dragster' tutorial (<a href="1082.html" title="www.symscape.com/node/1082">www.symscape.com/node/1082</a>), except by using the wing I've created in place of the dragster model and adjusting accordingly. However I'm having a problem when I try to apply the Vector Fields-&gt;U to the wing, as I get the following message:</p>
+<p>"Tetulator: End: 2675 tetrahedra<br />
+Warning:<br />
+flow-volume [www.1289.5] Tetulator: Failed: Front advance failed: 568 faces remain"</p>
+<p>I'm assuming this means there's something wrong with the meshing. I have attempted the 'Mesh Diagnostics' guide (<a href="995.html#comment-758" title="www.symscape.com/node/995#comment-758">www.symscape.com/node/995#comment-758</a>) over the course of the past 3 hours but I have to admit I don't understand it very well as I'm new to CFD so I haven't gotten anywhere with regards to fixing the mesh or even finding out what the problem is. </p>
+<p>I've tried and tried so posting here really is a last resort, could someone please give me some detailed instructions on what the problem is and how to correct it? It would be much appreciated! I can upload the file or something if that would help. Thanks again!<br />
+Ricky</p>
+  <div class="forum-topic-navigation clear-block">
+          <a href="1214.html" class="topic-previous" title="Go to previous forum topic">‹ Compressible case local rho</a>
+              <a href="1211.html" class="topic-next" title="Go to next forum topic">Compressible heat transfert steady state ›</a>
+      </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+  
+  <a id="comment-1410"></a>
+<div class="comment comment-published first odd clearfix">
+  
+      <h3 class="title">
+      <a href="1213.html#comment-1410" class="active">Single flow volume</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on April 11, 2012 - 08:03.  </div>
+
+  <div class="content">
+    <p>Are you sure you have a single flow volume? I.e., did you subtract your airfoils from a large box?</p>
+<p>Where you able to <a href="532.html">view your mesh</a> both on the faces and in the volume?</p>
+<p>Did you try using the <a href="723.html">Accuracy tool</a> to improve your mesh?</p>
+<p>For a more complete mesh diagnostics routine see <a href="1166.html">"How do I fix mesh and solver failures?"</a>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1411"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1213.html#comment-1411" class="active">Yes I subtracted them from</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by rickyj on April 11, 2012 - 09:52.  </div>
+
+  <div class="content">
+    <p>Yes I subtracted them from the box to get a single flow volume, I was also able to view it on both the faces and the volume.<br />
+I had an issue with that however, as when I used the Booleans-&gt;Subtract to form the single flow volume roughly half of the length of the leading and trailing edges disappeared, despite having been a full volume previously. After messing with the Unite tool they 'reappeared' again and I continued with the tutorial.</p>
+<p>Could this be the root of the problem?</p>
+<p>I attempted to follow the "How do I fix mesh and solver failures?" diagnostics and the accuracy tool but it was a little beyond me :/. Thanks for the reply :)</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1412"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="1213.html#comment-1412" class="active">Geometry corrupt</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on April 11, 2012 - 10:22.  </div>
+
+  <div class="content">
+    <p>Based on your description it sounds like your geometry is corrupt, i.e., the <strong>Booleans-&gt;Subtract</strong> did not succeed. I don't see how using <strong>Booleans-&gt;Unite</strong> would help.</p>
+<p>For Subtract to work you need to ensure that there are no coincident faces or edges. Also are you sure the airfoils are volumes (not just faces) - you extruded faces to form volumes right?</p>
+<p>So make sure your airfoil volumes extend beyond the bounds of your box and perform the Subtract. Then check the <strong>File-&gt;Log</strong> for warnings or errors.</p>
+<p>Do you have access to a CAD system? If so why not generate the flow volume in it? Then you could exchange the geometry using STEP (.stp).</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1413"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1213.html#comment-1413" class="active">So I started again from</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by rickyj on April 11, 2012 - 11:48.  </div>
+
+  <div class="content">
+    <p>So I started again from scratch and still had the same problem after the Booleans-&gt;Subtract; half of the leading/trailing edges disappeared. They were definitely volumes before this happened (not just faces). </p>
+<p>I used the Geometry-&gt;Others-&gt;Fix tool (not sure why but it looked like it might work) and lo and behold it "fixed" the edges :) So, all's well... but then when I advance to the next step of applying a substance (air) to the volume, the volume is no longer there in the Select dialog - it's just Sim,Faces,Edges,&amp;Vertices with no 'Volume' available for selection.</p>
+<p>It seems as if the Fix tool somehow fixed the missing edges but erased the Volume? Haha. Any ideas? Maybe a bug of some kind?<br />
+ps: Sadly I don't have any CAD as I'm working from home at the moment.<br />
+Thanks again</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1414"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="1213.html#comment-1414" class="active">Fix the volume, not the faces</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on April 11, 2012 - 12:47.  </div>
+
+  <div class="content">
+    <p>If you want to preserve the volume then you need to use <strong>Others-&gt;Fix</strong> on the volume, not the faces. Alternatively you can keep your fixed faces and then use the <strong>Volumes-&gt;Stitch</strong> tool to stitch the faces into a volume. After each operation check <strong>File-&gt;Log</strong> for warnings or errors.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1415"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1213.html#comment-1415" class="active">Thank you for your</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by rickyj on April 11, 2012 - 13:47.  </div>
+
+  <div class="content">
+    <p>Thank you for your perseverance in helping me with this :)</p>
+<p>I'm having no luck with it so I was wondering if it would be possible to somehow isolate/cut-out the rear-wing from the 'Open Wheel Race Car' geometry (<a href="130.html" title="http://www.symscape.com/node/130">http://www.symscape.com/node/130</a>) and maybe copy/paste it into a new simulation and use that rear wing instead of my own airfoil?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1416"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="1213.html#comment-1416" class="active">Caedium Professional Subscription Purchase</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on April 11, 2012 - 14:42.  </div>
+
+  <div class="content">
+    <p>It seems you require dedicated email support to pursue this project, so I think it's time to consider a <a href="../product/professional.html">Caedium Professional 1 year subscription purchase</a>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1417"></a>
+<div class="comment comment-published last even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1213.html#comment-1417" class="active">I would if I wasn&#039;t a student</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by rickyj on April 11, 2012 - 14:52.  </div>
+
+  <div class="content">
+    <p>I would if I wasn't a student who only needs to perform a single simulation. Thanks for the help thus far anyway :)</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div></div></div></div></div></div></div></div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1213 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:28:55 GMT -->
+</html>

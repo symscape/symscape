@@ -1,0 +1,751 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1082 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Flow Over a CO2 Dragster | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="831.html" />
+<link rel="up" href="817.html" />
+<link rel="next" href="1255.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-1082 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="817.html">RANS Flow</a></div>                  <h1 class="title">Flow Over a CO2 Dragster</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1082" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on May 26, 2013 - 13:20        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Simulate an incompressible, steady-state, turbulent flow over a CO2 dragster with rotating wheels and a moving ground plane. View velocity vectors and velocity magnitude color maps, and monitor lift and drag forces.</p>
+<p><img title="Final" alt="Final" src="../files/tutorials/co2dragster/final.png" width="484" height="363" /></p>
+<h2>Read Me</h2>
+<p>This tutorial is classed as <strong>advanced</strong> and you should consider completing other simpler RANS Flow tutorials as a prerequisite, such as <a href="818.html">&quot;Incompressible Flow Through a Pipe into a Box&quot;</a>.</p>
+<p>Note if you are attempting to use your own geometry for this tutorial then you need to construct a <a href="../blog/cfd-flow-volumes-solid-models.html">single, watertight flow volume</a> that represents the air around your car. In CAD terms that means the solid will represent the air around your car. You will need to <strong>subtract the car (as a solid) and all its related components (e.g., wheels) from a large outer bounding box</strong>. For efficiency you can model a half flow volume due to <a href="../blog/speed-up-cfd-with-symmetry-and-cyclic-conditions.html">symmetry</a> as in this tutorial.</p>
+<h3>Goals</h3>
+<p>In this tutorial, you will learn how to:</p>
+<ul>
+<li>Specify fluid conditions on a <strong>single volume</strong> for an incompressible, steady-state, turbulent flow simulation</li>
+<li>Specify boundary conditions on faces</li>
+<li>Use a linear velocity condition to simulate a moving ground plane</li>
+<li>Use an angular velocity condition to simulate multiple rotating wheels</li>
+<li>Specify meshing parameters</li>
+<li>Generate a velocity magnitude color map</li>
+<li>Generate velocity vectors</li>
+<li>Create a <a href="../lift-force-and-drag-force.html">lift and drag force</a> monitor</li>
+<li>Monitor residuals to determine flow simulation convergence</li>
+</ul>
+<h3>Assumptions</h3>
+<ol>
+<li>You have <a href="15.html">activated</a> the <a href="../product/rans.html">Caedium RANS Flow</a> add-on, or <a href="../product/professional.html">Caedium Professional</a>. </li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>. </li>
+<li>You have downloaded the <a href="../files/tutorials/co2dragster/co2dragster.sym">co2dragster.sym</a> project file. </li>
+</ol>
+<h2 class="tutorial-heading">Read the Simulation File into Caedium</h2>
+<p>In the <strong>Home</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> click the <strong>Open</strong> button <img src="../files/tutorials/shared/open.png" alt="" />. Navigate to the location of the co2dragster.sym file. Double-click on <strong>co2dragster.sym</strong> to load it into Caedium.</p>
+<p>The project within Caedium should appear as shown below.</p>
+<p><img title="Start" alt="Start" src="../files/tutorials/co2dragster/start.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Prepare the Volume</h2>
+<p>To shade the geometry faces, right-click on the <a href="../tutorials/essentials.html#viewwindow">View Window</a> (<strong>view</strong>) background, double-click <strong>sim-&gt;Faces</strong>, and select <strong>Properties</strong> from the menu. In the <a href="../tutorials/essentials.html#propertiespanel">Properties Panel</a>, turn off the <strong>Transparent</strong> property to make all faces visible (shaded).</p>
+<p class="note">Shading the faces in the simulation will make it easier to select them when you configure fluid and boundary conditions.</p>
+<p><img title="Shaded Faces" alt="Shaded Faces" src="../files/tutorials/co2dragster/shaded-faces.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Specify the Substance Settings</h2>
+<h3>Specify the Fluid Conditions</h3>
+<p>Select the <strong>Physics</strong> <a href="../tutorials/essentials.html#toolpalette">Tool Palette</a>. Select <strong>Gases-&gt;Air</strong>. The Properties Panel will show the default properties for air. To enable incompressible turbulent (viscous) flow, the <strong>State-&gt;Rotational</strong> and <strong>State-&gt;Viscous </strong>properties should be set to <strong>Yes</strong> (their default values), and the <strong>State-&gt;Compressible</strong>, <strong>State-&gt;Heat Transfer</strong>, <strong>State-&gt;Species</strong>, and <strong>State-&gt;Transient</strong> properties should to be set to <strong>No</strong> (their default values).</p>
+<p><img title="Air" alt="Air" src="../files/tutorials/co2dragster/air.png" width="286" height="602" /></p>
+<p>Drag and drop the <strong>Air</strong> tool onto a face of the volume. Select <strong>Done</strong> to set air as the fluid inside the volume.</p>
+<h3>Set the Reference Velocity for the Simulation</h3>
+<p>The reference velocity can be used to initialize the simulation and to specify the inlet velocity. In this tutorial you will set a reference velocity of 22.2 m/s (50 mph) in the negative X-direction.</p>
+<p>With the volume already selected from the previous step, the Properties Panel will show the <strong>Substance: Air</strong> properties by default. Set <strong>Substance: Air-&gt;Properties-&gt;Phase: Single-&gt;Reference-&gt;U: Fixed Value-&gt;Value</strong> to be [<strong>-22.2 0 0</strong>] and press Enter on the keyboard.</p>
+<p><img title="Reference Velocity" alt="Reference Velocity" src="../files/tutorials/co2dragster/reference-velocity.png" width="290" height="248" /></p>
+<h3>Set the Relaxation Factors for the Simulation</h3>
+<p class="note">Changing the default omega relaxation factor in this example will help the simulation to converge more quickly. See <a href="934.html">&quot;Relaxation Factors in RANS Flow Solvers&quot;</a> for tips on setting relaxation factors.</p>
+<p>In the Properties Panel, expand the <strong>Substance: Air-&gt;Solver: RANS Flow-&gt;Relaxation Factors</strong> property, and set <strong>omega</strong> to be <strong>0.1</strong>.</p>
+<p><img title="Omega Relaxation Factor" alt="Omega Relaxation Factor" src="../files/tutorials/co2dragster/omega-relaxation.png" width="289" height="287" /></p>
+<h3>Set the Turbulent Length Scale</h3>
+<p>The turbulent length scale is used to determine the turbulent dissipation rate, i.e., how fast turbulence decays. In this tutorial you will set the length scale to be approximately a quarter of the length of the dragster.</p>
+<p>In the Properties Panel, set <strong>Substance: Air-&gt;Properties-&gt;Phase: Single-&gt;Reference-&gt;omega: Turbulent Length Scale-&gt;Length Scale</strong> to be <strong>0.04</strong> and press Enter on the keyboard.</p>
+<p><img title="Turbulent Length Scale" alt="Turbulent Length Scale" src="../files/tutorials/co2dragster/turb-length.png" width="304" height="302" /></p>
+<h2 class="tutorial-heading">Specify the Boundary Conditions</h2>
+<h3>Wall Conditions</h3>
+<p>Drag and drop the <strong>Faces-&gt;Wall</strong> tool onto a face of the volume. Double-click <strong>flow-volume-&gt;Faces</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong> to create walls on the outer surfaces of the volume.</p>
+<p class="note">A wall is a solid surface through which fluid cannot flow.</p>
+<h3>Symmetry Local Condition</h3>
+<p>To create a symmetry condition, drag and drop the <strong>Faces-&gt;Symmetry Local</strong> tool onto the symmetry face shown below (you will need to zoom out to see this face). Double-click the first face in the <strong>Select</strong> dialog and select <strong>Done</strong>.</p>
+<p><img title="Symmetry Local" alt="Symmetry Local" src="../files/tutorials/co2dragster/symmetry-local.png" width="400" height="251" /></p>
+<p class="note">The Symmetry Local tool can be applied to any planar face. The Symmetry tool applies to the entire simulation and is useful for visualization.</p>
+<h3>Slip Conditions</h3>
+<p>To create the 2 slip conditions, drag and drop the <strong>Faces-&gt;Slip</strong> tool onto one of the faces shown below. Double-click the first face in the <strong>Select</strong> dialog, select <strong>Select/Deselect</strong> and right-click on the second face (shown below).  Double-click the first face in the <strong>Select</strong> dialog. With the 2 faces selected, select <strong>Done</strong>.</p>
+<p><img alt="Slip Faces" src="../files/tutorials/co2dragster/slip.png" width="400" height="251" /> </p>
+<p class="note">The Slip condition is similar to the Symmetry Local condition except that it constrains the velocity to be parallel (tangential) to a face.</p>
+<h3>Inlet Conditions</h3>
+<p class="note">An inlet is a boundary condition that specifies the properties of the fluid as it enters the flow volume.</p>
+<h4>Main Inlet</h4>
+<p>To create the main inlet, drag and drop the <strong>Faces-&gt;Inlet</strong> tool onto the face shown below. Select that face in the <strong>Select</strong> dialog, click <strong>OK</strong>, and select <strong>Done</strong> to create the inlet.</p>
+<p><img title="Main Inlet" alt="Main Inlet" src="../files/tutorials/co2dragster/main-inlet.png" width="400" height="251" /></p>
+<h4>Inlet at the Nozzle</h4>
+<p>To make it easier to select the nozzle, select the outer boundary face opposite the dragster symmetry plane and make it transparent.</p>
+<p><img title="Transparent Outer Boundary" alt="Transparent Outer Boundary" src="../files/tutorials/co2dragster/outerb-transparent.png" width="484" height="363" /></p>
+<p>To create the inlet at the nozzle, drag and drop the <strong>Faces-&gt;Inlet</strong> tool onto the face (<strong>nozzle</strong>) shown below in green. Select <strong>nozzle</strong> in the <strong>Select</strong> dialog, click <strong>OK</strong>, and select <strong>Done</strong> to create the inlet. </p>
+<p><img title="Inlet at the Nozzle" alt="Nozzle Inlet" src="../files/tutorials/co2dragster/nozzle-inlet.png" width="400" height="251" /></p>
+<p>In the Properties Panel, set <strong>Physics: Inlet-&gt;Type: Default-&gt;U</strong> to be <strong>Surface Normal</strong> and set the associated <strong>Speed</strong> to <strong>154</strong>. Then set <strong>Physics: Inlet-&gt;Type: Default-&gt;omega</strong> to be <strong>Turbulent Length Scale</strong> and set the associated <strong>Length Scale</strong> to <strong>0.004</strong> (the nozzle diameter).</p>
+<p><img title="Nozzle Inlet Properties" alt="Nozzle Inlet Properties" src="../files/tutorials/co2dragster/nozzle-inlet-props.png" width="308" height="273" /></p>
+<h3>Outlet Condition</h3>
+<p>To create an outlet, drag and drop the <strong>Faces-&gt;Outlet</strong> tool onto the face shown below in green. Double-click that face in the <strong>Select</strong> dialog, and select <strong>Done</strong> to create the outlet.</p>
+<p><img title="Outlet" alt="Outlet" src="../files/tutorials/co2dragster/outlet.png" width="400" height="251" /></p>
+<p class="note">An outlet is a boundary condition that specifies the properties of the fluid as it leaves the flow volume.</p>
+<h3>Linear Velocity Condition to Simulate the Moving Ground Plane</h3>
+<p>Select the <strong>Faces-&gt;Linear Velocity</strong> tool. In the Properties Panel, set <strong>Velocity</strong> to [<strong>-22.2 0 0</strong>].</p>
+<p><img title="Linear Velocity" alt="Linear Velocity" src="../files/tutorials/co2dragster/linear-velocity.png" width="205" height="497" /></p>
+<p>Drag and drop the <strong>Linear Velocity</strong> tool onto the ground face as shown below. Double-click that face in the <strong>Select</strong> dialog, and select <strong>Done</strong> to create the linear velocity condition.</p>
+<p><img title="Ground" alt="Ground" src="../files/tutorials/co2dragster/ground.png" width="400" height="251" /></p>
+<p class="note">Setting the linear velocity on the ground face will simulate a moving ground plane. A linear velocity can be assigned to walls and inlets.</p>
+<h3>Angular Velocity Condition for the Rotating Wheels</h3>
+<p>For an angular velocity condition, you need to specify the axis of rotation if the rotation is not around the origin. In this tutorial you will set the rotation axis at the center of each wheel.</p>
+<p>Angular velocity (omega) = V / r, where V is the tangential velocity and r is the radius. In this tutorial, to match the moving ground plane, omega = 22.2 / 0.013 = 1707 radians/s = 97804 degrees/s.</p>
+<p>In this tutorial the front and back of each wheel has a stationary hubcap. Only the wheel tread and a thin section of the wheel wall rotate.</p>
+<p>Select the <strong>Faces-&gt;Angular Velocity</strong> tool. In the Properties Panel, set the <strong>Velocity</strong> to [<strong>0 0 -97804</strong>].</p>
+<p><img title="Angular Velocity" alt="Angular Velocity" src="../files/tutorials/co2dragster/angular-vel.png" width="221" height="497" /></p>
+<p>Drag and drop the <strong>Angular Velocity</strong> tool onto the axes associated with the rear wheel in the View Window, double-click <strong>axes</strong> in the <strong>Select</strong> dialog, and select <strong>Set Axes</strong>. Right-click on a face on the wheel tread, double-click the <strong>rear-wheel</strong> group in the <strong>Select</strong> dialog, and select <strong>Done</strong>.</p>
+<p><img title="Rear Wheel Angular Velocity" alt="Rear Wheel Angular Velocity" src="../files/tutorials/co2dragster/rear-wheel-angular-vel.png" width="484" height="363" /></p>
+<p>Repeat the same process to apply the <strong>Faces-&gt;Angular Velocity</strong> tool to the front wheel, where the axes will be <strong>axes_1</strong>, and the group will be <strong>front-wheel</strong>.</p>
+<p class="note">Setting the angular velocity on the wheels will simulate rotating wheels. An angular velocity can be assigned to walls and inlets.</p>
+<h2 class="tutorial-heading">Specify Meshing Parameters</h2>
+<p class="note">The accuracy property controls the <a href="244.html">mesh</a> element size and growth rate on and around the entities associated with each accuracy property.</p>
+<h3>Set Accuracy for the Wheel Contact Patches</h3>
+<p>Select the <strong>Special-&gt;Accuracy</strong> tool. In the Properties Panel set <strong>Accuracy</strong> to <strong>Custom</strong>, and set <strong>Resolution</strong> to <strong>10</strong>.</p>
+<p><img title="Accuracy Custom Property" alt="Accuracy Custom Property" src="../files/tutorials/co2dragster/accuracy-custom.png" width="285" height="602" /></p>
+<p>To make it easier to select the edge group in the next operation, make the ground transparent as shown below.</p>
+<p><img title="Wheel Edge Contact Patch" alt="Wheel Edge Contact Patch" src="../files/tutorials/co2dragster/wheel-edge-contact-patch.png" width="484" height="363" /></p>
+<p>Drag and drop the <strong>Accuracy</strong> tool onto the edge that connects the ground to the outboard thin wall of the rear wheel (shortest edge of the wheel contact patch - <strong>edge_370</strong> - shown in bold in the diagram above). Double-click the <strong>contact-patch-outer-edges</strong> group in the <strong>Select</strong> dialog, and select <strong>Done</strong> to set the accuracy for the group that includes edges for both the rear and front wheel contact patches.</p>
+<p>Turn off the transparency property for the ground.</p>
+<h3>Set Accuracy for the Nozzle</h3>
+<p>Select the <strong>Special-&gt;Accuracy</strong> tool. In the Properties Panel set <strong>Accuracy: Custom-&gt;Growth Rate</strong> to <strong>1.15</strong>.</p>
+<p><img title="Nozzle Accuracy" alt="Nozzle Accuracy" src="../files/tutorials/co2dragster/nozzle-accuracy.png" width="263" height="246" /></p>
+<p>Drag and drop the <strong>Accuracy </strong>tool onto the <strong>nozzle,</strong> select <strong>nozzle</strong> in the <strong>Select</strong> dialog, click <strong>OK</strong>, and select <strong>Done</strong> to set the accuracy.</p>
+<h3>Set the Accuracy for the CO2 Housing Nose</h3>
+<p>Select the <strong>Special-&gt;Accuracy</strong> tool. In the Properties Panel set <strong>Accuracy: Custom-&gt;Growth Rate</strong> to <strong>1.1</strong>.</p>
+<p>Drag and drop the <strong>Accuracy </strong>tool onto the CO2 housing nose, select <strong>nose</strong> in the <strong>Select</strong> dialog, click <strong>OK</strong>, and select <strong>Done</strong> to set the accuracy.</p>
+<p><img title="Nose Accuracy" alt="Nose Accuracy" src="../files/tutorials/co2dragster/nose-accuracy.png" width="484" height="363" /></p>
+<h3>Set the Accuracy for the Dragster Wing Tip</h3>
+<p>Select the <strong>Special-&gt;Accuracy</strong> tool. In the Properties Panel set <strong>Accuracy: Custom-&gt;Growth Rate</strong> to <strong>1.2</strong> and set <strong>Resolution</strong> to <strong>25</strong>.</p>
+<p>Drag and drop the <strong>Accuracy </strong>tool onto the wing tip (shown below), select <strong>face_361</strong> in the <strong>Select</strong> dialog, click <strong>OK</strong>, and select <strong>Done</strong> to set the accuracy.</p>
+<p><img title="Wing Tip" alt="Wing Tip" src="../files/tutorials/co2dragster/wing-tip.png" width="400" height="251" /></p>
+<h2 class="tutorial-heading">Create a Group of Dragster Faces</h2>
+<p>It is useful to have a group consisting of all the dragster faces for results presentations, such as lift and drag monitors.</p>
+<p>Given the numerous faces constituting the dragster, it is easier to use subtractive selection, i.e., select all faces and then deselect the faces that are not part of the dragster.</p>
+<p>Right-click on a face on the flow volume, double-click <strong>flow-volume-&gt;Faces</strong> in the <strong>Select</strong> dialog, and select <strong>Select/Deselect</strong>. Now use right-click, the <strong>Select</strong> dialog, and <strong>Select/Deselect</strong> to remove the 6 large outer bounding faces from the current selection. Also remove the nozzle face. After deselecting the last face, select <strong>Group</strong>, and then <strong>Properties</strong>. </p>
+<p>In the Properties Panel, select the Group tab <img alt="" src="../files/tutorials/shared/group-tab.png" /> and set the <strong>Name</strong> to <strong>dragster</strong>.</p>
+<h2 class="tutorial-heading">Display Initial Velocity Color Map</h2>
+<p>Select the <strong>Results</strong> Tool Palette.</p>
+<p>Drag and drop the <strong>Vector Fields-&gt;U</strong> (velocity) tool into the View Window (<strong>view</strong>) background, double-click <strong>sim-&gt;Faces</strong>, and select <strong>Color Map</strong> to create contours of velocity magnitude.</p>
+<p><img title="Velocity Magnitude Color Map" alt="Velocity Magnitude Color Map" src="../files/tutorials/co2dragster/velocity-colormap.png" width="484" height="363" /></p>
+<p>The request for the velocity color map will cause the entire volume to be meshed which will take a few minutes and creates about 670,000 cells. Only a single color (blue) is shown, because the initial velocity magnitude values at each element on the faces are the same.</p>
+<p>Remove the <strong>Color Map: U:Mag</strong> from the large outer boundary face opposite the dragster symmetry plane to more clearly see the mesh details around the dragster. Right-click the face (<strong>face_3</strong>), double-click <strong>face_3</strong> in the <strong>Select</strong> dialog and then select <strong>Properties</strong> from the menu. In the Properties Panel select (left-click) the <strong>Color Map: U:Mag</strong> property, then right-click and select <strong>Delete</strong> from the menu.</p>
+<p>Right-click on the View Window (<strong>view</strong>) background, double-click <strong>sim-&gt;Faces</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel turn on the <strong>Transparent</strong> property in the Properties Panel to see the face mesh elements (triangles).</p>
+<p><img title="Face Mesh" alt="Face Mesh" src="../files/tutorials/co2dragster/face-mesh.png" width="484" height="363" /></p>
+<p>In the <strong>Home</strong> Toolbar click the <strong>Undo</strong> button <img alt="" src="../files/tutorials/shared/undo.png" /> once to return the faces back to their previous state.</p>
+<p>To present smooth shaded results set <strong>Style</strong> to <strong>Smooth</strong> for the current multiple face selection.</p>
+<p>To better see the velocity magnitude range around the dragster you need to modify the color map range. In the View Legend, left-click on the title <strong>Color Map</strong><img alt="" src="../files/tutorials/shared/colormap-legend.png" />, then in the Properties Panel set the <strong>Range</strong> to <strong>Manual</strong>.  Expand the <strong>Range: Manual</strong> property and set <strong>Bounds</strong> to [<strong>0 25</strong>].</p>
+<p><img title="Color Map Range" alt="Color Map Range" src="../files/tutorials/co2dragster/colormap-range.png" width="187" height="247" /></p>
+<h2 class="tutorial-heading">Display Initial Velocity Vectors</h2>
+<p>To display velocity vectors as the simulation updates, drag and drop the <strong>Vector Fields-&gt;U </strong>tool onto the dragster symmetry plane. Double-click the first face (<strong>face_356</strong>)<strong>&#160;</strong>in the <strong>Select</strong> dialog and select <strong>Select/Deselect</strong>. Right-click the ground (<strong>face_1</strong>), double-click the first face<strong> </strong>in the <strong>Select</strong> dialog and select <strong>Arrows</strong> to create arrows colored by velocity magnitude.</p>
+<p><img title="Large Arrows" alt="Large Arrows" src="../files/tutorials/co2dragster/large-arrows.png" width="484" height="363" /></p>
+<p>In the View Legend, left-click on the title <strong>Arrows</strong> <img alt="" src="../files/tutorials/shared/arrows-legend.png" />, then in the Properties Panel set <strong>Scale</strong> to <strong>0.1</strong>.</p>
+<p><img title="Scaled Arrows" alt="Scaled Arrows" src="../files/tutorials/co2dragster/scaled-arrows.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Create Force Monitors</h2>
+<p>In this step you will set up lift and drag monitors for the dragster on the same monitor plot.</p>
+<h3>Drag Monitor</h3>
+<p>Drag is the force parallel to the flow direction, created by the air moving over the dragster. In this case, drag is represented by the negative X-direction (default) of the F (force) vector variable.</p>
+<p>Drag and drop the <strong>Vector Variables-&gt;F</strong> (force) tool onto a face of the dragster. Double-click the <strong>dragster </strong>group in the <strong>Select</strong> dialog and select <strong>Monitor</strong>.</p>
+<p>Drag and drop the <strong>F Monitor</strong> tab over to the right-hand edge of the Caedium application window to split the window into two parts as shown below.</p>
+<p><img title="Drag Monitor" alt="Drag Monitor" src="../files/tutorials/co2dragster/drag-monitor.png" width="484" height="363" /></p>
+<p>Left-click <strong>dragster </strong>in the <strong>F Monitor</strong> Legend, left-click again to edit the title, and change it to <strong>Drag</strong>. In the Properties Panel, set the <strong>Symbol</strong> to <strong>None</strong>.</p>
+<p><img title="Drag Series Properties" alt="Drag Series Properties" src="../files/tutorials/co2dragster/drag-series-props.png" width="242" height="248" /></p>
+<h3>Lift Monitor</h3>
+<p>Lift is the force perpendicular to the flow direction, created by the air moving over the dragster. In this case, lift is represented by the Y-direction of the F (force) vector variable.</p>
+<p>To monitor lift and drag on the same plot, first you will create another series (plot curve) for the dragster on the original drag monitor, and then you will set this plot series to monitor lift.</p>
+<p>In the View Window (<strong>view</strong>) right-click on a face of the dragster, double-click the <strong>dragster</strong> group in the <strong>Select</strong> dialog, and select <strong>Copy</strong>. Left-click in the Monitor Window (<strong>F Monitor</strong>) to give it focus, then right-click and select <strong>Paste</strong>.</p>
+<p>Left-click <strong>dragster </strong>in the <strong>F Monitor</strong> Legend, left-click again to edit the title, and change it to <strong>Lift</strong>. In the Properties Panel, set the <strong>Symbol</strong> to <strong>None</strong>.</p>
+<p>In the <strong>Results</strong> Tool Palette, select the <strong>Vector Variables-&gt;F</strong> tool. In the Properties Panel set <strong>Scalar</strong> to <strong>Y</strong>.</p>
+<p><img title="Force Scalar Y" alt="Force Scalar Y" src="../files/tutorials/co2dragster/force-scalar-y.png" width="188" height="497" /></p>
+<p>Drag and drop the <strong>Vector Variables-&gt;F</strong> (force) tool onto <strong>Lift</strong> in the <strong>F Monitor</strong> Legend, and select <strong>Y Axis</strong>.</p>
+<p>Left-click in the Monitor Window (<strong>F Monitor</strong>), then in the Properties Panel rename the <strong>Y Axis</strong> to <strong>Force</strong>.</p>
+<p><img title="Y-Axis Force" alt="Y-Axis Force" src="../files/tutorials/co2dragster/yaxis-force.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Create Residuals Monitor</h2>
+<p>Left-click in the View Window to give it focus. Drag and drop the <strong>Special-&gt;Residuals</strong> tool onto a face of the dragster. Double-click <strong>flow-volume</strong> in the <strong>Select</strong> dialog and select <strong>Monitor</strong> to create the residuals monitor.</p>
+<p>Drag and drop the <strong>Residuals</strong> tab over to the right-hand edge of the Caedium application window to split the window into three parts as shown below.</p>
+<p><img title="Residuals" alt="Residuals" src="../files/tutorials/co2dragster/residuals.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Run the Flow Solver</h2>
+<p class="note">The number of flow (simulation) solver iterations is determined by multiplying the number of simulation time-steps (default = 5) by the number of iterations per simulation time-step (default = 100). The number of simulation time-steps is determined by dividing the simulation duration (default = 5 s) by the simulation time-step (default = 1 s). After each simulation time-step (equivalent to 100 iterations by default) the results will be refreshed. For this simulation the defaults are fine and will result in a total of 500 iterations.</p>
+<p>In the <strong>Home</strong> Toolbar click the <strong>Run</strong> button <img alt="" src="../files/tutorials/shared/play.png" /> to run the flow solver.</p>
+<p class="note">If you wanted to interrupt the flow solver, you would re-click the Run button; the solver would then stop at the end of the current simulation time-step.</p>
+<p>Let the solver complete its run. Note the updates of the velocity vectors, velocity color map, the forces monitor, and the residuals monitor as the simulation progresses.</p>
+<p><img title="Iterations Complete" alt="Iterations Complete" src="../files/tutorials/co2dragster/iterations-complete.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Simulation Failures</h2>
+<p>If you have problems with simulation failures try reducing the <strong>Accuracy-&gt;Resolution</strong> property from 10 to 8 on the wheel contact patches - sometimes a little tweak to the mesh can make the difference between the simulation failing and succeeding. Make sure you are at the Start (click the <strong>Start</strong> button) of time and that you change the Resolution property for the entire group in one step.</p>
+<p>The contact patches are particularly sensitive to mesh resolution due to the shallow angle they make with the tire, which can lead to poor element quality.</p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="831.html" class="page-previous" title="Go to previous page">‹ Flow Over a Rotating Wheel with Moving Ground</a>
+                    <a href="817.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="1255.html" class="page-next" title="Go to next page">Rotating Paddle using Moving Reference Frame ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-1041"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-1041" class="active">Solver fails</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on May 4, 2011 - 22:40.  </div>
+
+  <div class="content">
+    <p>I run into a problem everytime that I try to run the solver at the end of this tutorial as it gives me this error everytime.</p>
+<p>Time = 0<br />
+Create mesh</p>
+<p>Processor 0: field transfer<br />
+Processor 1: field transfer<br />
+Processor 2: field transfer<br />
+Processor 3: field transfer<br />
+Processor 4: field transfer<br />
+Processor 5: field transfer<br />
+Processor 6: field transfer</p>
+<p>End.</p>
+<p>Warning:<br />
+RANS Flow failed<br />
+Unexpected process exit.<br />
+The system cannot find the path specified.</p>
+<p>I have tried downloading one of the example .sym files from the Basilisk Performance team to see if that fixed the problem but it gives me the same error. I am thinking that it could be something with my pc, it is a hp laptop with an i7 720QM cpu 8gb RAM and hd5650 1gb graphics card.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1043"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-1043" class="active">Missing MS-MPI Maybe?</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 5, 2011 - 04:52.  </div>
+
+  <div class="content">
+    <p>Some ideas:</p>
+<p>You could be missing MS-MPI.<br />
+When you installed Caedium did you check the <strong>Microsoft MPI</strong> option?<br />
+For more details see <a href="547.html">"What is the Windows installation process?"</a>.</p>
+<p>Did you change any of the preferences under <strong>File-&gt;Preferences</strong>, <strong>Physics-&gt;OpenFOAM</strong>?</p>
+<p>You can try running without parallel and see if it helps by selecting the menu <strong>File-&gt;Preferences</strong>, in the Properties Panel set <strong>Physics-&gt;OpenFOAM-&gt;Parallel:Shared Memory-&gt;Processes</strong> to <strong>1</strong>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1044"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-1044" class="active">Check MPI Preference</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 5, 2011 - 06:51.  </div>
+
+  <div class="content">
+    <p>Another thought is to check the MPI preference, select <strong>File-&gt;Preferences</strong>, in the Properties Panel check the <strong>Application-&gt;MPI</strong> preference points to your MS-MPI executable, the default is <code>C:\Program Files\Microsoft HPC Pack 2008 R2\Bin\mpiexec</code></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1049"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-1049" class="active">Thanks for that it fixed that</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on May 11, 2011 - 03:06.  </div>
+
+  <div class="content">
+    <p>Thanks for that it fixed that problem but now when i run the simulation it starts running the volume solver and then at iteration 20 it fails and gives me this error code.</p>
+<p>Warning:<br />
+RANS Flow failed<br />
+Solver singularity: smoothSolver:  Solving for k, Initial residual = 0.157126, Final residual = 1.#QNAN, No Iterations 100</p>
+<p>I am unsure of why this is happening I have uploaded the .sym file to my dropbox so that you can download it if thats any help to you. Here is the link: <a href="http://db.tt/8yLetfy" title="http://db.tt/8yLetfy">http://db.tt/8yLetfy</a></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1056"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-1056" class="active">Missing Symmetry, Inlet, and Outlet</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 12, 2011 - 13:43.  </div>
+
+  <div class="content">
+    <p>It appears that you haven't set the outer boundary symmetry, inlet and outlet conditions, please review the following tutorial sections:</p>
+<ul>
+<li>Symmetry Local Conditions</li>
+<li>Inlet Conditions</li>
+<li>Outlet Condition</li>
+</ul>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1061"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-1061" class="active">Sorry I did the inlet, outlet</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on May 15, 2011 - 20:13.  </div>
+
+  <div class="content">
+    <p>Sorry I did the inlet, outlet and symmetry local conditions and i still get this error:</p>
+<p>Warning:<br />
+RANS Flow failed<br />
+Solver singularity: smoothSolver:  Solving for k, Initial residual = 0.0293444, Final residual = 1.#QNAN, No Iterations 100</p>
+<p>You can download the updated file from <a href="http://db.tt/8yLetfy" title="http://db.tt/8yLetfy">http://db.tt/8yLetfy</a></p>
+<p>Thanks for your help so far.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1062"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-1062" class="active">Missing Nozzle Turbulent Length Scale</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 18, 2011 - 09:14.  </div>
+
+  <div class="content">
+    <p>You have missed setting the <strong>Physics: Inlet-&gt;Type: Default-&gt;omega = Turbulent Length Scale</strong> and the associated <strong>Length = 0.004</strong>. Review the section <strong>"Inlet at the Nozzle"</strong>.</p>
+<p>If this doesn't help then try forcing a re-mesh by deleting a face and then undo.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1094"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-1094" class="active">Thanks that fixed it</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on June 8, 2011 - 07:49.  </div>
+
+  <div class="content">
+    <p>Thanks that fixed it and it ran fine till it finished. My problem now is that I have ran about 10 different designs through and only about 4 of them working fine with the others failing and giving me a rans flow failed error and the residuals monitor is really erratic.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1095"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-1095" class="active">Post follow ons in the Question Forum</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on June 8, 2011 - 09:52.  </div>
+
+  <div class="content">
+    <p>Good news it's now working. Let's take the follow on discussion to the <a href="../forum/46.html">Question Forum</a>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1144"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-1144" class="active">Incorrect Results</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by pinnaclef1 on August 15, 2011 - 05:14.  </div>
+
+  <div class="content">
+    <p>Hi,<br />
+I tried to attempt this tutorial using a car that our F1 team had designed and when I ran the solver the faces turned out to be orange with a few shaded specks. I tried the tutorial multiple times to see if I had missed anything, but it happened every time.<br />
+Here is an example:</p>
+<p><a href="http://dl.dropbox.com/u/19533746/PinnacleX2.png" title="http://dl.dropbox.com/u/19533746/PinnacleX2.png">http://dl.dropbox.com/u/19533746/PinnacleX2.png</a></p>
+<p>Please help!<br />
+Thanks,</p>
+<p>Hamzah</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1145"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-1145" class="active">Likely Mesh Problems</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on August 15, 2011 - 08:09.  </div>
+
+  <div class="content">
+    <p>I would guess there are problems with your mesh. For tips on meshing try the comment <a href="995.html#comment-758">"Mesh Diagnostics."</a></p>
+<p>For a question thread dedicated to F1 in Schools try <a href="1117.html">"Caedium Pro Issues."</a></p>
+<p>If you have more questions then I suggest starting a new thread in the <a href="../forum/46.html">Questions forum</a>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1516"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-1516" class="active">F1 in Schools Project</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on July 22, 2012 - 22:31.  </div>
+
+  <div class="content">
+    <p>We are a F1 in schools team, we are having trouble to intially set up the car in a flow volume and create a subtract the part from the box. Everytime we try to subtract the volumes it says:</p>
+<p>Error:<br />
+Create Subtract Geometry failed.<br />
+Open Cascade failure: TopoDS_Buider::Add</p>
+<p>If there is any link on how to setup the car or a tutorial on how to analyse F1 cars for schools please comment </p>
+<p>Thanks</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1517"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-1517" class="active">Prepare your geometry in your CAD system</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on July 23, 2012 - 06:19.  </div>
+
+  <div class="content">
+    <p>Some tips:</p>
+<ol>
+<li><strong>Simplifying your car geometry</strong> for your CFD analysis - you don't need details like bolts etc. For more details see <a href="../blog/design-for-simulation-then-manufacture.html">"Design for Simulation then Manufacture"</a></li>
+<li>Prepare the flow volume in your <strong>CAD system</strong>, i.e., subtract your car from a large outer box</li>
+<li>Export your flow volume from your CAD system using <strong>STEP (.stp)</strong></li>
+</ol>
+<p>Given a good STEP flow volume you can then follow this tutorial to setup up your simulation.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2130"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-2130" class="active">Complex Terrain</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on November 16, 2014 - 22:32.  </div>
+
+  <div class="content">
+    <p>Hey, I have been following the tutorials on this website with great results. However, I am looking to get a bit more out of the software. Specifically, I am trying to model wind flow over terrain (.stl file I have) however, I am not sure how to create the walls, inlet, outlet, etc. This tutorial has all the necessary steps I need to perform once my domain has been created. </p>
+<p>Could anyone point me in the right direction?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2131"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-2131" class="active">Post in Symscape Question Forum</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on November 17, 2014 - 09:35.  </div>
+
+  <div class="content">
+    <p>Please post your question as a new thread in our <a href="../forum/46.html">Question Forum</a>, as this comment is unrelated to this tutorial.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2249"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-2249" class="active">How do I find the exact</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on July 27, 2015 - 13:35.  </div>
+
+  <div class="content">
+    <p>How do I find the exact numerical values for the Drag and Lift forces? It is hard to differentiate between models by looking at the graph.</p>
+<p>Thanks.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2250"></a>
+<div class="comment comment-published last odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1082.html#comment-2250" class="active">Export via CSV</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on July 27, 2015 - 13:38.  </div>
+
+  <div class="content">
+    <p>Export the plot series as CSV (Comma Separated Values)</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="expanded active-trail"><a href="817.html">RANS Flow</a><ul class="menu"><li class="leaf first"><a href="818.html">Incompressible Flow Through a Pipe into a Box</a></li>
+<li class="leaf"><a href="816.html">Incompressible Transient Flow with Heat Transfer</a></li>
+<li class="leaf"><a href="819.html">Transonic Flow Over the NACA 0012 Airfoil</a></li>
+<li class="leaf"><a href="831.html">Flow Over a Rotating Wheel with Moving Ground</a></li>
+<li class="leaf active-trail"><a href="1082.html" class="active">Flow Over a CO2 Dragster</a></li>
+<li class="leaf"><a href="1255.html">Rotating Paddle using Moving Reference Frame</a></li>
+<li class="leaf"><a href="1257.html">Transient Water and Air Flow in a Tank</a></li>
+<li class="leaf"><a href="1718.html">Conjugate Heat Transfer for a Heat Sink</a></li>
+<li class="leaf last"><a href="1281.html">Flow Over a Double-Sided Membrane</a></li>
+</ul></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="collapsed last"><a href="../tips.html">Tips</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1082 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:37 GMT -->
+</html>

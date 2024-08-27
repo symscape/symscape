@@ -1,0 +1,276 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1497 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Creating 2-sided faces problems | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-forum page-node-1497 section-node one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../forum.html">Forums</a> › <a href="../forum/57.html">Problems</a></div>                  <h1 class="title">Creating 2-sided faces problems</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1497" class="node node-type-forum clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by PeterG on June 1, 2014 - 17:14        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_57 first last"><a href="../forum/57.html" rel="tag" title="Report product problems (e.g., Caedium bugs). View Ratings">Problems</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>Hello,</p>
+<p>I am having some trouble reliably creating 2-sided faces. Reviewing the Symscape website, I came across this procedure and have used it with some success:</p>
+<p>"Subtract the original pseudo volume attached to the face<br />
+Submitted by symscape on August 23, 2013 - 11:01.<br />
+Make sure you:</p>
+<p>Enable the Topology Only property under the Booleans-&gt;Subtract tool<br />
+Selected the Face (membrane) not the pseudo Volume (this face shouldn't strictly be a volume as it doesn't enclose a volume) as the final operand in the Subtract operation<br />
+Delete the original pseudo volume attached to the face - the face will remain as it is still part of the new volume<br />
+Then perform the Faces-&gt;2 Sided operation."</p>
+<p>My simulation involves a primary simulation volume and two pseudo volumes.</p>
+<p>One pseudo volume is simply a single face I wanted to embed in the primary simulation volume. I subtracted that single face from the primary volume, then deleted its pseudo volume. Then I made the embedded face a 2-sided face exactly as detailed above. It was very easy. </p>
+<p>The second pseudo volume consists of 25 adjacent faces at ~ 90 degree angles to each other (analogous to staircase steps) that I also embedded into the primary volume. At one end of the “staircase,” the first of the 25 faces is attached to the primary volume on three edges. It is attached to the second “staircase” face on its fourth edge (as a bottom step is attached to the floor, both sidewalls, and the next step). The next 23 faces are each attached to adjacent “staircase” faces on two edges and to the primary volume on two edges (as intermediate steps are attached to both adjacent steps and both sidewalls). The last of the 25 “staircase” faces is attached to the previous face on one edge and to the primary volume on two edges. It is not attached to anything on its fourth edge (like a top step beyond which there is no floor).</p>
+<p>To embed this geometry, I again:</p>
+<p>Subtracted each face of this "staircase" pseudo volume individually from the primary simulation volume. This gave me the primary volume with the "staircase" faces embedded within it.<br />
+Deleted the pseudo volume.</p>
+<p>However, when I try to individually convert these 25 “staircase” faces into a 2-sided face, I get this message:<br />
+"Error:<br />
+Failed: Create 2 sided geometry”</p>
+<p>It does not matter which face I try to make 2-sided, I always get the error message. I have ensured that the embedded faces do not already have any BCs or other specifics assigned to them. Do I need to do something different?</p>
+<p>Thank you very much for your help. </p>
+<p>PeterG</p>
+  <div class="forum-topic-navigation clear-block">
+          <a href="1505.html" class="topic-previous" title="Go to previous forum topic">‹ Volume seems to mesh fine, despite error message</a>
+              <a href="1478.html" class="topic-next" title="Go to next forum topic"> Edge Already in Front Error ›</a>
+      </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+  
+  <a id="comment-1983"></a>
+<div class="comment comment-published first last odd clearfix">
+  
+      <h3 class="title">
+      <a href="1497.html#comment-1983" class="active">Create staircase volume with thin thickness</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on June 2, 2014 - 08:42.  </div>
+
+  <div class="content">
+    <p>Given the complexity of your staircase geometry, especially the way it connects to the primary volume I don't think double-sided faces will work reliably for your model. Instead I suggest you construct the staircase as a volume with a relatively thin thickness so that you can use standard Boolean operations.</p>
+<p>The technique for creating double-sided faces I described requires that they be totally enclosed by the surrounding volume, i.e., no edges touching the outer volume.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1497 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:44 GMT -->
+</html>

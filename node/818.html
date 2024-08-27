@@ -1,0 +1,411 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/818 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:10:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Incompressible Flow Through a Pipe into a Box | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="817.html" />
+<link rel="up" href="817.html" />
+<link rel="next" href="816.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-818 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="817.html">RANS Flow</a></div>                  <h1 class="title">Incompressible Flow Through a Pipe into a Box</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-818" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Alison Findon on May 24, 2013 - 09:52        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Simulate a steady-state turbulent flow through a pipe into a box. View velocity vectors and particle tracks within the flow volume.</p>
+<p><img alt="Final Screenshot" src="../files/tutorials/turbpipebox/symmetry.png" width="484" height="363" /></p>
+<p>Checkout a screencast of this tutorial at <a href="../examples/rans/screencast-pipe-box-flow.html">"Screencast of Flow Through a Pipe into a Box."</a></p>
+<h3>Goals</h3>
+<p>In this tutorial, you will learn how to:</p>
+<ul>
+<li>Specify fluid conditions on a <strong>single volume</strong> for an incompressible, steady-state, turbulent flow simulation</li>
+<li>Change the turbulence model</li>
+<li>Specify boundary conditions on faces</li>
+<li>Examine and refine the mesh</li>
+<li>Specify meshing parameters</li>
+<li>Monitor residuals to determine flow simulation convergence</li>
+<li>Generate velocity vectors </li>
+<li>Generate particles tracks </li>
+<li>Use symmetry to view the entire simulation</li>
+</ul>
+<h3>Assumptions</h3>
+<ol>
+<li>You have <a href="15.html">activated</a> the <a href="../product/rans.html">Caedium RANS Flow</a> add-on, or <a href="../product/professional.html">Caedium Professional</a>.</li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>.</li>
+<li>You have either:
+<ul>
+<li>Created the geometry for this tutorial by following the tutorial <a href="810.html">&quot;Pipe into a Box&quot;</a></li>
+<li>Imported the geometry (<a href="812.html">pipe-into-box.brep</a>) into Caedium &mdash; select the <strong>File</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> and click the <strong>Import</strong> button <img src="../files/tutorials/shared/import.png" alt="" /></li>
+</ul>
+</li>
+</ol>
+<p>The geometry within Caedium should appear as shown below.</p>
+<p><img alt="Imported Geometry" src="../files/tutorials/turbpipebox/importedgeometry.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Prepare the Volume</h2>
+<p>Right-click an edge of the volume, double-click the first volume in the <strong>Select</strong> dialog and then select <strong>Properties</strong> from the menu. In the <a href="../tutorials/essentials.html#propertiespanel">Properties Panel</a>, select the Volume tab <img alt="" src="../files/tutorials/shared/volume-entity-tab.png" /> and set the <strong>Name</strong> to <strong>flow-volume</strong>.</p>
+<p><img alt="Flow Volume Name Properties" src="../files/tutorials/turbpipebox/flowvolumenameprops.png" width="241" height="248" /></p>
+<p>To shade the geometry faces, right-click on the <a href="../tutorials/essentials.html#viewwindow">View Window</a> (<strong>view</strong>) background, double-click <strong>sim-&gt;Faces</strong>, and then select <strong>Properties</strong> from the menu. In the Properties Panel, turn off the <strong>Transparent</strong> property to make all faces visible (shaded).</p>
+<p class="note">Shading the faces in the simulation will make it easier to select them when you  configure fluid and boundary conditions.</p>
+<p><img alt="Shaded Faces" src="../files/tutorials/turbpipebox/shadedgeometry.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Specify the Substance Settings</h2>
+<h3>Specify the Fluid Conditions</h3>
+<p>Select the <strong>Physics</strong> <a href="../tutorials/essentials.html#toolpalette">Tool Palette</a>. Select <strong>Gases-&gt;Air</strong>. The Properties Panel will show the default properties for air. To enable incompressible turbulent (viscous) flow the <strong>State-&gt;Rotational</strong> and <strong>State-&gt;Viscous</strong> properties should be set to <strong>Yes</strong> (their default values), and the <strong>State-&gt;Compressible</strong>, <strong>State-&gt;Heat Transfer</strong>, <strong>State-&gt;Species</strong>, and <strong>State-&gt;Transient</strong> properties should to be set to <strong>No</strong> (their default values).</p>
+<p><img alt="Air Properties" src="../files/tutorials/turbpipebox/airproperties.png" width="287" height="605" /></p>
+<p>Drag and drop the <strong>Air</strong> tool onto a face of the volume. Select <strong>Done</strong> to set air as the fluid inside the volume.</p>
+<h3>Set the Turbulence Model for the Simulation</h3>
+<p class="note">For turbulent flow, a turbulence model is an essential part of a <a href="../reynolds-averaged-navier-stokes-equations.html">Reynolds-Averaged Navier-Stokes (RANS)</a> solver. In this tutorial, you will use the <a href="http://www.cfd-online.com/Wiki/K-epsilon_models">k-epsilon turbulence model</a> rather than the default <a href="http://www.cfd-online.com/Wiki/SST_k-omega_model">SST k-omega turbulence model</a>.</p>
+<p>With the volume already selected from the previous step, the Properties Panel will show the <strong>Substance: Air</strong> properties by default. Expand the <strong>Substance: Air-&gt;Solver: RANS Flow</strong> property and set the <strong>Turbulence Model</strong> to be <strong>k-epsilon</strong>.</p>
+<p><img alt="Turbulence Model" src="../files/tutorials/turbpipebox/turbprops.png" width="289" height="322" /></p>
+<h3>Set the Reference Velocity for the Simulation</h3>
+<p>The reference velocity can be used to initialize the simulation and to specify the inlet velocity. In this tutorial you will set a reference velocity of -10 m/s in the Z-direction.</p>
+<p>In the Properties Panel set <strong>Substance: Air-&gt;Properties-&gt;Phase: Single-&gt;Reference-&gt;U: Fixed Value-&gt;Value</strong> to be [<strong>0 0 -10</strong>] and press Enter on the keyboard.</p>
+<p><img alt="Substance Properties" src="../files/tutorials/turbpipebox/substanceproperties.png" width="288" height="280" /></p>
+<h2 class="tutorial-heading">Specify the Boundary Conditions</h2>
+<p>Drag and drop the <strong>Faces-&gt;Wall</strong> tool onto a face of the volume. Double-click <strong>flow-volume-&gt;Faces</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong> to create walls on the outer surfaces of the volume.</p>
+<p class="note">A wall is a solid surface through which fluid cannot flow.</p>
+<p>To create the two symmetry conditions, drag and drop the <strong>Faces-&gt;Symmetry Local</strong> tool onto one of the symmetry faces shown below (you will need to rotate your view to see these 2 faces). Double-click the first face in the <strong>Select</strong> dialog. Then select <strong>Select/Deselect</strong> and right-click on the second face (shown below), double-click the first face in the <strong>Select</strong> dialog and select <strong>Done</strong>.</p>
+<p><img alt="Symmetry Local Faces" src="../files/tutorials/turbpipebox/symmetryfaces.png" width="400" height="314" /></p>
+<p class="note">The Symmetry Local tool can be applied to any planar face. The Symmetry tool applies to the entire simulation and is useful for visualization as will be demonstrated later.</p>
+<p>To create an inlet, drag and drop the <strong>Faces-&gt;Inlet</strong> tool onto the face shown below in blue. Select that face in the <strong>Select</strong> dialog, click <strong>OK</strong>, and then select <strong>Done</strong> to create the inlet.</p>
+<p class="note">An inlet is a boundary condition that specifies the properties of the fluid as it enters the flow volume.</p>
+<p><img alt="Inlet and Outlet Faces" src="../files/tutorials/turbpipebox/inletoutletfaces.png" width="400" height="314" /></p>
+<p>To create an outlet, drag and drop the <strong>Faces-&gt;Outlet</strong> tool onto the face shown above in green. Select that face in the <strong>Select</strong> dialog, click <strong>OK</strong>, and then select <strong>Done</strong> to create the outlet.</p>
+<p class="note">An outlet is a boundary condition that specifies the properties of the fluid as it leaves the flow volume.</p>
+<h2 class="tutorial-heading">Display Initial Velocity Color Map on a Symmetry Plane</h2>
+<p>Select the <strong>Results</strong> Tool Palette. Drag and drop the <strong>Vector Fields-&gt;U</strong> (velocity) tool onto the symmetry face aligned with the YZ plane in the View Window. Double-click the first face in the <strong>Select</strong> dialog and select <strong>Color Map</strong> to create contours of velocity magnitude.</p>
+<p><img alt="Velocity Color Map" src="../files/tutorials/turbpipebox/velocitycolormap.png" width="484" height="363" /></p>
+<p>The request for the velocity color map will cause the entire volume to be <a href="244.html">meshed</a>. Only a single color (blue) is shown, because all the initial velocity magnitude values at each element on the face are the same.</p>
+<p>To better see the mesh resolution, left-click on the View Window, and then set <strong>Style</strong> to <strong>Flat</strong> in the Properties Panel. Turn on the <strong>Transparent</strong> property to see the face mesh elements (triangles).</p>
+<p><img alt="Coarse Mesh" src="../files/tutorials/turbpipebox/coarsemesh.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Specify Meshing Parameters</h2>
+<p>The size and distribution of triangles on the symmetry face reflect a coarse mesh. Although you could quickly get a converged solution using such a mesh, the accuracy of the solution would be poor. The following steps will use the <a href="723.html">Accuracy tool</a> to improve the mesh resolution.</p>
+<p>Select the <strong>Physics</strong> Tool Palette. Select the <strong>Special-&gt;Accuracy</strong> tool. In the Properties Panel set <strong>Accuracy</strong> to <strong>Custom</strong>, enter <strong>80</strong> for the <strong>Resolution</strong>, and press Enter on the keyboard.</p>
+<p><img alt="Accuracy Property" src="../files/tutorials/turbpipebox/accuracyproperty.png" width="286" height="601" /></p>
+<p>Drag and drop the <strong>Accuracy</strong> tool onto the longest edge (shown below in red). Double-click the first edge in the <strong>Select</strong> dialog and select <strong>Done</strong>.</p>
+<p><img alt="Accuracy Tool Edge" src="../files/tutorials/turbpipebox/accuracyedge.png" width="402" height="197" /></p>
+<p>The volume will be re-meshed with the new accuracy settings, resulting in the improved mesh resolution shown below.</p>
+<p><img alt="Refined Mesh" src="../files/tutorials/turbpipebox/improvedmesh.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Display Velocity Vectors</h2>
+<p>To display velocity vectors as the simulation updates, select the <strong>Results</strong> Tool Palette. Drag and drop the <strong>Vector Fields-&gt;U </strong>tool onto the symmetry face showing the mesh. Double-click the first face<strong> </strong>in the <strong>Select</strong> dialog and select <strong>Arrows</strong> to create arrows colored by velocity magnitude.</p>
+<p>In the View Legend, left-click on the title <strong>Arrows</strong> <img alt="" src="../files/tutorials/shared/arrows-legend.png" />, then in the Properties Panel set <strong>Scale</strong> to <strong>0.1</strong>.</p>
+<p><img alt="Arrows" src="../files/tutorials/turbpipebox/arrows.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">View Particles Tracks Through the Volume</h2>
+<p>To better see the <a href="984.html">particles tracks</a> (or streamlines), right-click on the View Window (<strong>view</strong>) background, double-click <strong>sim-&gt;Faces</strong>, and then select <strong>Properties</strong> from the menu. In the Properties Panel, turn on the <strong>Transparent</strong> property.</p>
+<p>To create a face to be the seed source for the particles tracks, right-click on an edge of the outlet face in the View Window.  Select the outlet face in the <strong>Select</strong> dialog (the outlet face will be hightlighted in the View Window), click <strong>OK</strong>, and then select <strong>Copy</strong>.  In the <strong>Home</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> click <strong>Paste</strong> <img alt="" src="../files/tutorials/shared/paste.png" /> to paste the seed source. The seed source will be pasted on top of the outlet.</p>
+<p>To select the seed source face, right click on the background of the View Window, expand <strong>sim-&gt;Faces</strong>, and select the last face in the list.  Click <strong>OK</strong> and then select <strong>Properties</strong>.</p>
+<p>To translate the seed source, select the <strong>Geometry</strong> Tool Palette, and then select the <strong>Transforms-&gt;Translate</strong> tool.  In the Properties Panel set <strong>Translate</strong> to <strong>[0 0 3.5]</strong> and press Enter on the keyboard.  Click <strong>Add Translate</strong> at the bottom of the Properties Panel and select <strong>Done</strong> to translate the seed source.</p>
+<p><img alt="Seed Source Face" src="../files/tutorials/turbpipebox/seedsourceface.png" width="484" height="363" /></p>
+<p>To display particles tracks, select the <strong>Results</strong> Tool Palette.  With the seed source face still selected from the previous step, double-click the <strong>Vector Fields-&gt;U</strong> tool and select <strong>Set Particles Target</strong>. Right-click on an edge of the volume and double-click <strong>flow-volume</strong>.</p>
+<p>In the Properties Panel set <strong>Particles-&gt;Type</strong> to be <strong>Ribbon</strong>. Expand the <strong>Type: Ribbon</strong> property and set <strong>Width</strong> to <strong>0.025</strong>.</p>
+<p><img alt="Particles Properties" src="../files/tutorials/turbpipebox/particlesproperties.png" width="243" height="248" /></p>
+<p>To color the particles tracks by velocity magnitude, double-click the <strong>Vector Fields-&gt;U</strong> tool and select <strong>Color Map</strong>.</p>
+<p><img alt="Particles Ribbons" src="../files/tutorials/turbpipebox/particletracks.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Create Residuals Monitor</h2>
+<p class="note">Residuals provide a normalized measure of the error in solving for the primary variables (e.g., pressure, velocity) in a simulation. Ideally the per iteration residuals should become progressively smaller. A steady-state simulation is considered converged when the primary variables no longer show any significant variation with successive iterations and convergence is usually indicated by no further reduction in the residuals with more iterations.</p>
+<p>Drag and drop the <strong>Special-&gt;Residuals</strong> tool onto an edge of the flow volume. Double-click <strong>flow-volume</strong> in the <strong>Select</strong> dialog and select <strong>Monitor</strong> to create the residuals monitor.</p>
+<p>Drag and drop the <strong>Residuals</strong> tab over to the right-hand edge of the Caedium application window to split the window into two parts as shown below.</p>
+<p><img alt="Residuals Monitor" src="../files/tutorials/turbpipebox/residuals.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Run the Flow Solver</h2>
+<p class="note">The number of flow (simulation) solver iterations is determined by multiplying the number of simulation time-steps (default = 5) by the number of iterations per simulation time-step (default = 100). The number of simulation time-steps is determined by dividing the simulation duration (default = 5 s) by the simulation time-step (default = 1 s). After each simulation time-step (equivalent to 100 iterations by default) the results will be refreshed. For this simulation the defaults are fine and will result in a total of 500 iterations.</p>
+<p>In the <strong>Home</strong> Toolbar click the <strong>Run</strong> button <img alt="" src="../files/tutorials/shared/play.png" /> to run the flow solver.</p>
+<p class="note">If you wanted to interrupt the flow solver, you would re-click the Run button; the solver would then stop at the end of the current simulation time-step.</p>
+<p>Let the solver complete its run. Note the updates of the velocity vectors and the Residuals Monitor as the simulation converges.</p>
+<p><img alt="Converged Simulation" src="../files/tutorials/turbpipebox/converged.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Use Symmetry to View the Entire Simulation</h2>
+<p class="note">The Symmetry tool allows you to view a symmetrical simulation in its entirety.</p>
+<p>To maximize the 3D view, drag and drop the <strong>Residuals Monitor</strong> tab onto the same tab row as the main View Window (<strong>view</strong>).  Select the View Window.</p>
+<p>Select the <strong>Physics</strong> Tool Palette. Select the <strong>Simulation-&gt;Symmetry </strong>tool. In the Properties Panel set <strong>Planes </strong>to <strong>X+Y</strong>. Drag and drop the <strong>Symmetry</strong> tool onto the background of the View Window and select <strong>Done</strong>.</p>
+<p>In the Properties Panel select the View tab <img alt="" src="../files/tutorials/shared/view-tab.png" /> and turn on the <strong>Symmetry</strong> property to see the 3 additional symmetric views of the simulation.</p>
+<p><img alt="Full View" src="../files/tutorials/turbpipebox/symmetry.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Try For Yourself</h2>
+<p>The <a href="835.html">sym project file</a> for this tutorial can be viewed in <a href="../product/caedium.html">Caedium</a> or you can investigate this case yourself using our <a href="../product/rans.html">RANS Flow add-on</a>.</p>
+<p>The most convenient way to view and edit this case is to use our <a href="../product/professional.html">Professional add-on</a>.</p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="817.html" class="page-previous" title="Go to previous page">‹ RANS Flow</a>
+                    <a href="817.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="816.html" class="page-next" title="Go to next page">Incompressible Transient Flow with Heat Transfer ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-2303"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="818.html#comment-2303" class="active">Hello,I can&#039;t understand why</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on April 25, 2016 - 23:33.  </div>
+
+  <div class="content">
+    <p>Hello,I can't understand why you need to duplicate the outlet surface and paste it at 3.5...<br />
+and when did we set the duplicated face as the seed for the particles?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2304"></a>
+<div class="comment comment-published last even clearfix">
+  
+      <h3 class="title">
+      <a href="818.html#comment-2304" class="active">Positioned for aesthetics</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on April 26, 2016 - 02:05.  </div>
+
+  <div class="content">
+    <p>Releasing the particles at the location of the duplicate face is purely for aesthetics - it's a good place to see the entire recirculation. For more on particles see <a href="984.html">"Particles or Streamlines."</a></p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="expanded active-trail"><a href="817.html">RANS Flow</a><ul class="menu"><li class="leaf first active-trail"><a href="818.html" class="active">Incompressible Flow Through a Pipe into a Box</a></li>
+<li class="leaf"><a href="816.html">Incompressible Transient Flow with Heat Transfer</a></li>
+<li class="leaf"><a href="819.html">Transonic Flow Over the NACA 0012 Airfoil</a></li>
+<li class="leaf"><a href="831.html">Flow Over a Rotating Wheel with Moving Ground</a></li>
+<li class="leaf"><a href="1082.html">Flow Over a CO2 Dragster</a></li>
+<li class="leaf"><a href="1255.html">Rotating Paddle using Moving Reference Frame</a></li>
+<li class="leaf"><a href="1257.html">Transient Water and Air Flow in a Tank</a></li>
+<li class="leaf"><a href="1718.html">Conjugate Heat Transfer for a Heat Sink</a></li>
+<li class="leaf last"><a href="1281.html">Flow Over a Double-Sided Membrane</a></li>
+</ul></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="collapsed last"><a href="../tips.html">Tips</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/818 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:11:04 GMT -->
+</html>

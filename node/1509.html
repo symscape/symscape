@@ -1,0 +1,278 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1509 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Question about selection of objects for lift monitor | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-forum page-node-1509 section-node one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../forum.html">Forums</a> › <a href="../forum/46.html">Questions</a></div>                  <h1 class="title">Question about selection of objects for lift monitor</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1509" class="node node-type-forum clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by PeterG on July 11, 2014 - 14:29        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_46 first last"><a href="../forum/46.html" rel="tag" title="Get answers to product (e.g., Caedium) questions. View Ratings">Questions</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>I have studied the Symscape tutorials about generating drag and lift monitors but still have questions about creating a lift monitor. </p>
+<p>The first times I created and used a lift monitor, I got lift measurements about a magnitude  greater than I would have expected. I was suspect of the lift reported from my simulation, which was a “pie-slice” fraction of a full circular simulation; I made it that way for more manageable computing requirements as the object of study is axisymmetric with both radial and axial flow relative to its axis of rotation. I have since created a full circular simulation like your simulation of the Tower Bridge where the model of the bridge is subtracted from a giant cylinder, leaving a single "solid" flow volume. I likewise created a cylinder, then Boolean subtracted my object of study from it. </p>
+<p>The cylinder’s bounding faces are all inlet-outlets with no other flow specifics assigned (though I should probably make them full slip-surfaces as well). Each inlet-outlet has a coincidental seed face. The subtracted object of my study has 2 inlets and 13 outlets with fixed flow velocities. Both inlets have coincidental seed faces.</p>
+<p>The volume meshes and the solver runs fine. Around 1,200 iterations it settles down with all residuals around 1e-5 and showing some ongoing minimal oscillatory behavior thereafter for hundreds more iterations without any apparent divergence. I understand that this does not constitute ideal convergence, though the streamlines do not move to a degree that would be at all relevant in a real-world example of my model. Their movement is really not even perceptible.</p>
+<p>My question is: What should I select for determining lift of the object in the center of the flow cylinder?<br />
+     1) Do I select the entire volume (cylinder plus subtracted object)?<br />
+     2) Do I select all the faces of only the object of my study that "floats" in the cylinder (but none that bound the cylinder itself?)<br />
+     3) Do I select faces that that do not represent physical surfaces in the real world, such as inlets/outlets, even though they may impact lift? If so which ones? All of them, or only ones to which an inlet/outlet velocity has been assigned?<br />
+     4) Do I include particle seed faces, or do they even matter since they are not walls and have no physics assignments besides their accuracy settings to specify the number of streamlines?<br />
+     5) Do I simply select faces representing the intended lifting surfaces of that object? (This seems too limited.)</p>
+<p>To me, option #2) seemed to make the most sense; it seems then I would have the most accurate results in case certain faces are creating negative lift. I created a group by selecting all the faces of the whole volume and de-selecting the top, bottom, and curved wall of the cylinder that bound the entire volume.</p>
+<p>I have tried all three of these options, however, and though I can get other kinds of results (color-mapped pressure maps and streamlines, etc.) I now either get lift as zero or only a very few pounds; other calculations and the pressure mapping indicates that I should be getting several thousand pounds of lift.</p>
+<p>The lift should be in the + Z-axis direction and I have the force vector variable properties set to that direction. I have the lift monitor itself set and indicating "Force" along its Y-axis, and cannot discern what I am doing wrong.</p>
+<p>Any thoughts? Thanks much in advance for your time and comments.</p>
+  <div class="forum-topic-navigation clear-block">
+          <a href="1514.html" class="topic-previous" title="Go to previous forum topic">‹ CFD modeling of multiple objects in a row</a>
+              <a href="1503.html" class="topic-next" title="Go to next forum topic">Can&#039;t simulate airflow around a sketchup model ›</a>
+      </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+  
+  <a id="comment-2025"></a>
+<div class="comment comment-published first last odd clearfix">
+  
+      <h3 class="title">
+      <a href="1509.html#comment-2025" class="active">Group walls for lift force</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on July 11, 2014 - 15:19.  </div>
+
+  <div class="content">
+    <p>You are right, option #2) is correct.</p>
+<p>Your seed faces are not part of the simulation so they should not be included in any face groups used for force monitors.</p>
+<p>As in the tutorial <a href="831.html">"Flow Over a Rotating Wheel with Moving Ground"</a> first create a group of the faces - they should always be walls for forces. Then:</p>
+<ol>
+<li>In the <strong>Results</strong> Tool Palette select <strong>Vector Variables-&gt;F</strong> (force).</li>
+<li>In the <strong>Properties Panel</strong> set <strong>Scalar = Z</strong> - upwards and perpendicular to your flow direction.</li>
+<li>Drag and drop <strong>Vector Variables-&gt;F</strong> onto a face of the object and then in the <strong>Select Dialog</strong> scroll down to the bottom of the list and select the group you created.</li>
+<li>In the popup menu select <strong>Monitor</strong></li>
+</ol>
+<p>It is easier to create separate drag and lift monitors (as opposed to a single plot with multiple force monitors, as described in the tutorial). For a separate drag monitor perform the same procedure as above but with the Scalar property set to the direction parallel to your flow.</p>
+<p>You want to create the monitors prior to running your simulation, as in the tutorial, so that you can also use them to judge whether your simulation is converging.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1509 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:11 GMT -->
+</html>

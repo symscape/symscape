@@ -1,0 +1,399 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/gpu-0-2-openfoam?page=1&%24Version=1&%24Path=%2F by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>GPU v0.2 Linear Solver Library for OpenFOAM | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-gpu-0-2-openfoam section-gpu-0-2-openfoam one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="index.html" title="Home" rel="home"><img src="files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="index.html">Home</a> › <a href="articles.html">Articles</a></div>                  <h1 class="title">GPU v0.2 Linear Solver Library for OpenFOAM</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1138" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on September 15, 2011 - 15:15        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_15 first last"><a href="articles.html" rel="tag" title="General interest">Articles</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p><em>For the <strong>latest version</strong> of ofgpu for OpenFOAM visit <a href="gpu-1-1-openfoam.html">"GPU v1.1 Linear Solver Library for OpenFOAM"</a>.</em></p>
+<p><em>Jan. 17, 2012: Updated instructions for OpenFOAM 2.1.x</em></p>
+<p><strong>ofgpu v0.2</strong> is the latest version of our free <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> library that provides GPU (sometimes referred to as <a href="http://en.wikipedia.org/wiki/GPGPU">GPGPU</a>) linear solvers for <strong>OpenFOAM&reg; v2.1.x</strong>. Sponsored by the Microsoft DPE team, the library targets NVIDIA CUDA devices on Windows, Linux, and (untested) Mac OS X. While this effort is still in the experimental stage, <strong>GPU acceleration</strong> holds the promise of providing <strong>significant speed up</strong> at relatively low cost and with <strong>low power consumption</strong> compared to other alternatives. If you want to try our ofgpu library with OpenFOAM then we recommend that you use either a dedicated (i.e., not displaying graphics) <a href="http://www.geforce.com/Hardware/GPUs/geforce-gtx-590/overview">high-performance NVIDIA graphics card</a> or a <a href="http://www.nvidia.com/object/tesla_computing_solutions.html">TESLA card</a>.</p>
+<p><span class="inline inline-center"><img src="files/articles/gpu02-openfoam/ofgpu-0-2.png" alt="ofgpu" width="420" height="275" /><span class="caption"><strong>OpenFOAM on Windows using ofgpu</strong></span></span></p>
+<h3>OpenFOAM GUI</h3>
+<p><em>Are you looking for a <strong>GUI driven, integrated simulation environment with GPU support for Windows and Linux with NVIDIA CUDA devices</strong> incorporating a selection of the <strong>RANS OpenFOAM solvers</strong> and various import/export filters?</em></p>
+<p><span class="inline inline-center"><a href="get-started-with-caedium.html"><img title="Get Started With Caedium Now" alt="Get Started With Caedium Now" src="files/flair/get-started-button.png" width="177" height="43" /></a></span></p>
+<h3>Background</h3>
+<p>In our ofgpu library we use the <a href="http://code.google.com/p/cusp-library/">Cusp library's</a> Krylov solvers to produce equivalent GPU (CUDA) versions of the standard OpenFOAM linear solvers:</p>
+<ul>
+<li>PCG - Preconditioned <a href="http://en.wikipedia.org/wiki/Conjugate_gradient_method">conjugate gradient solver</a> for symmetric matrices (e.g., p) </li>
+<li>PBiCG - Preconditioned <a href="http://en.wikipedia.org/wiki/Biconjugate_gradient_method">biconjugate gradient solver</a> for asymmetric matrices (e.g., Ux, k) </li>
+</ul>
+<p>We also have support in ofgpu for the Cusp preconditioners:</p>
+<ul>
+<li>no</li>
+<li>diagonal</li>
+<li>smoothed_aggregation - equivalent to Algebraic Multi-Grid (AMG)</li>
+<li>scaled_bridson_ainv</li>
+<li>bridson_ainv</li>
+<li>nonsym_bridson_ainv</li>
+</ul>
+<h3>Prerequisites</h3>
+<ul>
+<li>You are familiar with the OpenFOAM build process </li>
+<li>You are familiar with CMake </li>
+<li>You have a <a href="http://www.nvidia.com/object/cuda_gpus.html">CUDA-capable NVIDIA device</a>, such as a <a href="http://www.nvidia.com/object/personal-supercomputing.html">TESLA C2075</a> </li>
+</ul>
+<h3>Preparation</h3>
+<p>Install and test:</p>
+<ul>
+<li>Latest NVIDIA graphics driver</li>
+<li>Latest <a href="http://developer.nvidia.com/cuda-toolkit-sdk">CUDA Toolkit (v4.0, including Thrust) and GPU Computing SDK</a> </li>
+<li><a href="http://code.google.com/p/cusp-library/">Cusp v0.2.0</a> - sparse linear algebra library </li>
+<li><a href="http://www.cmake.org/">CMake</a> - cross platform make </li>
+<li>OpenFOAM 2.1.x source distribution on Linux - following <a href="openfoam-2-1-x-on-windows-64-mpi.html">"OpenFOAM 2.1.x on Windows 64-bit with MS MPI"</a>. <strong>Note that these modifications for Windows also work for Linux</strong></li>
+</ul>
+<h3>Build Procedure</h3>
+<p>This build procedure assumes single precision.</p>
+<ol>
+<li>Download our free GPL licensed <a href="files/articles/gpu02-openfoam/ofgpu-0-2.tar">ofgpu library</a> [last update Sept. 15, 2011 to v0.2].
+</li><li>Configure and generate the build system for ofgpu with CMake, Set the <code>CMAKE_INSTALL_PREFIX</code> variable to <code>&lt;ofgpu-root&gt;/install</code></li>
+<li>Build ofgpu
+<ul>
+<li> On *nix systems <code>make install</code> and create the symbolic link: <code>ln -s &lt;ofgpu-root&gt;/install/release/lib &lt;ofgpu-root&gt;/install/lib</code> </li>
+<li>For Windows you will need to build ofgpu natively using Visual Studio and then transfer ofgpu.dll and ofgpu.lib to your Linux system for <a href="openfoam-2-1-x-on-windows-64-mpi.html">cross compiling</a>. Place your natively compiled Windows files in <code>&lt;ofgpu-root&gt;/install/win/lib</code> on your Linux system. </li>
+</ul>
+</li>
+<li>Patch your OpenFOAM source with our <a href="openfoam-2-1-x-on-windows-64-mpi.html">CUDA modifications</a>. Note that this is the same source code patch that adds Windows support for OpenFOAM 2.1.x.</li>
+<li><code>chmod ug+x &lt;OpenFOAM-root&gt;/src/gpu/Allwmake</code></li>
+<li>Build OpenFOAM in the usual manner, but with the addition of the environment variables:
+<ul>
+<li><code>WM_GPU='CUDA'</code> </li>
+<li><code>CUDA_ARCH_PATH=&lt;ofgpu-root&gt;</code></li>
+<li><code>WM_PRECISION_OPTION=SP</code></li>
+</ul>
+<p>  Note that single precision is required. Double precision is untested.
+  </p></li>
+</ol>
+<p>The build process will produce the following 2 new OpenFOAM libraries:</p>
+<ul>
+<li><code>$(WM_PROJECT_DIR)/platforms/&lt;platform&gt;/lib/cuda/[lib]gpu.[so|dll]</code> </li>
+<li><code>$(WM_PROJECT_DIR)/platforms/&lt;platform&gt;/lib/gpuless/[lib]gpu.[so|dll]</code> </li>
+</ul>
+<p>Under Windows you will need to have the <code>$(WM_PROJECT_DIR)/platforms/&lt;platform&gt;/lib/cuda</code> directory in your executable path to use the library.</p>
+<h3>Example Case</h3>
+<p>For an example of a GPU-enabled case try <a href="files/articles/gpu02-openfoam/pitzDailyGpu.zip">pitzDailyGpu</a>.</p>
+<p>The GPU library is loaded in <code>&lt;case&gt;/system/controlDict</code> with:</p>
+<p>functions<br />
+{<br />
+&#160;&#160; cudaGpu<br />
+&#160;&#160; {<br />
+&#160;&#160;&#160;&#160;&#160; type cudaGpu;<br />
+&#160;&#160;&#160;&#160;&#160; functionObjectLibs ("gpu");<br />
+&#160;&#160;&#160;&#160;&#160; cudaDevice 0;<br />
+&#160;&#160; }<br />
+}</p>
+<p>As an example the p and U|k|epsilon linear solvers in the <code>&lt;case&gt;/system/fvSolution</code> file are modified as follows:</p>
+<p>p<br />
+{<br />
+&#160;&#160; solver PCGgpu;<br />
+&#160;&#160; preconditioner smoothed_aggregation;<br />
+&#160;&#160; tolerance 1e-06;<br />
+&#160;&#160; relTol 0.01;<br />
+}</p>
+<p>"(U|k|epsilon)"<br />
+{<br />
+&#160;&#160; solver PBiCGgpu;<br />
+&#160;&#160; preconditioner diagonal;<br />
+&#160;&#160; tolerance 1e-05;<br />
+&#160;&#160; relTol 0.1;<br />
+}</p>
+<h4>Notes</h4>
+<p><a href="node/808.html">OpenFOAM</a> is a registered trademark of OpenCFD and is unaffiliated with Symscape.</p>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-1634"></a>
+<div class="comment comment-published first odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-0-2-openfoam.html#comment-1634" class="active">Would require a complete rewrite</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on November 12, 2012 - 14:08.  </div>
+
+  <div class="content">
+    <p>It wouldn't be a port, it would require a complete rewrite to make ofgpu compatible with OpenCL.</p>
+<p>ofgpu is based on the CUDA libraries THRUST and CUSP. If these libraries were ported (which would equate to a complete rewrite) to OpenCL then that would make a rewrite of ofgpu viable.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1637"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-0-2-openfoam.html#comment-1637" class="active">The corresponding libraries are not CUSP and THRUST but...</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on November 17, 2012 - 12:18.  </div>
+
+  <div class="content">
+    <p>...ViennaCL (GPU solver library) and VexCL (template library)</p>
+<p>As an example, the OpenCl version of odeint replaces THRUST with VexCL:</p>
+<p><cite>... odeint now supports GPU computations both with CUDA by using the Thrust library and OpenCL by using VexCL. This allows us to compare the performance of the two solutions.</cite></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1681"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-0-2-openfoam.html#comment-1681" class="active">Number of GPU cores</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by S. Paul (not verified) on January 16, 2013 - 04:51.  </div>
+
+  <div class="content">
+    <p>Hi,</p>
+<p>Congrats on this great work. I have successfully installed and run some cases. </p>
+<p>I was wondering, whether is it possible to control number of gpu cores on which ofgpu is run? Or does the solver  takes up all the cores by default?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1682"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-0-2-openfoam.html#comment-1682" class="active">No control over GPU core number</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on January 16, 2013 - 10:30.  </div>
+
+  <div class="content">
+    <p>No there is no control over the GPU cores used. Why would you want to limit the core number? If you don't max the core number you are wasting compute effort.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="item-list"><ul class="pager"><li class="pager-first first"><a href="gpu-0-2-openfoam7267.html?%24Version=1&amp;%24Path=%2F" title="Go to first page" class="active">« first</a></li>
+<li class="pager-previous"><a href="gpu-0-2-openfoam7267.html?%24Version=1&amp;%24Path=%2F" title="Go to previous page" class="active">‹ previous</a></li>
+<li class="pager-item"><a href="gpu-0-2-openfoam7267.html?%24Version=1&amp;%24Path=%2F" title="Go to page 1" class="active">1</a></li>
+<li class="pager-current last">2</li>
+</ul></div></div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="products.html">Products</a><ul class="menu"><li class="leaf first"><a href="product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="news.html">News</a></li>
+<li class="collapsed"><a href="blog.html">Blog</a></li>
+<li class="leaf"><a href="about.html" title="">About</a></li>
+<li class="expanded last"><a href="resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="articles.html">Articles</a></li>
+<li class="leaf"><a href="image.html">Gallery</a></li>
+<li class="leaf"><a href="support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="forum.html">Forums</a></li>
+<li class="leaf"><a href="downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="partners.html">Partners</a></li>
+<li class="leaf"><a href="poll.html">Polls</a></li>
+<li class="leaf last"><a href="links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="forum.html"><img title="Forums" alt="Forums" src="files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="contact.html">Contact</a> | <a href="trademarks.html">Trademarks</a> | <a href="privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/gpu-0-2-openfoam?page=1&%24Version=1&%24Path=%2F by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:35 GMT -->
+</html>

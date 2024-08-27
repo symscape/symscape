@@ -1,0 +1,438 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1718 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:03:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Conjugate Heat Transfer for a Heat Sink | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="1257.html" />
+<link rel="up" href="817.html" />
+<link rel="next" href="1281.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-1718 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="817.html">RANS Flow</a></div>                  <h1 class="title">Conjugate Heat Transfer for a Heat Sink</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1718" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on April 25, 2019 - 08:08        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Simulate an incompressible, steady-state, turbulent air flow around a heat sink with Conjugate Heat Transfer (CHT). View velocity vectors and monitor average temperatures.</p>
+<p><img alt="Heat Sink Flow Complete" src="../files/tutorials/heatsinkflow/flow-complete.png" width="484" height="363" /></p>
+<p>This tutorial is classed as <strong>advanced</strong> and you should consider completing other simpler RANS Flow tutorials as a prerequisite, such as <a href="818.html">&quot;Incompressible Flow Through a Pipe into a Box&quot;</a>.</p>
+<h3>Goals</h3>
+<p>In this tutorial, you will learn how to:</p>
+<ul>
+<li>Specify fluid and solid conditions on a multiple-volume simulation for an incompressible, steady-state, turbulent air flow simulation using Conjugate Heat Transfer (CHT)</li>
+<li>Specify boundary conditions on faces </li>
+<li>Specify meshing parameters </li>
+<li>Generate velocity vectors </li>
+<li>Create an area-averaged temperature monitor</li>
+<li>Monitor residuals to determine flow simulation convergence</li>
+</ul>
+<h3>Assumptions</h3>
+<ol>
+<li>You have <a href="15.html">activated</a> the <a href="../product/rans.html">Caedium RANS Flow</a> add-on, or <a href="../product/professional.html">Caedium Professional</a>. </li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>. </li>
+<li>You have completed simpler RANS Flow tutorials. </li>
+<li>You have either:
+<ul>
+<li>Launched Caedium with the project file (<a href="../files/tutorials/heatsink/heat-sink.sym">heat-sink.sym</a>) containing the geometry for this tutorial </li>
+<li>Created the geometry by following the tutorial <a href="1717.html">&quot;Heat Sink&quot;</a></li>
+</ul>
+</li>
+</ol>
+<p>The geometry within Caedium should appear as shown below.</p>
+<p><img alt="Heat Sink Geometry" src="../files/tutorials/heatsinkflow/init-heat-sink-geom.png" width="484" height="363" /></p>
+<p>On the interface between the fluid and solid volumes coincident faces were linked in the geometry creation tutorial using the <strong>Faces-&gt;Link </strong>tool in the <strong>Geometry</strong> <a href="../tutorials/essentials.html#toolpalette">Tool Palette</a>.</p>
+<h2 class="tutorial-heading">Prepare the Volumes</h2>
+<p>Right-click an edge of the outer boundary (<strong>volume_7</strong>), double-click <strong>volume_7</strong> in the <strong>Select</strong> dialog and then select <strong>Properties</strong> from the menu. In the <a href="../tutorials/essentials.html#propertiespanel">Properties Panel</a>, select the Volume tab <img alt="" src="../files/tutorials/shared/volume-entity-tab.png" /> and set the <strong>Name</strong> to <strong>flow-volume</strong>.</p>
+<p><img alt="Flow Volume Name Property" src="../files/tutorials/heatsinkflow/flow-volume-props.png" width="240" height="253" /></p>
+<p>Right-click a shaded face of the heat sink (<strong>volume_8</strong>), double-click <strong>volume_8</strong> in the <strong>Select</strong> dialog and then select <strong>Properties</strong> from the menu. In the Properties Panel, select the Volume tab <img alt="" src="../files/tutorials/shared/volume-entity-tab.png" /> and set the <strong>Name</strong> to <strong>solid-volume</strong>.</p>
+<h2 class="tutorial-heading">Specify the Substance Settings</h2>
+<h3>Specify the Conjugate Heat Transfer Conditions</h3>
+<p>Select the <strong>Physics</strong> Tool Palette.</p>
+<p>Drag and drop the <strong>Simulation-&gt;Conjugate Heat Transfer </strong>tool onto the background of the <a href="../tutorials/essentials.html#viewwindow">View Window</a> (<strong>view</strong>) and select <strong>Done</strong>.</p>
+<p><img alt="Conjugate Heat Transfer Tool" src="../files/tutorials/heatsinkflow/cht-tool.png" width="278" height="507" /></p>
+<h3>Specify the Fluid Conditions</h3>
+<h4>Set the State Properties for the Fluid</h4>
+<p>Drag and drop the <strong>Gases-&gt;Air</strong> tool onto an edge of the <strong>flow-volume</strong>. Select <strong>Done</strong> to set air as the fluid inside the <strong>flow-volume</strong>.</p>
+<p>In the Properties Panel under the Volume tab <img alt="" src="../files/tutorials/shared/volume-entity-tab.png" /> set the following properties in <strong>Substance: Air-&gt;State: Gas</strong> according to:</p>
+<ul>
+<li><strong>Compressible</strong> = <strong>No</strong> (default)</li>
+<li><strong>Heat Transfer</strong> = <strong>Yes</strong></li>
+<ul>
+<li><strong>Convection</strong> = <strong>Yes</strong> (default)</li>
+<li><strong>Radiation</strong> = <strong>No</strong> (default)</li>
+</ul>
+<li><strong>Rotational</strong> = <strong>Yes</strong> (default)</li>
+<li><strong>Species</strong> = <strong>No</strong> (default)</li>
+<li><strong>Transient</strong> = <strong>No</strong> (default)</li>
+<li><strong>Viscous</strong> = <strong>Yes</strong> (default)</li>
+</ul>
+<p><img alt="Fluid Substance Properties" src="../files/tutorials/heatsinkflow/fluid-substance-props.png" width="278" height="289" /></p>
+<h4>Set the Reference Velocity for the Fluid</h4>
+<p class="note">The reference velocity can be used to initialize the simulation and to specify the inlet velocity. In this tutorial you will set a reference velocity of 1 m/s in the X-direction.</p>
+<p>In the Properties Panel set <strong>Substance: Air-&gt;Properties-&gt;Phase: Single-&gt;Reference-&gt;U: Fixed Value-&gt;Value</strong> to be [<strong>1 0 0</strong>] and press Enter on the keyboard.</p>
+<p><img alt="Fluid Reference Velocity Properties" src="../files/tutorials/heatsinkflow/fluid-ref-u-props.png" width="276" height="425" /></p>
+<h4>Set the Relaxation Factors for the Fluid</h4>
+<p class="note">Changing the default enthalpy relaxation factor in this example will help the simulation to converge. See <a href="934.html">&quot;Relaxation Factors in RANS Flow Solvers&quot;</a> for tips on setting relaxation factors.</p>
+<p>In the Properties Panel, expand the <strong>Substance: Air-&gt;Solver: RANS Flow-&gt;Relaxation Factors</strong> property, and then set <strong>h</strong> to be <strong>0.8</strong>.</p>
+<p><img alt="Fluid Relaxation Factors Properties" src="../files/tutorials/heatsinkflow/fluid-relaxation-factor-h-props.png" width="277" height="285" /></p>
+<h3>Specify the Solid Conditions</h3>
+<h4>Set the State Properties for the Solid</h4>
+<p>Drag and drop the <strong>Solids-&gt;Aluminum</strong> tool onto a face of the <strong>solid-volume</strong>. Select <strong>Done</strong> to set aluminum as the solid inside the <strong>solid-volume</strong>.</p>
+<p>In the Properties Panel under the Volume tab <img alt="" src="../files/tutorials/shared/volume-entity-tab.png" /> set the following properties in <strong>Substance: Aluminum-&gt;State: Solid</strong> according to:</p>
+<ul>
+<li><strong>Heat Transfer</strong> = <strong>Yes</strong></li>
+<ul>
+<li><strong>Conduction</strong> = <strong>Yes</strong> (default)</li>
+<li><strong>Radiation</strong> = <strong>No</strong> (default)</li>
+</ul>
+</ul>
+<p><img alt="Solid Substance Properties" src="../files/tutorials/heatsinkflow/solid-substance-props.png" width="277" height="285" /></p>
+<h4>Set the Relaxation Factors for the Solid</h4>
+<p>In the Properties Panel, expand the <strong>Substance: Aluminum-&gt;Solver: RANS Flow-&gt;Relaxation Factors</strong> property, and then set <strong>h</strong> to be <strong>1</strong>.</p>
+<p><img alt="Solid Relaxation Factors Properties" src="../files/tutorials/heatsinkflow/solid-relaxation-factor-h-props.png" width="277" height="286" /></p>
+<h2 class="tutorial-heading">Specify the Boundary Conditions</h2>
+<h3>Walls</h3>
+<p>Drag and drop the <strong>Faces-&gt;Wall</strong> tool onto the View Window background. Double-click <strong>sim-&gt;Faces</strong> in the <strong>Select</strong> dialog and select <strong>Done </strong>to create walls on all the outer surfaces of both volumes.</p>
+<p class="note">A wall is a solid surface through which fluid cannot flow.</p>
+<h3>Inlet and Outlet</h3>
+<p>To create an inlet, drag and drop the <strong>Faces-&gt;Inlet</strong> tool onto the face shown below in blue. Select that face in the <strong>Select</strong> dialog, click <strong>OK</strong>, and then select <strong>Done</strong> to create the inlet.</p>
+<p class="note">An inlet is a boundary condition that specifies the properties of the fluid as it enters the flow volume.</p>
+<p><img alt="Inlet (Blue) and Outlet (Green) Faces" src="../files/tutorials/heatsinkflow/inlet-outlet-bcs.png" width="484" height="332" /></p>
+<p>To create an outlet, drag and drop the <strong>Faces-&gt;Outlet</strong> tool onto the face shown above in green. Select that face in the <strong>Select</strong> dialog, click <strong>OK</strong>, and then select <strong>Done</strong> to create the outlet.</p>
+<p class="note">An outlet is a boundary condition that specifies the properties of the fluid as it leaves the flow volume.</p>
+<h3>Local Symmetry</h3>
+<p>To create the two symmetry conditions, drag and drop the <strong>Faces-&gt;Symmetry Local</strong> tool onto one of the symmetry faces shown below. Double-click the first face in the <strong>Select</strong> dialog. Then select <strong>Select/Deselect</strong> and right-click on the second face (shown below), double-click the first face in the <strong>Select</strong> dialog and select <strong>Done</strong>.</p>
+<p><img alt="Symmetry Local Faces" src="../files/tutorials/heatsinkflow/symmetry-local-bcs.png" width="484" height="332" /></p>
+<p class="note">The Symmetry Local tool can be applied to any planar face. The Symmetry tool applies to the entire simulation and is useful for visualization.</p>
+<h3>Coupled Walls</h3>
+<p>Select the <strong>Results </strong>Tool Palette.</p>
+<p>Drag and drop the <strong>Selection Filters-&gt;Linked</strong> tool on to an edge of the <strong>flow-volume</strong>. Double-click <strong>flow-volume-&gt;Faces</strong> in the <strong>Select</strong> dialog and select <strong>Done </strong>to select all the linked faces within the flow-volume. Hold the ctrl-key and right-click on the View Window (<strong>view</strong>). Double-click <strong>sim</strong> in the <strong>Select</strong> dialog, select <strong>Group</strong> and then select <strong>Properties</strong> to create a group of all the flow-volume linked faces.</p>
+<p><img alt="Selection Filters Linked Tool" src="../files/tutorials/heatsinkflow/linked-tool.png" width="296" height="536" /></p>
+<p>In the Properties Panel, select the Group tab <img alt="" src="../files/tutorials/shared/group-tab.png" /> and set the <strong>Name</strong> to <strong>flow-walls</strong>.</p>
+<p><img alt="Flow Walls Group Name Property" src="../files/tutorials/heatsinkflow/group-name-props.png" width="241" height="276" /></p>
+<p>In the Properties Panel, set <strong>Physics: Wall-&gt;Type: Default-&gt;T</strong> (temperature) to <strong>Coupled</strong>.</p>
+<p><img alt="Coupled Wall Temperature Properties" src="../files/tutorials/heatsinkflow/wall-t-coupled-props.png" width="240" height="275" /></p>
+<p>Using the same procedure we will now set up the coupled walls for the solid-volume.</p>
+<p>Drag and drop the <strong>Selection Filters-&gt;Linked</strong> tool on to a shaded face of the <strong>solid-volume</strong>. Double-click <strong>solid-volume-&gt;Faces</strong> in the <strong>Select</strong> dialog and select <strong>Done </strong>to select all the linked faces within the solid-volume. Hold the ctrl-key and right-click on the View Window (<strong>view</strong>). Double-click <strong>sim</strong> in the <strong>Select</strong> dialog, select <strong>Group</strong> and then select <strong>Properties</strong> to create a group of all the solid-volume linked faces.</p>
+<p>In the Properties Panel, select the Group tab <img alt="" src="../files/tutorials/shared/group-tab.png" /> and set the <strong>Name</strong> to <strong>solid-walls</strong>.</p>
+<p>In the Properties Panel, set <strong>Physics: Wall-&gt;Type: Default-&gt;T</strong> to <strong>Coupled</strong>.</p>
+<h3>Heated External Solid Wall</h3>
+<p><img alt="Heated External Wall (Red) Face" src="../files/tutorials/heatsinkflow/external-heat-flux-bc.png" width="484" height="363" /></p>
+<p>To set the heat flux on the base of the heat sink, right-click the heat sink base (shown above in red), double-click the first face in the <strong>Select</strong> dialog and select <strong>Properties</strong>. In the Properties Panel select the Face tab <img alt="" src="../files/tutorials/shared/face-entity-tab.png" /> , set <strong>Physics: Wall-&gt;Type: Default-&gt;T</strong> to <strong>External Heat Flux</strong>, then set <strong>T: External Heat Flux-&gt;q </strong>to <strong>10000</strong>.</p>
+<p><img alt="External Wall Heat Flux" src="../files/tutorials/heatsinkflow/external-heat-flux-props.png" width="286" height="276" /></p>
+<h2 class="tutorial-heading">Specify Meshing Parameters</h2>
+<h3>Accuracy Tool</h3>
+<p class="note">The accuracy property controls the <a href="244.html">mesh</a> element size and growth rate on and around the entities associated with each accuracy property.</p>
+<p>Select the <strong>Physics </strong>Tool Palette.</p>
+<p>Select the <strong>Special-&gt;Accuracy</strong> tool. In the Properties Panel set <strong>Accuracy</strong> to <strong>Custom</strong>, and set <strong>Max Element Size </strong>to <strong>0.001</strong>.</p>
+<p><img alt="Accuracy Tool Properties" src="../files/tutorials/heatsinkflow/accuracy-tool-props.png" width="238" height="507" /></p>
+<p>Drag and drop the <strong>Special-&gt;Accuracy</strong> tool onto an edge of the heat sink. Double-click the <strong>flow-walls</strong> group in the <strong>Select</strong> dialog, and select <strong>Done</strong> to set the accuracy for the group.</p>
+<h3>Volume Mesh</h3>
+<p>To see individual volume mesh elements after the volume meshing process is complete, right-click in the View Window background, double-click <strong>sim-&gt;Volumes</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel, turn off the <strong>Transparent</strong> property and set <strong>Style</strong> to <strong>Flat</strong>.</p>
+<p><img alt="Volume Shade Properties" src="../files/tutorials/heatsinkflow/volume-shade-props.png" width="214" height="275" /></p>
+<p>Select the <strong>Results</strong> Tool Palette. </p>
+<p>With the volumes still selected from the previous operation double-click the <strong>Scalar Fields-&gt;Vol Ratio</strong> (volume ratio = actual volume/ideal volume) and select <strong>Color Map</strong>.</p>
+<p class="note">The request for the Vol Ratio color map will cause the entire simulation to be meshed which will take a few seconds.</p>
+<p><img alt="Volume Ratio Color Map" src="../files/tutorials/heatsinkflow/vol-ratio-colormap.png" width="484" height="363" /></p>
+<p>Drag the upper threshold slider to the left in the <a href="../tutorials/essentials.html#viewlegend">View Legend</a> to examine the cells with the lowest quality (lowest value in the blue range).</p>
+<p><img alt="Volume Ratio Color Map Threshold" src="../files/tutorials/heatsinkflow/vol-ratio-colormap-threshold.png" width="484" height="363" /></p>
+<p>If you were to see clusters of low quality cells attached to the geometry then that is a sign that you need to improve the mesh in that region using the Accuracy tool. Fortunately this mesh does not suffer from low quality element clusters and you can proceed on with the simulation.</p>
+<h2 class="tutorial-heading">Visualize Flow Results</h2>
+<p>To show iso-surfaces of temperature in the flow-volume, drag and drop <strong>Scalar Fields-&gt;T</strong> (temperature) in the <strong>Results</strong> Tool Palette onto a face of the flow-volume. Double click <strong>flow-volume</strong> in the <strong>Select </strong>dialog and select <strong>Color Map</strong>. In the Properties Panel, turn on the <strong>Transparent</strong> property and set <strong>Style</strong> to <strong>Smooth</strong>.</p>
+<p><img alt="Temperature Iso-Surfaces" src="../files/tutorials/heatsinkflow/t-iso-surfaces.png" width="484" height="363" /></p>
+<p>To show velocity vectors colored by temperature on the flow-volume symmetry face, drag and drop the <strong>Vector Fields-&gt;U</strong> (velocity) tool onto an edge of the flow-volume symmetry face. Double click <strong>face_94</strong> in the <strong>Select</strong> dialog and select <strong>Arrows</strong>. In the <strong>Results</strong> Tool Palette double-click <strong>Scalar Fields-&gt;T</strong> and select <strong>Color Map</strong>.</p>
+<p>Left-click in the View Window. In the Properties Panel, turn off the <strong>Transparent</strong> property to make the arrows solid.</p>
+<p>In the View Legend, left-click on the title <strong>Arrows</strong> <img alt="" src="../files/tutorials/shared/arrows-legend.png" />. In the Properties Panel set <strong>Scale</strong> to <strong>0.01</strong>.</p>
+<p><img alt="Velocity Arrows" src="../files/tutorials/heatsinkflow/u-arrows.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Create Residuals Monitors</h2>
+<p class="note">Conjugate heat transfer requires each fluid and solid volume to have dedicated equation solvers. Therefore, each volume will have specific residuals to monitor. In this case there are two volumes, so we need to create a residuals monitor for each.</p>
+<p>Drag and drop the <strong>Special-&gt;Residuals</strong> tool onto the View Window background. Double-click <strong>sim-&gt;Volumes</strong> in the <strong>Select</strong> dialog and select <strong>Monitor</strong> to create the two residuals monitors.</p>
+<p>Drag and drop each <strong>Residuals Monitor</strong> tab over to the right-hand edge of the Caedium application window to split the window into three parts as shown below.</p>
+<p><img alt="Residual Monitors" src="../files/tutorials/heatsinkflow/residuals-monitors.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Create Area Averaged (Weighted) Temperature Result</h2>
+<p>Select the <strong>New</strong> Toolbar and click the <strong>Result</strong> button <img alt="" src="../files/tutorials/shared/result.png" />.</p>
+<p>In the <strong>Create Result</strong> dialog, select the <strong>Binary</strong> tab. Verify that <strong>Multiply </strong>is selected from the list.</p>
+<p>In the <strong>Results</strong> Tool Palette drag and drop <strong>Scalar Fields-&gt;T</strong> onto the left-hand target in the <strong>Create Result </strong>dialog. Drag and drop <strong>Scalar Fields-&gt;A</strong> (area) onto the right-hand target in the <strong>Create Result </strong>dialog.</p>
+<p><img alt="Temperature Multiplied by Area Result" src="../files/tutorials/heatsinkflow/txa-result-dialog.png" width="430" height="330" /></p>
+<p>Click <strong>Create</strong> to create the scalar field <strong>(T x A)</strong>.</p>
+<p>In the <strong>Create Result</strong> dialog, select the <strong>Unary </strong>tab. Verify that <strong>Sum </strong>is selected from the list.</p>
+<p>In the <strong>Results</strong> Tool Palette drag and drop <strong>Scalar Fields-&gt;(T x A) </strong>onto the target in the <strong>Create Result </strong>dialog.</p>
+<p><img alt="Sum of Temperature Multiplied by Area Result" src="../files/tutorials/heatsinkflow/sum-txa-dialog.png" width="432" height="331" /></p>
+<p>Click <strong>Create</strong> to create the scalar variable <strong>Sum((T x A))</strong>.</p>
+<p>In the <strong>Results</strong> Tool Palette drag and drop <strong>Scalar Fields-&gt;A </strong>onto the target in the <strong>Create Result </strong>dialog. Click <strong>Create</strong> to create the scalar variable <strong>Sum(A)</strong>.</p>
+<p>In the <strong>Create Result</strong> dialog, select the <strong>Binary</strong> tab. Select <strong>Divide </strong>from the list.</p>
+<p>In the <strong>Results</strong> Tool Palette drag and drop <strong>Scalar Variables-&gt;<strong>Sum((T x A)) </strong></strong>onto the left-hand target in the <strong>Create Result </strong>dialog. Drag and drop <strong>Scalar Variables-&gt;<strong>Sum(A)</strong></strong> onto the right-hand target in the <strong>Create Result </strong>dialog.</p>
+<p><img alt="Sum of Temperature Multiplied by Area Divided by Sum of Area Result" src="../files/tutorials/heatsinkflow/tave-dialog.png" width="432" height="332" /></p>
+<p>Click <strong>Create</strong> to create the scalar variable <strong>(Sum((T x A)) / Sum(A))</strong>.</p>
+<p>Close the <strong>Create Result</strong> dialog.</p>
+<p>In the <strong>Results</strong> Tool Palette, select <strong>Scalar Variables-&gt;(Sum((T x A)) / Sum(A)) </strong> rename it <strong>Tave</strong>, and press Enter on the keyboard.</p>
+<p>In the <strong>Results</strong> Tool Palette, left-click <strong>Scalar Variables-&gt;(Sum((T x A)) / Sum(A))</strong>, left-click again to edit the title, change it to <strong>Tave</strong> (Temperature Average), and press Enter on the keyboard.</p>
+<p>Drag and drop the <strong>Scalar Variables-&gt;Tave </strong>tool onto the View Window background. Double-click the <strong>sim-&gt;Groups-&gt;flow-walls </strong>in the <strong>Select</strong> dialog and select <strong>Monitor</strong>.</p>
+<p>Drag and drop the <strong>Tave Monitor</strong> tab over to the right-hand edge of the Caedium application window to split the window into four parts as shown below.</p>
+<p><img alt="Temperature Average Monitor" src="../files/tutorials/heatsinkflow/tave-monitor.png" width="484" height="363" /></p>
+<p>Left-click <strong>flow-walls </strong>in the <strong>Tave Monitor</strong> Legend. In the Properties Panel, set the <strong>Symbol</strong> to <strong>None</strong>.</p>
+<p><img alt="Temperature Average Monitor Symbol Property" src="../files/tutorials/heatsinkflow/tave-symbol-props.png" width="257" height="339" /></p>
+<p>In the View Window right-click on a edge of the outlet, double-click the outlet (<strong>face_99</strong>) in the <strong>Select</strong> dialog, and select <strong>Copy</strong>. Left-click in the <strong>Tave Monitor</strong> Window to give it focus, then right-click and select <strong>Paste</strong>. In the <strong>Select Substance</strong> dialog double-click <strong>flow-volume</strong>.</p>
+<p>Left-click <strong>face_99 </strong>in the <strong>Tave Monitor</strong> Legend, left-click again to edit the title, change it to <strong>outlet</strong>, and press Enter on the keyboard. In the Properties Panel, set the <strong>Symbol</strong> to <strong>None</strong>.</p>
+<h2 class="tutorial-heading">Run the Flow Solver</h2>
+<p class="note">The number of flow (simulation) solver iterations is determined by multiplying the number of simulation time-steps (default = 5) by the number of iterations per simulation time-step (default = 100). After each simulation time-step (equivalent to 100 iterations by default) the results will be refreshed.</p>
+<p>For this simulation you will increase the number of simulation time-steps to 20, for a total of 2000 iterations.</p>
+<p>Right-click on the View Window background, double-click <strong>sim</strong>, and then select <strong>Properties</strong> from the menu. Select the Simulation tab <img alt="" src="../files/tutorials/shared/simulation-tab.png" />in the Properties Panel. Set <strong>Time-&gt;Duration</strong> to <strong>20</strong> and press Enter on the keyboard.</p>
+<p><img alt="Duration Property" src="../files/tutorials/heatsinkflow/duration-props.png" width="258" height="339" /></p>
+<p>In the <strong>Home</strong> Toolbar click the <strong>Run</strong> button <img alt="" src="../files/tutorials/shared/play.png" /> to run the flow solver.</p>
+<p>If you wanted to interrupt the flow solver, you would re-click the Run button; the solver would then stop at the end of the current simulation time-step.</p>
+<p>Let the solver complete its run. Note the updates of the Temperature contours, the Tave monitor, and the residuals monitors as the simulation progresses.</p>
+<p><img alt="Heat Sink Flow Complete" src="../files/tutorials/heatsinkflow/flow-complete.png" width="484" height="363" /></p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="1257.html" class="page-previous" title="Go to previous page">‹ Transient Water and Air Flow in a Tank</a>
+                    <a href="817.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="1281.html" class="page-next" title="Go to next page">Flow Over a Double-Sided Membrane ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="expanded active-trail"><a href="817.html">RANS Flow</a><ul class="menu"><li class="leaf first"><a href="818.html">Incompressible Flow Through a Pipe into a Box</a></li>
+<li class="leaf"><a href="816.html">Incompressible Transient Flow with Heat Transfer</a></li>
+<li class="leaf"><a href="819.html">Transonic Flow Over the NACA 0012 Airfoil</a></li>
+<li class="leaf"><a href="831.html">Flow Over a Rotating Wheel with Moving Ground</a></li>
+<li class="leaf"><a href="1082.html">Flow Over a CO2 Dragster</a></li>
+<li class="leaf"><a href="1255.html">Rotating Paddle using Moving Reference Frame</a></li>
+<li class="leaf"><a href="1257.html">Transient Water and Air Flow in a Tank</a></li>
+<li class="leaf active-trail"><a href="1718.html" class="active">Conjugate Heat Transfer for a Heat Sink</a></li>
+<li class="leaf last"><a href="1281.html">Flow Over a Double-Sided Membrane</a></li>
+</ul></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="collapsed last"><a href="../tips.html">Tips</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1718 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:04:01 GMT -->
+</html>

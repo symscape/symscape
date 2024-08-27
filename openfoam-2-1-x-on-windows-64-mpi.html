@@ -1,0 +1,721 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/openfoam-2-1-x-on-windows-64-mpi by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:09:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>OpenFOAM 2.1.x on Windows 64-bit with MS MPI | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-openfoam-2-1-x-on-windows-64-mpi section-openfoam-2-1-x-on-windows-64-mpi one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="index.html" title="Home" rel="home"><img src="files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="index.html">Home</a> › <a href="articles.html">Articles</a></div>                  <h1 class="title">OpenFOAM 2.1.x on Windows 64-bit with MS MPI</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1181" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on January 18, 2012 - 13:21        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_15 first last"><a href="articles.html" rel="tag" title="General interest">Articles</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p><em>For the <strong>latest version</strong> of our Windows patch for OpenFOAM visit <a href="openfoam-2-2-x-on-windows.html">"OpenFOAM 2.2.x on Windows"</a>.</em></p>
+<p>We have updated our free Windows source code patch for the latest <strong>OpenFOAM&reg; release (v2.1.x)</strong>. As with the previous version this patch also supports <strong>64-bit</strong> compilation using the <strong>MinGW-w64 cross-compiler</strong> and <strong>parallel</strong> computation using the native Windows MS MPI implementation provided by the <strong>free Microsoft MPI Redistributable</strong> and also available on <a href="http://www.microsoft.com/hpc">Microsoft Windows HPC Server 2012</a> for clusters.</p>
+<h3>OpenFOAM GUI</h3>
+<p><em>Are you looking for a <strong>GUI driven, integrated simulation environment for Windows, Linux, and Mac</strong> incorporating a selection of the <strong>RANS OpenFOAM solvers</strong> and various import/export filters?</em></p>
+<p><span class="inline inline-center"><a href="get-started-with-caedium.html"><img title="Get Started With Caedium Now" alt="Get Started With Caedium Now" src="files/flair/get-started-button.png" width="177" height="43" /></a></span></p>
+<h3><a name="patch-build-process"></a>Patch Build Process</h3>
+<p><em>To build OpenFOAM for Windows with a cross-compiler requires expert knowledge of Windows and Linux utilities and compilers.</em></p>
+<p>The following steps are required to produce a native Windows version of OpenFOAM 2.1.x 64-bit with [optional] native Windows MS MPI:</p>
+<ol>
+<li>Install <a href="http://sourceforge.net/projects/mingw-w64/">MinGW-w64 cross-compiler and zlib</a> on Linux</li>
+<li>Install zlib files into following locations:
+<ul>
+<li><code>&lt;mingw-w64&gt;/x86_64-w64-mingw32/include/zconf.h</code></li>
+<li><code>&lt;mingw-w64&gt;/x86_64-w64-mingw32/include/zlib.h</code></li>
+<li><code>&lt;mingw-w64&gt;/bin/zlib1.dll</code></li>
+<li><code>&lt;mingw-w64&gt;/x86_64-w64-mingw32/lib/libz.a</code></li>
+<li><code>&lt;mingw-w64&gt;/x86_64-w64-mingw32/lib/libzdll.a</code></li>
+</ul>
+</li>
+<li>If you see an error while compiling like:<br />
+<code>signals/sigFpe.C:45:15: error: '_clearfp' was not declared in this scope</code><br />
+You need to add <code>#include_next &lt;float.h&gt;</code> to the end of<br />
+<code>&lt;mingw-w64&gt;/lib/gcc/x86_64-w64-mingw32/&lt;gcc-version&gt;/include/float.h</code> and remove it from<br />
+<code>&lt;mingw-w64&gt;/x86_64-w64-mingw32/include/float.h</code> to include the right float.h</li>
+<li>[optional] Create <a href="configure-msmpi-for-mingw-w64.html">libmsmpi.a from Microsoft MPI Redistributable</a></li>
+<li>Install the <a href="http://github.com/OpenFOAM/OpenFOAM-2.1.x">OpenFOAM 2.1.x source</a> distribution on Linux - <strong>git commit: 68d39c199c99cda16108ddcf019743d4e6f18854, Date: Wed Jan 9 16:16:53 2013 +0000</strong>.</li>
+<li>Patch (using the Linux patch command) the OpenFOAM 2.1.x source distribution with our <a href="files/articles/openfoam21x-windows/v9-mingw-openfoam-2-1-x.patch.zip">MinGW Windows modifications</a> [last updated May 13, 2013 to v9]</li>
+<li>At various stages during this process you will need to set OpenFOAM MinGW-w64 environment variables and source etc/bashrc. As an example:<br />
+<code>export FOAM_INST_DIR="$(HOME)/projects/of/2.1"; source $(FOAM_INST_DIR)/OpenFOAM-2.1.x/etc/bashrc WM_OSTYPE=MSwindows WM_COMPILER=mingw-w64 WM_ARCH_OPTION=64 WM_PRECISION_OPTION=SP WM_CC=x86_64-w64-mingw32-gcc WM_CXX=x86_64-w64-mingw32-g++ compilerInstall=system [optional] WM_MPLIB=MSMPI [optional] MPI_ARCH_PATH="$(HOME)/projects/msmpi/install"</code>
+</li>
+<li>[optional] Install the <a href="http://sourceforge.net/projects/foam/files/foam/2.1.0/ThirdParty-2.1.0.tgz/download">ThirdParty-2.1.0 source</a> and build scotch according to:
+<ol>
+<li><code>ln -s ThirdParty-2.1.0 $(WM_THIRD_PARTY_DIR)</code></li>
+<li><code>ln -s $(WM_THIRD_PARTY_DIR)/scotch&lt;version&gt; $(WM_THIRD_PARTY_DIR)/scotch</code></li>
+<li><code>ln -s $(WM_PROJECT_DIR)/extra/scotch/src/Make.inc/Makefile.inc.mingw-w64 $(WM_THIRD_PARTY_DIR)/scotch/src/Makefile.inc</code></li>
+<li><code>cp $(WM_PROJECT_DIR)/extra/scotch/src/libscotch/* $(WM_THIRD_PARTY_DIR)/scotch/src/libscotch/.</code></li>
+<li><code>cd $(WM_THIRD_PARTY_DIR)/scotch/src</code></li>
+<li><code>cp $(WM_PROJECT_DIR)/extra/scotch/src/Makefile .</code></li>
+<li><code>make libscotch</code></li>
+<li><code>mkdir -p $(FOAM_LIBBIN)</code></li>
+<li><code>cd $(WM_THIRD_PARTY_DIR)/scotch/src/libscotch</code></li>
+<li><code>cp libscotch.* $(FOAM_LIBBIN)</code></li>
+</ol>
+</li>
+<li>To build OpenFOAM:
+<ol>
+<li>source the OpenFOAM native linux environment variables</li>
+<li><code>cd $(WM_PROJECT_DIR)/wmake/src; make</code></li>
+<li><code>ln -s $(WM_PROJECT_DIR)/wmake/platforms/linux64Gcc $(WM_PROJECT_DIR)/wmake/platforms/linux64mingw-w64</code></li>
+<li>source the OpenFOAM MinGW-w64 environment variables</li>
+<li><code>cd $(WM_PROJECT_DIR);./Allwmake</code></li>
+</ol>
+</li><li>Transfer the OpenFOAM etc directory ($(WM_PROJECT_DIR)/etc), executables ($(WM_PROJECT_DIR)/platforms/linux64mingw-w64*/bin/*.exe), and libraries ($(WM_PROJECT_DIR)/platforms/linux64mingw-w64*/lib/*.dll and $(WM_PROJECT_DIR)/platforms/linux64mingw-w64*/lib/*/*.dll) to the Windows computer</li>
+<li>Transfer the MinGW-w64 libraries:
+<ul>
+<li><code>&lt;mingw-w64&gt;/bin/zlib1.dll</code></li>
+<li><code>&lt;mingw-w64&gt;/bin/libgcc_s_sjlj-1.dll</code></li>
+<li><code>&lt;mingw-w64&gt;/bin/libstdc++-6.dll</code></li>
+</ul>
+<p>to the Windows computer</p></li>
+<li>On the Windows computer ensure the following environment variables are set:
+<ul>
+<li>The WM_PROJECT_DIR and USERNAME variables are set.</li>
+<li>The PATH variable is set to include the OpenFOAM executable and library locations (including $(WM_PROJECT_DIR)/lib/linux64mingw-w64*/dummy or [optional] $(WM_PROJECT_DIR)/lib/linux64mingw-w64*/msmpi).</li>
+</ul>
+</li>
+<li>Launch a Windows command prompt to run OpenFOAM solvers and utilities, such as simpleFoam.exe.</li>
+</ol>
+<h3><a name="win-hpc-server" id="win-hpc-server"></a>Windows HPC Server 2012</h3>
+<p><strong>job submit</strong> example on <strong>Windows HPC Server 2012</strong> for simpleFoam:</p>
+<p><code>job submit /jobname:simpleFoam-jobName /name:simpleFoam-taskName /numprocessors:16 /stdout:\\CRAY01\&lt;of-case&gt;\stdout.txt /stderr:\\CRAY01\&lt;of-case&gt;\stderr.txt mpiexec -env WM_PROJECT_DIR \\CRAY01\$(WM_PROJECT_DIR) -env MPI_BUFFER_SIZE 20000000 -env USERNAME openfoam -env PATH \\CRAY01\$(WM_PROJECT_DIR)\platforms\linux64mingw-w64*\lib;\\CRAY01\$(WM_PROJECT_DIR)\platforms\linux64mingw-w64*\lib\msmpi \\CRAY01\$(WM_PROJECT_DIR)\platforms\linux64mingw-w64*\bin\simpleFoam -parallel -case \\CRAY01\&lt;of-case&gt;\pitzDaily</code></p>
+<p>Note you need to share both the case (\\CRAY01\&lt;of-case&gt; - arbitrary name of your choosing) and application directories (\\CRAY01\$(WM_PROJECT_DIR)) so all nodes on the cluster can access them.</p>
+<h3>Constraints</h3>
+<p>With this method of building OpenFOAM for Windows the job control scripts in $(WM_PROJECT_DIR)/bin (such as foamSolverSweeps) are unavailable. Also the libccmio library is not built.</p>
+<h4>Notes</h4>
+<ul>
+<li><a href="node/808.html">OpenFOAM</a> is a registered trademark of OpenCFD and is unaffiliated with Symscape</li>
+<li>The OpenFOAM Windows patch provided here is licensed under the <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License (GPL)</a></li>
+</ul>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-1321"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1321" class="active">OSSpecific/MSWindows missing</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://desipenguin.com/techblog/" rel="nofollow">Mandar Vaze</a> (not verified) on February 10, 2012 - 00:53.  </div>
+
+  <div class="content">
+    <p>Step 7 asks to set "WM_OSTYPE=MSwindows", thus Makefile looks for folder OSSpecific/MSWindows - But this folder is missing (I checked git repo for both 2.1.x as well as 2.0.x)</p>
+<p>Where do I get this folder ?</p>
+<p>Thanks.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1322"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1322" class="active">Apply the patch</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on February 10, 2012 - 08:30.  </div>
+
+  <div class="content">
+    <p>Step 6.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1349"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1349" class="active">Thanks</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://desipenguin.com/techblog/" rel="nofollow">Mandar Vaze</a> (not verified) on March 5, 2012 - 01:08.  </div>
+
+  <div class="content">
+    <p>Yes, That helped. </p>
+<p>All the "Allwmake" files need execute permission.Manually executed the following command :<br />
+find . -name Allwmake | xargs chmod a+x</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1350"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1350" class="active">Building libscotch</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://desipenguin.com/techblog/" rel="nofollow">Mandar Vaze</a> (not verified) on March 5, 2012 - 01:23.  </div>
+
+  <div class="content">
+    <p>I'm building libscotch on linux platform using the cross-compiler. I run into the following problem :<br />
+<cite><br />
+./dummysizes library.h scotch.h<br />
+run-detectors: unable to find an interpreter for ./dummysizes<br />
+</cite></p>
+<p>This is because dummysizes binary is windows binary, and can't be executed on linux platform.<br />
+So first I executed the build without mingw to create native dummysizes binary, then all the .o files were bad for mingw, so I executed "make clean" which also removed my native dummysizes binary</p>
+<p>What am I doing wrong ?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1351"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1351" class="active">Delete Scotch Linux object files</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on March 5, 2012 - 08:34.  </div>
+
+  <div class="content">
+    <p>After building Scotch for Linux just delete all the object files (rm *.o, i.e., don't use "make clean") and then build for MinGW.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1453"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1453" class="active">Errors while compiling</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Vladimir (not verified) on May 4, 2012 - 18:22.  </div>
+
+  <div class="content">
+    <p>Hi everyone,</p>
+<p>I did everything from the guide except I'm not building third party sources.</p>
+<p>I have some errors I can't resolve. The first error appears at the beginning and the error about missing .H file comes on almost every other file. Does anyone has a clue what could be wrong?</p>
+<p>I hope I'm not cluttering the comments, here is the part of the output:<br />
+<code><br />
+SOURCE=db/IOobject/IOobject.C ; x86_64-w64-mingw32-g++ -m64 -Dlinux64 -DWM_SP -DMSWIN -DLITTLE_ENDIAN -Wall -Wextra -Wno-unused-parameter -Wnon-virtual-dtor -O3 -DNDEBUG -DNoRepository -ftemplate-depth-40 -IMake/linux64mingw-w64SPOpt -IlnInclude -I. -I/home/user1/OpenFOAM/compile/OpenFOAM-2.1.x/src/OpenFOAM/lnInclude -I/home/user1/OpenFOAM/compile/OpenFOAM-2.1.x/src/OSspecific/MSwindows/lnInclude -c $SOURCE -o Make/linux64mingw-w64SPOpt/IOobject.o<br />
+db/IOobject/IOobject.C:439:1: error: caller edge frequency 492 does not match BB frequency 1000<br />
+}<br />
+^<br />
+_ZN4Foam6stringC2ERKS0_/2189 (Foam::string::string(const Foam::string&amp;)) @0x2ab4880809c0<br />
+Type: function<br />
+Visibility: public comdat comdat_group:_ZN4Foam6stringC2ERKS0_ one_only artificial<br />
+References:<br />
+Referring:<br />
+Function Foam::string::string(const Foam::string&amp;)/2189 is inline copy in Foam::word::word(const Foam::word&amp;)/263<br />
+Clone of _ZN4Foam6stringC2ERKS0_/255<br />
+Availability: local<br />
+Function flags: analyzed body local finalized<br />
+Called by: _ZN4Foam4wordC1ERKS0_/263 (0.49 per call) (inlined) (can throw external)<br />
+Calls: std::basic_string&lt;_CharT, _Traits, _Alloc&gt;::basic_string(const std::basic_string&lt;_CharT, _Traits, _Alloc&gt;&amp;) [with _CharT = char; _Traits = std::char_traits; _Alloc = std::allocator]/1901 (0.49 per call) (can throw external)<br />
+db/IOobject/IOobject.C:439:1: internal compiler error: verify_cgraph_node failed<br />
+}<br />
+^<br />
+Please submit a full bug report,<br />
+with preprocessed source if appropriate.<br />
+See for instructions.<br />
+make: *** [Make/linux64mingw-w64SPOpt/IOobject.o] Error 1<br />
++ wmake all utilities<br />
+make[1]: Entering directory `/home/user1/OpenFOAM/compile/OpenFOAM-2.1.x/applications/utilities/mesh'<br />
+make[2]: Entering directory `/home/user1/OpenFOAM/compile/OpenFOAM-2.1.x/applications/utilities/mesh/advanced'<br />
+make[3]: Entering directory `/home/user1/OpenFOAM/compile/OpenFOAM-2.1.x/applications/utilities/mesh/advanced/PDRMesh'<br />
+SOURCE=PDRMesh.C ; x86_64-w64-mingw32-g++ -m64 -Dlinux64 -DWM_SP -DMSWIN -DLITTLE_ENDIAN -Wall -Wextra -Wno-unused-parameter -Wnon-virtual-dtor -O3 -DNDEBUG -DNoRepository -ftemplate-depth-40 -I/home/user1/OpenFOAM/compile/OpenFOAM-2.1.x/src/meshTools/lnInclude -I/home/user1/OpenFOAM/compile/OpenFOAM-2.1.x/src/dynamicMesh/lnInclude -I/home/user1/OpenFOAM/compile/OpenFOAM-2.1.x/src/finiteVolume/lnInclude -IlnInclude -I. -I/home/user1/OpenFOAM/compile/OpenFOAM-2.1.x/src/OpenFOAM/lnInclude -I/home/user1/OpenFOAM/compile/OpenFOAM-2.1.x/src/OSspecific/MSwindows/lnInclude -c $SOURCE -o Make/linux64mingw-w64SPOpt/PDRMesh.o<br />
+PDRMesh.C:45:26: fatal error: fvMeshSubset.H: No such file or directory<br />
+#include "fvMeshSubset.H"<br />
+</code></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1454"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1454" class="active">Only first error is relevant</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 4, 2012 - 19:24.  </div>
+
+  <div class="content">
+    <p><cite>"db/IOobject/IOobject.C:439:1: error: caller edge frequency 492 does not match BB frequency 1000"</cite> - looks like some strange internal compiler error - never seen it before.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1455"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1455" class="active">I tought so. The first error</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Vladimir (not verified) on May 5, 2012 - 06:32.  </div>
+
+  <div class="content">
+    <p>I tought so. The first error is something I never saw before.<br />
+It is probably related to incompatible latest compiler.</p>
+<p>Can you suggest exactly which package version to use?<br />
+I used the latest Automated build package. I guess that created errors. It comes with GCC 4.8.0.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1456"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1456" class="active">Using gcc 4.5.4</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 6, 2012 - 13:29.  </div>
+
+  <div class="content">
+    <p><code>x86_64-w64-mingw32-gcc --version</code><br />
+<code>x86_64-w64-mingw32-gcc (GCC) 4.5.4 20110822 (prerelease)</code></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1457"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1457" class="active">Thanks for your help so</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Vladimir (not verified) on May 7, 2012 - 08:55.  </div>
+
+  <div class="content">
+    <p>Thanks for your help so far.</p>
+<p>I've changed the compiler but for some reason now I'm getting this error. This is the part of the log where the first error occurred:<br />
+<code><br />
+Making dependency list for source file graph/graph.C<br />
+Making dependency list for source file graph/writers/rawGraph/rawGraph.C<br />
+Making dependency list for source file graph/writers/gnuplotGraph/gnuplotGraph.C<br />
+Making dependency list for source file graph/writers/xmgrGraph/xmgrGraph.C<br />
+Making dependency list for source file graph/writers/jplotGraph/jplotGraph.C<br />
+Making dependency list for source file meshes/data/data.C</code></p>
+<p>make: *** No rule to make target `meshes/primitiveMesh/primitivePatch/PrimitivePatch.H', needed by `meshes/primitiveMesh/primitivePatch/walkPatch.dep'.  Stop.<br />
+<br />
+Then I get other errors ofcourse.</p>
+<p>There is no PrimitivePatch.H in primitivePatch folder, but there is one in PrimitivePatch. Notice the change of case.<br />
+Anybody has any idea what could be the problem?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1547"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1547" class="active">Can not run on Windows7 64vit</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by WinChallenger (not verified) on August 10, 2012 - 05:34.  </div>
+
+  <div class="content">
+    <p>I have followed the processes described on the page "OpenFOAM 2.1.x on Windows 64-bit with MS MPI" and successfully built *.dll and *.exe files. Then I sent these files to the Windows7 64bit PC to try to execute blockMesh.  </p>
+<p>But I encountered the problem. The message from Windows7 means "The execution of blockMesh.exe stopped because problem occuured. The program is closed. Windows may tell you how to solve it if there is some solution." But no message come,  and there is not any info output. I am not using MS-MPI as I turned off the MPI flag.</p>
+<p>How can I solve this problem?<br />
+I wonder the binaries built by Mingw + Windows pathces are not configured for Windows7 ?</p>
+<p>Thank you for all of your helps.<br />
+regards.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1548"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1548" class="active">Windows 7 64-bit works fine</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on August 10, 2012 - 08:36.  </div>
+
+  <div class="content">
+    <p>The binary OpenFOAM executables I have compiled and <a href="product/openflow.html">distribute</a> work fine with Windows 7 64-bit.</p>
+<p>Are you sure you've set your Windows environment variables correctly?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1563"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1563" class="active">I am setting environment variables on Windows7</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by WinChallenger (not verified) on August 17, 2012 - 02:24.  </div>
+
+  <div class="content">
+    <p>Thanks a lot, but I am sorry not to reply you soon.</p>
+<p>I am setting environment variables on Windows7.<br />
+WM_PROJECT_DIR and USERNAME, and PATH for executable and library locations.</p>
+<p>I am working on the following Linux cross-compile tools and environments:</p>
+<p>- Linux : CentOS 5.3<br />
+- mingw :<br />
+  mingw-w64-1.0-src-_20100208,<br />
+  mingw-w64-v1.0-snapshot-20100212,<br />
+  mingw-libgnurx-2.5.1-src.tar.gz,<br />
+  pexports-0.44-1-mingw32-src.tar.lzma<br />
+- gcc version : gcc-4.4.2<br />
+- OpenFOAM-2.1.1 (source)<br />
+- ThirdParty-2.1.1 (source)<br />
+- environment variables<br />
+WM_OSTYPE=MSwindows<br />
+WM_COMPILER=mingw-w64<br />
+WM_ARCH_OPTION=64<br />
+WM_PRECISION_OPTION=DP<br />
+WM_CC=mingw<br />
+WM_CXX=mingw<br />
+WM_MPLIB=NONE<br />
+foamCompiler=ThirdParty (because installed mingw under ThirdParty)</p>
+<p>Please let me know your suggestions.<br />
+Thank you.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1566"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1566" class="active">Review Steps 11 - 12</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on August 17, 2012 - 08:17.  </div>
+
+  <div class="content">
+    <p>Your Linux environment variables look reasonable, but what about the environment variables you used on the Windows side (step 12)?</p>
+<p>Did the compilation complete without any errors?</p>
+<p>Did you transfer the compiler runtime etc. (step 11) over to Windows?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1572"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1572" class="active">Re : Review Steps 11 - 12 </a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by WinChallenger (not verified) on August 19, 2012 - 04:11.  </div>
+
+  <div class="content">
+    <p>About step12, WM_PROJECT_DIR, USERNAME, and PATH for libs including  :<br />
+ $WM_PROJECT_DIR\\platforms\linux64mingw-w64DPOpt\bin<br />
+ $WM_PROJECT_DIR\\platforms\linux64mingw-w64DPOpt\lib<br />
+ $WM_PROJECT_DIR\\platforms\linux64mingw-w64DPOpt\\lib/dummy<br />
+ $WM_PROJECT_DIR\\platforms\linux64mingw-w64DPOpt\lib/gpuless<br />
+are properly set (not using MSMPI).</p>
+<p>About compiler error, I found the patch failed in one case in building mingw, so I corrected the problem.<br />
+But the problem has not been solved.</p>
+<p>About step 11, I do not have<br />
+ /bin/libgcc_s_sjlj-1.dll<br />
+ /bin/libstdc++-6.dll<br />
+but I have zlib1.dll and libgnurx-0.dll, so I locate then on Windows 7  and set PATH.</p>
+<p>I found that ansysToFoam.exe and checkMesh.exe works with no problem on Windows 7.! </p>
+<p>The other exes crash with all the same problem such as:<br />
+   fault module name StackHash_e3f8<br />
+   fault module version: 6.1.7601.17725<br />
+  :exception code c0000374</p>
+<p>I did same using OpenFOAM-2.1.0, but the same problem occurred.<br />
+I guess mingw version I am using is old, so I will try update mingw.<br />
+Could you please tell me other suggestions?</p>
+<p>Thank you.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1574"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1574" class="active">Update Compiler</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on August 20, 2012 - 08:19.  </div>
+
+  <div class="content">
+    <p>Just to be clear you have to match the exact git commit version for the patch. Assuming you have patched correctly then definitely try updating your compiler.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1594"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-1594" class="active">problem is solved</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by WinChallenger (not verified) on September 6, 2012 - 06:25.  </div>
+
+  <div class="content">
+    <p>Thanks your advise.</p>
+<p>I updated the MinGW compiler as mingw-w64-v2.0.6 and gcc-4.5.4.<br />
+Still the same problem occurred in this case. Execution crashed in Stack Hash, exception code c0000374.</p>
+<p>Next I changed the configure option for gcc and rebuild mingw.<br />
+I removed the following options which I was using so far:<br />
+ --enable-fully-dynamic-strings --disable-werror<br />
+ --disable-win32-registry --disable-shared --enable-sjlj-exceptions \<br />
+ --enable-threads=win32</p>
+<p>Then I recompiled OpenFOAM-2.1.0. At this time, exe files runs fine.<br />
+I don't know which option was wrong, but anyway, I can run exe on Windows now.<br />
+I will try MSMPI from now.</p>
+<p>Thank you.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2253"></a>
+<div class="comment comment-published last even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="openfoam-2-1-x-on-windows-64-mpi.html#comment-2253" class="active">Hi ,
+I had the same problem</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by M.C. Alger (not verified) on August 21, 2015 - 05:29.  </div>
+
+  <div class="content">
+    <p>Hi ,<br />
+I had the same problem before, and this is how i fix it.<br />
+I think  the problem  is in your file "wmake/rules/linux64mingw-w64/general" ,<br />
+add the  following :<br />
+CPP        = x86_64-w64-mingw32-cpp -E -traditional-cpp $(GFLAGS)</p>
+<p>and comment :<br />
+PROJECT_LIBS = -l$(WM_PROJECT) # -L$(FOAM_LIBBIN)/dummy -lPstream</p>
+<p>and add this line :</p>
+<p>MKDEP = x86_64-w64-mingw32-g++ -M -I$(*D) $(LIB_HEADER_DIRS)</p>
+<p>hope this help.<br />
+best  regards,</p>
+<p>Cherif</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="products.html">Products</a><ul class="menu"><li class="leaf first"><a href="product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="news.html">News</a></li>
+<li class="collapsed"><a href="blog.html">Blog</a></li>
+<li class="leaf"><a href="about.html" title="">About</a></li>
+<li class="expanded last"><a href="resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="articles.html">Articles</a></li>
+<li class="leaf"><a href="image.html">Gallery</a></li>
+<li class="leaf"><a href="support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="forum.html">Forums</a></li>
+<li class="leaf"><a href="downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="partners.html">Partners</a></li>
+<li class="leaf"><a href="poll.html">Polls</a></li>
+<li class="leaf last"><a href="links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="forum.html"><img title="Forums" alt="Forums" src="files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="contact.html">Contact</a> | <a href="trademarks.html">Trademarks</a> | <a href="privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/openfoam-2-1-x-on-windows-64-mpi by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:09:09 GMT -->
+</html>

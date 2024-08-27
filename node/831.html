@@ -1,0 +1,581 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/831 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Flow Over a Rotating Wheel with Moving Ground | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="819.html" />
+<link rel="up" href="817.html" />
+<link rel="next" href="1082.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-831 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="817.html">RANS Flow</a></div>                  <h1 class="title">Flow Over a Rotating Wheel with Moving Ground</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-831" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Alison Findon on May 24, 2013 - 14:03        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Simulate an incompressible, steady-state, turbulent flow over a rotating wheel with a moving ground plane. View velocity vectors and velocity magnitude color maps, and monitor lift and drag forces.</p>
+<p><img alt="Final State" src="../files/tutorials/rotatingwheel/finalstate.png" width="484" height="363" /> </p>
+<h3>Goals</h3>
+<p>In this tutorial, you will learn how to:</p>
+<ul>
+<li>Specify fluid conditions on a <strong>single volume</strong> for an incompressible, steady-state, turbulent flow simulation </li>
+<li>Set relaxation factors</li>
+<li>Specify boundary conditions on faces</li>
+<li>Use a linear velocity condition to simulate a moving ground plane</li>
+<li>Use an angular velocity condition to simulate a rotating wheel</li>
+<li>Specify meshing parameters</li>
+<li>Generate a velocity magnitude color map</li>
+<li>Generate velocity vectors</li>
+<li>Create a <a href="../lift-force-and-drag-force.html">lift and drag force</a> monitor</li>
+<li>Monitor residuals to determine flow simulation convergence</li>
+</ul>
+<h3>Assumptions</h3>
+<ol>
+<li>You have <a href="15.html">activated</a> the <a href="../product/rans.html">Caedium RANS Flow</a> add-on, or <a href="../product/professional.html">Caedium Professional</a>. </li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>. </li>
+<li>You have either:
+<ul>
+<li>Created the geometry for this tutorial by following the <a href="830.html">&quot;Wheel in a Box&quot;</a> tutorial</li>
+<li>Imported the geometry (<a href="../files/tutorials/wheelinbox/wheel-in-box.brep">wheel-in-box.brep</a>) into Caedium &mdash; select the <strong>File</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> and click the <strong>Import</strong> button <img src="../files/tutorials/shared/import.png" alt="" /></li>
+</ul></li>
+
+
+</ol>
+<p>The geometry within Caedium should appear as shown below.</p>
+<p><img alt="Starting Geometry" src="../files/tutorials/rotatingwheel/start.png" width="484" height="363" /> </p>
+<h2 class="tutorial-heading">Prepare the Volume</h2>
+<p>Right-click on the <a href="../tutorials/essentials.html#viewwindow">View Window</a> background, double-click <strong>sim-&gt;Volumes</strong> in the <strong>Select</strong> dialog and then select <strong>Properties</strong> from the menu. In the <a href="../tutorials/essentials.html#propertiespanel">Properties Panel</a>, select the Volume tab <img alt="" src="../files/tutorials/shared/volume-entity-tab.png" /> and set the <strong>Name</strong> to <strong>flow-volume</strong>.</p>
+<p><img alt="Name Property" src="../files/tutorials/rotatingwheel/nameprops.png" width="240" height="248" /> </p>
+<p>To shade the geometry faces, right-click on the View Window (<strong>view</strong>) background, double-click <strong>sim-&gt;Faces</strong>, and then select <strong>Properties</strong> from the menu. In the Properties Panel, turn off the <strong>Transparent</strong> property to make all faces visible (shaded).</p>
+<p class="note">Shading the faces in the simulation will make it easier to select them when you configure fluid and boundary conditions.</p>
+<p><img alt="Shaded Faces" src="../files/tutorials/rotatingwheel/shadedfaces.png" width="484" height="363" /> </p>
+<h2 class="tutorial-heading">Specify the Substance Settings</h2>
+<h3>Specify the Fluid Conditions</h3>
+<p>Select the <strong>Physics</strong> <a href="../tutorials/essentials.html#toolpalette">Tool Palette</a>. Select <strong>Gases-&gt;Air</strong>. The Properties Panel will show the default properties for air. To enable incompressible turbulent (viscous) flow, the <strong>State-&gt;Rotational</strong> and <strong>State-&gt;Viscous</strong> properties should be set to <strong>Yes</strong> (their default values), and the <strong>State-&gt;Compressible</strong>, <strong>State-&gt;Heat Transfer</strong>, <strong>State-&gt;Species</strong>, and <strong>State-&gt;Transient</strong> properties should to be set to <strong>No</strong> (their default values).</p>
+<p><img alt="Air Properties" src="../files/tutorials/rotatingwheel/airprops.png" width="286" height="602" /> </p>
+<p>Drag and drop the <strong>Air</strong> tool onto a face of the volume. Select <strong>Done</strong> to set air as the fluid inside the volume.</p>
+<h3>Set the Reference Velocity for the Simulation</h3>
+<p>The reference velocity can be used to initialize the simulation and to specify the inlet velocity. In this tutorial you will set a reference velocity of 44.7 m/s (100mph) in the X-direction.</p>
+<p>With the volume already selected from the previous step, the Properties Panel will show the <strong>Substance: Air</strong> properties by default. Set <strong>Substance: Air-&gt;Properties-&gt;Phase: Single-&gt;Reference-&gt;U: Fixed Value-&gt;Value</strong> to be [<strong>44.7 0 0</strong>] and press Enter on the keyboard.</p>
+<p><img alt="Reference Velocity" src="../files/tutorials/rotatingwheel/refvelprops.png" width="284" height="248" /> </p>
+<h3>Set the Relaxation Factors for the Simulation</h3>
+<p class="note">Changing the default pressure/density relaxation factor in this example will help the simulation to converge more quickly.  See <a href="934.html">"Relaxation Factors in RANS Flow Solvers"</a> for tips on setting relaxation factors.</p>
+<p>In the Properties Panel, expand the <strong>Substance: Air-&gt;Solver: RANS Flow-&gt;Relaxation Factors</strong> property, and then set <strong>p/rho</strong> to be <strong>0.7</strong>.</p>
+<p><img alt="Relaxation Factors" src="../files/tutorials/rotatingwheel/relaxationfactors.png" width="284" height="249" /> </p>
+<h2 class="tutorial-heading">Specify the Boundary Conditions</h2>
+<h3>Wall Conditions</h3>
+<p>Drag and drop the <strong>Faces-&gt;Wall</strong> tool onto a face of the volume. Double-click <strong>flow-volume-&gt;Faces</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong> to create walls on the outer surfaces of the volume.</p>
+<p class="note">A wall is a solid surface through which fluid cannot flow.</p>
+<h3>Symmetry Local Condition</h3>
+<p>To create the symmetry condition, drag and drop the <strong>Faces-&gt;Symmetry Local</strong> tool onto the symmetry face shown below. Double-click the first face in the <strong>Select</strong> dialog, and select <strong>Done</strong>.</p>
+<p><img alt="Symmetry Face" src="../files/tutorials/rotatingwheel/symmetry.png" width="400" height="316" /> </p>
+<p class="note">The Symmetry Local tool can be applied to any planar face. The Symmetry tool applies to the entire simulation and is useful for visualization.</p>
+<h3>Slip Conditions</h3>
+<p>To create the 2 slip conditions, drag and drop the <strong>Faces-&gt;Slip</strong> tool onto one of the faces shown below. Double-click the first face in the <strong>Select</strong> dialog, then select <strong>Select/Deselect</strong> and right-click on the second face (shown below).  Double-click the first face in the <strong>Select</strong> dialog. With the 2 faces selected, select <strong>Done</strong>.</p>
+<p><img alt="Slip Faces" src="../files/tutorials/rotatingwheel/slip.png" width="400" height="316" /> </p>
+<p class="note">The Slip condition is similar to the Symmetry Local condition except that it constrains the velocity to be parallel (tangential) to a face.</p>
+<h3>Inlet Condition</h3>
+<p>To create an inlet, drag and drop the <strong>Faces-&gt;Inlet</strong> tool onto the face shown below in blue. Select that face in the <strong>Select</strong> dialog, click <strong>OK</strong>, and then select <strong>Done</strong> to create the inlet.</p>
+<p class="note">An inlet is a boundary condition that specifies the properties of the fluid as it enters the flow volume.</p>
+<p><img alt="Inlet and Outlet Faces" src="../files/tutorials/rotatingwheel/inletoutlet.png" width="400" height="316" /> </p>
+<h3>Outlet Condition</h3>
+<p>To create an outlet, drag and drop the <strong>Faces-&gt;Outlet</strong> tool onto the face shown above in green. Double-click that face in the <strong>Select</strong> dialog, and then select <strong>Done</strong> to create the outlet.</p>
+<p class="note">An outlet is a boundary condition that specifies the properties of the fluid as it leaves the flow volume.</p>
+<h3>Linear Velocity Condition to Simulate the Moving Ground Plane</h3>
+<p>Select the <strong>Faces-&gt;Linear Velocity</strong> tool. In the Properties Panel, set <strong>Velocity</strong> to [<strong>44.7 0 0</strong>]. </p>
+<p><img alt="Linear Velocity Properties" src="../files/tutorials/rotatingwheel/linvelprops.png" width="187" height="497" /></p>
+<p>Drag and drop the <strong>Linear Velocity</strong> tool onto the ground face as shown below. Double-click that face in the <strong>Select</strong> dialog, and then select <strong>Done</strong> to create the linear velocity condition.</p>
+<p><img alt="Ground" src="../files/tutorials/rotatingwheel/ground.png" width="400" height="316" /></p>
+<p class="note">Setting the linear velocity on the base face will simulate a moving ground plane. A linear velocity can be assigned to walls and inlets.</p>
+<h3>Angular Velocity Condition for the Rotating Wheel</h3>
+<p>For an angular velocity condition, you need to specify the axis of rotation. In this tutorial you will set the rotation axis at the center of the wheel.</p>
+<p>Select the <strong>Geometry</strong> Tool Palette.</p>
+<p>Drag and drop the <strong>Others-&gt;Axes</strong> tool onto the View Window background, double-click <strong>sim</strong> in the <strong>Select</strong> dialog, and select <strong>Done</strong> to create the axes.</p>
+<p><img alt="Axes" src="../files/tutorials/rotatingwheel/axes.png" width="484" height="363" /> </p>
+<p>Angular velocity (omega) = V / r, where V is the tangential velocity and r is the radius. In this tutorial, to match the moving ground plane, omega = 44.7 / 0.3 = 149 radians/s = 8,537 degrees/s.</p>
+<p>Select the <strong>Physics </strong>Tool Palette.</p>
+<p>Select the <strong>Faces-&gt;Angular Velocity</strong> tool. In the Properties Panel, set the <strong>Velocity</strong> to [<strong>0 0 8537</strong>].</p>
+<p><img alt="Angular Velocity Properties" src="../files/tutorials/rotatingwheel/angvelprops.png" width="187" height="496" /> </p>
+<p>Given the numerous small faces on the wheel, it is easier to use subtractive selection, i.e., select all faces and then deselect the faces that are not part of the wheel.</p>
+<p>Right-click on a face on the flow volume, double-click <strong>flow-volume-&gt;Faces</strong> in the <strong>Select</strong> dialog, and select <strong>Select/Deselect</strong>. Now use right-click, the <strong>Select</strong> dialog, and <strong>Select/Deselect</strong> to remove the 6 large bounding faces of the flow-volume box from the current selection. After deselecting the last face, select <strong>Group</strong>, and then <strong>Properties</strong>.</p>
+<p>In the Properties Panel, select the Group tab <img alt="" src="../files/tutorials/shared/group-tab.png" /> and set the <strong>Name</strong> to <strong>wheel</strong>.</p>
+<p><img alt="Wheel Group Name Property" src="../files/tutorials/rotatingwheel/wheelnameprops.png" width="211" height="248" /> </p>
+<p>Drag and drop the <strong>Angular Velocity</strong> tool onto the <strong>axes</strong> in the View Window, double-click <strong>axes</strong> in the <strong>Select</strong> dialog, and select <strong>Set Axes</strong>. Right-click on a face on the wheel, double-click the <strong>wheel</strong> group in the <strong>Select</strong> dialog, and select <strong>Done</strong>.</p>
+<p class="note">Setting the angular velocity on the wheel faces will simulate a rotating wheel. An angular velocity can be assigned to walls and inlets.</p>
+<h2 class="tutorial-heading">Specify Meshing Parameters</h2>
+<p>Select the <strong>Special-&gt;Accuracy</strong> tool. In the Properties Panel set <strong>Accuracy</strong> to <strong>Custom</strong> and set the <strong>Resolution</strong> to <strong>26</strong>.</p>
+<p><img alt="Accuracy Properties" src="../files/tutorials/rotatingwheel/accuracyprops.png" width="286" height="602" /> </p>
+<p>Drag and drop the <strong>Accuracy</strong> tool onto a wheel face. Double-click the <strong>wheel</strong> group in the <strong>Select</strong> dialog, and select <strong>Done</strong> to set the accuracy on the wheel faces.</p>
+<p class="note">The accuracy property controls the <a href="244.html">mesh</a> element size and growth rate on and around the entities associated with each accuracy property.</p>
+<h2 class="tutorial-heading">Display Initial Velocity Color Map</h2>
+<p>Make the wheel easier to see by using right-click, the <strong>Select</strong> dialog, and <strong>Select/Deselect</strong> to select the four large bounding faces, excluding the wheel, the wheel symmetry plane, and the ground. After selecting the final face, select <strong>Properties,</strong> then in the Properties Panel turn on the <strong>Transparent</strong> property.</p>
+<p><img alt="Transparent Faces" src="../files/tutorials/rotatingwheel/facestransparent.png" width="484" height="363" /> </p>
+<p>Select the <strong>Results</strong> Tool Palette.</p>
+<p>Drag and drop the <strong>Vector Fields-&gt;U</strong> (velocity) tool onto a face of the wheel in the View Window. Double-click the <strong>wheel</strong> group in the <strong>Select</strong> dialog, then select <strong>Select/Deselect</strong>. Use right-click, the <strong>Select</strong> dialog and <strong>Select/Deselect</strong> to select the two shaded large bounding faces as shown above. After selecting the final face, select <strong>Color Map</strong> to create contours of velocity magnitude.</p>
+<p><img alt="Velocity Color Map" src="../files/tutorials/rotatingwheel/velcolormap.png" width="484" height="363" /> </p>
+<p>The request for the velocity color map will cause the entire volume to be meshed which will take a few seconds. Only a single color (blue) is shown, because all the initial velocity magnitude values at each element on the faces are the same.</p>
+<p>To better see the mesh resolution, left-click on the View Window, and then set <strong>Style</strong> to <strong>Flat</strong> in the Properties Panel and turn on the <strong>Transparent</strong> property to see the face mesh elements (triangles).</p>
+<p><img alt="Mesh" src="../files/tutorials/rotatingwheel/mesh.png" width="484" height="363" /> </p>
+<p>In the <strong>Home</strong> Toolbar click the <strong>Undo</strong> button <img alt="" src="../files/tutorials/shared/undo.png" /> twice to return the faces back to their previous state.</p>
+<h2 class="tutorial-heading">Display Initial Velocity Vectors</h2>
+<p>To display velocity vectors as the simulation updates, drag and drop the <strong>Vector Fields-&gt;U </strong>tool onto one of the shaded large bounding faces. Double-click the first face<strong> </strong>in the <strong>Select</strong> dialog and select <strong>Select/Deselect</strong>. Right-click the second shaded large bounding face, double-click the first face<strong> </strong>in the <strong>Select</strong> dialog and select <strong>Arrows</strong> to create arrows colored by velocity magnitude.</p>
+<p><img alt="Velocity Arrows" src="../files/tutorials/rotatingwheel/arrow.png" width="484" height="363" /> </p>
+<p>In the View Legend, left-click on the title <strong>Arrows</strong> <img alt="" src="../files/tutorials/shared/arrows-legend.png" />, then in the Properties Panel set <strong>Scale</strong> to <strong>0.25</strong>.</p>
+<p><img alt="Arrows Properties" src="../files/tutorials/rotatingwheel/arrowsprops.png" width="224" height="248" /></p>
+<h2 class="tutorial-heading">Create Force Monitors</h2>
+<p>In this step you will set up lift and drag monitors for the wheel on the same monitor plot.</p>
+<h3>Drag Monitor</h3>
+<p>Drag is the force parallel to the flow direction, created by the air moving over the wheel. In this case, drag is represented by the X-direction (default) of the F (force) vector variable.</p>
+<p>Drag and drop the <strong>Vector Variables-&gt;F</strong> (force) tool onto a face of the wheel. Double-click the <strong>wheel</strong> group in the <strong>Select</strong> dialog and select <strong>Monitor</strong>.</p>
+<p>Drag and drop the <strong>F Monitor</strong> tab over to the right-hand edge of the Caedium application window to split the window into two parts as shown below.</p>
+<p><img alt="Force Monitor" src="../files/tutorials/rotatingwheel/forcemonitor.png" width="484" height="363" /> </p>
+<p>Left-click <strong>wheel</strong> in the <strong>F Monitor</strong> Legend, left-click again to edit the title, and change it to <strong>Drag</strong>. In the Properties Panel, set the <strong>Symbol</strong> to <strong>None</strong>.</p>
+<p><img alt="Drag Properties" src="../files/tutorials/rotatingwheel/dragprops.png" width="233" height="249" /></p>
+<h3>Lift Monitor</h3>
+<p>Lift is the force perpendicular to the flow direction, created by the air moving over the wheel. In this case, lift is represented by the Y-direction of the F (force) vector variable.</p>
+<p>To monitor lift and drag on the same plot, first you will create another series (plot curve) for the wheel on the original drag monitor, and then you will set this plot series to monitor lift.</p>
+<p>In the View Window (<strong>view</strong>) right-click on a face of the wheel, double-click the <strong>wheel</strong> group in the <strong>Select</strong> dialog, and select <strong>Copy</strong>. Left-click in the Monitor Window (<strong>F Monitor</strong>) to give it focus, then right-click and select <strong>Paste</strong>.</p>
+<p>Left-click <strong>wheel</strong> in the <strong>F Monitor</strong> Legend, left-click again to edit the title, and change it to <strong>Lift</strong>. In the Properties Panel, set the <strong>Symbol</strong> to <strong>None</strong>.</p>
+<p>In the <strong>Results</strong> Tool Palette, select the <strong>Vector Variables-&gt;F</strong> tool. In the Properties Panel set <strong>Scalar</strong> to <strong>Y</strong>.</p>
+<p><img alt="Force Properties" src="../files/tutorials/rotatingwheel/forceprops.png" width="188" height="496" /> </p>
+<p>Drag and drop the <strong>Vector Variables-&gt;F</strong> (force) tool onto <strong>Lift</strong> in the <strong>F Monitor</strong> Legend, and select <strong>Y Axis</strong>.</p>
+<p>Left-click in the Monitor Window (<strong>F Monitor</strong>) to give it focus, then in the Properties Panel rename the <strong>Y Axis</strong> to <strong>Force</strong>. Expand the <strong>Y Axis: Force</strong> property and set <strong>Range</strong> to <strong>Manual</strong>. Expand the <strong>Range: Manual</strong> property and set <strong>Bounds</strong> to [<strong>50 90</strong>].</p>
+<p><img alt="Force Monitor Properties" src="../files/tutorials/rotatingwheel/forcemonitorprops.png" width="230" height="248" /></p>
+<p>The final state of the lift and drag monitor is show below.</p>
+<p><img alt="Drag and Lift Monitor" src="../files/tutorials/rotatingwheel/dragliftmonitor.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Create Residuals Monitor</h2>
+<p>Left-click in the View Window to give it focus.  Drag and drop the <strong>Special-&gt;Residuals</strong> tool onto a face of the wheel. Double-click <strong>flow-volume</strong> in the <strong>Select</strong> dialog and select <strong>Monitor</strong> to create the residuals monitor.</p>
+<p>Drag and drop the <strong>Residuals</strong> tab over to the right-hand edge of the Caedium application window to split the window into three parts as shown below.</p>
+<p><img alt="Residuals Monitor" src="../files/tutorials/rotatingwheel/residuals.png" width="484" height="363" /> </p>
+<h2 class="tutorial-heading">Run the Flow Solver</h2>
+<p class="note">The number of flow (simulation) solver iterations is determined by multiplying the number of simulation time-steps (default = 5) by the number of iterations per simulation time-step (default = 100). The number of simulation time-steps is determined by dividing the simulation duration (default = 5 s) by the simulation time-step (default = 1 s). After each simulation time-step (equivalent to 100 iterations by default) the results will be refreshed. For this simulation the defaults are fine and will result in a total of 500 iterations.</p>
+<p>In the <strong>Home</strong> Toolbar click the <strong>Run</strong> button <img alt="" src="../files/tutorials/shared/play.png" /> to run the flow solver.</p>
+<p class="note">If you wanted to interrupt the flow solver, you would re-click the Run button; the solver would then stop at the end of the current simulation time-step.</p>
+<p>Let the solver complete its run. Note the updates of the velocity vectors, velocity color map, the forces monitor, and the residuals monitor as the simulation progresses.</p>
+<p><img alt="Final State" src="../files/tutorials/rotatingwheel/finalstate.png" width="484" height="363" /></p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="819.html" class="page-previous" title="Go to previous page">‹ Transonic Flow Over the NACA 0012 Airfoil</a>
+                    <a href="817.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="1082.html" class="page-next" title="Go to next page">Flow Over a CO2 Dragster ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-447"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="831.html#comment-447" class="active">Problem Setting Angular Velocity Condition for Rotating Wheel</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Bob Gordon (not verified) on November 28, 2009 - 07:36.  </div>
+
+  <div class="content">
+    <p>Thank you for this excellent tutorial. In working through it, I ran into a problem when trying to set the angular velocity condition for the rotating wheel. The tutorial instructions state "Drag the Transforms-&gt;Translate tool and drop it directly onto the axes you created in the View Window." I could not find where the coordinate system axes referred to were created (either in this tutorial or in the Wheel in a Box tutorial).</p>
+<p>I tried creating an axes and then translate it to the required position. Not knowing the dimensions of the box and the location of the wheel, I was not able to position the axes at the desired point.</p>
+<p>This poses a couple of questions:<br />
+1. How can I find the dimensions of the volumes, faces and points within an existing model?<br />
+2. Is the translate command a translation relative to the current position of the object or is it relative to a global coordinate system?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-448"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="831.html#comment-448" class="active">Axes and Dimensions</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on November 28, 2009 - 08:34.  </div>
+
+  <div class="content">
+    <p>The axes are created at the origin if you followed the procedure above. They should be visible at the corner of the box. You can select the axes without having to locate them by right-clicking on the View Window background, open the <strong>sim-&gt;Axes</strong> folder, double-click <strong>axes</strong> in the <strong>Select</strong> dialog and then select <strong>Properties</strong>. Now with the axes selected you can double-click the <strong>Transforms-&gt;Translate</strong> tool to apply the transform. </p>
+<p>To see overall model dimensions, right-click the View Window background, double-click <strong>sim</strong> in the <strong>Select</strong> dialog and select <strong>Properties</strong>. In the Properties Panel turn on <strong>Rulers</strong>.</p>
+<p>To see localised co-ordinate values drag and drop the <strong>Vector Fields-&gt;XYZ</strong> (having set <strong>Scalar</strong> to the component you want to see) tool from the <strong>Results</strong> Tool Palette on to specific geometry and then either create a <strong>Color Map</strong> or <strong>XY Plot</strong>.</p>
+<p>I'm guessing that you might also find the <strong>Transforms-&gt;Align</strong> tool from the Geometry Tool Palette useful. Drag and drop the tool on a target (to align with) and then continue selecting geometry you want to align with your target. The alignment is based on geometry centers.</p>
+<p>The <strong>Transforms-&gt;Translate</strong> tool is relative to an existing position when you have Simulation Time at the beginning. Otherwise the translation is relative to the previously defined position in time.</p>
+<p>Hope this helps.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-449"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="831.html#comment-449" class="active">Viewing Localized Co-ordinate Values</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Bob Gordon (not verified) on November 28, 2009 - 12:16.  </div>
+
+  <div class="content">
+    <p>Thanks very much for the tips. I have tried using the Vector Fields-&gt;XYZ tool but have been unsuccessful. When I select an edge to apply the tool to, both the Color Map and XY Plot options are greyed out.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-450"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="831.html#comment-450" class="active">Need an active Substance</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on November 28, 2009 - 14:28.  </div>
+
+  <div class="content">
+    <p>To use a tool in the Results Palette you need an active Substance either on the simulation as a Panel solver or on a volume as a RANS solver.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-852"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="831.html#comment-852" class="active">How would you go about having a flow of animated particles here?</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by malteahrens on January 12, 2011 - 11:30.  </div>
+
+  <div class="content">
+    <p>Following the 'Particles or Streamlines' tutorial, I did the following:</p>
+<p>1. Apply [Vector Fields:U] to the inlet face as 'Color Map'<br />
+2. Apply [Vector Fields:U] to the inlet face as 'Set particle target', setting the target to the entire volume<br />
+3. Experimenting with different Accuracy, Duration, Steps, Increment, Interval, and Radius settings<br />
+4. Start recording<br />
+5. Press play<br />
+6. (when done) Stop recording</p>
+<p>But, they [the particles / points] just stay (very) close the the inlet, moving forward &amp; backwards and staying at the same velocity (the same color map color) throughout the entire simulation.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-853"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="831.html#comment-853" class="active">Particle Animation</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on January 12, 2011 - 12:45.  </div>
+
+  <div class="content">
+    <p>Yes reviewing <a href="#">"Particles or Streamlines"</a> is a good place to start. Also the tutorial <a href="818.html">"Incompressible Flow Through a Pipe into a Box"</a> demonstrates how to create streamlines as ribbons.</p>
+<p>The distance each particle travels in an animation is determined by the Simulation (sim) <strong>Time-&gt;Increment</strong> property (equivalent to the time increment between frames). So try increasing or decreasing the Increment by factors of 10, until you get what you want. If it's an increase in Increment that provides the movement you want then you will also likely have to increase the <strong>Time-&gt;Duration</strong> property. Then you can adjust the frequency of particle releases using the <strong>Particles-&gt;Type:Point-&gt;Interval</strong> property.</p>
+<p>With animations it is worthwhile using a copy of the original project (.sym) so that you don't accidentally corrupt your converged simulation and ensure you click the Freeze button before you start.</p>
+<p>Prior to switching the <strong>Particles-&gt;Type</strong> property to <strong>Point</strong>, I suggest getting the default option (<strong>Curve</strong>) to produce a set of streamlines that you are happy with by adjusting the <strong>Particles-&gt;Increment</strong> and <strong>Steps</strong> properties as needed.</p>
+<p>You don't have to record an animation to play it. I prefer to only record an animation once I'm sure it's what I want.</p>
+<p>You can use any geometry entity (e.g., vertex, edge, face) as a seed for your particles, it doesn't have to be the inlet. If you want to use the inlet but the number of particles is either too high or too low, then try copying the inlet and adjust the number of particles on the copy using the Accuracy tool. If you change the Accuracy on a simulation face, such as the inlet, then you will cause a remesh which will corrupt your simulation.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-862"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="831.html#comment-862" class="active">Settings to get animated particles to work</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by malteahrens on January 14, 2011 - 23:40.  </div>
+
+  <div class="content">
+    <p>Thanks for the guide. After (a lot) more experiementation and playing around with different settings, I was able to get animated particles to work as in some of the sample videos on this site. The settings that I used are as follows (they are not quite perfect, but they do show animated particles):</p>
+<p><strong>Sim -&gt; Properties -&gt; Time<strong></strong></strong></p>
+<ul>
+<li>Duration: 0.1</li>
+<li>Increment: 1e-005</li>
+</ul>
+<p><strong>Particle Face -&gt; Particles</strong></p>
+<ul>
+<li>Duration: 100</li>
+<li>Increment: 1e-008</li>
+<li>Steps: 100</li>
+<li>Point -&gt; Interval: 5e-005</li>
+<li>Point -&gt; Radius: 5e-005</li>
+</ul>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1052"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="831.html#comment-1052" class="active">Boundary layer</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://www.solvengineer.com/" rel="nofollow">Mihai</a> (not verified) on May 12, 2011 - 11:04.  </div>
+
+  <div class="content">
+    <p>Does making a surface a wall automatically creates a no-slip condition? I don't understand how the surfaces of the box ,where it's supposed to be free stream velocity, are differentiated from the surface of the wheel or the ground, where we should have the no-slip condition.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1053"></a>
+<div class="comment comment-published last odd clearfix">
+  
+      <h3 class="title">
+      <a href="831.html#comment-1053" class="active">Wall is no-slip</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 12, 2011 - 13:18.  </div>
+
+  <div class="content">
+    <p>Yes, a wall is a no-slip condition.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="expanded active-trail"><a href="817.html">RANS Flow</a><ul class="menu"><li class="leaf first"><a href="818.html">Incompressible Flow Through a Pipe into a Box</a></li>
+<li class="leaf"><a href="816.html">Incompressible Transient Flow with Heat Transfer</a></li>
+<li class="leaf"><a href="819.html">Transonic Flow Over the NACA 0012 Airfoil</a></li>
+<li class="leaf active-trail"><a href="831.html" class="active">Flow Over a Rotating Wheel with Moving Ground</a></li>
+<li class="leaf"><a href="1082.html">Flow Over a CO2 Dragster</a></li>
+<li class="leaf"><a href="1255.html">Rotating Paddle using Moving Reference Frame</a></li>
+<li class="leaf"><a href="1257.html">Transient Water and Air Flow in a Tank</a></li>
+<li class="leaf"><a href="1718.html">Conjugate Heat Transfer for a Heat Sink</a></li>
+<li class="leaf last"><a href="1281.html">Flow Over a Double-Sided Membrane</a></li>
+</ul></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="collapsed last"><a href="../tips.html">Tips</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/831 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:28 GMT -->
+</html>

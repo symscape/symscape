@@ -1,0 +1,281 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1367 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Cost of computing k-kl-omega | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-forum page-node-1367 section-node one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../forum.html">Forums</a> › <a href="../forum/46.html">Questions</a></div>                  <h1 class="title">Cost of computing k-kl-omega</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1367" class="node node-type-forum clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Perbear on May 21, 2013 - 17:11        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_46 first last"><a href="../forum/46.html" rel="tag" title="Get answers to product (e.g., Caedium) questions. View Ratings">Questions</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>I shall analyse low-Re flow over a streamlined 3D body (velomobile at 10 m/s). For this specific task I have been recommended k-kl-omega as suitable model since the problem involves laminar-turbulence transitions where this new model seems to excel. </p>
+<p>Q1: Will k-kl-omega work fine for this problem or should I consider simpler models as well? I plan on using Caedium and the target is to dial in on a practical and cost efficient body as part of a master thesis.</p>
+<p>I have the impression K-kl-omega need very fine mesh - found a suggestion for 0.3mm boundary cells with 1.15 growth per layer for the 30mm near moving body. I assume that this fine mesh also will require a timestep small enough to let a particle move not more than one cell during a time step. That would require a time step of 0.3 mm / 10 000 mm / s = 30 uS. </p>
+<p>Q2: Is the timestep too small?</p>
+<p>Assuming Velomobile is 800 mm wide, 1000 mm high and 2500 mm long I plan on making a mesh of approx 6-12 million cells consisting of a rectangular box - "wind tunnel" - LxWxH of 5.0 m x  2.4 m x 2.0 m</p>
+<p>Q3: Will the massive computational task simply be overwhelming for a single CPU - quad core with plenty RAM - to be able to converge within 8-16 hours?</p>
+  <div class="forum-topic-navigation clear-block">
+          <a href="1370.html" class="topic-previous" title="Go to previous forum topic">‹ Determine the center of pressure</a>
+              <a href="1324.html" class="topic-next" title="Go to next forum topic">Heat flux ›</a>
+      </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+  
+  <a id="comment-1732"></a>
+<div class="comment comment-published first odd clearfix">
+  
+      <h3 class="title">
+      <a href="1367.html#comment-1732" class="active">y+ values and outer boundary distance</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 22, 2013 - 09:12.  </div>
+
+  <div class="content">
+    <p>I'd like to think that the k-kl-omega turbulence model should be up to the application you describe. However, I would suggest you also consider the default wall function turbulence model (fully turbulent, k-omega SST) and a laminar case. That way you should have a lower bounds (laminar) and upper bounds (fully turbulent) on your drag values.</p>
+<p>In terms of the wall spacing for the k-kl-omega model you are looking for a y+ ~=1, whereas for the default wall function turbulence models you should aim for y+ ~=30-300. y+ is dependent on your model and the flow conditions. Pointwise have an <a href="http://www.pointwise.com/yplus/">online y+ calculator</a> that can estimate the first cell height for a given y+ value.</p>
+<p>To efficiently achieve y+ ~=1, you most likely will need high-aspect ratio (stretched) cells. Currently Caedium can not generate such cells, unless you construct a special <a href="1174.html">multiblock volume structure</a> around your model to create a hexahedral mesh. An alternative is to use a 3rd party mesh generator, such as <a href="http://www.pointwise.com/pw/">Pointwise</a>.</p>
+<p>Given you have a streamlined shape I would suggest you try running a steady-state simulation (always worth a try for any simulation), it will be much faster than running a transient simulation, in which case the time step is irrelevant. For more on steady-state vs transient see <a href="../steady-state-or-unsteady-cfd-simulation.html">"Steady-State or Unsteady CFD Simulation?"</a></p>
+<p>If you are not constrained to match the 'wind tunnel' dimensions then I would suggest you use a half model (assuming symmetry) and ensure that the outer boundary dimensions are at least 5 body lengths away in all directions (in undisturbed air), i.e., LxWxH (m) ~= (7.5 upstream + 15 downstream) x 3 (assuming half model) x 6. For an example see <a href="831.html">"Flow Over a Rotating Wheel with Moving Ground"</a>.</p>
+<p>It is a good idea to try different outer boundary distances to ensure that they are not having a significant impact on your results. </p>
+<p>For larger cases a quad core CPU will run nearly 4 times faster than a single CPU. A single CPU will not be overwhelmed with a large case, it will just run a lot slower. If your cases are going to be up to 12 million cells then you will require at least 12 GB RAM - otherwise you will see swapping to disk and that will make your simulation run 100 times slower even with a quad core CPU.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1744"></a>
+<div class="comment comment-published last even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1367.html#comment-1744" class="active">Thank you for excellent</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Perbear on May 22, 2013 - 16:45.  </div>
+
+  <div class="content">
+    <p>Thank you for excellent answer to my questions. I will be following them.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div></div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1367 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:12 GMT -->
+</html>

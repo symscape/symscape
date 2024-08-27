@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.symscape.com/taxonomy/term/30/all" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>brep</title>
+    <link>https://www.symscape.com/taxonomy/term/30/all</link>
+    <description></description>
+    <language>en</language>
+          <item>
+    <title>Pipe into a Box</title>
+    <link>https://www.symscape.com/node/812</link>
+    <description>&lt;p&gt;Quadrant of a pipe into a box. Create this geometry from scratch by following the &lt;a href=&quot;/node/810&quot;&gt;&quot;Pipe into a Box&quot;&lt;/a&gt; tutorial.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/pipeintobox.png&quot; alt=&quot;Pipe into Box&quot; width=&quot;499&quot; height=&quot;393&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; using &lt;strong&gt;File-&amp;gt;Import&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/pipe-into-box.brep&quot;&gt;pipe-into-box.brep&lt;/a&gt; (26 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/812&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/812#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/30">brep</category>
+ <pubDate>Mon, 05 Oct 2009 17:14:04 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">812 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>NACA 4415 Airfoil</title>
+    <link>https://www.symscape.com/node/563</link>
+    <description>&lt;p&gt;NACA 4415 airfoil geometry, used in &lt;a href=&quot;/examples/panel/naca4415&quot;&gt;NACA 4415 Airfoil Calculation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/naca-4415-airfoil.png&quot; alt=&quot;NACA 4415 Airfoil&quot; width=&quot;639&quot; height=&quot;411&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; using &lt;strong&gt;File-&amp;gt;Import&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/naca-4415-airfoil.brep&quot;&gt;naca-4415-airfoil.brep&lt;/a&gt; (15 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/563&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/563#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/30">brep</category>
+ <pubDate>Fri, 23 Nov 2007 16:46:00 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">563 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Open Wheel Race Car</title>
+    <link>https://www.symscape.com/node/130</link>
+    <description>&lt;p&gt;Detailed open wheel race car (Champ Car/F1 ish).&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/car.preview.jpg&quot; alt=&quot;Race Car Reflections&quot; width=&quot;640&quot; height=&quot;480&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; using &lt;strong&gt;File-&amp;gt;Import&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/f1.brep&quot;&gt;f1.brep&lt;/a&gt; (4 MB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/130&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/130#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/30">brep</category>
+ <pubDate>Mon, 05 Feb 2007 13:55:56 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">130 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Motorcycle Racer</title>
+    <link>https://www.symscape.com/node/129</link>
+    <description>&lt;p&gt;Racing motorcycle.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/moto.jpg&quot; alt=&quot;Racing Motorcycle&quot; width=&quot;599&quot; height=&quot;445&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; using &lt;strong&gt;File-&amp;gt;Import&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/moto.brep&quot;&gt;moto.brep&lt;/a&gt; (3 MB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/129&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/129#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/30">brep</category>
+ <pubDate>Mon, 05 Feb 2007 13:55:33 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">129 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Boat</title>
+    <link>https://www.symscape.com/node/122</link>
+    <description>&lt;p&gt;Motor boat.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/boat.jpg&quot; alt=&quot;Boat&quot; width=&quot;599&quot; height=&quot;445&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; using &lt;strong&gt;File-&amp;gt;Import&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/boat.brep&quot;&gt;boat.brep&lt;/a&gt; (487 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/122&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/122#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/30">brep</category>
+ <pubDate>Mon, 05 Feb 2007 13:55:12 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">122 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Cylinder Head</title>
+    <link>https://www.symscape.com/node/125</link>
+    <description>&lt;p&gt;Air cooled cylinder head.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/cylinder_head_contours.jpg&quot; alt=&quot;Cylinder Head&quot; width=&quot;640&quot; height=&quot;480&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; using &lt;strong&gt;File-&amp;gt;Import&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/cylinder_head.brep&quot;&gt;cylinder_head.brep&lt;/a&gt; (4 MB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/125&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/125#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/30">brep</category>
+ <pubDate>Mon, 05 Feb 2007 13:54:38 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">125 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Torus and Sphere</title>
+    <link>https://www.symscape.com/node/133</link>
+    <description>&lt;p&gt;Torus and sphere used in a flow simulation.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/squid.preview.jpg&quot; alt=&quot;Glass Streamlines&quot; width=&quot;640&quot; height=&quot;512&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; using &lt;strong&gt;File-&amp;gt;Import&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/torus_sphere.brep&quot;&gt;torus_sphere.brep&lt;/a&gt; (10 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/133&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/133#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/30">brep</category>
+ <pubDate>Mon, 05 Feb 2007 13:53:08 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">133 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Snow Globe</title>
+    <link>https://www.symscape.com/node/177</link>
+    <description>&lt;p&gt;Snow Globe geometry.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/snowglobe.preview.jpg&quot; alt=&quot;Snow Globe&quot;width=&quot;640&quot; height=&quot;480&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; using &lt;strong&gt;File-&amp;gt;Import&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/snowglobe.brep&quot;&gt;snowglobe.brep&lt;/a&gt; (40 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/177&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/177#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/30">brep</category>
+ <pubDate>Tue, 28 Nov 2006 15:17:31 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">177 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Simple Scene</title>
+    <link>https://www.symscape.com/node/132</link>
+    <description>&lt;p&gt;Simple scene with simple geometry.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/simple_scene.jpg&quot; alt=&quot;Simple Scene&quot; width=&quot;640&quot; height=&quot;480&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; using &lt;strong&gt;File-&amp;gt;Import&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/simple_scene.brep&quot;&gt;simple_scene.brep&lt;/a&gt; (22 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/132&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/132#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/30">brep</category>
+ <pubDate>Sat, 30 Sep 2006 21:05:21 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">132 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Orrery</title>
+    <link>https://www.symscape.com/node/131</link>
+    <description>&lt;p&gt;Planets orbiting sun.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/orrery.preview.jpg&quot; alt=&quot;Orrery&quot; width=&quot;640&quot; height=&quot;480&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; using &lt;strong&gt;File-&amp;gt;Import&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/orrery.brep&quot;&gt;orrery.brep&lt;/a&gt; (58 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/131&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/131#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/30">brep</category>
+ <pubDate>Sat, 30 Sep 2006 21:03:27 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">131 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Lily</title>
+    <link>https://www.symscape.com/node/128</link>
+    <description>&lt;p&gt;Lillies in a vase on a table.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/lily.preview.jpg&quot; alt=&quot;Lily&quot; width=&quot;640&quot; height=&quot;480&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; using &lt;strong&gt;File-&amp;gt;Import&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/lily.brep&quot;&gt;lily.brep&lt;/a&gt; (36 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/128&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/128#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/30">brep</category>
+ <pubDate>Sat, 30 Sep 2006 20:57:26 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">128 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Invite</title>
+    <link>https://www.symscape.com/node/126</link>
+    <description>&lt;p&gt;Champagne bottle and glasses on a tray.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/invite.preview.jpg&quot; alt=&quot;Invitation&quot; width=&quot;524&quot; height=&quot;640&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; using &lt;strong&gt;File-&amp;gt;Import&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/invite.brep&quot;&gt;invite.brep&lt;/a&gt; (90 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/126&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/126#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/30">brep</category>
+ <pubDate>Sat, 30 Sep 2006 20:55:16 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">126 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Cyclone</title>
+    <link>https://www.symscape.com/node/123</link>
+    <description>&lt;p&gt;Cyclone separator.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/cyclone.preview.jpg&quot; alt=&quot;Cyclone&quot; width=&quot;640&quot; height=&quot;486&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; using &lt;strong&gt;File-&amp;gt;Import&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/cyclone.brep&quot;&gt;cyclone.brep&lt;/a&gt; (64 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/123&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/123#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/30">brep</category>
+ <pubDate>Sat, 30 Sep 2006 20:49:49 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">123 at https://www.symscape.com</guid>
+  </item>
+  </channel>
+</rss>

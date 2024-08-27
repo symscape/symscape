@@ -1,0 +1,316 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/930 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Microsoft Windows HPC Server 2008 Cluster Configuration | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="838.html" />
+<link rel="up" href="../tips.html" />
+<link rel="next" href="1578.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-930 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="../tips.html">Tips</a></div>                  <h1 class="title">Microsoft Windows HPC Server 2008 Cluster Configuration</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-930" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on August 9, 2010 - 13:19        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p><strong>Update</strong>: This feature is deprecated in the latest version of Caedium.</p>
+<p>Thanks to sponsorship provided by the Microsoft DPE team, Caedium can perform RANS Flow CFD simulations in parallel on a cluster running Microsoft Windows HPC Server 2008. When configured correctly a parallel simulation running on a cluster will perform significantly faster (potentially many times faster) than the equivalent simulation performed in serial (i.e., non-parallel). Here we describe how to configure Caedium to perform parallel simulations on a cluster running Windows HPC Server 2008.</p>
+<h3>Assumptions</h3>
+<ol>
+<li>You have access to a cluster running <a href="http://www.microsoft.com/hpc">Microsoft Windows HPC Server 2008</a>. </li>
+<li>You have saved your user ID and password with the Microsoft HPC Cluster Manager. If not then:
+<ol>
+<li>Launch the <strong>HPC Pack Cluster Manager</strong></li>
+<li>Select <strong>Node Management</strong></li>
+<li>In the <strong>Nodes</strong> list select the <strong>HeadNode Template</strong></li>
+<li>In the <strong>Node Actions</strong> click <strong>Run Command...</strong></li>
+<li>In the <strong>Run a Command</strong> dialog enter <strong>dir</strong> in the <strong>Command line</strong> text entry</li>
+<li>Click <strong>Run</strong></li>
+<li>Enter your <strong>user ID and password</strong>, check the option <strong>Remember my password</strong> and click <strong>OK</strong></li>
+</ol>
+</li>
+<li>You have <a href="../product/downloads.html">downloaded</a>, installed and <a href="15.html">activated</a> <a href="../product/rans.html">Caedium RANS Flow</a> or <a href="../product/professional.html">Caedium Professional</a> on the head-node of the cluster, e.g., CRAY01. Note do not install Microsoft MPI - it should already be available on the cluster.</li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>.</li>
+</ol>
+<p><span class="inline inline-center"><br />
+<img title="Cluster Preferences" src="../files/tutorials/clusterprefs/clusterpreferences.png" alt="Cluster Preferences" width="389" height="489" /><br />
+<span class="caption"><strong>Cluster Preferences</strong></span></span></p>
+<h3>Procedure</h3>
+<p>You only need to set the following Caedium preferences once - they will persist across all subsequent Caedium simulations.</p>
+<ol>
+<li>Set up the Caedium temporary directory by creating a new directory on the node where Caedium is installed, e.g., C:\caediumtemp and share the directory, e.g., as \\CRAY01\caediumtemp </li>
+<li>The OpenFOAM distribution (executables and libraries) must be available to all nodes in the cluster, so on the node where Caedium is installed share the default OpenFOAM location, e.g., share C:\Program Files\Caedium\openflow as \\CRAY01\openflow </li>
+<li>In Caedium select the <strong>File</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> and click the <strong>Preferences</strong> button <img src="../files/tutorials/shared/preferences.png" />. In the Properties Panel set the <strong>Application-&gt;Temp Directory</strong> preference to the shared Caedium temporary directory, e.g., \\CRAY01\caediumtemp </li>
+<li>Set the <strong>Physics-&gt;OpenFOAM</strong> preference to the shared OpenFOAM directory, e.g., \\CRAY01\openflow </li>
+<li>Set the <strong>Physics-&gt;OpenFOAM-&gt;Parallel</strong> preference to <strong>Cluster</strong>, then expand the preference and set <strong>Processes</strong> to the maximum number of processes available to Caedium to perform parallel simulations, e.g., 50 </li>
+</ol>
+<p>For more on how to configure Caedium for parallel simulations see <a href="929.html">&quot;Parallel Configuration.&quot;</a></p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="838.html" class="page-previous" title="Go to previous page">‹ Import an OpenFOAM Mesh</a>
+                    <a href="../tips.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="1578.html" class="page-next" title="Go to next page">Multiple Views ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="collapsed"><a href="817.html">RANS Flow</a></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="expanded last active-trail"><a href="../tips.html">Tips</a><ul class="menu"><li class="leaf first"><a href="723.html">Accuracy Tool</a></li>
+<li class="leaf"><a href="745.html">Clipping a View</a></li>
+<li class="leaf"><a href="1145.html">Cloud Burst Service</a></li>
+<li class="leaf"><a href="1144.html">Cloud Service</a></li>
+<li class="leaf"><a href="779.html">Color Map</a></li>
+<li class="leaf"><a href="411.html">Create an Anaglyph 3D Stereoscopic Image</a></li>
+<li class="leaf"><a href="1247.html">Import a SketchUp Model</a></li>
+<li class="leaf"><a href="838.html">Import an OpenFOAM Mesh</a></li>
+<li class="leaf active-trail"><a href="930.html" class="active">Microsoft Windows HPC Server 2008 Cluster Configuration</a></li>
+<li class="leaf"><a href="1578.html">Multiple Views</a></li>
+<li class="leaf"><a href="1174.html">Multiple Volume Flow Domain</a></li>
+<li class="leaf"><a href="929.html">Parallel Configuration</a></li>
+<li class="leaf"><a href="984.html">Particles or Streamlines</a></li>
+<li class="leaf"><a href="765.html">Punch a Hole in a Face</a></li>
+<li class="leaf"><a href="934.html">Relaxation Factors in RANS Flow Solvers</a></li>
+<li class="leaf"><a href="969.html">Run, Stop, and Lock Controls</a></li>
+<li class="leaf"><a href="836.html">Telemetry Posting to TwitPic and Twitter</a></li>
+<li class="leaf"><a href="1147.html">Topology Operations</a></li>
+<li class="leaf"><a href="766.html">Trim a Face</a></li>
+<li class="leaf"><a href="538.html">Use an Image as a Background</a></li>
+<li class="leaf"><a href="732.html">Using Fields and Variables</a></li>
+<li class="leaf"><a href="532.html">View a Mesh</a></li>
+<li class="leaf"><a href="669.html">Visual Facets Control</a></li>
+<li class="leaf"><a href="668.html">Visual Finish</a></li>
+<li class="leaf last"><a href="667.html">Visualization Preferences</a></li>
+</ul></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/930 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:46 GMT -->
+</html>

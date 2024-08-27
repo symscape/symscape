@@ -1,0 +1,295 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1258 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:27:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Caedium 4.0.2 Release Notes | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-1258 section-node one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../product/releasenotes.html">Release Notes</a></div>                  <h1 class="title">Caedium 4.0.2 Release Notes</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1258" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on July 31, 2012 - 18:14        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_55 first last"><a href="../product/releasenotes.html" rel="tag" title="">Release Notes</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>The <a href="../news/simulate-free-surface-flows-using-volume-of-fluid-cfd-solver.html">latest Caedium release</a> has a broad range of new features, enhancements, and bug fixes. It includes an array of new flow solver options for multiphase, moving reference frames, and porous media. It has new boundary conditions for fans and cyclics. It also includes internationalization support for a selection of popular languages.</p>
+<h3>New Features and Enhancements</h3>
+<ul>
+<li><strong>More Physics</strong>
+<ul>
+<li>Simulate air and water (or any other immiscible multiphase fluids) with the Volume Of Fluid (VOF) solver [RANS Flow] </li>
+<li>Simulate rotating machinery (e.g., mixers) with Moving Reference Frames (MRF) [RANS Flow] </li>
+<li>Simulate porous volumes and faces [RANS Flow] </li>
+<li>Simulate fans at boundaries and embedded within a flow domain [RANS Flow] </li>
+<li>Reduce simulation time and memory requirements with the cyclic boundary condition [RANS Flow] </li>
+<li>Model boundary layer transitions with the kt-kl-omega low-Reynolds-number turbulence model [RANS Flow] </li>
+<li>Perform more robust simulations now that the k-omega SST is the default turbulence model [RANS Flow] </li>
+</ul>
+</li>
+<li><strong>Improved Performance</strong>
+<ul>
+<li>Turn simulations around faster with more aggressive default parallel preferences [RANS Flow] </li>
+<li>Run larger simulations on Mac OS X with a 64-bit version of Caedium </li>
+<li>Use Windows HPC Scheduler services in Azure without an on-premise installation of Windows HPC Server [RANS Flow] </li>
+</ul>
+</li>
+<li><strong>Better Visualization</strong>
+<ul>
+<li>Create stunning visuals with an extensive array of animated particles that includes arrows and cones [RANS Flow|Panel Flow] </li>
+<li>Visualize and report wall heat flux and rho when supported by a solver [RANS Flow] </li>
+</ul>
+</li>
+<li><strong>Miscellaneous</strong>
+<ul>
+<li>Enjoy native language translations of Caedium in English, French, German, Italian, Japanese, Portuguese (Brazil), and Spanish </li>
+<li>Exchange membrane flow results with ixForten 4000 [RANS Flow|Panel Flow] </li>
+<li>Import facets more reliably with a node merging tolerance preference [Exchange] </li>
+</ul>
+</li>
+</ul>
+<h3>Bug Fixes</h3>
+<ul>
+<li>During multiple selection (holding down Ctrl) sometimes selection remained highlighted when unselected </li>
+<li>After transforming a cylinder, subtracting from a face (topology only), and stitching into a volume, faces were transformed twice [Builder] </li>
+<li>ABL profile was wrong [RANS Flow] </li>
+<li>Same face remeshed indefinitely after requesting Area color map [RANS Flow] </li>
+<li>Tetrahedral meshing of 2-sided faces unreliable when in close proximity to other geometry [RANS Flow] </li>
+<li>Two-sided face construction failed for face with a seam, e.g., cylinder [Builder] </li>
+<li>Creating 2-sided face between connected volumes did not preserve connected faces [Builder] </li>
+<li>After WRL export switching view caused crash [Viz Export] </li>
+<li>Restoring compressible cases produced warnings: Unknown Property: 'alphat' [RANS Flow] </li>
+<li>Edge parameter out of bounds in OpenCascade caused crash [Builder] </li>
+<li>When tetrahedral meshing failed immediately and RANS Flow solver tried to run it caused a crash [RANS Flow] </li>
+<li>IGES import and shade for a specific model caused a crash [Exchange] </li>
+<li>Loft through 2 circles caused crash [Builder] </li>
+<li>Stitching a volume (topology only) for a specific model produced incorrect solid orientation [Builder] </li>
+<li>Subtracting (topology only) edge caused crash [Builder] </li>
+<li>Subtracting a faceted face from a volume caused crash [Builder] </li>
+<li>Could not copy and paste into Residual Monitor for a volume group [RANS Flow] </li>
+<li>Adjustable time step failed to extract results [RANS Flow] </li>
+<li>Export OBJ with no points caused crash [Viz Export] </li>
+<li>TFI meshing for a specific model caused crash [RANS Flow] </li>
+<li>Shutdown while plot updating caused crash </li>
+<li>Hidden properties sometimes visible </li>
+<li>FunctionObjects re-extracted unnecessarily [RANS Flow] </li>
+<li>Clipping large cell count models with complex visualization caused crash [RANS Flow|Panel Flow] </li>
+<li>Interpolating results onto non-flow-domain geometry caused crash [RANS Flow] </li>
+</ul>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1258 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:27:40 GMT -->
+</html>

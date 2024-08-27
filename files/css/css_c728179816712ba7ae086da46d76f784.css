@@ -1,0 +1,5 @@
+
+
+
+
+a:link,a:visited{text-decoration:none !important;color:#000;}#site-name a:link,#site-name a:visited{text-decoration:none !important;}#content,#content .section{float:none;width:100%;margin:0 !important;padding:0 !important;}body,#page-wrapper,#page,#main-wrapper,#main,#content,#content .section{color:#000;background-color:transparent !important;background-image:none !important;}#skip-link,#navigation,.region-sidebar-first,.region-sidebar-second,.breadcrumb,div.tabs,.links,.taxonomy,.book-navigation,.forum-topic-navigation,.pager,.feed-icons,.region-header{visibility:hidden;display:none;}#page-wrapper{overflow-y:visible;}.sidebar-second #content{width:auto !important;margin-right:0 !important;}.two-sidebars #content{width:auto !important;}#page{border:none;}.node-teaser{border:none;}#footer{background-color:#fff;border-color:#aaa !important;}

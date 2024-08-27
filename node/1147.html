@@ -1,0 +1,307 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1147 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:03:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Topology Operations | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="836.html" />
+<link rel="up" href="../tips.html" />
+<link rel="next" href="766.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-1147 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="../tips.html">Tips</a></div>                  <h1 class="title">Topology Operations</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1147" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on October 16, 2011 - 15:44        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Topology describes the way objects are connected together independent of their shape definition (geometry). In Caedium there are a range of topology operations, using our  <strong>Flexile Technology</strong>, that allow you to modify your models in ways that would be prevented by standard geometry operations in a CAD system. Also topology operations allow you to combine <a href="../geometry-exchange.html">faceted and analytic geometry</a> into single hybrid models.</p>
+<p>Topology operations are available when the Caedium <a href="../product/builder.html">Builder</a> or <a href="../product/professional.html">Professional</a> add-ons are <a href="15.html">activated</a>.</p>
+<p>The topology-related tools can all be found in the <strong>Geometry</strong> <a href="../tutorials/essentials.html#toolpalette">Tool Palette</a>.</p>
+<h3>Topology Tools</h3>
+<h4>Connect</h4>
+<p><strong>Connect</strong> tools are available for faces, edges, and vertices. Connections are based on topology matching of two or more entities and a relative tolerance. When the connect constraint is satisfied, two or more entities are replaced by a single entity and the associated upper topology (e.g., for a face the upper topology is a volume) and lower topology (e.g., for a face the lower topology is edges and vertices) are updated.</p>
+<h4>Join</h4>
+<p><strong>Join</strong> tools are available for edge and faces. Joins are based on an entity (e.g., face) sharing one or more common lower entities (e.g., for a face the lower entities would be edges). Joins can only be accomplished on connected entities.</p>
+<h4>Double Sided</h4>
+<p>The<strong> Faces-&gt;2 Sided</strong> tool converts faces that are embedded within a volume into zero-thickness walls or double-sided faces.</p>
+<h3>Tools with Topology Extensions</h3>
+<p>Some geometry tools have a<strong> Topology Only</strong> property that disables geometry constraints during an operation.</p>
+<h4>Stitch</h4>
+<p>Having first connected all edges, a set of faces can be stitched into one or more volumes based on topology alone using the <strong>Volumes-&gt;Stitch</strong> tool. The topology-based stitch operation will not change shapes whereas the standard geometry-based operation may. Also the topology-based stitch operation can deal with faceted and hybrid models whereas the geometry based operation can only deal with analytic geometry.</p>
+<h4>Subtract</h4>
+<p>Setting the<strong> Topology Only</strong> property to <strong>on</strong> for the <strong>Boolean-&gt;Subtract</strong> tool allows a number of operations that are not permitted with analytic geometry. You can:</p>
+<ul>
+<li>Create hybrid models of faceted and analytic geometry. </li>
+<li>Create non-manifold models, e.g., you can subtract a face from a volume to embed a standalone face within the volume and also make the face part of the volume. Such a face can then be converted into a double-sided face using the <strong>Faces-&gt;2 Sided</strong> tool. </li>
+</ul>
+<p>The topology subtract operation only applies to entities that fully intersect, i.e., the extent of the subtracted entity must be fully within the bounds of the receiving entity.</p>
+<h4>Decompose</h4>
+<p>Setting the<strong> Topology Only</strong> property to <strong>on</strong> for the <strong>Boolean-&gt;Decompose </strong>tool performs the topology subtract operation described above and also connects the shared entities (e.g., faces in a volume decompose) to form a non-manifold multi-volume model.</p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="836.html" class="page-previous" title="Go to previous page">‹ Telemetry Posting to TwitPic and Twitter</a>
+                    <a href="../tips.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="766.html" class="page-next" title="Go to next page">Trim a Face ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="collapsed"><a href="817.html">RANS Flow</a></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="expanded last active-trail"><a href="../tips.html">Tips</a><ul class="menu"><li class="leaf first"><a href="723.html">Accuracy Tool</a></li>
+<li class="leaf"><a href="745.html">Clipping a View</a></li>
+<li class="leaf"><a href="1145.html">Cloud Burst Service</a></li>
+<li class="leaf"><a href="1144.html">Cloud Service</a></li>
+<li class="leaf"><a href="779.html">Color Map</a></li>
+<li class="leaf"><a href="411.html">Create an Anaglyph 3D Stereoscopic Image</a></li>
+<li class="leaf"><a href="1247.html">Import a SketchUp Model</a></li>
+<li class="leaf"><a href="838.html">Import an OpenFOAM Mesh</a></li>
+<li class="leaf"><a href="930.html">Microsoft Windows HPC Server 2008 Cluster Configuration</a></li>
+<li class="leaf"><a href="1578.html">Multiple Views</a></li>
+<li class="leaf"><a href="1174.html">Multiple Volume Flow Domain</a></li>
+<li class="leaf"><a href="929.html">Parallel Configuration</a></li>
+<li class="leaf"><a href="984.html">Particles or Streamlines</a></li>
+<li class="leaf"><a href="765.html">Punch a Hole in a Face</a></li>
+<li class="leaf"><a href="934.html">Relaxation Factors in RANS Flow Solvers</a></li>
+<li class="leaf"><a href="969.html">Run, Stop, and Lock Controls</a></li>
+<li class="leaf"><a href="836.html">Telemetry Posting to TwitPic and Twitter</a></li>
+<li class="leaf active-trail"><a href="1147.html" class="active">Topology Operations</a></li>
+<li class="leaf"><a href="766.html">Trim a Face</a></li>
+<li class="leaf"><a href="538.html">Use an Image as a Background</a></li>
+<li class="leaf"><a href="732.html">Using Fields and Variables</a></li>
+<li class="leaf"><a href="532.html">View a Mesh</a></li>
+<li class="leaf"><a href="669.html">Visual Facets Control</a></li>
+<li class="leaf"><a href="668.html">Visual Finish</a></li>
+<li class="leaf last"><a href="667.html">Visualization Preferences</a></li>
+</ul></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1147 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:03:01 GMT -->
+</html>

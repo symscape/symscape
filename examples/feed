@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.symscape.com/examples" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Examples</title>
+    <link>https://www.symscape.com/examples</link>
+    <description></description>
+    <language>en</language>
+          <item>
+    <title>Electronics Cooling Fluid Comparison Study</title>
+    <link>https://www.symscape.com/examples/rans/electronics-cooling-fluid-comparison-study</link>
+    <description>&lt;p&gt;Your choice of cooling fluid for an electronic device, can have a profound effect on its overall design and operation costs. So it&#039;s interesting to note that recent cooling strategies for computers include &lt;a href=&quot;/blog/computers-cooled-in-mineral-oil&quot;&gt;immersion of the entire computer in mineral oil&lt;/a&gt; as a cost-effective alternative to traditional air cooling. Which strategy do you pursue? Let CFD guide your decision - it is easy to switch the cooling fluid in a &lt;a href=&quot;/product/professional&quot;&gt;Caedium&lt;/a&gt; CFD simulation so you can make easy comparisons.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/examples/coolingfluids/mineral-oil-cooled-streamlines.png&quot; alt=&quot;Caedium CFD Electronics Cooling Simulation&quot; width=&quot;500&quot; height=&quot;402&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Caedium CFD Electronics Cooling Simulation&lt;/strong&gt;&lt;/span&gt;Mineral oil streamlines colored by temperature&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/rans/electronics-cooling-fluid-comparison-study&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/rans/electronics-cooling-fluid-comparison-study#comments</comments>
+ <category domain="https://www.symscape.com/examples/rans">RANS Flow</category>
+ <pubDate>Tue, 11 Sep 2012 20:07:47 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1278 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Loheed Technologies Evaluates Caedium for Marine Applications</title>
+    <link>https://www.symscape.com/examples/rans/loheed-technologies-evaluates-caedium-for-marine-applications</link>
+    <description>&lt;p&gt;Richard Loheed is an accomplished marine engineer, with over 20 years of experience in the design of advanced control systems for marine vehicles. Looking to enhance the consultancy services offered by &lt;a href=&quot;http://www.loheedtech.com/&quot;&gt;Loheed Technologies&lt;/a&gt;, Rick recently began evaluating &lt;a href=&quot;/product/professional&quot;&gt;Caedium Professional&lt;/a&gt; for marine CFD applications. &lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/sail/caedium-sail.png&quot; alt=&quot;Caedium Performing a Sail CFD Simulation&quot; width=&quot;500&quot; height=&quot;288&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Caedium Performing a Sail CFD Simulation: &lt;/strong&gt;Image Courtesy of Richard Loheed&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/rans/loheed-technologies-evaluates-caedium-for-marine-applications&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/rans/loheed-technologies-evaluates-caedium-for-marine-applications#comments</comments>
+ <category domain="https://www.symscape.com/examples/rans">RANS Flow</category>
+ <pubDate>Wed, 25 Jul 2012 14:12:16 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1253 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>CFD Analysis of a Sail Yacht from SketchUp</title>
+    <link>https://www.symscape.com/examples/rans/cfd-analysis-sail-yacht-sketchup</link>
+    <description>&lt;p&gt;A sail yacht is a great example of an aerodynamic vehicle that relies totally on the wind for propulsion. And you guessed it, where there&#039;s aerodynamics there&#039;s also an opportunity for Computational Fluid Dynamics (CFD) to make an impact. CFD has been a primary tool in the aerodynamic optimization of many recent sail yachts. This is especially true in competitive sail yacht design, such as the yachts that compete for the &lt;a href=&quot;http://www.americascup.com/&quot;&gt;America&#039;s Cup&lt;/a&gt;. If your budget doesn&#039;t extend to the scale of &lt;a href=&quot;http://en.wikipedia.org/wiki/Larry_Ellison#2010_America.27s_Cup&quot;&gt;Larry Ellison&#039;s&lt;/a&gt; then fear not, you can still benefit from CFD analysis of your yacht design in combination with &lt;a href=&quot;http://sketchup.google.com/&quot;&gt;Google SketchUp&lt;/a&gt; and &lt;a href=&quot;/product/professional&quot;&gt;Caedium Professional&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img alt=&quot;Streamlines Around a Sail Yacht&quot; src=&quot;/files/examples/yacht/yacht-streamlines.png&quot; width=&quot;504&quot; height=&quot;359&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Streamlines Around a Sail Yacht&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/rans/cfd-analysis-sail-yacht-sketchup&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/rans/cfd-analysis-sail-yacht-sketchup#comments</comments>
+ <category domain="https://www.symscape.com/examples/rans">RANS Flow</category>
+ <pubDate>Thu, 17 Nov 2011 20:45:21 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1162 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Aerodynamic Study of a Kyosho Mini-Z RC Model Racecar</title>
+    <link>https://www.symscape.com/examples/rans/aerodynamic-study-kyosho-mini-z-rc-model-racecar</link>
+    <description>&lt;p&gt;Kyosho Mini-Z RC model racecars are 1/27 scale and race at speeds up to 10 m/s. &lt;a href=&quot;http://haagringnews.blogspot.com/&quot;&gt;Fernando Freitas&lt;/a&gt; races them as a hobby and was wondering about the effect of aerodynamics on his car&#039;s performance. Fernando was aware of Computational Fluid Dynamics (CFD) and thought it might help him satisfy his curiosity. At the same time Fernando came across &lt;a href=&quot;/product/professional&quot;&gt;Caedium Professional&lt;/a&gt; and, with a free 30-day trial, set to work. Fernando remarked:&lt;/p&gt;
+&lt;p&gt;&lt;cite&gt;&amp;quot;I found it [Caedium] to be extremely useful and easy to use.&amp;quot;&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;a href=&quot;http://haagringnews.blogspot.com/2011/06/virtual-wind-tunnel-scoop-wing.html&quot;&gt;&lt;img title=&quot;Mini-Z Caedium CFD Simulation&quot; alt=&quot;Mini-Z Caedium CFD Simulation&quot; src=&quot;/files/examples/miniz/Mini-Z-Caedium.jpg&quot; width=&quot;504&quot; height=&quot;433&quot; /&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Mini-Z RC Model Caedium CFD Simulation: &lt;/strong&gt;Image courtesy of Fernando Freitas&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/rans/aerodynamic-study-kyosho-mini-z-rc-model-racecar&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/rans/aerodynamic-study-kyosho-mini-z-rc-model-racecar#comments</comments>
+ <category domain="https://www.symscape.com/examples/rans">RANS Flow</category>
+ <pubDate>Fri, 29 Jul 2011 16:02:31 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1120 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>CFD for Solar Panels</title>
+    <link>https://www.symscape.com/examples/rans/cfd-for-solar-panels</link>
+    <description>&lt;p&gt;Solar panels are solid-state, right? No moving parts and certainly no fluid flow - unless you count the rivers of electrons flowing in a semi-conductor. So what role is there for &lt;a href=&quot;/computational-fluid-dynamics&quot;&gt;Computational Fluid Dynamics (CFD)&lt;/a&gt;? Once installed, how can you be sure that those brackets holding the panels in place are strong enough? Or even if your roof is strong enough to cope with the wind loading on the solar panels? Remain calm, CFD is here to help in the form of &lt;a href=&quot;/product/professional&quot;&gt;Caedium Professional&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/examples/solarpanels/solar.png&quot; width=&quot;504&quot; height=&quot;462&quot; alt=&quot;Solar Panels on Shed Roof&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Solar Panel Mounted on a Shed Roof&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/rans/cfd-for-solar-panels&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/rans/cfd-for-solar-panels#comments</comments>
+ <category domain="https://www.symscape.com/examples/rans">RANS Flow</category>
+ <pubDate>Wed, 02 Feb 2011 00:54:58 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1040 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>F1 in Schools World Finals CFD Analysis</title>
+    <link>https://www.symscape.com/examples/rans/cfd-f1-in-schools-finals</link>
+    <description>&lt;p&gt;Brett Sizeland and his &lt;a href=&quot;http://www.facebook.com/pages/Basilisk-Performance/370209153624&quot;&gt;Basilisk Performance&lt;/a&gt; team &lt;a href=&quot;/news/new-aus-f1-in-schools-champs-helped-by-caedium&quot;&gt;won the Australian F1 in Schools title&lt;/a&gt; in March 2010, helped by Computational Fluid Dynamics (CFD) simulations performed in &lt;a href=&quot;/product/professional&quot;&gt;Caedium Professional&lt;/a&gt;. However, it doesn&#039;t end there, by winning the Australian title the team qualified for the F1 in Schools World Finals to be held September 20-22, 2010 in Singapore. Without pausing for breath, Brett set about designing a new car, with help again provided by Caedium CFD simulations.&lt;/p&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ZnQYZ1lAn1A&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/rans/cfd-f1-in-schools-finals&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/rans/cfd-f1-in-schools-finals#comments</comments>
+ <category domain="https://www.symscape.com/examples/rans">RANS Flow</category>
+ <pubDate>Thu, 16 Sep 2010 16:07:19 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">965 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Screencast of Flow Through a Pipe into a Box </title>
+    <link>https://www.symscape.com/examples/rans/screencast-pipe-box-flow</link>
+    <description>&lt;p&gt;This screencast shows how to use &lt;a href=&quot;/product/professional&quot;&gt;Caedium Professional&lt;/a&gt; to create the geometry and simulate a steady-state turbulent CFD simulation of air flow through a pipe into a box. Also you will see how to create velocity vectors and particle tracks within the flow volume and monitor residuals as the simulation converges.&lt;/p&gt;
+&lt;p&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/2U-8mGBQMvM&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/rans/screencast-pipe-box-flow&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/rans/screencast-pipe-box-flow#comments</comments>
+ <category domain="https://www.symscape.com/examples/rans">RANS Flow</category>
+ <pubDate>Fri, 13 Aug 2010 19:14:34 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">938 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Open Wheel Race Car CFD Analysis</title>
+    <link>https://www.symscape.com/examples/rans/open-wheel-racecar-cfd</link>
+    <description>&lt;p&gt;Open wheel race cars, such as those found in Formula 1 (F1), are characterized by &lt;a href=&quot;/blog/f1_aero&quot;&gt;complex aerodynamics&lt;/a&gt;. With geometry preparation, &lt;a href=&quot;/node/244&quot;&gt;meshing&lt;/a&gt;, physics setup, solver control, and results extraction all combined in a single unified simulation environment, &lt;a href=&quot;/product/professional&quot;&gt;Caedium Professional&lt;/a&gt; is a good choice for assessing the aerodynamic performance of such cars using &lt;a href=&quot;/computational-fluid-dynamics&quot;&gt;Computational Fluid Dynamics (CFD)&lt;/a&gt;.&lt;/p&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;//www.youtube.com/embed/bcMoXHRnNZ8&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/rans/open-wheel-racecar-cfd&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/rans/open-wheel-racecar-cfd#comments</comments>
+ <category domain="https://www.symscape.com/examples/rans">RANS Flow</category>
+ <pubDate>Wed, 24 Mar 2010 20:10:33 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">903 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Electric Race Car CFD Analysis</title>
+    <link>https://www.symscape.com/examples/rans/cfd-electric-race-car</link>
+    <description>&lt;p&gt;Many see the future of automobiles to be electric, so it&#039;s only natural to assume that the same may apply to motor racing. Luke Horsfall is one who believes electric race cars have a bright future, having set up Horsfall Racing (along with Laura Horsfall) to build electric race cars and race them in the &lt;a href=&quot;http://www.greenpower.co.uk/racing/formula24-plus&quot;&gt;F24+ electric race car class&lt;/a&gt; in the UK. The restrictions of this particular formula keep budgets and speeds relatively low (at least by Formula 1 standards). Making best use of the limited power in F24+ is crucial, and that places the emphasis on low-drag, aerodynamic race cars. I bet you can guess where this is heading - this is territory ripe for &lt;a href=&quot;/product/professional&quot;&gt;Caedium&#039;s Computational Fluid Dynamics (CFD) capabilities&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img alt=&quot;Super Swoosh&quot; src=&quot;/files/examples/electricracecar/super-swoosh.png&quot; width=&quot;400&quot; height=&quot;208&quot; /&gt; &lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Super Swoosh:&lt;/strong&gt;Horsfall Racing&#039;s 2009 Electric Race Car&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/rans/cfd-electric-race-car&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/rans/cfd-electric-race-car#comments</comments>
+ <category domain="https://www.symscape.com/examples/rans">RANS Flow</category>
+ <pubDate>Sat, 20 Mar 2010 00:40:41 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">898 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>F1 in Schools Dragster v2.0 CFD Analysis</title>
+    <link>https://www.symscape.com/examples/rans/cfd-f1-in-schools-v2</link>
+    <description>&lt;p&gt;After reviewing the &lt;a href=&quot;/product/rans&quot;&gt;Caedium RANS Flow&lt;/a&gt; results posted in &lt;a href=&quot;/examples/rans/cfd-f1-in-schools&quot;&gt;&amp;quot;CFD Analysis of an F1 in Schools Dragster,&amp;quot;&lt;/a&gt; Brett Sizeland, Basilisk Performance team&#039;s chief designer, has been busy updating his F1 in Schools CO2 dragster design. Using the same geometry preparation process, physics setup, and post-processing, all within Caedium&#039;s unified simulation environment, we were able to rapidly perform the new simulation and extract the flow results presented here. &lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/f1is-v2-u-front.preview.png&quot; alt=&quot;CO2 Jet Car v2 Front View of Velocity&quot; width=&quot;640&quot; height=&quot;480&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;F1 in Schools v2.0 Dragster&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/examples/rans/cfd-f1-in-schools-v2&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/examples/rans/cfd-f1-in-schools-v2#comments</comments>
+ <category domain="https://www.symscape.com/examples/rans">RANS Flow</category>
+ <pubDate>Wed, 03 Mar 2010 15:15:14 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">890 at https://www.symscape.com</guid>
+  </item>
+  </channel>
+</rss>

@@ -1,0 +1,359 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1145 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Cloud Burst Service | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="745.html" />
+<link rel="up" href="../tips.html" />
+<link rel="next" href="1144.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-1145 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="../tips.html">Tips</a></div>                  <h1 class="title">Cloud Burst Service</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1145" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on October 16, 2011 - 15:41        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p><strong>Update</strong>: This feature is deprecated in the latest version of Caedium.</p>
+<p>Caedium running on <a href="930.html">Windows HPC Server 2008 R2 SP2 (HPC Server)</a> can perform CFD simulations unbounded by on-premises hardware limitations thanks to the 'Burst to Azure' capability that uses the Windows Azure cloud service.</p>
+<h3>Cloud Burst Features</h3>
+<ul>
+<li>Secure HTTPS communications between HPC Server and the Azure service </li>
+<li>Advanced job scheduling using the HPC Cluster Manager </li>
+<li>Simple Azure Compute Instance changes </li>
+<li>Simple scaling up or down </li>
+</ul>
+<h3>Assumptions</h3>
+<p>For a video run through of the Burst to Azure setup see <a href="http://www.microsoft.com/en-us/showcase/details.aspx?uuid=f529f179-1e9b-479d-b43e-58e1542bab26">"How to deploy Windows Azure Worker Nodes as part of a Windows HPC Cluster"</a>.</p>
+<ol>
+<li>You have set up a <a href="http://www.microsoft.com/windowsazure/">Windows Azure account</a>. </li>
+<li>In <strong>Hosted Services, Storage Accounts &amp; CDN</strong> with the same <strong>affinity group name</strong> create:
+<ul>
+<li><strong>Hosted Service</strong> - you will need the following hosted service parameter to configure the Burst to Azure service in HPC Server:
+<ul>
+<li><strong>Name</strong> </li>
+</ul>
+</li>
+<li><strong>Storage Account</strong> - you will need the following storage account parameters to configure the Burst to Azure service in HPC Server and the Caedium service:
+<ul>
+<li><strong>Name</strong> </li>
+<li><strong>Primary access key</strong> </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>You have administrator access to HPC Server to run the Azure service setup commands. </li>
+<li>You have configured the necessary <a href="http://technet.microsoft.com/en-us/library/gg481749(WS.10).aspx">security certificate sharing between HPC Server and your Azure hosted service account</a>. </li>
+<li>You have configured an Azure node template. </li>
+<li>You have downloaded, installed, and activated the Caedium <a href="../product/rans.html">RANS Flow</a> or <a href="../product/professional.html">Professional</a> add-ons. </li>
+</ol>
+<h3>Procedure</h3>
+<ol>
+<li>Upload the solver distribution from Caedium to your Azure storage account using the command: <strong>&quot;C:\Program Files\Caedium\modules\ofburst\OfCloudUpload.exe&quot; -StorageName &lt;your storage name here&gt; -StorageKey &lt;your storage primary access key here&gt; -BlobId openflow.zip -Dir &quot;C:\Program Files\Caedium\openflow&quot;</strong> </li>
+<li>In a temporary directory create the Caedium Azure runtime package using the command: <strong>hpcpack create OfCloudBurst.zip &quot;C:\Program Files\Caedium\modules\ofburst&quot;</strong> </li>
+<li>Upload the Caedium Azure runtime package using the command: <strong>hpcpack upload OfCloudBurst.zip /scheduler:&lt;your head node computer name&gt; /nodetemplate:&quot;&lt;your azure node template name&gt;&quot; /relativepath:openflow</strong> </li>
+<li>In the HPC Server <strong>HPC Cluster Manager</strong> select <strong>Node Management</strong> and then in the <strong>Actions</strong> panel click <strong>Add Node...</strong>
+<ol>
+<li>In the <strong>Add Node Wizard</strong> select <strong>Add Windows Azure nodes</strong>, make sure <strong>Select Deployment Method</strong> is selected and click <strong>Next</strong>. </li>
+<li>Set the new node parameters:
+<ul>
+<li><strong>Windows Azure node template</strong> = &lt;your azure node template name&gt; </li>
+<li><strong>Number of Windows Azure nodes</strong> = e.g., 2 </li>
+<li><strong>Size of Windows Azure nodes</strong> = e.g., Extra Large </li>
+</ul>
+</li>
+<li>Click <strong>Next</strong> and then <strong>Finish</strong>. </li>
+</ol>
+</li>
+<li>Select an Azure node in the <strong>Nodes List</strong> and then in the <strong>Actions</strong> panel click <strong>Start</strong>. </li>
+<li>The <strong>Start Windows Azure Nodes</strong> dialog will open - click <strong>Start</strong>. </li>
+<li>To monitor progress click the <strong>Provisioning Log </strong>tab. </li>
+<li>Once the <strong>Node State</strong> reaches <strong>Offline</strong>, select all of the Azure nodes in the <strong>Nodes List</strong> and then in the <strong>Actions</strong> panel click <strong>Bring Online</strong>. </li>
+<li>In Caedium select the <strong>File</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> and click the <strong>Preferences</strong> button <img src="../files/tutorials/shared/preferences.png" />. In the Properties Panel turn on the preference <strong>Physics-&gt;OpenFOAM-&gt;Diagnostics</strong> to see feedback on the cloud service. </li>
+<li>Set the preference <strong>OpenFOAM-&gt;Parallel</strong> to <strong>Cloud Burst</strong>. </li>
+<li>Set the following <strong>Parallel:Cloud Burst</strong> associated preferences:
+<ul>
+<li><strong>Azure Storage Name</strong> = &lt;your storage name here&gt; </li>
+<li><strong>Azure Storage Name-&gt;Azure Storage Key</strong> = &lt;your storage primary access key here&gt; </li>
+<li><strong>Processes</strong> = e.g., 4 (Extra Large Compute Instance has 4 processors) </li>
+</ul>
+</li>
+<li>Try running a small simulation to test the service and if it is successful proceed to run your actual simulations </li>
+<li>When you have completed your simulations, delete your deployment by selecting the Azure nodes in the <strong>Nodes List</strong>, then in the <strong>Actions</strong> panel click <strong>Stop</strong>. </li>
+</ol>
+<h3>Notes</h3>
+<ul>
+<li>Azure charges for storage, bandwidth, and CPU time usage. </li>
+<li>Your billable CPU time starts as soon as you commit to deploying a service and continues as long as the service is deployed - whether it is running a simulation or not. </li>
+<li>If there are failures in the service your simulation may not run correctly. </li>
+<li>If you interrupt a running simulation, the simulation will continue to run on Azure. </li>
+<li>You might find it useful to browse your Azure storage account like a file system using <a href="http://www.cloudberrylab.com/free-microsoft-azure-explorer.aspx">CloudBerry</a>. You can then delete any failed or redundant job files. </li>
+</ul>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="745.html" class="page-previous" title="Go to previous page">‹ Clipping a View</a>
+                    <a href="../tips.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="1144.html" class="page-next" title="Go to next page">Cloud Service ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="collapsed"><a href="817.html">RANS Flow</a></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="expanded last active-trail"><a href="../tips.html">Tips</a><ul class="menu"><li class="leaf first"><a href="723.html">Accuracy Tool</a></li>
+<li class="leaf"><a href="745.html">Clipping a View</a></li>
+<li class="leaf active-trail"><a href="1145.html" class="active">Cloud Burst Service</a></li>
+<li class="leaf"><a href="1144.html">Cloud Service</a></li>
+<li class="leaf"><a href="779.html">Color Map</a></li>
+<li class="leaf"><a href="411.html">Create an Anaglyph 3D Stereoscopic Image</a></li>
+<li class="leaf"><a href="1247.html">Import a SketchUp Model</a></li>
+<li class="leaf"><a href="838.html">Import an OpenFOAM Mesh</a></li>
+<li class="leaf"><a href="930.html">Microsoft Windows HPC Server 2008 Cluster Configuration</a></li>
+<li class="leaf"><a href="1578.html">Multiple Views</a></li>
+<li class="leaf"><a href="1174.html">Multiple Volume Flow Domain</a></li>
+<li class="leaf"><a href="929.html">Parallel Configuration</a></li>
+<li class="leaf"><a href="984.html">Particles or Streamlines</a></li>
+<li class="leaf"><a href="765.html">Punch a Hole in a Face</a></li>
+<li class="leaf"><a href="934.html">Relaxation Factors in RANS Flow Solvers</a></li>
+<li class="leaf"><a href="969.html">Run, Stop, and Lock Controls</a></li>
+<li class="leaf"><a href="836.html">Telemetry Posting to TwitPic and Twitter</a></li>
+<li class="leaf"><a href="1147.html">Topology Operations</a></li>
+<li class="leaf"><a href="766.html">Trim a Face</a></li>
+<li class="leaf"><a href="538.html">Use an Image as a Background</a></li>
+<li class="leaf"><a href="732.html">Using Fields and Variables</a></li>
+<li class="leaf"><a href="532.html">View a Mesh</a></li>
+<li class="leaf"><a href="669.html">Visual Facets Control</a></li>
+<li class="leaf"><a href="668.html">Visual Finish</a></li>
+<li class="leaf last"><a href="667.html">Visualization Preferences</a></li>
+</ul></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1145 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:45 GMT -->
+</html>

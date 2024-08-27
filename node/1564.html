@@ -1,0 +1,396 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1564 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Questions about the lift monitor (and lift) in a compressible-flow simulation | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-forum page-node-1564 section-node one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../forum.html">Forums</a> › <a href="../forum/46.html">Questions</a></div>                  <h1 class="title">Questions about the lift monitor (and lift) in a compressible-flow simulation</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1564" class="node node-type-forum clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by PeterG on February 16, 2015 - 13:30        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_46 first last"><a href="../forum/46.html" rel="tag" title="Get answers to product (e.g., Caedium) questions. View Ratings">Questions</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>Hello.<br />
+I have some questions about the lift monitor in a compressible-flow simulation.</p>
+<p>1) I have an incompressible-flow simulation that I used to just get my simulation up and running. I have to use a compressible-flow simulation, however, because some local air velocities reach Mach 0.8 - 0.9. That said, the incompressible flow simulation runs well, so I started working with a compressible-flow version.</p>
+<p>In compressible-mode, the otherwise same simulation gives pressure mapping results that appear decreased (versus the incompressible simulation), and the lift monitor readings are markedly disparate. For example, the airfoil elements’ pressure mapping shows them generating low pressure on their upper surfaces, yet the lift monitor shows them as producing negative lift. (The simulation does not include their lower surfaces as there aren’t any to include; imagine the curved roof of a car generating lift without having an underside (of the roof) in contact with the fluid flow. What would be the “underside of the car” in my simulation is an inlet, from which air is flowing into the rest of the flow volume. I have left the interior of the “wing” out of the simulation altogether, for simplicity.</p>
+<p>Of a number of airfoil elements, the lift monitor shows the “weaker” ones as generating the most lift, and the “stronger” ones as generating very little lift. The lift monitor also shows essentially non-lifting surfaces as generating quite a bit of lift. This is not at all the case when I run the same simulation in incompressible mode, unless I change the substance (air) pressure from zero to atmospheric pressure (2216.2 Lbs/sq foot is what I am using), in which case the same thing happens. </p>
+<p>Any ideas what might be causing these findings? I am happy to share both incompressible-flow and compressible-flow versions of my files via Dropbox.</p>
+<p>2) Also, to get more experience with a compressible flow simulation, I ran the “Transonic Flow Over the NACA 0012 Airfoil” simulation with a range of velocities from 50fps-1100fps (in 50 fps increments) in both compressible and incompressible mode. I understand that the incompressible flow simulations are inaccurate above ~ Mach 0.3, but I was curious.<br />
+I got lift readings roughly three times higher for the incompressible simulations, across the whole range of velocities. Clearly, I am doing something wrong, though having the above problems with compressible-flow, I am at a loss of where t start my troubleshooting.</p>
+<p>Many thanks in advance for any help!</p>
+  <div class="forum-topic-navigation clear-block">
+          <a href="1506.html" class="topic-previous" title="Go to previous forum topic">‹ How to define a fan in Caedium for PC cabinet cooling</a>
+              <a href="1557.html" class="topic-next" title="Go to next forum topic">Questions about inlet/outlets and pressure ›</a>
+      </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+  
+  <a id="comment-2164"></a>
+<div class="comment comment-published first odd clearfix">
+  
+      <h3 class="title">
+      <a href="1564.html#comment-2164" class="active">Lift of a non-closed body</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on February 16, 2015 - 17:50.  </div>
+
+  <div class="content">
+    <p>The first thing to check is whether your simulations are converged?<br />
+What value are your residuals? You want to see them below 1e-3.<br />
+Is you lift monitor converged?</p>
+<p>If not converged then the following comments are irrelevant.</p>
+<p>If you change the ambient (reference) pressure of a compressible simulation you are indirectly changing the density which means you are changing the Reynolds Number, so you should expect to see different results.</p>
+<p>The lift of a non-closed body (as in your case) for an incompressible simulation requires that you add the ambient pressure to the relative pressure (integrate this combined pressure to give your forces) produced by the simulation assuming your reference pressure is zero - which it should be for numerical robustness. When you did run the incompressible simulation with an ambient pressure (i.e., not zero) it may have converged - it which case it is likely the more correct answer for your non-closed body lift. A converged compressible simulation uses ambient pressure directly (not relative) so the lift is likely correct for the conditions you have specified.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2165"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1564.html#comment-2165" class="active">The incompressible simulation</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by PeterG on February 18, 2015 - 21:54.  </div>
+
+  <div class="content">
+    <p>The incompressible simulation has converged, while the compressible simulation has partially converged. I have to refine the mesh. </p>
+<p>I do not understand what you are saying regarding the lift of a non-closed body. Specifically, I don’t understand about adding the absolute and relative pressures. Are you saying that I should run the incompressible simulation with the reference pressure set at zero, then see what relative (lifting) pressure I get, then run the simulation again with the reference pressure set to what the maximum relative pressure is?</p>
+<p>Connected with this, I was wondering if it is simplest/best for non-closed bodies to just run the solver in compressible mode from the start, so I can set the reference pressure to atmospheric and thereafter know exactly what the lift is without further manipulation.</p>
+<p>After nearly a year of using Caedium, I remain amazed by its capabilities and appreciative of your support. Thank you for both.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2166"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="1564.html#comment-2166" class="active">Gauge vs absolute pressure</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on February 19, 2015 - 11:21.  </div>
+
+  <div class="content">
+    <p>Upon review I'm not sure using absolute pressure is useful for assessing your design.</p>
+<p><strong>Explanation</strong></p>
+<p>For a closed body flow simulation the absolute atmospheric pressure acts equally on all surfaces and therefore cancels out leaving the same lift/drag results whatever the reference pressure. For an open body the atmospheric pressure is important and will likely dominate the overall forces. All incompressible simulations should use a reference pressure of zero for numerical stability.</p>
+<p>If you want to see the effect of atmospheric pressure in your integrated forces for an imcompressible simulations you need to create a new result for (p + pAtmospheric), where pAtmospheric is a constant. Then use that to create a new force result. This converts the gauge pressure to absolute pressure.</p>
+<p>As you said it is easier to just use the exact atmospheric pressure in a compressible flow simulation if you can get it to converge adequately.</p>
+<p><strong>Suggestion</strong></p>
+<p>I guess another way to look at this would be to assume that the opening in your body is acted upon by a pseudo reference pressure is which case the incompressible force result stands as is (using gauge pressure) and you need to convert the compressible pressure from absolute to gauge, by creating a new results (p - pAtmoshperic) and then using it to create a new force result - this likely will be more meaningful relative to your design parameters. You should then find the compressible and incompressible forces in better agreement.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2167"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1564.html#comment-2167" class="active">I was thinking that I can</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by PeterG on February 20, 2015 - 10:03.  </div>
+
+  <div class="content">
+    <p>I was thinking that I can convert the non-closed body into a closed body by turning the inlet and outlets into walls and then ascribing a force to those walls based on [only] the dynamic pressure that would be associated with them. For example, an inlet with a specific fluid flow is generating vectored thrust "away from" the part of the flow volume adjacent to it, while an outlet does the opposite. As my inlet and outlets have fixed velocities, this seems possible. </p>
+<p>Is this what you are suggesting?</p>
+<p>Also, does one of the Caedium tutorials show how to create a new result (in terms of p-pAtmospheric)?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2168"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="1564.html#comment-2168" class="active">Gauge pressure to calculate force for a compressible flow</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on February 20, 2015 - 10:29.  </div>
+
+  <div class="content">
+    <p>You can not assign pressure to walls. Instead create the new result (Frelative) and use it as a force monitor on your existing walls, ignoring your inlets and outlets. This assumes the gauge pressure on the inlets and outlets is zero.</p>
+<p>For an example of new result creation see the tutorial <a href="288.html">"Fluid Flow Around a Sphere: Theory Comparison"</a>.</p>
+<p>Note this only applies to compressible simulations which use absolute or atmospheric pressure.</p>
+<p>Specifically you need to create:<br />
+pGauge = p - pAtmospheric, where pAtmospheric is a constant. To get the units right you need to first create a scalar with units Force and then another scalar with units Area. Then use the binary operator Divide to create the final scalar with the correct units, i.e., N.m-2. Rename this final constant to pAtmospheric and in its properties enter your atmospheric pressure you used as your reference pressure for your compressible simulation.</p>
+<p>Frelative = Sum(((pGauge*n) + tau) * A), where n and tau are both vectors</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2169"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1564.html#comment-2169" class="active">I will try this. Thank you</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by PeterG on February 20, 2015 - 10:34.  </div>
+
+  <div class="content">
+    <p>I will try this. Thank you for your time and help.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2179"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1564.html#comment-2179" class="active">I did this and have a few</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by PeterG on March 3, 2015 - 08:38.  </div>
+
+  <div class="content">
+    <p>I did this and have a few questions:</p>
+<p>1) Should I set the substance reference air pressure to zero, like for an incompressible flow simulation? When I did that, the solver won't run, but with a reference pressure of 0.001 or anything else, it does.</p>
+<p>2) As I created it, Frelative is a vector field that seems to be plottable for one point in time. Can I make it be a vector variable that changes in real time, like the lift/drag monitors?</p>
+<p>3) What about the choices between scalar/vector in the process of creating Relative? I know that n and tau are vectors. What about the other operands for which I am given choices between scalar and vector? I chose vector for all of them, is this correct?</p>
+<p>Thanks in advance for your help.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2180"></a>
+<div class="comment comment-published last even clearfix">
+  
+      <h3 class="title">
+      <a href="1564.html#comment-2180" class="active">Absolute pressure for compressible reference pressure</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on March 3, 2015 - 10:06.  </div>
+
+  <div class="content">
+    <p>In answer to your questions:</p>
+<p>1) For the compressible solver you have to use absolute pressure as your reference pressure in your Substance. This means setting the correct pressure for the conditions you want to simulate. If your simulation is in free air then your reference pressure should be 101000 N/m2. If you use a lower pressure then you are changing the state conditions. This is not CFD, this is fluid mechanics using the <a href="http://en.wikipedia.org/wiki/Ideal_gas_law">ideal gas law</a>. The special case for CFD is incompressible flow where we use the gauge pressure as the reference pressure usually set to zero.</p>
+<p>2) Frelative should be a vector variable. Make sure you created the final Unary operator Sum using the vector field.</p>
+<p>3) If you create a result with a vector then all derived results will also be vectors. In this instance just keep using the vector for each operand, as you did.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div></div></div></div></div></div></div></div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1564 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:10 GMT -->
+</html>

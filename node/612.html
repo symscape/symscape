@@ -1,0 +1,286 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/612 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Overview: Geometry To Results | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="../tutorials/essentials.html" />
+<link rel="up" href="../tutorials/essentials.html" />
+<link rel="next" href="827.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-612 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="../tutorials/essentials.html">Essentials Manual</a></div>                  <h1 class="title">Overview: Geometry To Results</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-612" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on February 19, 2008 - 10:47        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>All <a href="../computer-aided-engineering.html">Computer-Aided Engineering (CAE)</a> analysis software, including Caedium, proceeds from geometry creation or import through physics specification to results analysis. This general process is reflected in the 3 major categories in the <a href="../tutorials/essentials.html#toolpalette">Caedium Tool Palette</a>. Each phase has a specific role to play in an analysis, as outlined in this article. The simulation process description that follows assumes you are using <a href="../product/professional.html">Caedium Professional (Pro)</a>.</p>
+<p>Prefer a screencast over words? Then try <a href="../examples/rans/screencast-pipe-box-flow.html">"Screencast of Flow Through a Pipe into a Box."</a></p>
+<h3>Geometry</h3>
+<p>All CAE analysis begins with a geometry model. The geometry could be <a href="../geometry-exchange.html">imported</a> from a Computer-Aided Design (CAD) system or be created directly in the CAE analysis tool. In Caedium Pro we cater for either approach or a combination of the two. </p>
+<p><span class="inline inline-center"><img src="../files/tutorials/geometrytoresults/geometry.png" alt="Geometry" width="287" height="226" /><br /><span class="caption"><strong>Geometry</strong></span></span></p>
+<p>The objective of the geometry stage is to produce a <a href="../solid-modeling.html">Boundary Representation (BRep)</a> of the region for analysis. In the case of a structural analysis, the BRep should represent the solid material. In the case of a fluid flow or <a href="../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> analysis, the BRep should represent the region occupied by the fluid.</p>
+<p>For external fluid flow analysis using the Caedium Panel Flow add-on, it is not necessary to define an outer boundary for your simulation. </p>
+<p>To perform a simulation using the Caedium RANS Flow add-on you have to define a single flow volume that represents your fluid. In the case of an external flow around an object (e.g., a wing) you will need to subtract the object from the surrounding outer boundary (often a simple box).</p>
+<p>Sometimes, although the geometry is a valid BRep, it may contain small features that are irrelevant to the simulation, such as sliver faces. These small features can cause increased computation run-times without any additional benefits. It is therefore worthwhile to simplify the geometry to suppress these features. Caedium Pro provides face and edge join tools to assist in this geometry simplification process.</p>
+<p><span class="inline inline-center"><img src="../files/tutorials/geometrytoresults/simplified-geometry.png" alt="Simplified Geometry" width="287" height="226" /><br /><span class="caption"><strong>Simplified Geometry</strong></span></span></p>
+<p>With a valid BRep geometry model that is free from irrelevant features, we can begin the physics specification phase.</p>
+<h3>Physics</h3>
+<p>Some CAE analysis tools require an intermediate <a href="../meshing.html">meshing</a> phase prior to physics specification, but Caedium Pro does not. Instead physics conditions in Caedium Pro are specified directly onto the geometry (by simple <a href="39.html">drag and drop</a> operations), which avoids the tedium of re-specifying conditions if the mesh changes.</p>
+<p>Typically you will need to assign substance (or material) properties, such as air or water, to the continuum (or volume) under analysis, and boundary conditions, such as walls, inlets and outlets, to relevant faces. For an external fluid flow simulation, you'll also need to specify the free-stream velocity for the continuum.</p>
+<p><span class="inline inline-center"><img src="../files/tutorials/geometrytoresults/physics.png" alt="Physics" width="287" height="226" /><br /><span class="caption"><strong>Physics Conditions: </strong>Blue = Walls, Red = Inlet, Green = Outlet</span></span></p>
+<p>A major consideration in any simulation is the level of accuracy required. In turn, accuracy is in large part determined by mesh resolution. The higher the mesh resolution, typically the higher is the simulation accuracy, but at the cost of a slower turnaround time. The interplay between accuracy and turnaround time is a major consideration in any simulation. In Caedium Pro, the default accuracy is usually adequate to obtain a simulation result. If there is a particular area that you know requires extra resolution, then an accuracy constraint can be applied directly to the geometry in that region.</p>
+<p>With the physics and accuracy constraints applied to your geometry model, it's time to proceed to the simulation results.</p>
+<h3>Results</h3>
+<p>Most CAE analysis tools have another intermediate phase between physics specification and results analysis where you explicitly run the simulation. Caedium Pro instead creates the mesh and runs the simulation after receiving a results request, such as a request to show the streamlines through a volumes.</p>
+<p><span class="inline inline-center"><img src="../files/tutorials/geometrytoresults/results.png" alt="Results" width="308" height="226" /><br /><span class="caption"><strong>Results: </strong> Streamlines colored by velocity magnitude</span></span></p>
+<p>Caedium Pro, like most CAE analysis tools, uses 3D visualization techniques to create contours, iso-surfaces, vectors and streamlines from the fluid flow simulation results. Also you have the option to view 2D plots of various flow parameters, for example the pressure coefficient distribution over a span on a wing. In Caedium Pro, all the visualization tools are again applied directly to the geometry, so you don't have to re-create views or plots if the mesh changes.</p>
+<p>Caedium Pro supports various 3D export formats (e.g., VRML) and image formats (e.g., JPEG), so you can share results in whatever manner you wish. Also you can share the entire simulation results in a Caedium project file (.sym) and have anyone view it for free using <a href="../product/caedium.html">Caedium</a> without any add-ons.</p>
+<h3>The End</h3>
+<p>So ends the journey from geometry to results. To see how easy it is to use <a href="../product/professional.html">Caedium Professional</a> for fluid flow simulation, consider our 30 day free trial.</p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="../tutorials/essentials.html" class="page-previous" title="Go to previous page">‹ Essentials Manual</a>
+                    <a href="../tutorials/essentials.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="827.html" class="page-next" title="Go to next page">Camera View Control and Entity Selection ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="expanded first active-trail"><a href="../tutorials/essentials.html">Essentials Manual</a><ul class="menu"><li class="leaf first active-trail"><a href="612.html" class="active">Overview: Geometry To Results</a></li>
+<li class="leaf"><a href="827.html">Camera View Control and Entity Selection</a></li>
+<li class="leaf last"><a href="39.html">Tools</a></li>
+</ul></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="collapsed"><a href="817.html">RANS Flow</a></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="collapsed last"><a href="../tips.html">Tips</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/612 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:11 GMT -->
+</html>

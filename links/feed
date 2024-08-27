@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.symscape.com/links" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Links</title>
+    <link>https://www.symscape.com/links</link>
+    <description></description>
+    <language>en</language>
+          <item>
+    <title>OpenFOAM</title>
+    <link>https://www.symscape.com/node/808</link>
+    <description>&lt;p&gt;OpenFOAM&amp;reg;&lt;sup&gt;1&lt;/sup&gt; is a versatile multi-physics, open source&lt;sup&gt;2&lt;/sup&gt;, simulation toolbox produced by OpenCFD. OpenFOAM is renowned for its wide support of numerous &lt;a href=&quot;/computational-fluid-dynamics&quot;&gt;Computational Fluid Dynamics (CFD)&lt;/a&gt; methods.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/808&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/808#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/50">Components</category>
+ <pubDate>Wed, 30 Sep 2009 19:16:45 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">808 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Autopackage</title>
+    <link>https://www.symscape.com/node/601</link>
+    <description>&lt;p&gt;&lt;span class=&quot;inline inline-left&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://code.google.com/p/autopackage/&quot;&gt;&lt;img src=&quot;/files/images/autopackage-logo.png&quot; alt=&quot;Autopackage&quot; width=&quot;135&quot; height=&quot;129&quot; /&gt;&lt;/a&gt;&lt;/span&gt;Installer for Linux programs, used by &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; and its add-ons.&lt;/p&gt;
+&lt;p&gt;For installation instructions see &lt;a href=&quot;/node/1146&quot;&gt;&quot;What is the Linux installation Process.&quot;&lt;/a&gt;&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/601#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/50">Components</category>
+ <pubDate>Mon, 11 Feb 2008 20:58:23 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">601 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>POV-Ray</title>
+    <link>https://www.symscape.com/node/70</link>
+    <description>&lt;p&gt;&lt;span class=&quot;inline inline-left&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.povray.org/&quot;&gt;&lt;img src=&quot;/files/images/povray.jpg&quot; alt=&quot;POV-Ray&quot; width=&quot;152&quot; height=&quot;72&quot; /&gt;&lt;/a&gt;&lt;/span&gt;Free open source photo-realistic &lt;a target=&quot;_blank&quot; href=&quot;http://en.wikipedia.org/wiki/Ray_tracing&quot;&gt;ray tracer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Create POV-Ray files with &lt;a href=&quot;/product/viz&quot;&gt;Caedium Viz Export&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/70&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/70#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/51">Utilities</category>
+ <pubDate>Mon, 05 Feb 2007 13:50:35 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">70 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Aqsis</title>
+    <link>https://www.symscape.com/node/68</link>
+    <description>&lt;p&gt;&lt;span class=&quot;inline inline-left&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.aqsis.org/&quot;&gt;&lt;img src=&quot;/files/images/AQSIS.png&quot; alt=&quot;AQSIS&quot; width=&quot;189&quot; height=&quot;110&quot; /&gt;&lt;/a&gt;&lt;/span&gt;Free open source &lt;a target=&quot;_blank&quot; href=&quot;http://en.wikipedia.org/wiki/Scanline_rendering&quot;&gt;scanline&lt;/a&gt; Renderman clone.&lt;/p&gt;
+&lt;p&gt;Create Renderman files with &lt;a href=&quot;/product/viz&quot;&gt;Caedium Viz Export&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/68&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/68#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/51">Utilities</category>
+ <pubDate>Mon, 05 Feb 2007 13:50:13 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">68 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>VRML</title>
+    <link>https://www.symscape.com/node/74</link>
+    <description>&lt;p&gt;&lt;span class=&quot;inline inline-left&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://cic.nist.gov/vrml/vbdetect.html&quot;&gt;&lt;img src=&quot;/files/images/vrml_logo.gif&quot; alt=&quot;VRML&quot; width=&quot;64&quot; height=&quot;64&quot; /&gt;&lt;/a&gt;&lt;/span&gt;Resource for VRML standalone and browser plugin applications.&lt;/p&gt;
+&lt;p&gt;Create VRML files with &lt;a href=&quot;/product/viz&quot;&gt;Caedium Viz Export&lt;/a&gt;.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/74#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/51">Utilities</category>
+ <pubDate>Mon, 05 Feb 2007 13:49:53 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">74 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>GIMP</title>
+    <link>https://www.symscape.com/node/72</link>
+    <description>&lt;p&gt;&lt;span class=&quot;inline inline-left&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.gimp.org/&quot;&gt;&lt;img src=&quot;/files/images/gimp-splash-logo.png&quot; alt=&quot;GIMP&quot; width=&quot;150&quot; height=&quot;113&quot; /&gt;&lt;/a&gt;&lt;/span&gt;GNU Image Manipulation Program (GIMP).  Freely distributed software for photo retouching, image composition and image authoring.&lt;/p&gt;
+&lt;p&gt;Create image files such as jpeg, png, bmp with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt;.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/72#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/51">Utilities</category>
+ <pubDate>Mon, 05 Feb 2007 13:49:28 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">72 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Blender</title>
+    <link>https://www.symscape.com/node/77</link>
+    <description>&lt;p&gt;&lt;span class=&quot;inline inline-left&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.blender3d.org/&quot;&gt;&lt;img src=&quot;/files/images/blender_logo.jpg&quot; alt=&quot;Blender&quot; width=&quot;143&quot; height=&quot;49&quot; /&gt;&lt;/a&gt;&lt;/span&gt;Blender is open source software for 3D modeling, animation, rendering, post-production, interactive creation and playback.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/77&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/77#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/51">Utilities</category>
+ <pubDate>Mon, 05 Feb 2007 13:48:56 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">77 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Drupal</title>
+    <link>https://www.symscape.com/node/85</link>
+    <description>&lt;p&gt;&lt;span class=&quot;inline inline-left&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.drupal.org/&quot;&gt;&lt;img src=&quot;/files/images/drupal_logo.png&quot; alt=&quot;Drupal&quot; width=&quot;48&quot; height=&quot;55&quot; /&gt;&lt;/a&gt;&lt;/span&gt;Content Management System (CMS).&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/85#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/50">Components</category>
+ <pubDate>Fri, 08 Sep 2006 16:24:31 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">85 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Inno Setup</title>
+    <link>https://www.symscape.com/node/83</link>
+    <description>&lt;p&gt;&lt;span class=&quot;inline inline-left&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.jrsoftware.org/isinfo.php&quot;&gt;&lt;img src=&quot;/files/images/innosetup_logo.png&quot; alt=&quot;Inno Setup&quot; width=&quot;200&quot; height=&quot;156&quot; /&gt;&lt;/a&gt;&lt;/span&gt;Installer for Windows programs, used by &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; and its add-ons.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/83#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/50">Components</category>
+ <pubDate>Fri, 08 Sep 2006 16:21:56 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">83 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Open Cascade</title>
+    <link>https://www.symscape.com/node/81</link>
+    <description>&lt;p&gt;&lt;span class=&quot;inline inline-left&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.opencascade.org/&quot;&gt;&lt;img src=&quot;/files/images/occ_logo.gif&quot; alt=&quot;Open Cascade&quot; width=&quot;178&quot; height=&quot;66&quot; /&gt;&lt;/a&gt;&lt;/span&gt;&lt;a href=&quot;/solid-modeling&quot;&gt;Solid modeling&lt;/a&gt; geometry engine used in &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; by the &lt;a href=&quot;/product/builder&quot;&gt;Builder add-on&lt;/a&gt;, and the &lt;a href=&quot;/product/exchange&quot;&gt;Exchange add-on&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/81&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/81#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/50">Components</category>
+ <pubDate>Fri, 08 Sep 2006 16:18:43 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">81 at https://www.symscape.com</guid>
+  </item>
+  </channel>
+</rss>

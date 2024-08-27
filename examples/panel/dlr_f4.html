@@ -1,0 +1,255 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/examples/panel/dlr_f4 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>DLR F4 Wing-Body Calculation | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-examples-panel-dlr-f4 section-examples one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../../index.html" title="Home" rel="home"><img src="../../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../../index.html">Home</a> › <a href="../../examples.html">Examples</a> › <a href="../panel.html">Panel Flow</a></div>                  <h1 class="title">DLR F4 Wing-Body Calculation</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-337" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on March 26, 2007 - 10:22        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_41 first last"><a href="../panel.html" rel="tag" title="Panel Flow add-on examples">Panel Flow</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>The <a href="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop1/files/geometry.html">DLR F4</a> is an idealized wing-body model of a passenger jetliner, such as the Boeing 737, that was tested in <a href="http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop1/workshop1.html">multiple wind tunnels</a> for comparison with <a href="../../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> calculations.</p>
+<p><span class="inline inline-center"><img src="../../files/images/boeing737.jpg" alt="Boeing 737" width="640" height="449" /><span class="caption"><strong>Boeing 737</strong></span>Image courtesy of Adrian Pingstone</span></p>
+<h3>Background</h3>
+<p>The wind-tunnel experiments were performed at air speeds within the transonic flow regime, which encompasses both supersonic and subsonic airflow.  While a <a href="../../panel-method.html">panel method</a> can’t model supersonic flow regions, it can model subsonic compressible flow (0.3 &lt; <a href="../../mach-number.html">Mach number</a> &lt; 1) when a compressible correction is used as in our <a href="../../product/panel.html">Panel Flow add-on</a>.</p>
+<p>The experimental data contain a series of Mach numbers at constant <a href="../../lift-force-and-drag-force.html">lift</a>, each with <a href="../../pressure-coefficient.html">pressure-coefficient</a> distributions for various span-wise locations on the wing.  For those conditions without supersonic regions our Panel Flow add-on calculations should be able to match the experimental distributions with reasonable accuracy.</p>
+<h3>Method</h3>
+<p>We calculated results for Mach number = 0.6, which does not include supersonic flow regions.  Thus, our Panel Flow add-on, with the Karman-Tsien compressible correction for the pressure-coefficient, should produce reasonably accurate results.</p>
+<p>A sharp wing trailing edge is needed to shed wake elements, so the original blunt trailing edge was modified.  Wakes were defined to originate at the modified sharp trailing edge, skipping a small region adjacent to the body to avoid the wake colliding with the body.  An automated, pseudo time-stepping, force-free technique was used to convect wake elements downstream.</p>
+<p>The angle of attack (alpha) for the calculation was chosen to best match the experimental pressure coefficient distributions with the calculated distributions, given that there was no specified alpha in the experiment.</p>
+<p>The data used for comparisons are from the NLR wind-tunnel tests.</p>
+<h3>Results</h3>
+<p>Surface pressure coefficient contours and wake elements are shown below.</p>
+<p><img src="../../files/examples/dlr_f4/cp_contours.png" alt="Surface Pressure Coefficient Contours" /></p>
+<p>Pressure coefficient distributions at various span-wise locations on the wing are shown below.  The experimental results are represented by open circles and the calculated results are represented by lines.</p>
+<p><img src="../../files/examples/dlr_f4/cp_23_8.png" alt="Pressure Coefficient Distribution at 23.8% Span" /><br />
+<img src="../../files/examples/dlr_f4/cp_33_1.png" alt="Pressure Coefficient Distribution at 33.1% Span" /><br />
+<img src="../../files/examples/dlr_f4/cp_40_9.png" alt="Pressure Coefficient Distribution at 40.9% Span" /><br />
+<img src="../../files/examples/dlr_f4/cp_63_6.png" alt="Pressure Coefficient Distribution at 63.6% Span" /><br />
+<img src="../../files/examples/dlr_f4/cp_84_4.png" alt="Pressure Coefficient Distribution at 84.4% Span" /></p>
+<p>Good agreement between the calculation and the experiment is observed except in the trailing-edge region.  This discrepancy is most likely due to un-modeled viscous effects.</p>
+<h3>Try For Yourself</h3>
+<p>The <a href="../../node/340.html">sym project file</a> for this study can be viewed in <a href="../../product/caedium.html">Caedium</a> or you can investigate this case yourself using our <a href="../../product/panel.html">Panel Flow add-on</a>.</p>
+<p>The most convenient way to view and edit this case is to use our <a href="../../product/professional.html">Professional add-on</a> that combines all the add-ons used during this example.</p>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../../news.html">News</a></li>
+<li class="collapsed"><a href="../../blog.html">Blog</a></li>
+<li class="leaf"><a href="../../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../../articles.html">Articles</a></li>
+<li class="leaf"><a href="../../image.html">Gallery</a></li>
+<li class="leaf"><a href="../../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../../forum.html">Forums</a></li>
+<li class="leaf"><a href="../../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../../partners.html">Partners</a></li>
+<li class="leaf"><a href="../../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../../forum.html"><img title="Forums" alt="Forums" src="../../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../../contact.html">Contact</a> | <a href="../../trademarks.html">Trademarks</a> | <a href="../../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/examples/panel/dlr_f4 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:04 GMT -->
+</html>

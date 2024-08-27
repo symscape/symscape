@@ -1,0 +1,296 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1505 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Volume seems to mesh fine, despite error message | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-forum page-node-1505 section-node one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../forum.html">Forums</a> › <a href="../forum/57.html">Problems</a></div>                  <h1 class="title">Volume seems to mesh fine, despite error message</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1505" class="node node-type-forum clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by PeterG on June 27, 2014 - 09:50        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_57 first last"><a href="../forum/57.html" rel="tag" title="Report product problems (e.g., Caedium bugs). View Ratings">Problems</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>I have recently modified a simulation on which I have been working for a few weeks and am getting good quality surface meshes as judged by the "A" and "E Ratio” scalar results, with very few narrow triangular elements. Most have an E Ratio of &gt; 0.5. When I mesh the volume, it seems to mesh fine, per the "Vol" and "Vol Ratio" results. The entire volume is filled with a mesh. I have no triangulator or tetulator problems, and I have all the diagnostics turned on to show any problems in the log. The log reports none.</p>
+<p>Feature-wise, the only difference between this simulation geometry and the previous simulation geometry (on which the solver ran fine) is the addition of an embedded face, which I turned into a two sided face that is a fixed-velocity inlet face. Both faces of the two sided face have the same BCs, the same air velocity, and the same flow direction per the X, Y, Z coordinate entries in the respective property panes. The geometry itself was made from a planar surface imported from Rhino as a STEP file that I revolved in Caedium to generate a solid. Then I imported the face to be embedded, Boolean subtracted it from the solid, and the geometry was all done. Most of the Rhino geometry elements were simply copied from those that worked well with the previous simulation.</p>
+<p>However, after I attach vector arrows to the main seed face (there are four) and try to run the simulation, I immediately get the "FOAM FATAL ERROR: illegal cell label -1 in neighbor addressing for face...." message. This always happens at the very start, without the solver even appearing to start running. I also tried it with vector arrows attached to all four seed faces at the same time, and got the same error message.</p>
+<p>I have read and re-read the Symscape page "How do I fix mesh and solver failures?" several times.<br />
+I have shaded all model faces. I have scrutinized the meshes and they seem okay, but I am not entirely sure I know how to evaluate the quality of volume meshes.<br />
+I initially set all faces to be walls, then went back and changed certain ones as needed to inlets, inlets/outlets, and outlets, so everything has some sort of BC set. After I could not get the solver to run, I went back and did this again.</p>
+<p>I have the residual monitor up and ready to go. Sometimes - not always - it shows a residual trace going for a fraction of an iteration horizontally and then stopping.</p>
+<p>Thanks very much in advance for your thoughts.</p>
+  <div class="forum-topic-navigation clear-block">
+          <a href="1518.html" class="topic-previous" title="Go to previous forum topic">‹ Geometry not loading</a>
+              <a href="1497.html" class="topic-next" title="Go to next forum topic">Creating 2-sided faces problems ›</a>
+      </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+  
+  <a id="comment-2019"></a>
+<div class="comment comment-published first odd clearfix">
+  
+      <h3 class="title">
+      <a href="1505.html#comment-2019" class="active">The mesh is corrupt, check your volume elements</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on June 27, 2014 - 10:23.  </div>
+
+  <div class="content">
+    <p>That error message means that the mesh is corrupt, most likely the volume mesh failed at some point. If you are sure that the surface meshes had not errors - often the cause of a volume mesh failure - then there is likely to be a region within the volume (maybe between faces in close proximity) that is causing a problem.</p>
+<p>I'll assume that your double-sided face was subtracted from the volume with the <strong>Topology Only</strong> option set to <strong>True</strong> and that <strong>the face doesn't touch or intersect any other faces</strong> - if not this process will not work.</p>
+<p>Changes to the Physics or trying to visualize results will not correct a meshing failure. You need to focus on the location of poor/corrupt volume elements as described in the section <strong>"Volume Mesh Quality"</strong> in <a href="1166.html">"How do I fix mesh and solver failures?"</a>. Specifically:</p>
+<p><cite>To view the volume mesh ... use the <strong>Scalar Fields-&gt;Vol Ratio</strong> in the <strong>Results</strong> Tool Palette, and set the volume view properties: <strong>Style = Flat</strong> and <strong>Transparent = Off</strong>. Also make sure your faces are transparent, otherwise you won't see the interior volume.</cite></p>
+<p><cite>An ideal element will have a Vol Ratio = 1, and so focus on the low valued elements with the threshold sliders to see if there is a particular region causing problems. If you identify problems try using the <strong>Accuracy</strong> tool to locally modify the mesh size on nearby edges/faces.</cite></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2020"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="1505.html#comment-2020" class="active">Updated FAQ with screenshots</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on June 27, 2014 - 13:43.  </div>
+
+  <div class="content">
+    <p>I just updated the FAQ on <a href="1166.html">diagnosing mesh and solver failures</a> with screenshots, so take another look to see if it helps clarify what to look for and correct.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2022"></a>
+<div class="comment comment-published last odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1505.html#comment-2022" class="active">Problem solved.</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by PeterG on June 30, 2014 - 08:16.  </div>
+
+  <div class="content">
+    <p>Thanks for your suggestion about the 2-sided face. That was the problem. As soon as I fixed that, the simulation ran and converged the first time. I used the relaxation factors from my previous simulation and woke up this morning to a nicely converged simulation. Thanks again.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div></div></div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1505 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:55 GMT -->
+</html>

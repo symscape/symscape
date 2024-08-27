@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xml:base="https://www.symscape.com"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+ <title>Symscape blogs</title>
+ <link>https://www.symscape.com/blog</link>
+ <description>Save money and time performing fluid flow and heat transfer simulations with Caedium - an affordable priced, easy-to-use, all-in-one Computational Fluid Dynamics (CFD) software system.</description>
+ <language>en</language>
+<item>
+ <title>CFD Simulates Distant Past</title>
+ <link>https://www.symscape.com/blog/cfd-simulates-distant-past</link>
+ <description>&lt;p&gt;There is an interesting new trend in using &lt;a href=&quot;/computational-fluid-dynamics&quot;&gt;Computational Fluid Dynamics (CFD)&lt;/a&gt;. Until recently CFD simulation was focused on existing and future things, think &lt;a href=&quot;/blog/flying-car-contenders&quot;&gt;flying cars&lt;/a&gt;. Now we see CFD being applied to simulate fluid flow in the distant past, think &lt;a href=&quot;/blog/cfd-provides-insight-into-mystery-fossils&quot;&gt;fossils&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ONLtfSpcB-s&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;CFD shows Ediacaran dinner party featured plenty to eat and adequate sanitation&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/cfd-simulates-distant-past&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/cfd-simulates-distant-past#comments</comments>
+ <pubDate>Tue, 25 Jun 2019 14:57:18 +0000</pubDate>
+ <dc:creator>Richard Smith</dc:creator>
+ <guid isPermaLink="false">1722 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Background on the Caedium v6.0 Release</title>
+ <link>https://www.symscape.com/blog/background-caedium-v6-0-release</link>
+ <description>&lt;p&gt;Let&#039;s first address the elephant in the room - it&#039;s been a while since the last Caedium release. The multi-substance infrastructure for the &lt;a href=&quot;/news/enhanced-cfd-simulations-with-conjugate-heat-transfer-and-passive-species-transport&quot;&gt;Conjugate Heat Transfer (CHT) capability&lt;/a&gt; was a much larger effort than I anticipated and consumed a lot of resources. This lead to the relative quiet you may have noticed on our website. However, with the new foundation laid and solid we can look forward to a bright future.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/misc/ht-exchanger-streamlines.png&quot; alt=&quot;Conjugate Heat Transfer Through a Water-Air Radiator&quot; width=&quot;600&quot; height=&quot;506&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Conjugate Heat Transfer Through a Water-Air Radiator&lt;/strong&gt;&lt;br /&gt;Simulation shows separate air and water streamline paths colored by temperature&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/background-caedium-v6-0-release&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/background-caedium-v6-0-release#comments</comments>
+ <pubDate>Fri, 31 May 2019 14:55:57 +0000</pubDate>
+ <dc:creator>Richard Smith</dc:creator>
+ <guid isPermaLink="false">1720 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Long-Necked Dinosaurs Succumb To CFD</title>
+ <link>https://www.symscape.com/blog/long-necked-dinosaurs-succumb-to-cfd</link>
+ <description>&lt;p&gt;It turns out that &lt;a href=&quot;/computational-fluid-dynamics&quot;&gt;Computational Fluid Dynamics (CFD)&lt;/a&gt; has a key role to play in determining the behavior of long extinct creatures. In a previous, post we described a &lt;a href=&quot;/blog/cfd-provides-insight-into-mystery-fossils&quot;&gt;CFD study of parvancorina&lt;/a&gt;, and now Pernille Troelsen at Liverpool John Moore University is using CFD for insights into how long-necked &lt;a href=&quot;https://en.wikipedia.org/wiki/Plesiosauria&quot;&gt;plesiosaurs&lt;/a&gt; might have swum and hunted.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/plesiosaur/plesiosaur-streamarrows.png&quot; alt=&quot;CFD Water Flow Simulation over an Idealized Plesiosaur&quot; width=&quot;640&quot; height=&quot;437&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;CFD Water Flow Simulation over an Idealized Plesiosaur:&lt;/strong&gt; Streamline Vectors&lt;/span&gt;Illustration only, not part of the study&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/long-necked-dinosaurs-succumb-to-cfd&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/long-necked-dinosaurs-succumb-to-cfd#comments</comments>
+ <pubDate>Fri, 14 Jul 2017 13:11:06 +0000</pubDate>
+ <dc:creator>Richard Smith</dc:creator>
+ <guid isPermaLink="false">1701 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>CFD Provides Insight Into Mystery Fossils</title>
+ <link>https://www.symscape.com/blog/cfd-provides-insight-into-mystery-fossils</link>
+ <description>&lt;p&gt;Fossilized imprints of &lt;a href=&quot;https://en.wikipedia.org/wiki/Parvancorina&quot;&gt;Parvancorina&lt;/a&gt; from over 500 million years ago have puzzled paleontologists for decades. What makes it difficult to infer their behavior is that Parvancorina have none of the familiar features we might expect of animals, e.g., limbs, mouth. In an attempt to shed some light on how Parvancorina might have interacted with their environment researchers have enlisted the help of &lt;a href=&quot;/computational-fluid-dynamics&quot;&gt;Computational Fluid Dynamics (CFD)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/parvancorina/parvancorina-flow-forward.png&quot; alt=&quot;CFD Water Flow Simulation over a Parvancorina&quot; width=&quot;640&quot; height=&quot;434&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;CFD Water Flow Simulation over a Parvancorina:&lt;/strong&gt; Forward direction&lt;/span&gt;Illustration only, not part of the study&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/cfd-provides-insight-into-mystery-fossils&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/cfd-provides-insight-into-mystery-fossils#comments</comments>
+ <pubDate>Fri, 23 Jun 2017 15:08:45 +0000</pubDate>
+ <dc:creator>Richard Smith</dc:creator>
+ <guid isPermaLink="false">1699 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Wind Turbine Design According to Insects</title>
+ <link>https://www.symscape.com/blog/wind-turbine-design-according-to-insects</link>
+ <description>&lt;p&gt;One of nature&#039;s smallest aerodynamic specialists - insects - have provided a clue to more efficient and robust wind turbine design.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/misc/dragonfly.jpg&quot; alt=&quot;Dragonfly&quot; width=&quot;640&quot; height=&quot;299&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Dragonfly: &lt;/strong&gt;Yellow-winged Darter&lt;/span&gt;License: &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/2.5/&quot; title=&quot;Creative Commons Attribution 2.0&quot;&gt;CC BY-SA 2.5&lt;/a&gt;, &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Sympetrum_flaveolum_-_front_(aka).jpg&quot;&gt;André Karwath&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/wind-turbine-design-according-to-insects&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/wind-turbine-design-according-to-insects#comments</comments>
+ <pubDate>Wed, 14 Jun 2017 19:36:33 +0000</pubDate>
+ <dc:creator>Richard Smith</dc:creator>
+ <guid isPermaLink="false">1697 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Runners Discover Drafting</title>
+ <link>https://www.symscape.com/blog/runners-discover-drafting</link>
+ <description>&lt;p&gt;The recent attempt to break the &lt;a href=&quot;https://www.wired.com/2017/05/two-hour-marathon-failed-nike/&quot;&gt;2 hour marathon came very close at 2:00:24&lt;/a&gt;, with various aids that would be deemed illegal under current IAAF rules. The bold and obvious aerodynamic aid appeared to be a Tesla fitted with an oversized digital clock leading the runners by a few meters.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/c6FS3D4a_kA?rel=0&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;2 Hour Marathon Attempt&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/runners-discover-drafting&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/runners-discover-drafting#comments</comments>
+ <pubDate>Thu, 01 Jun 2017 18:01:49 +0000</pubDate>
+ <dc:creator>Richard Smith</dc:creator>
+ <guid isPermaLink="false">1695 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Wind Tunnel and CFD Reveal Best Cycling Tuck</title>
+ <link>https://www.symscape.com/blog/wind-tunnel-and-cfd-reveal-best-cycling-tuck</link>
+ <description>&lt;p&gt;&lt;a href=&quot;http://www.giroditalia.it/eng/&quot;&gt;The Giro d&#039;Italia 2017&lt;/a&gt; is in full swing, so how about an extensive aerodynamic study of various cycling tuck positions? You got it, from members of the same team that brought us the study of &lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S0167610516302306&quot;&gt;pursuit vehicles reducing the drag on cyclists&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xkbaWXTM2bk&quot;&gt;&lt;img src=&quot;/files/pictures/misc/chris-froome-tuck.jpg&quot; alt=&quot;Chris Froome Tuck&quot; width=&quot;600&quot; height=&quot;338&quot; /&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Chris Froome Tuck&lt;/strong&gt;&lt;/span&gt;Stage 8, Pau/Bagnères-de-Luchon, Tour de France, 2016&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/wind-tunnel-and-cfd-reveal-best-cycling-tuck&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/wind-tunnel-and-cfd-reveal-best-cycling-tuck#comments</comments>
+ <pubDate>Wed, 10 May 2017 12:37:07 +0000</pubDate>
+ <dc:creator>Richard Smith</dc:creator>
+ <guid isPermaLink="false">1692 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Active Aerodynamics on the Lamborghini Huracán Performante</title>
+ <link>https://www.symscape.com/blog/active-aerodynamics-on-the-lamborghini-huracan-performante</link>
+ <description>&lt;p&gt;Early on in the dash to develop ever faster racecars in the 1970s, aerodynamics, and specifically &lt;a href=&quot;/lift-force-and-drag-force&quot;&gt;downforce&lt;/a&gt;, proved a revelation. Following on quickly from the initial passive downforce initiatives were active aerodynamic solutions. Only providing downforce when needed (i.e., cornering and braking) then reverting to a low drag configuration was an ideal protocol, but short lived due to rule changes in most motor sports (including Formula 1), which banned active aerodynamics. A recent exception to the rule is the highly regulated &lt;a href=&quot;https://en.wikipedia.org/wiki/Drag_reduction_system&quot;&gt;Drag Reduction System&lt;/a&gt; now used in F1. However, road-legal cars are not governed by such regulations and so we have the gloriously unregulated Lamborghini Huracán Performante.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Ur4NLTqqWEw?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Active Aerodynamics on the Lamborghini Huracán Performante&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/active-aerodynamics-on-the-lamborghini-huracan-performante&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/active-aerodynamics-on-the-lamborghini-huracan-performante#comments</comments>
+ <pubDate>Wed, 03 May 2017 18:08:38 +0000</pubDate>
+ <dc:creator>Richard Smith</dc:creator>
+ <guid isPermaLink="false">1691 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Fluidic Logic</title>
+ <link>https://www.symscape.com/blog/fluidic-logic</link>
+ <description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Fluidics&quot;&gt;Fluidic logic (fluidics)&lt;/a&gt; uses specially designed fluid paths to perform logic operations, such as &lt;a href=&quot;https://en.wikipedia.org/wiki/AND_gate&quot;&gt;AND&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/OR_gate&quot;&gt;OR&lt;/a&gt;, and &lt;a href=&quot;https://en.wikipedia.org/wiki/Inverter_(logic_gate)&quot;&gt;NOT&lt;/a&gt; gates. In electronics logical operations underpin all the digital devices that depend on CPUs for their brains. Using &lt;a href=&quot;/computational-fluid-dynamics&quot;&gt;Computational Fluid Dynamics (CFD)&lt;/a&gt; we can quickly explore potential fluidic components.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/fluidics/and-gate.png&quot; alt=&quot;CFD Simulation of a Fluidic AND Gate&quot; width=&quot;640&quot; height=&quot;529&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;CFD Simulation of a Fluidic AND Gate&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/fluidic-logic&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/fluidic-logic#comments</comments>
+ <pubDate>Wed, 19 Apr 2017 20:14:28 +0000</pubDate>
+ <dc:creator>Richard Smith</dc:creator>
+ <guid isPermaLink="false">1687 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</title>
+ <link>https://www.symscape.com/blog/stonehenge-vortex-revealed-as-april-fools-day-distortion-field</link>
+ <description>&lt;p&gt;As I&#039;m sure you suspected the &lt;a href=&quot;/blog/stonehenge-vortex-revealed-by-cfd&quot;&gt;&amp;quot;Stonehenge Vortex Revealed by CFD&amp;quot;&lt;/a&gt; story was a figment of the &lt;a href=&quot;https://en.wikipedia.org/wiki/April_Fools%27_Day&quot;&gt;April Fools&#039; Day&lt;/a&gt; distortion field.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/stonehenge/stonehenge-ribbons.png&quot; alt=&quot;Ribbons Tracing a Contrived Vortex at Stonehenge&quot; width=&quot;640&quot; height=&quot;421&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Ribbons Tracing a Contrived Vortex at Stonehenge&lt;/strong&gt;&lt;/span&gt;CFD simulation shows ribbons colored by velocity&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/stonehenge-vortex-revealed-as-april-fools-day-distortion-field&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/stonehenge-vortex-revealed-as-april-fools-day-distortion-field#comments</comments>
+ <pubDate>Mon, 03 Apr 2017 13:02:28 +0000</pubDate>
+ <dc:creator>Richard Smith</dc:creator>
+ <guid isPermaLink="false">1684 at https://www.symscape.com</guid>
+</item>
+</channel>
+</rss>

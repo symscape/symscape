@@ -1,0 +1,295 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/how-to-make-splash-in-cfd by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:27:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>How to Make a Splash in CFD | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-how-to-make-splash-in-cfd section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">How to Make a Splash in CFD</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1485" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on April 29, 2014 - 09:50        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>It is a common occurrence: a rain drop falls into a puddle; a leaky faucet drips into a sink of water. This seemingly simple event has some complex physics in play that advanced multi-phase, free-surface (volume of fluid - VOF) <a href="../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> can simulate. Not only can CFD simulate water impact in a pool, it can also produce a beautiful 3D visualization of the process as an animation. Follow along to see how you can use <a href="../product/professional.html">Caedium Professional</a> to simulate a water droplet falling into a pool of water.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/splash/droplet-crater.png" alt="VOF Free Surface Caedium CFD Simulation" width="562 " height="600" /><span class="caption"><strong>VOF Free Surface Caedium CFD Simulation</strong></span>Droplet crater</span></p>
+<h3>Geometry</h3>
+<p>The geometry for this droplet simulation is straightforward - a single box that represents a quarter (assuming symmetry) of the pool and air above it through which the droplet will fall. To model the droplet you need a circular quadrant embedded in the face above the pool to serve as an inlet. Also you need to segment the box so that you can initialize the pool of water separately from the air. Even with these constraints the geometry is still relatively simple and so you can construct a <a href="../node/1174.html">multi-block volume</a> (4-edged faces and 6-faced volumes) that constraints the subsequent mesh to be suitable for hexahedral elements. For free-surface CFD simulations hexahedral elements are typically preferred for their improved accuracy compared to tetrahedral elements. </p>
+<p><span class="inline inline-center"><img src="../files/pictures/splash/droplet-geometry.png" alt="Multi-Block Flow Domain Geometry" width="562 " height="600" /><span class="caption"><strong>Multi-Block Flow Domain Geometry</strong></span></span></p>
+<h3>Meshing</h3>
+<p>Using the multi-block volume structure and having connected all the co-incident faces you can then group the volumes into a flow domain and apply meshing constraints to obtain adequate mesh resolution.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/splash/droplet-mesh.png" alt="Multi-Block Flow Domain Mesh" width="562 " height="600" /><span class="caption"><strong>Multi-Block Flow Domain Mesh</strong></span>Quadrilateral surface elements</span></p>
+<h3>Physics</h3>
+<p>Standard boundary conditions are suitable for the symmetry planes and walls of the box. Note that there are no boundary conditions applied to the internal shared faces, as the fluid must be able to pass freely through them.</p>
+<p>To inject water for a brief moment to form the droplet you use time-dependent inlet variants for velocity and alpha1 (water or air) according to:</p>
+<ul>
+<li><strong>U = Time Dependent, Derivation = table ( (0. (0 0 -4)) (0.01 (0 0 0)) )</strong>, meaning at time = 0 s, velocity = [0 0 -4] m/s and at time = 0.01 s, velocity = [0 0 0] m/s</li>
+<li><strong>alpha1 = Time Dependent, Derivation = table ( (0. 1) (0.01 0) )</strong>, meaning at time = 0 s, alpha1 = 1 (water) and at time = 0.01 s, alpha1 = 0 (air)</li>
+</ul>
+<p>To allow air to leave the flow domain while water is being injected you need to assign the upper faces surrounding the inlet as an outlet.</p>
+<p>You need to match the solver time step with the reference velocity to ensure adequate temporal resolution of the movement and subsequent impact of the droplet. However, the time step should not be so small that the simulation takes excessive CPU time to complete.</p>
+<h3>Results</h3>
+<p>As the simulation runs you can simultaneously record a movie, with each frame representing the latest 3D visualization results update. This approach is called <a href="avoid-cfd-transient-data-overload-with-co-processing.html">co-processing</a>, as opposed to post-processing, and alleviates the need to gather and process massive amounts of results data after the simulation ends.</p>
+<p><span class="inline inline-center"><iframe width="480" height="360" src="http://www.youtube.com/embed/O6QxhZwzbyI?rel=0" frameborder="0" allowfullscreen></iframe><span class="caption"><strong>VOF Free Surface CFD Simulation</strong></span>Droplet impact into a pool</span></p>
+<p>Shown below are individual frames from the movie.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/splash/droplet-start.png" alt="Droplet" width="562 " height="600" /><span class="caption"><strong>Droplet</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/splash/droplet-impact.png" alt="Droplet Impact" width="562 " height="600" /><span class="caption"><strong>Droplet Impact</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/splash/droplet-crater.png" alt="Droplet Crater" width="562 " height="600" /><span class="caption"><strong>Droplet Crater</strong></span></span></p>
+<h3>Notes</h3>
+<ul>
+<li>The CFD simulation and movie were created in <a href="../product/professional.html">Caedium Professional</a> using the transient VOF solver for water and air.</li>
+<li>Related Caedium tutorials:
+<ul>
+<li>Multi-block topology construction in <a href="../node/1256.html">"Water Tank"</a></li>
+<li>Movie creation for a tank filling simulation in <a href="../node/1257.html">"Transient Water and Air Flow in a Tank"</a></li>
+</ul>
+</li>
+</ul>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/how-to-make-splash-in-cfd by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:27:49 GMT -->
+</html>

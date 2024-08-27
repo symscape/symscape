@@ -1,0 +1,414 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/561 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Flow Over an Airfoil | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="449.html" />
+<link rel="up" href="430.html" />
+<link rel="next" href="../tips.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-561 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="430.html">Panel Flow</a></div>                  <h1 class="title">Flow Over an Airfoil</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-561" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Alison Findon on June 1, 2013 - 14:52        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Simulate the flow of air over a NACA 4415 airfoil. Compare the simulation results with experimental data.</p>
+<p><img src="../files/tutorials/airfoilflow/wake.png" width="484" height="363" alt="Wake" /></p>
+<h3>Goals</h3>
+<p>In this tutorial, you will learn how to:</p>
+<ul>
+<li>Import a file into Caedium</li>
+<li>Extrude an airfoil to create a wing</li>
+<li>Specify physical conditions for a simulation. In this case, you will specify the fluid (as air) around the wing, the velocity of the air flowing over the wing, and the properties of the wing's outer surfaces.</li>
+<li>Attach a wake to the wing</li>
+<li>Specify meshing parameters</li>
+<li>Generate a color map (contours)</li>
+<li>Create an XY plot</li>
+<li>Compare the results of your simulation with experimental data</li>
+</ul>
+<h3>Assumptions</h3>
+<ol>
+<li>You have <a href="15.html">activated</a> the <a href="../product/builder.html">Caedium Builder</a> and <a href="../product/panel.html">Caedium Panel Flow</a> add-ons, or <a href="../product/professional.html">Caedium Professional</a>.</li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>.</li>
+<li>You have downloaded the <a href="../files/downloads/naca-4415-airfoil.brep">naca-4415-airfoil.brep</a> and the <a href="../files/tutorials/airfoilflow/cp_0_15.csv">cp_0_15.csv</a> files.</li>
+</ol>
+<h2 class="tutorial-heading">Import the Brep File into Caedium</h2>
+<p>Select the <strong>File</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> and click the <strong>Import</strong> button <img alt="" src="../files/tutorials/shared/import.png" />. Select <strong>Geometry</strong> as the file type and navigate to the location of the naca-4415-airfoil.brep file you downloaded. Double-click on <strong>naca-4415-airfoil.brep</strong> to import the NACA 4415 airfoil into Caedium.</p>
+<p>To see the airfoil, rotate the view (left-click-and-drag the mouse in the <a href="../tutorials/essentials.html#viewwindow">View Window</a>) until the airfoil is in the approximate orientation shown below.</p>
+<p><img src="../files/tutorials/airfoilflow/import.png" width="484" height="363" alt="Airfoil" /></p>
+<h2 class="tutorial-heading">Create a 3D Wing</h2>
+<p>To create a wing from the airfoil, you will extrude the airfoil in the Z-direction. However, to cluster <a href="244.html">mesh</a> points around the leading edge of the wing, you will first scale the airfoil in the Y-direction. Then, after the extrusion, you will rescale the wing in the Y-direction to restore the original airfoil profile.</p>
+<p>You will scale the airfoil relative to the origin. By default, transforms are performed relative to the midpoint of the bounding box that contains the geometry, not relative to the origin. To scale the airfoil relative to the origin, you will first need to create axes at the origin. In this tutorial, the origin is 1/4 of the chord length (0.25m) along the airfoil.</p>
+<p>Ensure the <strong>Geometry</strong> <a href="../tutorials/essentials.html#toolpalette">Tool Palette</a>. is selected.</p>
+<p>To create the axes at the origin, drag and drop the <strong>Others-&gt;Axes</strong> tool onto the View Window. Double-click <strong>sim</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong> to create axes.</p>
+<p class="note">You may need to scroll down through the Geometry Tool Palette list to find the Axes tool.</p>
+<p>To scale the airfoil in the Y-direction (to enhance mesh resolution around the leading edge of the airfoil), select the <strong>Transforms-&gt;Scale</strong>. In the <a href="../tutorials/essentials.html#propertiespanel">Properties Panel</a> set <strong>Scale</strong> to [<strong>1 2 1</strong>] and press Enter on the keyboard to apply the changes.</p>
+<p><img src="../files/tutorials/airfoilflow/scale.png" width="187" height="497" alt="Scale the airfoil" /></p>
+<p>Drag and drop the <strong>Scale</strong> tool onto the axes you created in the View Window. Select <strong>Set Axes</strong>. Right-click on an edge of the airfoil in the View Window and select <strong>Done</strong> to scale the airfoil in the Y-direction.</p>
+<p><img src="../files/tutorials/airfoilflow/yscaled.png" width="484" height="363" alt="Airfoil scaled in the Y-direction" /></p>
+<p>Drag and drop the <strong>Faces-&gt;Fix</strong> tool onto an edge of the airfoil and select <strong>Done</strong> to consolidate the transform.</p>
+<p>To extrude the profile of the NACA 4415 airfoil to create a 3D wing, select the <strong>Volumes-&gt;Extrude</strong> tool. In the Properties Panel, check that the <strong>Direction</strong> is set to <strong>+Z</strong> and the <strong>Length</strong> is set to <strong>5</strong>. Drag and drop the <strong>Extrude</strong> tool onto an edge of the airfoil in the View Window. Double-click <strong>face_1</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong> to extrude the airfoil in the Z-direction. </p>
+<p>In the <strong>Home</strong> Toolbar click the <strong>Fit-All</strong> button <img src="../files/tutorials/shared/fitall.png" alt="" /> to see the whole wing in the View Window.</p>
+<p><img src="../files/tutorials/airfoilflow/3dairfoil.png" width="484" height="363" alt="3D Airfoil" /></p>
+<p>To restore the original profile of the airfoil, select the <strong>Transforms-&gt;Scale</strong> tool, in the Properties Panel set <strong>Scale</strong> to [<strong>1 0.5 1</strong>], and press Enter. Drag and drop the <strong>Scale</strong> tool onto the axes in the View Window, and select <strong>Set Axes</strong>. Right-click on an edge of the airfoil in the View Window and select <strong>Done</strong> to scale the airfoil in the Y-direction.</p>
+<p>The original airfoil section will be set to be a symmetry plane later in this tutorial, and we are not interested in the details of the simulation at the wing tip in this example, so in the next step you will delete the 2 end faces of the wing (highlighted below in red and green).</p>
+<p><img src="../files/tutorials/airfoilflow/faces-selected.png" width="400" height="264" alt="Faces to be selected" /></p>
+<p>To select the first face to be deleted, right-click on an edge of the original airfoil profile, select the end face (<strong>face_4</strong> in this example, shown above in red), click <strong>OK</strong> in the <strong>Select</strong> dialog, and then select <strong>Select/Deselect</strong>.</p>
+<p>Right-click on an edge of the second face to be deleted, select the 2nd end face (<strong>face_5</strong> in this example, shown above in green), click <strong>OK</strong>, and then select <strong>Delete</strong> to delete the 2 faces.</p>
+<h2 class="tutorial-heading">Specify the Properties for the Simulation</h2>
+<p>Select the <strong>Physics</strong> Tool Palette.</p>
+<p>Select <strong>Gases-&gt;Air</strong>. The Properties Panel will show the default properties for air. To enable incompressible, irrotational, inviscid flow, set the 6 properties under <strong>State</strong> (<strong>Compressible</strong>, <strong>Heat Transfer</strong>, <strong>Rotational</strong>, <strong>Species</strong>, <strong>Transient</strong>, and <strong>Viscous</strong>) to <strong>No</strong> (if they are not set to No already).</p>
+<p><img src="../files/tutorials/airfoilflow/air.png" width="278" height="602" alt="Properties of air" /></p>
+<p>Drag and drop the <strong>Air</strong> tool onto the background of the View Window. Select <strong>Done</strong> to set air as the fluid around the wing.</p>
+<p>Drag and drop the <strong>Simulation-&gt;Linear Velocity</strong> tool onto the background of the View Window. Double-click <strong>sim</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong> to set a velocity of air around the wing.</p>
+<p>The Properties Panel will show the <strong>Physics: Linear Velocity</strong> properties by default. To set the value of the linear velocity of the air, set <strong>Physics: Linear Velocity-&gt;Velocity</strong> to [<strong>10 0 0</strong>] and press Enter on the keyboard.</p>
+<p><img src="../files/tutorials/airfoilflow/linearvelocity.png" width="293" height="249" alt="Setting the linear velocity" /></p>
+<h2 class="tutorial-heading">Define the Symmetry Plane for the Wing</h2>
+<p>The experimental results that you will compare with your simulation results at the end of this tutorial are for a 2D airfoil. To better simulate a 2D airfoil, you can use a symmetry condition to double the span of the wing. This allows you to get results faster and using less computing resources compared to simulating a longer wing without symmetry.</p>
+<p>Drag and drop the <strong>Simulation-&gt;Symmetry</strong> tool onto the background of the View Window. Select <strong>Done</strong> to specify that your simulation contains a symmetry plane.</p>
+<p>To specify the actual symmetry plane for your simulation (the original airfoil section), return to the Properties Panel and check that <strong>Physics: Symmetry-&gt;Planes</strong> is set to <strong>Z</strong>.</p>
+<h2 class="tutorial-heading">Set the Properties of the Outer Surface of the Wing</h2>
+<p>Drag and drop the <strong>Faces-&gt;Wall</strong> tool onto the leading edge of the wing. Double-click <strong>face_2</strong> (or whichever face is first in the list) in the <strong>Select</strong> dialog. To select the 2nd face, select <strong>Select/Deselect</strong> and then right-click on the leading edge. Double-click <strong>face_3</strong> (or whichever face is second in the list) in the <strong>Select</strong> dialog. Select <strong>Group</strong> to create a group of the upper and lower faces of the wing, and then select <strong>Done</strong> to create walls on the upper and lower surfaces of the wing. </p>
+<p class="note">A wall is a solid surface through which fluid cannot flow.</p>
+<p>In the Properties Panel, change the <strong>Name</strong> of the group to <strong>Wing</strong>, and press Enter.</p>
+<p><img src="../files/tutorials/airfoilflow/wing-props.png" width="187" height="248" alt="Properties of the wing group" /></p>
+<h2 class="tutorial-heading">Attach a Wake onto the Trailing Edge of the Wing</h2>
+<p>To simulate <a href="346.html">lift</a> using a <a href="../blog/why_use_panel_method.html">panel method</a>, you must identify where the flow leaves the trailing edge of the wing by applying a wake model.</p>
+<p>Drag and drop the <strong>Edges-&gt;Wake</strong> tool onto the trailing edge of the wing. In the <strong>Select</strong> dialog, double-click on <strong>edge_9</strong> (or whichever edge is the trailing edge in your example) and select <strong>Done</strong> to add the wake.</p>
+<h2 class="tutorial-heading">Specify Meshing Parameters</h2>
+<p>Drag and drop the <strong>Special-&gt;Accuracy</strong> tool onto the leading edge of the wing. Double-click <strong>Wing</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong> to set the accuracy of the calculation on the upper and lower faces of the wing.</p>
+<p>To set the value of the accuracy, select <strong>High</strong> for the <strong>Accuracy</strong> in the Properties Panel.</p>
+<p><img src="../files/tutorials/airfoilflow/accuracy.png" width="187" height="247" alt="Setting the accuracy" /></p>
+<h2 class="tutorial-heading">Calculate the Pressure Coefficient on the Wing</h2>
+<p>Select the <strong>Results</strong> Tool Palette.</p>
+<p>Drag and drop the <strong>Scalar Fields-&gt;Cp</strong> (pressure coefficient) tool onto the leading edge of the wing in the View Window. Double-click <strong>Wing</strong> in the <strong>Select</strong> dialog and select <strong>Color Map</strong> to create contours of pressure coefficient on the wing.</p>
+<p class="note">The <a href="../pressure-coefficient.html">pressure coefficient</a> is a dimensionless number that relates pressure changes to the surrounding field pressure.</p>
+<p>Caedium will perform the simulation. When the calculation is complete, you will see the wake appear in the View Window.</p>
+<p>Left-click-and-drag the mouse in the View Window to see the full wake.</p>
+<p><img src="../files/tutorials/airfoilflow/wake.png" width="484" height="363" alt="Wake" /></p>
+<p class="note">Ideally, the wake should extend 10 or more chord lengths behind the wing. Caedium allows you to specify both the number of wake elements and the time step for the elements in order to vary the total length of the wake. To specify the number of elements and the time step, right-click on the View Window, double-click on <strong>sim</strong> in the <strong>Select</strong> dialog, and select <strong>Properties</strong>. In the Properties Panel, select the Simulation tab, then expand the <strong>Substance: Air-&gt;Solver: Panel Flow-&gt;Wake</strong> properties. To increase the number of wake elements, enter a larger number for <strong>Iterations</strong>. A larger number of elements will provide more accuracy for your simulation, but the simulation will take longer to perform. <strong>Time Step</strong> is the time step per wake element, i.e., the time between the start of each new row of elements.</p>
+<h2 class="tutorial-heading">Plot Pressure Coefficient on the Airfoil Versus Distance Along the Chord</h2>
+<p>The leading edge of the airfoil does not correspond to the origin. In fact, 1/4 of the chord is located in the negative X-direction. To plot the pressure coefficient versus distance along the chord, you need to take the following steps:</p>
+<ol>
+<li>Create a scalar called 1/4 Chord (0.25m).</li>
+<li>Add 1/4 Chord to the X-position value to find the distance along the chord.</li>
+<li>Create an XY plot of pressure coefficient versus distance along the chord.</li>
+</ol>
+<h3>Create a Scalar Called 1/4 Chord (0.25m)</h3>
+<p>Select the <strong>New</strong> Toolbar and click the <strong>Result</strong> button <img src="../files/tutorials/shared/result.png" alt="" />.</p>
+<p>In the <strong>Create Result</strong> dialog, select the <strong>Constant</strong> tab. For <strong>Units</strong>, select <strong>Length</strong>.  </p>
+<p><img src="../files/tutorials/airfoilflow/scalar.png" width="452" height="339" alt="Create Result - 1/4 Chord" /></p>
+<p>Click <strong>Create</strong> to create a scalar.</p>
+<p>In the <strong>Results</strong> Tool Palette, select <strong>Scalar Variables-&gt;Scalar</strong> (the scalar variable you just created). Click on it again to make its name editable, and change <strong>Scalar</strong> to <strong>1/4 Chord</strong>. </p>
+<p>In the Properties Panel, set the <strong>Value</strong> of 1/4 Chord to <strong>0.25</strong> and press Enter on the keyboard.</p>
+<p><img src="../files/tutorials/airfoilflow/1-4-chord.png" width="187" height="495" alt="Create Result - 1/4 Chord" /></p>
+<h3>Create Chord</h3>
+<p>In the <strong>Create Result</strong> dialog, select the <strong>Binary</strong> tab. Select <strong>Add</strong> from the list. </p>
+<p>In the <strong>Results</strong> Tool Palette, select <strong>Vector Fields-&gt;XYZ</strong>. Verify that <strong>X</strong> is selected as the <strong>Scalar</strong> in the Properties Panel. Drag and drop <strong>Vector Fields-&gt;XYZ</strong> onto the left-hand target in the <strong>Create Result</strong> dialog. Select <strong>Scalar</strong> to specify the X-position as the left-hand variable for the equation. </p>
+<p>Drag <strong>Scalar Variables-&gt;1/4 Chord</strong> from the <strong>Results</strong> Tool Palette and drop it onto the right-hand target in the <strong>Create Result</strong> dialog.</p>
+<p><img src="../files/tutorials/airfoilflow/add.png" width="451" height="339" alt="Create Result - Chord" /></p>
+<p>Click <strong>Create</strong> to create the scalar field chord. In the <strong>Results</strong> Tool Palette, select <strong>Scalar Fields-&gt;(XYZ:X + 1/4 Chord)</strong>, rename it <strong>Chord</strong>, and press Enter.</p>
+<p>Close the <strong>Create Result</strong> dialog.</p>
+<h3>Create an XY Plot of Pressure Coefficient Versus Distance Along the Chord</h3>
+<p>Drag and drop the <strong>Scalar Fields-&gt;Cp</strong> tool onto the top edge of the original airfoil section in the View Window. Select <strong>edge_5</strong> (or whichever edge is the top edge of the original airfoil section in your example) in the <strong>Select</strong> dialog (the edge will be highlighted in the View Window), and click <strong>OK</strong>. Select <strong>Select/Deselect</strong> from the menu and then right-click on the bottom edges of the original airfoil section. Select <strong>edge_7</strong> (or whichever edge is the bottom edge of the original airfoil section in your example), click <strong>OK</strong> and select <strong>XY Plot</strong> to create an XY plot of pressure coefficient versus X-position.</p>
+<p>To plot the pressure coefficient versus distance along the chord, drag and drop <strong>Scalar Fields-&gt;Chord</strong> onto the background of the <strong>Cp Plot</strong> Window. Select <strong>X Axis</strong> to display values of distance along the chord along the X-axis of the XY plot. </p>
+<p><img src="../files/tutorials/airfoilflow/xyplot.png" width="484" height="363" alt="XY Plot of Position Along the Chord versus Pressure Coefficient" /></p>
+<h2 class="tutorial-heading">Compare Experimental Data and Caedium Simulation Pressure Coefficients</h2>
+<p>To compare the pressure coefficient values from your Caedium simulation with the experimental values, you need to plot both data sets on the same XY plot. </p>
+<h3>Import the Experimental Pressure Coefficient Data</h3>
+<p>Select the <strong>File</strong> Toolbar and click the <strong>Import</strong> button <img alt="" src="../files/tutorials/shared/import.png" />. Select the location of the plot data you saved at the beginning of this tutorial. For the file type, select <strong>Plot Series (*.csv)</strong>. Double-click on <strong>cp_0_15.csv</strong> to import it into Caedium.</p>
+<p>The plot series will be visible in the <strong>Results</strong> Tool Palette, under <strong>Imported</strong>.</p>
+<h3>Plot the Imported Data and the Caedium Simulation Data on the Same XY Plot</h3>
+<p>Select the <strong>Cp Plot</strong> Window. Drag and drop the <strong>Imported-&gt;cp_0_15.csv</strong> tool onto the Plot Window and select <strong>Done</strong> to plot the experimental data on the same XY plot as the simulation data.</p>
+<p>In the Properties Panel, expand the <strong>Y Axis</strong> property. Turn on the <strong>Reverse</strong> property to reverse the direction of the Y-axis.</p>
+<p><img src="../files/tutorials/airfoilflow/xyplot-properties.png" width="238" height="249" alt="Properties for XY Plot" /></p>
+<p>In the Plot Window, select <strong>ExpLower</strong> and <strong>ExpUpper</strong> in the Plot Legend. (First, click on <strong>ExpLower</strong>, then hold down the Control (or ctrl) key on your keyboard and select <strong>ExpUpper</strong>. Both words should now be highlighted.) In the Properties Panel, set <strong>Line</strong> to <strong>None</strong>, and set <strong>Symbol</strong> to <strong>Circle Open</strong>.</p>
+<p><img src="../files/tutorials/airfoilflow/imported-properties.png" width="238" height="248" alt="Properties for ExpLower and ExpUpper" /></p>
+<p>In the Plot Window, select the two words that say "edge" in the Plot Legend (<strong>edge_3</strong> and <strong>edge_5</strong> in this example) so that both words are highlighted. In the Properties Panel, set <strong>Symbol</strong> to <strong>None</strong>.  </p>
+<p><img src="../files/tutorials/airfoilflow/final-plot.png" width="484" height="363" alt="comparison of theory with computation" /></p>
+<p class="note">Notice the good agreement between the computational and experimental data.</p>
+<p>For a more detailed study of this airfoil, see our <a href="../examples/panel/naca4415.html">NACA 4415 Airfoil Calculation</a>.</p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="449.html" class="page-previous" title="Go to previous page">‹ Internal Flow</a>
+                    <a href="430.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="../tips.html" class="page-next" title="Go to next page">Tips ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-1918"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="561.html#comment-1918" class="active">Error when applying Cp</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Mario (not verified) on March 17, 2014 - 13:48.  </div>
+
+  <div class="content">
+    <p>when i click and drag Cp onto the leading edge and select the airfoil group, all options are grayed out and I cannot select color map. Any help will be appreciated!</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1919"></a>
+<div class="comment comment-published last even clearfix">
+  
+      <h3 class="title">
+      <a href="561.html#comment-1919" class="active">Have you applied the Substance?</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on March 17, 2014 - 18:18.  </div>
+
+  <div class="content">
+    <p>Have you successfully applied the Substance (Air) to the simulation? i.e., Have you dragged and dropped the Substance onto the background?</p>
+<p>Prior to using the Substance you need to set its properties as described in section "Specify the Properties for the Simulation".</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="collapsed"><a href="817.html">RANS Flow</a></li>
+<li class="expanded active-trail"><a href="430.html">Panel Flow</a><ul class="menu"><li class="leaf first"><a href="287.html">Fluid Flow Around a Sphere</a></li>
+<li class="leaf"><a href="288.html">Fluid Flow Around a Sphere: Theory Comparison</a></li>
+<li class="leaf"><a href="449.html">Internal Flow</a></li>
+<li class="leaf last active-trail"><a href="561.html" class="active">Flow Over an Airfoil</a></li>
+</ul></li>
+<li class="collapsed last"><a href="../tips.html">Tips</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/561 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:22 GMT -->
+</html>

@@ -1,0 +1,309 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/how-to-control-your-cfd-mesh-in-caedium by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:18:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>How to Control Your CFD Mesh in Caedium | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-how-to-control-your-cfd-mesh-in-caedium section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">How to Control Your CFD Mesh in Caedium</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1600" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on October 7, 2015 - 15:44        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>The <a href="../node/723.html">Caedium Accuracy tool</a> is largely responsible for determining the accuracy of your <a href="../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> simulations by imposing constraints on the underlying <a href="../meshing.html">computational mesh or grid</a>. Therefore, it's worth spending a moment to learn how the Accuracy tool in Caedium works.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/mesh-control/air-multiplier-volume-mesh.png" alt="Volume Mesh Elements" width="600" height="401" /><span class="caption"><strong>Volume Mesh Elements</strong></span></span></p>
+<h3>View a Mesh</h3>
+<p>It is frequently useful to <a href="../node/532.html">visualize the mesh elements</a> on faces and volumes to see the effect of changing Accuracy settings and diagnose problems.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/mesh-control/air-multiplier-sym-surface-mesh.png" alt="Face Mesh Elements on a Symmetry Plane" width="600" height="401" /><span class="caption"><strong>Face Mesh Elements on a Symmetry Plane</strong></span></span></p>
+<p>To view the individual mesh elements on faces you need to set the associated View properties:</p>
+<ul>
+<li>Style = Flat
+</li><li>Transparent = checked (on)</li>
+</ul>
+<p><span class="inline inline-center"><img src="../files/pictures/mesh-control/air-multiplier-volume-mesh.png" alt="Volume Mesh Elements" width="600" height="401" /><span class="caption"><strong>Volume Mesh Elements</strong></span>Reduced using threshold</span></p>
+<p>To view the individual mesh elements on volumes you need to set the associated View properties:</p>
+<ul>
+<li>Style = Flat
+</li><li>Transparent = unchecked (off)</li>
+</ul>
+<p>Then, assuming you have applied a Substance to your flow domain, you need to apply a <a href="../node/732.html">results field</a> as a <a href="../node/779.html">Color Map</a> to your faces or volumes, e.g., E Ratio (quality metric for faces) or Vol Ratio (quality metric for volumes). Next, you can use the threshold sliders in the <a href="../tutorials/essentials.html#viewlegend">View Legend</a> for the Color Map to narrow the range of values you want to focus on.</p>
+<h3>Apply to Geometry</h3>
+<p>The Accuracy tool can be applied directly to edges, faces, and volumes that are part of a flow domain, where a flow domain can be either a single volume or a group of volumes. Once applied, the mesh sizing will smoothly propagate across all other flow-domain geometry according to the Accuracy-&gt;Growth Rate setting.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/mesh-control/edge-accuracy-mesh.png" alt="Accuracy Applied to an Edge" width="600" height="498" /><span class="caption"><strong>Accuracy Applied to an Edge</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/mesh-control/face-accuracy-mesh.png" alt="Accuracy Applied to a Face" width="600" height="498" /><span class="caption"><strong>Accuracy Applied to a Face</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/mesh-control/volume-accuracy-mesh.png" alt="Accuracy Applied to a Volume" width="600" height="498" /><span class="caption"><strong>Accuracy Applied to a Volume</strong></span></span></p>
+<p>Note that applying the Accuracy tool to an edge will typically result in a significantly lower element count than if it's applied to a face or volume. Applying the Accuracy tool to a volume will typically result in a significantly higher element count, which may exhaust your computer's available memory. Therefore, it is best practice to localize your use of the Accuracy tool to significant regions of interest via assignment to edges and faces rather than applying it to volumes.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/mesh-control/source-target-mesh.png" alt="Accuracy Applied to a Source (Circle) and Target (Rectangle)" width="600" height="360" /><span class="caption"><strong>Accuracy Applied to a Source (Circle) and Target (Rectangle)</strong></span></span></p>
+<p>If you have a region where you want to control the mesh size but it is not conveniently located near any existing flow-domain geometry, you can create standalone geometry. Apply the Accuracy tool to the standalone geometry as the Source and set the flow-domain as the Target.</p>
+<h3>Mesh Size</h3>
+<p>By default all edges in a flow domain are assigned at least one element to ensure a reasonable starting mesh, with extra elements assigned to circular edges.</p>
+<p>You can specify the mesh size using either:</p>
+<ul>
+<li>Accuracy-&gt;Resolution - to constrain the number of elements along edges and therefore indirectly set the element size.</li>
+<li>Accuracy-&gt;Max Element Size - to constrain the maximum element size.</li>
+</ul>
+<p><span class="inline inline-center"><img src="../files/pictures/mesh-control/ahmed-35-resolution-mesh.png" alt="Resolution = 10 Applied to Geometry Faces" width="600" height="360" /><span class="caption"><strong>Resolution = 10 Applied to Geometry Faces</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/mesh-control/ahmed-35-max-size-mesh.png" alt="Max Element Size = 0.02m Applied to Geometry Faces" width="600" height="360" /><span class="caption"><strong>Max Element Size = 0.02m Applied to Geometry Faces</strong></span></span></p>
+<p>The Max Element Size is best applied to complex geometry where there is a wide variety of edge lengths. Specifying the Resolution for such a case would require a unique value for each edge or face, which is a tedious task.</p>
+<h3>Particle Seeds</h3>
+<p>If you create standalone geometry (e.g., an edge or face) to serve as a source for <a href="../node/984.html">particles or streamlines</a>, then you use the Accuracy tool to control the number of mesh nodes that will serve as individual seeds for each particle.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/mesh-control/pipe-box-3x3-streamlines.png" alt="Resolution = 3 Applied to Streamlines Seed Face" width="600" height="360" /><span class="caption"><strong>Resolution = 3 Applied to Streamlines Seed Face</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/mesh-control/pipe-box-5x5-streamlines.png" alt="Resolution = 5 Applied to Streamlines Seed Face" width="600" height="360" /><span class="caption"><strong>Resolution = 5 Applied to Streamlines Seed Face</strong></span></span></p>
+<h3>Diagnose Mesh Problems</h3>
+<p>When the <a href="../node/1166.html">meshing fails</a>, more often than not it will be caused by a geometry issue. Problems that can cause mesh failures include:</p>
+<ul>
+<li>Open volume - Flow volumes have to be closed or watertight.</li>
+<li><a href="sliver-treatment-strategies-for-cfd.html">Slivers</a> - Long, skinny faces can force the creation of poor mesh elements. To remedy, you can either join the sliver with a large neighbor or resolve it with smaller mesh elements.</li>
+<li>Close proximity - Closely coupled faces require mesh sizing equivalent to the gap size.</li>
+<li><a href="how-to-fix-small-acute-angles-for-cfd.html">Small acute angles</a> on faces - Acute angled corners on faces can force the creation of poor mesh elements. To fix, modify the geometry in the region of the acute apex.</li>
+<li><a href="small-feature-removal-for-cfd.html">Minute features</a> - Very small geometry features can require excessive numbers of mesh elements to resolve. Locally modifying the geometry can fix this issue if the features are of little significance to your simulation.</li>
+</ul>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/how-to-control-your-cfd-mesh-in-caedium by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:18:05 GMT -->
+</html>

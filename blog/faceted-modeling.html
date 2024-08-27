@@ -1,0 +1,371 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/faceted-modeling by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:28:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Faceted Modeling | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-faceted-modeling section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">Faceted Modeling</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-517" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on October 8, 2007 - 20:17        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>A vast army of 3D artists, initially led by movie and game animators, but more recently joined by students and hobbyists, have compiled an extensive archive of 3D faceted models. These models cover every imaginable item from the mundane, such as eating utensils, to the realms of pure fantasy, such as the Starship Enterprise from Star Trek.</p>
+<p><span class="inline inline-center"><img src="../files/images/57-chevy_0.png" alt="57 Chevy Import" width="400" height="300" /><span class="caption"><strong>1957 Chevy Model</strong></span></span></p>
+<h3>Facets Versus NURBS</h3>
+<p>Faceted models consist of groups of polygons (often triangles). In contrast, most <a href="../computer-aided-engineering.html">Computer-Aided Engineering (CAE)</a> models originate from <a href="http://en.wikipedia.org/wiki/Computer-aided_design">Computer-Aided Design (CAD)</a> systems which typically use continuous surface and edge definitions based on <a href="http://en.wikipedia.org/wiki/Nonuniform_rational_B-spline">NURBS</a>. CAE simulations then break down this NURBS representation into facets by a process known as <a href="../meshing.html">meshing</a>. The mesh (or grid) is then used as the basis to perform simulations such as <a href="../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a>.</p>
+<p>The advantage of retaining the NURBS definition is that different levels of model detail can be produced without losing fidelity as the facets are always guaranteed to conform to the original definition. When facets alone are the geometry definition, producing different levels of detail causes aliasing problems whereby subsequent facets no longer conform to the original continuous, smooth definition. Instead, artifacts of the facets will be manifest in subsequent models as sharp abrupt changes, especially in regions of high curvature such as the leading edge of an airfoil. No amount of mesh refinement can recover the original smooth curvature.</p>
+<p>What faceted models lack in quality compared to NURBS, they make up for in the sheer quantity and diversity of <a href="http://www.turbosquid.com/3d">examples</a> available. These faceted models are particularly appealing to engineering marketing where a simulation, such as air flow over a car, can be incorporated into a marketing brochure. Such simulations are less concerned with exact physical reality and tend to focus on creating eye-catching visuals.</p>
+<h3>Formats</h3>
+<p>Popular formats for faceted models are:</p>
+<ul>
+<li><strong>.3ds</strong> &ndash; Autodesk's <a href="http://en.wikipedia.org/wiki/3ds_Max">3ds Max</a> export format</li>
+<li><strong>.dxf</strong> &ndash; Autodesk's <a href="http://en.wikipedia.org/wiki/AutoCAD">AutoCAD</a> export format</li>
+<li><strong>.obj</strong> &ndash; originally <a href="../node/77.html">Alias/Wavefront</a> export format, but now a common exchange format between most 3D animation packages</li>
+<li><strong>.stl</strong> &ndash; used by <a href="http://en.wikipedia.org/wiki/Stereolithography">stereolithography</a> machines or 3D printers to produce physical models</li>
+</ul>
+<h3>Topology Recovery</h3>
+<p>Most of the faceted formats, except for stl, provide groupings of facets that reflect material properties such as glass and metal. However, these groupings are typically inadequate for a CAE simulation which requires surface topology to be grouped according to contiguous regions bounded by edges. </p>
+<p><span class="inline inline-center"><img src="../files/images/facets-fuselage_0.png" alt="Faceted Fuselage" width="640" height="474" /><span class="caption"><strong>Faceted Fuselage: </strong>Original faceted fuselage on the left and a simplified topology with analysis mesh on the right</span></span></p>
+<p>By processing the facets it is possible to recover the contiguous topology and thus proceed with a CAE simulation as if the facets are the same as native CAD geometry. However, one further enhancement is usually necessary to make the recovered topology better suited for simulation, and that is the joining or merging of adjacent surfaces and edges. These localized joining operations suppress irrelevant small features that would otherwise require a disproportionate amount of computational resources to model compared to their importance in the overall simulation.</p>
+<h3>Give it a Go</h3>
+<p>So if your modeling requirements are driven by a need for stunning visuals, maybe for a <a href="../node/505.html">personalized greeting card</a>, why not give faceted models a try? I guarantee that there are faceted models out there that will satisfy your needs.</p>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-64"></a>
+<div class="comment comment-published first odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="faceted-modeling.html#comment-64" class="active">Really Give it a Go</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Richard Smith on October 10, 2007 - 15:02.  </div>
+
+  <div class="content">
+    <p>The latest version of <a href="../product/caedium.html">Caedium</a>, combined with its <a href="../product/professional.html">Professional add-on</a>, now has the ability to read faceted files, such as <strong>stl</strong> and <strong>obj</strong>. It can also join adjacent faces and edges to suppress irrelevant geometry features. So now you really can <strong><em>Give it a Go</em></strong>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-96"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="faceted-modeling.html#comment-96" class="active">Meshing with Caedium</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by jbanchero on December 15, 2007 - 18:31.  </div>
+
+  <div class="content">
+    <p>Hi,</p>
+<p>I just downloaded Caedium with a 30-day evaluation of the Professional add-on.  Can you recommend any resources to help me learn how Caedium might be used to create meshes?  The first problem I'd like to solve is to re-mesh a terrain surface that consists of 64 square chunks (an 8x8 grid of meshes).  I've imported my model as .objs.  I've displayed the geometry using colormaps.  I have not figured out how to display/edit the edge topology while keeping all the pieces connected.</p>
+<p>Thanks!!</p>
+<p>j.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-97"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="faceted-modeling.html#comment-97" class="active">Meshing Faceted Geometry</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on December 15, 2007 - 20:04.  </div>
+
+  <div class="content">
+    <p>Our Caedium Professional add-on should be able to help you.</p>
+<p>First I suggest reviewing (if you haven't already) our <a href="../node/532.html">View a Mesh</a> tip.</p>
+<p>This should allow you to create meshes on geometry (native or faceted) without having to perform a full airflow simulation.</p>
+<p>As you suggest, you'll next need to control the mesh sizing. Though we don't currently have curvature based mesh sizing, we do provide geometry based mesh sizing using our <strong>Physics-&gt;Accuracy</strong> tool. This allows sizing to be defined on edges, faces and volumes. The sizing is determined by low, medium, high and custom options. The custom option allows explicit specification of the number of intervals on an edge and face (number of intervals on smallest edge), and the element growth rate. The Accuracy tool is used in the <a href="../node/287.html">Fluid Flow Around a Sphere</a> tutorial in the <strong>Specify the Accuracy You Require for Your Results</strong> section.</p>
+<p>To assemble (or join) geometry it will need to be connected (geometrically, i.e. share common vertices and edges). We currently can only join native geometry using the <strong>Geometry-&gt;Volumes-&gt;Stitch</strong> tool. Use the <strong>Geometry-&gt;Faces-&gt;Join</strong> and the <strong>Geometry-&gt;Edges-&gt;Join</strong> tools to join geometry into composites.</p>
+<p>While joining geometry you need to keep in mind that high curvature regions will need a geometry edge for the mesh tools to <strong>follow</strong> the underlying geometry - so if ther's a high curvature region in the middle of a face without any geometry edges nearby there's a chance the mesh tool will fail, especially if the geometry  wraps (folds) around on itself.</p>
+<p>It might be worthwhile trying out the Accuracy tool on native geometry to get an idea of how the mesh sizing performs prior to tackling the wavefront files.</p>
+<p>I hope this proves useful.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-98"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="faceted-modeling.html#comment-98" class="active">Use STL to Merge Nodes</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on December 15, 2007 - 20:14.  </div>
+
+  <div class="content">
+    <p>Just had a thought to get around the fact that we can't yet stitch faceted geometry together. </p>
+<p>You could read in the wavefront files (.obj), then export the model as an stl file. Then read the new stl file, which will merge the duplicate nodes along edges to produce a single surface. The draw back is that there will be only one outer edge to the surface.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1448"></a>
+<div class="comment comment-published last odd clearfix">
+  
+      <h3 class="title">
+      <a href="faceted-modeling.html#comment-1448" class="active">Caedium v3 can now stitch faceted models</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on April 26, 2012 - 08:40.  </div>
+
+  <div class="content">
+    <p>The latest version of Caedium v3, can stitch faceted geometry together. For more details see <a href="../node/1147.html">"Topology Operations"</a>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/faceted-modeling by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:28:54 GMT -->
+</html>

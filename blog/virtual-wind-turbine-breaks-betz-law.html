@@ -1,0 +1,1082 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/virtual-wind-turbine-breaks-betz-law by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:28:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Virtual Wind Turbine Breaks Betz&#039; Law | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-virtual-wind-turbine-breaks-betz-law section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">Virtual Wind Turbine Breaks Betz&#039; Law</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-595" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on January 29, 2008 - 08:18        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Given the technological sophistication of today's wind turbines, it's quite humbling to think that their theoretical maximum efficiency was derived by wind turbine pioneer <a href="http://en.wikipedia.org/wiki/Albert_Betz">Albert Betz</a> in 1920. Betz' Law, as it is now known, is a relatively simple proof that the maximum efficiency of a wind turbine, irrespective of its design, cannot exceed 59%. Still, some believe laws are there to be broken - at least in the virtual simulation world.</p>
+<p><span class="inline inline-center"><img src="../files/images/rotor_wind_turbine.jpg" alt="Horizontal-Axis Wind Turbine" width="640" height="403" /><span class="caption"><strong>Horizontal-Axis Wind Turbine</strong></span>License: <a href="http://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, <a href="http://www.flickr.com/photos/lepti/129508274/">Martin Laine</a></span></p>
+<h3>Betz' Law</h3>
+<p>The efficiency of a wind turbine is measured as the ratio between the energy extracted from the wind to perform useful work (e.g., electricity) and the total kinetic energy of the wind without the presence of a wind turbine. To understand the reasoning behind <a href="http://www.windpower.org/en/stat/betzpro.htm">Betz' Law</a>, consider a 100% efficiency, i.e., extracting all the kinetic energy from the wind and thus bringing the air to a standstill. The paradox of bringing the air to a stop means that there's no way for the air to drive a rotating machine, so no useful work can be extracted. Now consider the other extreme, i.e., the wind turbine doesn't reduce the wind speed at all. Again conservation of energy dictates that no useful work will be accomplished by the wind turbine. Clearly the maximum theoretical efficiency lies somewhere between these two extremes. Betz' Law simply and elegantly proves the maximum efficiency of a wind turbine can't exceed 59%.</p>
+<p>The latest <a href="anatomy_horizontal_wind_turbine.html">horizontal-axis wind turbines</a> typically have efficiencies in the range of 35-40%, so clearly there's no conflict there between theory and practice. If electricity generators and distribution are taken into consideration, then efficiency drops to the 10-30% range.</p>
+<h3>Virtual Wind Turbine Simulation</h3>
+<p>A recent article entitled <a href="http://www.cd-adapco.com/press_room/dynamics/21/wind_turbines.html"><cite>"CFD Modeling for Wind Turbines"</cite></a> cites efficiencies for a shrouded wind turbine way in excess of the Betz Law limit (shown by Figure 4 in the article). Straightaway this should be a cause for the kind of skepticism usually reserved for <a href="http://en.wikipedia.org/wiki/Perpetual_motion">perpetual motion</a> devices. Now, maybe Betz' Law is flawed and the researchers have found a loophole, or more likely, they have made a mistake in their calculations. To make such an extraordinary claim against a well-regarded theory requires extraordinary evidence. Their study is based on <a href="../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> calculations. I believe this is an excellent example of how not to use advanced <a href="../computer-aided-engineering.html">Computer-Aided Engineering (CAE)</a> tools, such as CFD.</p>
+<h3>Reality Check</h3>
+<p>CAE tools are only as good as the engineers and researchers that know when and where to apply them. Good practitioners know that when a simulation contradicts a well-proven law, such as conservation of energy, or in this case Betz' Law, there is likely a problem with their simulation and not vice-versa. It is relatively easy to use CAE tools to perform virtual simulations that have no real world equivalent.  There are a number of reasons why a good simulation can turn bad:</p>
+<ul>
+<li>Underlying assumptions of the tool and the physical models it supports are not met, for instance a linear stress analysis model is no use if the stresses are likely to exceed the elastic limit and make a material deform plastically</li>
+<li>Specification of inappropriate boundary conditions and material properties can produce subtle inaccuracies in simulation results</li>
+<li>Low fidelity (coarse <a href="../node/244.html">mesh</a>) model representation</li>
+<li>Mistyped numbers or incorrect unit conversions can cause a simulation to produce results that are of by orders of magnitude</li>
+</ul>
+<p>To at least recognize these problems it is essential that a practitioner has a good understanding of their physical problem domain, such that they know when a simulation is approaching the improbable. Oftentimes this would take the form of a low fidelity hand calculation (ballpark figure) to cross correlate a simulation result. The best CAE practitioners validate their CAE tools against similar, known test cases prior to applying it to a new case.</p>
+<h3>Lesson</h3>
+<p>So the lesson here is that you need to know your domain prior to picking up your CAE tool and not vice-versa. Then, when you find a simulation result that contradicts a physical law, you'll know it for what it is: a revolution in physics, or, most likely, a simple modeling mistake.</p>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-116"></a>
+<div class="comment comment-published first odd clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-116" class="active">I&#039;m not sure there is anything wrong with the claims...</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by dharris894 on February 12, 2008 - 17:13.  </div>
+
+  <div class="content">
+    <p>Why do you say the performance is "way in excess of the Betz Law limit"?</p>
+<p>All they have done is created a venturi effect to accelerate a larger volume of air through the turbine.</p>
+<p>The power output of any turbine, shrouded or not, would quadrupal if you increased the wind speed by 50% (5 m/s to 7.5 m/s) so this is correct.</p>
+<p>I assume then that the Benz law if calculated for the larger parcel of air (not just the rotor diameter size) that is effected by the shroud still holds for the higher power output.</p>
+<p>If this is correct then the only value of the shroud is it allows the use of smaller blades for the same amount of power.  However the trade off is you need to build this giant shroud which would be totally impractical since it would not be able to withstand high/storm wind loads.  Blades feather in high winds to prevent damage.  A shroud can't.</p>
+<p>It is just not a practicle tradeoff.  But the results aren't necesarily flawed or unrealistic.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-117"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-117" class="active">Betz&#039; Law isn&#039;t Broken</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Richard Smith on February 13, 2008 - 09:36.  </div>
+
+  <div class="content">
+    <p>I guess I was a little hasty in calling this shrouded wind turbine study flawed. I think you are right that <strong>Betz' Law isn't broken</strong> if the inlet diameter of the shroud is used instead of the blade diameter to calculate the maximum Betz power.</p>
+<p>Thanks for taking the time to point out my mistake.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-123"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-123" class="active">Betz Law</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on March 22, 2008 - 08:26.  </div>
+
+  <div class="content">
+    <p>Betz "Law" is derived from momentum theory, which uses conservation of mass and momentum across a "rotor disc". The "59% efficiency" result follows from the Momentum Theory result that only half of the velocity change associated with work extraction (or addition in the case of a helicopter rotor) occurs at the disc, while the rest occurs downstream, somewhere in the "far wake". </p>
+<p>I don't much of a problem with this for a low disc-loading rotor (I do for a counter-rotating pair of coaxial rotors), where the flow is dominantly axial. However, I don't see this being so evident (or unbeatable) in the case of a vertical axis turbine, where the work extraction clearly occurs with turning of the flow. </p>
+<p>As an example, I wonder if you can reconcile the Betz Law with the case of a Pelton Wheel, where the capture area is only the area of the blades exposed to the flow. Just a thought. Let me confess that I don't have any results to advertise, showing greater than Betz efficiency. More to the point, is there any derivation out there specifically considering, say, a centrifugal device (or a high-disc-loaded vertical axis wind turbine) and arriving at the same result as the axial-flow Betz law?</p>
+<p>One aspect to consider is that a typical helicopter jet engine turbine shaft extracts much more than 59% of the energy in the air blowing into it. This is because it uses rotor and stator stages. In a 50% reaction stage, 50% of the static pressure change occurs in the stator (nozzle), and the rest right away in the rotor. Of course only the rotor part produces useful work, but that is where most of the stagnation pressure drop occurs as well. </p>
+<p>The user above proved why Betz law should not be taken as religion even for the purely axial case. If you use a nozzle upstream of the rotor, you can achieve part of the desired engineering result (small rotor, large work extraction). </p>
+<p>If you now take the exhaust from this, and say, turn it in a Pelton turbine, you may do even better. </p>
+<p>Best regards</p>
+<p>naray9</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-165"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-165" class="active">betz law is true for a standard wind turbine but not for all</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on June 19, 2008 - 15:20.  </div>
+
+  <div class="content">
+    <p>A 9'- 6" diameter turbine at a 15 mph wind can not exceed 719 watts output and at 30 mph wind it cannot exceed 5882 watts well my wind turbine produces 1117.291 watts at a 15 mph wind and 6984.554 watts at a 30 mph wind the winds input is 1213 watts at a 15 mph wind and 9926 watts at a 30 mph wind before I designed the turbine I had no idea that Betz Law even existed but now i do but law's were made to be broken</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-166"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-166" class="active">Betz law</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Andrew (not verified) on June 21, 2008 - 17:12.  </div>
+
+  <div class="content">
+    <p>It is very interesting to read your opinion. We have build wind turbine that is vertical axis. We are now observing power efficiency in wind tunnel. However we measure much higher then 59 % - we are close to 80 - 85 %. If there is someone that has great understanding of other then Betz law explanation I would like to share video of our design and initial data. Please contact me in direct way - <a href="mailto:andrew@mastercore.ca">andrew@mastercore.ca</a></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-167"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-167" class="active">wind tunnels give data not fact wind is unpredictable at best</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on June 24, 2008 - 14:53.  </div>
+
+  <div class="content">
+    <p>If you can get the same readings outside in the open then it is better as the wind is more random and gusts and swirls are hardly ever in a straight line as you can get in a tunnel but you can test stress resistance in high winds in a tunnel as high winds travel straighter.</p>
+<p>regards</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-187"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-187" class="active">Your Turbine</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://www.youtube.com/user/HHO4gas" rel="nofollow">Bob Campbell</a> (not verified) on September 14, 2008 - 17:18.  </div>
+
+  <div class="content">
+    <p>"betz law is true for a standard wind turbine but not for all"</p>
+<p>"A 9'- 6" diameter turbine at a 15 mph wind can not exceed 719 watts output and at 30 mph wind it cannot exceed 5882 watts well my wind turbine produces 1117.291 watts"</p>
+<p>To the annonomous author who claims better than Betz law.</p>
+<p>I'd like to know more about your turbine design and its availability.  Plase don't take offense.  I'm seriously intersted in knowing more about how you achieve this efficiency.</p>
+<p>Bob Campbell<br />
+<a href="mailto:btcamp@sbcglobal.net">btcamp@sbcglobal.net</a></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-190"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-190" class="active">Betz&#039; Law is correct</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by DrAero (not verified) on September 22, 2008 - 15:07.  </div>
+
+  <div class="content">
+    <p>Ok, as an aerodynamicist by trade and multiple degrees, I feel the need to chime in here.  I came across this while trying to verify another of Betz' claims, and I would like to explain so people stop making the mistakes with it.</p>
+<p>Betz' Law is based on a control volume analysis, and to do that correctly, you <em>must</em> choose correct control volume.  Betz' original assumptions for his control volume contains <em>ALL</em> the air that flows into the fluid power device, and <em>ALL</em> that flows out.  So, if you have a nozzle, your control volume must extend from the beginning of the nozzle, to the farfield exit.  The same can be said for a venturi type design, even though you have no nozzle, you are drawing air from a larger area than the projected frontal area of the rotor.  </p>
+<p>Consider a 747 engine.  That engine swallows on the order of 100k cubic feet per second of air, but the nozzle diameter is only on the order of 15ft (numbers not exact, just making the point), so to properly analyze the efficiency of a jet engine using a control volume analysis, your initial entrance to the control volume must contain a massive area in front of the nozzle (227 sq feet at 300 mph, for 100k cubic feet). </p>
+<p>So, consider a wind tunnel with your VAWT in it, where the freestream air is moving at a constant speed.  If you want to know your efficiency, you must measure all the air in front of the turbine with a anemometer of some sort, and any air that is moving slower than the freestream is being effected by your turbine.  Therefore, your control volume area must extend at least out to there.  </p>
+<p>If you are doing a venturi-type design, chances are good you are drawing air from in front <em>and</em> the sides of the control volume, all of this must be taken into account, otherwise you are effectively falsifying your efficiency number. </p>
+<p>The responder who talked about rotation in the flow must remember as well that the amount of rotation in a flow is conserved as well, and a conservation of vorticity equation can be written for that flow.  By no means does this enably you to violate Betz' law.  If you find you are getting a higher efficiency, you must re-examine your control volume, and you will find that your turbine is consuming air from outside it's projected frontal area.</p>
+<p>Hope this makes sense to everyone.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-193"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-193" class="active">Does Benz&#039;s law refer only to propeller type turbines?</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Danzumius (not verified) on September 29, 2008 - 17:53.  </div>
+
+  <div class="content">
+    <p>I am just wondering if Betz's law refers only to propeller type turbines.<br />
+what about a 9'6" diamter sail?  what percent of the wind's power would be used if the ship is going in the same direction as the wind?  </p>
+<p>Surely betz's law doesn't hold for sails.   we'd see sails with holes otherwise.</p>
+<p>how much less would the force exerted against the 3 propeller blades be than the force exerted against the sail of the same size?</p>
+<p>Does the fact that propellers lie within a one dimensional plane affect the percent of power useable?  What if the energy generating device travels in the same direction as air flow?  Does Betz's law hold then?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-201"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-201" class="active">So...</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on November 20, 2008 - 14:07.  </div>
+
+  <div class="content">
+    <p>As a guy in business development, not physics or engineering, I would love if someone would give a straight up answer to this question...  Does Betz Law apply to VAWTs?  I have read reasonable arguments saying it does, and some saying it might not.  From the evidence I find online, the majority of people seem to think it does.  When I speak to an engineer on one of my teams (whose wk is not related to anything on this topic board), he says it absolutely is not.  </p>
+<p>I would love it if someone smarter than myself and who works in this area of expertise would say YES or NO.   I understand there are ways to bend your efficiency numbers, stators, shrouds etc.  But thats not what I am looking for, yes or no.  </p>
+<p>Anyone??</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-211"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-211" class="active">Betz&#039; Law is fundamental</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by JimK (not verified) on December 16, 2008 - 17:53.  </div>
+
+  <div class="content">
+    <p>I can't believe all the hype WRT to a rather simple and elegant analysis.  Betz' Law holds for any method that extracts energy from a moving stream.  It simply looks at momentum upstream and downstream of the extracting device - be it axial flow turbine, vertical axis machine, paddle wheel, or "force field".  Ya can't get sompthin' for nuttin' - it has to add up.  If there's a change in rotation in the stream through the process, or if the stream changes direction, then that has to be counted too.  It has to add up.  VAWT's can't cheat physics.  If you need further understanding, just go through the calc yourself.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-236"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-236" class="active">Comments on Betz&#039;s Law</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Bill Wolf (not verified) on February 16, 2009 - 13:22.  </div>
+
+  <div class="content">
+    <p>Betz’s Law is applicable to non-shrouded, transverse-flow turbines having a flow velocity through the turbine equal to the average of the incoming and exiting flow velocities.  The assumption regarding the average flow velocities is part of the proof, so it is incorrect to apply Betz’s Law to applications where this initial assumption is not the case.  Also, the theoretical efficiency of 50.26 percent is the result of theoretically removing 88.89 percent of the energy from the two-thirds of the incoming flow that passes through the turbine and removing zero energy from the remaining one-third of the incoming flow that passes around the turbine.  According, the theoretical efficiency of the turbine is dependent on what is defined to be the power of the incoming flow.  If the power of the incoming flow is defined in terms of the cross-sectional area of the flow that eventually passes through the turbine, then the maximum theoretical efficiency is 88.89 percent.  However, if incoming power is defined in terms of a cross-sectional area equal to the cross-sectional area of the turbine, as in the case of Betz’s Law, then the maximum theoretical efficiency is 50.26 percent.</p>
+<p>The maximum theoretical efficiency for turbines that do not correlate to either of the above cases must accordingly be calculated for the specific design.  For example, the inclusion of shrouding around the turbine can alter the velocity through the turbine to be other than the average of the incoming and exiting flow velocities (the main assumption used in Betz’s Law) and thereby changes the maximum theoretical efficiency.  Accordingly, modifying a design to provide a different maximum theoretical efficiency does not violate Betz’s Law, because Betz’s Law is specific to a set of conditions where the velocity through the turbine must be equal to the average of the incoming and exiting flow velocities.  Likewise, altering the definition of what is considered to be incoming power also does not violate Betz’s Law, because incoming power in Betz’s Law is predefined in terms of the incoming cross-sectional area that is equal to that of the turbine.</p>
+<p>If you have reservations about the above, then perform the following calculations at the point of maximum theoretical efficiency as determined by Betz's Law.  This occurs when the incoming velocity is three times the exiting velocity.  Accordingly:  Velocity v(in) is equal to 3 v(ex).  The velocity through the turbine v(t) is equal to [v(in) + v(ex)]/2 by definition.  v(t) is thereby also equal to 2 v(ex).  The outlet cross-sectional flow area A(ex) is equal to 3 A(in).  And, the turbine area A(t) is equal 1.5 A(in).</p>
+<p>Accordingly:  The incoming energy power P(in) is equal to ½ rho A(in) v(in)^3.  The exiting P(ex) is equal to ½ rho A(ex) v(ex)^3.  And, the output power (power removed) P(out), as typically stated in proofs of Betz’s Law, is equal to ½ rho A(t) v(t) [v(in)^2 - v(ex)^2], which should also be equal to the difference of the incoming power and the exiting power.</p>
+<p>Performing the calculations and normalizing for A(in) equal to 1, v(ex) equal to 1, and rho equal to 1, results in the following:  P(in) equal to 13.5, P(ex) equal to 1.5, and P(out) equal to 12.  The efficiency P(out)/P(in) is therefore equal to 12/13.5 or 0.8889.  If we modify the definition of incoming power to use the cross-sectional area equal to that of the turbine (as defined by Betz’s Law), P(in) becomes equal to rho A(t) V(in)^3, which is equal to 20.25, and the efficiency thereby decreases to 12/20.25, which equals 59.26 percent, in agreement with Betz’s Law.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-241"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-241" class="active">Would like to talk...</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://www.dragonfly-windturbine.com/" rel="nofollow">PRidings</a> (not verified) on March 10, 2009 - 00:06.  </div>
+
+  <div class="content">
+    <p>Mr. Wolf,</p>
+<p>I have something I would like you to review.<br />
+please contact me at as soon as you can - </p>
+<p><a href="mailto:dragonflywindturbine@yahoo.com">dragonflywindturbine@yahoo.com</a></p>
+<p>Thank you!</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-272"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-272" class="active">Betz Law</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by southtech (not verified) on June 19, 2009 - 10:04.  </div>
+
+  <div class="content">
+    <p>It seems a priori that a device placed in a free stream should extract energy as the difference between the upstream and the downstream airflow.  However, it appears that in the case of a vortex this does not apply.  </p>
+<p>I'm not a meteorologist but a tornado seems to operate at 100% efficiency within a defined perimeter.  Get close enough and you will be sucked in and exit somewhere at the top of the vortex.  If a device were constructed to function as a tornado would not the same results be expected?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-283"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-283" class="active">Betz Law and Vertical Wind Generators</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://www.clairityfarms.com/" rel="nofollow">Lisa Hamilton</a> (not verified) on July 13, 2009 - 13:31.  </div>
+
+  <div class="content">
+    <p>What is the effect of Betz Law on small Wind Vertical Wind Generators?  The V2 would be different due to the orientation.  Has there been any studies with application of Betz Law to Vertical Wind Generators?<br />
+Thank you,</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-351"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-351" class="active">pelton wheel doesn&#039;t satisfy betz assumptions-different animal</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Kwazai (not verified) on September 13, 2009 - 15:22.  </div>
+
+  <div class="content">
+    <p>It is my understanding that with a Pelton wheel you already have the fluid(water) at its static  pressure, the nozzle then converts this to kinetic energy in the form of velocity and it impacts the "blade" losses its connect energy(velocity)  and falls by the wayside. with wind the wind is still in the way. I would wonder what the best impact energy transfer would be if the air would get out of the way?(change betz assumptions -so to speak)<br />
+L8R</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-352"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-352" class="active">Betz Limit has already been overthrown</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Gabriel C K LAM (not verified) on September 13, 2009 - 22:51.  </div>
+
+  <div class="content">
+    <p>Please note that the Betz Limit has already been broken and see my technical note titled "Wind Energy Conversion Efficiency Limit", Wind Engineering, vol. 30, No. 5, 2006, Multi-Science Publishing Co, UK.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-366"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-366" class="active">Betz&#039;s Law</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by cc wind art (not verified) on September 26, 2009 - 07:59.  </div>
+
+  <div class="content">
+    <p>A Venturi Effect fluid Turbine of a Utility Design, that is fashioned in such a way  as to maximize energy production from fluids (namely air or water) in motion, by mechanically  creating a vortex that reduces  fluid pressure at the axis of rotation of said art device, thereby causing the free stream velocity to increase as a function of said vortex.</p>
+<p>Upon a mass of fluid impacting the airfoil(s) or hydrofoil(s) leading edge, a reduction in fluid pressure begins on the curved outside surface of the airfoil(s) or hydrofoils and continues to decrease as the trailing edge is approached by said fluid flow.  The difference in fluid flow velocity between the curve side and the concave side of the airfoil(s) or hydrofoil(s) creates a venturi effect at the boundary layer where the low pressure fluid flow of the curve side impacts the higher pressure fluid flow of the concave side.   </p>
+<p>This venturi effect causes the lower pressure curved side fluid flow to accelerate. The fluid flows  intersect at the central axis causing the turbine to rotate as the fluid masses merge and accelerate through the central axis, exiting the top of the fluid turbine in a vortex.  </p>
+<p>Airfoil or hydrofoil pitching moment is located ahead of the center of pressure (closer to the leading edge) at the boundary layer between the two fluid streams.   Approximately Thirty-five percent of the rotational force of said art device is a result of the pitching moment of the airfoil(s) or hydrofoil(s), due to the extreme camber of said airfoil(s) or hydrofoil(s). Fifty-five percent of the rotational force is from lift and ten percent results from dynamic drag.</p>
+<p>A Venturi Effect fluid Turbine that is functional in a wide range of fluid velocities, from 2 meters/sec. to 20 meters/sec.  This is accomplished by sizing and increasing the number of airfoil(s) or hydrofoil(s) as a function of average (peak) fluid velocity (in the area of operation) and attaching said art device to a continuously variable transmission.  The increase in rotational force, from sizing, is described by the logarithmic function f(x)= ax.</p>
+<p>A Venturi Effect fluid Turbine offers several advantages over  prior art devices; namely greater efficiency extracting energy, from a fluid, per volume of installation space, silent operation, more efficient energy production, environmentally friendly to birds, can be sized to fit the operating environment without sacrificing energy output and appears as a solid object to Doppler radar.</p>
+<p>A Venturi Effect fluid Turbine of an Ornamental Design that forms the shape of a  helix.  The   helix design is aesthetically pleasing and represents the essence of creation.  The design allows for “artwork” adornments on airfoils  to suit the installation needs of the user's environment.</p>
+<p>Proponents of horizontal wind turbine (HAWT) technology often deride vertical wind apparatus as inefficient.  As promulgated, vertical axis wind turbines (VAWT) fall under one of two categories, Savonius or Darrieus or some variation thereof.  Because of this design iteration factor, all but a few of these devices allow all rotors to generate a rotational force simultaneously.    This is due to the fact that fifty percent of the time the rotor is on the downwind side of the free stream and the collection device is either blocked from the airflow or the orientation of the rotors are such that they provide zero, or in some cases, negative lift.  Darrieus wind turbines also suffer from blade stall at low wind velocities and need a starter device or Savonius turbine to initiate rotation.</p>
+<p>The Venturi Effect Fluid Turbine can be considered a hybrid of Savonius and Darrieus types.   In the case of the Savonius type, the collection buckets are replaced by a lifting device, namely an airfoil or hydrofoil, that extends the length of the central axis.  However, unlike a typical Darrieus device, the airfoils (rotors) trailing edge extend to the central axis, preventing airflow from passing through the central axis without affecting (all) four rotors simultaneously.  This is accomplished by twisting the airfoil 180 degrees, in a helical fashion, around the central axis of rotation.</p>
+<p>A fundamental principal of wind collection devices states that potential energy is a function of the swept area  (a) =  pi x r2.  In other words, the larger the area the propellers move through the more potential energy available.  </p>
+<p>Swept area for a Venturi Effect Fluid Turbine is calculated using the equation for the area of a cylinder<br />
+A = (2 x pi x r2) + (2 x pi x rh)</p>
+<p>Wind Turbine Power:1<br />
+P = 0.5 x rho x A x Cp x V3 x Ng x Nb<br />
+where:<br />
+P = power in watts (746 watts = 1 hp) (1,000 watts = 1 kilowatt)<br />
+rho = air density (about 1.225 kg/m3 at sea level, less higher up)<br />
+A = rotor swept area, exposed to the wind (m2)<br />
+Cp = Coefficient of performance (.59 {Betz limit} is the maximum theoretically possible, .35 for a good design)<br />
+V = wind speed in meters/sec (20 mph = 9 m/s)<br />
+Ng = generator efficiency (50% for car alternator, 80% or possibly more for a permanent magnet generator or grid-connected induction generator)<br />
+Nb = gearbox/bearings efficiency (depends, could be as high as 95% if good)</p>
+<p>Using the above equation the following power output for a 9m2  and 38m2 at wind velocity 5.5 m/sec.  is 432w and 1800w respectively.  It is my premise that the operating principle of this device type  should, in practice, produce a significantly higher power output.   However this is dependent on Betz's law at greater than  59% Cp.  If for instance the Cp were 120% due to aforementioned venturi effect then the output would increase to  880w and 3700w.  With the further addition of airfoils, the Cp over the theoretical Betz maximum should double each time the number of airfoils is doubled.</p>
+<p>The above claims do not  exceed Betz's  law as defined:   What is occurring here is the acceleration of the free stream, localized to the volume and flow of fluid through the VEFT.  Betz's law is 59% upstream of the VEFT and is 59% flowing through the VEFT.  However the velocity of the air through the VEFT is greater than that of the free stream velocity due to the venturi effect.  </p>
+<p>So the  power output, of the VEFT,  would quadruple if you increased the flow velocity  by 50% (5.5 m/s to 8.0-+ m/s) as it flows through the VEFT.    So this comparison is more like the comparison in radio broadcasting to gain over an isotropic radiator.  In other words a directional antenna can be measured to produce more power from the same input over an omni directional antenna.  This seemingly magic power increase only exists in one direction, so no laws of physics are broken but the gain in power output is real.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-480"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-480" class="active">Simple...</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Philippe (not verified) on December 21, 2009 - 10:00.  </div>
+
+  <div class="content">
+    <p>Well the issue is that Betz' law is not broken. The articles referred to multiplied the quantity of air going across the turbine. That is dead simple. Nothing else. They did not take the proper wind speed into account, no need for more information. The publication mensionned forgets to point out that, the air velocity in multiplied by 1.44 due to the very large area intercepted by the shroud, hence, locally the wind turbine will not see 5m/s but 7.2. Knowing the wind power law at the order 3, it can be derived that the power extracted from the wind turbine can be easily multiplied by 3 (and probably a slight error of the authors would have multiplied it by 4!) it is very critical to see this. Understanding the underlying physics as well as the models avoids wasting time.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-484"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-484" class="active">Betz Limit</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by R James (not verified) on January 5, 2010 - 11:34.  </div>
+
+  <div class="content">
+    <p>This question is a result of a lack of clarification on the betz limit. either of these two solutions will show that the betz limit remains unbroken:-</p>
+<p>1. Use the actual velocity of the wind within the shroud.<br />
+2. Use an effective swept area which includes the influence of shroud.</p>
+<p>The betz limit applies to ALL machines which intend to harness the kinetic enery of air. It is based on a dimensionless tube of flowing air regardless of the mechanism used.</p>
+<p>If you are measuring higher efficiencies in the wind tunnel i would be very skeptical of results. typically the models used in wind tunels are small and have very low reynolds numbers resulting in less than optimum efficiency (unless you have taken this into account during the design?). I found a mono-bladed turbine to be more efficient in the wind tunnel just because the optimisation theory allows a longer chord length.</p>
+<p>I'm not 100% certain about this but there is also the posibility that if your turbine is close to the size of your working section in the wind tunnel, then air is forced through it rather than being allowed to flow around it which is how i personally understand the betz limit. i.e. create too much resistance by trying to take too much power (or a total blockage) and the air upstream will be diverted around the turbine. this maybe the reason for artificially high efficiency readings.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-546"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-546" class="active">The Betz law surely does not cover new technology.</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Brian (not verified) on April 2, 2010 - 01:41.  </div>
+
+  <div class="content">
+    <p>I believe that you have a point. I have had several engineers scoff my turbine before they viewed it in person. Once they saw it, their views have changed. My turbine is a horiziontal vertical axis turbine. There are alot of patents that are being sat on by govts all over the world. We have the technology(suppressed)to run cars with water, electricity, compressed air, and more. We just need to educate the field of physics that some old laws now have new twists. I'm open for comments. I've had critisism from all kinds and I have finally found a way of getting my turbines out to be used. My E-Mail is <a href="mailto:turbine7@telus.net">turbine7@telus.net</a>. Thanks. Brian.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-938"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-938" class="active">Possible Additions</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on March 8, 2011 - 17:26.  </div>
+
+  <div class="content">
+    <p>if the air lost all its forward motion could it not then fall off the propeller due to potential energy or possibly sink or rise due to thermal changes? It would not necessarily have to pass beyond the blade.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1026"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-1026" class="active">wind turbine</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by milind (not verified) on April 29, 2011 - 14:17.  </div>
+
+  <div class="content">
+    <p>i would like to see the vidio of your design .please send it .thanks.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1071"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-1071" class="active">The Betz limit only applies</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on May 20, 2011 - 12:38.  </div>
+
+  <div class="content">
+    <p>The Betz limit only applies to wind turbines built in Germany before 1926.  Just like Newton's laws of motion only apply to objects in England prior to 1687.  Everyone knows <em>that</em>!</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1098"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-1098" class="active">Betz&#039;s limit and real turbines</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Denis Miller (not verified) on June 12, 2011 - 19:42.  </div>
+
+  <div class="content">
+    <p>I'm a 65 year-old engineer, have worked in aeronautical research amongst other things, and have been interested in wind turbines for a long time. Haven't yet but one, but that time is coming.<br />
+Maybe a few simple calculations will help clarify some issues here. A wind turbine is a device which extracts kinetic energy from an airflow. The amount of kinetic energy per second the device extracts, is the power it is producing. Let us consider a lump of air, mass "M" kilogram, passing through an area "A" square meters at a velocity of "V" meters per second. The kinetic energy of this lump M, is 1/2 M V^2 joules. If we extract all the energy from this and similar lumps at one lump per second, we are extracting at a rate of 1/2M V^2 joules per second, aka Watts. The mass M can be found from M = rho x A x V, where rho is the air density in kg/m^3. Conveniently, rho is near enough to 1.2 kg/m^3 at sea level air pressure and 20C, 68F<br />
+So the power available in an airflow through an area A, is simply P = 1/2 rho A V^3. I have seen quite a few turbine specs which give rated power output at 12 meter/sec, 39.37 ft/sec, 26.8 mph. So for one square meter, the available power is 1/2 x 1.2 x 1 x 12 x 12 x 12 (yeah, I know it looks a bit odd)  = 1036.8 Watts. Betz's law, which I believe is perfectly correct, says you can only extract 59.3% of this.<br />
+There are two basic types of wind turbine operating principles - drag-driven, and lift-driven. Drag machines, eg Savonius rotor, are low-speed, because the cup speed can never exceed the wind speed. Lift machines include the propeller HAWTs we are all familiar with, and clever devices such as the Darrieus rotor and its derivatives. Lift machines run at high RPM, with tip speeds several times wind speed - the Enercon E126 runs about 12 RPM, with a tip speed of 40 m/sec<br />
+A typical drag machine is the PacWind Sea Hawk. The specs on PacWind's site give 48" high, 30" wide (diameter), and from the performance graph, 200 watts at 26.84 mph. Area is 0.929 sq m, so available power is 963.187 Watts, Betz' Limit is 571.17 Watts, and the rated power is 35% of this. Not bad, for a simple contraption.<br />
+A somewhat unusual lift machine is the QuietRevolution qr5. Vertical axis, helical blades. Again, from the website:  5 metres high, 3.1 metres wide (diameter) and rated 6kW. Power available 16070 watts, Betz' Limit 9529.74 watts, and rated power is 63% of this.<br />
+At the big end of town, we have the Enercon E126 which features a large-diameter direct drive alternator, thereby avoiding the heavy, noisy and fire-prone speed-increasing gearboxes of the previous generation. 126 metre diameter propeller, 12469 sq m, rated at 7.5 MW. Available power at  12 m/sec is 12.928MW, Betz Limit 7.66 MW. Rated power is 97.8% of this, which is not believable, so I suspect that the machine is rated at more than 12 m/sec. If we try 15 m/sec, then power available is 25.25 MW, Betz limit is 14.973 Mw, and rated is just over 50%. That is believable and respectable, but not as good as the qr5, so I feel the rated wind speed lies between 12 and 15 m/sec.<br />
+Hope this sheds some light on the subject</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1353"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-1353" class="active">Betz law applies to a single isolated turbine</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on March 6, 2012 - 19:05.  </div>
+
+  <div class="content">
+    <p>Betz law applies to a single isolated turbine. The model Betz uses is that the upstream wind flows in in a cylinder of first radius and first speed, while the wind flowing out is at a lower speed, and so must be flowing in a cylinder of larger radius due to conservation of volume (constant density assumed). </p>
+<p>But how can this be? How did the downstream wind at the output of the turbine get to expand into the space taken by the air on either side of it without changing the density? What if there is a line of turbines, and the downstream wind from the turbines on either side are also outputting wind that is attempting to expand into the same space as their neighbors? Even better, consider a semi-infinite array of turbines being blown by a semi-infinite swath of wind. There is no more cross-sectional area on the downstream side of the turbines for the exhaust air to occupy than there is on the upstream side. Something's gotta give here! </p>
+<p>I don't know the final result, but it seems clear that, while Betz law may predict the maximum  efficiency of a single, isolated turbine, the model does not work for a "wind farm".</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1400"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-1400" class="active">Betz law applies to velocity</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Pyrrho (not verified) on April 8, 2012 - 10:21.  </div>
+
+  <div class="content">
+    <p>Betz law applies to velocity at the rotor.  Anything else that contributes to that condition, such as a duct, is not subject to betz.  So if you have a duct that produces an accel of 2x the velocity seen by a bare rotor the betz limit is with regard to the accelerated velocity. This is very clear from the betz equations as they have no mechanism to deal with any structures effecting the flow around the turbine.  Kind of fluid dynamics 101.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1439"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-1439" class="active">Betz application</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by JQ (not verified) on April 22, 2012 - 22:49.  </div>
+
+  <div class="content">
+    <p>AMEN! Finally someone points out the simple and obvious fact that the Lanchester Betz Zhukosky limit does not apply to ducted / concentrators because the machines perturb airflow upstream, in the slipstream and downstream. Not all ducts do that, but not all ducts are created equal. Flow is not constant, It is altered in a ducted machines. Pls read the theorem in its entirety. It applies to uniform flow, constant mdot, in an incompressible fluid, single actuator disk propeller. It does not account for altered back-pressure (pressure drops). It is only a reference.  But Euler still applies and that is the misconception.  Confusing viscous effects with CPmax. </p>
+<p>"ignorance is not the hurdle to progress, the illusion of knowledge is"</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1458"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-1458" class="active">Automatic Feathering Flat Blade Radial Windmill patent # 06/934,</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Steven R. Lonien (not verified) on May 10, 2012 - 21:27.  </div>
+
+  <div class="content">
+    <p>Broken is understatement, Obliterated Betz is appropriate, My 1985 Patent uses 100% closed blades creating walls matching them open against the winds or currents at the same instance  Or pure natural energy There is 0 pass threw betz Limits loss of power zero. this design is then a "Bejesus No Limits Law" of physics One horizontal patent drawing is 100ft wide x 40 ft tall x,s 4 walls  per 1 rpm x 40 rpm =  about 1.25 Million square ft of wind energy per  just 2 minutes and would turn at speed any Japan salvaged Nuke Generator.It is identical in design as the vertical posted running on You tube about 1.3 million square Ft of Blades Being Put into the winds Or Currents every 2 minutes.<br />
+ Suppose everybody's recounting the stars again.? Or you could find out  the if,s ? Because "Nothing Is more Powerful Than an Idea Whose Time has Come" Thomas Edison.Steven The Inventor</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1774"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-1774" class="active">Betz postulate can be treated</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by TKoronowicz (not verified) on July 28, 2013 - 13:20.  </div>
+
+  <div class="content">
+    <p>Betz postulate can be treated as a sort of misunderstanding from the start.</p>
+<p>The theoretical model that Betz used for determination of the maximum effectiveness coefficient of an axial wind turbine has practically nothing to do with the turbines (apart from the name).</p>
+<p>This theoretical model applies to the ideal fluid break.</p>
+<p>The whole matter can be found described in greater detail in a research paper by T. Koronowicz and J. Szantyr entitled Comparative analysis of the theoretical models of ideal propulsor, ideal fluid brake, ideal screw propeller and ideal axial wind turbine</p>
+<p>The paper can be found in PDF here: <a href="http://www.bg.pg.gda.pl/pmr/pdf/PMRes_2013_2.pdf" title="http://www.bg.pg.gda.pl/pmr/pdf/PMRes_2013_2.pdf">http://www.bg.pg.gda.pl/pmr/pdf/PMRes_2013_2.pdf</a></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1933"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-1933" class="active">100% efficiency? So the</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on April 11, 2014 - 22:04.  </div>
+
+  <div class="content">
+    <p>100% efficiency? So the rotating air loses none of its energy in say, friction with objects it comes into contact with (momentum transfer). Where do you think all the noise/vibration comes from? Also the fact that it disapates &amp; doesn't continue forever, should give you a hint that it's not 100% efficient....</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1936"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-1936" class="active">Naturally, a 100% efficiency</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by TKoronowicz (not verified) on April 12, 2014 - 08:40.  </div>
+
+  <div class="content">
+    <p>Naturally, a 100% efficiency is impossible - however the Betz limit is not valid in the context of wind turbines.</p>
+<p>(More in the article under the link in my previous post).</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1940"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-1940" class="active">energy interest fabricated betz to promote themselves. for big $</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by steve  (not verified) on May 4, 2014 - 13:29.  </div>
+
+  <div class="content">
+    <p>The math for the flat blades opposing  was the basis for Einstein's noble for his modification of Newtonian physics.  Saying that equal and opposite will produce light speeds<br />
+He seen the future when he said nuclear was a hell of a way to boil water and ww4 will be fought with clubs and stones.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1941"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-1941" class="active">fabricated physics</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by steve  (not verified) on May 4, 2014 - 13:40.  </div>
+
+  <div class="content">
+    <p>Why do you believe that ? And ignore complete blocked wind that is released into a pulley or gears or both with capacity of light speed.  Eienstiens modifications of Newtonians phyics law.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1942"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-1942" class="active">based on passthrew energy loss and false assumptions  by ?</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by steve  (not verified) on May 5, 2014 - 13:36.  </div>
+
+  <div class="content">
+    <p>Ok prove that the stonewalled automatic feathering flat blade radial windmills loss is anything when Betz says that the blades is 0 when opposing the opposite fully opposing blade , Einestein said capable of producing the speeds of light threw gears or and pulleys .and predicted magnetic bearings . He receive a noble for it.the edge of flat blade vrs 100% blockedge of wind or currents .us pat.06/934,870<br />
+Einstein</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2086"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-2086" class="active">Betz Law </a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by windcatcher (not verified) on October 6, 2014 - 14:41.  </div>
+
+  <div class="content">
+    <p>Hi Richard, you started this discussion on Betz Law and the intelligent comments on your site so far have been genuine with few crack-pots.</p>
+<p>Betz Law is correct in defining, in physics, how a propeller driven windmill operates- nothing more and nothing less. Indeed, professor Betz used a 1 square foot test plate with a scale attached to measure 100% of the wind energy potential available to a PROPELLER driven wind mill.</p>
+<p>Professor Betz used the single dimension, 1 square flat test plate to represent measurements for the propeller because in geometry the propeller rotates on a single dimension, flat plane and operates side-ways to the energy source. Professor Betz didn’t test a 1 square foot test plate composed of four 3 inch, half round turbine blades that would yield more surface area (that contains volume) and test much higher for wind energy potential.</p>
+<p>From a single point of reference, the wind flows 90 degrees before the point and 90 degrees beyond the point. Professor Betz did not test a multidimensional turbo machinery rotor operating directly into the wind energy source because it did not pertain to the operation of a propeller driven wind mill which he was defining in physics.</p>
+<p>Professor Betz would roll over in his grave if he knew that his propeller driven wind mill dynamic has been re-branded as turbine machinery dynamic.</p>
+<p>Betz Law is not the Holy Grail in wind energy science; it correctly defines how a propeller driven wind mill operates. If you change the rotor dynamic to a multidimensional turbo machinery rotor dynamic that operates directly into the wind energy force and has flow through; you have to change over to the physics governing the new dynamic. Betz Law does not apply to the new dynamic because the physics of the new dynamic are different than that of a propeller driven wind mill.</p>
+<p>In real science, working models of the concept are proof of the concept and trumps conjecture. I have 3 working models of the concept of “Low Pressure Turbine Dynamics” that prove that there is more wind energy potential than Professor Betz demonstrated with his propeller driven wind mill test. I have demonstrated, with my models, that there can be advancement in wind energy technology without disagreeing with Betz Law. The disagreement is by brainwashed people who think that a propeller is turbine machinery dynamic, science is a religion, and Betz Law is the Holy Grail in wind energy technology.</p>
+<p>Check out my video Richard, on YouTube demonstrating the new multidimensional turbine dynamic with ducted flow through and be sure to read the description.<br />
+Baker Turbo-Vortex Wind Turbine Turbina</p>
+<p><a href="https://www.youtube.com/watch?v=wTeiSHpbFt4" title="https://www.youtube.com/watch?v=wTeiSHpbFt4">https://www.youtube.com/watch?v=wTeiSHpbFt4</a></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2106"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-2106" class="active">Shrouds and turbines</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on October 27, 2014 - 18:01.  </div>
+
+  <div class="content">
+    <p>There has been a lot of work done in the last few decades by Kirke and others about "Beating Betz" - it has now been widely peer reviewed and to be found correct that "Betz does NOT apply to shrouded turbines. Examine the research for your self or contact Dr. Brian Kirke and ask him . . .</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2186"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-2186" class="active">betz is dead</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://bombuli.com/" rel="nofollow">don</a> (not verified) on March 23, 2015 - 16:31.  </div>
+
+  <div class="content">
+    <p>bombuli; its the law of wind, Petot rules</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2373"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-2373" class="active">Dear Windcatcher, 
+Watched</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Taff (not verified) on June 13, 2017 - 14:38.  </div>
+
+  <div class="content">
+    <p>Dear Windcatcher, </p>
+<p>Watched your demo. wrote by email to you, didn't get an answer.<br />
+If this is really fab, and it looks interesting enough, why are you not getting the design out there via open source or sponsorship etc.</p>
+<p>Lets get it into the public domain instead of just demonstrating it on yourtube.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2374"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-2374" class="active">Taff: Wind Energy Science interest.</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by windcatcher (not verified) on June 20, 2017 - 19:58.  </div>
+
+  <div class="content">
+    <p>Thanks Taff for your interest in wind energy SCIENCE. Here is the geometry SCIENCE explanation of  wind energy potential and efficiency.<br />
+Link:<br />
+ Home of the 6 and 8 helix wind turbomachinery rotor dynamic.<br />
+Wind Energy Basics: Wind Energy Potential.<br />
+Turbine Dynamic vs Propeller Dynamic: Wind Energy Efficiency.<br />
+The two wind mill machine rotor dynamics have only one thing in common; they both have a center line of operation into the wind flow. The propeller rotor dynamic operates from the center line in a single dimension on a flat plane, rotating side-ways to the wind flow.<br />
+A 6 and 8 helix turbomachinery rotor dynamic operates from the center line in a multidimensional plane, rotating 90 degrees in front of the center line to 90 degrees past the center line. This 180 degree arc is the full WIND ENERGY POTENTIAL from a center line, not the 1 degree that the propeller dynamic WIND ENERGY POTENTIAL operates in.<br />
+A propeller dynamic operates in a ratio of only 1/180 of the WIND ENERGY POTENTIAL from a center line so how can a propeller dynamic be about 50% efficient to the WIND ENERGY POTENTIAL? It’s not, it is only about 50% efficient in it’s rotation in the 1 degree intersect with the wind flow and about 50% of the wind flow must pass through it for it to turn.<br />
+Oh wait, it gets better: The TOTAL WIND ENERGY POTENTIAL for a 6 and 8 helix  turbomachinery rotor is not only the 180 degree arc on top of the turbine dynamic but the bottom 170 degree arc as well, via ducting, before releasing the column of captive wind flow from Larry’s Windcatcher. Now, the propeller dynamic is operating in only a ratio of 1/350 of the TOTAL WIND ENERGY POTENTIAL.<br />
+The Turbo Vortex Wind Turbine dynamic is hundreds of times more EFFICIENT in the TOTAL WIND ENERGY POTENTIAL available to it than a propeller dynamic in the same amount of wind flow. I challenge the National Renewable Energy Laboratory to prove any different, but then, they are more political propaganda and corporate Status Quo oriented than science oriented. Instead of inventing a 6 or 8 helix turbomachinery rotor dynamic in their laboratory to operate in the TOTAL WIND ENERGY POTENTIAL, the NREL re- branded the propeller dynamic as a turbine machinery dynamic; that is political propaganda, (first the propagandist steal your words, then they steal their meaning) not science. Without government corporate oligarchy welfare tit subsidy and the NREL, the corporate propeller wind farms would not exist because modern propeller dynamic windmills have never been economically viable.<br />
+I hope that explanation demonstrates to you Taff the uphill battle it is for original inventors when SCIENCE is replaced with political corruption by monopoly corporate/ government agenda and propaganda. You see, until the NREL recognizes the SCIENCE, it doesn’t exist; brainwashed Americans will not accept the concept until they are told by someone in authority to accept the concept. I have made it this far on my own and I do not expect any different. Do you know of any honest investors, I don’t. E-mail me until I reply. My g-mail is all geeked up and I did not receive your email. I answer all e-mails received.<br />
+Open source? Excuse me, but do you realize how difficult it is to construct an aluminum 6 or 8 helix rotor? The lay-out is all about geometry and most people do not have the skill level to deal with aluminum which is essential (weight to surface area ratio, balance and flexibility).<br />
+Here is a link to my 12 ft. in diameter, 6 ft. wide wind turbine that I finished ducting and will soon be hooked up to the Continental Divide Coop electrical grid. The turbine dynamic has more surface area than a 3 bladed, 90’ diameter variable pitch propeller dynamic.<br />
+Link: <a href="https://www.youtube.com/watch?v=kyQB48QJLWc" title="https://www.youtube.com/watch?v=kyQB48QJLWc">https://www.youtube.com/watch?v=kyQB48QJLWc</a></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2375"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-2375" class="active">shrouds suck in wind from outside the wind turbine.</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by windcatcher (not verified) on June 20, 2017 - 20:23.  </div>
+
+  <div class="content">
+    <p>In the interest in fluid dynamics, I can prove that the shroud ducting on the Turbo Vortex Wind Turbine sucks in the air from outside the ducting into the turbine rotor. The wind anemometer on top of the turbine records a much lower wind pressure because the wind in front of the anemometer is bent into the turbine.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2934"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-2934" class="active">H-Darreus</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Juke (not verified) on June 3, 2019 - 03:25.  </div>
+
+  <div class="content">
+    <p>Is it with H-Darrieus that you have observed this phenomena ?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-3945"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-3945" class="active">You need to consider factors</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by James Biggar (not verified) on October 16, 2020 - 04:12.  </div>
+
+  <div class="content">
+    <p>You need to consider factors like changes in air density - cold air is much more dense and stores more energy in a given wind speed. So if you're taking speed and power measurements in the winter in a temperate region but aren't measuring air density (as your calculations suggest) and instead are using the standard 1.23 kb/m^3 air density at sea level and ~15C like most homebrew builders do, then your calculation will inevitably be lower than what you're physically measuring and it will 'seem' like you're exceeding Betz, but you're not.  </p>
+<p>Example:</p>
+<p>Your calculation for performance @ 15mph (converted to metric so the rest of the world understands) =<br />
+P = 0.5 * air density * swept area * velocity cubed * turbine coefficient<br />
+= 0.5 * 1.23kg/cu.m * 6.61sq.m * 6.7mps^3 * 0.59<br />
+= 721.4 watts</p>
+<p>New calculation with air density adjusted to 1.394 kg/cu.m at -20C =<br />
+P = 0.5 * 1.394 * 6.61 * 6.7mps^3 * 0.59<br />
+= 817.5 watts</p>
+<p>Just one small example showing how human error can play a big role in fudged results. Another thing you should consider is a lag in your equipment. Most affordable anemometers that homebrew builders use don't read instantaneous wind speed, there's usually a 1 to 5 second delay, so there's a very real possibility that you're referring to power readings from gusts that your anemometer wasn't fast enough to measure properly. The only way around that is to take your turbine to a wind tunnel and have it tested properly. The #'s you're claiming are way beyond what is possible, especially since more than 12 years has passed and there isn't anything better on the market - a turbine that performs like yours should be dominating it by now...</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-6751"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-6751" class="active">Overcoming Betz law without violating it.</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by T Cameron (not verified) on July 13, 2022 - 06:48.  </div>
+
+  <div class="content">
+    <p>Actually it's a trick there in the technology. Betz law considered the velocity at which the wind speed struck the blades of the turbine. In case of windmill kept in open there is no difference between wind speed and the wind speed with which the blades are struck. But, when put inside the throat of a venturi, a difference arises out it. Inside the venturi, the speed increases due to the internal property of the venturi (that I don't want to discuss here) and the speed with which the blades were struck by air will be higher than the wind velocity in open. If we consider that velocity with which the blades were struck, we can see that the Betz law isn't violated at all. So, in short, it's overcoming Betz law without violating it.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-9228"></a>
+<div class="comment comment-published last odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="virtual-wind-turbine-breaks-betz-law.html#comment-9228" class="active">They have not broken the Betz limit</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on September 11, 2023 - 21:42.  </div>
+
+  <div class="content">
+    <p>There is nothing new in this. The simulation is done for shrouded turbine and it shows output more than 4 times than equivalent turbines. Shrouded turbines do provide higher output and it's not because they are breaking the Betz limit. It's falsification for results. Because when someone compares normal wind turbine with shrouded wind turbines, they miss on the size. They don't compare same diameter turbines. In given simulation, what they have done is they calculate 12 ft open rotor turbine and takes it's power output at as reference. Then they add Shroud around 12 ft turbine and then they simulate it. Now they get 4 times more power from the same turbine. Is it breaking Betz limit? NO. It is not. Why? Because you increase the total wind capture area by adding the shroud. Initially the diameter was 12 without shroud. Now with shroud, you made in 13 ft or 14 ft. That means you added 2 ft extra in diameter and you are comparing that results with 12 ft diameter turbine. How can you compare Apple to Orange? Its same mistake being done here. So no. They haven't broken the Betz Limit. If they want to compare the shrouded turbine results with equivalent diameter turbine, then the Outer diameter for both turbines should be same. Then only we can consider it as valid results. Otherwise the comparison is wrong and the law is never violated.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/virtual-wind-turbine-breaks-betz-law by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:28:50 GMT -->
+</html>

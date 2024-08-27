@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.symscape.com/downloads" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Downloads</title>
+    <link>https://www.symscape.com/downloads</link>
+    <description></description>
+    <language>en</language>
+          <item>
+    <title>Transient Airflow Around a Cylinder</title>
+    <link>https://www.symscape.com/node/1294</link>
+    <description>&lt;p&gt;Transient airflow around a cylinder that results in &lt;a href=&quot;/blog/vortex-shedding-behind-cylinder&quot;&gt;vortex shedding&lt;/a&gt;. It was created using our &lt;a href=&quot;/product/professional&quot;&gt;Professional add-on&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/vortex-shedding-cylinder.png&quot; alt=&quot;Vortex Shedding&quot; width=&quot;640&quot; height=&quot;480&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/vortex-shedding-cylinder.zip&quot;&gt;vortex-shedding-cylinder.zip&lt;/a&gt; (1 MB). Note you need to extract the &lt;em&gt;vortex-shedding-cylinder.sym&lt;/em&gt; file from the zip archive prior to opening the file in Caedium.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1294&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1294#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/38">sym</category>
+ <pubDate>Fri, 12 Oct 2012 13:22:01 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1294 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>F1 in Schools CO2 Jet Car v2</title>
+    <link>https://www.symscape.com/node/897</link>
+    <description>&lt;p&gt;Airflow around the &lt;a href=&quot;/examples/rans/cfd-f1-in-schools-v2&quot;&gt;Basilisk Performance CO2 Jet Car v2&lt;/a&gt; entry for F1 in Schools. The simulation is a half-model (using symmetry) which includes moving ground, rotating wheels, and a jet inlet. It was created using our &lt;a href=&quot;/product/professional&quot;&gt;Professional add-on&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/f1is-v2-p-front.preview.png&quot; alt=&quot;CO2 Jet Car v2 Front View of Pressure&quot; width=&quot;640&quot; height=&quot;480&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/f1-in-schools-flow-v2.zip&quot;&gt;f1-in-schools-flow-v2.zip&lt;/a&gt; (13 MB). Note you need to extract the &lt;em&gt;f1-in-schools-flow-v2.sym&lt;/em&gt; file from the zip archive prior to opening the file in Caedium.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/897&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/897#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/38">sym</category>
+ <pubDate>Fri, 19 Mar 2010 14:19:32 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">897 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>F1 in Schools CO2 Jet Car</title>
+    <link>https://www.symscape.com/node/866</link>
+    <description>&lt;p&gt;Airflow around the &lt;a href=&quot;/examples/rans/cfd-f1-in-schools&quot;&gt;Basilisk Performance CO2 Jet Car&lt;/a&gt; entry for F1 in Schools. The simulation is a half-model (using symmetry) which includes moving ground, rotating wheels, and a jet inlet. It was created using our &lt;a href=&quot;/product/professional&quot;&gt;Professional add-on&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/f1-flow-U-front.preview.png&quot; alt=&quot;CO2 Jet Car Front View of Velocity&quot; width=&quot;640&quot; height=&quot;480&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/f1-schools-flow.zip&quot;&gt;f1-schools-flow.zip&lt;/a&gt; (16.2 MB). Note you need to extract the &lt;em&gt;f1-schools-flow.sym&lt;/em&gt; file from the zip archive prior to opening the file in Caedium.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/866&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/866#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/38">sym</category>
+ <pubDate>Thu, 04 Feb 2010 14:38:32 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">866 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>PDC Drill-Bit Water Flow</title>
+    <link>https://www.symscape.com/node/844</link>
+    <description>&lt;p&gt;A rotating Polycrystalline Diamond Compact (PDC) drill-bit steady-state turbulent simulation of injected water circulating around the cutter head, created using our &lt;a href=&quot;/product/professional&quot;&gt;Professional add-on&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/pdc-share.png&quot; alt=&quot;PDC Bit Caedium RANS Flow&quot; width=&quot;640&quot; height=&quot;480&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/pdc-bit-flow.zip&quot;&gt;pdc-bit-flow.zip&lt;/a&gt; (13.4 MB). Note you need to extract the &lt;em&gt;pdc-bit-flow.sym&lt;/em&gt; file from the zip archive prior to opening the file in Caedium.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/844&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/844#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/38">sym</category>
+ <pubDate>Thu, 10 Dec 2009 21:31:58 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">844 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Cyclone Separator Flow</title>
+    <link>https://www.symscape.com/node/843</link>
+    <description>&lt;p&gt;Steady-state turbulent airflow through a generic &lt;a href=&quot;/examples/rans/cyclone&quot;&gt;cyclone separator&lt;/a&gt;, created using our &lt;a href=&quot;/product/professional&quot;&gt;Professional add-on&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/cyclone-share.png&quot; alt=&quot;Cyclone Caedium RANS Flow&quot; width=&quot;640&quot; height=&quot;480&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/cyclone-flow.sym&quot;&gt;cyclone-flow.sym&lt;/a&gt; (955 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/843&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/843#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/38">sym</category>
+ <pubDate>Thu, 10 Dec 2009 21:11:24 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">843 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Flow Through a Pipe into a Box</title>
+    <link>https://www.symscape.com/node/835</link>
+    <description>&lt;p&gt;Steady-state turbulent airflow through a pipe into a box, created using our &lt;a href=&quot;/product/professional&quot;&gt;Professional add-on&lt;/a&gt;. Create this case yourself by following the tutorial &lt;a href=&quot;/node/818&quot;&gt;&quot;Incompressible Flow Through a Pipe into a Box&quot;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/pipe-box-flow-screenshot.png&quot; alt=&quot;Pipe into a Box Flow&quot; width=&quot;640&quot; height=&quot;479&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/pipe-box-flow.sym&quot;&gt;pipe-box-flow.sym&lt;/a&gt; (485 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/835&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/835#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/38">sym</category>
+ <pubDate>Wed, 18 Nov 2009 19:47:57 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">835 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Pipe into a Box</title>
+    <link>https://www.symscape.com/node/812</link>
+    <description>&lt;p&gt;Quadrant of a pipe into a box. Create this geometry from scratch by following the &lt;a href=&quot;/node/810&quot;&gt;&quot;Pipe into a Box&quot;&lt;/a&gt; tutorial.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/pipeintobox.png&quot; alt=&quot;Pipe into Box&quot; width=&quot;499&quot; height=&quot;393&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt; using &lt;strong&gt;File-&amp;gt;Import&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/pipe-into-box.brep&quot;&gt;pipe-into-box.brep&lt;/a&gt; (26 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/812&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/812#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/30">brep</category>
+ <pubDate>Mon, 05 Oct 2009 17:14:04 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">812 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>RC Car in Ground Effect</title>
+    <link>https://www.symscape.com/node/799</link>
+    <description>&lt;p&gt;Airflow simulation over an idealized RC car traveling at 200mph, created using our &lt;a href=&quot;/product/professional&quot;&gt;Professional add-on&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/car-road.png&quot; alt=&quot;RC Car in Ground Effect&quot; width=&quot;640&quot; height=&quot;482&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/car-road.sym&quot;&gt;car-road.sym&lt;/a&gt; (577 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/799&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/799#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/38">sym</category>
+ <pubDate>Thu, 20 Aug 2009 15:56:44 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">799 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Horizontal-Axis Wind Turbine Simulation</title>
+    <link>https://www.symscape.com/node/752</link>
+    <description>&lt;p&gt;Transient air flow simulation over an idealized horizontal-axis rotating wind turbine, created using our &lt;a href=&quot;/product/professional&quot;&gt;Professional add-on&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/rotating-blades.png&quot; alt=&quot;Horizontal-Axis Rotating Wind Turbine Blades&quot; width=&quot;640&quot; height=&quot;480&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/rotating-blades.sym&quot;&gt;rotating-blades.sym&lt;/a&gt; (935 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/752&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/752#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/38">sym</category>
+ <pubDate>Tue, 31 Mar 2009 14:06:02 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">752 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Pitching Wing</title>
+    <link>https://www.symscape.com/node/688</link>
+    <description>&lt;p&gt;Transient air flow over a pitching wing created using our &lt;a href=&quot;/product/professional&quot;&gt;Professional add-on&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/images/pitching-wing.png&quot; alt=&quot;Pitching Wing&quot; width=&quot;640&quot; height=&quot;469&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;For a screencast on how this simulation was created visit &lt;a href=&quot;/examples/panel/transient-air-flow-over-pitching-wing&quot;&gt;&quot;Transient Air Flow Over A Pitching Wing&quot;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;View file with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Download &lt;a href=&quot;/files/downloads/pitching-wing.sym&quot;&gt;pitching-wing.sym&lt;/a&gt; (78.8 KB)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/688&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/688#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/38">sym</category>
+ <pubDate>Fri, 08 Aug 2008 17:21:09 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">688 at https://www.symscape.com</guid>
+  </item>
+  </channel>
+</rss>

@@ -1,0 +1,421 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1281 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Flow Over a Double-Sided Membrane | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="1718.html" />
+<link rel="up" href="817.html" />
+<link rel="next" href="430.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-1281 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="817.html">RANS Flow</a></div>                  <h1 class="title">Flow Over a Double-Sided Membrane</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1281" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on May 25, 2013 - 13:36        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Simulate an incompressible, steady-state, turbulent flow over a double-sided membrane. View velocity vectors, velocity magnitude color maps, monitor lift and drag forces, and export results for ixCube 4-10 (the successor to ixForten 4000).</p>
+<p><span class="inline inline-center"><img src="../files/tutorials/membrane-flow/inner-shaded.png" width="484" height="363" alt="Caedium Membrane CFD Simulation" /><span class="caption"><strong>Caedium Membrane CFD Simulation</strong></span></span></p>
+<h3>Goals</h3>
+<p>In this tutorial, you will learn how to:</p>
+<ul>
+<li>Specify fluid conditions on a <strong>single volume</strong> for an incompressible, steady-state, turbulent flow simulation </li>
+<li>Specify boundary conditions on faces </li>
+<li>Specify meshing parameters </li>
+<li>Generate a velocity magnitude color map </li>
+<li>Generate velocity vectors </li>
+<li>Create <a href="../lift-force-and-drag-force.html">lift and drag force</a> monitors </li>
+<li>Monitor residuals to determine flow simulation convergence </li>
+<li>Export results for <a href="http://www.ixray-ltd.com/index.php?option=com_content&amp;view=article&amp;id=87&amp;Itemid=520">ixCube 4-10</a> </li>
+</ul>
+<h3>Assumptions</h3>
+<ol>
+<li>You have <a href="15.html">activated</a> the <a href="../product/rans.html">Caedium RANS Flow</a> and <a href="../product/viz.html">Caedium Viz Export</a> add-ons or <a href="../product/professional.html">Caedium Professional</a>. </li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>. </li>
+<li>You have either:
+<ul>
+<li>Created the geometry by following the tutorial <a href="1280.html">&quot;Double-Sided Membrane&quot;</a> </li>
+<li>Launched Caedium with the project file (<a href="../files/tutorials/membrane/membrane.sym">membrane.sym</a>) containing the geometry for this tutorial </li>
+</ul>
+</li>
+</ol>
+<p>The geometry within Caedium should appear as shown below.</p>
+<p><img src="../files/tutorials/membrane-flow/double-sided-membrane.png" width="484" height="363" alt="Double-Sided Membrane" /></p>
+<h2 class="tutorial-heading">Prepare the Volume</h2>
+<p>Right-click an edge of the volume, double-click the first volume (<strong>volume_2</strong>) in the <strong>Select</strong> dialog and then select <strong>Properties</strong> from the menu. In the <a href="../tutorials/essentials.html#propertiespanel">Properties Panel</a>, select the Volume tab <img src="../files/tutorials/shared/volume-entity-tab.png" alt="" /> and set the <strong>Name</strong> to <strong>flow-volume</strong>.</p>
+<p><img src="../files/tutorials/membrane-flow/name-props.png" width="238" height="249" alt="Volume Name Property" /></p>
+<h2 class="tutorial-heading">Create Membrane Group</h2>
+<p class="note">Create a group for the membrane and its shadow so that later on in this tutorial you can monitor the integrated drag and lift forces.</p>
+<p>Right click on the membrane base edge. In the <strong>Select</strong> dialog select <strong>face_6-shadow</strong>, press the <strong>Ctrl</strong> key and select <strong>face_6</strong> in the <strong>Select</strong> dialog, click <strong>OK</strong>, select <strong>Group</strong>, and then select <strong>Properties</strong>.</p>
+<p>In the Properties Panel, select the Group tab <img src="../files/tutorials/shared/group-tab.png" alt="" /> and set <strong>Name</strong> to <strong>membrane</strong>.</p>
+<h2 class="tutorial-heading">Specify the Substance Settings</h2>
+<h3>Specify the Fluid Conditions</h3>
+<p>Select the <strong>Physics</strong> <a href="../tutorials/essentials.html#toolpalette">Tool Palette</a>.</p>
+<p>Select <strong>Gases-&gt;Air</strong>. The Properties Panel will show the default properties for air. To enable incompressible turbulent (viscous) flow the <strong>State-&gt;Rotational</strong> and <strong>State-&gt;Viscous </strong>properties should be set to <strong>Yes</strong> (their default values), and the <strong>State-&gt;Compressible</strong>, <strong>State-&gt;Heat Transfer</strong>, <strong>State-&gt;Species</strong>, and <strong>State-&gt;Transient</strong> properties should to be set to <strong>No</strong> (their default values).</p>
+<p><img src="../files/tutorials/membrane-flow/air-props.png" width="286" height="602" alt="Air Properties" /></p>
+<p>Drag and drop the <strong>Air</strong> tool onto an edge of the volume. Select <strong>Done</strong> to set air as the fluid inside the volume.</p>
+<h3>Set the Reference Velocity for the Simulation</h3>
+<p class="note">The reference velocity will be used to initialize the simulation and to specify the Inlet-Outlet velocity boundary condition. In this tutorial you will set a reference velocity of [15 0 0] m.s<sup>-1</sup>.</p>
+<p>In the Properties Panel set <strong>Substance: Air-&gt;Properties-&gt;Phase: Single-&gt;Reference-&gt;U: Fixed Value-&gt;Value</strong> to be [<strong>15 0 0</strong>] and press Enter on the keyboard.</p>
+<p><img src="../files/tutorials/membrane-flow/ref-vel-props.png" width="286" height="248" alt="Reference Velocity Property" /></p>
+<h3>Set the Non-Orthogonal Corrections for the Simulation</h3>
+<p>In the Properties Panel, expand the <strong>Substance: Air-&gt;Solver: RANS Flow-&gt;Solution </strong>property, and then set <strong>Non-Orthogonal Corrections</strong> to be <strong>0</strong>.</p>
+<p><img src="../files/tutorials/membrane-flow/non-ortho-props.png" width="330" height="248" alt="Non-Orthogonal Corrections Property" /></p>
+<h2 class="tutorial-heading">Specify the Boundary Conditions</h2>
+<h3>Wall Conditions</h3>
+<p>Drag and drop the <strong>Faces-&gt;Wall</strong> tool onto an edge of the volume. Double-click <strong>flow-volume-&gt;Faces</strong> in the <strong>Select</strong> dialog and select <strong>Done </strong>to create walls on the outer surfaces of the volume.</p>
+<p class="note">A Wall condition is a solid surface through which fluid cannot flow.</p>
+<p><img src="../files/tutorials/membrane-flow/wall-props.png" width="238" height="248" alt="Wall Properties" /></p>
+<h3>Inlet-Outlet Conditions</h3>
+<p>Drag and drop the <strong>Faces-&gt;Inlet-Outlet</strong> tool onto <strong>edge_8</strong> (blue). In the <strong>Select</strong> dialog select <strong>face_1</strong>, press <strong>Ctrl</strong> and select <strong>face_5</strong> in the <strong>Select</strong> dialog, click <strong>OK</strong>, and select <strong>Select/Deselect</strong>. Select <strong>edge_7 </strong>(red) in the View Window, in the <strong>Select</strong> Dialog select <strong>face</strong>, press <strong>Ctrl</strong> and select <strong>face_4</strong>, click <strong>OK</strong>, select <strong>Group</strong>, and select <strong>Done</strong>.</p>
+<p><img src="../files/tutorials/membrane-flow/inlet-outlet-edges.png" width="400" height="318" alt="Inlet-Outlet Edges" /></p>
+<p class="note">An Inlet-Outlet condition allows the fluid to enter or leave the flow domain.</p>
+<p>Set <strong>Name</strong> to <strong>circumference</strong>.</p>
+<p><img src="../files/tutorials/membrane-flow/inlet-outlet-props.png" width="263" height="250" alt="Inlet-Outlet Properties" /></p>
+<h3>Slip Condition</h3>
+<p>Drag and drop the <strong>Faces-&gt;Slip</strong> tool onto an edge of the face shown in green below, double-click <strong>face_3</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong>.</p>
+<p><img src="../files/tutorials/membrane-flow/slip-face.png" width="400" height="318" alt="Slip Face" /></p>
+<p class="note">A Slip condition ensures the flow velocity remains tangential to a face.</p>
+<p><img src="../files/tutorials/membrane-flow/slip-props.png" width="234" height="248" alt="Slip Properties" /></p>
+<h2 class="tutorial-heading">Specify Meshing Parameters</h2>
+<p class="note">You do not need to apply any volume or boundary condition prior to focusing on the meshing process - all that is required is an active Substance on your flow domain.</p>
+<h3>Face Mesh</h3>
+<p class="note">First you will focus on the surface mesh to avoid the extra time required to create the volume mesh.</p>
+<p>To see individual surface mesh elements during the meshing process, right-click on the View Window background, double-click <strong>sim-&gt;Faces</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel, set <strong>Style</strong> to <strong>Flat</strong>.</p>
+<p><img src="../files/tutorials/membrane-flow/mesh-face-style-props.png" width="234" height="248" alt="Faces Style Property" /></p>
+<p>Select the <strong>Results</strong> Tool Palette. With all faces still selected from the previous operation select the <strong>Scalar Fields-&gt;A</strong> (area) tool, click <strong>Add A </strong>at the bottom of the Properties Panel and select <strong>Color Map</strong>.</p>
+<p class="note">The request for the <strong>A</strong> color map will cause all the faces to be meshed.</p>
+<p><img src="../files/tutorials/membrane-flow/face-mesh.png" width="484" height="363" alt="Face Mesh" /></p>
+<p>Zoom the view using the mouse wheel to focus on the membrane mesh.</p>
+<p><img src="../files/tutorials/membrane-flow/membrane-mesh.png" width="484" height="363" alt="Membrane Face Mesh" /></p>
+<p>Select the <strong>Physics</strong> Tool Palette.</p>
+<p>Select the <strong>Special-&gt;Accuracy</strong> tool. In the Properties Panel set <strong>Accuracy</strong> to <strong>Custom</strong> and set <strong>Resolution</strong> to <strong>100</strong>. Drag and drop the <strong>Accuracy</strong> tool onto a membrane edge, double-click <strong>face_6</strong> in the <strong>Select</strong> dialog, and select <strong>Done</strong>.</p>
+<p class="note">Applying the Accuracy tool will cause all the faces to be remeshed which will take a few seconds.</p>
+<p><img src="../files/tutorials/membrane-flow/fine-membrane-mesh.png" width="484" height="363" alt="Fine Membrane Face Mesh" /></p>
+<h3>Volume Mesh</h3>
+<p>To see individual volume mesh elements after the volume meshing process is complete, right-click on any edge in the View Window, double-click <strong>flow-volume</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel, turn off the <strong>Transparent</strong> property and set <strong>Style</strong> to <strong>Flat</strong>.</p>
+<p><img src="../files/tutorials/membrane-flow/volume-mesh-style-props.png" width="216" height="249" alt="Volume Style Properties" /></p>
+<p>Select the <strong>Results</strong> Tool Palette. With the volume still selected from the previous operation double-click the <strong>Scalar Fields-&gt;Vol Ratio</strong> (volume ratio = actual volume/ideal volume) and select <strong>Color Map</strong>.</p>
+<p class="note">The request for the Vol Ratio color map will cause the entire volume to be meshed which will take a few seconds.</p>
+<p><img src="../files/tutorials/membrane-flow/volume-mesh.png" width="484" height="363" alt="Volume Mesh" /></p>
+<p>Drag the upper threshold slider to the left in the <a href="../tutorials/essentials.html#viewlegend">View Legend</a> to examine the cells with the lowest quality (lowest value in the blue range). </p>
+<p><img src="../files/tutorials/membrane-flow/volume-mesh-threshold.png" width="484" height="363" alt="Volume Mesh Threshold" /></p>
+<p class="note">If you were to see clusters of low quality cells attached to the geometry then that is a sign that you need to improve the mesh in that region using the Accuracy tool. Fortunately this mesh does not suffer from low quality element clusters and you can proceed on with the simulation.</p>
+<h2 class="tutorial-heading">Display Initial Velocity Color Map</h2>
+<p>Drag and drop the <strong>Vector Fields-&gt;U</strong> (velocity) tool onto the View Window (<strong>view</strong>) background, double-click <strong>sim-&gt;Faces</strong>, select <strong>Color Map</strong> to create contours of velocity magnitude on all faces.</p>
+<p><img src="../files/tutorials/membrane-flow/u-colormap-flat.png" width="484" height="363" alt="Velocity Color Map" /></p>
+<p>In the Properties Panel, set <strong>Style</strong> to <strong>Smooth</strong>.</p>
+<p><img src="../files/tutorials/membrane-flow/u-colormap-smooth.png" width="484" height="363" alt="Smooth Velocity Color Map" /></p>
+<p class="note">Check that the velocity magnitude value (shown in the View Legend color bar) matches the value you expect as confirmation that your reference velocity is correct.</p>
+<h2 class="tutorial-heading">Display Initial Velocity Vectors</h2>
+<p>Drag and drop the <strong>Vector Fields-&gt;U</strong> (velocity) tool onto an edge of the circumference faces, double-click the <strong>circumference</strong> group in the <strong>Select</strong> dialog, and select <strong>Arrows</strong> to create arrows colored by velocity magnitude.</p>
+<p><img src="../files/tutorials/membrane-flow/arrows.png" width="484" height="363" alt="Arrows" /></p>
+<p class="note">Check that the arrows are oriented in the direction you expect as confirmation that your reference velocity is correct.</p>
+<h2 class="tutorial-heading">Create Force Monitors</h2>
+<p>In this step you will set up lift and drag monitors for the membrane on the same monitor plot.</p>
+<h3>Drag Monitor</h3>
+<p>Drag is the force parallel to the flow direction, created by the air moving over the membrane. In this case, drag is represented by the X-direction (default) of the F (force) vector variable.</p>
+<p>Drag and drop the <strong>Vector Variables-&gt;F</strong> (force) tool onto a membrane edge. Double-click the <strong>membrane</strong> group in the <strong>Select</strong> dialog and select <strong>Monitor</strong>.</p>
+<p>Drag and drop the <strong>F Monitor</strong> tab over to the right-hand edge of the Caedium application window to split the window into two parts as shown below.</p>
+<p><img alt="Force Monitor" src="../files/tutorials/membrane-flow/force-monitor.png" width="484" height="363" /> </p>
+<p>Left-click <strong>membrane</strong> in the <strong>F Monitor</strong> Legend, left-click again to edit the title, and change it to <strong>Drag</strong>. In the Properties Panel, set the <strong>Symbol</strong> to <strong>None</strong>.</p>
+<p><img alt="Drag Properties" src="../files/tutorials/membrane-flow/drag-props.png" width="239" height="248" /></p>
+<h3>Lift Monitor</h3>
+<p>Lift is the force perpendicular to the flow direction, created by the air moving over the membrane. In this case, lift is represented by the Z-direction of the F (force) vector variable.</p>
+<p>To monitor lift and drag on the same plot, first you will create another series (plot curve) for the membrane on the original drag monitor, and then you will set this plot series to monitor lift.</p>
+<p>In the View Window (<strong>view</strong>) right-click on an edge of the membrane, double-click the <strong>membrane</strong> group in the <strong>Select</strong> dialog, and select <strong>Copy</strong>. Left-click in the Monitor Window (<strong>F Monitor</strong>) to give it focus, then right-click and select <strong>Paste</strong>.</p>
+<p>Left-click <strong>membrane</strong> in the <strong>F Monitor</strong> Legend, left-click again to edit the title, and change it to <strong>Lift</strong>. In the Properties Panel, set the <strong>Symbol</strong> to <strong>None</strong>.</p>
+<p>In the <strong>Results</strong> Tool Palette, select the <strong>Vector Variables-&gt;F</strong> tool. In the Properties Panel set <strong>Scalar</strong> to <strong>Z</strong>.</p>
+<p><img alt="Force Properties" src="../files/tutorials/membrane-flow/force-props.png" width="187" height="496" /> </p>
+<p>Drag and drop the <strong>Vector Variables-&gt;F</strong> (force) tool onto <strong>Lift</strong> in the <strong>F Monitor</strong> Legend, and select <strong>Y Axis</strong>.</p>
+<p>Left-click in the Monitor Window (<strong>F Monitor</strong>) to give it focus, then in the Properties Panel rename the <strong>Y Axis</strong> to <strong>Force</strong>. </p>
+<p><img alt="Force Monitor Properties" src="../files/tutorials/membrane-flow/force-monitor-props.png" width="187" height="249" /></p>
+<p>The final state of the lift and drag monitor is show below.</p>
+<p><img alt="Drag and Lift Monitor" src="../files/tutorials/membrane-flow/drag-lift-monitor.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Create Residuals Monitor</h2>
+<p>Left-click in the View Window to give it focus. Drag and drop the <strong>Special-&gt;Residuals</strong> tool onto a membrane edge. Double-click <strong>flow-volume</strong> in the <strong>Select</strong> dialog and select <strong>Monitor</strong> to create the residuals monitor.</p>
+<p>Drag and drop the <strong>Residuals</strong> tab over to the top-right-hand edge of the Caedium application window to split the window into three parts as shown below.</p>
+<p><img src="../files/tutorials/membrane-flow/residuals.png" width="484" height="363" alt="Residuals Monitor" /></p>
+<h2 class="tutorial-heading">Run the Flow Solver</h2>
+<p class="note">The number of flow (simulation) solver iterations is determined by multiplying the number of simulation time-steps (default = 5) by the number of iterations per simulation time-step (default = 100). The number of simulation time-steps is determined by dividing the simulation duration (default = 5 s) by the simulation time-step (default = 1 s). After each simulation time-step (equivalent to 100 iterations by default) the results will be refreshed. For this simulation the defaults are fine and will result in a total of 500 iterations.</p>
+<p>In the <strong>Home</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> click the <strong>Run</strong> button <img src="../files/tutorials/shared/play.png" alt="" /> to run the flow solver.</p>
+<p class="note">If you wanted to interrupt the flow solver, you would re-click the Run button; the solver would then stop at the end of the current simulation time-step.</p>
+<p class="note">Let the solver complete its run. Note the updates of the velocity vectors, velocity color map, the forces monitors, and the residuals monitor as the simulation progresses.</p>
+<p><img src="../files/tutorials/membrane-flow/solved.png" width="484" height="363" alt="Solved" /></p>
+<p>Solver convergence is indicated by:</p>
+<ul>
+<li>The Residuals Monitor shows the solver residuals decreased with increasing iterations smoothly and progressed below 0.001, i.e., over 3 orders of magnitude reduction </li>
+<li>The Drag and Lift monitors both show convergence close to single values with increasing iterations </li>
+</ul>
+<p>To make it easier to differentiate between the inner and outer membrane results, select the membrane base edge, in the <strong>Select</strong> dialog double-click <strong>face_6</strong> (inner results), and select <strong>Properties</strong>. In the Properties Panel, turn off the <strong>Transparent</strong> property.</p>
+<p><img src="../files/tutorials/membrane-flow/inner-shaded.png" width="484" height="363" alt="Shaded Inner Membrane Face" /></p>
+<p class="note">If you change the reference velocity flow direction then you will also need to change <strong>theta</strong> used by the drag monitor. Select the View Window background, in the <strong>Select</strong> dialog double-click <strong>sim</strong>. In the Properties Panel select the Simulation tab <img src="../files/tutorials/shared/simulation-tab.png" alt="" /> and set <strong>Constants-&gt;theta</strong> accordingly.</p>
+<h2 class="tutorial-heading">Export Results to ixCube 4-10</h2>
+<p class="note">ixCube 4-10 can import CFD results from Caedium as Alias/Wavefront (.obj) for the geometry and as Comma Separated Values (CSV) for the pressure coefficient (Cp) and pressure (p) data.</p>
+<h3>Create New View</h3>
+<p>Select the <strong>New</strong> Toolbar and click the <strong>View</strong> button <img src="../files/tutorials/shared/view.png" alt="" /> to create <strong>view_1</strong>.</p>
+<p><img src="../files/tutorials/membrane-flow/new-view.png" width="484" height="363" alt="New View" /></p>
+<h3>Export the Membrane as .obj</h3>
+<p>Select the membrane base edge, in the <strong>Select</strong> dialog double-click <strong>face_6</strong>, and select Properties. In the Properties Panel turn off the <strong>Transparent</strong> property.</p>
+<p><img src="../files/tutorials/membrane-flow/shaded-membrane.png" width="484" height="363" alt="Shaded Membrane" /></p>
+<p>Right click on the View Window (<strong>view_1</strong>) background, in the <strong>Select</strong> dialog select <strong>sim-&gt;Edges</strong>, press the <strong>Ctrl</strong> key and select <strong>sim-&gt;Axes</strong> in the <strong>Select</strong> dialog, and click <strong>OK</strong>. In the Properties Panel turn on the <strong>Transparent</strong> property. </p>
+<p>This should leave only the membrane face visible ready for export.</p>
+<p>Select the <strong>File</strong> Toolbar and click the <strong>Export</strong> button <img src="../files/tutorials/shared/export.png" alt="" />.  In the <strong>Export</strong> dialog set <strong>Save as type</strong> to <strong>Alias/Wavefront (*.obj)</strong>, set the <strong>File name</strong> to <strong>membrane-cp.obj</strong>, and click <strong>Save</strong>.</p>
+<p class="note">In addition to the <strong>membrane-cp.obj</strong> file the export operation will also save a <strong>membrane-cp.mtl</strong> file.</p>
+<h3>Export Cp Data as .csv</h3>
+<p>Drag and drop the <strong>Scalar Fields-&gt;Cp</strong> (pressure coefficient) tool onto the shaded membrane face in <strong>view_1</strong>. In the <strong>Select</strong> dialog double-click the <strong>membrane</strong> group, and select <strong>XY Plot </strong>to create a plot of the Cp values on the membrane faces.</p>
+<p><img src="../files/tutorials/membrane-flow/cp-plot.png" width="484" height="363" alt="Cp Plot" /></p>
+<p>Select <strong>File-&gt;Export</strong>. In the <strong>Export</strong> dialog set <strong>Save as type</strong> to <strong>Plot Series (*.csv)</strong>, set the <strong>File name</strong> to <strong>membrane-cp.csv</strong>, and click <strong>Save</strong>.</p>
+<p class="note">Using the same process you can also create a pressure plot with the <strong>Scalar Fields-&gt;p</strong> tool for export.</p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="1718.html" class="page-previous" title="Go to previous page">‹ Conjugate Heat Transfer for a Heat Sink</a>
+                    <a href="817.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="430.html" class="page-next" title="Go to next page">Panel Flow ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="expanded active-trail"><a href="817.html">RANS Flow</a><ul class="menu"><li class="leaf first"><a href="818.html">Incompressible Flow Through a Pipe into a Box</a></li>
+<li class="leaf"><a href="816.html">Incompressible Transient Flow with Heat Transfer</a></li>
+<li class="leaf"><a href="819.html">Transonic Flow Over the NACA 0012 Airfoil</a></li>
+<li class="leaf"><a href="831.html">Flow Over a Rotating Wheel with Moving Ground</a></li>
+<li class="leaf"><a href="1082.html">Flow Over a CO2 Dragster</a></li>
+<li class="leaf"><a href="1255.html">Rotating Paddle using Moving Reference Frame</a></li>
+<li class="leaf"><a href="1257.html">Transient Water and Air Flow in a Tank</a></li>
+<li class="leaf"><a href="1718.html">Conjugate Heat Transfer for a Heat Sink</a></li>
+<li class="leaf last active-trail"><a href="1281.html" class="active">Flow Over a Double-Sided Membrane</a></li>
+</ul></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="collapsed last"><a href="../tips.html">Tips</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1281 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:00 GMT -->
+</html>

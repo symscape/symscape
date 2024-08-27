@@ -1,0 +1,287 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/colormaps-vectors-streamlines by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:05:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Color Maps, Vectors, Streamlines, Action! | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-colormaps-vectors-streamlines section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">Color Maps, Vectors, Streamlines, Action!</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1479" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on March 26, 2014 - 13:09        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p><a href="../computational-fluid-dynamics.html">Computation Fluid Dynamics (CFD)</a> is synonymous with impressive 3D visualization. Learn more about the basic 3D visualization techniques in CFD and how they can help you reduce the mass of raw data from a simulation into insightful and beautiful graphics.</p>
+<p><span class="inline inline-center"><img alt="3D Visualization in Caedium" src="../files/pictures/colormaps-vectors-streamlines/colormaps-vectors-streamlines.png" width="600" height="450" /><span class="caption"><strong>3D Visualization in Caedium</strong></span>CFD simulation of a cyclone</span></p>
+<h3>Surface Color Map (Contours)</h3>
+<p>Contours are a surface-based visualization for scalars that can be either open (lines) or filled. Typically you create colored contour bands of constant value on a surface. You can reduce a vector to a scalar by using a component (e.g., X) or taking the vector's magnitude. Being a surface-based visualization technique it is relatively quick to calculate and doesn't consume much additional memory.</p>
+<p><span class="inline inline-center"><img alt="Contours" src="../files/pictures/colormaps-vectors-streamlines/contours.png" width="600" height="391" /><span class="caption"><strong>Contours</strong></span></span></p>
+<p>Contours are useful for visualizing surface pressures to highlight extreme values that can be investigated further during a drag study. Also looking at surface mesh metrics (e.g., ideal surface element edge ratios) is useful when you are trying to track down poor mesh quality issues.</p>
+<h3>Volume Color Map (Iso-Surfaces)</h3>
+<p>Iso-surfaces are a volume-based visualization for scalars, analogous to surface-based contours. Typically multiple surfaces of constant value are extracted from the scalar field. Each surface is colored relative to an associated color-scalar assignment. Being volume-based this visualization technique can take a while to calculate and can consume significant additional memory.</p>
+<p><span class="inline inline-center"><img alt="Iso-Surfaces" src="../files/pictures/colormaps-vectors-streamlines/iso-surfaces.png" width="600" height="360" /><span class="caption"><strong>Iso-Surfaces</strong></span></span></p>
+<p>Iso-surfaces are useful in revealing structures away from surfaces. For example, visualizing iso-surfaces of velocity magnitude can be used to identify regions of slow moving flow that could be avoided to yield a more efficient design. By visualizing volume mesh metrics (e.g., ideal element volume ratios) you can identify poor mesh quality with a view to making improvements.</p>
+<h3>Vectors</h3>
+<p>Vectors are a point-based visualization technique where glyphs (e.g., arrows) are aligned according to a vector's direction and are scaled according to a vector's magnitude. Vectors can be displayed on any geometry entity (vertices, edges, faces, volumes) that has an associated mesh. Vectors can also be colored according to a scalar field. There is very little calculation required to construct a vector visualization. However, the memory requirement varies according to the number of points (typically high for volumes, and lower for faces) and the number of elements that represents each glyph. For example, a 3D arrow requires more resources to display than a 2D planar arrow.</p>
+<p><span class="inline inline-center"><img alt="Vectors" src="../files/pictures/colormaps-vectors-streamlines/vectors.png" width="600" height="423" /><span class="caption"><strong>Vectors</strong></span></span></p>
+<p>Visualizing the velocity vector field on a surface is one way to locate recirculation zones, but using streamlines (see below) is often more reliable. Prior to running a simulation it is useful to display the velocity field as vectors to ensure you have correctly set the reference velocity and dependent boundary conditions.</p>
+<h3>Streamlines (Particles)</h3>
+<p>Streamlines are instantaneous paths through a velocity field that start at one or more seed points. Time integration through the velocity field can be run forwards (downstream) or backwards (upstream). The resulting streamline can be colored according to a scalar field. You can also animate massless particles along a streamline for impressive movie creation. Streamlines are typically volume-based, so they can take a significant time to calculate and can consume significant additional memory depending on the number of time-steps required.</p>
+<p><span class="inline inline-center"><img alt="Streamlines" src="../files/pictures/colormaps-vectors-streamlines/streamlines.png" width="600" height="389" /><span class="caption"><strong>Streamlines</strong></span></span></p>
+<p>Streamlines are a good way to locate recirculation zones. Also streamlines are usually a more efficient way to visualize vectors in a subset of a volume rather than using standard vectors in the entire volume. Using backwards time integration you can also determine how fluid arrives at a location, such as an outlet. </p>
+<p><span class="inline inline-center"><iframe width="560" height="315" src="http://www.youtube.com/embed/cWR52XiuAuw" frameborder="0" allowfullscreen></iframe><span class="caption"><strong>Animated Particles</strong></span></span></p>
+<h3>Notes</h3>
+<p>For details on how <a href="../product/professional.html">Caedium</a> handles 3D visualization see:</p>
+<ul>
+<li>A tutorial that uses a color map, arrows, and streamlines at <a href="../node/818.html">&quot;Incompressible Flow Through a Pipe into a Box&quot;</a></li>
+<li>A tip on color maps and thresholding at <a href="../node/779.html">&quot;Color Map&quot;</a></li>
+<li>A tip on streamlines and animating particles at <a href="../node/984.html">&quot;Particles or Streamlines&quot;</a></li>
+</ul>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/colormaps-vectors-streamlines by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:05:51 GMT -->
+</html>

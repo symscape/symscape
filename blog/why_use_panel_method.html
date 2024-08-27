@@ -1,0 +1,280 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/why_use_panel_method by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Why Use a Panel Method? | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-why-use-panel-method section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">Why Use a Panel Method?</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-342" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on March 30, 2007 - 14:27        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p><a href="../panel-method.html">Panel methods</a> can calculate the gas or liquid flow around complex 3D configurations, such as aircraft, with relative ease.  However, that ease comes at a price:  panel methods are incapable of modeling the <a href="http://en.wikipedia.org/wiki/Viscosity">viscous effects</a> that are evident in all real-world flows.  So why would an engineer use a panel method?</p>
+<p><span class="inline inline-center"><a href="../examples/panel/dlr_f4.html"><img src="../files/examples/dlr_f4/cp_contours.png" alt="Panel Method Wing-Body Calculation" /></a><span class="caption"><strong>Panel Method Wing-Body Calculation</strong></span></span></p>
+<p>Panel methods are ideal for <a href="../concept-design-analysis.html">concept design analysis</a> due to their rapid turnaround time and relatively easy surface modeling, but this is countered by their inability to predict <a href="../boundary-layers.html">boundary layers</a> and <a href="http://en.wikipedia.org/wiki/Flow_separation">flow separation</a>.  The lack of viscosity modeling in a panel method leads to another limitation: they can’t model rotational flows such as that found in a cyclone.  Panel methods can’t model supersonic flow (<a href="../mach-number.html">Mach number</a> &gt; 1) either.  When you consider that the majority of fluid flows relevant to engineers are subsonic, the inability to model supersonic flows is a minor constraint compared to the lack of viscosity modeling.</p>
+<p>Playing to a panel method’s strengths reveals a useful engineering tool.  A panel method performs best when modeling fully-attached, high-<a href="../reynolds-number.html">Reynolds-number</a> (&gt; 10<sup>5</sup>), subsonic (Mach number &lt; 1) flow.  Such conditions are found in abundance around streamlined shapes such as aircraft, cars, submarines and yachts.  Not surprisingly, the aerospace industry was the first to develop and adopt panel methods, followed by racing-car designers and more recently racing-yacht designers.</p>
+<p><span class="inline inline-center"><a href="../examples/panel/naca4415.html"><br />
+<img src="../files/examples/naca4415/lift.png" alt="Panel Method Airfoil Lift Calculations Compared to Experiment" /></a><span class="caption"><br />
+<strong>Panel Method Airfoil Lift Calculations Compared to Experiment</strong></span></span></p>
+<p>Panel methods are adept at calculating the <a href="../lift-force-and-drag-force.html">lift force and form drag force</a> (also known as pressure drag) on a wing, wing-body and whole aircraft as long as viscous effects are negligible i.e., away from stall conditions.  Form drag is a useful quantity to calculate, but without the skin-friction drag (which is dependent on viscous modeling) it doesn’t reflect the total drag.  Total drag is the sum of the form drag and skin-friction drag.  For airfoils, skin-friction is significant at low angles of attack and therefore panel methods shouldn’t be relied upon for drag prediction.</p>
+<p><span class="inline inline-center"><a href="../examples/panel/naca4415.html"><br />
+<img src="../files/examples/naca4415/drag.png" alt="Panel Method Airfoil Form Drag Calculations Compared to Experiment" /></a><span class="caption"><strong>Panel Method Airfoil Form Drag Calculations Compared to Experiment</strong></span></span></p>
+<p>To predict lift and form drag, a panel method requires that a wake be shed from an airfoil’s trailing edge.  Such wakes can be generated automatically once the trailing edge is identified.  Without a wake, a panel method reverts to its pure inviscid mode and does not calculate lift or form drag.</p>
+<p><span class="inline inline-center"><a href="../examples/panel/naca4415.html"><br />
+<img src="../files/examples/naca4415/cp_contours.png" alt="Panel Method Wake Behind an Airfoil" /></a><span class="caption"><strong>Panel Method Wake Behind an Airfoil</strong></span></span></p>
+<p>Aircraft commonly use high-lift multi-element airfoil configurations during take-off and landing.  Multi-element airfoils are also used on <a href="f1_aero.html">Formula 1 racing cars</a> as a compact method for generating <a href="http://en.wikipedia.org/wiki/Downforce">downforce</a> (lift force directed downwards).  Panel methods can model such configurations relatively easily and accurately.  Downforce for racing cars is the primary means by which they win races, so the lack of accurate drag prediction from a panel method is a minor inconvenience.</p>
+<p><span class="inline inline-center"><a href="../examples/panel/nlr7301.html"><img src="../files/examples/nlr7301/cp_contours_6.png" alt="Panel Method High-Lift Multi-Element Airfoil Calculation" /></a><span class="caption"><strong>Panel Method High-Lift Multi-Element Airfoil Calculation</strong></span></span></p>
+<p>Panel methods were originally conceived for incompressible flow (Mach number &lt; 0.3).  However, by using compressible corrections we can extend the useful range of a panel method to high subsonic speeds (Mach number &lt; 1).  Panel methods can also model subsonic inlets and outlets relatively easily, such as engine intakes on aircraft and cooling inlets and outlets on cars.</p>
+<p>Time-dependent motion of a fluid, such as that caused by rotating helicopter blades, is a difficult and time-consuming problem to simulate with a volume-based <a href="../analysis-techniques.html">analysis technique</a>.  However, with a panel method such a simulation is relatively easy to accomplish.</p>
+<p>High Reynolds-number, subsonic, internal flows such as those found inside <a href="http://en.wikipedia.org/wiki/Wind_tunnel">wind tunnels</a> are ideal for panel methods.  But, why would anyone want to simulate a wind tunnel, which is itself a simulation?  Experimental data produced in wind tunnels, say for an airfoil, are typically affected by the proximity of the wind-tunnel walls, the blockage effect of the model, and uncertainty in the absolute angle of attack.  A panel method can simulate the wind tunnel and the model it contains and compare it with a tunnel-free model simulation.  Thus, the difference in forces between the two panel method calculations can be applied as a correction to the wind tunnel experimental data to provide a better approximation of a tunnel-free experiment.</p>
+<p>Hopefully this article has convinced you that panel methods are a valuable tool for engineers to consider when analyzing fully-attached, high-Reynolds-number, subsonic flows.  If you are keen to try such a tool consider our affordable <a href="../product/panel.html">Panel Flow add-on</a> for <a href="../product/caedium.html">Caedium</a>.</p>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/why_use_panel_method by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:12 GMT -->
+</html>

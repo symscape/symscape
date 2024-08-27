@@ -1,0 +1,644 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/287 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Fluid Flow Around a Sphere | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="430.html" />
+<link rel="up" href="430.html" />
+<link rel="next" href="288.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-287 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="430.html">Panel Flow</a></div>                  <h1 class="title">Fluid Flow Around a Sphere</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-287" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Alison Findon on May 27, 2013 - 18:39        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Create a sphere, specify the physical conditions for your simulation, view the <a href="../pressure-coefficient.html">pressure coefficient</a> contours on the sphere, and generate an XY plot.</p>
+<p><img src="../files/tutorials/flowoversphere/color-map.png" width="484" height="363" alt="Pressure Coefficient Color Map" /></p>
+<h3>Goals</h3>
+<p>In this tutorial, you will learn how to:</p>
+<ul>
+<li>Create a quadrant of a sphere and use symmetry planes to generate results for a full sphere</li>
+<li>Rotate geometry around an axis</li>
+<li>Specify physical conditions for a simulation, including the velocity of air flowing around the sphere and the properties of the outer surface of the sphere</li>
+<li>Specify meshing parameters</li>
+<li>Generate a color map (contours)</li>
+<li>Create an XY plot</li>
+<li>Save your simulation to a file</li>
+</ul>
+<h3>Assumptions</h3>
+<ol>
+<li>You have <a href="15.html">activated</a> the <a href="../product/builder.html">Caedium Builder</a> and <a href="../product/panel.html">Caedium Panel Flow</a> add-ons, or <a href="../product/professional.html">Caedium Professional</a>.</li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>.</li>
+</ol>
+<h2 class="tutorial-heading">Create a Sphere Quadrant</h2>
+<p>Select the <strong>Geometry</strong> <a href="../tutorials/essentials.html#toolpalette">Tool Palette</a>.</p>
+<p>Select the <strong>Volumes-&gt;Sphere</strong> tool. Turn off the <strong>Decompose</strong> property in the <a href="../tutorials/essentials.html#propertiespanel">Properties Panel</a>, enter a <strong>Radius</strong> of <strong>5</strong>, and enter a <strong>Sector</strong> of <strong>90</strong>. Press Enter on the keyboard to apply the changes to the Properties Panel.</p>
+<p class="note">The Decompose option instructs Caedium to split the sphere into six four-edged faces. This option is useful in simplifying the <a href="../meshing.html">meshing</a> process.</p>
+<p><img src="../files/tutorials/flowoversphere/sphere-properties.png" width="222" height="496" alt="Sphere Quadrant Properties" /></p>
+<p>Click <strong>Add Sphere</strong> and select <strong>Done</strong> to create a sphere quadrant in the <a href="../tutorials/essentials.html#viewwindow">View Window</a>.</p>
+<p><img src="../files/tutorials/flowoversphere/sphere-quadrant.png" width="484" height="363" alt="Sphere Quadrant" /></p>
+<h2 class="tutorial-heading">Rotate the Quadrant Around the Y-Axis</h2>
+<p class="note">It is customary to specify the flow direction in the X-direction. In this step you will rotate the sphere quadrant so that its straight edge is aligned parallel to the X-axis. To do this, you need to rotate the sphere quadrant about the center of its straight edge. This requires that you create axes at the center of that edge, which also coincides with the origin in this case.</p>
+<p>Drag and drop the <strong>Others-&gt;Axes</strong> tool onto the background of the View Window. Double-click <strong>sim</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong> to create axes (<strong>axes</strong>). </p>
+<p class="note">Axes are created at the origin by default. In this case, the origin is at the center of the straight edge of the sphere quadrant.</p>
+<p><img src="../files/tutorials/flowoversphere/axes.png" width="484" height="363" alt="Create axes" /></p>
+<p>To rotate the sphere quadrant around the Y-axis, select the <strong>Transforms-&gt;Rotate</strong> tool. In the Properties Panel set <strong>Y</strong> to <strong>-90</strong> and press Enter on the keyboard to apply the changes.</p>
+<p><img src="../files/tutorials/flowoversphere/rotate.png" width="187" height="497" alt="Rotate" /></p>
+<p class="note">A positive rotation indicates a clockwise rotation around a positive coordinate direction. Conversely, a negative rotation indicates a counterclockwise rotation around a positive coordinate direction. This convention is commonly referred to as the <a href="http://en.wikipedia.org/wiki/Right-hand_rule#Direction_associated_with_a_rotation">right-hand rule</a>.</p>
+<p>Drag and drop the <strong>Rotate</strong> tool directly onto the <strong>axes</strong> you created in the View Window. Select <strong>Set Axes</strong> to rotate the sphere quadrant around those axes. Right-click on an edge of the sphere quadrant (which in this case will select the quadrant volume) and select <strong>Done</strong> to rotate the quadrant around the Y-axis.</p>
+<p><img src="../files/tutorials/flowoversphere/rotate-sphere.png" width="484" height="363" alt="Rotate Sphere" /></p>
+<h2 class="tutorial-heading">Specify the Fluid Conditions</h2>
+<p>Select the <strong>Physics</strong> Tool Palette.</p>
+<p>Select <strong>Gases-&gt;Air</strong>. The Properties Panel will show the default properties for air. To enable incompressible, irrotational, inviscid flow, set the 6 properties under <strong>State</strong> (<strong>Compressible</strong>, <strong>Heat Transfer</strong>, <strong>Rotational</strong>, <strong>Species</strong>, <strong>Transient</strong>, and <strong>Viscous</strong>) to <strong>No</strong> (if they are not set to No already).</p>
+<p><img src="../files/tutorials/flowoversphere/air.png" width="278" height="602" alt="Properties of Air" /></p>
+<p>Drag and drop the <strong>Air</strong> tool onto the background of the View Window, which represents the simulation (<strong>sim</strong>). Double-click <strong>sim</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong> to set air as the fluid surrounding the sphere.</p>
+<p>Select the <strong>Simulation-&gt;Linear Velocity</strong> tool. In the Properties Panel set the <strong>Velocity</strong> to [<strong>1 0 0</strong>]. </p>
+<p><img src="../files/tutorials/flowoversphere/velocity.png" width="278" height="604" alt="Velocity" /></p>
+<p>Drag and drop the <strong>Linear Velocity</strong> tool onto the background of the View Window. Double-click <strong>sim</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong> to set the velocity of the air at 1 m/s in the X-direction.</p>
+<h2 class="tutorial-heading">Define the Symmetry Planes for the Sphere</h2>
+<p class="note">Caedium will calculate results on the sphere quadrant. However, since a sphere is a symmetrical shape, you can use the symmetry planes tool to see results for a whole sphere. Using symmetry allows you to get results faster and using less computing resources.</p>
+<p>Select the <strong>Simulation-&gt;Symmetry</strong> tool. Select <strong>Y+Z</strong> next to <strong>Planes</strong> in the Properties Panel. </p>
+<p><img src="../files/tutorials/flowoversphere/symmetry.png" width="277" height="601" alt="Symmetry" /></p>
+<p>Drag and drop the <strong>Symmetry</strong> tool onto the background of the View Window and select <strong>Done</strong> to set Y and Z as the symmetry planes.</p>
+<p>To see the full sphere, select the View tab <img src="../files/tutorials/shared/view-tab.png" alt="" /> in the Properties Panel and turn on the <strong>Symmetry</strong> property. </p>
+<p>In the <strong>Home</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> click the <strong>Fit-All</strong> button <img src="../files/tutorials/shared/fitall.png" alt="" /> to see the whole sphere in the View Window. Left-click-and-drag the mouse in the View Window to rotate the view so that the sphere is in the orientation shown below.</p>
+<p>To shade the sphere, right-click on one of its edges, select the outer face of the sphere in the <strong>Select</strong> dialog (both of the sphere's edges you see in the View Window will be highlighted), click <strong>OK</strong>, and select <strong>Properties</strong>. Turn off the <strong>Transparent</strong> property in the Properties Panel to shade the sphere.</p>
+<p><img src="../files/tutorials/flowoversphere/shaded-sphere.png" width="484" height="363" alt="Shaded Sphere" /></p>
+<h2 class="tutorial-heading">Set the Properties of the Outer Surface of the Sphere</h2>
+<p>Drag and drop the <strong>Faces-&gt;Wall</strong> tool onto the outer face of the sphere. Select the outer face of the sphere in the <strong>Select</strong> dialog, click <strong>OK</strong>, and select <strong>Done</strong> to create a wall on the outer surface of the sphere. </p>
+<p class="note">A wall is a solid surface through which fluid cannot flow.</p>
+<h2 class="tutorial-heading">Specify Meshing Parameters</h2>
+<p>Select the <strong>Special-&gt;Accuracy</strong> tool. Select <strong>High</strong> for the <strong>Accuracy</strong> in the Properties Panel. </p>
+<p><img src="../files/tutorials/flowoversphere/accuracy.png" width="277" height="600" alt="Accuracy" /></p>
+<p>Drag and drop the <strong>Accuracy</strong> tool onto the outer face of the sphere. Select the outer face of the sphere in the <strong>Select</strong> dialog, click <strong>OK</strong>, and select <strong>Done</strong> to set the accuracy of the calculation you want on the sphere.</p>
+<p class="note">You can experiment with selecting the Low and Medium accuracies at the end of this tutorial to see the effect that these settings have on your results. To do this, right-click on the outer face of the sphere, select the outer face in the <strong>Select</strong> dialog, click <strong>OK</strong> and select <strong>Properties</strong>. Select the Face tab <img src="../files/tutorials/shared/face-entity-tab.png" alt="" /> in the Properties Panel and select a different <strong>Accuracy</strong> from the pulldown menu.</p>
+<h2 class="tutorial-heading">Calculate the Pressure Coefficient on the Sphere</h2>
+<p>Select the <strong>Results</strong> Tool Palette.</p>
+<p>Drag and drop the <strong>Scalar Fields-&gt;Cp</strong> tool onto the outer face of the sphere in the View Window. Select the outer face in the <strong>Select</strong> dialog, click <strong>OK</strong>, and select <strong>Color Map</strong> to create contours of pressure coefficient on the sphere.</p>
+<p class="note">The <a href="347.html">pressure coefficient</a> is a dimensionless number that relates pressure changes to the surrounding field pressure.</p>
+<p>To rotate the view, left-click-and-drag the mouse in the View Window.</p>
+<p><img src="../files/tutorials/flowoversphere/color-map.png" width="484" height="363" alt="Pressure Coefficient Color Map" /></p>
+<h2 class="tutorial-heading">Create an XY Plot of the Pressure Coefficient on the Sphere</h2>
+<p>To make the edge selection in the next step easier, right-click on the outer face of the sphere in the View Window, select the outer face in the <strong>Select</strong> dialog, click <strong>OK</strong>, and then select <strong>Properties</strong> from the menu. In the Properties Panel, turn on the <strong>Transparent</strong> property.</p>
+<p>Drag and drop the <strong>Scalar Fields-&gt;Cp</strong> (pressure coefficient) tool onto the edge of the sphere highlighted in the diagram below. </p>
+<p><img src="../files/tutorials/flowoversphere/edge-for-xyplot.png" width="400" height="277" alt="Sphere Edge for XY Plot" /></p>
+<p>Double-click the edge in the <strong>Select</strong> dialog and select <strong>XY Plot</strong>.</p>
+<p class="note">Note that the edges may have different names in your example, so use the diagram above as a guide for the edge to be selected.</p>
+<p><img src="../files/tutorials/flowoversphere/xyplot.png" width="484" height="363" alt="XY Plot of Pressure Coefficient" /></p>
+<h2 class="tutorial-heading">Save the Simulation</h2>
+<p>In the <strong>Home</strong> Toolbar click the Save button <img src="../files/tutorials/shared/save.png" alt="" />. Select the location to save your simulation, specify a <strong>File name</strong> (e.g., <strong>flow-over-sphere</strong>) and select <strong>Caedium (*.sym)</strong> as the file type (if it is not already selected). Click <strong>Save</strong> to save the sym file.</p>
+<h2 class="tutorial-heading">Compare your Results with Theory</h2>
+<p>You can compare the results of your simulation with theoretical calculations of pressure coefficient on a sphere. See the <a href="288.html">Fluid Flow Around a Sphere: Theory Comparison</a> tutorial for detailed instructions.</p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="430.html" class="page-previous" title="Go to previous page">‹ Panel Flow</a>
+                    <a href="430.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="288.html" class="page-next" title="Go to next page">Fluid Flow Around a Sphere: Theory Comparison ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-161"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-161" class="active">Confused</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on May 24, 2008 - 07:36.  </div>
+
+  <div class="content">
+    <p>i get still confuse to follow this tutorial</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-162"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-162" class="active">Be Specific</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 24, 2008 - 08:14.  </div>
+
+  <div class="content">
+    <p>What specifically are you confused about?</p>
+<p>For an overview of the simulation process try <a href="612.html">Overview: Geometry to Results</a>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-237"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-237" class="active">Rotational cylinder</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on March 7, 2009 - 20:30.  </div>
+
+  <div class="content">
+    <p>Can I use symscape to investigate flow and pressure coefficient contours for a rotational cylinder (Magnus Effect)?<br />
+Can it be used to investigate/simulate flow through a slot and downstream flow attachment to a solid wall attached to the slot at an angle?</p>
+<p>Thank you</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-238"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-238" class="active">Magnus Effect</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on March 8, 2009 - 16:23.  </div>
+
+  <div class="content">
+    <p>Yes you can use Caedium with our <a href="../product/professional.html">Professional add-on</a> to simulate the Magnus Effect. In fact we performed such a simulation for a rotating sphere (see image below) in the article <a href="../blog/curve-ball-aerodynamics.html">"Curve Ball Aerodynamics."</a></p>
+<p>For a rotating cylinder:</p>
+<ol>
+<li>Use the <a href="287.html">"Fluid Flow Around a Sphere"</a> tutorial above as the basis of a airflow simulation, but instead of using a sphere with symmetry you'll need to create a full cylinder. Select the Geometry Tool Palette and use the <strong>Volume->Cylinder</strong> tool.</li>
+<li>Apply an angular (rotational) velocity to the surfaces of the cylinder. From the  Physics Tool Palette use the <strong>Conditions->Angular Velocity</strong> tool.</li>
+<li>You'll need to use a global reference frame for viewing the velocity, so select the background (serves as the simulation). Then in the Properties Panel check (enable) <strong>Substance->Solver->Global Reference Frame</strong></li>
+<li>To see velocity arrows select the Results Tool Palette. Then drag and drop the <strong>Vector Fields->Velocity</strong> tool onto the outer faces of the cylinder in the View Window. Select the outer faces in the Select dialog, click OK, and select <strong>Arrows</strong>.</li>
+<li>To color the velocity arrows by pressure coefficient select the Results Tool Palette. Then dag and drop the <strong>Scalar Fields->Pressure Coefficient</strong> tool onto the arrows on the cylinder in the View Window. Select the outer faces in the Select dialog, click OK, and select <strong>Color Map</strong>.</li>
+</ol>
+<p>Hopefully this enough to get you started, and then move on to the slot and wall geometry you mentioned.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-566"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-566" class="active">Help</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on May 1, 2010 - 02:12.  </div>
+
+  <div class="content">
+    <p>I follow the tutorial word for word and end up with a completely blue ball. I can not get it to display the pressure difference ?????</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-594"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-594" class="active">Crucial Sections</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on June 9, 2010 - 13:57.  </div>
+
+  <div class="content">
+    <p>The crucial sections to get right are:</p>
+<ul>
+<li>Specify Fluid Conditions</li>
+<li>Set the Properties of the Outer Surface of the Sphere</li>
+</ul>
+<p>Maybe try reviewing them again and see if it makes a difference to your results.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-793"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-793" class="active">Problems</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on December 31, 2010 - 22:36.  </div>
+
+  <div class="content">
+    <p>I followed every procedure shown above.<br />
+I got a sphere with the color map divided into four parts.<br />
+How do I get the same result  as the tutorial shows?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-794"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-794" class="active">Irrotational Inviscid Properties</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on January 1, 2011 - 00:19.  </div>
+
+  <div class="content">
+    <p>Ensure that you have set the Substance-&gt;State properties as follows:</p>
+<ul>
+<li>Rotational = No</li>
+<li>Viscous = No</li>
+</ul>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1499"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-1499" class="active">Tutorial problem - color divided into four parts</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by AC (not verified) on July 11, 2012 - 00:54.  </div>
+
+  <div class="content">
+    <p>I followed the tutorial but the sphere color is divided into four equal parts...<br />
+Any way to solve it?<br />
+Is there any steps skipped or assumed in the tutorial?<br />
+Thanks.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1500"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-1500" class="active">No Skipped Steps</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on July 11, 2012 - 08:25.  </div>
+
+  <div class="content">
+    <p>This tutorial is complete, there are no skipped steps.</p>
+<p>Check that you followed the section "Specify the Accuracy You Require for Your Results".</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1899"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-1899" class="active">XY Plot of pressure gradient</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on February 20, 2014 - 15:15.  </div>
+
+  <div class="content">
+    <p>I have tried this tutorial for fluid flow around a sphere but with different geometry. I have gotten everything up to the colour map. Since the geometry doesn't have a symmetrical shape as sphere, it has asymmetrical pressure gradient. So I want to draw multiple lines (including curves) on the surface to get XY plots for Cp. How do I do that?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1900"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-1900" class="active">Create edges</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on February 20, 2014 - 16:43.  </div>
+
+  <div class="content">
+    <p>Incorporate the edges (curves) into your geometry.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2222"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-2222" class="active">Sphere</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on May 12, 2015 - 15:26.  </div>
+
+  <div class="content">
+    <p>Why do I only get half a sphere And its blue</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2223"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-2223" class="active">Try repeating the tutorial</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 12, 2015 - 15:41.  </div>
+
+  <div class="content">
+    <p>Without any other information I would guess you made a mistake in the setup. There was a <a href="287.html#comment-566">similar question</a> in these comments so try reviewing it.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2300"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-2300" class="active">Fluid flow over a sphere</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on April 25, 2016 - 02:22.  </div>
+
+  <div class="content">
+    <p>Hello, does the outer surface mean the 'face 1' and 'face 2' when you select the sphere? I can't select the 'faces' from the 'volume' menu, right?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2302"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-2302" class="active">Just the spherical quadrant</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on April 25, 2016 - 04:06.  </div>
+
+  <div class="content">
+    <p>Outer surface means just the spherical quadrant.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2347"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-2347" class="active">I&#039;m trying to get plots of Cp</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by XY (not verified) on December 11, 2016 - 18:54.  </div>
+
+  <div class="content">
+    <p>I'm trying to get plots of Cp for different alpha values but can't find the way to input the value for it. Could you please help with it?<br />
+Also, does the linear velocity not effet the Cp distribution, or I dind't do the correct way to change the value and apply to it?<br />
+Thank you for any information in advance.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2348"></a>
+<div class="comment comment-published last even clearfix">
+  
+      <h3 class="title">
+      <a href="287.html#comment-2348" class="active">Cp and alpha</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on December 12, 2016 - 08:22.  </div>
+
+  <div class="content">
+    <p>By alpha I presume you mean the angle of attack, e.g., for an airfoil. Given we are using symmetry in 2 planes (quadrant), you can not change the angle. If you had a full model then you could modify the velocity magnitude and alpha through the Cartesian velocity components in <strong>Conditions-&gt;Linear Velocity</strong> as described in this tutorial. For more on setting velocity and alpha for a RANS Flow simulation (using a Reference Velocity instead of the Linear Velocity condition) see the tutorial <a href="819.html">"Transonic Flow Over the NACA 0012 Airfoil."</a></p>
+<p>The Cp distribution is independent of the velocity magnitude as we are dealing with inviscid flow.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="collapsed"><a href="817.html">RANS Flow</a></li>
+<li class="expanded active-trail"><a href="430.html">Panel Flow</a><ul class="menu"><li class="leaf first active-trail"><a href="287.html" class="active">Fluid Flow Around a Sphere</a></li>
+<li class="leaf"><a href="288.html">Fluid Flow Around a Sphere: Theory Comparison</a></li>
+<li class="leaf"><a href="449.html">Internal Flow</a></li>
+<li class="leaf last"><a href="561.html">Flow Over an Airfoil</a></li>
+</ul></li>
+<li class="collapsed last"><a href="../tips.html">Tips</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/287 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:12 GMT -->
+</html>

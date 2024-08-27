@@ -1,0 +1,933 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/gpu-1-1-openfoam by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:09:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>GPU v1.1 Linear Solver Library for OpenFOAM | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-gpu-1-1-openfoam section-gpu-1-1-openfoam one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="index.html" title="Home" rel="home"><img src="files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="index.html">Home</a> › <a href="articles.html">Articles</a></div>                  <h1 class="title">GPU v1.1 Linear Solver Library for OpenFOAM</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1445" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on January 17, 2014 - 13:10        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_15 first last"><a href="articles.html" rel="tag" title="General interest">Articles</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p><strong>ofgpu v1.1</strong> is the latest version of our free <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> library that provides GPU (sometimes referred to as <a href="http://en.wikipedia.org/wiki/GPGPU">GPGPU</a>) linear solvers for <strong>OpenFOAM&reg; v2.2.x</strong>. The library targets NVIDIA CUDA devices on Windows, Linux, and (untested) Mac OS X. <strong>GPU acceleration</strong> holds the promise of providing <strong>significant speed up</strong> at relatively low cost and with <strong>low power consumption</strong> compared to other alternatives. If you want to try our ofgpu library with OpenFOAM then we recommend that you use either a dedicated (i.e., not displaying graphics) high-performance NVIDIA graphics card or a <a href="http://www.nvidia.com/object/tesla_computing_solutions.html">Tesla card</a>.</p>
+<p><span class="inline inline-center"><img src="files/articles/gpu11-openfoam/ofgpu-1-1.png" alt="OpenFOAM on Windows using ofgpu" width="500" height="310" /><span class="caption"><strong>OpenFOAM on Windows using ofgpu</strong></span>Hosted by Caedium Professional</span></p>
+<h3>OpenFOAM GUI</h3>
+<p><em>Are you looking for a <strong>GUI driven, integrated simulation environment with GPU support for Windows and Linux with NVIDIA CUDA devices</strong> incorporating a selection of the <strong>RANS OpenFOAM solvers</strong> and various import/export filters?</em></p>
+<p><span class="inline inline-center"><img src="files/images/professional.png" alt="Caedium Professional" width="640" height="480" /></span></p>
+<p><span class="inline inline-center"><a href="get-started-with-caedium.html"><img title="Get Started With Caedium Now" alt="Get Started With Caedium Now" src="files/flair/get-started-button.png" width="177" height="43" /></a></span></p>
+<h3>Background</h3>
+<p>In our ofgpu library we use the <a href="http://cusplibrary.github.io/">Cusp library's</a> Krylov solvers to produce equivalent GPU (CUDA) versions of the standard OpenFOAM linear solvers:</p>
+<ul>
+<li>PCG - Preconditioned <a href="http://en.wikipedia.org/wiki/Conjugate_gradient_method">conjugate gradient solver</a> for symmetric matrices (e.g., p) </li>
+<li>PBiCG - Preconditioned <a href="http://en.wikipedia.org/wiki/Biconjugate_gradient_method">biconjugate gradient solver</a> for asymmetric matrices (e.g., Ux, k) </li>
+</ul>
+<p>We also have support in ofgpu for the Cusp preconditioners:</p>
+<ul>
+<li>no</li>
+<li>diagonal</li>
+<li>smoothed_aggregation - equivalent to Algebraic Multi-Grid (AMG)</li>
+<li>scaled_bridson_ainv</li>
+<li>bridson_ainv</li>
+<li>nonsym_bridson_ainv</li>
+</ul>
+<h3>Prerequisites</h3>
+<ul>
+<li>You are familiar with the OpenFOAM build process </li>
+<li>You are familiar with CMake </li>
+<li>You have a <a href="http://www.nvidia.com/object/cuda_gpus.html">CUDA-capable NVIDIA device</a>, such as a <a href="http://www.nvidia.com/object/personal-supercomputing.html">Tesla K20</a> </li>
+</ul>
+<h3>Preparation</h3>
+<p>Install and test:</p>
+<ul>
+<li>Latest NVIDIA graphics driver</li>
+<li>Latest <a href="http://developer.nvidia.com/cuda-toolkit-sdk">CUDA Toolkit (v5.5, including Thrust) and GPU Computing SDK</a> </li>
+<li><a href="http://cusplibrary.github.io/">Cusp v0.4.0</a> - sparse linear algebra library </li>
+<li><a href="http://www.cmake.org/">CMake</a> - cross platform make </li>
+<li>OpenFOAM 2.2.x source distribution on Linux - following <a href="openfoam-2-2-x-on-windows.html">"OpenFOAM 2.2.x on Windows"</a>. <strong>Note that these modifications for Windows also work for Linux</strong></li>
+</ul>
+<h3>Build Procedure</h3>
+<p>This build procedure assumes single precision.</p>
+<ol>
+<li>Download our free GPL licensed <a href="files/articles/gpu11-openfoam/ofgpu-1-1-0.tar">ofgpu library</a> [last update Jan. 17, 2014 to v1.1].
+</li><li>Configure and generate the build system for ofgpu with CMake, Set the <code>CMAKE_INSTALL_PREFIX</code> variable to <code>&lt;ofgpu-root&gt;/install</code></li>
+<li>Build ofgpu
+<ul>
+<li> On *nix systems <code>make install</code> and create the symbolic link: <code>ln -s &lt;ofgpu-root&gt;/install/release/lib &lt;ofgpu-root&gt;/install/lib</code> </li>
+<li>For Windows you will need to build ofgpu natively using Visual Studio and then transfer ofgpu.dll and ofgpu.lib to your Linux system for <a href="openfoam-2-2-x-on-windows.html">cross compiling</a>. Place your natively compiled Windows files in <code>&lt;ofgpu-root&gt;/install/win/lib</code> on your Linux system. </li>
+</ul>
+</li>
+<li>Patch your OpenFOAM source with our <a href="openfoam-2-2-x-on-windows.html">CUDA modifications</a>. Note that this is the same source code patch that adds Windows support for OpenFOAM 2.2.x.</li>
+<li><code>chmod ug+x &lt;OpenFOAM-root&gt;/src/gpu/Allwmake</code></li>
+<li>Build OpenFOAM in the usual manner, but with the addition of the environment variables:
+<ul>
+<li><code>WM_GPU='CUDA'</code> </li>
+<li><code>CUDA_ARCH_PATH=&lt;ofgpu-root&gt;</code></li>
+<li><code>WM_PRECISION_OPTION=SP</code></li>
+</ul>
+<p>  Note that single precision is required. Double precision is untested.
+  </p></li>
+</ol>
+<p>The build process will produce the following 2 new OpenFOAM libraries:</p>
+<ul>
+<li><code>$(WM_PROJECT_DIR)/platforms/&lt;platform&gt;/lib/cuda/[lib]gpu.[so|dll]</code> </li>
+<li><code>$(WM_PROJECT_DIR)/platforms/&lt;platform&gt;/lib/gpuless/[lib]gpu.[so|dll]</code> </li>
+</ul>
+<p>Under Windows you will need to have the <code>$(WM_PROJECT_DIR)/platforms/&lt;platform&gt;/lib/cuda</code> directory in your executable path to use the library.</p>
+<h3>Example Case</h3>
+<p>For an example of a GPU-enabled case try <a href="files/articles/gpu11-openfoam/pitzDailyGpu.zip">pitzDailyGpu</a>.</p>
+<p>The GPU library is loaded in <code>&lt;case&gt;/system/controlDict</code> with:</p>
+<p>functions<br />
+{<br />
+&#160;&#160; cudaGpu<br />
+&#160;&#160; {<br />
+&#160;&#160;&#160;&#160;&#160; type cudaGpu;<br />
+&#160;&#160;&#160;&#160;&#160; functionObjectLibs ("gpu");<br />
+&#160;&#160;&#160;&#160;&#160; cudaDevice 0;<br />
+&#160;&#160; }<br />
+}</p>
+<p>As an example the p and U|k|epsilon linear solvers in the <code>&lt;case&gt;/system/fvSolution</code> file are modified as follows:</p>
+<p>p<br />
+{<br />
+&#160;&#160; solver PCGgpu;<br />
+&#160;&#160; preconditioner smoothed_aggregation;<br />
+&#160;&#160; tolerance 1e-06;<br />
+&#160;&#160; relTol 0.01;<br />
+}</p>
+<p>"(U|k|epsilon)"<br />
+{<br />
+&#160;&#160; solver PBiCGgpu;<br />
+&#160;&#160; preconditioner diagonal;<br />
+&#160;&#160; tolerance 1e-05;<br />
+&#160;&#160; relTol 0.1;<br />
+}</p>
+<h4>Notes</h4>
+<p><a href="node/808.html">OpenFOAM</a> is a registered trademark of OpenCFD and is unaffiliated with Symscape.</p>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-1868"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-1868" class="active">Error Compiling</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on January 24, 2014 - 15:02.  </div>
+
+  <div class="content">
+    <p>HI,</p>
+<p>thanks for your gpu code. I tried to compiling it but I got some errors. I follow all your steps but it seems there are some error with matching function in sparsematrixargs.h.<br />
+<code><br />
+PBiCGgpu.C: In member function ‘virtual Foam::solverPerformance Foam::PBiCGgpu::solve(Foam::scalarField&amp;, const scalarField&amp;, Foam::direction) const’:<br />
+PBiCGgpu.C:104:1: error: no matching function for call to ‘ofgpu::SparseMatrixArgs::SparseMatrixArgs(const char*, Foam::label, Foam::label, Foam::UList::const_iterator, Foam::UList::const_iterator, Foam::UList::const_iterator, Foam::UList::const_iterator, Foam::UList::const_iterator, Foam::UList::const_iterator, Foam::UList::const_iterator, Foam::UList::const_iterator, Foam::UList::iterator, Foam::UList::const_iterator, const label&amp;, const scalar&amp;, const scalar&amp;, Foam::scalar&amp;, Foam::scalar&amp;, Foam::label&amp;, bool&amp;)’<br />
+ )<br />
+ ^<br />
+PBiCGgpu.C:104:1: note: candidates are:<br />
+In file included from PBiCGgpu.C:24:0:<br />
+ofgpu/sparsematrixargs.h:46:5: note: ofgpu::SparseMatrixArgs::SparseMatrixArgs(const char*, ofgpu::index, ofgpu::index, const index*, const index*, const index*, const real*, const real*, const index*, const index*, const real*, ofgpu::real*, const real*, ofgpu::index, ofgpu::real, ofgpu::real, ofgpu::real&amp;, ofgpu::real&amp;, ofgpu::index&amp;, bool&amp;)<br />
+     SparseMatrixArgs(char const * const preconditionerName,<br />
+     ^<br />
+ofgpu/sparsematrixargs.h:46:5: note:   no known conversion for argument 7 from ‘Foam::UList::const_iterator {aka const double*}’ to ‘const real* {aka const float*}’<br />
+ofgpu/sparsematrixargs.h:24:10: note: ofgpu::SparseMatrixArgs::SparseMatrixArgs(const ofgpu::SparseMatrixArgs&amp;)<br />
+   struct SparseMatrixArgs {<br />
+          ^<br />
+ofgpu/sparsematrixargs.h:24:10: note:   candidate expects 1 argument, 20 provided</code></p>
+<p>Best Regards<br />
+Flora</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1869"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-1869" class="active">Compile OpenFOAM in single precision</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on January 24, 2014 - 15:05.  </div>
+
+  <div class="content">
+    <p>It appears you are trying to compile OpenFOAM in double precision (DP) with ofgpu in single precision (SP)</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1910"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-1910" class="active">Confusion and compiling errors.</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Alex (not verified) on March 8, 2014 - 12:35.  </div>
+
+  <div class="content">
+    <p>Hi,<br />
+    Thanks for the GPU code. I followed the building instruction to step 3. The ofgpu was successfully built how ever in the  /install folder, there is only one folder named lib and there is only one file inside it: libofgpu.so. In this case, does it mean there is no need to perform the step as stated in instruction: ln -s /install/release/lib /install/lib ?<br />
+    With the assumption that there is no need to create the soft link, I went on to step step 4. I'm not sure about the meaning of "CUDA modification". Is it simply apply the "MinGW Windows Modifications" patch at the root directory of OpenFOAM 2.2.x or I need to start from step 1 on webpage(<a href="openfoam-2-2-x-on-windows.html" title="http://www.symscape.com/openfoam-2-2-x-on-windows">http://www.symscape.com/openfoam-2-2-x-on-windows</a>) to  Install MinGW-w64 cross-compiler and zlib" first?</p>
+<p>Any suggestion is appreciated.<br />
+Best wishes,<br />
+Alex</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1911"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-1911" class="active">Set build type for cmake</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on March 8, 2014 - 14:32.  </div>
+
+  <div class="content">
+    <p>Sounds like you didn't set the build type (release) for cmake, that is why you are missing the release folder.</p>
+<p>You only need the MinGW-w64 compiler if you are going to cross compile for Windows.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1912"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-1912" class="active">Hi, 
+     Thanks for your</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Alex (not verified) on March 9, 2014 - 04:11.  </div>
+
+  <div class="content">
+    <p>Hi, </p>
+<p>     Thanks for your reply. After I set the build type to release. The problem solved! Then I followed step 4 and 5 without any problem. (I also did "git checkout 8a983dba63b246772c69ed0fa9cc3b3e33a10f92" to make sure the version is right)<br />
+     However, at step 6, after sourcing the provided .bashrc and exporting WM_GPU='CUDA' CUDA_ARCH_PATH=/home/chenhui_epcc/ofgpu-1-1-0 and WM_PRECISION_OPTION=SP, I started to execute the Allwmake in the OpenFOAM root directory. Then I got several errors. The first one is(the error message is in the end of the code):<br />
+---------------------------------------------------------------------------------------------------------------------------<br />
+SOURCE=signals/sigFpe.C ;  g++ -m64 -Dlinux64 -DWM_SP -Wall -Wextra -Wno-unused-parameter -Wnon-virtual-dtor -O3  -DNoRepository -ftemplate-depth-100 -DFOAM_USE_INOTIFY -IlnInclude -I. -I/home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude -I/home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OSspecific/POSIX/lnInclude   -fPIC -c $SOURCE -o Make/linux64GccDPOpt/sigFpe.o<br />
+In file included from /home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/FixedList.H:43:0,<br />
+                 from /home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/List.C:29,<br />
+                 from /home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/List.H:259,<br />
+                 from /home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/HashTable.C:30,<br />
+                 from /home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/Istream.H:184,<br />
+                 from /home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/token.H:455,<br />
+                 from /home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/UILListIO.C:28,<br />
+                 from /home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/UILList.C:92,<br />
+                 from /home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/UILList.H:330,<br />
+                 from /home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/ILList.H:39,<br />
+                 from /home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/IDLList.H:35,<br />
+                 from /home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/entry.H:45,<br />
+                 from /home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/dictionary.H:53,<br />
+                 from /home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/JobInfo.H:42,<br />
+                 from signals/sigFpe.C:28:<br />
+/home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/Hash.H:212:12: error: ‘intptr_t’ does not name a type<br />
+    typedef intptr_t HashType;<br />
+----------------------------------------------------------------------------------------------------------------------------</p>
+<p>And following that I got similar errors like:<br />
+----------------------------------------------------<br />
+/home/chenhui_epcc/OpenFOAM/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude/Hash.H:219:21: error: ‘HashType’ was not declared in this scope<br />
+         return Hash()(HashType(p), seed);<br />
+------------------------------------------------------------------</p>
+<p>Any help is appreciated!</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1917"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-1917" class="active">Compiler issue</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on March 14, 2014 - 09:11.  </div>
+
+  <div class="content">
+    <p>Check your compiler supports 'intptr_t'</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1964"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-1964" class="active">I fixed the intptr_t error by</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Ian (not verified) on May 20, 2014 - 03:54.  </div>
+
+  <div class="content">
+    <p>I fixed the intptr_t error by adding:</p>
+<p>#include &#60;stdint.h&#62;</p>
+<p>to $FOAM_SRC/OpenFOAM/primitives/hashes/Hash/Hash.H</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1965"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-1965" class="active">$FOAM_GPU_LIBBIN</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Ian (not verified) on May 20, 2014 - 04:02.  </div>
+
+  <div class="content">
+    <p>I don't remember reading where $FOAM_GPU_LIBBIN had to be defined?  </p>
+<p>Its used in $FOAM_SRC/gpu/cuda/Make/files and breaks my build if not set. I've set it to $FOAM_LIBBIN.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1966"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-1966" class="active">$FOAM_GPU_LIBBIN</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Ian (not verified) on May 20, 2014 - 04:27.  </div>
+
+  <div class="content">
+    <p>I think this is because you've made the assumption everyone uses bashrc.  You haven't modified cshrc in your patch.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1967"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-1967" class="active">bashrc only</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 20, 2014 - 08:34.  </div>
+
+  <div class="content">
+    <p>There are only so many hours in a day, so I focused my efforts on bashrc. I don't see how not supporting cshrc is a show stopper. Definitely it would be better if I mentioned no cshrc support in the documentation though.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1968"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-1968" class="active">bashrc</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Ian (not verified) on May 20, 2014 - 08:46.  </div>
+
+  <div class="content">
+    <p>I completely agree symscape.  I appreciate how much time you must have put into this already, thanks.  I've got it working now in Suse Linux 12.3, with tcsh (not that I like csh, its just we're stuck with it here for historic reasons).  The only other headaches with the install were getting 'scotch' to build (path issues) and finally putting the compiled libraries in the right folders.  It seems to be working now.  </p>
+<p>If only I could get OpenFOAM to do this implicit coupled conjugate-heat-transfer problem with radiation and turbulence on a high-aspect-ratio mesh I'd finally be happy.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2050"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-2050" class="active">Building gpu-1-1-openfoam</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Charles (not verified) on September 4, 2014 - 05:17.  </div>
+
+  <div class="content">
+    <p>Apologies in advance for a perhaps simplistic problem and incorrect programming references as I am not a programmer however did before attempting to build your extention built a standard openfoam distribution.</p>
+<p>However on attempting to build your version have encountered the following error - (extract from the make.log file ...)</p>
+<p>+ set -e<br />
++ wmakePrintBuild -check<br />
+no git description found<br />
++ /bin/rm -f OpenFOAM/Make/linux64Gcc48DPOpt/global.C OpenFOAM/Make/linux64Gcc48DPOpt/global.o</p>
+<p>+ wmakeLnInclude OpenFOAM<br />
++ wmakeLnInclude OSspecific/POSIX<br />
++ OSspecific/POSIX/Allwmake<br />
+Found   --  enabling inotify for file monitoring.<br />
+'/scratch/foam/foam-gpu/OpenFOAM-2.2.x/platforms/linux64Gcc48DPOpt/lib/libOSspecific.o' is up to date.<br />
++ case $WM_COMPILER in<br />
++ Pstream/Allwmake<br />
++ wmake libso dummy<br />
+'/scratch/foam/foam-gpu/OpenFOAM-2.2.x/platforms/linux64Gcc48DPOpt/lib/dummy/libPstream.so' is up to date.<br />
++ case "$WM_MPLIB" in<br />
++ set +x</p>
+<p>Note: ignore spurious warnings about missing mpicxx.h headers</p>
+<p>wmake libso mpi<br />
+'/scratch/foam/foam-gpu/OpenFOAM-2.2.x/platforms/linux64Gcc48DPOpt/lib/openmpi-1.6.3/libPstream.so' is up to date.<br />
++ wmake libso OpenFOAM<br />
+SOURCE=global/global.Cver ; sed -e 's!VERSION_STRING!2.2.x!' -e 's!BUILD_STRING!2.2.x!' $SOURCE &gt; Make/linux64Gcc48DPOpt/global.C; g++ -m64 -Dlinux64 -DWM_SP -Wall -Wextra -Wno-unused-parameter -Wold-style-cast -O3  -DNoRepository -ftemplate-depth-100 -IMake/linux64Gcc48DPOpt -IlnInclude -I. -I/scratch/foam/foam-gpu/OpenFOAM-2.2.x/src/OpenFOAM/lnInclude -I/scratch/foam/foam-gpu/OpenFOAM-2.2.x/src/OSspecific/POSIX/lnInclude   -fPIC -c<br />
+Make/linux64Gcc48DPOpt/global.C -o Make/linux64Gcc48DPOpt/global.o<br />
+vector.o:(.bss+0x24): multiple definition of `Foam::Vector::zero'<br />
+floatVector.o:(.bss+0x24): first defined here<br />
+vector.o:(.bss+0x18): multiple definition of `Foam::Vector::one'<br />
+floatVector.o:(.bss+0x18): first defined here<br />
+vector.o:(.bss+0xc): multiple definition of `Foam::Vector::max'<br />
+floatVector.o:(.bss+0xc): first defined here<br />
+vector.o:(.bss+0x0): multiple definition of `Foam::Vector::min'<br />
+floatVector.o:(.bss+0x0): first defined here<br />
+vector.o:(.data.rel.local+0x0): multiple definition of `Foam::Vector::componentNames'<br />
+floatVector.o:(.data.rel.local+0x0): first defined here<br />
+vector.o:(.data.rel.ro.local+0x0): multiple definition of `Foam::Vector::typeName'<br />
+floatVector.o:(.data.rel.ro.local+0x0): first defined here<br />
+collect2: error: ld returned 1 exit status<br />
+make: *** [/scratch/foam/foam-gpu/OpenFOAM-2.2.x/platforms/linux64Gcc48DPOpt/lib/libOpenFOAM.so] Error 1</p>
+<p>Thereafter all compile attempts fail with include errors as a result of missing lnInclude directives.</p>
+<p>I presume my problem is as a result of the global.C failure. Is this so or is the mpicxx.h warning appropriate and do you have any suggestions.</p>
+<p>Many thanks in advance<br />
+Charles</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2051"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-2051" class="active">Compile for SP</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on September 4, 2014 - 07:43.  </div>
+
+  <div class="content">
+    <p>Assuming you've patched the correct version of OpenFOAM without any errors/warnings, then it appears that you are compiling for double precision (DP) whereas you should be targeting single precision (SP).</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2052"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-2052" class="active">Single precision</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Charles (not verified) on September 4, 2014 - 09:47.  </div>
+
+  <div class="content">
+    <p>Thanks for the reply, I always added the "setting" as an environment variable - export WM_PRECISION_OPTION=SP. I have now changed the etc/bashrc switch to SP and the build (running as I write) looks a lot better!</p>
+<p>Thank you again</p>
+<p>Kind Regards<br />
+Charles</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2053"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-2053" class="active">Do not modify etc/bashrc</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on September 4, 2014 - 09:50.  </div>
+
+  <div class="content">
+    <p>You do not need to modify etc/bashrc, just feed "WM_PRECISION_OPTION=SP" as argument to it</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2100"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-2100" class="active">scotch not building</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Fine (not verified) on October 25, 2014 - 03:30.  </div>
+
+  <div class="content">
+    <p>Hi</p>
+<p>I'm also having trouble getting scotch to build.  The error message is:</p>
+<p>scotchDecomp.C:138:20: fatal error: scotch.h: No such file or directory<br />
+ #include "scotch.h"</p>
+<p>My OS is ubuntu 14.04.  Trying to make openfoam 2.2.2 with gpu patch v3-mingw.</p>
+<p>Any advice will be welcomed :)</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2101"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-2101" class="active">Ah, sorry, fixed the scotch</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Fine (not verified) on October 25, 2014 - 03:50.  </div>
+
+  <div class="content">
+    <p>Ah, sorry, fixed the scotch issue. Also a path issue.  Just located my scotch.h file and put in the the full path :)</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2158"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-2158" class="active">Run error</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Long (not verified) on January 21, 2015 - 07:07.  </div>
+
+  <div class="content">
+    <p>Hi,<br />
+After compile the source code, Finally I successful, but when I ran the tutorial, I got the error when console print to time = 1.<br />
+<a href="http://i4.photobucket.com/albums/y139/kid888/1-21-20156-53-52PM_zpsa5566969.png" title="http://i4.photobucket.com/albums/y139/kid888/1-21-20156-53-52PM_zpsa5566969.png">http://i4.photobucket.com/albums/y139/kid888/1-21-20156-53-52PM_zpsa5566...</a><br />
+Please take a look here.<br />
+Thanks.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2193"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-2193" class="active">patch error</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Guilherme Sempionato (not verified) on April 22, 2015 - 12:49.  </div>
+
+  <div class="content">
+    <p>Hi, I am facing difficulties in patching the OF source.  Can I use the compiled .so library with a call in controldict using "libs"?  What I really need to make the libofgpu.so works in a stand-alone mode (without patch file).</p>
+<p>Thanks,</p>
+<p>Guilherme.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2194"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-2194" class="active">Match Git commit id</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on April 22, 2015 - 13:17.  </div>
+
+  <div class="content">
+    <p>You have to patch the exact version in Git that matches the commit id, anything less or more will be unreliable.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2243"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-2243" class="active">Hi,
+I have a problem with the</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Giovanni (not verified) on July 17, 2015 - 02:56.  </div>
+
+  <div class="content">
+    <p>Hi,<br />
+I have a problem with the solver interFoam.<br />
+Running a job, I receive the following error: </p>
+<p>FOAM FATAL IO ERROR:<br />
+Unknown symmetric matrix solver PCGgpu</p>
+<p>Valid symmetric matrix solvers are :</p>
+<p>4<br />
+(<br />
+GAMG<br />
+ICCG<br />
+PCG<br />
+smoothSolver<br />
+)</p>
+<p>From function lduMatrix::solver::New<br />
+in file matrices/lduMatrix/lduMatrix/lduMatrixSolver.C at line 77.”</p>
+<p>I tested job with solver simpleFoam, pimpleFoam and pisoFoam and I had no problem.</p>
+<p>Where is the problem with interFoam?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2245"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-2245" class="active">Missing functions section in controlDict</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on July 20, 2015 - 07:05.  </div>
+
+  <div class="content">
+    <p>I'd guess that you are missing the 'functions' entry from your controlDict to load the GPU library. Review the 'Example Case' in the documentation above.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2246"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-2246" class="active">Problem with interFoam solver</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Giovanni (not verified) on July 21, 2015 - 03:15.  </div>
+
+  <div class="content">
+    <p>Hi,<br />
+Thanks for reply, but the problem is not the function cuda.</p>
+<p>The function </p>
+<p>functions<br />
+{<br />
+   cudaGpu<br />
+   {<br />
+      type cudaGpu;<br />
+      functionObjectLibs ("gpu");<br />
+      cudaDevice 0;<br />
+   }<br />
+}</p>
+<p>has been properly inserted into the file controlDict.</p>
+<p>As written in the previous post, I have done various simulations with other solver. </p>
+<p>With the solver interFoam that presents the problem.<br />
+What could be the problem? A bug in the library?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2247"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-2247" class="active">gpu library failing to load</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on July 21, 2015 - 08:02.  </div>
+
+  <div class="content">
+    <p>It is working fine for me with interFoam. Are you sure the gpu library loaded successfully? The error you are seeing appears to be because the library failed to load.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2780"></a>
+<div class="comment comment-published last odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="gpu-1-1-openfoam.html#comment-2780" class="active">Patch not woking</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Manasi Tiwari (not verified) on March 8, 2019 - 11:05.  </div>
+
+  <div class="content">
+    <p>Hi,</p>
+<p>The patch that has to be applied to the OpenFOAM source code is not working for me. I have installed all the required versions of the libraries and tools. I am applying the patch to the mentioned version of OpenFOAM but the patch is not going through. It is producing the following errors - </p>
+<p>patching file Makefile.inc.linux<br />
+patching file Makefile.inc.mingw-w64<br />
+patching file Makefile.inc.darwin<br />
+patching file common.c<br />
+patching file scotch.h<br />
+patching file Makefile<br />
+patching file common.h<br />
+patching file Makefile<br />
+patching file tecio.patch<br />
+patching file gpulibCUDA<br />
+patching file c<br />
+Hunk #1 FAILED at 12.<br />
+1 out of 1 hunk FAILED -- saving rejects to file c.rej<br />
+patching file c++<br />
+Reversed (or previously applied) patch detected!  Assume -R? [n] n<br />
+Apply anyway? [n] n<br />
+Skipping patch.<br />
+2 out of 2 hunks ignored -- saving rejects to file c++.rej<br />
+patching file mplibOPENMPI<br />
+patching file general<br />
+Reversed (or previously applied) patch detected!  Assume -R? [n] n<br />
+Apply anyway? [n] n<br />
+Skipping patch.<br />
+1 out of 1 hunk ignored -- saving rejects to file general.rej<br />
+patching file gpulibCUDA<br />
+patching file c++Debug<br />
+patching file c<br />
+patching file mplibMPICH<br />
+patching file mplibMPICH-GM<br />
+patching file cDebug<br />
+patching file c++Opt<br />
+patching file mplibOPENMPI<br />
+patching file c++Prof<br />
+patching file mplib<br />
+patching file cOpt<br />
+patching file mplibGAMMA<br />
+patching file X<br />
+patching file c++<br />
+patching file mplibMSMPI<br />
+patching file cProf<br />
+patching file general<br />
+patching file gpulibCUDA<br />
+patching file c++Debug<br />
+patching file c<br />
+npatching file mplibMPICH<br />
+patching file mplibMPICH-GM<br />
+patching file cDebug<br />
+patching file c++Opt<br />
+patching file mplibOPENMPI<br />
+patching file c++Prof<br />
+patching file mplibHPMPI<br />
+patching file mplib<br />
+patching file cOpt<br />
+patching file mplibGAMMA<br />
+patching file X<br />
+patching file c++<br />
+patching file cProf<br />
+patching file general<br />
+can't find file to patch at input line 4511<br />
+Perhaps you should have used the -p or --strip option?<br />
+The text leading up to this was:<br />
+--------------------------<br />
+|--- wmake/wcleanAll	(.../tags/2.2.x-2)	(revision 831)<br />
+|+++ wmake/wcleanAll	(.../branches/2.2.x-2)	(revision 831)<br />
+--------------------------<br />
+File to patch:<br />
+n: No such file or directory<br />
+Skip this patch? [y] y<br />
+Skipping patch.<br />
+1 out of 1 hunk ignored<br />
+can't find file to patch at input line 4522<br />
+Perhaps you should have used the -p or --strip option?<br />
+The text leading up to this was:<br />
+--------------------------<br />
+|--- wmake/wmakeLnInclude	(.../tags/2.2.x-2)	(revision 831)<br />
+|+++ wmake/wmakeLnInclude	(.../branches/2.2.x-2)	(revision 831)<br />
+--------------------------<br />
+File to patch:<br />
+Skip this patch? [y] y<br />
+Skipping patch.<br />
+1 out of 1 hunk ignored<br />
+patch: **** File wmake is not a regular file -- can't patch</p>
+<p>Please help me fix it. Is there some other patch available?</p>
+<p>Regards,<br />
+Manasi</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="products.html">Products</a><ul class="menu"><li class="leaf first"><a href="product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="news.html">News</a></li>
+<li class="collapsed"><a href="blog.html">Blog</a></li>
+<li class="leaf"><a href="about.html" title="">About</a></li>
+<li class="expanded last"><a href="resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="articles.html">Articles</a></li>
+<li class="leaf"><a href="image.html">Gallery</a></li>
+<li class="leaf"><a href="support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="forum.html">Forums</a></li>
+<li class="leaf"><a href="downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="partners.html">Partners</a></li>
+<li class="leaf"><a href="poll.html">Polls</a></li>
+<li class="leaf last"><a href="links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="forum.html"><img title="Forums" alt="Forums" src="files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="contact.html">Contact</a> | <a href="trademarks.html">Trademarks</a> | <a href="privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/gpu-1-1-openfoam by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:09:05 GMT -->
+</html>

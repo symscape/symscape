@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.symscape.com/taxonomy/term/51/all" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Utilities</title>
+    <link>https://www.symscape.com/taxonomy/term/51/all</link>
+    <description></description>
+    <language>en</language>
+          <item>
+    <title>POV-Ray</title>
+    <link>https://www.symscape.com/node/70</link>
+    <description>&lt;p&gt;&lt;span class=&quot;inline inline-left&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.povray.org/&quot;&gt;&lt;img src=&quot;/files/images/povray.jpg&quot; alt=&quot;POV-Ray&quot; width=&quot;152&quot; height=&quot;72&quot; /&gt;&lt;/a&gt;&lt;/span&gt;Free open source photo-realistic &lt;a target=&quot;_blank&quot; href=&quot;http://en.wikipedia.org/wiki/Ray_tracing&quot;&gt;ray tracer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Create POV-Ray files with &lt;a href=&quot;/product/viz&quot;&gt;Caedium Viz Export&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/70&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/70#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/51">Utilities</category>
+ <pubDate>Mon, 05 Feb 2007 13:50:35 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">70 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Aqsis</title>
+    <link>https://www.symscape.com/node/68</link>
+    <description>&lt;p&gt;&lt;span class=&quot;inline inline-left&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.aqsis.org/&quot;&gt;&lt;img src=&quot;/files/images/AQSIS.png&quot; alt=&quot;AQSIS&quot; width=&quot;189&quot; height=&quot;110&quot; /&gt;&lt;/a&gt;&lt;/span&gt;Free open source &lt;a target=&quot;_blank&quot; href=&quot;http://en.wikipedia.org/wiki/Scanline_rendering&quot;&gt;scanline&lt;/a&gt; Renderman clone.&lt;/p&gt;
+&lt;p&gt;Create Renderman files with &lt;a href=&quot;/product/viz&quot;&gt;Caedium Viz Export&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/68&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/68#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/51">Utilities</category>
+ <pubDate>Mon, 05 Feb 2007 13:50:13 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">68 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>VRML</title>
+    <link>https://www.symscape.com/node/74</link>
+    <description>&lt;p&gt;&lt;span class=&quot;inline inline-left&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://cic.nist.gov/vrml/vbdetect.html&quot;&gt;&lt;img src=&quot;/files/images/vrml_logo.gif&quot; alt=&quot;VRML&quot; width=&quot;64&quot; height=&quot;64&quot; /&gt;&lt;/a&gt;&lt;/span&gt;Resource for VRML standalone and browser plugin applications.&lt;/p&gt;
+&lt;p&gt;Create VRML files with &lt;a href=&quot;/product/viz&quot;&gt;Caedium Viz Export&lt;/a&gt;.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/74#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/51">Utilities</category>
+ <pubDate>Mon, 05 Feb 2007 13:49:53 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">74 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>GIMP</title>
+    <link>https://www.symscape.com/node/72</link>
+    <description>&lt;p&gt;&lt;span class=&quot;inline inline-left&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.gimp.org/&quot;&gt;&lt;img src=&quot;/files/images/gimp-splash-logo.png&quot; alt=&quot;GIMP&quot; width=&quot;150&quot; height=&quot;113&quot; /&gt;&lt;/a&gt;&lt;/span&gt;GNU Image Manipulation Program (GIMP).  Freely distributed software for photo retouching, image composition and image authoring.&lt;/p&gt;
+&lt;p&gt;Create image files such as jpeg, png, bmp with &lt;a href=&quot;/product/caedium&quot;&gt;Caedium&lt;/a&gt;.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/72#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/51">Utilities</category>
+ <pubDate>Mon, 05 Feb 2007 13:49:28 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">72 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Blender</title>
+    <link>https://www.symscape.com/node/77</link>
+    <description>&lt;p&gt;&lt;span class=&quot;inline inline-left&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.blender3d.org/&quot;&gt;&lt;img src=&quot;/files/images/blender_logo.jpg&quot; alt=&quot;Blender&quot; width=&quot;143&quot; height=&quot;49&quot; /&gt;&lt;/a&gt;&lt;/span&gt;Blender is open source software for 3D modeling, animation, rendering, post-production, interactive creation and playback.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/77&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/77#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/51">Utilities</category>
+ <pubDate>Mon, 05 Feb 2007 13:48:56 +0000</pubDate>
+ <dc:creator>Alison Findon</dc:creator>
+ <guid isPermaLink="false">77 at https://www.symscape.com</guid>
+  </item>
+  </channel>
+</rss>

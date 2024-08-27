@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.symscape.com/taxonomy/term/56/0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Ideas</title>
+    <link>https://www.symscape.com/taxonomy/term/56/0</link>
+    <description></description>
+    <language>en</language>
+          <item>
+    <title>Dark background for easier localization of small entities</title>
+    <link>https://www.symscape.com/node/1496</link>
+    <description>&lt;p&gt;I have trouble locating small entities like slivers when I debug my mesh.&lt;/p&gt;
+&lt;p&gt;Perhaps it would be easer to see a small bright spot on a dark background?&lt;/p&gt;
+&lt;p&gt;Now I struggle seeing small dark faces or lines on white background when I try to pinpoint what is making trouble in my mesh.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1496#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Sat, 31 May 2014 14:43:21 +0000</pubDate>
+ <dc:creator>Perbear</dc:creator>
+ <guid isPermaLink="false">1496 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Keyboard shortcuts for view orientation</title>
+    <link>https://www.symscape.com/node/1393</link>
+    <description>&lt;p&gt;When making 3D geometry it is nice to go directly to views parallel to X, Y or Z axis to verify that the position is correct. I do this very often in my 3D CAD software. I use these six shortcuts all the time to select the X, Y or Z axes and the direction plus a FIT ALL IN VIEW:&lt;/p&gt;
+&lt;p&gt;CTRL+T = Top view&lt;br /&gt;
+CTRL+B = Bottom view&lt;br /&gt;
+CTRL+L = Left view&lt;br /&gt;
+CTRL+R = Right view&lt;br /&gt;
+CTRL+F = Front View&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1393&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1393#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Wed, 03 Jul 2013 09:58:39 +0000</pubDate>
+ <dc:creator>Perbear</dc:creator>
+ <guid isPermaLink="false">1393 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Support use of comma as decimal mark</title>
+    <link>https://www.symscape.com/node/1391</link>
+    <description>&lt;p&gt;Caedium is great software but improvements can still be made on the user interface side.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1391&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1391#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Mon, 01 Jul 2013 11:05:21 +0000</pubDate>
+ <dc:creator>Perbear</dc:creator>
+ <guid isPermaLink="false">1391 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Identify drop down selections in property fields</title>
+    <link>https://www.symscape.com/node/1390</link>
+    <description>&lt;p&gt;Caedium ver 5 is very nice but I struggle sometimes with finding out which properties fields have predefined options.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1390#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Sun, 30 Jun 2013 22:54:43 +0000</pubDate>
+ <dc:creator>Perbear</dc:creator>
+ <guid isPermaLink="false">1390 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Transfering the code on GPU</title>
+    <link>https://www.symscape.com/node/1325</link>
+    <description>&lt;p&gt;Transfering the code on gpu , atleast the pressure poisson equation can save a lot of time.Pls send me any updates in this regard&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1325#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Sat, 08 Dec 2012 05:14:29 +0000</pubDate>
+ <dc:creator>mudassar247</dc:creator>
+ <guid isPermaLink="false">1325 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Caedium v4 and 3D mouse support</title>
+    <link>https://www.symscape.com/node/1245</link>
+    <description>&lt;p&gt;Is Caedium v4 supporting for 3Dconnexion 3D mouse? It would be a tremendous benefit in pre/post processing manual operations. Thanks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; &lt;a href=&quot;/node/1365&quot;&gt;Caedium v5&lt;/a&gt; on Windows has 3Dconnexion support.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1245#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Fri, 06 Jul 2012 10:07:11 +0000</pubDate>
+ <dc:creator>ALBERTO69</dc:creator>
+ <guid isPermaLink="false">1245 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Please add support for 3Dconnexion (spaceball, spacepilot etc) 3D mouse</title>
+    <link>https://www.symscape.com/node/1192</link>
+    <description>&lt;p&gt;Hi Symscape,&lt;/p&gt;
+&lt;p&gt;In my view your CFD offering including tutorials give excellent value for money and really lowers the bar for us CFD newcomers. Your GUI gives OPENfoam what it really needs - a much more userfriendly environment including intuitive preprocessing, thanks!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1192&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1192#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Mon, 27 Feb 2012 20:59:27 +0000</pubDate>
+ <dc:creator>Perbear</dc:creator>
+ <guid isPermaLink="false">1192 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>SpaceClaim and Caedium together?</title>
+    <link>https://www.symscape.com/node/1141</link>
+    <description>&lt;p&gt;I&#039;m a SpaceClaim user and a Caedium newbye: it would be great to have them in bundle with a full integration!&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1141#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Thu, 22 Sep 2011 16:59:07 +0000</pubDate>
+ <dc:creator>CAEdevice</dc:creator>
+ <guid isPermaLink="false">1141 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>few ideas</title>
+    <link>https://www.symscape.com/node/1093</link>
+    <description>&lt;p&gt;Hej Guys,&lt;/p&gt;
+&lt;p&gt;Awesome software, incredible display, however I wasnt able to do one simulation because:&lt;br /&gt;
+is there a way to move, rotate, scale objects? I coulndt find it...&lt;br /&gt;
+My test wing always landed outside of the simulation volume..&lt;/p&gt;
+&lt;p&gt;idea:&lt;br /&gt;
+better hireachy sytem, every object should have separate trees etc.&lt;br /&gt;
+Maybe just look into some general 3d app, 3dsmax, or cinema4d and take that system.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1093&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1093#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Tue, 17 May 2011 20:39:51 +0000</pubDate>
+ <dc:creator>losbellos</dc:creator>
+ <guid isPermaLink="false">1093 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Scripting Language for Caedium</title>
+    <link>https://www.symscape.com/node/1077</link>
+    <description>&lt;p&gt;The addition of a scripting language to Caedium would add tremendous functionality and ease of use. Many major CAE codes such as Abaqus (Python), FLUENT (Text Menu System) and STAR-CCM+ (Java) use scripting in conjunction with journal files created during an interactive session.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1077&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1077#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Fri, 01 Apr 2011 13:23:14 +0000</pubDate>
+ <dc:creator>rbgordonus</dc:creator>
+ <guid isPermaLink="false">1077 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>On-Demand HPC for Caedium Users</title>
+    <link>https://www.symscape.com/node/1076</link>
+    <description>&lt;p&gt;It seems a natural extension for Symscape would be to offer on-demand HPC services to Caedium users. Others (e.g., &lt;a href=&quot;http://www.sabalcore.com&quot; title=&quot;www.sabalcore.com&quot;&gt;www.sabalcore.com&lt;/a&gt;) now offer compute time on HPC platforms, but having this available through Symscape would assure that software related issues would be minimal and that the focus would be on Caedium users.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1076&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1076#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Fri, 01 Apr 2011 12:53:48 +0000</pubDate>
+ <dc:creator>rbgordonus</dc:creator>
+ <guid isPermaLink="false">1076 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>cygwin / bash environment setup</title>
+    <link>https://www.symscape.com/node/1050</link>
+    <description>&lt;p&gt;It would be nice if OpenFlow shipped with environment variable scripts for cygwin bash as well as the existing .bat files for cmd... the windows command shell is a real hog if you&#039;re used to something more capable. Here&#039;s what I&#039;m using:  &lt;/p&gt;
+&lt;p&gt;export WM_PROJECT_DIR=`cygpath -d &quot;C:\Program Files\OpenFlow-4&quot;`&lt;br /&gt;
+export WM_PROJECT_DIR_=`cygpath -u &quot;$WM_PROJECT_DIR&quot;`&lt;/p&gt;
+&lt;p&gt;export USERNAME=openflow&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1050&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1050#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Sat, 26 Feb 2011 11:08:11 +0000</pubDate>
+ <dc:creator>yuri</dc:creator>
+ <guid isPermaLink="false">1050 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>scripting</title>
+    <link>https://www.symscape.com/node/1036</link>
+    <description>&lt;p&gt;It would be a great idea to add scripting support.  In this way it would easier to setup cases that requires repetitive inputs and also it would be possible to run parametric studies.&lt;/p&gt;
+&lt;p&gt;joe&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; &lt;a href=&quot;/node/1365&quot;&gt;Caedium v5&lt;/a&gt; has Python scripting.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1036#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Sat, 22 Jan 2011 17:24:36 +0000</pubDate>
+ <dc:creator>joegi</dc:creator>
+ <guid isPermaLink="false">1036 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Surface and wake flowfield data</title>
+    <link>https://www.symscape.com/node/1024</link>
+    <description>&lt;p&gt;It would be a good idea to add surface and wake flow-field data for the panel solver.  Also, on-body and off-body streamline trajectories would be a good addition.&lt;/p&gt;
+&lt;p&gt;Joel&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1024#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Tue, 11 Jan 2011 13:26:35 +0000</pubDate>
+ <dc:creator>joegi</dc:creator>
+ <guid isPermaLink="false">1024 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>user defined arbitrary motion and VTK format support for panel flow solver</title>
+    <link>https://www.symscape.com/node/1020</link>
+    <description>&lt;p&gt;Hi,&lt;/p&gt;
+&lt;p&gt;I think it would be a good idea to add support for arbitrary motions for the panel flow solver.&lt;br /&gt;
+Also it could be a good addition to add  support to export the solution files to vtk or tecplot format.&lt;/p&gt;
+&lt;p&gt;Joel&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1020#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/56">Ideas</category>
+ <pubDate>Fri, 07 Jan 2011 16:48:36 +0000</pubDate>
+ <dc:creator>joegi</dc:creator>
+ <guid isPermaLink="false">1020 at https://www.symscape.com</guid>
+  </item>
+  </channel>
+</rss>

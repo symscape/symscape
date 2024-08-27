@@ -1,0 +1,493 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/819 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Transonic Flow Over the NACA 0012 Airfoil | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="816.html" />
+<link rel="up" href="817.html" />
+<link rel="next" href="831.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-819 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="817.html">RANS Flow</a></div>                  <h1 class="title">Transonic Flow Over the NACA 0012 Airfoil</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-819" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Alison Findon on May 27, 2013 - 13:00        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Simulate a steady-state, transonic (compressible) turbulent flow around the NACA 0012 airfoil in pseudo 2D. View pressure coefficient (Cp) contours and the Cp distribution over the airfoil surface.</p>
+<p><img alt="Final State" src="../files/tutorials/transnaca12/finalstate.png" width="484" height="363" /> </p>
+<p>The original mesh and conditions for this case were provided by <a href="https://home.aero.polimi.it/freecase/?OpenFOAM_%2B_Code_Aster:Aerodynamic_problems:NACA_0012_airfoil">FreeCASE</a>.</p>
+<p class="note">The FreeCASE mesh is optimized for an inviscid (viscosity free) flow simulation, so it has no cells clustered close to the airfoil to resolve the viscous boundary layer. Hence, using the mesh in this tutorial is to aid understanding of how to import a mesh and configure a transonic flow simulation with Caedium, rather than to produce a definitive viscous result.</p>
+<h3>Goals</h3>
+<p>In this tutorial, you will learn how to:</p>
+<ul>
+<li>Import a mesh file into Caedium </li>
+<li>Specify fluid conditions on a <strong>single volume</strong> for a compressible, steady-state, turbulent flow simulation </li>
+<li>Change the turbulence model</li>
+<li>Set relaxation factors</li>
+<li>Specify boundary conditions on faces </li>
+<li>Monitor residuals to determine flow simulation convergence </li>
+<li>Generate a color map (contours) </li>
+<li>Create an XY plot </li>
+</ul>
+<h3>Assumptions</h3>
+<ol>
+<li>You have <a href="15.html">activated</a> the <a href="../product/rans.html">Caedium RANS Flow</a> add-on, or <a href="../product/professional.html">Caedium Professional</a>. </li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>. </li>
+<li>You have downloaded and extracted the FLUENT mesh file naca0012.msh from <a href="../files/tutorials/transnaca12/naca0012.zip">naca0012.zip (292 KB)</a>.</li>
+</ol>
+<h2 class="tutorial-heading">Import the FLUENT Mesh File into Caedium</h2>
+<p>Select the <strong>File</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> and click the <strong>Import</strong> button <img alt="" src="../files/tutorials/shared/import.png" />. Select <strong>Geometry</strong> as the file type and navigate to the location of the naca0012.msh file you downloaded. Double-click on <strong>naca00012.msh</strong> to import the NACA 0012 mesh into Caedium.</p>
+<p>To see the mesh outline (edges), rotate (left-click-and-drag the mouse) and zoom (rotate the mouse wheel) the view in the <a href="../tutorials/essentials.html#viewwindow">View Window</a> until the airfoil is in the approximate orientation shown below.</p>
+<p><img alt="Imported Mesh" src="../files/tutorials/transnaca12/importedmesh.png" width="484" height="363" /></p>
+<p>Once the <a href="244.html">mesh</a> is within Caedium it is treated as geometry, which means that the procedure for setting up the physics and extracting the results is no different to that for native geometry created in Caedium. The <a href="532.html">&quot;View a Mesh&quot;</a> tip describes how to see the mesh directly.</p>
+<p>The mesh for this tutorial is specially configured to be one cell thick so you can perform a pseudo 2D simulation.</p>
+<h2 class="tutorial-heading">Specify the Substance Settings</h2>
+<h3>Specify the Fluid Conditions</h3>
+<p>Select the <strong>Physics</strong> <a href="../tutorials/essentials.html#toolpalette">Tool Palette</a>. Select <strong>Gases-&gt;Air</strong>. The Properties Panel will show the default properties for air. To enable steady-state turbulent (viscous) flow the <strong>State-&gt;Rotational</strong> and <strong>State-&gt;Viscous</strong> properties should be set to <strong>Yes</strong> (their default values). The <strong>State-&gt;Species</strong> and <strong>State-&gt;Transient</strong> properties should to be set to <strong>No</strong> (their default values).</p>
+<p>For transonic (compressible) flow, set <strong>State-&gt;Compressible</strong> to <strong>Transonic</strong> and <strong>State-&gt;Heat Transfer</strong> to <strong>Yes</strong>.</p>
+<p><img alt="Air Properties" src="../files/tutorials/transnaca12/airproperties.png" width="286" height="602" /></p>
+<p>Drag and drop the <strong>Air</strong> tool onto the View Window background, double-click  <strong>sim-&gt;Volumes</strong> in the <strong>Select</strong> dialog, and then select <strong>Done</strong> to set air as the fluid inside the flow volume.</p>
+<h3>Set the Turbulence Model for the Simulation</h3>
+<p class="note">For turbulent flow, a turbulence model is an essential part of a <a href="../reynolds-averaged-navier-stokes-equations.html">Reynolds-Averaged Navier-Stokes (RANS)</a> solver. In this tutorial, you will use the <a href="http://www.cfd-online.com/Wiki/K-epsilon_models">k-epsilon turbulence model</a> rather than the default <a href="http://www.cfd-online.com/Wiki/SST_k-omega_model">SST k-omega turbulence model</a>.</p>
+<p>With the volume already selected from the previous step, the Properties Panel will show the <strong>Substance: Air</strong> properties by default. Expand the <strong>Substance: Air-&gt;Solver: RANS Flow</strong> property and set the <strong>Turbulence Model</strong> to be <strong>k-epsilon</strong>.</p>
+<p><img alt="Turbulence Model" src="../files/tutorials/transnaca12/turbprops.png" width="341" height="300" /></p>
+<h3>Set the Reference Values for the Simulation</h3>
+<p>The reference values can be used to initialize the simulation and to specify boundary conditions. In this tutorial you will set reference values for velocity, pressure, and temperature.</p>
+<p>The conditions for this case are:</p>
+<ul>
+<li>T (temperature) = 260 K = -13.15 C </li>
+<li>p (pressure) = 85419 Pa = 85419 N.m<sup>-2</sup> </li>
+<li>U (velocity) = [241.8220 16.9098 0] m.s<sup>-1</sup>, from:
+<ul>
+<li>Alpha (angle of attack) = 4 degrees = [cos 4, sin 4, 0] = [0.9976 0.06976 0] </li>
+<li>Mach No. = 0.75 = 242.41 m.s<sup>-1</sup>. See <a href="../mach-number.html">&quot;Mach Number&quot;</a> for conversion calculation using:
+<ul>
+<li>gamma = 1.4 </li>
+<li>R = 8.314472 J·K<sup>-1</sup>·mol<sup>-1</sup> </li>
+<li>W = 0.02897 Kg·mol<sup>-1</sup> </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>In the Properties Panel set <strong>Substance: Air-&gt;Properties-&gt;Phase: Single-&gt;Reference-&gt;T: Fixed Value-&gt;Value</strong> to be <strong>-13.15</strong>. Next set <strong>U: Fixed Value-&gt;Value</strong> to be [<strong>241.8220 16.9098 0</strong>]. Finally set <strong>p</strong> to be <strong>85419</strong> and press Enter on the keyboard.</p>
+<p><img alt="Reference Properties" src="../files/tutorials/transnaca12/referenceproperties.png" width="317" height="377" /></p>
+<h3>Set the Relaxation Factors for the Simulation</h3>
+<p class="note">Changing the default enthalpy relaxation factor in this example will help the simulation to converge.  See <a href="934.html">"Relaxation Factors in RANS Flow Solvers"</a> for tips on setting relaxation factors.</p>
+<p>In the Properties Panel, expand the <strong>Substance: Air-&gt;Solver: RANS Flow-&gt;Relaxation Factors</strong> property, and then set <strong>e</strong> to be <strong>0.4</strong>.</p>
+<p><img alt="Relaxation Factors" src="../files/tutorials/transnaca12/relaxationfactors.png" width="316" height="293" /> </p>
+<h2 class="tutorial-heading">Specify the Boundary Conditions</h2>
+<p>Drag and drop the <strong>Faces-&gt;Wall</strong> tool onto an edge of the airfoil. Double-click <strong>wing </strong>in the <strong>Select</strong> dialog and select <strong>Done</strong> to create a wall.</p>
+<p class="note">A wall is a solid surface through which fluid cannot flow.</p>
+<p>In the <strong>Home</strong> Toolbar click the <strong>Fit-All</strong> button <img src="../files/tutorials/shared/fitall.png" alt="" /> to view the entire volume.</p>
+<p><img alt="Entire Volume" src="../files/tutorials/transnaca12/entirevolume.png" width="484" height="363" /></p>
+<p>Drag and drop the <strong>Faces-&gt;Inlet-Outlet</strong> tool onto the circular edge of the volume. Double-click <strong>outerboundary </strong>in the <strong>Select</strong> dialog and select <strong>Done</strong> to create an inlet-outlet.</p>
+<p class="note">By providing a one cell thick mesh and not creating any boundary conditions on the front and back faces the flow solver will perform a pseudo 2D flow simulation.</p>
+<h2 class="tutorial-heading">Display Initial Pressure Coefficient Color Map</h2>
+<p>Select the <strong>Results</strong> Tool Palette. Drag and drop the <strong>Scalar Fields-&gt;Cp</strong> (pressure coefficient) tool onto the wing edge closest to your view point in the View Window. Double-click <strong>front</strong> in the <strong>Select</strong> dialog and select <strong>Color Map</strong> to create contours of pressure coefficient.</p>
+<p><img alt="Cp Colormap" src="../files/tutorials/transnaca12/cpcolormap.png" width="484" height="363" /></p>
+<p>Since the initial Cp value is 0 everywhere, no contours will be shown until the the simulation is run.</p>
+<h2 class="tutorial-heading">Display Initial Pressure Coefficient Plot</h2>
+<p>Drag and drop the <strong>Scalar Fields-&gt;Cp</strong> (pressure coefficient) tool onto the same wing edge as in the previous section. Double-click <strong>edge_3 </strong>in the <strong>Select</strong> dialog and select <strong>XY Plot</strong> to create a Cp plot against XYZ:X (X-position).</p>
+<p>In the Properties Panel expand the <strong>Y Axis: Cp</strong> property and turn on the <strong>Reverse</strong> property.</p>
+<p><img alt="Reverse Property" src="../files/tutorials/transnaca12/reverseproperty.png" width="237" height="245" /></p>
+<p class="note">When presenting Cp plots it is typical to reverse the Cp axis values.</p>
+<p>In the <strong>Cp Plot</strong> Legend select <strong>edge_3</strong> and in the Properties Panel set <strong>Symbol</strong> to <strong>None</strong>.</p>
+<p><img alt="Symbol Property" src="../files/tutorials/transnaca12/symbolproperty.png" width="237" height="246" /></p>
+<p>Drag and drop the <strong>Cp Plot </strong>tab over to the right-hand edge of the Caedium application window to split the window into two parts as shown below.</p>
+<p><img alt="Cp Plot" src="../files/tutorials/transnaca12/cpplot.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Create Residuals Monitor</h2>
+<p>Drag and drop the <strong>Special-&gt;Residuals</strong> tool onto an edge of the flow volume. Double-click <strong>volume</strong> in the <strong>Select</strong> dialog and select <strong>Monitor</strong> to create the residuals monitor.</p>
+<p>In the Properties Panel expand the <strong>X Axis: Iteration</strong> property and set <strong>Major Ticks</strong> to <strong>3</strong>.</p>
+<p><img alt="Major Tick Property" src="../files/tutorials/transnaca12/majortickproperty.png" width="240" height="248" /></p>
+<p>Drag and drop the <strong>Residuals</strong> tab over to the right-hand edge of the Caedium application window to split the window into three parts as shown below.</p>
+<p><img alt="Residuals Monitor" src="../files/tutorials/transnaca12/residualsplot.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Run the Flow Solver</h2>
+<p class="note">The number of flow (simulation) solver iterations is determined by multiplying the number of simulation time-steps (default = 5) by the number of iterations per simulation time-step (default = 100). After each simulation time-step (equivalent to 100 iterations by default) the results will be refreshed.</p>
+<p>For this simulation you will increase the number of simulation time-steps to 30, for a total of 3000 iterations.</p>
+<p>Right-click on the View Window (<strong>view</strong>) background, double-click <strong>sim</strong>, and then select <strong>Properties</strong> from the menu. Select the Simulation tab <img alt="" src="../files/tutorials/shared/simulation-tab.png" /> in the Properties Panel. Set <strong>Time-&gt;Duration</strong> to <strong>30</strong> and press Enter on the keyboard.</p>
+<p><img alt="Duration Property" src="../files/tutorials/transnaca12/durationproperty.png" width="226" height="245" /></p>
+<p>In the <strong>Home</strong> Toolbar click the <strong>Run</strong> button <img alt="" src="../files/tutorials/shared/play.png" /> to run the flow solver.</p>
+<p class="note">If you wanted to interrupt the flow solver, you would re-click the Run button; the solver would then stop at the end of the current simulation time-step.</p>
+<p>Let the solver complete its run. Note the updates of the Cp contours, the Cp plot, and the residuals monitor as the simulation progresses.</p>
+<p><img alt="Final State" src="../files/tutorials/transnaca12/finalstate.png" width="484" height="363" /></p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="816.html" class="page-previous" title="Go to previous page">‹ Incompressible Transient Flow with Heat Transfer</a>
+                    <a href="817.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="831.html" class="page-next" title="Go to next page">Flow Over a Rotating Wheel with Moving Ground ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-730"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="819.html#comment-730" class="active">2D Models?</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Charles Bennett (not verified) on November 9, 2010 - 18:40.  </div>
+
+  <div class="content">
+    <p>This airfoil simulation is very nice.<br />
+Is it possible with Caedium to produce native 2D simulations without importing an externally generated special mesh?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-731"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="819.html#comment-731" class="active">3D Only</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on November 9, 2010 - 20:06.  </div>
+
+  <div class="content">
+    <p>No Caedium can not produce these special one cell thick (extruded) meshes yet.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1406"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="819.html#comment-1406" class="active">One-cell-thick meshes</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Ricky (not verified) on April 10, 2012 - 02:18.  </div>
+
+  <div class="content">
+    <p>Is it possible to do this for another airfoil yet? The last time this was asked was over a year ago so I'm hoping it is :)</p>
+<p>If not, is there a way to produce something similar? I have a two-element rear wing (2 upside-down airfoils) for a race car and wish to do a simple 2D pressure analysis followed by a more indepth 3D analysis.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1408"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="819.html#comment-1408" class="active">Extrude 2D to 3D</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on April 10, 2012 - 09:16.  </div>
+
+  <div class="content">
+    <p>If you create a multi-block mesh constrained with each block having 6 faces for the hexahedral meshing routines then yes you can create a one cell thick mesh. However, the decomposition for a 2-element airfoil would be very tricky.</p>
+<p>I think your best option is to create a 3D airfoil, just extrude the 2D profiles and perform a 3D simulation.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1409"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="819.html#comment-1409" class="active">Thank you, I&#039;ll just stick</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Ricky (not verified) on April 10, 2012 - 16:26.  </div>
+
+  <div class="content">
+    <p>Thank you, I'll just stick with the extruded 3D airfoil :)</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1462"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="819.html#comment-1462" class="active">Is there a way to change the</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on May 23, 2012 - 11:03.  </div>
+
+  <div class="content">
+    <p>Is there a way to change the number of contour lines on the pressure plot on the aerofoil?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1463"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="819.html#comment-1463" class="active">Left click Color Map in Legend Control</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 23, 2012 - 11:17.  </div>
+
+  <div class="content">
+    <p>Left click the <strong>Color Map</strong> title in the Legend Control, and then in the Properties Panel change the <strong>Colors</strong> property. For more details see the tip <a href="779.html">"Color Map"</a>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1468"></a>
+<div class="comment comment-published last even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="819.html#comment-1468" class="active">Thanks, that works</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on June 8, 2012 - 18:07.  </div>
+
+  <div class="content">
+    <p>Thanks, that works</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="expanded active-trail"><a href="817.html">RANS Flow</a><ul class="menu"><li class="leaf first"><a href="818.html">Incompressible Flow Through a Pipe into a Box</a></li>
+<li class="leaf"><a href="816.html">Incompressible Transient Flow with Heat Transfer</a></li>
+<li class="leaf active-trail"><a href="819.html" class="active">Transonic Flow Over the NACA 0012 Airfoil</a></li>
+<li class="leaf"><a href="831.html">Flow Over a Rotating Wheel with Moving Ground</a></li>
+<li class="leaf"><a href="1082.html">Flow Over a CO2 Dragster</a></li>
+<li class="leaf"><a href="1255.html">Rotating Paddle using Moving Reference Frame</a></li>
+<li class="leaf"><a href="1257.html">Transient Water and Air Flow in a Tank</a></li>
+<li class="leaf"><a href="1718.html">Conjugate Heat Transfer for a Heat Sink</a></li>
+<li class="leaf last"><a href="1281.html">Flow Over a Double-Sided Membrane</a></li>
+</ul></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="collapsed last"><a href="../tips.html">Tips</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/819 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:22 GMT -->
+</html>

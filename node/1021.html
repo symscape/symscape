@@ -1,0 +1,396 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1021 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:26:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Caedium crashes when attempting to use Force Monitors on a *.stp file | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-forum page-node-1021 section-node one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../forum.html">Forums</a> › <a href="../forum/57.html">Problems</a></div>                  <h1 class="title">Caedium crashes when attempting to use Force Monitors on a *.stp file</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1021" class="node node-type-forum clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by malteahrens on January 8, 2011 - 11:27        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_57 first last"><a href="../forum/57.html" rel="tag" title="Report product problems (e.g., Caedium bugs). View Ratings">Problems</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>Over the past days I have been trying to run CAE simulations on a file generated in CATIA. I have been exporting the file from CATIA as a *.stp file and then importing it into Caedium. Applying the Velocity (U) vector field to the object works, but when seeking to apply a Vector Variable Monitor like Force (F), Caedium crashes (see <a href="https://cid-a45fe702de180b23.office.live.com/browse.aspx/Public/Engineering/Caedium STP Issues" title="https://cid-a45fe702de180b23.office.live.com/browse.aspx/Public/Engineering/Caedium%20STP%20Issues">https://cid-a45fe702de180b23.office.live.com/browse.aspx/Public/Engineer...</a> for a screenshot, Windows' Debug output, and a sample *.stp file generated by CATIA that fails in Caedium). </p>
+<p>Here's what I did in Caedium (brief):<br />
+1. Import file<br />
+2. Apply the volume substance (air) to the outer box / volume<br />
+3. Change all the fluid conditions as in the "Flow over a rotating wheel..." tutorial<br />
+4. Apply the wall condition to all the faces of volume<br />
+5. Add an inlet &amp; outlet (on opposite sides) to 2 of the faces of volume<br />
+6. Add a linear velocity to the "ground" face of volume<br />
+7. Apply Accuracy:High to the faces of the inner box / volume_1<br />
+8. Attempt to add a Force Monitory of "Vector Variables":F</p>
+<p>This only seems to apply to CATIA's exported files, as, for example, I am able to complete the "Flow Over a Rotating Wheel with Moving Ground" tutorial, using its *.brep file, without any problems (this includes Force Monitors). </p>
+<p>Any help would be appreciated.</p>
+<p>Malte</p>
+<p><strong>Edit:</strong> This is fixed in <a href="1143.html">Caedium v3.0.2</a>.</p>
+  <div class="forum-topic-navigation clear-block">
+          <a href="1028.html" class="topic-previous" title="Go to previous forum topic">‹ STL-&gt;SolidWorks-&gt;IGES-&gt;Caedium = Slow</a>
+              <a href="1009.html" class="topic-next" title="Go to next forum topic">Mac NVIDIA GeForce 9400 Memory Leak ›</a>
+      </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+  
+  <a id="comment-818"></a>
+<div class="comment comment-published first odd clearfix">
+  
+      <h3 class="title">
+      <a href="1021.html#comment-818" class="active">Confirmed bug, but you don&#039;t have a single volume</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on January 8, 2011 - 12:49.  </div>
+
+  <div class="content">
+    <p>Thanks for the files and the bug report with which I've been able to reproduce the crash you are seeing. The next version of Caedium will include a fix for this problem.</p>
+<p>However, the inner box is not part of your simulation. You need to subtract the inner box from the outer box to form a single flow volume. As things are you are asking for the fluid force on a surface that isn't part of a simulation and that's causing the crash.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-821"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1021.html#comment-821" class="active">Now have a single volume (working), but getting RANS Flow failed</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by malteahrens on January 9, 2011 - 12:19.  </div>
+
+  <div class="content">
+    <p>Ah, that makes sense. Thanks for the help. Updating that part in CATIA and bringing it back into Caedium worked!</p>
+<p>So, I have begun moving to "slightly more advanced" shapes, trying to emulate the 'wheel in a box' shape from the "Flow over a rotating wheel..." tutorial. I am able to insert it (my CATIA version of it, see: <a href="https://cid-a45fe702de180b23.office.live.com/self.aspx/Public/Engineering/Caedium STP Issues/Wheel %5E_on%5E_ the ground.stp" title="https://cid-a45fe702de180b23.office.live.com/self.aspx/Public/Engineering/Caedium%20STP%20Issues/Wheel%20%5E_on%5E_%20the%20ground.stp">https://cid-a45fe702de180b23.office.live.com/self.aspx/Public/Engineerin...</a> ) into Caedium, and run both Vector Variables and Vector Fields.</p>
+<p>However, when I apply a 'angular velocity' onto the 'wheel', as in the tutorial, and then run / 'play' the simluation, I get the following error:</p>
+<p>Warning:<br />
+RANS Flow failed<br />
+Assertion Failed.<br />
+Expression: is(UP_TO_DATE)<br />
+File: ..\..\..\trunk\src\of\ofcase.cpp<br />
+Line: 575</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-822"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="1021.html#comment-822" class="active">Possible Workaround</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on January 9, 2011 - 12:55.  </div>
+
+  <div class="content">
+    <p>Are you running the latest version of Caedium v2.4.2? To check - display the About Dialog using <strong>Help-&gt;About</strong>.</p>
+<p>I tried setting up a case with your geometry and it seemed to work fine, then I applied the Angular Velocity and I didn't see the error.</p>
+<p>As a workaround, try saving the project (.sym) and reverting (rereading it) using <strong>File-&gt;Revert</strong>. If you still see the error can you share this project so I can take a look?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-829"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1021.html#comment-829" class="active">&quot;Just&quot; seems to work</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by malteahrens on January 9, 2011 - 20:49.  </div>
+
+  <div class="content">
+    <p>Yes, I am running Caedium v.2.4.2. I did a revert on the solution and that did not work. However, when I created a new solution and did everything again, it just seemed to work and do the Angular Velocity fine without an error.</p>
+<p>This seems a bit strange, considering that I repeated (i.e. created a new solution with the same part and same settings to see if that would work) the simlulation yestereday at least 3 times during which it always returned that error, and now it is working, with no noticable difference in how I am creating the solution. But, at least it works!</p>
+<p>Thank you for your help!</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-830"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="1021.html#comment-830" class="active">Still lIke to take a look at project file</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on January 10, 2011 - 08:18.  </div>
+
+  <div class="content">
+    <p>Great to hear you are up and running, but if you have the Caedium project file (.sym) for the case with the error I'd still like to take a look - it sounds like a bug to me.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-837"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1021.html#comment-837" class="active">The link to the .sym file</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by malteahrens on January 10, 2011 - 11:55.  </div>
+
+  <div class="content">
+    <p>Sure, here is the link: <a href="https://cid-a45fe702de180b23.office.live.com/self.aspx/Public/Engineering/Caedium STP Issues/RANS Flow failed.sym" title="https://cid-a45fe702de180b23.office.live.com/self.aspx/Public/Engineering/Caedium%20STP%20Issues/RANS%20Flow%20failed.sym">https://cid-a45fe702de180b23.office.live.com/self.aspx/Public/Engineerin...</a></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-838"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="1021.html#comment-838" class="active">Animated Axes Causing Error</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on January 10, 2011 - 14:03.  </div>
+
+  <div class="content">
+    <p>Great thanks for that. I took a look and I see the problem. It's not really a bug, more of a unexpected side-effect that I've not explained very well.</p>
+<p>If you perform a transform when the Simulation Time isn't at the beginning (Time = 0) you are actually animating (moving with respect to time) the entity you transformed. So in your case you animated the rotation axes, so it  moved as the simulation progressed and this caused a condition update to trigger and throw off the RANS Flow solver resulting in the error you reported.</p>
+<p>If you don't want to animate the axes, which I presume you don't, and you are mid-way through a simulation (i.e., Time &gt; 0) you will need to:</p>
+<ul>
+<li>Click the <a href="969.html#lock">Lock button</a> on the <strong>Home</strong> toolbar - to disconnect the solver from the simulation time control</li>
+<li>Click the <strong>Start</strong> button on the toolbar - to return the simulation to t = 0</li>
+<li>Create and transform your geometry or axes</li>
+<li>Toggle the <strong>Lock</strong> button on the toolbar - to return to your original simulation time</li>
+<li>Resume the simulation</li>
+</ul>
+<p>I know it's the opposite of what you want, but it might help to see an <a href="740.html#comment-710">animation example</a> to help clarify why this <em>feature</em> is present.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-851"></a>
+<div class="comment comment-published last even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1021.html#comment-851" class="active">Of course! It makes sense now.</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by malteahrens on January 12, 2011 - 04:31.  </div>
+
+  <div class="content">
+    <p>That is very logical, thanks for the explanation (the animation helped!).</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div></div></div></div></div></div></div></div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1021 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:26:16 GMT -->
+</html>

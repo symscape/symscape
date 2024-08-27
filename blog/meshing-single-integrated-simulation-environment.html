@@ -1,0 +1,286 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/meshing-single-integrated-simulation-environment by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:17:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Meshing in a Single, Integrated Simulation Environment | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-meshing-single-integrated-simulation-environment section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">Meshing in a Single, Integrated Simulation Environment</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1607" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on November 25, 2015 - 09:27        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p><a href="../meshing.html">Meshing</a> in a <a href="../product/caedium.html">single, integrated simulation environment (e.g., Caedium)</a> for <a href="../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> is different, in a good way, from meshing in a dedicated mesh or post-processing tool. An integrated CFD simulation environment has the standard meshing tools, but in addition upstream you have a <a href="cfd-geometry-creation.html">full geometry engine</a> to create and modify geometry as needed, and downstream you can use the same meshing tools for visualization, such as seeds for streamlines and surfaces for results interpolation. You are not forced into a linear progression through the CFD simulation process, because often it requires multiple visits backwards and forwards (non-linear) through the tool chain to get to a final result. Also the visualization of mesh metrics (e.g., surface mesh quality) is identical to general flow field visualization (e.g., pressure), which minimizes the number of concepts you need to learn.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/integrated-sim-env/integrated-cfd-simulation-environment.png" alt="Single, Integrated CFD Simulation Environment" width="601" height="449" /><span class="caption"><strong>Single, Integrated CFD Simulation Environment</strong></span></span></p>
+<h3>Surface Meshing</h3>
+<p>Note that in the initial phase of the CFD simulation process we first focus on the surface mesh as it is relatively quick to generate. Interactive changes to the geometry and mesh constraints can be assessed in timely manner, whereas if we also had to generate a volume mesh with each change it would be a slow tedious process.</p>
+<p>The first thing to determine after importing or creating your flow volume (assuming you have taken care to ensure that it is a watertight manifold solid) is to see if the geometry is good enough for a flow simulation, the easiest way to do this is to surface mesh the entire model. Then visualize surface mesh quality metrics (e.g., edge-length ratio of actual to ideal elements) with the aim of identifying low-quality elements.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/integrated-sim-env/ahmed-35-initial-surface-mesh.png" alt="Initial Surface Mesh" width="600" height="409" /><span class="caption"><strong>Initial Surface Mesh</strong></span>Confirms valid surface geometry</span></p>
+<p>In Caedium the meshing process is driven by the request for results, so visualizing mesh quality metrics will also automatically create the mesh. The regions of low-quality elements will often cluster around geometry problems such as <a href="sliver-treatment-strategies-for-cfd.html">slivers</a>. At this point you can modify the geometry to remove such features and have the mesh regenerated on demand.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/integrated-sim-env/ahmed-35-refined-surface-mesh.png" alt="Refined Surface Mesh" width="600" height="409" /><span class="caption"><strong>Refined Surface Mesh</strong></span>Improved surface resolution due to mesh constraints</span></p>
+<p>Next you want to ensure you have adequate resolution of critical geometry and important flow regions using mesh sizing (<a href="how-to-control-your-cfd-mesh-in-caedium.html">Accuracy tool in Caedium</a>) constraints. Applying these constraints and observing their effect on the surface mesh is a time efficient way to progress towards your complete CFD simulation.</p>
+<h3>Volume Meshing</h3>
+<p>Typically creating a good volume mesh relies on a good surface mesh, hence the focus is first on the surface mesh. Also volume mesh creation can take a significant length of time to complete, so again making sure the surface mesh is good serves as a firm foundation for a good volume mesh without wasting precious time.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/integrated-sim-env/ahmed-35-volume-mesh.png" alt="Volume Mesh" width="600" height="409" /><span class="caption"><strong>Volume Mesh</strong></span>Slice showing individual volume elements</span></p>
+<p>The volume meshing process in Caedium is automatically triggered by visualizing a volume mesh quality metric (e.g., volume-ratio of actual element to ideal element). As with the surface mesh metric visualization, the goal is to identify the worst elements. If those low-quality elements are clustered in a certain region (e.g., between surfaces in close proximity) then it is an indication that you need to reduce the element size locally using mesh size constraints. If the lowest-quality elements are relatively few and randomly dispersed, then usually you can proceed to the next phase of the CFD simulation process.</p>
+<h3>Mesh Control Away From Flow Volume Surfaces</h3>
+<p>Occasionally you need to control the mesh sizing away from surfaces that define the flow volume. In this case you can create geometry that is independent of the flow volume in these regions of interest , e.g., in the wake behind a car. </p>
+<p><span class="inline inline-center"><img src="../files/pictures/integrated-sim-env/ahmed-35-refined-surface-mesh-source-volume.png" alt="Surface Mesh with Separate Volume Mesh Constraint" width="600" height="409" /><span class="caption"><strong>Surface Mesh with Separate Volume Mesh Constraint</strong></span></span></p>
+<p>You can then assign meshing constraints to the newly created geometry that targets the flow volume mesh.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/integrated-sim-env/ahmed-35-volume-mesh-source-volume.png" alt="Volume Mesh with Separate Volume Mesh Constraint" width="600" height="409" /><span class="caption"><strong>Volume Mesh with Separate Volume Mesh Constraint</strong></span></span></p>
+<h3>Streamlines</h3>
+<p>Streamlines are massless particle tracks that originate at points (seeds) and trace a path through a fluid while maintaining a trajectory parallel to the local velocity direction. In Caedium you simply mesh geometry or use existing mesh on geometry where the mesh nodes serve as seeds. </p>
+<p><span class="inline inline-center"><img src="../files/pictures/integrated-sim-env/ahmed-35-streamlines.png" alt="Streamlines Created From Separate Face" width="600" height="384" /><span class="caption"><strong>Streamlines Created From Separate Face</strong></span></span></p>
+<p>This approach eliminates the need for special post-processing artifacts for streamlines that are typically found in dedicated post-processing tools. Note that with an integrated CFD simulation environment you can re-use familiar concepts, in this case meshing, for ease of learning and efficiency of use.</p>
+<h3>Cutting Plane Contours</h3>
+<p>Another requirement for results visualization is to provide insight within a flow domain of the flow field (e.g., velocity magnitude) on an arbitrarily positioned surface, often referred to as a cutting plane. Caedium provides this feature by using a mesh on a geometry surface to interpolate results from the flow field for visualization as contours or vectors. This simple approach again makes use of the integrated CFD simulation environment to create geometry and control the mesh on it - concepts you are already familiar with.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/integrated-sim-env/ahmed-35-cutting-plane.png" alt="Contours Created on Separate Face" width="600" height="384" /><span class="caption"><strong>Contours Created on Separate Face</strong></span></span></p>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/meshing-single-integrated-simulation-environment by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:17:58 GMT -->
+</html>

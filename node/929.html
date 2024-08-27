@@ -1,0 +1,346 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/929 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Parallel Configuration | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="1174.html" />
+<link rel="up" href="../tips.html" />
+<link rel="next" href="984.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-929 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="../tips.html">Tips</a></div>                  <h1 class="title">Parallel Configuration</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-929" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on May 30, 2013 - 16:42        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Caedium's preferences control how the RANS Flow CFD solvers perform parallel simulations, also know as High Performance Computing (HPC). When configured correctly the parallel preferences will lead to significantly reduced simulation turnaround times on multi-core computers and clusters.</p>
+<p>The parallel preferences are available when the <a href="../product/rans.html">RANS Flow</a> or <a href="../product/professional.html">Professional</a> Caedium add-ons are <a href="15.html">activated</a>.</p>
+<h3>Parallel Preferences</h3>
+<p>To view the parallel preferences, start Caedium, select the <strong>File</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a>, and click the <strong>Preferences</strong> button <img src="../files/tutorials/shared/preferences.png" />. In the Properties Panel open <strong>Physics-&gt;OpenFOAM-&gt;Parallel</strong>. The options for the Parallel preference are:</p>
+<ul>
+<li><strong>Shared Memory</strong> (default) - single computer with one or more cores </li>
+<li><strong>Cluster</strong> - multiple computers linked together in a cluster (For details see <a href="930.html">&quot;Microsoft Windows HPC Server 2008 Cluster Configuration&quot;</a>)</li>
+</ul>
+<p>Both parallel options provide two preferences to configure parallel simulations:</p>
+<ul>
+<li><strong>Elements Per Process</strong> (default = 1000) - Minimum number of elements per process </li>
+<li><strong>Processes</strong> (default = maximum number of system processes x 1/2) - Maximum number of parallel processes </li>
+</ul>
+<p><span class="inline inline-center"><br />
+<img title="Parallel Preferences" src="../files/tutorials/parallelprefs/parallelpreferences.png" alt="Parallel Preferences" width="330" height="313" /><br />
+<span class="caption"><strong>Parallel Preferences</strong></span></span></p>
+<h4>Elements Per Process</h4>
+<p>The Elements Per Process preference provides a minimum cell limit to ensure there are enough cells for each parallel process to warrant using parallel. If there are too few cells the simulation may actually run slower than a serial (non-parallel) simulation. During parallel simulations there are inter-process communication overheads that for small simulations can negate the speed-up due to running multi-processes.</p>
+<h4>Processes</h4>
+<p>The Processes preference provides a maximum limit on the number of processes to use for parallel simulations, once the Elements Per Process condition is satisfied. If you want to perform other tasks while a parallel simulation is running, then consider reducing the Processes preference to free up a process - otherwise you are likely to experience sluggish response.</p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="1174.html" class="page-previous" title="Go to previous page">‹ Multiple Volume Flow Domain</a>
+                    <a href="../tips.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="984.html" class="page-next" title="Go to next page">Particles or Streamlines ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-1270"></a>
+<div class="comment comment-published first odd clearfix">
+  
+      <h3 class="title">
+      <a href="929.html#comment-1270" class="active">Increase element per process</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Sauzer on December 28, 2011 - 07:43.  </div>
+
+  <div class="content">
+    <p>Hi, I have a pc with this configuration:<br />
+Intel i7 - Ram 16 GB - Windows 7 professional 64 bit</p>
+<p>I see that the cpu works at 12% and RAM at 14% during the simulations.<br />
+Do I need to set something in the software to use more cpu and ram?<br />
+(I followed this tip, the settings on my pc are these: Processes 7 - Element per process 10000;<br />
+I've increased element per process but i don't see changes).<br />
+Thank you</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1271"></a>
+<div class="comment comment-published last even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="929.html#comment-1271" class="active">Reduce the Elements Per Process to utilize more cores</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on December 28, 2011 - 10:01.  </div>
+
+  <div class="content">
+    <p>To increase the number of processors (cores) being used you need to decrease the <strong>Elements Per Process</strong> preference (try 1000). If you distribute a small case (low number of cells) among many processors the communication overhead can swamp any speedup resulting in a slow down.</p>
+<p>Also you want the <strong>Processors</strong> preference =  number of cores - 1. For your Intel i7 it appears to have 4 cores. However, on the Windows Task Manager it will show up as having twice as many cores (8) on the CPU Usage History monitor due to hyper threading. You are unlikely to see any significant speed up beyond the number of cores (4).</p>
+<p>To get a feel for the speedup you can achieve try varying the two preferences with the <strong>Physics-&gt;OpenFOAM-&gt;Diagnostics = On</strong> - at the end of each solver run there will be an elapsed time printed in the <strong>File-&gt;Log</strong>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="collapsed"><a href="817.html">RANS Flow</a></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="expanded last active-trail"><a href="../tips.html">Tips</a><ul class="menu"><li class="leaf first"><a href="723.html">Accuracy Tool</a></li>
+<li class="leaf"><a href="745.html">Clipping a View</a></li>
+<li class="leaf"><a href="1145.html">Cloud Burst Service</a></li>
+<li class="leaf"><a href="1144.html">Cloud Service</a></li>
+<li class="leaf"><a href="779.html">Color Map</a></li>
+<li class="leaf"><a href="411.html">Create an Anaglyph 3D Stereoscopic Image</a></li>
+<li class="leaf"><a href="1247.html">Import a SketchUp Model</a></li>
+<li class="leaf"><a href="838.html">Import an OpenFOAM Mesh</a></li>
+<li class="leaf"><a href="930.html">Microsoft Windows HPC Server 2008 Cluster Configuration</a></li>
+<li class="leaf"><a href="1578.html">Multiple Views</a></li>
+<li class="leaf"><a href="1174.html">Multiple Volume Flow Domain</a></li>
+<li class="leaf active-trail"><a href="929.html" class="active">Parallel Configuration</a></li>
+<li class="leaf"><a href="984.html">Particles or Streamlines</a></li>
+<li class="leaf"><a href="765.html">Punch a Hole in a Face</a></li>
+<li class="leaf"><a href="934.html">Relaxation Factors in RANS Flow Solvers</a></li>
+<li class="leaf"><a href="969.html">Run, Stop, and Lock Controls</a></li>
+<li class="leaf"><a href="836.html">Telemetry Posting to TwitPic and Twitter</a></li>
+<li class="leaf"><a href="1147.html">Topology Operations</a></li>
+<li class="leaf"><a href="766.html">Trim a Face</a></li>
+<li class="leaf"><a href="538.html">Use an Image as a Background</a></li>
+<li class="leaf"><a href="732.html">Using Fields and Variables</a></li>
+<li class="leaf"><a href="532.html">View a Mesh</a></li>
+<li class="leaf"><a href="669.html">Visual Facets Control</a></li>
+<li class="leaf"><a href="668.html">Visual Finish</a></li>
+<li class="leaf last"><a href="667.html">Visualization Preferences</a></li>
+</ul></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/929 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:47 GMT -->
+</html>

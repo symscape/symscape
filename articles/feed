@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.symscape.com/articles" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Articles</title>
+    <link>https://www.symscape.com/articles</link>
+    <description></description>
+    <language>en</language>
+          <item>
+    <title>OpenFOAM v3.0+ on Windows</title>
+    <link>https://www.symscape.com/openfoam-plus-v3-0-on-windows</link>
+    <description>&lt;p&gt;We have updated our free Windows source code patch for &lt;strong&gt;OpenFOAM&amp;reg; v3.0+&lt;/strong&gt; with support by BIM HVACTool (&lt;a href=&quot;http://www.building-engineering.de/&quot;&gt;Tian Building Engineering&lt;/a&gt;). This patch uses the &lt;strong&gt;MinGW-w64 cross-compiler&lt;/strong&gt; with the option for &lt;strong&gt;parallel&lt;/strong&gt; computation using the native Windows MS MPI implementation provided by the &lt;strong&gt;free Microsoft MPI Redistributable&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/openfoam-plus-v3-0-on-windows&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/openfoam-plus-v3-0-on-windows#comments</comments>
+ <category domain="https://www.symscape.com/articles">Articles</category>
+ <pubDate>Fri, 18 Aug 2017 20:28:13 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1703 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>How to Configure MS-MPI v8.1 for the MinGW-w64 Cross-Compiler</title>
+    <link>https://www.symscape.com/configure-msmpi-v8-1-for-mingw-w64</link>
+    <description>&lt;p&gt;Here you&#039;ll find the instructions on how to create &lt;strong&gt;libmsmpi.a&lt;/strong&gt; for the&lt;strong&gt; MinGW-w64 cross-compiler&lt;/strong&gt; to link against for &lt;strong&gt;MPI&lt;/strong&gt; applications, given the free MS-MPI Redistributable Package v8.1 and the MS-MPI SDK v8.1. Once configured with the msmpi library an MPI application can run in parallel on a multi-core Windows machine. Using the technique described here a modified version of &lt;a href=&quot;/openfoam-plus-v3-0-on-windows&quot;&gt;OpenFOAM for Windows&lt;/a&gt; was configured with native MPI support.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/configure-msmpi-v8-1-for-mingw-w64&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/configure-msmpi-v8-1-for-mingw-w64#comments</comments>
+ <category domain="https://www.symscape.com/articles">Articles</category>
+ <pubDate>Fri, 18 Aug 2017 20:24:38 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1704 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Computational Fluid Dynamics - CFD</title>
+    <link>https://www.symscape.com/computational-fluid-dynamics</link>
+    <description>&lt;h3&gt;What is Computational Fluid Dynamics?&lt;/h3&gt;
+&lt;p&gt;Computational Fluid Dynamics, also known as CFD, is the digital equivalent of a real world wind tunnel or flow bench. With CFD you can simulate the air flow around a racing car, the water flow through a heating system, and a whole host of other applications wherever a gas and/or liquid (including multiphase) flows. From your CFD simulation you can determine flow quantities, e.g., &lt;a href=&quot;/lift-force-and-drag-force&quot;&gt;lift, drag&lt;/a&gt;, pressure loss, velocity profiles, and pressure distributions, to help guide your design.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/wacky-cfd/wacky-uav-streamlines.png&quot; alt=&quot;CFD Simulation of an Unusual Drone Design&quot; width=&quot;600&quot; height=&quot;428&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;CFD Simulation of an Unusual Drone Design&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/computational-fluid-dynamics&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/computational-fluid-dynamics#comments</comments>
+ <category domain="https://www.symscape.com/articles">Articles</category>
+ <pubDate>Mon, 20 Feb 2017 21:15:00 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">277 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Meshing in Caedium</title>
+    <link>https://www.symscape.com/meshing</link>
+    <description>&lt;p&gt;Most &lt;a href=&quot;/computer-aided-engineering&quot;&gt;Computer-Aided Engineering (CAE)&lt;/a&gt; &lt;a href=&quot;/analysis-techniques&quot;&gt;analysis techniques&lt;/a&gt;, such as our &lt;a href=&quot;/product/rans&quot;&gt;RANS Flow add-on&lt;/a&gt;, require that the geometry be broken up into a &lt;a href=&quot;/node/244&quot;&gt;mesh or grid&lt;/a&gt; to perform a calculation.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/articles/meshing/tet_volume_grid.png&quot; alt=&quot;Volume Grid&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Volume Grid&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/meshing&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/meshing#comments</comments>
+ <category domain="https://www.symscape.com/articles">Articles</category>
+ <pubDate>Fri, 30 Oct 2015 13:48:52 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">306 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>GPU v1.1 Linear Solver Library for OpenFOAM</title>
+    <link>https://www.symscape.com/gpu-1-1-openfoam</link>
+    <description>&lt;p&gt;&lt;strong&gt;ofgpu v1.1&lt;/strong&gt; is the latest version of our free &lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;GPL&lt;/a&gt; library that provides GPU (sometimes referred to as &lt;a href=&quot;http://en.wikipedia.org/wiki/GPGPU&quot;&gt;GPGPU&lt;/a&gt;) linear solvers for &lt;strong&gt;OpenFOAM&amp;reg; v2.2.x&lt;/strong&gt;. The library targets NVIDIA CUDA devices on Windows, Linux, and (untested) Mac OS X. &lt;strong&gt;GPU acceleration&lt;/strong&gt; holds the promise of providing &lt;strong&gt;significant speed up&lt;/strong&gt; at relatively low cost and with &lt;strong&gt;low power consumption&lt;/strong&gt; compared to other alternatives. If you want to try our ofgpu library with OpenFOAM then we recommend that you use either a dedicated (i.e., not displaying graphics) high-performance NVIDIA graphics card or a &lt;a href=&quot;http://www.nvidia.com/object/tesla_computing_solutions.html&quot;&gt;Tesla card&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/articles/gpu11-openfoam/ofgpu-1-1.png&quot; alt=&quot;OpenFOAM on Windows using ofgpu&quot; width=&quot;500&quot; height=&quot;310&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;OpenFOAM on Windows using ofgpu&lt;/strong&gt;&lt;/span&gt;Hosted by Caedium Professional&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/gpu-1-1-openfoam&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/gpu-1-1-openfoam#comments</comments>
+ <category domain="https://www.symscape.com/articles">Articles</category>
+ <pubDate>Fri, 17 Jan 2014 18:10:25 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1445 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>OpenFOAM 2.2.x on Windows</title>
+    <link>https://www.symscape.com/openfoam-2-2-x-on-windows</link>
+    <description>&lt;p&gt;&lt;em&gt;For the &lt;strong&gt;latest version&lt;/strong&gt; of our Windows patch for OpenFOAM visit &lt;a href=&quot;/openfoam-plus-v3-0-on-windows&quot;&gt;&quot;OpenFOAM v3.0+ on Windows&quot;&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;We have updated our free Windows source code patch for the latest &lt;strong&gt;OpenFOAM&amp;reg; release (v2.2.x)&lt;/strong&gt;. As with the previous version this patch also supports &lt;strong&gt;64-bit&lt;/strong&gt; compilation using the &lt;strong&gt;MinGW-w64 cross-compiler&lt;/strong&gt; and &lt;strong&gt;parallel&lt;/strong&gt; computation using the native Windows MS MPI implementation provided by the &lt;strong&gt;free Microsoft MPI Redistributable&lt;/strong&gt; and also available on &lt;a href=&quot;http://www.microsoft.com/hpc&quot;&gt;Microsoft Windows HPC Server 2012&lt;/a&gt; for clusters.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/openfoam-2-2-x-on-windows&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/openfoam-2-2-x-on-windows#comments</comments>
+ <category domain="https://www.symscape.com/articles">Articles</category>
+ <pubDate>Fri, 17 Jan 2014 15:09:40 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1444 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Polyhedral, Tetrahedral, and Hexahedral Mesh Comparison</title>
+    <link>https://www.symscape.com/polyhedral-tetrahedral-hexahedral-mesh-comparison</link>
+    <description>&lt;p&gt;Are you wondering how a polyhedral (dual) mesh compares to the equivalent tetrahedral and hexahedral meshes? Then you&#039;re in the right place. This study compares the volume element count, convergence, accuracy, and runtimes of the three different types of meshes for a simple duct.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/articles/mesh-comparison/poly-surface-mesh.png&quot; width=&quot;500&quot; height=&quot;322&quot; alt=&quot;Polygon Surface Mesh&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Polygon Surface Mesh: &lt;/strong&gt;Backward facing step in a duct&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/polyhedral-tetrahedral-hexahedral-mesh-comparison&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/polyhedral-tetrahedral-hexahedral-mesh-comparison#comments</comments>
+ <category domain="https://www.symscape.com/articles">Articles</category>
+ <pubDate>Tue, 26 Feb 2013 01:40:29 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1347 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>GPU v1.0 Linear Solver Library for OpenFOAM</title>
+    <link>https://www.symscape.com/gpu-1-0-openfoam</link>
+    <description>&lt;p&gt;&lt;em&gt;For the &lt;strong&gt;latest version&lt;/strong&gt; of ofgpu for OpenFOAM visit &lt;a href=&quot;/gpu-1-1-openfoam&quot;&gt;&quot;GPU v1.1 Linear Solver Library for OpenFOAM&quot;&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ofgpu v1.0&lt;/strong&gt; is the latest version of our free &lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;GPL&lt;/a&gt; library that provides GPU (sometimes referred to as &lt;a href=&quot;http://en.wikipedia.org/wiki/GPGPU&quot;&gt;GPGPU&lt;/a&gt;) linear solvers for &lt;strong&gt;OpenFOAM&amp;reg; v2.1.x&lt;/strong&gt;. The library targets NVIDIA CUDA devices on Windows, Linux, and (untested) Mac OS X. &lt;strong&gt;GPU acceleration&lt;/strong&gt; holds the promise of providing &lt;strong&gt;significant speed up&lt;/strong&gt; at relatively low cost and with &lt;strong&gt;low power consumption&lt;/strong&gt; compared to other alternatives. If you want to try our ofgpu library with OpenFOAM then we recommend that you use either a dedicated (i.e., not displaying graphics) high-performance NVIDIA graphics card or a &lt;a href=&quot;http://www.nvidia.com/object/tesla_computing_solutions.html&quot;&gt;TESLA card&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/articles/gpu10-openfoam/ofgpu-1-0.png&quot; alt=&quot;ofgpu&quot; width=&quot;500&quot; height=&quot;326&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;OpenFOAM on Windows using ofgpu&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/gpu-1-0-openfoam&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/gpu-1-0-openfoam#comments</comments>
+ <category domain="https://www.symscape.com/articles">Articles</category>
+ <pubDate>Mon, 21 Jan 2013 20:20:40 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1338 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Steady-State or Unsteady CFD Simulation?</title>
+    <link>https://www.symscape.com/steady-state-or-unsteady-cfd-simulation</link>
+    <description>&lt;p&gt;&lt;cite&gt;&amp;quot;How do I know in advance whether to perform a steady-state or an unsteady CFD simulation?&amp;quot;&lt;/cite&gt; is a common question I get asked. The simple answer is, &lt;cite&gt;&amp;quot;you don&#039;t know&amp;quot;&lt;/cite&gt;, so I thought I would provide some help on when to use unsteady (also know as transient or time-dependent) simulations. I&#039;ll outline a process and tell-tale signs to help you make a guided decision.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;iframe width=&quot;480&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/4jgbkl_2ivY?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Unsteady Vortex Shedding Caedium CFD Simulation&lt;/strong&gt;&lt;/span&gt;Velocity contours (&lt;a href=&quot;https://youtu.be/4jgbkl_2ivY?hd=1&quot;&gt;high definition video&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/steady-state-or-unsteady-cfd-simulation&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/steady-state-or-unsteady-cfd-simulation#comments</comments>
+ <category domain="https://www.symscape.com/articles">Articles</category>
+ <pubDate>Tue, 11 Dec 2012 18:47:53 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1327 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>OpenFOAM 2.1.x on Windows 64-bit with MS MPI</title>
+    <link>https://www.symscape.com/openfoam-2-1-x-on-windows-64-mpi</link>
+    <description>&lt;p&gt;&lt;em&gt;For the &lt;strong&gt;latest version&lt;/strong&gt; of our Windows patch for OpenFOAM visit &lt;a href=&quot;/openfoam-2-2-x-on-windows&quot;&gt;&quot;OpenFOAM 2.2.x on Windows&quot;&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;We have updated our free Windows source code patch for the latest &lt;strong&gt;OpenFOAM&amp;reg; release (v2.1.x)&lt;/strong&gt;. As with the previous version this patch also supports &lt;strong&gt;64-bit&lt;/strong&gt; compilation using the &lt;strong&gt;MinGW-w64 cross-compiler&lt;/strong&gt; and &lt;strong&gt;parallel&lt;/strong&gt; computation using the native Windows MS MPI implementation provided by the &lt;strong&gt;free Microsoft MPI Redistributable&lt;/strong&gt; and also available on &lt;a href=&quot;http://www.microsoft.com/hpc&quot;&gt;Microsoft Windows HPC Server 2012&lt;/a&gt; for clusters.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/openfoam-2-1-x-on-windows-64-mpi&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/openfoam-2-1-x-on-windows-64-mpi#comments</comments>
+ <category domain="https://www.symscape.com/articles">Articles</category>
+ <pubDate>Wed, 18 Jan 2012 18:21:03 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1181 at https://www.symscape.com</guid>
+  </item>
+  </channel>
+</rss>

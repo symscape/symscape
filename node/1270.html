@@ -1,0 +1,626 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1270 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Problem with importing a 2millions cell geometry | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-forum page-node-1270 section-node one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../forum.html">Forums</a> › <a href="../forum/57.html">Problems</a></div>                  <h1 class="title">Problem with importing a 2millions cell geometry</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1270" class="node node-type-forum clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Samir on August 20, 2012 - 04:19        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_57 first last"><a href="../forum/57.html" rel="tag" title="Report product problems (e.g., Caedium bugs). View Ratings">Problems</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>Good day,</p>
+<p>I tried all the tutorials of Caedium with success, I imported also small mesh from Meshing ANSYS with success.<br />
+When I try to import any mesh with more than 2M cells, Caedium becomes very slow and crashes constantly.<br />
+I tried with different cases I had, and I had always this problem.</p>
+<p>Globally, I have this error, but the error line depends on the case I try but also vary for the same case. I respected while saving fluent case that it was in ASCII format.</p>
+<p>Importing: FLUENT cas[e]<br />
+Error:<br />
+Failed: Import Geometry<br />
+Unexpected process exit.</p>
+<p>--&gt; FOAM FATAL ERROR:<br />
+Do not understand characters: +<br />
+    on line 27572207</p>
+<p>    From function fluentMeshToFoam::lexer<br />
+    in file fluent3DMeshToFoam.L at line 753.</p>
+<p>FOAM exiting</p>
+<p>Does it mean that Caedium do not support such big geometry?</p>
+<p>Thank you for any answer you could give me.</p>
+  <div class="forum-topic-navigation clear-block">
+          <a href="1279.html" class="topic-previous" title="Go to previous forum topic">‹ Cluster Configuration</a>
+              <a href="1267.html" class="topic-next" title="Go to next forum topic">Error loading Caedium 4 on Linux ›</a>
+      </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+  
+  <a id="comment-1573"></a>
+<div class="comment comment-published first odd clearfix">
+  
+      <h3 class="title">
+      <a href="1270.html#comment-1573" class="active">Case size is only limited by RAM</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on August 20, 2012 - 08:11.  </div>
+
+  <div class="content">
+    <p>Caedium is fine with large cases/geometry as long as you have enough RAM in your computer. You likely need about 1 GB per 1M cells.</p>
+<p>Please share your computer specification, i.e., CPU, RAM etc.</p>
+<p>Which platform are you using? E.g., Windows</p>
+<p>Things to check:</p>
+<ul>
+<li>You are using the latest <a href="../product/downloads.html">Caedium 64-bit version</a></li>
+<li>The FLUENT case has standard elements, i.e., no arbitrary polyhedra and no hanging nodes</li>
+</ul>
+<p>Are you sure this case is of the order of 2M cells? The error you quoted relates to line 27,572,207 - that might suggest a much larger case, which has implications as to whether you have enough RAM.</p>
+<p>Please share the case so I can run some diagnostics. I suggest you use a file sharing service such as <a href="https://www.dropbox.com/">Dropbox</a> and use our <a href="../contact.html">contact form</a> to share the file's location.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1575"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1270.html#comment-1575" class="active">Thank you for your fast</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Samir on August 20, 2012 - 08:29.  </div>
+
+  <div class="content">
+    <p>Thank you for your fast reply.</p>
+<p>I am using WindowsServer HPC 2008 64 bits SP2 on an Intel Xeon CPU X5670 @2.93 GHZ with 48GB Ram.</p>
+<p>I am also using the latest version of Caedium, I've checked for updates.</p>
+<p>In the Fluent case, only standard elements are used. </p>
+<p>The case I exported from Fluent had around 2M cells, it was the smallest case I could find to test.</p>
+<p>I'm sorry, but I cannot share my case for confidential reasons.</p>
+<p>Could it be the complexity of the geometry? </p>
+<p>Thank you very much for your help.</p>
+<p>PS: It seems to me that the problem comes from OpenFOAM, no?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1576"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="1270.html#comment-1576" class="active">Appears to be an OpenFOAM filter issue</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on August 20, 2012 - 09:03.  </div>
+
+  <div class="content">
+    <p>It sounds like your computer has more than adequate resources.</p>
+<p>The error you quoted is from the OpenFOAM FLUENT import filter, so yes that is an OpenFOAM issue.</p>
+<p>It's unlikely that complexity is the source of the problem, unless the mesh is corrupt. Does it have multiple volumes zones? That might cause a problem, though I've never tried such a case.</p>
+<p>Did you write out the case from FLUENT on Windows? I ask because sometimes the line endings of cases written out on Linux and transferred to Windows can cause problems.</p>
+<p>Any cases that you share would be treated with the utmost confidentiality. Another option would be to create a large mesh for a simple case (e.g., a cube) in FLUENT and try importing that into Caedium.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1577"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1270.html#comment-1577" class="active">I created the Fluent case on</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Samir on August 20, 2012 - 09:23.  </div>
+
+  <div class="content">
+    <p>I created the Fluent case on the same machine, on windows.</p>
+<p>No it does not have multiple volumes zones.</p>
+<p>Thank you for the advice about the cube. I just made it three hours ago, natural convection with one face heated and with 2M cells , and it seems to work correctly with Caedium, it takes few minutes to import, but calculation run correctly and results are the results expected. </p>
+<p>I will check the geometry using OpenFOAM to see if the problems comes from it, and I'll keep you informed. For the confidentiality, the administration of my company do not approve it, sorry for that.</p>
+<p>Thank you again very much for your advices.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1579"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="1270.html#comment-1579" class="active">Another Thought</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on August 20, 2012 - 10:11.  </div>
+
+  <div class="content">
+    <p>Try switching on the OpenFOAM diagnostics in Caedium, if you haven't already:</p>
+<p><strong>File-&gt;Preferences, Physics-&gt;OpenFOAM-&gt;Diagnostics = true</strong></p>
+<p>There might be additional messages that can help identify the problem.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1580"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1270.html#comment-1580" class="active">Dimension of grid: 3Number</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Samir on August 21, 2012 - 07:25.  </div>
+
+  <div class="content">
+    <p>Dimension of grid: 3<br />
+Number of points: 4633130<br />
+Number of faces: 22938776<br />
+Number of cells: 9632188<br />
+PointGroup: 1 start: 556874 end: 4633129.  Reading points...done.<br />
+PointGroup: 5 start: 0 end: 556873.  Reading points...done.<br />
+FaceGroup: 49 start: 762368 end: 763615.  Reading uniform faces...done.<br />
+FaceGroup: 51 start: 763616 end: 764010.  Reading uniform faces...done.<br />
+FaceGroup: 52 start: 764011 end: 764953.  Reading uniform faces...done.<br />
+FaceGroup: 53 start: 764954 end: 765541.  Reading uniform faces...done.<br />
+FaceGroup: 54 start: 765542 end: 766129.  Reading uniform faces...done.<br />
+FaceGroup: 55 start: 766130 end: 766715.  Reading uniform faces...done.<br />
+FaceGroup: 56 start: 766716 end: 767307.  Reading uniform faces...done.<br />
+FaceGroup: 57 start: 767308 end: 767915.  Reading uniform faces...done.<br />
+FaceGroup: 58 start: 767916 end: 768510.  Reading uniform faces...done.<br />
+FaceGroup: 59 start: 768511 end: 768937.  Reading uniform faces...done.<br />
+FaceGroup: 60 start: 768938 end: 769364.  Reading uniform faces...done.<br />
+FaceGroup: 61 start: 769365 end: 769952.  Reading uniform faces...done.<br />
+FaceGroup: 62 start: 769953 end: 770540.  Reading uniform faces...done.<br />
+FaceGroup: 63 start: 770541 end: 771126.  Reading uniform faces...done.<br />
+FaceGroup: 64 start: 771127 end: 771718.  Reading uniform faces...done.<br />
+FaceGroup: 65 start: 771719 end: 772326.  Reading uniform faces...done.<br />
+FaceGroup: 66 start: 772327 end: 772921.  Reading uniform faces...done.<br />
+FaceGroup: 67 start: 772922 end: 773348.  Reading uniform faces...done.<br />
+FaceGroup: 68 start: 773349 end: 773775.  Reading uniform faces...done.<br />
+FaceGroup: 69 start: 773776 end: 774240.  Reading uniform faces...done.<br />
+FaceGroup: 70 start: 774241 end: 774705.  Reading uniform faces...done.<br />
+FaceGroup: 71 start: 774706 end: 775263.  Reading uniform faces...done.<br />
+FaceGroup: 86 start: 775264 end: 776759.  Reading uniform faces...done.<br />
+FaceGroup: 87 start: 776760 end: 778255.  Reading uniform faces...done.<br />
+FaceGroup: 88 start: 778256 end: 780433.  Reading uniform faces...done.<br />
+FaceGroup: 89 start: 780434 end: 782611.  Reading uniform faces...done.<br />
+FaceGroup: 91 start: 782612 end: 1497878.  Reading uniform faces...done.<br />
+FaceGroup: 100 start: 1497879 end: 1981491.  Reading mixed faces...done.<br />
+FaceGroup: 103 start: 1981492 end: 3603934.  Reading mixed faces...done.<br />
+FaceGroup: 104 start: 3603935 end: 15712227.  Reading mixed faces...done.<br />
+FaceGroup: 105 start: 15712228 end: 16558249.  Reading uniform faces...done.<br />
+FaceGroup: 106 start: 16558250 end: 16561529.  Reading uniform faces...done.<br />
+FaceGroup: 107 start: 16561530 end: 18049893.  Reading uniform faces...done.<br />
+FaceGroup: 108 start: 18049894 end: 19158776.  Reading uniform faces...done.<br />
+FaceGroup: 109 start: 19158777 end: 20530800.  Reading uniform faces...done.<br />
+FaceGroup: 110 start: 20530801 end: 22377916.  Reading uniform faces...done.<br />
+FaceGroup: 111 start: 22377917 end: 22739052.  Reading mixed faces...done.<br />
+FaceGroup: 112 start: 22739053 end: 22892770.  Reading uniform faces...done.<br />
+FaceGroup: 113 start: 22892771 end: 22908778.  Reading uniform faces...done.<br />
+FaceGroup: 114 start: 22908779 end: 22938775.  Reading uniform faces...done.<br />
+FaceGroup: 14 start: 0 end: 12575.  Reading uniform faces...done.<br />
+FaceGroup: 15 start: 12576 end: 13227.  Reading uniform faces...done.<br />
+FaceGroup: 16 start: 13228 end: 22053.  Reading uniform faces...done.<br />
+FaceGroup: 17 start: 22054 end: 24851.  Reading uniform faces...done.<br />
+FaceGroup: 18 start: 24852 end: 29309.  Reading uniform faces...done.<br />
+FaceGroup: 19 start: 29310 end: 29815.  Reading uniform faces...done.<br />
+FaceGroup: 20 start: 29816 end: 35891.  Reading uniform faces...done.<br />
+FaceGroup: 21 start: 35892 end: 36715.  Reading mixed faces...done.<br />
+FaceGroup: 22 start: 36716 end: 52074.  Reading uniform faces...done.<br />
+FaceGroup: 23 start: 52075 end: 59032.  Reading uniform faces...done.<br />
+FaceGroup: 24 start: 59033 end: 67588.  Reading uniform faces...done.<br />
+FaceGroup: 25 start: 67589 end: 75894.  Reading uniform faces...done.<br />
+FaceGroup: 26 start: 75895 end: 83008.  Reading uniform faces...done.<br />
+FaceGroup: 27 start: 83009 end: 88575.  Reading uniform faces...done.<br />
+FaceGroup: 28 start: 88576 end: 100325.  Reading uniform faces...done.<br />
+FaceGroup: 29 start: 100326 end: 103063.  Reading mixed faces...done.<br />
+FaceGroup: 30 start: 103064 end: 141003.  Reading uniform faces...done.<br />
+FaceGroup: 31 start: 141004 end: 144159.  Reading uniform faces...done.<br />
+FaceGroup: 32 start: 144160 end: 168961.  Reading uniform faces...done.<br />
+FaceGroup: 33 start: 168962 end: 170749.  Reading mixed faces...done.<br />
+FaceGroup: 34 start: 170750 end: 200621.  Reading mixed faces...done.<br />
+FaceGroup: 35 start: 200622 end: 253320.  Reading uniform faces...done.<br />
+FaceGroup: 36 start: 253321 end: 285437.  Reading uniform faces...done.<br />
+FaceGroup: 37 start: 285438 end: 315382.  Reading mixed faces...done.<br />
+FaceGroup: 38 start: 315383 end: 329192.  Reading mixed faces...done.<br />
+FaceGroup: 39 start: 329193 end: 343286.  Reading uniform faces...done.<br />
+FaceGroup: 40 start: 343287 end: 356694.  Reading uniform faces...done.<br />
+FaceGroup: 41 start: 356695 end: 371258.  Reading mixed faces...done.<br />
+FaceGroup: 42 start: 371259 end: 384799.  Reading uniform faces...done.<br />
+FaceGroup: 43 start: 384800 end: 390014.  Reading uniform faces...done.<br />
+FaceGroup: 44 start: 390015 end: 392014.  Reading uniform faces...done.<br />
+FaceGroup: 45 start: 392015 end: 400075.  Reading uniform faces...done.<br />
+FaceGroup: 46 start: 400076 end: 413491.  Reading uniform faces...done.<br />
+FaceGroup: 48 start: 413492 end: 421246.  Reading uniform faces...done.<br />
+FaceGroup: 50 start: 421247 end: 436261.  Reading uniform faces...done.<br />
+FaceGroup: 72 start: 436262 end: 483473.  Reading uniform faces...done.<br />
+FaceGroup: 73 start: 483474 end: 530905.  Reading uniform faces...done.<br />
+FaceGroup: 75 start: 530906 end: 582518.  Reading uniform faces...done.<br />
+FaceGroup: 76 start: 582519 end: 583414.  Reading uniform faces...done.<br />
+FaceGroup: 77 start: 583415 end: 584404.  Reading uniform faces...done.<br />
+FaceGroup: 78 start: 584405 end: 612056.  Reading uniform faces...done.<br />
+FaceGroup: 79 start: 612057 end: 625946.  Reading uniform faces...done.<br />
+FaceGroup: 80 start: 625947 end: 628982.  Reading uniform faces...done.<br />
+FaceGroup: 81 start: 628983 end: 636572.  Reading uniform faces...done.<br />
+FaceGroup: 82 start: 636573 end: 642182.  Reading uniform faces...done.<br />
+FaceGroup: 84 start: 642183 end: 647762.  Reading uniform faces...done.<br />
+FaceGroup: 85 start: 647763 end: 653416.  Reading uniform faces...done.<br />
+FaceGroup: 90 start: 653417 end: 653972.  Reading uniform faces...done.<br />
+FaceGroup: 92 start: 653973 end: 727678.  Reading mixed faces...done.<br />
+FaceGroup: 93 start: 727679 end: 728072.  Reading uniform faces...done.<br />
+FaceGroup: 94 start: 728073 end: 746386.  Reading uniform faces...done.<br />
+FaceGroup: 95 start: 746387 end: 749680.  Reading uniform faces...done.<br />
+FaceGroup: 96 start: 749681 end: 750168.  Reading uniform faces...done.<br />
+FaceGroup: 97 start: 750169 end: 751152.  Reading uniform faces...done.<br />
+FaceGroup: 98 start: 751153 end: 751164.  Reading uniform faces...done.<br />
+FaceGroup: 99 start: 751165 end: 751302.  Reading uniform faces...done.<br />
+FaceGroup: 102 start: 751303 end: 752986.  Reading uniform faces...done.<br />
+FaceGroup: 83 start: 752987 end: 754436.  Reading uniform faces...done.<br />
+FaceGroup: 74 start: 754437 end: 757716.  Reading uniform faces...done.<br />
+FaceGroup: 47 start: 757717 end: 762367.  Reading uniform faces...done.<br />
+CellGroup: 2 start: 0 end: 378871 type: 1<br />
+CellGroup: 3 start: 378872 end: 1212864 type: 1<br />
+CellGroup: 4 start: 1212865 end: 7211410 type: 1<br />
+CellGroup: 6 start: 7211411 end: 7716530 type: 1<br />
+CellGroup: 7 start: 7716531 end: 8094821 type: 1<br />
+CellGroup: 8 start: 8094822 end: 8563009 type: 1<br />
+CellGroup: 9 start: 8563010 end: 9188301 type: 1<br />
+CellGroup: 10 start: 9188302 end: 9324232 type: 1<br />
+CellGroup: 11 start: 9324233 end: 9377587 type: 1<br />
+CellGroup: 12 start: 9377588 end: 9383571 type: 1<br />
+CellGroup: 13 start: 9383572 end: 9394461 type: 1<br />
+CellGroup: 131 start: 9394462 end: 9632187 type: 1<br />
+Zone: 49 name: pj_grating type: interior.  Reading zone data...done.<br />
+Zone: 51 name: int_bypass-cyl-duct-outlet type: interior.  Reading zone data...done.<br />
+Zone: 52 name: int_bypass-duct-interface type: interior.  Reading zone data...done.<br />
+Zone: 53 name: int_inlet-aperture-outlet-8 type: interior.  Reading zone data...done.<br />
+Zone: 54 name: int_inlet-aperture-outlet-7 type: interior.  Reading zone data...done.<br />
+Zone: 55 name: int_inlet-aperture-outlet-6 type: interior.  Reading zone data...done.<br />
+Zone: 56 name: int_inlet-aperture-outlet-5 type: interior.  Reading zone data...done.<br />
+Zone: 57 name: int_inlet-aperture-outlet-4 type: interior.  Reading zone data...done.<br />
+Zone: 58 name: int_inlet-aperture-outlet-3 type: interior.  Reading zone data...done.<br />
+Zone: 59 name: int_dwst-inlet-aperture-2 type: interior.  Reading zone data...done.<br />
+Zone: 60 name: int_dwst-inlet-aperture-1 type: interior.  Reading zone data...done.<br />
+Zone: 61 name: int_inlet-aperture-8 type: interior.  Reading zone data...done.<br />
+Zone: 62 name: int_inlet-aperture-7 type: interior.  Reading zone data...done.<br />
+Zone: 63 name: int_inlet-aperture-6 type: interior.  Reading zone data...done.<br />
+Zone: 64 name: int_inlet-aperture-5 type: interior.  Reading zone data...done.<br />
+Zone: 65 name: int_inlet-aperture-4 type: interior.  Reading zone data...done.<br />
+Zone: 66 name: int_inlet-aperture-3 type: interior.  Reading zone data...done.<br />
+Zone: 67 name: int_inlet-aperture-2 type: interior.  Reading zone data...done.<br />
+Zone: 68 name: int_inlet-aperture-1 type: interior.  Reading zone data...done.<br />
+Zone: 69 name: int_outlet-aperture-3 type: interior.  Reading zone data...done.<br />
+Zone: 70 name: int_outlet-aperture-2 type: interior.  Reading zone data...done.<br />
+Zone: 71 name: int_outlet-aperture-1 type: interior.  Reading zone data...done.<br />
+Zone: 86 name: int_louvers-outlet type: interior.  Reading zone data...done.<br />
+Zone: 87 name: int_louvers-inlet type: interior.  Reading zone data...done.<br />
+Zone: 88 name: int_heaters-outlet type: interior.  Reading zone data...done.<br />
+Zone: 89 name: int_heaters-inlet type: interior.  Reading zone data...done.<br />
+Zone: 91 name: default-interior-2 type: interior.  Reading zone data...done.<br />
+Zone: 100 name: default-interior-1 type: interior.  Reading zone data...done.<br />
+Zone: 103 name: default-interior-2:103 type: interior.  Reading zone data...done.<br />
+Zone: 104 name: default-interior-2:104 type: interior.  Reading zone data...done.<br />
+Zone: 105 name: default-interior-2:105 type: interior.  Reading zone data...done.<br />
+Zone: 106 name: default-interior-2:106 type: interior.  Reading zone data...done.<br />
+Zone: 107 name: default-interior-2:107 type: interior.  Reading zone data...done.<br />
+Zone: 108 name: default-interior-2:108 type: interior.  Reading zone data...done.<br />
+Zone: 109 name: default-interior-2:109 type: interior.  Reading zone data...done.<br />
+Zone: 110 name: default-interior-2:110 type: interior.  Reading zone data...done.<br />
+Zone: 111 name: default-interior-2:111 type: interior.  Reading zone data...done.<br />
+Zone: 112 name: default-interior-2:112 type: interior.  Reading zone data...done.<br />
+Zone: 113 name: default-interior-2:113 type: interior.  Reading zone data...done.<br />
+Zone: 114 name: default-interior-2:114 type: interior.  Reading zone data...done.<br />
+Zone: 14 name: w_bypass-duct-2 type: wall.  Reading zone data...done.<br />
+Zone: 15 name: w_uninsulated-gas-pipe-c type: wall.  Reading zone data...done.<br />
+Zone: 16 name: w_uninsulated-gas-pipe-b type: wall.  Reading zone data...done.<br />
+Zone: 17 name: w_gas-valve-02b type: wall.  Reading zone data...done.<br />
+Zone: 18 name: w_gas-valve-02a type: wall.  Reading zone data...done.<br />
+Zone: 19 name: w_gas-valve-01b type: wall.  Reading zone data...done.<br />
+Zone: 20 name: w_uninsulated-air-pipe type: wall.  Reading zone data...done.<br />
+Zone: 21 name: w_uninsulated-gas-pipe-inlet type: wall.  Reading zone data...done.<br />
+Zone: 22 name: w_uninsulated-gas-pipe-a type: wall.  Reading zone data...done.<br />
+Zone: 23 name: w_instrumentation type: wall.  Reading zone data...done.<br />
+Zone: 24 name: w_purge-valve-2 type: wall.  Reading zone data...done.<br />
+Zone: 25 name: w_purge-valve-1 type: wall.  Reading zone data...done.<br />
+Zone: 26 name: w_gas-valve-01a type: wall.  Reading zone data...done.<br />
+Zone: 27 name: w_goulotte type: wall.  Reading zone data...done.<br />
+Zone: 28 name: w_oil-pipes-2 type: wall.  Reading zone data...done.<br />
+Zone: 29 name: w_oil-pipes-1 type: wall.  Reading zone data...done.<br />
+Zone: 30 name: w_pipings-supports type: wall.  Reading zone data...done.<br />
+Zone: 31 name: w_oil-tank type: wall.  Reading zone data...done.<br />
+Zone: 32 name: w_instrumentation-panel-32 type: wall.  Reading zone data...done.<br />
+Zone: 33 name: w_insulated-air-pipe-o type: wall.  Reading zone data...done.<br />
+Zone: 34 name: w_insulated-air-pipe-i type: wall.  Reading zone data...done.<br />
+Zone: 35 name: w_insulated-gas-pipe-o type: wall.  Reading zone data...done.<br />
+Zone: 36 name: w_insulated-gas-pipe-i type: wall.  Reading zone data...done.<br />
+Zone: 37 name: w_enclosure-ground type: wall.  Reading zone data...done.<br />
+Zone: 38 name: w_enclosure-roof type: wall.  Reading zone data...done.<br />
+Zone: 39 name: w_enclosure-x- type: wall.  Reading zone data...done.<br />
+Error:<br />
+Failed: Import Geometry<br />
+Unexpected process exit.</p>
+<p>--&gt; FOAM FATAL ERROR:<br />
+Do not understand characters: +<br />
+    on line 27573207</p>
+<p>    From function fluentMeshToFoam::lexer<br />
+    in file fluent3DMeshToFoam.L at line 753.</p>
+<p>FOAM exiting</p>
+<p>This is another case I tested, but the error type is the same...</p>
+<p>PS: I tested on a Linux machine with OpenFOAM commands, the same error occurs. I will try other examples.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1582"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="1270.html#comment-1582" class="active">Multiple Volumes</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on August 21, 2012 - 08:10.  </div>
+
+  <div class="content">
+    <p>From this diagnostic I see:</p>
+<ul>
+<li>9,632,188 cells, i.e., <strong>9.6M cells</strong></li>
+<li>12 cell groups, i.e., <strong>12 volumes</strong></li>
+<li>References to <strong>insulated pipes</strong></li>
+</ul>
+<p>I'm guessing that there are multiple volumes (cell groups/zones) because you want to perform conjugate heat transfer (CHT, solid-fluid heat conduction). Caedium does not support CHT, so I'm not sure this exercise is going to be useful.</p>
+<p>If you want to explore Caedium's heat transfer capabilities I suggest you try single volume flow domains.</p>
+<p>Also have you tried looking at <strong>line 27,573,207</strong> in the case file that is causing the problem? I think that syntax may be related to CHT and is not supported by the import filter.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-1583"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1270.html#comment-1583" class="active">BC syntax problem</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Samir on August 21, 2012 - 08:50.  </div>
+
+  <div class="content">
+    <p>I think it is a boundary condition syntax problem. I have to change the names for some of them in order to suite OpenFOAM syntax ( no / and + ... ) . </p>
+<p>Thank you for your explanations, I will not try to do the exercise, I was just exploring the capacities to import a huge mesh into Caedium.<br />
+I will make the changes and try again. </p>
+<p>Thank you again for your reactivity.</p>
+<p>PS: It works perfectly for the import, it is a syntax problem, I deleted all the signs as ":", "/", "+" and "-", leaving only "_" and it imports all my meshings.</p>
+<p>Thank You again!</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div></div></div><a id="comment-1578"></a>
+<div class="comment comment-published last odd clearfix">
+  
+      <h3 class="title">
+      <a href="1270.html#comment-1578" class="active">Thanks for the update</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on August 20, 2012 - 09:51.  </div>
+
+  <div class="content">
+    <p>Thanks for the update.</p>
+<p>I just tried an 8M cell case created in Caedium, exported to FLUENT (.msh 1.54GB) and then imported back into Caedium. It worked fine with a peak import process size of about 5.3GB.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div></div></div></div></div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1270 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:52 GMT -->
+</html>

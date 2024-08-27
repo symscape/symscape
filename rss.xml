@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xml:base="https://www.symscape.com"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+ <title>Symscape</title>
+ <link>https://www.symscape.com</link>
+ <description>Save money and time performing fluid flow and heat transfer simulations with Caedium - an affordable priced, easy-to-use, all-in-one Computational Fluid Dynamics (CFD) software system.</description>
+ <language>en</language>
+<item>
+ <title>May 2019: New Caedium Release and Tutorials</title>
+ <link>https://www.symscape.com/newsletters/may-2019-new-caedium-release-and-tutorials</link>
+ <description>&lt;p&gt;It is finally time to announce the new release of Caedium v6.0, headlined with the addition of Conjugate Heat Transfer (CHT) and Passive Species Transport. I know it has been a while, but some things take time and are the worth the wait - I hope this release is one of those things. In support of the new features are two new tutorials to get you started with CHT.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/misc/ht-exchanger-air-t-colormap.png&quot; alt=&quot;Conjugate Heat Transfer Through a Water-Air Radiator&quot; width=&quot;600&quot; height=&quot;341&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Conjugate Heat Transfer Through a Water-Air Radiator&lt;/strong&gt;&lt;br /&gt;Simulation shows air temperature iso-surfaces&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/newsletters/may-2019-new-caedium-release-and-tutorials&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/newsletters/may-2019-new-caedium-release-and-tutorials#comments</comments>
+ <category domain="https://www.symscape.com/newsletters">Newsletters</category>
+ <pubDate>Tue, 21 May 2019 21:00:27 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1719 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Enhanced CFD Simulations with Conjugate Heat Transfer and Passive Species Transport</title>
+ <link>https://www.symscape.com/news/enhanced-cfd-simulations-with-conjugate-heat-transfer-and-passive-species-transport</link>
+ <description>&lt;p&gt;The highlight of the latest Caedium (v6.0) release is an enhanced Computational Fluid Dynamics (CFD) heat transfer capability with multi-domain support for fluids and solids, known as Conjugate Heat Transfer (CHT). Also Caedium can now simulate the dispersal of secondary species (e.g., smoke or dye) in a primary fluid, known as passive species (or scalar) transport.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/news/cht/heat-sink-t-colormap-arrows.png&quot; alt=&quot;Conjugate Heat Transfer (CHT) Through and Around a Heat Sink&quot; width=&quot;600&quot; height=&quot;394&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Conjugate Heat Transfer (CHT) Through and Around a Heat Sink&lt;/strong&gt;&lt;br /&gt;Simulation shows air vectors and floor colored by temperature&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/news/enhanced-cfd-simulations-with-conjugate-heat-transfer-and-passive-species-transport&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/news/enhanced-cfd-simulations-with-conjugate-heat-transfer-and-passive-species-transport#comments</comments>
+ <category domain="https://www.symscape.com/news">News</category>
+ <pubDate>Thu, 25 Apr 2019 13:07:08 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1716 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>July 2017: Digital Paleontology with CFD</title>
+ <link>https://www.symscape.com/newsletters/july-2017-digital-paleontology-with-cfd</link>
+ <description>&lt;p&gt;This month&#039;s newsletter has an unusual digital paleontology focus. Check out how Computational Fluid Dynamics (CFD) provides researchers with insights into how long-extinct creatures (everybody loves a dinosaur story or two, right?) might have interacted with their environments.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/parvancorina/parvancorina-flow-backward.png&quot; alt=&quot;CFD Water Flow Simulation over a Parvancorina&quot; width=&quot;640&quot; height=&quot;434&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;CFD Water Flow Simulation over a Parvancorina:&lt;/strong&gt; Backward direction&lt;/span&gt;Illustration only, not part of the study&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/newsletters/july-2017-digital-paleontology-with-cfd&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/newsletters/july-2017-digital-paleontology-with-cfd#comments</comments>
+ <category domain="https://www.symscape.com/newsletters">Newsletters</category>
+ <pubDate>Tue, 18 Jul 2017 13:30:26 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1702 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Long-Necked Dinosaurs Succumb To CFD</title>
+ <link>https://www.symscape.com/blog/long-necked-dinosaurs-succumb-to-cfd</link>
+ <description>&lt;p&gt;It turns out that &lt;a href=&quot;/computational-fluid-dynamics&quot;&gt;Computational Fluid Dynamics (CFD)&lt;/a&gt; has a key role to play in determining the behavior of long extinct creatures. In a previous, post we described a &lt;a href=&quot;/blog/cfd-provides-insight-into-mystery-fossils&quot;&gt;CFD study of parvancorina&lt;/a&gt;, and now Pernille Troelsen at Liverpool John Moore University is using CFD for insights into how long-necked &lt;a href=&quot;https://en.wikipedia.org/wiki/Plesiosauria&quot;&gt;plesiosaurs&lt;/a&gt; might have swum and hunted.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/plesiosaur/plesiosaur-streamarrows.png&quot; alt=&quot;CFD Water Flow Simulation over an Idealized Plesiosaur&quot; width=&quot;640&quot; height=&quot;437&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;CFD Water Flow Simulation over an Idealized Plesiosaur:&lt;/strong&gt; Streamline Vectors&lt;/span&gt;Illustration only, not part of the study&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/long-necked-dinosaurs-succumb-to-cfd&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/long-necked-dinosaurs-succumb-to-cfd#comments</comments>
+ <pubDate>Fri, 14 Jul 2017 13:11:06 +0000</pubDate>
+ <dc:creator>Richard Smith</dc:creator>
+ <guid isPermaLink="false">1701 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>CFD Provides Insight Into Mystery Fossils</title>
+ <link>https://www.symscape.com/blog/cfd-provides-insight-into-mystery-fossils</link>
+ <description>&lt;p&gt;Fossilized imprints of &lt;a href=&quot;https://en.wikipedia.org/wiki/Parvancorina&quot;&gt;Parvancorina&lt;/a&gt; from over 500 million years ago have puzzled paleontologists for decades. What makes it difficult to infer their behavior is that Parvancorina have none of the familiar features we might expect of animals, e.g., limbs, mouth. In an attempt to shed some light on how Parvancorina might have interacted with their environment researchers have enlisted the help of &lt;a href=&quot;/computational-fluid-dynamics&quot;&gt;Computational Fluid Dynamics (CFD)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/parvancorina/parvancorina-flow-forward.png&quot; alt=&quot;CFD Water Flow Simulation over a Parvancorina&quot; width=&quot;640&quot; height=&quot;434&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;CFD Water Flow Simulation over a Parvancorina:&lt;/strong&gt; Forward direction&lt;/span&gt;Illustration only, not part of the study&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/cfd-provides-insight-into-mystery-fossils&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/cfd-provides-insight-into-mystery-fossils#comments</comments>
+ <pubDate>Fri, 23 Jun 2017 15:08:45 +0000</pubDate>
+ <dc:creator>Richard Smith</dc:creator>
+ <guid isPermaLink="false">1699 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>June 2017: Runners, Insects, and a Wind Turbine</title>
+ <link>https://www.symscape.com/newsletters/june-2017-runners-insects-and-a-wind-turbine</link>
+ <description>&lt;p&gt;Get your aerodynamics on with this month&#039;s newsletter, where aerodynamic specialists teach runners how to draft and insect wings inspire new wind turbine blades. &lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/misc/bumblebee.jpg&quot; alt=&quot;Insect Wings Inspire Flexible Wind Turbine Blades&quot; width=&quot;399&quot; height=&quot;599&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Insect Wings Inspire Flexible Wind Turbine Blades: &lt;/strong&gt;New garden bumblebee&lt;/span&gt;License: &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/2.5/&quot; title=&quot;Creative Commons Attribution 2.0&quot;&gt;CC BY-SA 2.5&lt;/a&gt;, &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Bombus_hypnorum_male_-_side_(aka).jpg&quot;&gt;André Karwath&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/newsletters/june-2017-runners-insects-and-a-wind-turbine&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/newsletters/june-2017-runners-insects-and-a-wind-turbine#comments</comments>
+ <category domain="https://www.symscape.com/newsletters">Newsletters</category>
+ <pubDate>Tue, 20 Jun 2017 14:30:13 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1698 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>May 2017: Active Aerodynamics</title>
+ <link>https://www.symscape.com/newsletters/may-2017-active-aerodynamics</link>
+ <description>&lt;p&gt;We have an &lt;em&gt;active&lt;/em&gt; newsletter for you this month. First up is the aerodynamics of cycling tucks, which is a white knuckle &lt;em&gt;activity&lt;/em&gt; ride. Then there&#039;s the &lt;em&gt;active&lt;/em&gt; aerodynamics of the latest Lamborghini to pump your adrenaline to the max. &lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/misc/chris-froome-tuck.jpg&quot; alt=&quot;Chris Froome Tuck&quot; width=&quot;600&quot; height=&quot;338&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Chris Froome Tuck&lt;/strong&gt;&lt;/span&gt;Stage 8, Pau/Bagnères-de-Luchon, Tour de France, 2016&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/newsletters/may-2017-active-aerodynamics&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/newsletters/may-2017-active-aerodynamics#comments</comments>
+ <category domain="https://www.symscape.com/newsletters">Newsletters</category>
+ <pubDate>Thu, 11 May 2017 19:54:28 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1693 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>April 2017: Fluidics and Stonehenge Vortex</title>
+ <link>https://www.symscape.com/newsletters/april-2017-fluidics-and-stonehenge-vortex</link>
+ <description>&lt;p&gt;It&#039;s April and therefore it&#039;s time to confess that there isn&#039;t a solstice day vortex generated at Stonehenge, unless you are in the April Fools&#039; Day distortion field. However, there are fluidic components that mimic digital logic gates.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/fluidics/or-gate-arrows.png&quot; alt=&quot;CFD Simulation of a Fluidic OR Gate&quot; width=&quot;640&quot; height=&quot;529&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;CFD Simulation of a Fluidic OR Gate&lt;/strong&gt;&lt;/span&gt;Velocity Vectors&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/newsletters/april-2017-fluidics-and-stonehenge-vortex&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/newsletters/april-2017-fluidics-and-stonehenge-vortex#comments</comments>
+ <category domain="https://www.symscape.com/newsletters">Newsletters</category>
+ <pubDate>Thu, 20 Apr 2017 19:32:36 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1688 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Fluidic Logic</title>
+ <link>https://www.symscape.com/blog/fluidic-logic</link>
+ <description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Fluidics&quot;&gt;Fluidic logic (fluidics)&lt;/a&gt; uses specially designed fluid paths to perform logic operations, such as &lt;a href=&quot;https://en.wikipedia.org/wiki/AND_gate&quot;&gt;AND&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/OR_gate&quot;&gt;OR&lt;/a&gt;, and &lt;a href=&quot;https://en.wikipedia.org/wiki/Inverter_(logic_gate)&quot;&gt;NOT&lt;/a&gt; gates. In electronics logical operations underpin all the digital devices that depend on CPUs for their brains. Using &lt;a href=&quot;/computational-fluid-dynamics&quot;&gt;Computational Fluid Dynamics (CFD)&lt;/a&gt; we can quickly explore potential fluidic components.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/fluidics/and-gate.png&quot; alt=&quot;CFD Simulation of a Fluidic AND Gate&quot; width=&quot;640&quot; height=&quot;529&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;CFD Simulation of a Fluidic AND Gate&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/fluidic-logic&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/fluidic-logic#comments</comments>
+ <pubDate>Wed, 19 Apr 2017 20:14:28 +0000</pubDate>
+ <dc:creator>Richard Smith</dc:creator>
+ <guid isPermaLink="false">1687 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>March 2017: CFD and Aerodynamics</title>
+ <link>https://www.symscape.com/newsletters/march-2017-cfd-and-aerodynamics</link>
+ <description>&lt;p&gt;The two themes for this month&#039;s newsletter are Computational Fluid Dynamics (CFD) and aerodynamics. First check out our revamped CFD description now with a what, why, and how treatment. Next see how aerodynamics can help you go dangerously fast downhill. Then finally, discover the aero effects of fenders (mud guards) on your bicycle wheels.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/fender-wheel/fender-wheel-yaw-25-streamlines.png&quot; alt=&quot;Fender + Wheel + Disc Rotor&quot; width=&quot;640&quot; height=&quot;456&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;CFD Simulation of Airflow Around a Bicycle Wheel and Fender&lt;/strong&gt;&lt;/span&gt;Streamlines at 25 degree yaw angle&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/newsletters/march-2017-cfd-and-aerodynamics&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/newsletters/march-2017-cfd-and-aerodynamics#comments</comments>
+ <category domain="https://www.symscape.com/newsletters">Newsletters</category>
+ <pubDate>Tue, 21 Mar 2017 20:21:33 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1681 at https://www.symscape.com</guid>
+</item>
+</channel>
+</rss>

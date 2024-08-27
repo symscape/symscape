@@ -1,0 +1,431 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/examples/rans/cfd-for-solar-panels by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:07:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>CFD for Solar Panels | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-examples-rans-cfd-for-solar-panels section-examples one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../../index.html" title="Home" rel="home"><img src="../../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../../index.html">Home</a> › <a href="../../examples.html">Examples</a> › <a href="../rans.html">RANS Flow</a></div>                  <h1 class="title">CFD for Solar Panels</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1040" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on February 1, 2011 - 19:54        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_54 first last"><a href="../rans.html" rel="tag" title="RANS Flow add-on examples">RANS Flow</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>Solar panels are solid-state, right? No moving parts and certainly no fluid flow - unless you count the rivers of electrons flowing in a semi-conductor. So what role is there for <a href="../../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a>? Once installed, how can you be sure that those brackets holding the panels in place are strong enough? Or even if your roof is strong enough to cope with the wind loading on the solar panels? Remain calm, CFD is here to help in the form of <a href="../../product/professional.html">Caedium Professional</a>.</p>
+<p><span class="inline inline-center"><img src="../../files/examples/solarpanels/solar.png" width="504" height="462" alt="Solar Panels on Shed Roof" /><span class="caption"><strong>Solar Panel Mounted on a Shed Roof</strong></span></span></p>
+<p>Once a solar panel is mounted on a roof it has to withstand wind loading from any direction. The worst case scenario is a freak wind gust from behind an angled panel on a flat roof. Flat-mounted panels on flat roofs are not an option as they would only a limited exposure to the sun around noon, playing havoc with your breakeven calculations.</p>
+<p>There are a few options open to you:</p>
+<ul>
+<li>Wait for the freak wind gust and measure the forces directly on an installed solar panel - dangerous, unreliable and you could wait a lifetime for just the right wind gust.</li>
+<li>Bolt the solar panel to the top of a moving van and drive it at the same test speed as your worst-case freak wind gust - reliable but dangerous (and illegal) for the driver and other users of the road. </li>
+<li>Conduct a wind tunnel test - reliable, safe, and costly. </li>
+<li>Perform a CFD simulation in the comfort of your office - reliable, safe, and inexpensive. </li>
+</ul>
+<p><span class="inline inline-center"><img alt="Air Flow over Solar Panels" src="../../files/examples/solarpanels/solar-flow.png" width="504" height="405" /><span class="caption"><strong>CFD Simulation of Air Flow Over a Solar Panel Mounted on a Shed Roof</strong></span></span></p>
+<p>Ideally you'd like to use a well documented wind tunnel test case to <a href="../../blog/lessons-in-computational-fluid-dynamics.html">benchmark your CFD simulations</a>. If such a case doesn't exist then it would be prudent to commission one.</p>
+<p>What can you expect to gain from a CFD simulation performed by Caedium Professional?</p>
+<p>You can predict forces, such as <a href="../../lift-force-and-drag-force.html">lift and drag</a>, to lead the design of mounting brackets.</p>
+<p><span class="inline inline-center"><img alt="Forces on Solar Panels" src="../../files/examples/solarpanels/solar-force.png" width="504" height="410" /><span class="caption"><strong>Lift and Drag Forces on Solar Panel</strong></span></span></p>
+<p>You can display velocity vectors, streamlines, and contours to visualize the air flow around the panels and to aid in their location on a roof.</p>
+<p><span class="inline inline-center"><img alt="Velocity over Solar Panels" src="../../files/examples/solarpanels/solar-u.png" width="504" height="304" /><span class="caption"><strong>Velocity Vectors Colored by Velocity Magnitude, Streamlines, and Velocity Magnitude Contours</strong></span></span></p>
+<p><span class="inline inline-center"><img alt="Pressure Coefficient over Solar Panels" src="../../files/examples/solarpanels/solar-cp.png" width="504" height="337" /><span class="caption"><strong>Pressure Coefficient Contours on Symmetry Plane and Surfaces</strong></span></span></p>
+<p>With trusted CFD results in hand, you are now free to design your solar panel mounts and locate the panels with confidence.</p>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-1441"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-for-solar-panels.html#comment-1441" class="active">CFD for Solar Panels</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on April 23, 2012 - 15:04.  </div>
+
+  <div class="content">
+    <p>Is there any example how to calculate this kind of structure in Caedium?<br />
+How to set up wind etc.?</p>
+<p>best regards<br />
+Tomaz</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1442"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-for-solar-panels.html#comment-1442" class="active">Similar to tutorial</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on April 23, 2012 - 15:11.  </div>
+
+  <div class="content">
+    <p>The simulation is very similar to the tutorial <a href="../../node/831.html">"Flow Over a Rotating Wheel with Moving Ground"</a>, except you can ignore the rotating wheel and moving ground setup.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1555"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-for-solar-panels.html#comment-1555" class="active">initial velocity</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by George (not verified) on August 16, 2012 - 07:43.  </div>
+
+  <div class="content">
+    <p>Hello </p>
+<p>For a couple of days I am checking your tutorials, and youtube links. I already installed the Trial version.</p>
+<p>And as far as for now, I can say that it seems you did a splendid job! The application is made in kind of user-friendly interface, very convenient to use with cooperation of this kind of tutorials.</p>
+<p>I intend to mount two solar panels, and it seems Caedium can be of help in here.</p>
+<p>Here is what I wanted to ask you: in the "Flow Over a Rotating Wheel with Moving Ground" tutorial, you used the initial velocity of 44.7 m/s (100mph).</p>
+<p>How did you get that value? From the local meteorological station or particular wind map?<br />
+But what is the name of that value? 3 second gust wind speed? Mean hourly wind speed?<br />
+Or something else?</p>
+<p>Thank you for the reply.</p>
+<p>P.S.</p>
+<p>By the way, do you have some kind of discount  for students on Professional version?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1556"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-for-solar-panels.html#comment-1556" class="active">You decide the wind speed</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on August 16, 2012 - 08:15.  </div>
+
+  <div class="content">
+    <p>I didn't use  44.7 m/s for the example here, it was more like 5 m/s. It was an arbitrary choice.</p>
+<p>Yes, we offer student discounts - for details see the FAQ <a href="../../node/531.html">"Do you offer academic discounts?"</a>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1560"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-for-solar-panels.html#comment-1560" class="active">Thank you for the reply</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by George (not verified) on August 16, 2012 - 14:30.  </div>
+
+  <div class="content">
+    <p>Thank you for the reply Symscape.</p>
+<p>I did not mean here, but in topic "Flow Over a Rotating Wheel with Moving Ground" you used 44.7 m/s as an initial wind velocity:</p>
+<p>quote:<br />
+<cite>"The reference velocity can be used to initialize the simulation and to specify the inlet velocity. In this tutorial you will set a reference velocity of 44.7 m/s (100mph) in the X-direction."</cite></p>
+<p>In here you took 5m/s arbitrary. Ok.<br />
+But if I would like to do the exact analysis like you described in here, but with real, precise initial wind velocity, not arbitrary one, than how would I obtain that value?<br />
+From the meteorological station data, but what would that value be? Mean hourly wind speed?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1561"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-for-solar-panels.html#comment-1561" class="active">Maximum wind loads</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on August 16, 2012 - 15:11.  </div>
+
+  <div class="content">
+    <p>The reference velocity and initial velocity are your choice based on what you want to achieve with your simulation. I would guess that the most important condition is maximum likely wind speed so that you can determine whether your support structure can cope with the wind loads.</p>
+<p>The rotating wheel wind speed corresponds to the wheel moving through air at 100 mph. It has nothing to do with meteorological data.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1562"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-for-solar-panels.html#comment-1562" class="active">Thank you for the reply.
+But</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by George (not verified) on August 16, 2012 - 16:07.  </div>
+
+  <div class="content">
+    <p>Thank you for the reply.</p>
+<p>But I am not sure structures are designed according to the maximum recorded wind.<br />
+In that case, all structures will be too big.</p>
+<p>When it comes to the calculations by hand, a so called 3 gust wind speed is used - which represents the highest continual gust over a 3 second period, with probability of being exceeded 1 in 50 per year.</p>
+<p>But this is related to hand calculations and they are completely different than CFD. They are based on a lot of approximations.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1616"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-for-solar-panels.html#comment-1616" class="active">Solar panels on roof</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Wim  (not verified) on October 2, 2012 - 08:30.  </div>
+
+  <div class="content">
+    <p>I am trying to calculate the pressure coefficient of solar panels on a flat roof.<br />
+Exactly what is done in this example.<br />
+I followed the steps of the spinning wheel until the velocity vectors.<br />
+However I run into a couple of problems.</p>
+<p>Firstly I have made a big box, which serves as the control volume, inside I make a smaller rectangular box that represents the house.<br />
+Currently no solar panels are present on the roof.<br />
+Except for the outlet and inlet I have defined the different faces to be walls. Is this correct?<br />
+Secondly according to the theory I should get negative cp's at the top of the building but this is not the case.<br />
+Is this because I haven't attached the ground and the building together?<br />
+Thirdly I would like to know how I can define an offset between the roof and the solar panel?</p>
+<p>That's all for now but I will have more questions after that I guess :)</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1617"></a>
+<div class="comment comment-published last odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="cfd-for-solar-panels.html#comment-1617" class="active">Try the tutorials first</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on October 2, 2012 - 08:51.  </div>
+
+  <div class="content">
+    <p>I suggest you first get some experience setting up and running simulations as <em>defined</em> in the tutorials. For example:</p>
+<ol>
+<li><a href="../../node/830.html">Wheel in a Box</a></li>
+<li><a href="../../node/831.html">Flow Over a Rotating Wheel with Moving Ground</a></li>
+</ol>
+<p>As in the geometry creation tutorial you have to construct a single flow volume, typically you'll need to subtract your building and solar panel from the larger control volume.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../../news.html">News</a></li>
+<li class="collapsed"><a href="../../blog.html">Blog</a></li>
+<li class="leaf"><a href="../../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../../articles.html">Articles</a></li>
+<li class="leaf"><a href="../../image.html">Gallery</a></li>
+<li class="leaf"><a href="../../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../../forum.html">Forums</a></li>
+<li class="leaf"><a href="../../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../../partners.html">Partners</a></li>
+<li class="leaf"><a href="../../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../../forum.html"><img title="Forums" alt="Forums" src="../../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../../contact.html">Contact</a> | <a href="../../trademarks.html">Trademarks</a> | <a href="../../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/examples/rans/cfd-for-solar-panels by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:07:17 GMT -->
+</html>

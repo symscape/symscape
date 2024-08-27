@@ -1,0 +1,295 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/tower-bridge-meets-cfd by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:27:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Tower Bridge Meets CFD | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-tower-bridge-meets-cfd section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">Tower Bridge Meets CFD</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1494" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on May 21, 2014 - 12:30        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Complete, watertight, complex geometry is a rare but welcome find in <a href="../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a>. However, thanks to the steering committee of the upcoming <a href="http://imr.sandia.gov/23imr/">23rd International Meshing Roundtable</a>, such a geometry, in various formats, is freely available for their <a href="http://imr.sandia.gov/23imr/MeshingContest.html">meshing contest</a>. The star of the contest is London's Tower Bridge, I presume in honor of the conference's host city. So to the <em>bat cave</em> to see what <a href="../product/professional.html">Caedium Professional</a> can do with this model.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/tower-bridge/tower-bridge-flow.png" alt="Tower Bridge Caedium CFD Simulation" width="600" height="385" /><span class="caption"><strong>Tower Bridge Caedium CFD Simulation</strong></span>Velocity contours</span></p>
+<h3>Geometry</h3>
+<p>For a challenge I decided to make the STL (.stl) model for the meshing contest the basis of my work - usually I recommend STEP (.stp). The model was complete and watertight. The import process grouped the facets according to an angle constraint of 40 degrees. To complete the flow domain I created a cylinder and subtracted the two bases of the bridge pylons from the ground circle, then stitched all the faces into a single watertight flow volume.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/tower-bridge/tower-bridge-geometry.png" alt="Tower Bridge CFD Flow Volume" width="600" height="436" /><span class="caption"><strong>Tower Bridge CFD Flow Volume</strong></span></span></p>
+<h3>Meshing</h3>
+<h4>Surface Mesh</h4>
+<p>As with any complex geometry I first created just the surface mesh (with its relatively short generation time) to minimize the overall turnaround time. If you focus on creating a good surface mesh then usually a good volume meshing leading to a successful flow simulation will follow. If you jump straight to the volume mesh creation then you often have to remedy surface mesh problems while repeatedly waiting for the more time-consuming volume mesh to complete.</p>
+<p>Looking at the surface mesh metric (Scalar Fields-&gt;E Ratio) provided an indication of where extra mesh resolution was required. Also while creating the surface mesh some faces reported mesh failures due to mesh sizing too large for the face. This was evident on all the tie-rods supporting the road deck. To remedy the mesh failures I assigned an appropriate mesh sizing (using the <a href="../node/723.html">Accuracy tool</a>) constraint on all the tie-rod faces. I also applied sizing constraints on the faces with poor (low) mesh metrics. All these constraints propagate according to a growth rate across nearby faces and to the localized volume elements.</p>
+<p>The final surface mesh had 979,032 triangle elements on 2,780 geometry faces. It retains all the original sharp feature edges.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/tower-bridge/tower-bridge-tri-mesh.png" alt="Tower Bridge CFD Triangle Surface Mesh" width="600" height="385" /><span class="caption"><strong>Tower Bridge CFD Triangle Surface Mesh</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/tower-bridge/tower-bridge-tri-mesh2.png" alt="Tower Bridge CFD Triangle Surface Mesh" width="600" height="385" /><span class="caption"><strong>Tower Bridge CFD Triangle Surface Mesh</strong></span>Tower details</span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/tower-bridge/tower-bridge-poly-mesh.png" alt="Tower Bridge CFD Polygon Surface Mesh" width="600" height="405" /><span class="caption"><strong>Tower Bridge CFD Polygon Surface Mesh</strong></span>Converted from Triangle Surface Mesh</span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/tower-bridge/tower-bridge-poly-mesh2.png" alt="Tower Bridge CFD Polygon Surface Mesh" width="600 " height="405" /><span class="caption"><strong>Tower Bridge CFD Polygon Surface Mesh</strong></span>Tower details</span></p>
+<h4>Volume Mesh</h4>
+<p>Creating the volume mesh just required a request for the volume mesh metric (Scalar Fields-&gt;Vol Ratio), which showed some poor individual elements but no clusters and was therefore deemed good enough to proceed to the flow simulation stage. With conversion to a dual mesh (polyhedra) the poor elements usually do not cause problems.</p>
+<p>The final volume mesh had 13,826,169 tetrahedra elements using 2,567,895 nodes. After conversion to the dual mesh there were approximately the same number of polyhedra as nodes.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/tower-bridge/tower-bridge-volume-mesh.png" alt="Tower Bridge CFD Tetrahedra Volume Mesh" width="600" height="385" /><span class="caption"><strong>Tower Bridge CFD Tetrahedra Volume Mesh</strong></span>Prior to polyhedra conversion</span></p>
+<p>No mesh is an island, so to evaluate its suitability for a simulation I proceeded to set up and run a simulation.</p>
+<h3>Physics</h3>
+<p>The physics setup was relatively straightforward. I assigned every face to be a wall boundary condition (BC) and then re-assigned the outer circumference faces to be free-stream BCs. I also assigned the top circular face as a slip BC. This setup is similar to the Caedium tutorial <a href="../node/1281.html">&quot;Flow Over a Double-Sided Membrane&quot;</a>. I created a residual monitor to provide feedback on the progress of the flow solver and also added a force monitor to measure the <a href="../lift-force-and-drag-force.html">drag</a>.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/tower-bridge/tower-bridge-initialized.png" alt="Tower Bridge CFD Simulation Ready to Run in Caedium" width="599" height="444" /><span class="caption"><strong>Tower Bridge CFD Simulation in Caedium</strong></span>Ready to run</span></p>
+<h3>Results</h3>
+<p><span class="inline inline-center"><img src="../files/pictures/tower-bridge/tower-bridge-flow.png" alt="Tower Bridge CFD Velocity Contours" width="600" height="385" /><span class="caption"><strong>Tower Bridge CFD Velocity Contours</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/tower-bridge/tower-bridge-flow-u-contours.png" alt="Tower Bridge CFD Shaded Velocity Contours" width="600" height="385" /><span class="caption"><strong>Tower Bridge CFD Shaded Velocity Contours</strong></span></span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/tower-bridge/tower-bridge-flow-u-contours2.png" alt="Tower Bridge CFD Shaded Velocity Contours" width="600" height="385" /><span class="caption"><strong>Tower Bridge CFD Shaded Velocity Contours</strong></span>Tower details</span></p>
+<p><span class="inline inline-center"><img src="../files/pictures/tower-bridge/tower-bridge-drag.png" alt="Tower Bridge CFD Drag Monitor" width="400" height="310" /><span class="caption"><strong>Tower Bridge CFD Drag Monitor</strong></span></span></p>
+<h3>Conclusion</h3>
+<p>While this is not a rigorous study of bridge aerodynamics, it shows in principle how to prepare the geometry, control the mesh, and set up a simulation for a complex configuration starting with an imported model.</p>
+<h3>Notes</h3>
+<ul>
+<li>The bridge geometry can be downloaded from <a href="http://imr.sandia.gov/23imr/MeshingContest.html">&quot;Meshing Contest&quot;</a>. </li>
+<li>The simulation was created in Caedium Professional using the incompressible, steady-state RANS solver with the k-omega turbulence model. </li>
+</ul>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/tower-bridge-meets-cfd by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:27:47 GMT -->
+</html>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xml:base="https://www.symscape.com"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+ <title>symscape&#039;s blog</title>
+ <link>https://www.symscape.com/blog/4</link>
+ <description>Save money and time performing fluid flow and heat transfer simulations with Caedium - an affordable priced, easy-to-use, all-in-one Computational Fluid Dynamics (CFD) software system.</description>
+ <language>en</language>
+<item>
+ <title>A Perspective on Cartesian Meshing</title>
+ <link>https://www.symscape.com/blog/perspective-cartesian-meshing</link>
+ <description>&lt;p&gt;The ease of Cartesian or wrapper-based meshing for &lt;a href=&quot;/computational-fluid-dynamics&quot;&gt;Computational Fluid Dynamics (CFD)&lt;/a&gt;, including &lt;a href=&quot;http://en.wikipedia.org/wiki/Immersed_boundary_method&quot;&gt;immersed boundary methods&lt;/a&gt;, is predicated on having a suitable surface mesh (e.g., STL) as an input. That surface mesh has certain constraints that, if not satisfied, will either cause a poor final mesh or can cause the Cartesian meshing process to fail.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/misc/cartesian-mesh.png&quot; alt=&quot;CFD Cartesian Mesh&quot; width=&quot;600&quot; height=&quot;472&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;CFD Cartesian Mesh&lt;/strong&gt;&lt;/span&gt;Source: Richard Smith EngD Thesis 1996&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/perspective-cartesian-meshing&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/perspective-cartesian-meshing#comments</comments>
+ <pubDate>Wed, 04 Sep 2013 13:32:28 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1416 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Caedium v5 Sneak Peek: 3Dconnexion 3D Mouse Support</title>
+ <link>https://www.symscape.com/blog/caedium-v5-sneak-peek-3dconnexion-3d-mouse-support</link>
+ <description>&lt;p&gt;The next release of the Caedium CFD software system on Windows will support the &lt;a href=&quot;http://www.3dconnexion.com/&quot;&gt;3Dconnexion&lt;/a&gt; family of 3D mice.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/misc/3d-connexion.jpg&quot; alt=&quot;3Dconnexion 3D Mice Ready to Control Caedium&quot; width=&quot;538&quot; height=&quot;352&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;3Dconnexion 3D Mice Ready to Control Caedium&lt;/strong&gt;&lt;/span&gt;Image courtesy of &lt;a href=&quot;http://www.3dconnexion.com/&quot;&gt;3Dconnexion&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/caedium-v5-sneak-peek-3dconnexion-3d-mouse-support&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/caedium-v5-sneak-peek-3dconnexion-3d-mouse-support#comments</comments>
+ <pubDate>Thu, 18 Apr 2013 17:54:50 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1362 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Caedium v5 Sneak Peek: Enhanced Accuracy Tool</title>
+ <link>https://www.symscape.com/blog/caedium-v5-sneak-peek-enhanced-accuracy-tool</link>
+ <description>&lt;p&gt;The next release of the Caedium CFD software system will include an enhanced &lt;a href=&quot;/node/723&quot;&gt;Accuracy tool&lt;/a&gt; with a new maximum mesh size parameter. The new size parameter will provide a method to set an explicit physical element size for an entity (e.g., face) rather than just an interval (resolution) number as in the current version of Caedium.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/misc/accuracy-comparison.png&quot; alt=&quot;Enhanced Caedium Accuracy Tool&quot; width=&quot;500&quot; height=&quot;324&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Enhanced Caedium Accuracy Tool&lt;/strong&gt;&lt;/span&gt;Interval-Based (left) vs Size-Based (right) Mesh Parameters&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/caedium-v5-sneak-peek-enhanced-accuracy-tool&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/caedium-v5-sneak-peek-enhanced-accuracy-tool#comments</comments>
+ <pubDate>Thu, 11 Apr 2013 17:16:02 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1360 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>CFD Performance Comparison Between GPU and CPU</title>
+ <link>https://www.symscape.com/blog/cfd-performance-comparison-between-gpu-cpu</link>
+ <description>&lt;p&gt;For the &lt;a href=&quot;http://www.gputechconf.com/page/home.html&quot;&gt;GPU Technology Conference 2013 (GTC13)&lt;/a&gt; I performed a series of simulations in Caedium comparing the OpenFOAM&amp;reg; linear solver GPU option using &lt;a href=&quot;/gpu-1-0-openfoam&quot;&gt;ofgpu&lt;/a&gt; with the standard CPU shared memory option using MPI. See selected slides and the presentation deck below.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/gtc13/cases.png&quot; alt=&quot;Cases&quot; width=&quot;499&quot; height=&quot;281&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/cfd-performance-comparison-between-gpu-cpu&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/cfd-performance-comparison-between-gpu-cpu#comments</comments>
+ <pubDate>Mon, 25 Mar 2013 15:51:06 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1357 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Caedium v5 Sneak Peek: Ribbon GUI</title>
+ <link>https://www.symscape.com/blog/caedium-v5-sneak-peek-ribbon-gui</link>
+ <description>&lt;p&gt;The next release of the Caedium CFD software system will have a new combined menu and toolbar often referred to as a ribbon.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/ribbon/win-ribbon.png&quot; width=&quot;600&quot; height=&quot;458&quot; alt=&quot;Caedium Ribbon on Windows&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Caedium Ribbon on Windows&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/caedium-v5-sneak-peek-ribbon-gui&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/caedium-v5-sneak-peek-ribbon-gui#comments</comments>
+ <pubDate>Mon, 11 Mar 2013 13:19:34 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1349 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Caedium v5 Sneak Peek: Polyhedral Meshes Improve CFD</title>
+ <link>https://www.symscape.com/blog/caedium-v5-sneak-peek-polyhedral-meshes-improve-cfd</link>
+ <description>&lt;p&gt;The next release of the Caedium CFD software system will provide an option to automatically convert a RANS Flow volume mesh to a polyhedral mesh - also known as a dual mesh. Solving the RANS equations on the dual mesh compared to the equivalent tetrahedral mesh typically leads to higher accuracy results with both faster and more reliable convergence.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/polymesh/f1-poly.png&quot; width=&quot;500&quot; height=&quot;248&quot; alt=&quot;Polygon Surface Mesh&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Polygon Surface Mesh&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/caedium-v5-sneak-peek-polyhedral-meshes-improve-cfd&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/caedium-v5-sneak-peek-polyhedral-meshes-improve-cfd#comments</comments>
+ <pubDate>Sat, 16 Feb 2013 22:15:59 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1343 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Caedium CFD Simulation Featured During InsideHPC Interview With Asetek at SC12</title>
+ <link>https://www.symscape.com/blog/caedium-cfd-simulation-featured-during-insidehpc-interview-with-asetek-sc12</link>
+ <description>&lt;p&gt;See if you can spot the Caedium CFD simulation in this video (hint: 3:01) from SC12 featuring an interview by &lt;a href=&quot;http://insidehpc.com/&quot;&gt;InsideHPC&lt;/a&gt; with &lt;a href=&quot;http://www.asetek.com/&quot;&gt;Asetek&lt;/a&gt; CEO André Eriksen.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/S54t0RssTuQ&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/caedium-cfd-simulation-featured-during-insidehpc-interview-with-asetek-sc12&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/caedium-cfd-simulation-featured-during-insidehpc-interview-with-asetek-sc12#comments</comments>
+ <pubDate>Tue, 27 Nov 2012 22:18:59 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1322 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Caedium CFD Simulations at Asetek SC12 Booth</title>
+ <link>https://www.symscape.com/blog/caedium-cfd-simulations-at-asetek-sc12-booth</link>
+ <description>&lt;p&gt;SC12 - the meet-up for all things supercomputing is now over. Our Microsoft collaborator, &lt;a href=&quot;http://blogs.msdn.com/b/hpctrekker/&quot;&gt;Wen-ming Ye&lt;/a&gt;, was at SC12, and while he was on the show floor he snapped some pictures of the &lt;a href=&quot;http://www.asetek.com/press-room/news/371-asetek-to-demonstrate-rackcdu-liquid-cooled-48u-hpc-cluster-at-sc12.html&quot;&gt;Asetek liquid-cooling cluster&lt;/a&gt; running &lt;a href=&quot;/news/asetek-performs-extreme-caedium-cfd-simulations-at-sc12&quot;&gt;Caedium CFD simulations&lt;/a&gt;. So for anyone who missed the show, enjoy the pictures below thanks to Wen-ming.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/sc12/sc12-hpc-cluster-manager.jpg&quot; alt=&quot;Asetek SC12 Cluster Running Caedium CFD Simulations&quot; width=&quot;500&quot; height=&quot;398&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Asetek Cluster Running Caedium CFD Simulations&lt;/strong&gt;&lt;/span&gt;Windows HPC Server 2008, HPC cluster manager heat map for  86 Caedium instances&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/caedium-cfd-simulations-at-asetek-sc12-booth&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/caedium-cfd-simulations-at-asetek-sc12-booth#comments</comments>
+ <pubDate>Mon, 19 Nov 2012 19:39:20 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1320 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>Rapid Motion Finish 4th at F1 in Schools World Finals</title>
+ <link>https://www.symscape.com/blog/rapid-motion-finish-4th-at-f1-in-schools-world-finals</link>
+ <description>&lt;p&gt;More F1 in Schools news - &lt;a href=&quot;http://teamrapidmotion.com/&quot;&gt;Rapid Motion&lt;/a&gt;, a joint team from Australia and Germany, finished 4th overall at the 2012 F1 in Schools World Finals held in Abu Dhabi. Using &lt;a href=&quot;/product/professional&quot;&gt;Caedium Professional&lt;/a&gt; CFD simulations the team analyzed the aerodynamics of various designs resulting in a 16% improvement in average speed over their baseline car.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/rapidmotion2012/rapid-motion-final.png&quot; alt=&quot;Rapid Motion Report on Final Design Iteration&quot; width=&quot;393&quot; height=&quot;600&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;Rapid Motion Report on Final Design Iteration&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/rapid-motion-finish-4th-at-f1-in-schools-world-finals&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/rapid-motion-finish-4th-at-f1-in-schools-world-finals#comments</comments>
+ <pubDate>Thu, 08 Nov 2012 21:20:59 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1303 at https://www.symscape.com</guid>
+</item>
+<item>
+ <title>F1 in Schools Team Revved Up Win State Finals</title>
+ <link>https://www.symscape.com/blog/f1-in-schools-team-revved-up-win-state-finals</link>
+ <description>&lt;p&gt;Congratulations go out to F1 in Schools team &lt;a href=&quot;http://revvedup.wix.com/f1inschools&quot;&gt;Revved Up&lt;/a&gt; who have qualified for the Australian F1 in Schools National Finals, after a convincing win at their state competition. Revved Up used &lt;a href=&quot;/product/professional&quot;&gt;Caedium Professional&lt;/a&gt; CFD simulations to help optimize the aerodynamics of their car and to good effect by all accounts!&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;inline inline-center&quot;&gt;&lt;img src=&quot;/files/pictures/misc/revvedup-win-aus-state2012.jpg&quot; alt=&quot;F1 in Schools Team: Revved Up&quot; width=&quot;500&quot; height=&quot;500&quot; /&gt;&lt;span class=&quot;caption&quot;&gt;&lt;strong&gt;F1 in Schools Team: Revved Up&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/blog/f1-in-schools-team-revved-up-win-state-finals&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+ <comments>https://www.symscape.com/blog/f1-in-schools-team-revved-up-win-state-finals#comments</comments>
+ <pubDate>Thu, 08 Nov 2012 15:42:52 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1302 at https://www.symscape.com</guid>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,437 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1255 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Rotating Paddle using Moving Reference Frame | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="1082.html" />
+<link rel="up" href="817.html" />
+<link rel="next" href="1257.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-1255 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="817.html">RANS Flow</a></div>                  <h1 class="title">Rotating Paddle using Moving Reference Frame</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1255" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on May 26, 2013 - 18:57        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Simulate an incompressible, steady-state, turbulent water flow within a mixer with a rotating paddle using a Moving Reference Frame (MRF) in pseudo 2D. View velocity vectors and monitor the torque on the paddle.</p>
+<p><img src="../files/tutorials/rotatingmixer/final.png" width="484" height="363" alt="Final State" /></p>
+<p>This tutorial is classed as <strong>advanced</strong> and you should consider completing other simpler RANS Flow tutorials as a prerequisite, such as <a href="818.html">&quot;Incompressible Flow Through a Pipe into a Box&quot;</a>.</p>
+<h3>Goals</h3>
+<p>In this tutorial, you will learn how to:</p>
+<ul>
+<li>Specify fluid conditions on a multiple-volume flow domain for an incompressible, steady-state, turbulent water flow simulation </li>
+<li>Specify boundary conditions on faces </li>
+<li>Use an angular velocity condition to specify a Moving Reference Frame </li>
+<li>Use the link tool and a cyclic condition to reduce the simulation to a quadrant </li>
+<li>Specify meshing parameters </li>
+<li>Generate velocity vectors </li>
+<li>Create a torque (moment) monitor </li>
+<li>Monitor residuals to determine flow simulation convergence </li>
+</ul>
+<h3>Assumptions</h3>
+<ol>
+<li>You have <a href="15.html">activated</a> the <a href="../product/rans.html">Caedium RANS Flow</a> add-on, or <a href="../product/professional.html">Caedium Professional</a>. </li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>. </li>
+<li>You have completed simpler RANS Flow tutorials. </li>
+<li>You have either:
+<ul>
+<li>Launched Caedium with the project file (<a href="../files/tutorials/mixer/mixer-geom.sym">mixer-geom.sym</a>) containing the geometry for this tutorial </li>
+<li>Created the geometry by following the tutorial <a href="1254.html">&quot;Mixer Quadrant&quot;</a> </li>
+</ul>
+</li>
+</ol>
+<p>The geometry within Caedium should appear as shown below.</p>
+<p><img src="../files/tutorials/rotatingmixer/geom-start.png" width="484" height="363" alt="Geometry" /></p>
+<p>The geometry for this tutorial is specially configured so that you can generate a multi-block hexahedra mesh one cell thick to perform a pseudo 2D simulation. The multiple volumes are connected through common faces that were configured in the geometry creation tutorial using the <strong>Faces-&gt;Connect</strong> tool in the <strong>Geometry</strong> <a href="../tutorials/essentials.html#toolpalette">Tool Palette</a>.</p>
+<h2 class="tutorial-heading">Group the Geometry</h2>
+<p>For more details on the advanced multi-selection technique used in this section see <a href="827.html">&quot;Camera View Control and Entity Selection&quot;</a>.</p>
+<h3>Group Volumes</h3>
+<p>Right-click on the <a href="../tutorials/essentials.html#viewwindow">View Window</a> (<strong>view</strong>) background, double-click <strong>sim-&gt;Volumes</strong> in the <strong>Select</strong> dialog, select <strong>Group </strong>from the menu, and select <strong>Properties</strong> from the menu.</p>
+<p>In the <a href="../tutorials/essentials.html#propertiespanel">Properties Panel</a>, select the Group tab <img alt="" src="../files/tutorials/shared/group-tab.png" /> and set <strong>Name</strong> to <strong>flow-domain</strong>. Press Enter on the keyboard to apply the changes to the Properties Panel.</p>
+<p><img src="../files/tutorials/rotatingmixer/flow-domain-group-props.png" width="228" height="249" alt="flow-domain Group Properties" /></p>
+<p>To shade the geometry faces, right-click on the View Window background, double-click <strong>sim-&gt;Faces</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel, turn off the <strong>Transparent</strong> property to make all faces visible (shaded).</p>
+<p><img src="../files/tutorials/rotatingmixer/faces-shaded.png" width="484" height="363" alt="Faces Shaded" /></p>
+<h3>Group Front and Back Faces</h3>
+<p>The 5 front faces are shown below in blue:</p>
+<p><img src="../files/tutorials/rotatingmixer/front-faces.png" width="400" height="295" alt="Front Faces" /></p>
+<p>In the View Window, ensure that only the background is selected (i.e., no geometry is selected). Hold down both the <strong>Shift</strong> key (to suppress the <strong>Select</strong> dialog) and the <strong>Ctrl</strong> key (to add pick to the current selection), and use successive right-clicks to select all the front faces (blue) as shown above. Be sure to confirm that you have selected a face by looking for all the face edges being highlighted. On the last selection, select <strong>Group</strong> from the menu. In the Properties Panel, select the Group tab and set the <strong>Name</strong> to <strong>front</strong>. The front group should now contain the following faces: <strong>face_98, face_103, face_107, face_111, face_115</strong>.</p>
+<p>The 5 back faces are shown below in green:</p>
+<p><img src="../files/tutorials/rotatingmixer/back-faces.png" width="400" height="295" alt="Back Faces" /></p>
+<p>Perform the same multi-select process to create the <strong>back</strong> group of faces (green): <strong>face_99, face_104, face_108, face_112, face_116</strong>.</p>
+<h3>Group Sides</h3>
+<p>The 12 side faces are shown below in red:</p>
+<p><img src="../files/tutorials/rotatingmixer/side-faces.png" width="400" height="295" alt="Side Faces" /></p>
+<p>Perform the multi-select process to create the <strong>sides </strong>group for faces (red): <strong>face_63, face_67, face_82, face_90, face_96, face_97, face_106, face_109, face_110, face_113, face_114, face_117</strong>.</p>
+<h3>Group Paddle</h3>
+<p>The 5 faces of the paddle are shown below in green:</p>
+<p><img src="../files/tutorials/rotatingmixer/paddle-faces.png" width="400" height="295" alt="Paddle Faces" /></p>
+<p>Perform the multi-select process to create the <strong>paddle</strong> group for faces (green): <strong>face_67, face_97, face_110, face_114, face_117</strong>.</p>
+<h3>Group Paddle Tips</h3>
+<p>The 2 faces of the paddle tips are shown below in blue:</p>
+<p><img src="../files/tutorials/rotatingmixer/tip-faces.png" width="400" height="295" alt="Paddle Tip Faces" /></p>
+<p>Perform the multi-select process to create the <strong>tips </strong>group for faces (blue): <strong>face_97, face_110</strong>.</p>
+<h2 class="tutorial-heading">Specify the Substance Settings</h2>
+<h3>Specify the Fluid Conditions</h3>
+<p>Select the <strong>Physics</strong> Tool Palette.</p>
+<p>Select <strong>Liquids-&gt;Water</strong>. The Properties Panel will show the default properties for water. To enable steady, incompressible, turbulent (viscous) flow the <strong>State-&gt;Rotational</strong> and <strong>State-&gt;Viscous </strong>properties should be set to <strong>Yes</strong> (their default values), and the <strong>State-&gt;Heat Transfer</strong>, <strong>State-&gt;Species</strong>, and <strong>State-&gt;Transient</strong> properties should to be set to <strong>No</strong> (their default values).</p>
+<p><img src="../files/tutorials/rotatingmixer/water-substance-props.png" width="286" height="602" alt="Water Tool Properties" /></p>
+<p>Drag and drop the <strong>Water</strong> tool onto a face of a volume, double-click the <strong>flow-domain</strong> group in the <strong>Select</strong> dialog, and select <strong>Done</strong> to set water as the fluid inside the flow domain.</p>
+<p><img src="../files/tutorials/rotatingmixer/substance-flow-domain-props.png" width="280" height="248" alt="Substance Properties" /></p>
+<h3>Set the Initial Velocity for the Simulation</h3>
+<p>With the flow domain already selected from the previous step, expand the <strong>Physics: Initial</strong> property in the Properties Panel and set <strong>U</strong> to <strong>Fixed Value</strong>. Set <strong>U: Fixed Value-&gt;Value</strong> to [<strong>0 0 0</strong>].</p>
+<p class="note">Initial values are used by the flow (simulation) solver to initialize its primary fields (e.g., pressure, velocity). For this simulation there is not a dominant Cartesian velocity direction, hence it is initialized to zero.</p>
+<p><img src="../files/tutorials/rotatingmixer/initial-u-props.png" width="280" height="247" alt="Initial U Properties" /></p>
+<h3>Set the Reference Velocity for the Simulation</h3>
+<p class="note">The reference properties are used by the flow solver, boundary conditions, and initial conditions. The reference velocity is used to initialize primary simulation variables, such as the turbulent scalar field k. </p>
+<p>For this simulation the paddle will be rotating around the Z-axis at 100 rpm = 600 degrees/s = 10.472 radians/s. Given V = omega * r, where V is the tangential velocity, omega is the angular velocity in radians/s, and r is the radius, we can calculate the reference velocity as the paddle tip speed = 10.472 * 0.4 = 4.189 m/s.</p>
+<p>Set <strong>Substance: Water-&gt;Properties-&gt;Phase: Single-&gt;Reference-&gt;U: Fixed Value-&gt;Value </strong>to [<strong>4.189 0 0</strong>].</p>
+<p><img src="../files/tutorials/rotatingmixer/ref-u-props.png" width="279" height="249" alt="Reference U Properties" /></p>
+<h3>Set Flow Solver Properties</h3>
+<p>In the Properties Panel, expand the <strong>Substance: Water-&gt;Solver: RANS Flow-&gt;Relaxation Factors</strong> property, and set <strong>p/rho</strong> to <strong>0.7</strong>.</p>
+<p class="note">Changing the default pressure/density relaxation factor in this example will help the simulation to converge more quickly. See <a href="934.html">&quot;Relaxation Factors in RANS Flow Solvers&quot;</a> for tips on setting relaxation factors.</p>
+<p><img src="../files/tutorials/rotatingmixer/relax-p-props.png" width="325" height="247" alt="Relaxation Factor p properites" /></p>
+<p>In the Properties Panel, expand the <strong>Substance: Water-&gt;Solver: RANS Flow-&gt;Solution </strong>property, and set <strong>Non Orthogonal Corrections</strong> to <strong>0</strong>.</p>
+<p class="note">The <strong>Non Orthogonal Corrections</strong> property controls the number of solver passes to counter non-orthogonal aligned cell neighbor centroids. This simulation will create a high quality hexahedra mesh so this correction is unnecessary.</p>
+<p><img src="../files/tutorials/rotatingmixer/non-orth-props.png" width="324" height="248" alt="Non Orthogonal Corrections Properties" /></p>
+<h2 class="tutorial-heading">Specify the Volume Condition</h2>
+<h3>Angular Velocity Condition for Rotating Paddle</h3>
+<p>Select the <strong>Volumes-&gt;Angular Velocity</strong> tool. In the Properties Panel, set <strong>Velocity</strong> to [<strong>0 0 600</strong>].</p>
+<p><img src="../files/tutorials/rotatingmixer/angular-vel-props.png" width="286" height="604" alt="Angular Velocity Tool Properties" /></p>
+<p>The paddle volume is shown below in green:</p>
+<p><img src="../files/tutorials/rotatingmixer/paddle-volume.png" width="400" height="295" alt="Paddle Volume" /></p>
+<p>Drag and drop the <strong>Angular Velocity</strong> tool onto the axes in the View Window and select <strong>Set Axes</strong>. Right-click on a face on the paddle annulus volume (green), double-click <strong>volume_21</strong> in the <strong>Select</strong> dialog, and select <strong>Done</strong>.</p>
+<p><img src="../files/tutorials/rotatingmixer/angular-vel-paddle-vol-props.png" width="262" height="248" alt="Angular Velocity Properties" /></p>
+<p class="note">The angular velocity condition applied to a volume is equivalent to a <strong>Moving Reference Frame (MRF)</strong>. It requires an axis of rotation if the rotation is not around the origin.</p>
+<h2 class="tutorial-heading">Specify the Boundary Conditions</h2>
+<p>By creating a one cell thick mesh and not creating any boundary conditions on the front and back face groups the flow solver will perform a pseudo 2D flow simulation.</p>
+<h3>Wall Conditions</h3>
+<p>Drag and drop the <strong>Faces-&gt;Wall</strong> tool onto a face of the sides group. Double-click <strong>sides </strong>in the <strong>Select</strong> dialog and select <strong>Done</strong> to create walls on the sides of the flow domain.</p>
+<p class="note">A wall is a solid surface through which fluid cannot flow.</p>
+<p><img src="../files/tutorials/rotatingmixer/wall-sides-props.png" width="239" height="247" alt="Wall Properties" /></p>
+<h3>Cyclic Condition</h3>
+<p>Select the <strong>Geometry</strong> Tool Palette.</p>
+<p>Select the <strong>Faces-&gt;Link </strong>tool. In the Properties Panel, set <strong>Transform</strong> to <strong>Rotate</strong>, and set <strong>Rotate</strong> to [<strong>0 0 90</strong>].</p>
+<p><img src="../files/tutorials/rotatingmixer/link-tool-properties.png" width="285" height="602" alt="Link Tool Properties" /></p>
+<p>The link source face (green) and the link target face (red) are shown below:</p>
+<p><img src="../files/tutorials/rotatingmixer/cyclic-faces.png" width="400" height="295" alt="Cyclic Faces" /></p>
+<p>Drag and drop the <strong>Link</strong> tool onto the axes in the View Window and select <strong>Set Axes</strong>. Right-click on the link source face (green), and double-click <strong>face_82</strong> in the <strong>Select</strong> dialog. Select <strong>Select/Deselect</strong> from the menu, right-click on the link target face (red), and double-click <strong>face_90</strong> in the <strong>Select</strong> dialog. Select <strong>Done</strong> to create the linked faces.</p>
+<p>With the linked faces still selected, select the <strong>Physics</strong> Tool Palette. Double click <strong>Faces-&gt;Cyclic</strong> and select <strong>Done</strong> to assign the linked faces as cyclics.</p>
+<p class="note">A cyclic transforms flow field variables (e.g., velocity) from a source face to a target face so that only a slice of an axi-symmetric simulation is required. Cyclic faces are configured as pairs and the transform applies from the source to the target.</p>
+<p><img src="../files/tutorials/rotatingmixer/cyclic-faces-props.png" width="241" height="249" alt="Cyclic Properties" /></p>
+<h3>Angular Velocity Condition for the Paddle Tips</h3>
+<p>Select the <strong>Faces-&gt;Angular Velocity</strong> tool. In the Properties Panel, set <strong>Velocity</strong> to [<strong>0 0 600</strong>].</p>
+<p>Drag and drop the <strong>Angular Velocity</strong> tool onto the axes in the View Window and select <strong>Set Axes</strong>. Right-click on a paddle tip face, double-click <strong>tips </strong>in the <strong>Select</strong> dialog, and select <strong>Done</strong>.</p>
+<p class="note">The paddle tips are outside the angular velocity condition applied to the paddle volume, hence the need to apply an explicit angular velocity condition to the tips.</p>
+<p><img src="../files/tutorials/rotatingmixer/angular-vel-tips-props.png" width="241" height="250" alt="Angular Velocity Properties" /></p>
+<h2 class="tutorial-heading">Specify Meshing Parameters</h2>
+<p>The automated meshing topology recognition system will identify which meshing algorithm is best suited to a given configuration. In this case the geometry was constructed to be compatible with the multi-block hexahedra meshing algorithms.</p>
+<p>You do not need to apply any volume or boundary condition prior to focusing on the meshing process - all that is required is an active Substance on your flow domain.</p>
+<p>First we will focus on the surface mesh to avoid the extra time required to create the volume mesh.</p>
+<p>To see individual surface mesh elements during the meshing process, right-click on the View Window background, double-click <strong>sim-&gt;Faces</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel, turn on the <strong>Transparent</strong> property and set <strong>Style</strong> to <strong>Flat</strong>.</p>
+<p>Select the <strong>Results</strong> Tool Palette. With all faces still selected from the previous operation select the <strong>Scalar Fields-&gt;A</strong> (area) tool, click <strong>Add A </strong>at the bottom of the Properties Panel and select <strong>Color Map</strong>.</p>
+<p>The request for the area color map will cause all the faces to be meshed.</p>
+<p><img src="../files/tutorials/rotatingmixer/a-colormap.png" width="484" height="363" alt="Area Color Map" /></p>
+<h3>Specify Accuracy</h3>
+<p>You can control the mesh resolution of a flow domain by using the <a href="723.html">Accuracy tool</a>, as shown in this section.</p>
+<h4>One Cell Thick Mesh</h4>
+<p>The straight hub edge used in this step is shown below in green:</p>
+<p><img src="../files/tutorials/rotatingmixer/hub-str-edge.png" width="400" height="295" alt="Hub Straight Edge" /></p>
+<p>To make a one cell thick flow domain, select the <strong>Physics</strong> Tool Palette and select the <strong>Special-&gt;Accuracy</strong> tool. In the Properties Panel set <strong>Accuracy</strong> to <strong>Custom</strong> and set <strong>Resolution</strong> to <strong>1</strong>. Drag and drop the <strong>Accuracy</strong> tool onto the straight hub edge (green), double-click <strong>edge_132</strong> in the <strong>Select</strong> dialog, and select <strong>Done</strong>.</p>
+<p><img src="../files/tutorials/rotatingmixer/1-cell-thick.png" width="484" height="363" alt="1 Cell Thick Mesh" /></p>
+<h4>Radial Mesh Resolution</h4>
+<p>The radial hub edge used in this step is shown below in green:</p>
+<p><img src="../files/tutorials/rotatingmixer/hub-radial-edge.png" width="400" height="295" alt="Hub Radial Edge" /></p>
+<p>Select the <strong>Special-&gt;Accuracy</strong> tool and then use the same procedure as in the previous section to set the <strong>Accuracy-&gt;Resolution = 40</strong> on the radial hub edge (<strong>edge_130</strong>).</p>
+<p><img src="../files/tutorials/rotatingmixer/radial-edge-40.png" width="484" height="363" alt="Radial Mesh" /></p>
+<h4>Tangential Mesh Resolution</h4>
+<p>The edges used in this step are shown below:</p>
+<p><img src="../files/tutorials/rotatingmixer/tangential-edges.png" width="400" height="295" alt="Tangential Edges" /></p>
+<p>Use the same procedure as in the previous section to set the following (be sure to select the <strong>Special-&gt;Accuracy</strong> tool first):</p>
+<ul>
+<li><strong>Resolution = 20</strong> on <strong>edge_212</strong> (red) </li>
+<li><strong>Resolution = 10</strong> on <strong>edge_199</strong> (green), <strong>edge_204</strong> (blue) </li>
+</ul>
+<p><img src="../files/tutorials/rotatingmixer/tangential-mesh.png" width="484" height="363" alt="Tangential Mesh" /></p>
+<h2 class="tutorial-heading">Generate Initial Flow Results</h2>
+<p>To better see the arrows (created in a subsequent operation), right-click on one of the front faces in the View Window, double-click <strong>front</strong> in the <strong>Select</strong> dialog, and then select <strong>Properties</strong> from the menu. In the Properties Panel, turn on the <strong>Transparent</strong> property.</p>
+<p>To color arrows by velocity magnitude on the front faces, select the <strong>Results </strong>Tool Palette and drag and drop <strong>Vector Fields-&gt;U</strong> (velocity) onto any front face. Double click <strong>front</strong> in the <strong>Select</strong> dialog and select <strong>Color Map</strong>.</p>
+<p>The request for the velocity color map will cause the volumes to be meshed.</p>
+<p><img src="../files/tutorials/rotatingmixer/velocity-colormap.png" width="484" height="363" alt="Velocity Magnitude Color Map" /></p>
+<p>To show velocity vectors colored by velocity magnitude on the front faces, select the <strong>Vector Fields-&gt;U</strong> tool, click <strong>Add U</strong> at the bottom of the Properties Panel and select <strong>Arrows</strong>.</p>
+<p>With an initial velocity of zero there will not be any visible arrows.</p>
+<p>In the View Legend, left-click on the title <strong>Arrows</strong> <img alt="" src="../files/tutorials/shared/arrows-legend.png" />, and in the Properties Panel set <strong>Scale</strong> to <strong>0.1</strong>.</p>
+<p><img src="../files/tutorials/rotatingmixer/velocity-arrows.png" width="484" height="363" alt="Velocity Arrows" /></p>
+<h2 class="tutorial-heading">Create Moment Monitor</h2>
+<p>Select the <strong>Vector Variables-&gt;M</strong> tool. In the Properties Panel set <strong>Scalar</strong> to <strong>Z</strong>.</p>
+<p><img src="../files/tutorials/rotatingmixer/m-props.png" width="187" height="497" alt="Moment Tool Properties" /></p>
+<p>Drag and drop the <strong>Vector Variables-&gt;M </strong>(moment) tool onto an edge of the paddle. Double-click the <strong>paddle </strong>in the <strong>Select</strong> dialog and select <strong>Monitor</strong>.</p>
+<p>Drag and drop the <strong>M Monitor</strong> tab over to the right-hand edge of the Caedium application window to split the window into two parts as shown below.</p>
+<p><img src="../files/tutorials/rotatingmixer/m-monitor.png" width="484" height="363" alt="Moment Monitor" /></p>
+<p>Left-click <strong>paddle</strong> in the <strong>M Monitor</strong> Legend to select it. In the Properties Panel, set the <strong>Symbol</strong> to <strong>None</strong>.</p>
+<p><img alt="M Monitor Properties" src="../files/tutorials/rotatingmixer/m-monitor-props.png" width="187" height="248" /></p>
+<h2 class="tutorial-heading">Create Residuals Monitor</h2>
+<p>Left-click in the View Window to give it focus. Drag and drop the <strong>Special-&gt;Residuals</strong> tool onto any edge. Double-click <strong>flow-domain</strong> in the <strong>Select</strong> dialog and select <strong>Monitor</strong> to create the residuals monitor.</p>
+<p>Drag and drop the <strong>Residuals</strong> tab over to the right-hand edge of the Caedium application window to split the window into three parts as shown below.</p>
+<p><img src="../files/tutorials/rotatingmixer/residuals-monitor.png" width="484" height="363" alt="Residuals Monitor" /></p>
+<h2 class="tutorial-heading">Run the Flow Solver</h2>
+<p class="note">The number of flow (simulation) solver iterations is determined by multiplying the number of simulation time-steps (default = 5) by the number of iterations per simulation time-step (default = 100). After each simulation time-step (equivalent to 100 iterations by default) the results will be refreshed.</p>
+<p>For this simulation you will increase the number of simulation time-steps to 15, for a total of 1500 iterations.</p>
+<p>Right-click on the View Window background, double-click <strong>sim</strong>, and select <strong>Properties</strong> from the menu. Select the Simulation tab <img alt="" src="../files/tutorials/shared/simulation-tab.png" /> in the Properties Panel and set <strong>Time-&gt;Duration</strong> to <strong>15</strong>.</p>
+<p><img src="../files/tutorials/rotatingmixer/duration-props.png" width="228" height="247" alt="Duration Properties" /></p>
+<p>In the <strong>Home</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> click the <strong>Run</strong> button <img alt="" src="../files/tutorials/shared/play.png" /> to run the flow solver.</p>
+<p class="note">If you wanted to interrupt the flow solver, you would re-click (toggle) the <strong>Run</strong> button; the solver would then stop at the end of the current simulation time-step.</p>
+<p>Let the solver complete its run. Note the updates of the velocity arrows, the moment monitor, and the residuals monitor as the simulation progresses.</p>
+<p><img src="../files/tutorials/rotatingmixer/final.png" width="484" height="363" alt="Final State" /></p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="1082.html" class="page-previous" title="Go to previous page">‹ Flow Over a CO2 Dragster</a>
+                    <a href="817.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="1257.html" class="page-next" title="Go to next page">Transient Water and Air Flow in a Tank ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="expanded active-trail"><a href="817.html">RANS Flow</a><ul class="menu"><li class="leaf first"><a href="818.html">Incompressible Flow Through a Pipe into a Box</a></li>
+<li class="leaf"><a href="816.html">Incompressible Transient Flow with Heat Transfer</a></li>
+<li class="leaf"><a href="819.html">Transonic Flow Over the NACA 0012 Airfoil</a></li>
+<li class="leaf"><a href="831.html">Flow Over a Rotating Wheel with Moving Ground</a></li>
+<li class="leaf"><a href="1082.html">Flow Over a CO2 Dragster</a></li>
+<li class="leaf active-trail"><a href="1255.html" class="active">Rotating Paddle using Moving Reference Frame</a></li>
+<li class="leaf"><a href="1257.html">Transient Water and Air Flow in a Tank</a></li>
+<li class="leaf"><a href="1718.html">Conjugate Heat Transfer for a Heat Sink</a></li>
+<li class="leaf last"><a href="1281.html">Flow Over a Double-Sided Membrane</a></li>
+</ul></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="collapsed last"><a href="../tips.html">Tips</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1255 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:45 GMT -->
+</html>

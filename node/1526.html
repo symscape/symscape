@@ -1,0 +1,347 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1526 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Questions about possible singularity and compressible flow | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-forum page-node-1526 section-node one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../forum.html">Forums</a> › <a href="../forum/46.html">Questions</a></div>                  <h1 class="title">Questions about possible singularity and compressible flow</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1526" class="node node-type-forum clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by PeterG on September 11, 2014 - 12:40        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_46 first last"><a href="../forum/46.html" rel="tag" title="Get answers to product (e.g., Caedium) questions. View Ratings">Questions</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>I have a simulation with external flow where the air velocities vary from a low of zero (still air) to ~ 500-600 ft/sec in places. Simply to get things going, I have been running the solver in incompressible mode but want the best accuracy. Most of the the fluid flow that is generating the lift is at &gt; 0.3 Mach. For such a range of velocities is it best to run the solver in incompressible mode or compressible mode? For Caedium, Is there any rule of thumb abut the difference in accuracy (lift, velocity values)  with solving being done in incompressible mode, versus in subsonic compressible mode?.</p>
+<p>When I have tried to run the solver in compressible mode, it fails on the first iteration. Could that be because my initial velocity for the simulation is 0, 0, 0, or is it more likely that something else is going on, i.e., compressive flow solving is simply less robust than incompressible flow solving? Is there any rule of thumb for reducing the subsonic compressible flow relaxation factors to see if that is the problem?</p>
+<p>Thanks for your help. Despite my questions I have really benefitted from Caedium and have gotten a ton of useful information from it regarding the design of my project.</p>
+  <div class="forum-topic-navigation clear-block">
+          <a href="1487.html" class="topic-previous" title="Go to previous forum topic">‹ CREATING AND KEEPING NEW SUBSTANCES</a>
+              <a href="1524.html" class="topic-next" title="Go to next forum topic">Streamline question ›</a>
+      </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+  
+  <a id="comment-2058"></a>
+<div class="comment comment-published first odd clearfix">
+  
+      <h3 class="title">
+      <a href="1526.html#comment-2058" class="active">Compressible solver</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on September 11, 2014 - 13:49.  </div>
+
+  <div class="content">
+    <p>It sounds like you'll have subsonic compressible flow, so for accuracy you do want to run with <strong>State:Gas-&gt;Compressible = Subsonic</strong>. For an idea of the differences in accuracy between running incompressible for a compressible flow try experimenting with a simple case such as the tutorial <a href="819.html">"Transonic Flow Over the NACA 0012 Airfoil"</a>.</p>
+<p>Your velocity initialization to zero could be a problem, so try using a finite value.</p>
+<p>Compressible simulations are particularly sensitive to the 'p' (pressure) relaxation factor, so try reducing it successively by a factor of 2. Note that this then will extend your turnaround time to convergence proportionately. Typically you can expect 1000s of iterations before you see convergence.</p>
+<p>Yes, the incompressible solver is more robust than the compressible solver. For compressible simulations you have to be sure your reference values and boundary conditions are consistent. All your inlet conditions for the subsonic compressible solver have to also be subsonic.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2061"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1526.html#comment-2061" class="active">That got it running but it fails with reasonable velocities</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by PeterG on September 17, 2014 - 10:39.  </div>
+
+  <div class="content">
+    <p>This was very helpful!</p>
+<p>After changing my reference velocity from 0 to 0.001 ft/sec, the solver ran. However, in compressible mode the solver fails within several hundred iterations even with mesh refinements and decreasing the relaxation factors. The error message is this:</p>
+<p>“Warning:<br />
+volume_39 [www.1519.5] RANS Flow: Failed<br />
+Unexpected process exit.<br />
+[1]<br />
+[1]<br />
+[1] --&gt; FOAM FATAL ERROR:<br />
+[1] Maximum number of iterations exceeded<br />
+[1]<br />
+[1]     From function thermo::T(scalar f, scalar T0, scalar (thermo::*F)(const scalar) const, scalar (thermo::*dFdT)(const scalar) const, scalar (thermo::*limit)(const scalar) const) const<br />
+[1]     in file /Users/rjs/projects/of/2.2/OpenFOAM-2.2.x/src/thermophysicalModels/specie/lnInclude/thermoI.H at line 76.<br />
+[1]<br />
+FOAM parallel run aborting<br />
+[1]<br />
+--------------------------------------------------------------------------<br />
+MPI_ABORT was invoked on rank 1 in communicator MPI_COMM_WORLD<br />
+with errorcode 1.</p>
+<p>NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.<br />
+You may or may not see output from other processes, depending on<br />
+exactly when Open MPI kills them.<br />
+--------------------------------------------------------------------------<br />
+--------------------------------------------------------------------------<br />
+mpiexec has exited due to process rank 1 with PID 27975 on<br />
+node Peters-MacBook-Pro.local exiting improperly. There are two reasons this could occur:</p>
+<p>1. this process did not call "init" before exiting, but others in<br />
+the job did. This can cause a job to hang indefinitely while it waits<br />
+for all processes to call "init". By rule, if one process calls "init",<br />
+then ALL processes must call "init" prior to termination.</p>
+<p>2. this process called "init", but exited without calling "finalize".<br />
+By rule, all processes that call "init" MUST call "finalize" prior to<br />
+exiting or it will be considered an "abnormal termination"</p>
+<p>This may have caused other processes in the application to be<br />
+terminated by signals sent by mpiexec (as reported here)."<br />
+--------------------------------------------------------------------------</p>
+<p>Prior to the solver failing, the residuals often appear to be converging nicely and invariably, the “e” residual is the one that spikes.</p>
+<p>The same simulation, in incompressible mode will run for thousands of iterations. A bit after 3,000 iterations all residuals settle into a rhythmic, oscillatory pattern between 0.0001 and 1e-7 that repeats itself every ~ 2,200 iterations. I understand that this is not true convergence. When I apply the U vector field to all faces I am not getting any areas with unusually high velocities, and with the lowest E ratio value being ~ 0.33 and the lowest Vol ratio being ~ 0.12, I think the mesh is okay.</p>
+<p>If relevant, for the purposes of my simulation, I do not need to consider heat transfer other than for its direct effects on the fluid flow.</p>
+<p>What does this error message mean? Many thanks for your help.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2062"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="1526.html#comment-2062" class="active">Compressible flow needs to solve for energy</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on September 17, 2014 - 11:58.  </div>
+
+  <div class="content">
+    <p>Compressible flow is tightly coupled to the energy (temperature) of the system, so it is not an option to switch off heat transfer. The compressible flow solver is less robust than the incompressible flow solver as you are seeing. Assuming your setup (mesh and boundary conditions) is viable then the main control you have is to reduce the relaxation factors - I suggest reducing 'p' (pressure) and 'e' (energy).</p>
+<p>The first few lines of the warning indicate that the energy equation is corrupt. The references to MPI are just describing how the main process stopped.</p>
+<p>The problem could still either be geometry or mesh related. Try setting the <strong>Substance-&gt;Solver-&gt;Iterations = 10</strong> and then observe the progress of velocity and pressure contours just prior to the solver stopping. Look for regions of unrealistic values.</p>
+<p>Check that your <strong>Substance-&gt;Phase-&gt;Reference-&gt;Omega</strong> (or <strong>Epsilon</strong> dependent on your turbulence model)<strong>:Turbulent Length Scale-&gt;Length Scale</strong> is representative of your inlet size - especially for small areas. If you have multiple inlets with different sizes then you may need to override the reference value locally in the specific boundary condition as in the section "Inlet at the Nozzle" in the tutorial <a href="1082.html">"Flow Over a CO2 Dragster"</a>.</p>
+<p>Another option to try is to increase (by doubling) <strong>Substance-&gt;Solution-&gt;Non-Orthogonal Correctors</strong> and <strong>U Correctors</strong>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<div class="indented"><a id="comment-2063"></a>
+<div class="comment comment-published last even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="1526.html#comment-2063" class="active">Thank you. This was very</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by PeterG on September 18, 2014 - 22:04.  </div>
+
+  <div class="content">
+    <p>Thank you. This was very helpful and enabled me to solve my problem.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div></div></div></div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1526 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:30:11 GMT -->
+</html>

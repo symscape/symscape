@@ -1,0 +1,366 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/how-to-lose-f1-races-with-a-wind-tunnel-and-cfd by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:28:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>How to Lose F1 Races with a Wind Tunnel and CFD | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-how-to-lose-f1-races-with-a-wind-tunnel-and-cfd section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">How to Lose F1 Races with a Wind Tunnel and CFD</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1193" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on February 27, 2012 - 20:02        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>I recently came across a blog post <a href="http://www.engineeringexchange.com/profiles/blogs/how-to-lose-races-with-cfd">&quot;How to lose races with CFD&quot;</a> [source: <a href="http://blog.pointwise.com/2012/02/24/this-week-in-cfd-40/">Another Fine Mesh</a>] related to the <a href="new-f1-team-uses-cfd-only.html">CFD-only strategy</a> pursued by the <a href="http://en.wikipedia.org/wiki/Marussia_F1">Marussia Formula 1 Team</a> (formerly <a href="http://en.wikipedia.org/wiki/Virgin_Racing">Virgin Racing</a>) during the <a href="http://en.wikipedia.org/wiki/2010_Formula_One_season">2010</a> and <a href="http://en.wikipedia.org/wiki/2011_Formula_One_season">2011</a> F1 seasons. It seems such an easy conclusion to make, right? During its first 2 F1 seasons the Marussia team garnered a lot of publicity thanks to their CFD-only (no wind tunnel testing) strategy and during that period they didn't win a race, therefore CFD must lose races, right? Not so fast.</p>
+<p>The fact is during the 2010 and 2011 F1 seasons only 3 teams out of 12 won any races - those teams being Red Bull, McLaren, and Ferarri. So 75% (9/12), the vast majority, of F1 teams consistently lost races and of those teams 89% (8/9) used a combination of a wind tunnel&#160; (WT) and CFD to develop their cars. Therefore, correcting for the faulty logic of the headline writers, we could say that WT + CFD loses F1 races - the correlation is much higher at 89% for WT + CFD, compared to 11% (1/9) for CFD only.</p>
+<p>I think the headline writers are really trying to highlight the fact that Marussia didn't only lose races (plenty of teams do that), but the team's performance was particularly poor in that it hadn't scored any constructors points since entering F1 in 2010. But this was also true for 2 other teams, <a href="http://en.wikipedia.org/wiki/Team_Lotus_(2010–11)">Team Lotus</a> and <a href="http://en.wikipedia.org/wiki/HRT_F1">HRT</a>. It's interesting to note that Lotus and HRT both entered F1 in 2010 at the same time as Marussia. Turning to statistics again, we arrive at a 67% (2/3) correlation between WT + CFD to score zero constructors points compared with a 33% (1/3) correlation with CFD only. Still not a favorable correlation between CFD only and poor race results.</p>
+<p>I think the correlation between results and WT + CFD compared to the correlation between results and CFD-only is dwarfed by the <a href="is-cfd-flawed.html">correlation between results and team funding</a>. I don't think the Marussia CFD-only strategy can be judged in isolation from the fact that Marussia, along with Lotus and HRT, were all poorly funded&#160; teams in F1 terms. This means they can't attract the best aerodynamicists. Until a top (i.e., well funded) team like Red Bull, McLaren, or Ferarri with proven race winning aerodynamicists tries a CFD-only strategy then I don't think we can pass judgment on whether CFD only loses races. However, this is unlikely to happen any time soon, in the same way no F1 team would consider a WT-only strategy, because WT + CFD together are such a <a href="wind-tunnels-and-cfd.html">formidable combination</a>.</p>
+<p>In my opinion, the Marussia CFD-only experiment proves nothing other than under-funded teams struggle in F1.</p>
+<p>The great thing about racing is that the results will speak for themselves. It will be interesting to watch Marussia in the new 2012 F1 season and see if there is a marked improvement in their results now they have adopted a <a href="new-strategy-cfd-wind-tunnel.html">WT + CFD strategy</a> while still appearing to suffer from restricted funding.</p>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-1343"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="how-to-lose-f1-races-with-a-wind-tunnel-and-cfd.html#comment-1343" class="active">Marussia found that their</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on February 28, 2012 - 05:53.  </div>
+
+  <div class="content">
+    <p>Marussia found that their cars lacked performance in high-speed corners<br />
+=&gt;Their CFD / CFD is currently not adequate to simulate F1 cars in in high-speed corners</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1344"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="how-to-lose-f1-races-with-a-wind-tunnel-and-cfd.html#comment-1344" class="active">So said the team</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on February 28, 2012 - 09:50.  </div>
+
+  <div class="content">
+    <p><cite>"CFD is currently not adequate to simulate F1 cars in in high-speed corners"</cite></p>
+<p>So said the team's new technical consultant <a href="http://en.wikipedia.org/wiki/Pat_Symonds">Pat Symonds</a> - do you believe it? So with a little tweak we will see a competitive team in 2012? Great news for sponsors then. Could there be a conflict of interest in what teams say (to attract/retain sponsors) and what is actually happening?</p>
+<p>If high-speed corners were the problem and assuming low speed corners were fine then we should have seen markedly better results at Monaco, but didn't.</p>
+<p>It's easier to make a scapegoat of CFD and the <a href="http://www.wirthresearch.com/">newly departed CFD team</a>, than admit the reality of funding in F1.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1346"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="how-to-lose-f1-races-with-a-wind-tunnel-and-cfd.html#comment-1346" class="active">Here are a couple of</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://www.hegedusaero.com/" rel="nofollow">Martin Hegedus</a> (not verified) on March 1, 2012 - 11:24.  </div>
+
+  <div class="content">
+    <p>Here are a couple of questions which probably show my ignorance.  Who supplies the aerodynamicst?  From your blog it sounds like the team does and not the analysis house.  And, who interprets the results, determines uncertainties in the modeling of the physics, and determines the margins?  Is it the analysis house/CFDer or the team?  It sounds, at least to me now, that running CFD and determining physics+consequences is uncoupled.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1347"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="how-to-lose-f1-races-with-a-wind-tunnel-and-cfd.html#comment-1347" class="active">Aerodynamicist is decoupled from CFD</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Richard Smith on March 1, 2012 - 11:54.  </div>
+
+  <div class="content">
+    <p>Typically F1 teams perform all aerodynamic design and CFD in house. Whether the aerodynamicists in Marussia's case were employed directly or through Wirth I don't know.</p>
+<p>Often in an F1 team the aerodynamicist is decoupled from the CFD and the wind tunnel. I.e., the aerodynamicist doesn't perform the simulation or test. However, they will likely work very closely with the CFD and wind tunnel personnel to determine <cite>"physics + consequences"</cite>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1348"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="how-to-lose-f1-races-with-a-wind-tunnel-and-cfd.html#comment-1348" class="active">Sorry, I don&#039;t mean to</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://www.hegedusaero.com/" rel="nofollow">Martin Hegedus</a> (not verified) on March 1, 2012 - 12:42.  </div>
+
+  <div class="content">
+    <p>Sorry, I don't mean to belabor this.  But I come from a background where aerodynamics and CFD are highly coupled (a small aeronautical consulting company where the aerodynamicist is the CFDer).  So, this is the way I think.  Therefore, in the case at hand, it is not likely that the CFD modeling was bad, i.e. it fell out of expectations of a knowledgeable aerodynamicist.  I assume the results are what they are.  However, there is a higher probability that aerodynamicist was not (not sure of a nice way to say this) up to the task.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1611"></a>
+<div class="comment comment-published last even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="how-to-lose-f1-races-with-a-wind-tunnel-and-cfd.html#comment-1611" class="active">CFD at Marussia</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Richard Smith on September 20, 2012 - 07:38.  </div>
+
+  <div class="content">
+    <p>Marussia's technical consultant, Pat Symonds talks to the BBC about IT, including CFD, at <a href="http://www.bbc.com/news/technology-19623281">"Formula 1's IT crowd: Software engineers power Marussia"</a>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/how-to-lose-f1-races-with-a-wind-tunnel-and-cfd by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:28:25 GMT -->
+</html>

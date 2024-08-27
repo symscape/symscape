@@ -1,0 +1,365 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1254 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Mixer Quadrant | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="830.html" />
+<link rel="up" href="428.html" />
+<link rel="next" href="1256.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-1254 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="428.html">Builder</a></div>                  <h1 class="title">Mixer Quadrant</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1254" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on May 26, 2013 - 14:18        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Create an axi-symmetric quadrant of the <strong>fluid region</strong> around a mixer with paddles and baffles. The geometry is composed of multiple topological 6-sided blocks, often referred to as a multi-block topology. Each block can be meshed with structured hexahedra.</p>
+<p><img src="../files/tutorials/mixer/mixer.png" width="484" height="363" alt="Mixer Quadrant" /></p>
+<h3>Goals</h3>
+<p>In this tutorial, you will learn how to:</p>
+<ul>
+<li>Create cylinder sectors </li>
+<li>Create boxes </li>
+<li>Copy geometry </li>
+<li>Transform geometry </li>
+<li>Subtract one volume from another </li>
+<li>Decompose one volume with another<br />
+<!--EndFragment--><!--EndFragment--></li>
+<li>Connect faces to form a multi-volume flow domain </li>
+</ul>
+<h3>Assumptions</h3>
+<ol>
+<li>You have <a href="15.html">activated</a> the <a href="../product/builder.html">Caedium Builder</a> add-on or <a href="../product/professional.html">Caedium Professional</a>. </li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>. </li>
+</ol>
+<h2 class="tutorial-heading">Create Baffle Cylinder Quadrant</h2>
+<p>Select the <strong>Geometry</strong> <a href="../tutorials/essentials.html#toolpalette">Tool Palette</a>.</p>
+<p>Select the <strong>Volumes-&gt;Cylinder</strong> tool. In the <a href="../tutorials/essentials.html#propertiespanel">Properties Panel</a>, turn off the <strong>Decompose</strong> property, set the <strong>Radius</strong> to <strong>0.6</strong>, set the <strong>Sector</strong> to <strong>90</strong>, and set the <strong>Z Height</strong> to <strong>0.1</strong>. Press Enter on the keyboard to apply the changes to the Properties Panel.</p>
+<p><img src="../files/tutorials/mixer/baffle-cylinder-props.png" width="227" height="496" alt="Baffle Cylinder Properties" /></p>
+<p>Drag and drop the <strong>Volumes-&gt;Cylinder</strong> tool onto the <a href="../tutorials/essentials.html#viewwindow">View Window</a> (<strong>view</strong>). Select <strong>Done</strong> to create a cylinder quadrant (<strong>volume</strong>).</p>
+<p class="note">All geometry is created at the origin by default.</p>
+<p>In the View Window rotate the cylinder quadrant until it is in the orientation shown below.</p>
+<p><img src="../files/tutorials/mixer/baffle-cylinder.png" width="484" height="363" alt="Baffle Cylinder" /></p>
+<h2 class="tutorial-heading">Create and Translate Axes</h2>
+<p>Axes can be translated to any location in the View Window. You can then create geometry that is centered on those axes rather than at the origin (the default location).</p>
+<p>Drag and drop the <strong>Others-&gt;Axes</strong> tool onto the View Window. Double-click <strong>sim</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong> to create axes (<strong>axes</strong>).</p>
+<p class="note">You will need to scroll down through the <strong>Geometry</strong> Tool Palette to find the <strong>Axes</strong> tool.</p>
+<p><img src="../files/tutorials/mixer/axes.png" width="484" height="363" alt="Axes" /></p>
+<p>To translate the axes to a new location in the View Window, select the <strong>Transforms-&gt;Translate</strong> tool and in the Properties Panel set <strong>Translate </strong>to [<strong>0 0 -0.05</strong>].</p>
+<p><img src="../files/tutorials/mixer/translate-props.png" width="188" height="497" alt="Translate Properties" /></p>
+<p>Drag the <strong>Transforms-&gt;Translate</strong> tool and drop it directly onto the axes you created in the View Window. Select <strong>Done</strong> to translate the axes.</p>
+<p><img src="../files/tutorials/mixer/axes-translated.png" width="484" height="363" alt="Axes Translated" /></p>
+<p>The axes will now be visible at their new location in the View Window.</p>
+<h2 class="tutorial-heading">Create Middle Cylinder Quadrant</h2>
+<p>Select the <strong>Volumes-&gt;Cylinder</strong> tool. In the Properties Panel, set the <strong>Radius</strong> to <strong>0.5 </strong>and set <strong>Z Height</strong> to <strong>0.2</strong>.</p>
+<p>Drag and drop the <strong>Volumes-&gt;Cylinder</strong> tool directly onto the axes you created. Select <strong>Done</strong> to generate a cylinder quadrant (<strong>volume_1</strong>).</p>
+<p>To shade the geometry faces, right-click on the View Window background, double-click <strong>sim-&gt;Faces</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel, turn off the <strong>Transparent</strong> property to make all faces visible (shaded).</p>
+<p><img src="../files/tutorials/mixer/middle-quad.png" width="484" height="363" alt="Shaded Faces" /></p>
+<p>Shading the faces in the simulation will make it easier to select volumes for the next operation.</p>
+<h2 class="tutorial-heading">Decompose the Baffle Cylinder with the Middle Cylinder</h2>
+<p>Drag and drop the <strong>Booleans-&gt;Decompose</strong> tool directly onto a face of the baffle cylinder. Double-click <strong>volume</strong> in the <strong>Select</strong> dialog to select the baffle cylinder. Select <strong>Select/Deselect</strong> from the menu, right-click on a face of the middle cylinder. Double-click <strong>volume_1</strong> to select the middle cylinder. Select <strong>Done</strong> to decompose the baffle cylinder with the middle cylinder to produce the baffle annulus quadrant (<strong>volume_2</strong>) and a new middle cylinder quadrant (<strong>volume_3</strong>).</p>
+<p><img src="../files/tutorials/mixer/baffle-annulus.png" width="484" height="363" alt="Baffle Annulus" /></p>
+<h2 class="tutorial-heading">Create Paddle Cylinder Quadrant</h2>
+<p>Select the <strong>Volumes-&gt;Cylinder</strong> tool. In the Properties Panel, set <strong>Radius</strong> to <strong>0.4</strong>.</p>
+<p>Drag and drop the <strong>Volumes-&gt;Cylinder</strong> tool directly onto the axes. Select <strong>Done</strong> to generate the paddle cylinder quadrant (<strong>volume_4</strong>). </p>
+<p>To shade the geometry faces, right-click on the View Window background, double-click <strong>sim-&gt;Faces</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel, turn off the <strong>Transparent</strong> property to make all faces visible (shaded). </p>
+<p><img src="../files/tutorials/mixer/paddle-quad.png" width="484" height="363" alt="Paddle Quadrant" /></p>
+<h2 class="tutorial-heading">Decompose the Middle Cylinder with the Paddle Cylinder</h2>
+<p>Drag and drop the <strong>Booleans-&gt;Decompose</strong> tool directly onto a face of the middle cylinder. Double-click <strong>volume_3</strong> in the <strong>Select</strong> dialog to select the middle cylinder. Select <strong>Select/Deselect</strong> from the menu, right-click on a face of the paddle cylinder. Double-click <strong>volume_4</strong> to select the paddle cylinder. Select <strong>Done</strong> to decompose the middle cylinder with the paddle cylinder to produce a middle annulus quadrant (<strong>volume_5</strong>) and a new paddle cylinder quadrant (<strong>volume_6</strong>). </p>
+<p><img src="../files/tutorials/mixer/middle-annulus.png" width="484" height="363" alt="Middle Annulus" /></p>
+<h2 class="tutorial-heading">Create Hub Cylinder Quadrant</h2>
+<p>Select the <strong>Volumes-&gt;Cylinder</strong> tool. In the Properties Panel, set <strong>Radius</strong> to <strong>0.1</strong>.</p>
+<p>Drag and drop the <strong>Volumes-&gt;Cylinder</strong> tool directly onto the axes. Select <strong>Done</strong> to generate the hub cylinder quadrant (<strong>volume_7</strong>). </p>
+<p>To shade the geometry faces, right-click on the View Window background, double-click <strong>sim-&gt;Faces</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel, toggle the <strong>Transparent</strong> property on then off to make all faces visible (shaded). </p>
+<p><img src="../files/tutorials/mixer/hub.png" width="484" height="363" alt="Hub" /></p>
+<h2 class="tutorial-heading">Subtract the Hub Cylinder from the Paddle Cylinder</h2>
+<p>Drag and drop the <strong>Booleans-&gt;Subtract</strong> tool directly onto a face of the paddle cylinder. Double-click <strong>volume_6</strong> in the <strong>Select</strong> dialog to select the paddle cylinder. Select <strong>Select/Deselect</strong> from the menu, right-click on a face of the hub cylinder. Double-click <strong>volume_7</strong> to select the hub cylinder. Select <strong>Done</strong> to subtract the hub cylinder from the paddle cylinder to produce the paddle annulus quadrant (<strong>volume_8</strong>). </p>
+<p><img src="../files/tutorials/mixer/paddle-annulus.png" width="484" height="363" alt="Paddle Annulus" /></p>
+<h2 class="tutorial-heading">Create Baffle-Paddle Box</h2>
+<p>Select the <strong>Volumes-&gt;Box</strong> tool. In the Properties Panel, set <strong>Lengths</strong> to [<strong>0.7 0.02 0.2</strong>].</p>
+<p><img src="../files/tutorials/mixer/box-props.png" width="218" height="497" alt="Box Properties" /></p>
+<p>Drag and drop the <strong>Volumes-&gt;Box</strong> tool directly onto the axes. Select <strong>Done</strong> to generate a box (<strong>volume_9</strong>).</p>
+<p><img src="../files/tutorials/mixer/paddle-box.png" width="484" height="363" alt="Paddle Box" /></p>
+<h2 class="tutorial-heading">Transform a Copy of the Baffle-Paddle Box</h2>
+<p>Right-click on an edge of the baffle-paddle box in the View Window. Double-click <strong>volume_9</strong> in the <strong>Select</strong> dialog to select the baffle-paddle box, and select the <strong>Copy</strong> option. </p>
+<p>In the <strong>Home</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> click <strong>Paste</strong> <img alt="" src="../files/tutorials/shared/paste.png" /> to paste a copy (<strong>volume_10</strong>) of the baffle-paddle box at the same location as the original.</p>
+<p>To rotate the baffle-paddle box copy (<strong>volume_10</strong>), select the <strong>Transforms-&gt;Rotate</strong> tool. In the Properties Panel set <strong>Rotate</strong> to <strong>[0 0 90]</strong>.</p>
+<p><img src="../files/tutorials/mixer/rotate-props.png" width="186" height="496" alt="Rotate Properties" /></p>
+<p>Drag and drop the <strong>Transforms-&gt;Rotate </strong>tool directly onto the axes and select <strong>Set Axes</strong>. Right-click on an edge of the baffle-paddle box copy in the View Window. Double-click <strong>volume_10</strong> in the <strong>Select</strong> dialog to select the baffle-paddle box copy and select <strong>Done</strong> to rotate the baffle-paddle box copy around the axes.</p>
+<p><img src="../files/tutorials/mixer/copied-paddle-box.png" width="484" height="363" alt="Copied Paddle Box" /></p>
+<p>To translate the baffle-paddle box copy (<strong>volume_10</strong>), select the <strong>Transforms-&gt;Translate </strong>tool. In the Properties Panel set <strong>Translate </strong>to <strong>[0.02 0 0]</strong>. With the baffle-paddle box copy still selected from the previous operation click <strong>Add Translate</strong> at the bottom of the Properties Panel and select <strong>Done</strong> to translate the baffle-paddle box copy.</p>
+<p>To shade the geometry faces, right-click on the View Window background, double-click <strong>sim-&gt;Faces</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel, toggle the <strong>Transparent</strong> property on then off to make all faces visible (shaded). </p>
+<p><img src="../files/tutorials/mixer/paddle-boxes-shaded.png" width="484" height="363" alt="Shaded Faces" /></p>
+<h2 class="tutorial-heading">Create Baffles</h2>
+<p>Select the <strong>Booleans-&gt;Subtract</strong> tool. In the Properties Panel, turn on the <strong>Keep Operands</strong> property.</p>
+<p>Drag and drop the <strong>Booleans-&gt;Subtract</strong> tool directly onto a face of the baffle annulus. Double-click <strong>volume_2</strong> in the <strong>Select</strong> dialog to select the baffle annulus. Select <strong>Select/Deselect</strong> from the menu, right-click on a face on the original baffle-paddle box. Double-click <strong>volume_9</strong> to select the original baffle-paddle box. Select <strong>Select/Deselect</strong> from the menu, right-click on a face on the copied baffle-paddle box. Double-click <strong>volume_10</strong> to select the copied baffle-paddle box. Select <strong>Done</strong> to produce the final baffle annulus quadrant (<strong>volume_11</strong>).</p>
+<p>Right-click on a shaded face of the original baffle annulus in the View Window. Double-click <strong>volume_2</strong> in the <strong>Select</strong> dialog to select the original baffle annulus, and select the <strong>Delete </strong>option.</p>
+<p><img src="../files/tutorials/mixer/final-baffle-annulus.png" width="484" height="363" alt="Complete Baffle Annulus" /></p>
+<h2 class="tutorial-heading">Create Paddles</h2>
+<p>Perform the same sequence of operations as for the final baffle annulus quadrant creation in the previous section, except start with the paddle annulus quadrant (<strong>volume_8</strong>) instead of the baffle annulus quadrant. The end result will be a final paddle annulus (<strong>volume_12</strong>).</p>
+<p><img src="../files/tutorials/mixer/final-paddle-annulus.png" width="484" height="363" alt="Complete Paddle Annulus" /></p>
+<h2 class="tutorial-heading">Decompose Middle Annulus</h2>
+<p>Drag and drop the <strong>Booleans-&gt;Decompose</strong> tool directly onto a face of the middle annulus. Double-click <strong>volume_5</strong> in the <strong>Select</strong> dialog to select the middle annulus. Select <strong>Select/Deselect</strong> from the menu, right-click on an original baffle-paddle box face. Double-click <strong>volume_9</strong> to select the original baffle-paddle box. Select <strong>Done</strong> to decompose the original middle annulus to produce two new volumes (<strong>volume_13</strong>, <strong>volume_14</strong>).</p>
+<p><img src="../files/tutorials/mixer/middle-annulus-decompose.png" width="484" height="363" alt="Decompose Middle Annulus" /></p>
+<p>To shade the geometry faces, right-click on the View Window background, double-click <strong>sim-&gt;Faces</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel, toggle the <strong>Transparent</strong> property on then off to make all faces visible (shaded). </p>
+<p>Drag and drop the <strong>Booleans-&gt;Decompose</strong> tool directly onto a face of the middle annulus. Double-click <strong>volume_13</strong> in the <strong>Select</strong> dialog to select the middle annulus. Select <strong>Select/Deselect</strong> from the menu, right-click a face of the copied baffle-paddle box. Double-click <strong>volume_10</strong> to select the copied baffle-paddle box. Select <strong>Done</strong> to decompose the middle annulus to produce two new volumes (<strong>volume_15</strong>, <strong>volume_16</strong>).</p>
+<p><img src="../files/tutorials/mixer/final-middle-annulus-decompose.png" width="484" height="363" alt="Complete Middle Annulus" /></p>
+<h2 class="tutorial-heading">Connect Faces</h2>
+<p>Drag and drop the <strong>Faces-&gt;Connect </strong>tool directly onto the View Window background, double-click <strong>sim-&gt;Faces</strong>, and select <strong>Done</strong> to connect all faces with matching topology and geometry.</p>
+<p><img src="../files/tutorials/mixer/connected-faces.png" width="484" height="363" alt="Connected Faces" /></p>
+<h3>Notes</h3>
+<p>The complete geometry created in this tutorial is available as a free download at <a href="../files/tutorials/mixer/mixer-geom.sym">mixer-geom.sym</a>.</p>
+<p>See the <a href="1255.html">&quot;Rotating Paddle using Moving Reference Frame&quot;</a> tutorial for a flow simulation that uses this geometry.</p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="830.html" class="page-previous" title="Go to previous page">‹ Wheel in a Box</a>
+                    <a href="428.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="1256.html" class="page-next" title="Go to next page">Water Tank ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="expanded active-trail"><a href="428.html">Builder</a><ul class="menu"><li class="leaf first"><a href="234.html">Simple Volume Creation</a></li>
+<li class="leaf"><a href="237.html">Loft, Stitch, and Unite</a></li>
+<li class="leaf"><a href="810.html">Pipe into a Box</a></li>
+<li class="leaf"><a href="813.html">Imprint a Face onto a Volume</a></li>
+<li class="leaf"><a href="830.html">Wheel in a Box</a></li>
+<li class="leaf active-trail"><a href="1254.html" class="active">Mixer Quadrant</a></li>
+<li class="leaf"><a href="1256.html">Water Tank</a></li>
+<li class="leaf"><a href="1280.html">Double-Sided Membrane</a></li>
+<li class="leaf last"><a href="1717.html">Heat Sink</a></li>
+</ul></li>
+<li class="collapsed"><a href="817.html">RANS Flow</a></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="collapsed last"><a href="../tips.html">Tips</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1254 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:13:37 GMT -->
+</html>

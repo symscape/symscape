@@ -1,0 +1,1234 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.4.1                                 |
+|   \\  /    A nd           | Web:      http://www.openfoam.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+/*           Windows porting by Symscape: http://www.symscape.com/           *\
+\*---------------------------------------------------------------------------*/
+
+Exec   : Xoodles . pitzDaily3D 
+Date   : Mar 27 2008
+Time   : 11:14:13
+Host   : HILL
+PID    : 1872
+Root   : C:/projects/openfoam/cases-1.4.1/run/tutorials/Xoodles
+Case   : pitzDaily3D
+Nprocs : 1
+Create time
+
+Create mesh, no clear-out for time = 0
+
+
+Reading environmentalProperties
+Reading thermophysical properties
+
+Selecting thermodynamics package hhuMixtureThermo<homogeneousMixture<sutherlandTransport<specieThermo<janafThermo<perfectGas>>>>>
+min(b) = 1
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Creating turbulence model
+
+Creating field DpDt
+
+Creating field Xi
+
+Creating the unstrained laminar flame speed
+
+Selecting laminar flame speed correlation Gulders
+Reading strained laminar flame speed field Su
+
+Calculating turbulent flame speed field St
+
+Reading combustion properties
+
+Found ignition cells:
+10(108000 17 35 53 71 76860 77040 108180 108360 108540)
+
+Ignition on
+Creating field Umean
+
+Creating field R
+
+Creating field pMean
+
+Creating field pPrime2Mean
+
+Creating field Tmean
+
+Creating field bmean
+
+Creating field Ximean
+
+
+Starting time loop
+
+Time = 5e-06
+
+Courant Number mean: 0 max: 0.116214
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 1, Final residual = 3.5121e-06, No Iterations 1
+bounding k, min: -2.86968e-11 max: 1.1005e-06 average: 2.90003e-09
+DILUPBiCG:  Solving for Ux, Initial residual = 1, Final residual = 3.54382e-06, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 1, Final residual = 3.5444e-06, No Iterations 1
+DILUPBiCG:  Solving for Uz, Initial residual = 1, Final residual = 3.54439e-06, No Iterations 1
+Max St-Courant Number = 0.000328569
+Igniting cell 108000 state : 1 1 0.135 4.67038e-14
+Igniting cell 17 state : 1 1 0.135 1e-15
+Igniting cell 35 state : 1 1 0.135 1e-15
+Igniting cell 53 state : 1 1 0.135 1e-15
+Igniting cell 71 state : 1 1 0.135 1e-15
+Igniting cell 76860 state : 1 1 0.135 1e-15
+Igniting cell 77040 state : 1 1 0.135 1e-15
+Igniting cell 108180 state : 1 1 0.135 3.78056e-13
+Igniting cell 108360 state : 1 1 0.135 6.19384e-14
+Igniting cell 108540 state : 1 1 0.135 1.00025e-13
+DILUPBiCG:  Solving for b, Initial residual = 1, Final residual = 5.29972e-12, No Iterations 2
+min(b) = 0.99011
+DILUPBiCG:  Solving for Su, Initial residual = 1, Final residual = 2.07058e-06, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 1, Final residual = 3.64494e+09, No Iterations 1001
+max(Xi) = 511.748
+max(XiEq) = 1.00102
+Combustion progress = 9.97055e-06%
+DILUPBiCG:  Solving for hu, Initial residual = 0.047203, Final residual = 2.27862e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.999909, Final residual = 1.09256e-11, No Iterations 2
+DICPCG:  Solving for p, Initial residual = 1, Final residual = 4.85687e-07, No Iterations 15
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 5.64143e-11, global = 1.70284e-11, cumulative = 1.70284e-11
+StCorr = 1
+Max St-Courant Number = 0.769375
+Igniting cell 108000 state : 0.99011 1 0.134995 6.2567
+Igniting cell 17 state : 0.99011 1 0.134995 4.32902
+Igniting cell 35 state : 0.99011 1 0.134995 4.32902
+Igniting cell 53 state : 0.99011 1 0.134995 4.32904
+Igniting cell 71 state : 0.990119 1 0.134995 17.8313
+Igniting cell 76860 state : 0.990114 511.748 0.135046 12.7083
+Igniting cell 77040 state : 0.99011 1 0.134995 6.23958
+Igniting cell 108180 state : 0.99011 1 0.134995 6.2567
+Igniting cell 108360 state : 0.99011 1 0.134995 6.2565
+Igniting cell 108540 state : 0.99012 1 0.134995 18.1876
+DILUPBiCG:  Solving for b, Initial residual = 0.0141881, Final residual = 4.40121e-08, No Iterations 2
+min(b) = 0.990004
+DILUPBiCG:  Solving for Su, Initial residual = 0.57604, Final residual = 1.1462e-06, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.135804, Final residual = 5.24684e-10, No Iterations 2
+max(Xi) = 1.00006
+max(XiEq) = 1.00102
+Combustion progress = 1.10836e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 1, Final residual = 3.73684e-10, No Iterations 2
+DILUPBiCG:  Solving for h, Initial residual = 0.999997, Final residual = 3.73688e-10, No Iterations 2
+DICPCG:  Solving for p, Initial residual = 0.0629123, Final residual = 4.00663e-07, No Iterations 12
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.18893e-10, global = 5.47694e-11, cumulative = 7.17978e-11
+ExecutionTime = 199.656 s  ClockTime = 200 s
+
+Time = 1e-05
+
+Courant Number mean: 4.39154e-05 max: 0.115262
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.919373, Final residual = 5.12613e-06, No Iterations 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.185216, Final residual = 9.88457e-07, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.228707, Final residual = 8.76532e-10, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.325472, Final residual = 2.24443e-06, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00236177
+Igniting cell 108000 state : 0.990005 1.00006 0.134795 6.3087
+Igniting cell 17 state : 0.990004 1 0.134806 4.36764
+Igniting cell 35 state : 0.990004 1 0.134789 4.36778
+Igniting cell 53 state : 0.990005 1 0.134604 4.36792
+Igniting cell 71 state : 0.990015 1 0.13473 17.9018
+Igniting cell 76860 state : 0.990007 1 0.134893 7.96697
+Igniting cell 77040 state : 0.990006 1 0.134702 6.29069
+Igniting cell 108180 state : 0.990005 1 0.134783 6.30872
+Igniting cell 108360 state : 0.990006 1 0.13461 6.30877
+Igniting cell 108540 state : 0.990016 1 0.134673 18.2696
+DILUPBiCG:  Solving for b, Initial residual = 0.0837409, Final residual = 3.88073e-10, No Iterations 2
+min(b) = 0.980079
+DILUPBiCG:  Solving for Su, Initial residual = 0.996564, Final residual = 8.19924e-06, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.000566208, Final residual = 2.0953e-07, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.00105
+Combustion progress = 2.11914e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.230474, Final residual = 4.43034e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.227049, Final residual = 4.47012e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.194835, Final residual = 7.5589e-07, No Iterations 12
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 6.15446e-10, global = 1.7634e-10, cumulative = 2.48138e-10
+StCorr = 1
+Max St-Courant Number = 0.00235755
+Igniting cell 108000 state : 0.980082 1.00006 0.13444 12.5563
+Igniting cell 17 state : 0.980079 1 0.13444 8.69714
+Igniting cell 35 state : 0.980079 1 0.134392 8.6976
+Igniting cell 53 state : 0.98008 1 0.133995 8.69861
+Igniting cell 71 state : 0.980108 1 0.134329 35.535
+Igniting cell 76860 state : 0.980089 1 0.134452 20.5412
+Igniting cell 77040 state : 0.980082 1 0.134273 12.5203
+Igniting cell 108180 state : 0.980082 1 0.134394 12.5568
+Igniting cell 108360 state : 0.980082 1 0.134022 12.5581
+Igniting cell 108540 state : 0.98011 1 0.134194 36.2777
+DILUPBiCG:  Solving for b, Initial residual = 0.00054778, Final residual = 3.63872e-07, No Iterations 1
+min(b) = 0.979985
+DILUPBiCG:  Solving for Su, Initial residual = 0.0769881, Final residual = 4.06158e-06, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.000121897, Final residual = 6.02291e-08, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.00105
+Combustion progress = 2.13077e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0800215, Final residual = 7.9706e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0794263, Final residual = 7.74066e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0185276, Final residual = 4.19332e-07, No Iterations 10
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 5.67685e-10, global = 1.19922e-12, cumulative = 2.49337e-10
+ExecutionTime = 226 s  ClockTime = 226 s
+
+Time = 1.5e-05
+
+Courant Number mean: 0.000102525 max: 0.116024
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.438301, Final residual = 5.39084e-06, No Iterations 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.117564, Final residual = 7.04511e-07, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.174687, Final residual = 9.09859e-06, No Iterations 1
+DILUPBiCG:  Solving for Uz, Initial residual = 0.222616, Final residual = 1.48237e-06, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00236277
+Igniting cell 108000 state : 0.979987 1.00006 0.134489 12.609
+Igniting cell 17 state : 0.979985 1 0.134506 8.73561
+Igniting cell 35 state : 0.979985 1 0.134475 8.73627
+Igniting cell 53 state : 0.979985 1 0.134116 8.73769
+Igniting cell 71 state : 0.980012 1 0.13438 35.6447
+Igniting cell 76860 state : 0.979994 1 0.134527 20.6372
+Igniting cell 77040 state : 0.979988 1 0.13432 12.5742
+Igniting cell 108180 state : 0.979987 1 0.134462 12.6099
+Igniting cell 108360 state : 0.979987 1 0.134129 12.612
+Igniting cell 108540 state : 0.980014 1 0.134261 36.4012
+DILUPBiCG:  Solving for b, Initial residual = 0.0454421, Final residual = 2.57938e-10, No Iterations 2
+min(b) = 0.970025
+DILUPBiCG:  Solving for Su, Initial residual = 0.99367, Final residual = 5.70899e-06, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.000697374, Final residual = 3.20642e-07, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.00112
+Combustion progress = 3.15274e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.120745, Final residual = 1.52825e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.119693, Final residual = 1.51669e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.117369, Final residual = 4.5473e-07, No Iterations 12
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 6.93753e-10, global = 1.97409e-10, cumulative = 4.46746e-10
+StCorr = 1
+Max St-Courant Number = 0.00235688
+Igniting cell 108000 state : 0.970029 1.00006 0.1341 18.8538
+Igniting cell 17 state : 0.970025 1 0.134137 13.0692
+Igniting cell 35 state : 0.970025 1 0.134095 13.0705
+Igniting cell 53 state : 0.970025 1 0.133565 13.0735
+Igniting cell 71 state : 0.970079 1 0.133974 53.1236
+Igniting cell 76860 state : 0.970046 1 0.134134 33.256
+Igniting cell 77040 state : 0.97003 1 0.133861 18.803
+Igniting cell 108180 state : 0.970029 1 0.13406 18.8558
+Igniting cell 108360 state : 0.970029 1 0.133577 18.8605
+Igniting cell 108540 state : 0.970082 1 0.13379 54.2771
+DILUPBiCG:  Solving for b, Initial residual = 0.000334871, Final residual = 2.18018e-07, No Iterations 1
+min(b) = 0.969926
+DILUPBiCG:  Solving for Su, Initial residual = 0.0473243, Final residual = 1.80023e-06, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 7.95358e-05, Final residual = 4.78981e-08, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.00112
+Combustion progress = 3.16273e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0397651, Final residual = 4.05885e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0393882, Final residual = 4.00145e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.00975362, Final residual = 6.02386e-07, No Iterations 9
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.2491e-09, global = 2.29684e-10, cumulative = 6.76429e-10
+ExecutionTime = 251.906 s  ClockTime = 252 s
+
+Time = 2e-05
+
+Courant Number mean: 0.000165654 max: 0.115783
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.418332, Final residual = 8.44402e-06, No Iterations 1
+bounding k, min: -2.86687e-11 max: 0.020285 average: 5.18565e-06
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0815515, Final residual = 4.27387e-07, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.154654, Final residual = 3.38997e-06, No Iterations 1
+DILUPBiCG:  Solving for Uz, Initial residual = 0.165178, Final residual = 1.05281e-06, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00236239
+Igniting cell 108000 state : 0.96993 1.00006 0.134171 18.9151
+Igniting cell 17 state : 0.969927 1 0.134201 13.1132
+Igniting cell 35 state : 0.969926 1 0.134156 13.1143
+Igniting cell 53 state : 0.969926 1 0.13362 13.1172
+Igniting cell 71 state : 0.969979 1 0.134016 53.288
+Igniting cell 76860 state : 0.969946 1 0.134159 33.3774
+Igniting cell 77040 state : 0.96993 1 0.13393 18.8657
+Igniting cell 108180 state : 0.96993 1 0.134126 18.917
+Igniting cell 108360 state : 0.96993 1 0.133633 18.9218
+Igniting cell 108540 state : 0.969983 1 0.133836 54.45
+DILUPBiCG:  Solving for b, Initial residual = 0.0312041, Final residual = 1.50237e-10, No Iterations 2
+min(b) = 0.959931
+DILUPBiCG:  Solving for Su, Initial residual = 0.98455, Final residual = 3.92981e-06, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.000693653, Final residual = 3.14674e-07, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.00122
+Combustion progress = 4.19444e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0801082, Final residual = 7.59802e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0795583, Final residual = 7.54516e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0824133, Final residual = 8.28664e-07, No Iterations 11
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.85001e-09, global = 4.88314e-10, cumulative = 1.16474e-09
+StCorr = 1
+Max St-Courant Number = 0.00235661
+Igniting cell 108000 state : 0.959937 1.00006 0.133827 25.1614
+Igniting cell 17 state : 0.959932 1 0.133875 17.4544
+Igniting cell 35 state : 0.959931 1 0.133815 17.4562
+Igniting cell 53 state : 0.959931 1 0.133101 17.4611
+Igniting cell 71 state : 0.960019 1 0.13363 70.6462
+Igniting cell 76860 state : 0.959966 1 0.133777 45.9848
+Igniting cell 77040 state : 0.959938 1 0.133519 25.0982
+Igniting cell 108180 state : 0.959936 1 0.133762 25.165
+Igniting cell 108360 state : 0.959936 1 0.133109 25.1731
+Igniting cell 108540 state : 0.960025 1 0.133387 72.2245
+DILUPBiCG:  Solving for b, Initial residual = 0.000263368, Final residual = 1.60913e-07, No Iterations 1
+min(b) = 0.959828
+DILUPBiCG:  Solving for Su, Initial residual = 0.0330306, Final residual = 4.39387e-07, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 3.67086e-05, Final residual = 2.45277e-08, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.00122
+Combustion progress = 4.20423e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0240306, Final residual = 2.41307e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0239348, Final residual = 2.36675e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.00633312, Final residual = 8.264e-07, No Iterations 8
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.29491e-09, global = 6.5934e-10, cumulative = 1.82408e-09
+ExecutionTime = 277.531 s  ClockTime = 278 s
+
+Time = 2.5e-05
+
+Courant Number mean: 0.000229974 max: 0.115521
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.381006, Final residual = 9.84044e-06, No Iterations 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0608854, Final residual = 2.91094e-07, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.162496, Final residual = 2.26771e-06, No Iterations 1
+DILUPBiCG:  Solving for Uz, Initial residual = 0.128166, Final residual = 8.66893e-07, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00236165
+Igniting cell 108000 state : 0.959834 1.00006 0.133847 25.2254
+Igniting cell 17 state : 0.959829 1 0.133894 17.5021
+Igniting cell 35 state : 0.959828 1 0.133833 17.5036
+Igniting cell 53 state : 0.959828 1 0.133118 17.5084
+Igniting cell 71 state : 0.959917 1 0.13365 70.8314
+Igniting cell 76860 state : 0.959864 1 0.133784 46.1111
+Igniting cell 77040 state : 0.959835 1 0.133536 25.1631
+Igniting cell 108180 state : 0.959834 1 0.133781 25.2287
+Igniting cell 108360 state : 0.959834 1 0.133127 25.2367
+Igniting cell 108540 state : 0.959923 1 0.133407 72.4155
+DILUPBiCG:  Solving for b, Initial residual = 0.0237718, Final residual = 1.0174e-10, No Iterations 2
+min(b) = 0.949796
+DILUPBiCG:  Solving for Su, Initial residual = 0.970933, Final residual = 3.15825e-06, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.000709278, Final residual = 3.09323e-07, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.00135
+Combustion progress = 5.24527e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0635425, Final residual = 6.14699e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0631866, Final residual = 6.11176e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.05989, Final residual = 6.66659e-07, No Iterations 11
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.95471e-09, global = 5.09575e-10, cumulative = 2.33366e-09
+StCorr = 1
+Max St-Courant Number = 0.00235705
+Igniting cell 108000 state : 0.949805 1.00006 0.13351 31.4733
+Igniting cell 17 state : 0.949798 1 0.13358 21.8544
+Igniting cell 35 state : 0.949796 1 0.133502 21.8566
+Igniting cell 53 state : 0.949796 1 0.132606 21.8639
+Igniting cell 71 state : 0.949928 1 0.133281 88.0825
+Igniting cell 76860 state : 0.949852 1 0.133401 58.7003
+Igniting cell 77040 state : 0.949806 1 0.133135 31.3998
+Igniting cell 108180 state : 0.949804 1 0.133419 31.4787
+Igniting cell 108360 state : 0.949805 1 0.132605 31.491
+Igniting cell 108540 state : 0.949937 1 0.132969 90.1012
+DILUPBiCG:  Solving for b, Initial residual = 0.000235468, Final residual = 1.3724e-07, No Iterations 1
+min(b) = 0.94969
+DILUPBiCG:  Solving for Su, Initial residual = 0.028787, Final residual = 1.8615e-07, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.000141074, Final residual = 8.55867e-08, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.00135
+Combustion progress = 5.25525e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0166022, Final residual = 2.33242e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0164849, Final residual = 2.22197e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.00443458, Final residual = 8.38726e-07, No Iterations 8
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.91195e-09, global = 9.19887e-10, cumulative = 3.25355e-09
+ExecutionTime = 303.141 s  ClockTime = 304 s
+
+Time = 3e-05
+
+Courant Number mean: 0.000294735 max: 0.115312
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.248061, Final residual = 7.80841e-06, No Iterations 1
+bounding k, min: -5.91096e-11 max: 0.515189 average: 0.000117112
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0482134, Final residual = 2.35028e-07, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.114164, Final residual = 1.96593e-06, No Iterations 1
+DILUPBiCG:  Solving for Uz, Initial residual = 0.10396, Final residual = 7.63881e-07, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00236219
+Igniting cell 108000 state : 0.9497 1.00006 0.133508 31.5347
+Igniting cell 17 state : 0.949692 1 0.133591 21.9088
+Igniting cell 35 state : 0.94969 1 0.133512 21.9109
+Igniting cell 53 state : 0.94969 1 0.132618 21.918
+Igniting cell 71 state : 0.949822 1 0.133295 88.2939
+Igniting cell 76860 state : 0.949747 1 0.133407 58.8239
+Igniting cell 77040 state : 0.949701 1 0.133144 31.4634
+Igniting cell 108180 state : 0.949699 1 0.133414 31.5395
+Igniting cell 108360 state : 0.949699 1 0.132608 31.5512
+Igniting cell 108540 state : 0.949832 1 0.13298 90.3183
+DILUPBiCG:  Solving for b, Initial residual = 0.0192068, Final residual = 8.16397e-11, No Iterations 2
+min(b) = 0.93962
+DILUPBiCG:  Solving for Su, Initial residual = 0.954006, Final residual = 2.6264e-06, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.000835395, Final residual = 3.73287e-07, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.0015
+Combustion progress = 6.30546e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0514896, Final residual = 5.07562e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0512339, Final residual = 5.04974e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.047381, Final residual = 5.98659e-07, No Iterations 11
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.16992e-09, global = 4.43132e-10, cumulative = 3.69668e-09
+StCorr = 1
+Max St-Courant Number = 0.00235745
+Igniting cell 108000 state : 0.939634 1.00006 0.13315 37.7777
+Igniting cell 17 state : 0.939623 1 0.133292 26.2805
+Igniting cell 35 state : 0.93962 1 0.133193 26.2833
+Igniting cell 53 state : 0.93962 1 0.132118 26.2931
+Igniting cell 71 state : 0.939805 1 0.132949 105.473
+Igniting cell 76860 state : 0.939702 1 0.133027 71.381
+Igniting cell 77040 state : 0.939635 1 0.132754 37.7007
+Igniting cell 108180 state : 0.939632 1 0.133018 37.7842
+Igniting cell 108360 state : 0.939633 1 0.132069 37.8003
+Igniting cell 108540 state : 0.939818 1 0.132556 107.944
+DILUPBiCG:  Solving for b, Initial residual = 0.00021729, Final residual = 1.17824e-07, No Iterations 1
+min(b) = 0.939523
+DILUPBiCG:  Solving for Su, Initial residual = 0.0259757, Final residual = 2.76911e-07, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.000379982, Final residual = 2.19806e-07, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.0015
+Combustion progress = 6.31546e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0125599, Final residual = 3.028e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0125172, Final residual = 2.72662e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.00341125, Final residual = 8.68502e-07, No Iterations 8
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.61341e-09, global = 9.14621e-10, cumulative = 4.6113e-09
+ExecutionTime = 329.047 s  ClockTime = 330 s
+
+Time = 3.5e-05
+
+Courant Number mean: 0.00036054 max: 0.115147
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.164672, Final residual = 6.76516e-06, No Iterations 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0398975, Final residual = 2.0072e-07, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0918876, Final residual = 1.62627e-06, No Iterations 1
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0862197, Final residual = 7.07475e-07, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00236184
+Igniting cell 108000 state : 0.939525 1.00006 0.133128 37.82
+Igniting cell 17 state : 0.93953 1 0.133295 26.3471
+Igniting cell 35 state : 0.939527 1 0.133191 26.3497
+Igniting cell 53 state : 0.939531 1 0.132111 26.3582
+Igniting cell 71 state : 0.939725 1 0.132974 105.642
+Igniting cell 76860 state : 0.939594 1 0.133036 71.4828
+Igniting cell 77040 state : 0.939527 1 0.132766 37.759
+Igniting cell 108180 state : 0.939523 1 0.132982 37.8242
+Igniting cell 108360 state : 0.939523 1 0.13204 37.837
+Igniting cell 108540 state : 0.93971 1 0.132573 108.171
+DILUPBiCG:  Solving for b, Initial residual = 0.0161138, Final residual = 8.9154e-11, No Iterations 2
+min(b) = 0.929418
+DILUPBiCG:  Solving for Su, Initial residual = 0.93303, Final residual = 2.1014e-06, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.00126652, Final residual = 6.06307e-07, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.00172
+Combustion progress = 7.3743e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.043381, Final residual = 4.42282e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.043186, Final residual = 4.4028e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0394252, Final residual = 5.62306e-07, No Iterations 11
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.42431e-09, global = 3.81682e-10, cumulative = 4.99298e-09
+StCorr = 1
+Max St-Courant Number = 0.00235926
+Igniting cell 108000 state : 0.929421 1.00006 0.1327 44.0287
+Igniting cell 17 state : 0.929449 1 0.133007 30.7523
+Igniting cell 35 state : 0.929444 1 0.132871 30.7552
+Igniting cell 53 state : 0.929454 1 0.131596 30.7655
+Igniting cell 71 state : 0.929718 1 0.132692 122.686
+Igniting cell 76860 state : 0.929515 1 0.132671 83.9732
+Igniting cell 77040 state : 0.929423 1 0.132403 43.9878
+Igniting cell 108180 state : 0.929418 1 0.132479 44.0322
+Igniting cell 108360 state : 0.929419 1 0.13142 44.0461
+Igniting cell 108540 state : 0.929667 1 0.132186 125.742
+DILUPBiCG:  Solving for b, Initial residual = 0.000178621, Final residual = 8.6366e-08, No Iterations 1
+min(b) = 0.929304
+DILUPBiCG:  Solving for Su, Initial residual = 0.0192665, Final residual = 3.46265e-07, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.000843539, Final residual = 5.00089e-07, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.00172
+Combustion progress = 7.38349e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.00987559, Final residual = 2.83609e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.00981758, Final residual = 2.47698e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.00267818, Final residual = 9.09177e-07, No Iterations 8
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.40497e-09, global = 8.99375e-10, cumulative = 5.89236e-09
+ExecutionTime = 355.313 s  ClockTime = 356 s
+
+Time = 4e-05
+
+Courant Number mean: 0.000428961 max: 0.115011
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.118146, Final residual = 6.58769e-06, No Iterations 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0343042, Final residual = 1.75551e-07, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0809023, Final residual = 1.45567e-06, No Iterations 1
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0728547, Final residual = 6.84925e-07, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00236262
+Igniting cell 108000 state : 0.929308 1.00006 0.132663 43.9792
+Igniting cell 17 state : 0.929478 1 0.133022 30.8134
+Igniting cell 35 state : 0.92947 1 0.132882 30.8167
+Igniting cell 53 state : 0.929474 1 0.131609 30.8265
+Igniting cell 71 state : 0.929735 1 0.13273 122.708
+Igniting cell 76860 state : 0.929403 1 0.132687 84.0177
+Igniting cell 77040 state : 0.929311 1 0.132429 44.0319
+Igniting cell 108180 state : 0.929304 1 0.132417 43.9781
+Igniting cell 108360 state : 0.929304 1 0.131385 43.992
+Igniting cell 108540 state : 0.929554 1 0.132212 126.044
+DILUPBiCG:  Solving for b, Initial residual = 0.0138666, Final residual = 1.26018e-10, No Iterations 2
+min(b) = 0.919161
+DILUPBiCG:  Solving for Su, Initial residual = 0.894406, Final residual = 1.9236e-06, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.0022268, Final residual = 1.20045e-06, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.00292
+Combustion progress = 8.44911e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0372631, Final residual = 3.87703e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.037108, Final residual = 3.8611e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0337998, Final residual = 6.12979e-07, No Iterations 11
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.06124e-09, global = 3.62882e-10, cumulative = 6.25524e-09
+StCorr = 1
+Max St-Courant Number = 0.00236316
+Igniting cell 108000 state : 0.919168 1.00006 0.1321 50.0398
+Igniting cell 17 state : 0.919538 1 0.132777 35.2467
+Igniting cell 35 state : 0.919524 1 0.132586 35.2506
+Igniting cell 53 state : 0.919527 1 0.131113 35.2618
+Igniting cell 71 state : 0.919863 1 0.132563 139.435
+Igniting cell 76860 state : 0.919288 1 0.132365 96.3449
+Igniting cell 77040 state : 0.919169 1 0.132126 50.2318
+Igniting cell 108180 state : 0.919161 1 0.131706 50.0322
+Igniting cell 108360 state : 0.919162 1 0.130631 50.0468
+Igniting cell 108540 state : 0.919483 1 0.131903 143.642
+DILUPBiCG:  Solving for b, Initial residual = 0.000316518, Final residual = 1.83018e-07, No Iterations 1
+min(b) = 0.919043
+DILUPBiCG:  Solving for Su, Initial residual = 0.0139006, Final residual = 4.24057e-07, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.00160973, Final residual = 1.12065e-06, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.00292
+Combustion progress = 8.45721e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.00800775, Final residual = 2.10118e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.00798392, Final residual = 1.84942e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.00219581, Final residual = 9.00688e-07, No Iterations 8
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.97799e-09, global = 8.92822e-10, cumulative = 7.14806e-09
+ExecutionTime = 380.844 s  ClockTime = 381 s
+
+Time = 4.5e-05
+
+Courant Number mean: 0.000502483 max: 0.114894
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.0902956, Final residual = 6.57351e-06, No Iterations 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0300149, Final residual = 1.58595e-07, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0740724, Final residual = 1.48262e-06, No Iterations 1
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0621683, Final residual = 6.21769e-07, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00236491
+Igniting cell 108000 state : 0.919049 1.00006 0.13204 49.8726
+Igniting cell 17 state : 0.919689 1 0.13283 35.3213
+Igniting cell 35 state : 0.919672 1 0.132622 35.3247
+Igniting cell 53 state : 0.919672 1 0.131135 35.3357
+Igniting cell 71 state : 0.920006 1 0.132616 139.354
+Igniting cell 76860 state : 0.919171 1 0.132393 96.258
+Igniting cell 77040 state : 0.919051 1 0.132163 50.2486
+Igniting cell 108180 state : 0.919043 1 0.131607 49.8507
+Igniting cell 108360 state : 0.919043 1 0.130569 49.8599
+Igniting cell 108540 state : 0.919365 1 0.131941 144.102
+DILUPBiCG:  Solving for b, Initial residual = 0.012152, Final residual = 9.74654e-06, No Iterations 1
+min(b) = 0.908864
+DILUPBiCG:  Solving for Su, Initial residual = 0.849178, Final residual = 4.0099e-06, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.00432988, Final residual = 2.87396e-06, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.00696
+Combustion progress = 9.52665e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0327296, Final residual = 3.53645e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0326026, Final residual = 3.52321e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0295618, Final residual = 6.26067e-07, No Iterations 11
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.55212e-09, global = 3.65693e-10, cumulative = 7.51375e-09
+StCorr = 1
+Max St-Courant Number = 0.00236994
+Igniting cell 108000 state : 0.90887 1.00006 0.131247 55.6273
+Igniting cell 17 state : 0.910057 1 0.132724 39.7974
+Igniting cell 35 state : 0.91003 1 0.132415 39.8003
+Igniting cell 53 state : 0.910026 1 0.130689 39.8123
+Igniting cell 71 state : 0.91044 1 0.132629 155.624
+Igniting cell 76860 state : 0.909017 1 0.132153 108.267
+Igniting cell 77040 state : 0.908867 1 0.131959 56.3813
+Igniting cell 108180 state : 0.908864 1 0.130561 55.5821
+Igniting cell 108360 state : 0.908864 1 0.129596 55.5858
+Igniting cell 108540 state : 0.909267 1 0.131755 161.918
+DILUPBiCG:  Solving for b, Initial residual = 0.000500103, Final residual = 2.16579e-06, No Iterations 1
+min(b) = 0.908743
+DILUPBiCG:  Solving for Su, Initial residual = 0.0106069, Final residual = 4.90669e-07, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.00267232, Final residual = 2.55271e-06, No Iterations 1
+max(Xi) = 1.00006
+max(XiEq) = 1.00694
+Combustion progress = 9.53377e-05%
+DILUPBiCG:  Solving for hu, Initial residual = 0.00666997, Final residual = 1.48463e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.00663541, Final residual = 1.32564e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.00182023, Final residual = 8.37514e-07, No Iterations 8
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 5.19994e-09, global = 7.62735e-10, cumulative = 8.27649e-09
+ExecutionTime = 406.547 s  ClockTime = 407 s
+
+Time = 5e-05
+
+Courant Number mean: 0.000584442 max: 0.114793
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.0722899, Final residual = 6.52116e-06, No Iterations 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0267117, Final residual = 1.59725e-07, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0687005, Final residual = 1.98738e-06, No Iterations 1
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0531787, Final residual = 5.87904e-07, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00236929
+Igniting cell 108000 state : 0.908752 1.00006 0.131157 55.2596
+Igniting cell 17 state : 0.91041 1 0.132799 39.8882
+Igniting cell 35 state : 0.910378 1 0.132463 39.8918
+Igniting cell 53 state : 0.910366 1 0.130723 39.9018
+Igniting cell 71 state : 0.910771 1 0.13268 155.344
+Igniting cell 76860 state : 0.908895 1 0.132192 107.955
+Igniting cell 77040 state : 0.908744 1 0.132017 56.3417
+Igniting cell 108180 state : 0.908743 1 0.130409 55.1945
+Igniting cell 108360 state : 0.908746 1 0.129502 55.1903
+Igniting cell 108540 state : 0.909451 1 0.131806 162.184
+DILUPBiCG:  Solving for b, Initial residual = 0.010791, Final residual = 9.46307e-06, No Iterations 1
+min(b) = 0.89852
+DILUPBiCG:  Solving for Su, Initial residual = 0.797905, Final residual = 1.04919e-09, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.0101948, Final residual = 1.14063e-09, No Iterations 2
+max(Xi) = 1.00005
+max(XiEq) = 1.01866
+Combustion progress = 0.000106042%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0291242, Final residual = 3.41304e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0290181, Final residual = 3.40154e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0262744, Final residual = 6.05451e-07, No Iterations 11
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.84643e-09, global = 3.76316e-10, cumulative = 8.65281e-09
+StCorr = 1
+Max St-Courant Number = 0.00237961
+Igniting cell 108000 state : 0.898549 1.00005 0.12999 60.4522
+Igniting cell 17 state : 0.901352 1 0.132933 44.4222
+Igniting cell 35 state : 0.901302 1 0.132408 44.426
+Igniting cell 53 state : 0.901276 1 0.130371 44.4331
+Igniting cell 71 state : 0.901757 1 0.132914 170.9
+Igniting cell 76860 state : 0.8987 1 0.132077 119.363
+Igniting cell 77040 state : 0.89852 1 0.131957 62.3334
+Igniting cell 108180 state : 0.898538 1 0.128854 60.3401
+Igniting cell 108360 state : 0.898545 1 0.128195 60.3293
+Igniting cell 108540 state : 0.899698 1 0.131801 179.999
+DILUPBiCG:  Solving for b, Initial residual = 0.000727518, Final residual = 4.05461e-06, No Iterations 1
+min(b) = 0.898389
+DILUPBiCG:  Solving for Su, Initial residual = 0.00797914, Final residual = 5.67867e-07, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.00369837, Final residual = 6.04994e-06, No Iterations 1
+max(Xi) = 1.00005
+max(XiEq) = 1.01855
+Combustion progress = 0.000106105%
+DILUPBiCG:  Solving for hu, Initial residual = 0.00567403, Final residual = 1.01518e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.00565819, Final residual = 8.96016e-08, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.00156664, Final residual = 7.891e-07, No Iterations 8
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 5.43923e-09, global = 6.04708e-10, cumulative = 9.25751e-09
+ExecutionTime = 432.203 s  ClockTime = 433 s
+
+Time = 5.5e-05
+
+Courant Number mean: 0.000678646 max: 0.114702
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.0598381, Final residual = 6.39489e-06, No Iterations 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0241159, Final residual = 2.11547e-07, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0640939, Final residual = 3.58675e-06, No Iterations 1
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0461511, Final residual = 6.23053e-07, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00237623
+Igniting cell 108000 state : 0.898438 1.00005 0.129885 59.8135
+Igniting cell 17 state : 0.901957 1 0.133031 44.5303
+Igniting cell 35 state : 0.901898 1 0.132478 44.5358
+Igniting cell 53 state : 0.901859 1 0.130429 44.5338
+Igniting cell 71 state : 0.902324 1 0.132958 170.39
+Igniting cell 76860 state : 0.898568 1 0.132145 118.716
+Igniting cell 77040 state : 0.898389 1 0.132013 62.2219
+Igniting cell 108180 state : 0.898422 1 0.128677 59.6767
+Igniting cell 108360 state : 0.898443 1 0.128091 59.6932
+Igniting cell 108540 state : 0.900324 1 0.131867 179.995
+DILUPBiCG:  Solving for b, Initial residual = 0.00968412, Final residual = 9.70618e-06, No Iterations 1
+min(b) = 0.888125
+DILUPBiCG:  Solving for Su, Initial residual = 0.742385, Final residual = 2.23427e-09, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.033336, Final residual = 2.13376e-09, No Iterations 2
+max(Xi) = 1.00005
+max(XiEq) = 1.04749
+Combustion progress = 0.000116788%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0262018, Final residual = 3.8764e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0261121, Final residual = 3.8647e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0236482, Final residual = 6.21412e-07, No Iterations 11
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.37131e-09, global = 3.81868e-10, cumulative = 9.63938e-09
+StCorr = 1
+Max St-Courant Number = 0.00239174
+Igniting cell 108000 state : 0.888243 1.00005 0.128195 64.11
+Igniting cell 17 state : 0.893795 1.00001 0.133521 49.1319
+Igniting cell 35 state : 0.893703 1 0.13266 49.1403
+Igniting cell 53 state : 0.893633 1 0.130241 49.12
+Igniting cell 71 state : 0.894182 1 0.133432 184.898
+Igniting cell 76860 state : 0.88833 1 0.132231 129.12
+Igniting cell 77040 state : 0.888125 1.00001 0.132069 67.977
+Igniting cell 108180 state : 0.888218 1 0.126509 63.8979
+Igniting cell 108360 state : 0.888271 1 0.126387 64.0096
+Igniting cell 108540 state : 0.891449 1 0.132101 197.504
+DILUPBiCG:  Solving for b, Initial residual = 0.000953196, Final residual = 9.32153e-07, No Iterations 1
+min(b) = 0.887992
+DILUPBiCG:  Solving for Su, Initial residual = 0.00624654, Final residual = 6.76118e-07, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.00384773, Final residual = 3.58927e-09, No Iterations 2
+max(Xi) = 1.00005
+max(XiEq) = 1.04713
+Combustion progress = 0.000116853%
+DILUPBiCG:  Solving for hu, Initial residual = 0.00495087, Final residual = 1.08484e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0049274, Final residual = 1.08879e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.00135481, Final residual = 7.22199e-07, No Iterations 8
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 5.47558e-09, global = 4.31451e-10, cumulative = 1.00708e-08
+ExecutionTime = 458.578 s  ClockTime = 459 s
+
+Time = 6e-05
+
+Courant Number mean: 0.000788894 max: 0.114621
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.0507909, Final residual = 5.96344e-06, No Iterations 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0220121, Final residual = 3.78971e-07, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0600009, Final residual = 6.64544e-06, No Iterations 1
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0416199, Final residual = 7.49901e-07, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00238548
+Igniting cell 108000 state : 0.888156 1.00005 0.128113 63.1718
+Igniting cell 17 state : 0.894649 1.00001 0.133604 49.2479
+Igniting cell 35 state : 0.894544 1 0.13271 49.2589
+Igniting cell 53 state : 0.894458 1 0.130332 49.234
+Igniting cell 71 state : 0.895437 1 0.133443 183.483
+Igniting cell 76860 state : 0.88819 1 0.13232 128.063
+Igniting cell 77040 state : 0.887992 1.00001 0.132122 67.7714
+Igniting cell 108180 state : 0.888124 1 0.126431 62.9365
+Igniting cell 108360 state : 0.888217 1 0.126275 63.2207
+Igniting cell 108540 state : 0.892508 1 0.132215 197.312
+DILUPBiCG:  Solving for b, Initial residual = 0.00877249, Final residual = 2.22611e-08, No Iterations 2
+min(b) = 0.877702
+DILUPBiCG:  Solving for Su, Initial residual = 0.685701, Final residual = 1.485e-08, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.108412, Final residual = 9.39201e-09, No Iterations 2
+max(Xi) = 1.00009
+max(XiEq) = 1.10772
+Combustion progress = 0.000127501%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0238025, Final residual = 5.57076e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0237262, Final residual = 5.55479e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0214996, Final residual = 6.03931e-07, No Iterations 11
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.66249e-09, global = 3.44491e-10, cumulative = 1.04153e-08
+StCorr = 1
+Max St-Courant Number = 0.00240468
+Igniting cell 108000 state : 0.878037 1.00005 0.125812 66.1861
+Igniting cell 17 state : 0.887716 1.00009 0.134514 53.91
+Igniting cell 35 state : 0.887553 1 0.133162 53.9275
+Igniting cell 53 state : 0.887416 1 0.13044 53.8674
+Igniting cell 71 state : 0.88895 1 0.134122 195.91
+Igniting cell 76860 state : 0.877909 1 0.132646 136.976
+Igniting cell 77040 state : 0.877702 1.00001 0.132199 73.1532
+Igniting cell 108180 state : 0.877987 1 0.123764 65.8565
+Igniting cell 108360 state : 0.878197 1 0.124159 66.7181
+Igniting cell 108540 state : 0.885053 1 0.13279 214.228
+DILUPBiCG:  Solving for b, Initial residual = 0.00112915, Final residual = 9.79484e-07, No Iterations 1
+min(b) = 0.877572
+DILUPBiCG:  Solving for Su, Initial residual = 0.00527987, Final residual = 8.69332e-07, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.00297183, Final residual = 3.01302e-06, No Iterations 1
+max(Xi) = 1.00008
+max(XiEq) = 1.10675
+Combustion progress = 0.00012758%
+DILUPBiCG:  Solving for hu, Initial residual = 0.00437844, Final residual = 1.72737e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.00436293, Final residual = 1.71038e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.00120578, Final residual = 6.46476e-07, No Iterations 8
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 5.35046e-09, global = 2.79811e-10, cumulative = 1.06951e-08
+ExecutionTime = 484.469 s  ClockTime = 485 s
+
+Time = 6.5e-05
+
+Courant Number mean: 0.000918032 max: 0.114548
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.0440041, Final residual = 5.60035e-06, No Iterations 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0202881, Final residual = 7.58875e-07, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0562675, Final residual = 4.75895e-09, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0390392, Final residual = 1.06237e-06, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00239637
+Igniting cell 108000 state : 0.877988 1.00005 0.125885 64.9694
+Igniting cell 17 state : 0.888778 1.00008 0.134592 54.0233
+Igniting cell 35 state : 0.888595 1 0.133193 54.0418
+Igniting cell 53 state : 0.888443 1 0.130602 53.9806
+Igniting cell 71 state : 0.89052 1 0.134101 194.118
+Igniting cell 76860 state : 0.87776 1 0.132777 135.498
+Igniting cell 77040 state : 0.877572 1.00001 0.132211 72.8329
+Igniting cell 108180 state : 0.877934 1 0.123761 64.6233
+Igniting cell 108360 state : 0.878239 1 0.124153 66.0315
+Igniting cell 108540 state : 0.886589 1 0.132906 213.864
+DILUPBiCG:  Solving for b, Initial residual = 0.00802263, Final residual = 2.67358e-08, No Iterations 2
+min(b) = 0.867284
+DILUPBiCG:  Solving for Su, Initial residual = 0.630249, Final residual = 5.53825e-08, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.207472, Final residual = 7.63282e-08, No Iterations 2
+max(Xi) = 1.00042
+max(XiEq) = 1.21525
+Combustion progress = 0.000138194%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0218027, Final residual = 9.22436e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0217375, Final residual = 9.19807e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0197192, Final residual = 5.42854e-07, No Iterations 11
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.56596e-09, global = 2.47619e-10, cumulative = 1.09428e-08
+StCorr = 1
+Max St-Courant Number = 0.00241699
+Igniting cell 108000 state : 0.868045 1.00009 0.123094 66.3522
+Igniting cell 17 state : 0.88335 1.00042 0.135987 58.7159
+Igniting cell 35 state : 0.883071 1 0.133938 58.7426
+Igniting cell 53 state : 0.88285 1 0.131192 58.6355
+Igniting cell 71 state : 0.88602 1 0.134911 203.98
+Igniting cell 76860 state : 0.867437 1.00001 0.133383 142.423
+Igniting cell 77040 state : 0.867284 1.00003 0.132082 77.6619
+Igniting cell 108180 state : 0.86797 1 0.12077 65.91
+Igniting cell 108360 state : 0.868584 1 0.121855 69.3211
+Igniting cell 108540 state : 0.881131 1 0.13382 229.89
+DILUPBiCG:  Solving for b, Initial residual = 0.00123068, Final residual = 1.65759e-06, No Iterations 1
+min(b) = 0.86717
+DILUPBiCG:  Solving for Su, Initial residual = 0.00495067, Final residual = 1.86676e-06, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.0026947, Final residual = 4.04913e-06, No Iterations 1
+max(Xi) = 1.00041
+max(XiEq) = 1.21311
+Combustion progress = 0.000138296%
+DILUPBiCG:  Solving for hu, Initial residual = 0.00396366, Final residual = 1.59333e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.00394714, Final residual = 1.29787e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.00108717, Final residual = 5.76781e-07, No Iterations 8
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 5.17701e-09, global = 2.7488e-10, cumulative = 1.12176e-08
+ExecutionTime = 510.844 s  ClockTime = 511 s
+
+Time = 7e-05
+
+Courant Number mean: 0.00106755 max: 0.130753
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.0388383, Final residual = 5.33596e-06, No Iterations 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0188501, Final residual = 1.42372e-06, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0528152, Final residual = 8.97671e-09, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0380827, Final residual = 1.72124e-06, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00240784
+Igniting cell 108000 state : 0.86806 1.00009 0.123336 64.9199
+Igniting cell 17 state : 0.88454 1.00041 0.136096 58.8064
+Igniting cell 35 state : 0.884239 1 0.133938 58.8335
+Igniting cell 53 state : 0.884005 1 0.131314 58.7453
+Igniting cell 71 state : 0.887787 1 0.134876 201.928
+Igniting cell 76860 state : 0.867288 1.00001 0.133552 140.601
+Igniting cell 77040 state : 0.86717 1.00003 0.132063 77.2268
+Igniting cell 108180 state : 0.867982 1 0.120888 64.4847
+Igniting cell 108360 state : 0.868752 1 0.122176 69.1634
+Igniting cell 108540 state : 0.88312 1 0.133894 229.349
+DILUPBiCG:  Solving for b, Initial residual = 0.00740622, Final residual = 5.02566e-08, No Iterations 2
+min(b) = 0.856937
+DILUPBiCG:  Solving for Su, Initial residual = 0.578052, Final residual = 7.73221e-08, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.219689, Final residual = 2.62553e-07, No Iterations 2
+max(Xi) = 1.0016
+max(XiEq) = 1.37978
+Combustion progress = 0.000148901%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0201247, Final residual = 1.53876e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0200686, Final residual = 1.53449e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0182568, Final residual = 4.45432e-07, No Iterations 11
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.05606e-09, global = 1.1973e-10, cumulative = 1.13374e-08
+StCorr = 1
+Max St-Courant Number = 0.00242896
+Igniting cell 108000 state : 0.858448 1.0003 0.120303 64.4149
+Igniting cell 17 state : 0.880794 1.0016 0.138056 63.4642
+Igniting cell 35 state : 0.880343 1.00001 0.134946 63.4984
+Igniting cell 53 state : 0.88003 1 0.132397 63.3591
+Igniting cell 71 state : 0.885393 1 0.135747 208.896
+Igniting cell 76860 state : 0.856937 1.00005 0.134423 145.156
+Igniting cell 77040 state : 0.85694 1.00011 0.13148 81.308
+Igniting cell 108180 state : 0.85835 1.00001 0.117897 63.928
+Igniting cell 108360 state : 0.859758 1.00001 0.120253 73.7276
+Igniting cell 108540 state : 0.880164 1 0.135054 244.12
+DILUPBiCG:  Solving for b, Initial residual = 0.00125049, Final residual = 2.41555e-06, No Iterations 1
+min(b) = 0.8568
+DILUPBiCG:  Solving for Su, Initial residual = 0.004829, Final residual = 4.22049e-06, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.00252193, Final residual = 4.59119e-06, No Iterations 1
+max(Xi) = 1.00157
+max(XiEq) = 1.3761
+Combustion progress = 0.000149027%
+DILUPBiCG:  Solving for hu, Initial residual = 0.00361361, Final residual = 7.67878e-07, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.00360129, Final residual = 6.56054e-07, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.000993953, Final residual = 5.09902e-07, No Iterations 8
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.93446e-09, global = 4.66803e-10, cumulative = 1.18042e-08
+ExecutionTime = 537.141 s  ClockTime = 538 s
+
+Time = 7.5e-05
+
+Courant Number mean: 0.00123732 max: 0.164038
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.0349051, Final residual = 5.23709e-06, No Iterations 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0176437, Final residual = 2.25076e-06, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0496086, Final residual = 1.46262e-08, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0372606, Final residual = 2.66681e-06, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.0024208
+Igniting cell 108000 state : 0.858629 1.00031 0.120723 62.9084
+Igniting cell 17 state : 0.881947 1.00157 0.138197 63.4676
+Igniting cell 35 state : 0.881432 1.00001 0.134904 63.4615
+Igniting cell 53 state : 0.881223 1 0.132521 63.4548
+Igniting cell 71 state : 0.887185 1 0.135691 206.748
+Igniting cell 76860 state : 0.8568 1.00005 0.134642 143.123
+Igniting cell 77040 state : 0.85687 1.00012 0.131455 80.7665
+Igniting cell 108180 state : 0.858594 1.00001 0.11813 62.4805
+Igniting cell 108360 state : 0.860121 1.00001 0.121031 74.3138
+Igniting cell 108540 state : 0.882425 1 0.135135 243.324
+DILUPBiCG:  Solving for b, Initial residual = 0.0069089, Final residual = 2.27806e-07, No Iterations 2
+min(b) = 0.846441
+DILUPBiCG:  Solving for Su, Initial residual = 0.529711, Final residual = 2.85259e-07, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.188406, Final residual = 4.87563e-07, No Iterations 2
+max(Xi) = 1.00499
+max(XiEq) = 1.60076
+Combustion progress = 0.000159662%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0187259, Final residual = 2.26097e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0186771, Final residual = 2.25514e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0170791, Final residual = 8.90729e-07, No Iterations 10
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.73126e-09, global = 2.3798e-10, cumulative = 1.20421e-08
+StCorr = 1
+Max St-Courant Number = 0.00245112
+Igniting cell 108000 state : 0.849722 1.00114 0.117822 60.5128
+Igniting cell 17 state : 0.879783 1.00499 0.140815 67.8907
+Igniting cell 35 state : 0.879022 1.00005 0.136149 67.8514
+Igniting cell 53 state : 0.87887 1.00001 0.134094 67.8829
+Igniting cell 71 state : 0.88675 1 0.136552 210.792
+Igniting cell 76860 state : 0.846441 1.00016 0.135737 145.081
+Igniting cell 77040 state : 0.846843 1.00043 0.130237 83.9099
+Igniting cell 108180 state : 0.849729 1.00004 0.115502 60.1581
+Igniting cell 108360 state : 0.85226 1.00002 0.120146 81.713
+Igniting cell 108540 state : 0.882171 1.00001 0.136446 256.191
+DILUPBiCG:  Solving for b, Initial residual = 0.00118572, Final residual = 3.53704e-06, No Iterations 1
+min(b) = 0.846305
+DILUPBiCG:  Solving for Su, Initial residual = 0.00462738, Final residual = 9.20439e-06, No Iterations 1
+DILUPBiCG:  Solving for Xi, Initial residual = 0.00199572, Final residual = 2.50089e-06, No Iterations 1
+max(Xi) = 1.00492
+max(XiEq) = 1.59594
+Combustion progress = 0.000159798%
+DILUPBiCG:  Solving for hu, Initial residual = 0.00333642, Final residual = 1.39803e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.00332727, Final residual = 1.23852e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.000915252, Final residual = 4.18189e-07, No Iterations 8
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.33971e-09, global = 7.22423e-10, cumulative = 1.27646e-08
+ExecutionTime = 563.594 s  ClockTime = 564 s
+
+Time = 8e-05
+
+Courant Number mean: 0.00142578 max: 0.195489
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.0319151, Final residual = 5.85037e-06, No Iterations 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0166229, Final residual = 3.02753e-06, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0466453, Final residual = 2.17614e-08, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0365453, Final residual = 3.64141e-06, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00244229
+Igniting cell 108000 state : 0.850158 1.00114 0.118448 59.1198
+Igniting cell 17 state : 0.880718 1.00492 0.140987 67.7438
+Igniting cell 35 state : 0.879951 1.00004 0.136083 67.6805
+Igniting cell 53 state : 0.879845 1.00001 0.134207 67.8352
+Igniting cell 71 state : 0.888422 1 0.136491 208.997
+Igniting cell 76860 state : 0.846305 1.00017 0.136 143.088
+Igniting cell 77040 state : 0.846848 1.00045 0.130253 83.3392
+Igniting cell 108180 state : 0.850206 1.00004 0.115826 58.8548
+Igniting cell 108360 state : 0.853049 1.00002 0.121418 83.0541
+Igniting cell 108540 state : 0.884525 1.00001 0.136523 254.742
+DILUPBiCG:  Solving for b, Initial residual = 0.00690781, Final residual = 6.40577e-08, No Iterations 2
+min(b) = 0.835972
+DILUPBiCG:  Solving for Su, Initial residual = 0.48525, Final residual = 1.51223e-07, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.153616, Final residual = 5.9281e-07, No Iterations 2
+max(Xi) = 1.0129
+max(XiEq) = 1.86772
+Combustion progress = 0.000170497%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0176031, Final residual = 2.90579e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0175602, Final residual = 2.89893e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0161901, Final residual = 7.17269e-07, No Iterations 10
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 7.52913e-09, global = 5.56883e-11, cumulative = 1.28203e-08
+StCorr = 1
+Max St-Courant Number = 0.00247074
+Igniting cell 108000 state : 0.842354 1.00358 0.116101 55.1537
+Igniting cell 17 state : 0.879843 1.0129 0.144224 71.6994
+Igniting cell 35 state : 0.878841 1.00014 0.137558 71.601
+Igniting cell 53 state : 0.878833 1.00001 0.136225 71.7665
+Igniting cell 71 state : 0.889594 1.00001 0.137267 210.6
+Igniting cell 76860 state : 0.835972 1.00053 0.137226 142.521
+Igniting cell 77040 state : 0.837254 1.00151 0.128379 85.5122
+Igniting cell 108180 state : 0.842453 1.00009 0.113879 55.1257
+Igniting cell 108360 state : 0.846973 1.00004 0.122091 94.1317
+Igniting cell 108540 state : 0.88688 1.00002 0.1379 264.7
+DILUPBiCG:  Solving for b, Initial residual = 0.00105605, Final residual = 4.47724e-06, No Iterations 1
+min(b) = 0.835851
+DILUPBiCG:  Solving for Su, Initial residual = 0.00433176, Final residual = 2.86635e-08, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.0016128, Final residual = 4.08794e-06, No Iterations 1
+max(Xi) = 1.01275
+max(XiEq) = 1.86248
+Combustion progress = 0.000170628%
+DILUPBiCG:  Solving for hu, Initial residual = 0.00309079, Final residual = 1.82493e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.00308362, Final residual = 1.65818e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.000846785, Final residual = 9.75507e-07, No Iterations 7
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.08007e-08, global = 2.4835e-09, cumulative = 1.53038e-08
+ExecutionTime = 589.813 s  ClockTime = 590 s
+
+Time = 8.5e-05
+
+Courant Number mean: 0.00163042 max: 0.223381
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.0295993, Final residual = 6.6654e-06, No Iterations 1
+bounding k, min: -4.11693e-11 max: 15.4564 average: 0.0149793
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0157504, Final residual = 3.58876e-06, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0439041, Final residual = 3.04024e-08, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0348075, Final residual = 5.13582e-06, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00246234
+Igniting cell 108000 state : 0.842918 1.00355 0.11687 54.2405
+Igniting cell 17 state : 0.880568 1.01275 0.1443 71.4679
+Igniting cell 35 state : 0.879623 1.00013 0.137552 71.3532
+Igniting cell 53 state : 0.879642 1.00001 0.136325 71.6582
+Igniting cell 71 state : 0.891081 1.00001 0.137198 209.093
+Igniting cell 76860 state : 0.835851 1.00054 0.137555 140.722
+Igniting cell 77040 state : 0.837335 1.00156 0.128481 84.9372
+Igniting cell 108180 state : 0.843052 1.00009 0.114185 54.0334
+Igniting cell 108360 state : 0.847995 1.00004 0.12362 95.8864
+Igniting cell 108540 state : 0.889126 1.00002 0.137983 262.908
+DILUPBiCG:  Solving for b, Initial residual = 0.00695058, Final residual = 8.11064e-08, No Iterations 2
+min(b) = 0.825614
+DILUPBiCG:  Solving for Su, Initial residual = 0.445317, Final residual = 5.33439e-07, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.124182, Final residual = 6.24598e-07, No Iterations 2
+max(Xi) = 1.0284
+max(XiEq) = 2.16332
+Combustion progress = 0.000181416%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0167601, Final residual = 3.32993e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.016722, Final residual = 3.32284e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.015561, Final residual = 7.14051e-07, No Iterations 10
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 7.98704e-09, global = -1.43597e-10, cumulative = 1.51602e-08
+StCorr = 1
+Max St-Courant Number = 0.0024874
+Igniting cell 108000 state : 0.836393 1.0092 0.115342 49.517
+Igniting cell 17 state : 0.880716 1.0284 0.147934 74.8417
+Igniting cell 35 state : 0.879547 1.00037 0.13931 74.6214
+Igniting cell 53 state : 0.879723 1.00003 0.138778 74.8965
+Igniting cell 71 state : 0.893447 1.00001 0.137856 208.707
+Igniting cell 76860 state : 0.825614 1.00154 0.138835 137.869
+Igniting cell 77040 state : 0.828446 1.00448 0.126097 86.1742
+Igniting cell 108180 state : 0.83672 1.0002 0.113074 49.6743
+Igniting cell 108360 state : 0.844068 1.00007 0.125933 110.09
+Igniting cell 108540 state : 0.893731 1.00003 0.139334 269.263
+DILUPBiCG:  Solving for b, Initial residual = 0.00104652, Final residual = 8.10106e-06, No Iterations 1
+min(b) = 0.825529
+DILUPBiCG:  Solving for Su, Initial residual = 0.00412888, Final residual = 3.63465e-08, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.00118719, Final residual = 8.4168e-06, No Iterations 1
+max(Xi) = 1.02824
+max(XiEq) = 2.17246
+Combustion progress = 0.00018152%
+DILUPBiCG:  Solving for hu, Initial residual = 0.00287988, Final residual = 2.01737e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.002874, Final residual = 1.86128e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.000788418, Final residual = 8.10013e-07, No Iterations 7
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.52314e-09, global = 1.24401e-09, cumulative = 1.64042e-08
+ExecutionTime = 616.266 s  ClockTime = 617 s
+
+Time = 9e-05
+
+Courant Number mean: 0.00184834 max: 0.246547
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.027701, Final residual = 7.93949e-06, No Iterations 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.014997, Final residual = 3.84958e-06, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0413655, Final residual = 4.00963e-08, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0328902, Final residual = 7.20367e-06, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00247952
+Igniting cell 108000 state : 0.838633 1.00908 0.116267 49.4646
+Igniting cell 17 state : 0.879797 1.02824 0.147942 73.5928
+Igniting cell 35 state : 0.880175 1.00036 0.139321 74.3637
+Igniting cell 53 state : 0.880368 1.00003 0.138962 74.7744
+Igniting cell 71 state : 0.894756 1.00001 0.137772 207.481
+Igniting cell 76860 state : 0.825529 1.00157 0.139242 136.154
+Igniting cell 77040 state : 0.828854 1.00455 0.126277 85.8499
+Igniting cell 108180 state : 0.837295 1.00019 0.113425 48.2258
+Igniting cell 108360 state : 0.845239 1.00007 0.127385 112.251
+Igniting cell 108540 state : 0.895896 1.00003 0.139398 266.811
+DILUPBiCG:  Solving for b, Initial residual = 0.00699784, Final residual = 1.05225e-07, No Iterations 2
+min(b) = 0.815538
+DILUPBiCG:  Solving for Su, Initial residual = 0.409306, Final residual = 9.4333e-07, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.101669, Final residual = 5.02082e-07, No Iterations 2
+max(Xi) = 1.05538
+max(XiEq) = 2.51697
+Combustion progress = 0.000192392%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0161719, Final residual = 3.51748e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.016138, Final residual = 3.51025e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0151347, Final residual = 6.53535e-07, No Iterations 10
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 7.75357e-09, global = -4.58415e-10, cumulative = 1.59458e-08
+StCorr = 1
+Max St-Courant Number = 0.00250055
+Igniting cell 108000 state : 0.834591 1.01984 0.11551 45.174
+Igniting cell 17 state : 0.879154 1.05538 0.150216 75.6664
+Igniting cell 35 state : 0.880879 1.0009 0.141599 76.9423
+Igniting cell 53 state : 0.881276 1.00006 0.141951 76.9608
+Igniting cell 71 state : 0.898023 1.00002 0.138229 205.707
+Igniting cell 76860 state : 0.815538 1.00394 0.140529 131.057
+Igniting cell 77040 state : 0.821461 1.01112 0.123532 86.6181
+Igniting cell 108180 state : 0.832578 1.00043 0.113342 43.8206
+Igniting cell 108360 state : 0.844262 1.00012 0.131153 126.783
+Igniting cell 108540 state : 0.901341 1.00005 0.140624 267.987
+DILUPBiCG:  Solving for b, Initial residual = 0.000825136, Final residual = 6.64748e-06, No Iterations 1
+min(b) = 0.815455
+DILUPBiCG:  Solving for Su, Initial residual = 0.00405702, Final residual = 4.38039e-08, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.00108191, Final residual = 9.91768e-09, No Iterations 2
+max(Xi) = 1.05504
+max(XiEq) = 2.51924
+Combustion progress = 0.000192462%
+DILUPBiCG:  Solving for hu, Initial residual = 0.00270478, Final residual = 1.80643e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.00269916, Final residual = 1.70392e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.000739332, Final residual = 7.68571e-07, No Iterations 7
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.5518e-09, global = 2.73571e-10, cumulative = 1.62193e-08
+ExecutionTime = 642.797 s  ClockTime = 643 s
+
+Time = 9.5e-05
+
+Courant Number mean: 0.00207671 max: 0.267576
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.0260004, Final residual = 1.09468e-08, No Iterations 2
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0143398, Final residual = 3.84828e-06, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0390038, Final residual = 4.88381e-08, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0304756, Final residual = 7.79065e-06, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.00249539
+Igniting cell 108000 state : 0.83507 1.01961 0.116456 44.7337
+Igniting cell 17 state : 0.879563 1.05504 0.148793 75.4546
+Igniting cell 35 state : 0.881293 1.00088 0.141837 76.5247
+Igniting cell 53 state : 0.881799 1.00005 0.142029 76.4855
+Igniting cell 71 state : 0.899111 1.00002 0.13818 204.861
+Igniting cell 76860 state : 0.815455 1.004 0.141053 131.287
+Igniting cell 77040 state : 0.821667 1.01121 0.123562 86.0963
+Igniting cell 108180 state : 0.833475 1.0004 0.113827 44.2498
+Igniting cell 108360 state : 0.846346 1.00012 0.132194 125.931
+Igniting cell 108540 state : 0.901825 1.00005 0.140677 264.417
+DILUPBiCG:  Solving for b, Initial residual = 0.0069837, Final residual = 1.39624e-07, No Iterations 2
+min(b) = 0.805814
+DILUPBiCG:  Solving for Su, Initial residual = 0.377922, Final residual = 1.28535e-06, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.0843764, Final residual = 7.55364e-07, No Iterations 2
+max(Xi) = 1.09697
+max(XiEq) = 2.88162
+Combustion progress = 0.000203405%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0157779, Final residual = 3.54228e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0157473, Final residual = 3.53594e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0148406, Final residual = 7.20213e-07, No Iterations 10
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.02333e-09, global = -6.69761e-10, cumulative = 1.55496e-08
+StCorr = 1
+Max St-Courant Number = 0.00251147
+Igniting cell 108000 state : 0.832061 1.03758 0.116862 41.115
+Igniting cell 17 state : 0.879448 1.09697 0.149963 77.1052
+Igniting cell 35 state : 0.882558 1.00199 0.144543 78.3466
+Igniting cell 53 state : 0.883332 1.0001 0.145297 77.6439
+Igniting cell 71 state : 0.902921 1.00003 0.138491 202.127
+Igniting cell 76860 state : 0.805814 1.009 0.142263 125.749
+Igniting cell 77040 state : 0.815562 1.0238 0.120462 86.457
+Igniting cell 108180 state : 0.830527 1.00084 0.115031 43.3055
+Igniting cell 108360 state : 0.848266 1.00018 0.136487 138.028
+Igniting cell 108540 state : 0.906978 1.00008 0.141711 260.822
+DILUPBiCG:  Solving for b, Initial residual = 0.00114924, Final residual = 4.4801e-08, No Iterations 2
+min(b) = 0.805742
+DILUPBiCG:  Solving for Su, Initial residual = 0.00400665, Final residual = 9.58962e-08, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.00070013, Final residual = 9.91121e-06, No Iterations 1
+max(Xi) = 1.09654
+max(XiEq) = 2.88604
+Combustion progress = 0.000203436%
+DILUPBiCG:  Solving for hu, Initial residual = 0.00255449, Final residual = 1.87594e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.00254963, Final residual = 1.77001e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.00069742, Final residual = 7.87644e-07, No Iterations 7
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.03043e-08, global = -2.39604e-10, cumulative = 1.531e-08
+ExecutionTime = 669.328 s  ClockTime = 670 s
+
+Time = 0.0001
+
+Courant Number mean: 0.00231311 max: 0.285858
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for k, Initial residual = 0.0243604, Final residual = 1.92959e-08, No Iterations 2
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0137632, Final residual = 3.67931e-06, No Iterations 1
+DILUPBiCG:  Solving for Uy, Initial residual = 0.036789, Final residual = 5.76386e-08, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0284989, Final residual = 9.47072e-06, No Iterations 1
+StCorr = 1
+Max St-Courant Number = 0.0025068
+Igniting cell 108000 state : 0.832467 1.03733 0.118325 41.0571
+Igniting cell 17 state : 0.879733 1.09654 0.148587 76.9434
+Igniting cell 35 state : 0.883013 1.00195 0.14476 77.9366
+Igniting cell 53 state : 0.883283 1.0001 0.145319 77.8885
+Igniting cell 71 state : 0.90443 1.00003 0.138513 202.236
+Igniting cell 76860 state : 0.805742 1.00907 0.141932 127.421
+Igniting cell 77040 state : 0.815774 1.02383 0.121455 86.0326
+Igniting cell 108180 state : 0.831302 1.00078 0.117094 44.0614
+Igniting cell 108360 state : 0.849628 1.00019 0.136211 137.804
+Igniting cell 108540 state : 0.907676 1.00007 0.14168 258.466
+DILUPBiCG:  Solving for b, Initial residual = 0.00700792, Final residual = 1.68051e-07, No Iterations 2
+min(b) = 0.796572
+DILUPBiCG:  Solving for Su, Initial residual = 0.349669, Final residual = 1.7209e-06, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.0707937, Final residual = 8.24051e-07, No Iterations 2
+max(Xi) = 1.15546
+max(XiEq) = 3.25133
+Combustion progress = 0.000214428%
+DILUPBiCG:  Solving for hu, Initial residual = 0.0155103, Final residual = 3.48323e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.0154827, Final residual = 3.47967e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0146323, Final residual = 7.41584e-07, No Iterations 10
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.77146e-09, global = -7.72093e-10, cumulative = 1.45379e-08
+StCorr = 1
+Max St-Courant Number = 0.00253593
+Igniting cell 108000 state : 0.830498 1.06428 0.120491 39.1668
+Igniting cell 17 state : 0.879992 1.15546 0.148537 78.1762
+Igniting cell 35 state : 0.884727 1.00399 0.147743 78.9088
+Igniting cell 53 state : 0.884769 1.00018 0.148703 79.1837
+Igniting cell 71 state : 0.909099 1.00005 0.138762 199.67
+Igniting cell 76860 state : 0.796572 1.01847 0.142056 122.814
+Igniting cell 77040 state : 0.811012 1.045 0.11926 86.4699
+Igniting cell 108180 state : 0.830069 1.00161 0.12041 46.7695
+Igniting cell 108360 state : 0.85291 1.00027 0.1398 147.364
+Igniting cell 108540 state : 0.912641 1.00011 0.142394 253.297
+DILUPBiCG:  Solving for b, Initial residual = 0.000946394, Final residual = 5.63656e-06, No Iterations 1
+min(b) = 0.797443
+DILUPBiCG:  Solving for Su, Initial residual = 0.00371166, Final residual = 1.19286e-07, No Iterations 2
+DILUPBiCG:  Solving for Xi, Initial residual = 0.000965798, Final residual = 3.06301e-06, No Iterations 1
+max(Xi) = 1.15387
+max(XiEq) = 3.25835
+Combustion progress = 0.000214445%
+DILUPBiCG:  Solving for hu, Initial residual = 0.00242077, Final residual = 1.74801e-06, No Iterations 1
+DILUPBiCG:  Solving for h, Initial residual = 0.00241643, Final residual = 1.66157e-06, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.000660127, Final residual = 7.66477e-07, No Iterations 7
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.05144e-08, global = -4.71548e-10, cumulative = 1.40663e-08
+ExecutionTime = 739.906 s  ClockTime = 740 s
+
+End
+

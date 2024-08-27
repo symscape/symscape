@@ -1,0 +1,334 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/1717 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:03:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Heat Sink | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="1280.html" />
+<link rel="up" href="428.html" />
+<link rel="next" href="817.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-1717 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="428.html">Builder</a></div>                  <h1 class="title">Heat Sink</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1717" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on April 25, 2019 - 08:08        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Create a symmetrical multi-volume domain for a Conjugate Heat Transfer (CHT) simulation of a heat sink.</p>
+<p><img alt="Final Heat Sink Multi-Volume" src="../files/tutorials/heatsink/heat-sink-multi-volume.png" width="484" height="363" /></p>
+<h3>Goals</h3>
+<p>In this tutorial, you will learn how to:</p>
+<ul>
+<li>Create a coupled multi-volume domain</li>
+<li>Create multiple boxes</li>
+<li>Translate objects</li>
+<li>Subtract volumes</li>
+<li>Decompose volumes</li>
+<li>Link faces</li>
+</ul>
+<h3>Assumptions</h3>
+<ol>
+<li>You have <a href="15.html">activated</a> the <a href="../product/builder.html">Caedium Builder</a> add-on or <a href="../product/professional.html">Caedium Professional</a>. </li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>.</li>
+</ol>
+<h2 class="tutorial-heading">Create the Heat Sink Blank as a Box</h2>
+<p class="note">This box is the blank from which we will cut (subtract) the fins of the heat sink.</p>
+<p>Select the <strong>Geometry</strong> <a href="../tutorials/essentials.html#toolpalette">Tool Palette</a>.</p>
+<p>Select the <strong>Volumes-&gt;Box</strong> tool. In the <a href="../tutorials/essentials.html#propertiespanel">Properties Panel</a>, set <strong>Lengths</strong> to [<strong>0.05 0.035 0.03</strong>]. Press Enter on the keyboard to apply the changes to the Properties Panel.</p>
+<p><img alt="Box Tool Properties" src="../files/tutorials/heatsink/heat-sink-blank-box-props.png" width="246" height="505" /> </p>
+<p>Drag and drop the <strong>Volumes-&gt;Box</strong> tool onto the <a href="../tutorials/essentials.html#viewwindow">View Window</a> (<strong>view</strong>). Select <strong>Done</strong> to create a box (<strong>volume</strong>).</p>
+<p class="note">All geometry is created at the origin by default.</p>
+<p>To shade the faces of the box, right-click on an edge of the volume, double-click <strong>volume-&gt;Faces</strong>, and then select <strong>Properties</strong> from the menu. In the Properties Panel, turn off the <strong>Transparent</strong> property.</p>
+<p><img alt="Shaded Heat Sink Blank" src="../files/tutorials/heatsink/heat-sink-blank-shaded.png" width="484" height="363" /> </p>
+<h2 class="tutorial-heading">Translate the Heat Sink Blank</h2>
+<p>To translate the box (<strong>volume</strong>) to a new location in the View Window, select the <strong>Transforms-&gt;Translate</strong> tool. In the Properties Panel set <strong>Translate</strong> to [<strong>0 -0.01 -0.01</strong>] and press Enter on the keyboard to apply the changes.</p>
+<p><img alt="Translate Tool Properties" src="../files/tutorials/heatsink/heat-sink-blank-translate-props.png" width="235" height="505" /> </p>
+<p>Drag the <strong>Transforms-&gt;Translate</strong> tool and drop it directly onto the box in the View Window. Select <strong>Done</strong> to translate the box.</p>
+<h2 class="tutorial-heading">Create and Position the Outer Boundary</h2>
+<p class="note">This box is the outer boundary of the flow domain that will incorporate the heat sink.</p>
+<p>Select the <strong>Volumes-&gt;Box</strong> tool. In the Properties Panel, set <strong>Lengths</strong> to [<strong>0.2 0.05 0.05</strong>]. Press Enter on the keyboard to apply the changes to the Properties Panel. Drag and drop the <strong>Volumes-&gt;Box</strong> tool onto the View Window. Double click <strong>sim</strong> in the <strong>Select</strong> dialog and then select <strong>Done</strong> to create a box (<strong>volume_1</strong>).</p>
+<p><img alt="Outer Boundary Box" src="../files/tutorials/heatsink/outer-boundary-box.png" width="484" height="363" /> </p>
+<p>To translate the outer boundary (<strong>volume_1</strong>) to a new location in the View Window, select the <strong>Transforms-&gt;Translate</strong> tool. In the Properties Panel set <strong>Translate</strong> to [<strong>-0.05 0 0</strong>] and press Enter on the keyboard to apply the changes. Drag the <strong>Transforms-&gt;Translate</strong> tool and drop it directly onto an edge of the outer boundary (<strong>volume_1</strong>) in the View Window. Select <strong>Done</strong> to translate the outer boundary.</p>
+<p>In the <strong>Home</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> click the <strong>Fit-All</strong> button <img alt="" src="../files/tutorials/shared/fitall.png" /> to see all the geometry in the View Window.</p>
+<p><img alt="Outer Boundary Box Fit-All" src="../files/tutorials/heatsink/outer-boundary-box-fit-all.png" width="484" height="363" /> </p>
+<h2 class="tutorial-heading">Create and Position the Y-Direction Fins</h2>
+<p>Select the <strong>Volumes-&gt;Box</strong> tool. In the Properties Panel, set <strong>Lengths</strong> to [<strong>0.01 0.05 0.05</strong>]. Press Enter on the keyboard to apply the changes to the Properties Panel. Drag and drop the <strong>Volumes-&gt;Box</strong> tool onto the View Window. Double click <strong>sim</strong> in the <strong>Select</strong> dialog and then select <strong>Done</strong> to create a box (<strong>volume_2</strong>).</p>
+<p>To translate the box (<strong>volume_2</strong>) to a new location in the View Window, select the <strong>Transforms-&gt;Translate</strong> tool. In the Properties Panel set <strong>Translate</strong> to [<strong>0.01 -0.02 0.01</strong>] and press Enter on the keyboard to apply the changes. Drag the <strong>Transforms-&gt;Translate</strong> tool and drop it directly onto an edge of the box (<strong>volume_2</strong>) in the View Window. Select <strong>Done</strong> to translate the box (<strong>volume_2</strong>).</p>
+<p><img alt="First Y-Fin Box" src="../files/tutorials/heatsink/first-y-fin-box.png" width="484" height="363" /> </p>
+<p>Right-click on an edge of the box (<strong>volume_2</strong>) in the View Window. Double-click <strong>volume_2</strong> in the <strong>Select</strong> dialog to select the box, and select the <strong>Copy</strong> option.</p>
+<p>In the <strong>Home</strong> Toolbar click <strong>Paste</strong> <img alt="" src="../files/tutorials/shared/paste.png" /> to paste a copy of the box (<strong>volume_2</strong>) at the same location as the original.</p>
+<p>To translate the box copy (<strong>volume_3</strong>), select the <strong>Transforms-&gt;Translate</strong> tool. In the Properties Panel set <strong>Translate </strong>to [<strong>0.02 0 0</strong>]. Drag the <strong>Transforms-&gt;Translate</strong> tool and drop it directly onto an edge of the box copy in the View Window. Double-click <strong>volume_3</strong> in the <strong>Select</strong> dialog to select the box copy and select <strong>Done</strong> to translate the box copy.</p>
+<p><img alt="Second Y-Fin Box" src="../files/tutorials/heatsink/second-y-fin-box.png" width="484" height="363" /> </p>
+<h2 class="tutorial-heading">Subtract Y-Direction Fins</h2>
+<p>Drag and drop the <strong>Booleans-&gt;Subtract</strong> tool directly onto a shaded face of the heat sink blank. Double-click <strong>volume</strong> in the <strong>Select</strong> dialog to select the heat sink blank. Select <strong>Select/Deselect</strong> from the menu, right-click on an edge of the first Y-direction fin box. Double-click <strong>volume_2</strong> to select the first Y-direction fin box. Select <strong>Select/Deselect</strong> from the menu, right-click on an edge of the second Y-direction fin box. Double-click <strong>volume_3</strong> to select the second Y-direction fin box. Select <strong>Done</strong> to produce the heat sink with Y-direction fins (<strong>volume_4</strong>).</p>
+<p>To shade the faces of the resultant volume, right-click on an edge of the volume, double-click <strong>volume_4-&gt;Faces</strong>, and then select <strong>Properties</strong> from the menu. In the Properties Panel, turn off the <strong>Transparent</strong> property.</p>
+<p><img alt="Y-Fin Blank Shaded" src="../files/tutorials/heatsink/y-fins-complete-shaded.png" width="484" height="363" /> </p>
+<h2 class="tutorial-heading">Create and Position the X-Direction Fins</h2>
+<p>Select the <strong>Volumes-&gt;Box</strong> tool. In the Properties Panel, set <strong>Lengths</strong> to [<strong>0.07 0.01 0.05</strong>]. Press Enter on the keyboard to apply the changes to the Properties Panel. Drag and drop the <strong>Volumes-&gt;Box</strong> tool onto the View Window. Double click <strong>sim</strong> in the <strong>Select</strong> dialog and then select <strong>Done</strong> to create a box (<strong>volume_5</strong>).</p>
+<p>To translate the box (<strong>volume_5</strong>) to a new location in the View Window, select the <strong>Transforms-&gt;Translate</strong> tool. In the Properties Panel set <strong>Translate</strong> to [<strong>-0.01 0.005 0.01</strong>] and press Enter on the keyboard to apply the changes. Drag the <strong>Transforms-&gt;Translate</strong> tool and drop it directly onto an edge of the box (<strong>volume_5</strong>) in the View Window. Select <strong>Done</strong> to translate the box (<strong>volume_5</strong>).</p>
+<p><img alt="X-Fin Box" src="../files/tutorials/heatsink/x-fin-box.png" width="484" height="363" /> </p>
+<h2 class="tutorial-heading">Subtract X-Direction Fins</h2>
+<p>Drag and drop the <strong>Booleans-&gt;Subtract</strong> tool directly onto a shaded face of the heat sink with Y-direction fins. Double-click <strong>volume_4</strong> in the <strong>Select</strong> dialog to select the heat sink with Y-direction fins. Select <strong>Select/Deselect</strong> from the menu, right-click on an edge of the X-direction fin box. Double-click <strong>volume_5</strong> to select the X-direction fin box. Select <strong>Done</strong> to produce the heat sink with the complete fins (<strong>volume_6</strong>). </p>
+<p><img alt="Heat Sink Fins Complete" src="../files/tutorials/heatsink/heat-sink-fins-complete.png" width="484" height="363" /> </p>
+<h2 class="tutorial-heading">Create Multi-Volume Simulation Domain</h2>
+<p>Drag and drop the <strong>Booleans-&gt;Decompose </strong>tool directly onto an edge of the outer boundary box. Double-click <strong>volume_1</strong> in the <strong>Select</strong> dialog to select the outer boundary box. Select <strong>Select/Deselect</strong> from the menu, right-click on an edge of the complete heat sink. Double-click <strong>volume_6</strong> to select the complete heat sink. Select <strong>Done</strong> to produce the two volume domain, where the fluid region (<strong>volume_7</strong>) encloses the solid heat sink region (<strong>volume_8</strong>).</p>
+<p>To shade the faces of the heat sink, right-click on an edge of the heat sink, double-click <strong>volume_8-&gt;Faces</strong>, and then select <strong>Properties</strong> from the menu. In the Properties Panel, turn off the <strong>Transparent</strong> property.</p>
+<p><img alt="Multi-Volume Heat Sink Geometry Complete" src="../files/tutorials/heatsink/multi-volume-domain-complete.png" width="484" height="363" /> </p>
+<h2 class="tutorial-heading">Link the Faces</h2>
+<p class="note">To prepare the multi-volume domain for a CHT simulation we need to couple the fluid faces with the coincident solid faces.</p>
+<p>Drag and drop the <strong>Faces-&gt;Link </strong>tool onto the background of the View Window and double click <strong>sim-&gt;Faces</strong> in the <strong>Select</strong> dialog. Select <strong>Done</strong> to link the coincident faces between the two volumes that will propagate the heat flux coupling between the heat sink and the surrounding air.</p>
+<h3>Notes</h3>
+<p>The complete geometry created in this tutorial is available as a free download at <a href="../files/tutorials/heatsink/heat-sink.sym">heat-sink.sym</a>.</p>
+<p>See the <a href="1718.html">&quot;Conjugate Heat Transfer for a Heat Sink&quot;</a> tutorial for a flow simulation that uses this geometry.</p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="1280.html" class="page-previous" title="Go to previous page">‹ Double-Sided Membrane</a>
+                    <a href="428.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="817.html" class="page-next" title="Go to next page">RANS Flow ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+          </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="expanded active-trail"><a href="428.html">Builder</a><ul class="menu"><li class="leaf first"><a href="234.html">Simple Volume Creation</a></li>
+<li class="leaf"><a href="237.html">Loft, Stitch, and Unite</a></li>
+<li class="leaf"><a href="810.html">Pipe into a Box</a></li>
+<li class="leaf"><a href="813.html">Imprint a Face onto a Volume</a></li>
+<li class="leaf"><a href="830.html">Wheel in a Box</a></li>
+<li class="leaf"><a href="1254.html">Mixer Quadrant</a></li>
+<li class="leaf"><a href="1256.html">Water Tank</a></li>
+<li class="leaf"><a href="1280.html">Double-Sided Membrane</a></li>
+<li class="leaf last active-trail"><a href="1717.html" class="active">Heat Sink</a></li>
+</ul></li>
+<li class="collapsed"><a href="817.html">RANS Flow</a></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="collapsed last"><a href="../tips.html">Tips</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/1717 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:03:53 GMT -->
+</html>

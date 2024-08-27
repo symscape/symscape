@@ -1,0 +1,495 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/blog/moving-reference-frame-for-cfd by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:18:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Moving Reference Frame for Computational Fluid Dynamics | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-blog page-blog-moving-reference-frame-for-cfd section-blog one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-5  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../blog.html">Blogs</a> › <a href="6.html">Richard Smith&#039;s blog</a></div>                  <h1 class="title">Moving Reference Frame for Computational Fluid Dynamics</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1384" class="node node-type-blog clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Richard Smith on June 24, 2013 - 08:23        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>A Moving Reference Frame (MRF) is a relatively simple, robust, and efficient steady-state, <a href="../computational-fluid-dynamics.html">Computational Fluid Dynamics (CFD)</a> modeling technique to simulate rotating machinery. For example, the rotors on a <a href="http://en.wikipedia.org/wiki/Quadcopter">quadcopter</a> can be modeled with MRFs. </p>
+<p><span class="inline inline-center"><img src="../files/pictures/quadcopter/quadcopter-streamlines.png" alt="MRF CFD Simulation of a Quadcopter in Flight" width="500" height="373" /><span class="caption"><strong>MRF CFD Simulation of a Quadcopter in Flight</strong></span>Shows streamlines colored by velocity magnitude</span></p>
+<p>An MRF assumes that an assigned volume has a constant speed of rotation and the non-wall boundaries are surfaces of revolution (e.g., cylindrical, spherical, conical). In the case of the quadcopter example the volumes between the rotor blades are designated as MRFs, assigned rotational speeds, and embedded within a <a href="../node/1174.html">multi-volume flow domain</a>.</p>
+<p>MRF is equivalent to running a rotational simulation and then observing the results at the instant equivalent to the position of the rotor within the MRF. MRF assumes a weak interaction between the MRF volume and the surrounding stationary volumes.</p>
+<p><span class="inline inline-center"><img src="../files/pictures/quadcopter/quadcopter-rotor.png" alt="MRF CFD Simulation of Ducted Fan" width="500" height="338" /><span class="caption"><strong>MRF CFD Simulation of Ducted Fan</strong></span>Shows velocity vectors within MRF volumes</span></p>
+<p>An alternative to MRF is the moving/sliding mesh technique, which can deal with strong interactions between the moving volume and the surrounding stationary volumes. However, in practice the moving mesh technique often has robustness problems due its dependence on intersection calculations between the stationary and rotating volumes. Also the moving mesh technique is a transient (unsteady) simulation procedure which typically results in extremely long runtimes. Given the significant drawbacks of the moving mesh technique, the MRF is the preferred approach within its limitations.</p>
+<h3>Notes</h3>
+<ul>
+<li>MRF is also known as the 'frozen rotor approach' </li>
+<li>The quadcopter (symmetrical half model) geometry was created in <a href="../product/professional.html">Caedium Professional</a>. The CFD simulation was performed using the incompressible, steady-state RANS solver, with multiple MRF, and the k-omega SST turbulence model </li>
+</ul>
+  </div>
+
+  <div class="node-links">
+    <ul class="links inline"><li class="blog_usernames_blog first last"><a href="6.html" title="Read Richard Smith&#039;s latest blog entries.">Richard Smith&#039;s blog</a></li>
+</ul>  </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-1887"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="moving-reference-frame-for-cfd.html#comment-1887" class="active">Quadrotor CFD</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by JJ Roldan (not verified) on February 10, 2014 - 06:00.  </div>
+
+  <div class="content">
+    <p>Hello!</p>
+<p>I'm a PhD student in the fields of automation and robotics from Spain. Currently, I have to do both CFD simulations of a quadrotor in hovering and movement. My objective is to determine the optimal positions for temperature/humidity and gas sensors in the quadrotor. I believe your simulation looks quite good and I'm thinking about using Caedium for mine. Can you provide me information to reproduce this simulation or directly the model of the quadrotor? If you want we can collaborate for a publication. </p>
+<p>You can contact me here or at: jj dot roldan at upm dot es.</p>
+<p>Thanks!</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1890"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="moving-reference-frame-for-cfd.html#comment-1890" class="active">Need your own design</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on February 10, 2014 - 08:17.  </div>
+
+  <div class="content">
+    <p>This idealized model was constructed as a demonstration. I doubt it would make a good basis for an actual quadcopter. The takeaway here is that you can simulate such a configuration in Caedium using MRF for your <strong>own unique design</strong>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2120"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="moving-reference-frame-for-cfd.html#comment-2120" class="active">MRF and SRF and Boundary condition</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Mohammad (not verified) on November 5, 2014 - 23:25.  </div>
+
+  <div class="content">
+    <p>Hello,</p>
+<p>I have a question about using SRF.<br />
+Let's consider two rotation discs ( such as 2 CDs) and the flow is between them. How can I use MRF for this simulations? There will be only one zone, so it is SRF ( single ref. frame). Then can the solid wall be part of the bottom and top walls of the MRF internface?</p>
+<p>I would be thankful is someone can help me.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2121"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="moving-reference-frame-for-cfd.html#comment-2121" class="active">MRF not needed</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on November 6, 2014 - 08:55.  </div>
+
+  <div class="content">
+    <p>Assuming the disks are axi-symmetric then you don't need a MRF or SRF, just assign an angular velocity to the disk surfaces as for the wheel in the tutorial <a href="../node/831.html">"Flow Over a Rotating Wheel with Moving Ground"</a> then</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2122"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="moving-reference-frame-for-cfd.html#comment-2122" class="active">Hello and thanks for your</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Mohammad (not verified) on November 6, 2014 - 09:51.  </div>
+
+  <div class="content">
+    <p>Hello and thanks for your reply...</p>
+<p>I have two more questions</p>
+<p>1) is it possible that the MRF interface ( or part of it ) be the outer radius of the solid impeller? For example in a centrifugal pump, is it possile that the MRF interface radius be exactly the radius of the impeller?</p>
+<p>2) is it possible that the bottom part of the impeller be the solid wall?<br />
+ please check the following link for more details, in which I need to define the MRF zone and the locaion of interface.</p>
+<p>Thanks in advance</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2123"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="moving-reference-frame-for-cfd.html#comment-2123" class="active">Your system does not allow me</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Mohammad (not verified) on November 6, 2014 - 10:00.  </div>
+
+  <div class="content">
+    <p>Your system does not allow me to add the link of my question which I have posted on CFD online webiste...</p>
+<p>Thanks</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2124"></a>
+<div class="comment comment-published odd clearfix">
+  
+      <h3 class="title">
+      <a href="moving-reference-frame-for-cfd.html#comment-2124" class="active">Model single passage using cyclic condition</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on November 6, 2014 - 10:32.  </div>
+
+  <div class="content">
+    <p>Typically for a centrifugal compressor/pump you'd only model a single passage way by using cyclic conditions and then assign the MRF to be the rotating portion of the air in contact with the blades. As an example see <a href="caedium-v4-sneak-peek-centrifugal-compressor-passage-cfd-simulation.html">"Centrifugal Compressor Passage CFD Simulation"</a>.</p>
+<p>MRF assumes that any wall that lies within or on the MRF volume is rotating, to override this behavior assign a zero angular velocity to the required stationary walls.</p>
+<p>I don't see the link that you referenced, so I'm having a hard time visualizing your scenario.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2126"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="moving-reference-frame-for-cfd.html#comment-2126" class="active">URL links are not restricted</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on November 6, 2014 - 10:37.  </div>
+
+  <div class="content">
+    <p>Adding URL links is not restricted e.g., <a href="caedium-v4-sneak-peek-centrifugal-compressor-passage-cfd-simulation.html" title="https://www.symscape.com/blog/caedium-v4-sneak-peek-centrifugal-compressor-passage-cfd-simulation">https://www.symscape.com/blog/caedium-v4-sneak-peek-centrifugal-compress...</a></p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2127"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="moving-reference-frame-for-cfd.html#comment-2127" class="active">Still I cannot add the</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Mohammad (not verified) on November 6, 2014 - 10:46.  </div>
+
+  <div class="content">
+    <p>Still I cannot add the link...<br />
+I permanently receive this message :</p>
+<p>"Your submission has triggered the spam filter and will not be accepted. If you feel this is in error, please report that you are blocked."</p>
+<p>anyway,,,if you have an emal, I can send it to you and you can put it on your website by yourself.</p>
+<p>Tnx</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2129"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="moving-reference-frame-for-cfd.html#comment-2129" class="active">Use our contact form</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on November 6, 2014 - 10:54.  </div>
+
+  <div class="content">
+    <p>Are your questions about how Caedium deals with MRF? If not then I don't think my answers are generally applicable across other CFD codes.</p>
+<p>Use our <a href="../contact.html">Contact Form</a> to share the URL.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2284"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="moving-reference-frame-for-cfd.html#comment-2284" class="active">Small question about MRF</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Nawar Abbas (not verified) on December 29, 2015 - 07:19.  </div>
+
+  <div class="content">
+    <p>Hello!</p>
+<p>In the MRF solver, we need to change the source equations (for instance, the URANS equations) by adding some additional terms to take the additional forces into account, but we don't need to change the equation of the turbulence models (for instance kOmegaSST-model).</p>
+<p>My question is: </p>
+<p>Why we don't need to change the equations of the turbulence models, and where can I find the explanation of this problem (In which reference)?</p>
+<p>Many thanks!</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2408"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="moving-reference-frame-for-cfd.html#comment-2408" class="active">MRF</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://www.building-engineering.sg/" rel="nofollow">Alex Lee</a> (not verified) on January 7, 2018 - 18:37.  </div>
+
+  <div class="content">
+    <p>Dear Richard, for the MRF CFD Simulation of Ducted Fan you showed, what is the benefit of including the rotating blades in the ducts?</p>
+<p>If blades (statationary) are ignored, do you still have the downward moving airstream ?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2409"></a>
+<div class="comment comment-published last odd clearfix">
+  
+      <h3 class="title">
+      <a href="moving-reference-frame-for-cfd.html#comment-2409" class="active">MRF simulating rotating blades</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on January 8, 2018 - 09:46.  </div>
+
+  <div class="content">
+    <p>Without the MRF simulating rotating blades there would not be the accelerated, downward moving airstream. Why do you ask?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-blog-0" class="block block-blog region-odd odd region-count-3 count-3  block-3"><div class="block-inner">
+
+      <h2 class="title">Recent blog posts</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="cfd-simulates-distant-past.html">CFD Simulates Distant Past</a></li>
+<li><a href="background-caedium-v6-0-release.html">Background on the Caedium v6.0 Release</a></li>
+<li><a href="long-necked-dinosaurs-succumb-to-cfd.html">Long-Necked Dinosaurs Succumb To CFD</a></li>
+<li><a href="cfd-provides-insight-into-mystery-fossils.html">CFD Provides Insight Into Mystery Fossils</a></li>
+<li><a href="wind-turbine-design-according-to-insects.html">Wind Turbine Design According to Insects</a></li>
+<li><a href="runners-discover-drafting.html">Runners Discover Drafting</a></li>
+<li><a href="wind-tunnel-and-cfd-reveal-best-cycling-tuck.html">Wind Tunnel and CFD Reveal Best Cycling Tuck</a></li>
+<li><a href="active-aerodynamics-on-the-lamborghini-huracan-performante.html">Active Aerodynamics on the Lamborghini Huracán Performante</a></li>
+<li><a href="fluidic-logic.html">Fluidic Logic</a></li>
+<li class="last"><a href="stonehenge-vortex-revealed-as-april-fools-day-distortion-field.html">Stonehenge Vortex Revealed as April Fools&#039; Day Distortion Field</a></li>
+</ul></div><div class="more-link"><a href="../blog.html" title="Read the latest blog entries.">more</a></div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-block-4" class="block block-block region-even even region-count-4 count-4  block-4"><div class="block-inner">
+
+      <h2 class="title">RSS Feed</h2>
+  
+  <div class="content">
+    <a href="feed" rel="alternate" type="application/rss+xml"><img src="../files/images/other/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/>&nbsp;Get our Blog feed</a>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/blog/moving-reference-frame-for-cfd by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:18:09 GMT -->
+</html>

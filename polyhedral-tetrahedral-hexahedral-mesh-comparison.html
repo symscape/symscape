@@ -1,0 +1,415 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/polyhedral-tetrahedral-hexahedral-mesh-comparison by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:09:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Polyhedral, Tetrahedral, and Hexahedral Mesh Comparison | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-polyhedral-tetrahedral-hexahedral-mesh-comparison section-polyhedral-tetrahedral-hexahedral-mesh-comparison one-sidebar sidebar-second ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="index.html" title="Home" rel="home"><img src="files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd odd region-count-1 count-3  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="index.html">Home</a> › <a href="articles.html">Articles</a></div>                  <h1 class="title">Polyhedral, Tetrahedral, and Hexahedral Mesh Comparison</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-1347" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by symscape on February 25, 2013 - 20:40        </span>
+      
+              <div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_15 first last"><a href="articles.html" rel="tag" title="General interest">Articles</a></li>
+</ul></div>
+          </div>
+  
+  <div class="content">
+    <p>Are you wondering how a polyhedral (dual) mesh compares to the equivalent tetrahedral and hexahedral meshes? Then you're in the right place. This study compares the volume element count, convergence, accuracy, and runtimes of the three different types of meshes for a simple duct.</p>
+<p><span class="inline inline-center"><img src="files/articles/mesh-comparison/poly-surface-mesh.png" width="500" height="322" alt="Polygon Surface Mesh" /><span class="caption"><strong>Polygon Surface Mesh: </strong>Backward facing step in a duct</span></span></p>
+<p>This study focuses on a 3D backward facing step within a duct. The duct geometry was decomposed into 6-faced blocks so it could support a hexahedral mesh as well as the more general tetrahedral and polyhedral meshes.</p>
+<h3>Meshes</h3>
+<p>Slices through the meshes revealing volume elements are shown below.</p>
+<p><span class="inline inline-center"><img src="files/articles/mesh-comparison/hex-mesh.png" width="500" height="324" alt="Hexahedral Volume Elements" /><span class="caption"><strong>Hexahedral Volume Elements</strong></span></span></p>
+<p><span class="inline inline-center"><img src="files/articles/mesh-comparison/poly-mesh.png" width="500" height="322" alt="Polyhedral Volume Elements" /><span class="caption"><strong>Polyhedral Volume Elements</strong></span></span></p>
+<p><span class="inline inline-center"><img src="files/articles/mesh-comparison/tet-mesh.png" width="500" height="324" alt="Tetrahedral Volume Elements" /><span class="caption"><strong>Tetrahedral Volume Elements</strong></span></span></p>
+<p>The polyhedral mesh is derived directly from the tetrahedral mesh by forming polygons around each node in the tetrahedral mesh.</p>
+<p><span class="inline inline-center"><img src="files/articles/mesh-comparison/element-count.png" width="500" height="394" alt="Volume Element Counts" /><span class="caption"><strong>Volume Element Counts</strong></span></span></p>
+<h3>Convergence</h3>
+<p>The pressure residual for each mesh type is shown below.</p>
+<p><span class="inline inline-center"><img src="files/articles/mesh-comparison/residuals.png" width="500" height="373" alt="Pressure Residuals Monitor" /><span class="caption"><strong>Pressure Residuals Monitor</strong></span></span></p>
+<p>The solution on the polyhedral mesh produced the lowest absolute residual value.</p>
+<p>The number of iterations for each mesh type to reach the same level of convergence (1x10<sup>-4</sup>) for the pressure residual are shown below.</p>
+<p><span class="inline inline-center"><img src="files/articles/mesh-comparison/convergence-its.png" width="500" height="394" alt="Pressure Residual Convergence" /><span class="caption"><strong>Pressure Residual Convergence</strong></span></span></p>
+<h3>Accuracy (Pressure Drop)</h3>
+<p>The pressure drop for each mesh type is shown below.</p>
+<p><span class="inline inline-center"><img src="files/articles/mesh-comparison/deltap.png" width="500" height="373" alt="Pressure Drop Monitor" /><span class="caption"><strong>Pressure Drop Monitor</strong></span></span></p>
+<p>While there are minor differences in the converged pressure drop the simulations are in broad agreement on the overall value.</p>
+<p>The number of iterations for each mesh type to reach a steady state value for the pressure drop are shown below.</p>
+<p><span class="inline inline-center"><img src="files/articles/mesh-comparison/deltap-its.png" width="500" height="395" alt="Pressure Drop Convergence" /><span class="caption"><strong>Pressure Drop Convergence</strong></span></span></p>
+<h3>Runtime</h3>
+<p>Assuming our goal is to reach the steady state pressure drop for each simulation, then the runtimes (scaled against the slowest simulation) are shown below.</p>
+<p><span class="inline inline-center"><img src="files/articles/mesh-comparison/runtime.png" width="500" height="394" alt="Runtimes" /><span class="caption"><strong>Runtimes</strong></span></span></p>
+<h3>Conclusions</h3>
+<p>Cleary this study shows that polyhedral cells hold great promise in producing equivalent accuracy results compared to other mesh types with the added benefits of:</p>
+<ul>
+<li>Faster converge with fewer iterations </li>
+<li>Robust convergence to lower residual values </li>
+<li>Faster solution runtimes </li>
+</ul>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-1704"></a>
+<div class="comment comment-published first odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="polyhedral-tetrahedral-hexahedral-mesh-comparison.html#comment-1704" class="active">Caedium v5 will Create Polyhedral Meshes</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on February 25, 2013 - 20:43.  </div>
+
+  <div class="content">
+    <p>In the next release of Caedium there will be an option to convert tetrahedral meshes to polyhedral meshes. For more details see <a href="blog/caedium-v5-sneak-peek-polyhedral-meshes-improve-cfd.html">"Caedium v5 Sneak Peek: Polyhedral Meshes Improve CFD"</a>.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2220"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="polyhedral-tetrahedral-hexahedral-mesh-comparison.html#comment-2220" class="active">Validate such claim with experimental data</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on May 11, 2015 - 09:01.  </div>
+
+  <div class="content">
+    <p>Please validate the simulation results with experimental data. Residual monitoring does not mean that the result is correct.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2221"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="polyhedral-tetrahedral-hexahedral-mesh-comparison.html#comment-2221" class="active">Pressure monitor indicates similar results</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 11, 2015 - 13:11.  </div>
+
+  <div class="content">
+    <p>The residual monitor is included for reference, it's not intended to validate the results. The pressure monitor is the indicator that the results are similar for all cases and therefore for that level of accuracy the conclusions hold true.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2330"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="polyhedral-tetrahedral-hexahedral-mesh-comparison.html#comment-2330" class="active">The pressure monitoring is</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on July 29, 2016 - 02:24.  </div>
+
+  <div class="content">
+    <p>The pressure monitoring is not correct. Experimental data is still needed. For example, polyhedra and tetra deviate alot from real data in comparison to hexa in swirling flow.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2333"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="polyhedral-tetrahedral-hexahedral-mesh-comparison.html#comment-2333" class="active">Quality of Convergence for different meshes</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Clifford Arnold (not verified) on August 1, 2016 - 10:58.  </div>
+
+  <div class="content">
+    <p>What you show is interesting, and targets a questions I have been asking recently.  </p>
+<p>It is my experience that the velocity field converges more slowly than the pressure field, and that finding the converged solution for the velocity field dominates the solution time for benchmarks like the one you have shown.</p>
+<p>Can you please show the convergence rate for the velocity field for the hex, tet, and polyhedrals meshes?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2334"></a>
+<div class="comment comment-published even comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="polyhedral-tetrahedral-hexahedral-mesh-comparison.html#comment-2334" class="active">References</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on August 1, 2016 - 12:27.  </div>
+
+  <div class="content">
+    <p><cite>"polyhedra and tetra deviate alot from real data in comparison to hexa in swirling flow"</cite></p>
+<p>Do you have references you can share?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2335"></a>
+<div class="comment comment-published odd comment-by-node-author clearfix">
+  
+      <h3 class="title">
+      <a href="polyhedral-tetrahedral-hexahedral-mesh-comparison.html#comment-2335" class="active">Pressure residual is the slowest to converge</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on August 1, 2016 - 12:33.  </div>
+
+  <div class="content">
+    <p><cite>"It is my experience that the velocity field converges more slowly than the pressure field"</cite></p>
+<p>Typically I see the pressure (field) residual is the slowest to converge for the pressure-correction (segregated) solver used in this study, so that is why I only showed the pressure residual for clarity.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-2339"></a>
+<div class="comment comment-published even comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="polyhedral-tetrahedral-hexahedral-mesh-comparison.html#comment-2339" class="active">Here&#039;s the paper title for</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on August 8, 2016 - 08:06.  </div>
+
+  <div class="content">
+    <p>Here's the paper title for swirling flow. refer to page 4 for mesh density and page 8 for experimental validation. </p>
+<p>"TURBULENCE MODEL ANALYSIS OF FLOW INSIDE A HYDROCYCLONE"</p>
+<p>it can be seen that tetra performs a lot worse than hexa eventhough the mesh density for the former is 10% higher than the latter as on page 8 (bottom two plots). </p>
+<p>I can't recall the paper for polyhedra though. I will update you once I get hold of the paper. </p>
+<p>I am a PhD student dealing with swirling flow btw. any deviation greater than 10% is not acceptable as portrayed by tetra.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-4899"></a>
+<div class="comment comment-published last odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="polyhedral-tetrahedral-hexahedral-mesh-comparison.html#comment-4899" class="active">Hi, 
+did you find the paper</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on June 23, 2021 - 06:17.  </div>
+
+  <div class="content">
+    <p>Hi, </p>
+<p>did you find the paper regarding polyhedral mesh?</p>
+<p>I am using tet for my swirling flow simulation now as there are baffles blocking the generation of hex mesh. I would like to know if polyhedral mesh is better than tet in this situation.</p>
+<p>Thank you in advance.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="products.html">Products</a><ul class="menu"><li class="leaf first"><a href="product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="news.html">News</a></li>
+<li class="collapsed"><a href="blog.html">Blog</a></li>
+<li class="leaf"><a href="about.html" title="">About</a></li>
+<li class="expanded last"><a href="resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="articles.html">Articles</a></li>
+<li class="leaf"><a href="image.html">Gallery</a></li>
+<li class="leaf"><a href="support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="forum.html">Forums</a></li>
+<li class="leaf"><a href="downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="partners.html">Partners</a></li>
+<li class="leaf"><a href="poll.html">Polls</a></li>
+<li class="leaf last"><a href="links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="forum.html"><img title="Forums" alt="Forums" src="files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even even region-count-2 count-2  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="contact.html">Contact</a> | <a href="trademarks.html">Trademarks</a> | <a href="privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/polyhedral-tetrahedral-hexahedral-mesh-comparison by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:09:08 GMT -->
+</html>

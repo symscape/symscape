@@ -1,0 +1,503 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+
+<!-- Mirrored from www.symscape.com/node/816 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Incompressible Transient Flow with Heat Transfer | Symscape</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="prev" href="818.html" />
+<link rel="up" href="817.html" />
+<link rel="next" href="819.html" />
+<link rel="shortcut icon" href="../files/logos/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../files/css/css_a8a589a7baa071201a9648b06a782871.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../files/css/css_c728179816712ba7ae086da46d76f784.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie.css?x" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/cti_flex/css/ie6.css?x" />
+<![endif]-->
+  <script type="text/javascript" src="../files/js/js_b3126871db8a9e9462462578379e6fd8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  <style type="text/css">
+body {font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;}
+</style>  <style type="text/css">
+body {background: #eeeeee none;}
+#header .section, #footer { background: #A0BAE1 none; }
+#site-name a:link, #site-name a:visited, #site-slogan, #footer { color: #034695; }
+</style>
+  <!--[if lte IE 6]>
+  <script type="text/javascript" src="/sites/all/themes/cti_flex/js/suckerfish.js"></script>
+  <![endif]-->
+</head>
+
+<body class="not-front not-logged-in node-type-story page-node-816 section-node two-sidebars ">
+
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+              <div id="logo-title">
+
+                      <div id="logo"><a href="../index.html" title="Home" rel="home"><img src="../files/logos/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+              <div id="title-slogan">
+
+                                    <h1 id="site-name">
+                <a href="../index.html" title="Home" rel="home">
+                Symscape                </a>
+              </h1>
+                      
+                      <div id="site-slogan">Computational Fluid Dynamics Software for All</div>
+          
+          </div> <!-- /#title-slogan -->
+        
+        </div> <!-- /#logo-title -->
+      
+      <div class="region region-header">
+  
+<div id="block-block-22" class="block block-block region-odd even region-count-1 count-4  no-header block-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <a href="../get-started-with-caediume8d9.html?utm_medium=home&amp;utm_campaign=getstarted&amp;utm_source=header"><img src="../files/flair/productbanner.gif" width="408" height="112" alt="Get Started With Caedium Now" title="Get Started With Caedium Now" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div> <!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix  with-navigation">
+
+      <div id="content" class="column"><div class="section">
+
+        
+        
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tutorials.html">Tutorials</a> › <a href="817.html">RANS Flow</a></div>                  <h1 class="title">Incompressible Transient Flow with Heat Transfer</h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-816" class="node node-type-story clearfix">
+
+   
+  
+  
+  
+      <div class="meta">
+              <span class="submitted">
+          Submitted by Alison Findon on May 25, 2013 - 18:47        </span>
+      
+          </div>
+  
+  <div class="content">
+    <p>Simulate an incompressible transient (unsteady), buoyancy-driven (natural convection) flow with heat transfer. View velocity vectors, temperature iso-surfaces, and a temperature plot as the flow evolves over time.</p>
+<p><img alt="Final State" src="../files/tutorials/incomptfht/final.png" width="484" height="363" /></p>
+<h3>Goals</h3>
+<p>In this tutorial, you will learn how to:</p>
+<ul>
+<li>Specify fluid conditions on a <strong>single volume</strong> for an incompressible, transient, buoyancy-driven flow simulation with heat transfer</li>
+<li>Change the turbulence model</li>
+<li>Specify boundary conditions on faces</li>
+<li>Specify meshing parameters</li>
+<li>Monitor residuals</li>
+<li>Generate velocity vectors</li>
+<li>Generate a volume temperature color map (iso-surfaces)</li>
+<li>Generate a temperature plot along an edge</li>
+</ul>
+<h3>Assumptions</h3>
+<ol>
+<li>You have <a href="15.html">activated</a> the <a href="../product/rans.html">Caedium RANS Flow</a> add-on, or <a href="../product/professional.html">Caedium Professional</a>.</li>
+<li>You are familiar with <a href="../tutorials/essentials.html">Caedium essentials</a>.</li>
+<li>You have either:
+<ul>
+<li>Created the geometry for this tutorial by following the tutorial <a href="813.html">&quot;Imprint a Face onto a Volume&quot;</a></li>
+<li>Imported the geometry (<a href="../files/tutorials/imprintfaceonvolume/imprint-face-volume.brep">imprint-face-volume.brep</a>) into Caedium &mdash; select the <strong>File</strong> <a href="../tutorials/essentials.html#toolbar">Toolbar</a> and click the <strong>Import</strong> button <img src="../files/tutorials/shared/import.png" alt="" /></li>
+</ul>
+</li>
+</ol>
+<p>The geometry within Caedium should appear as shown below with the Z direction upwards.</p>
+<p><img alt="Imported Geometry" src="../files/tutorials/incomptfht/importedgeometry.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Prepare the Volume</h2>
+<p>Right-click an edge of the volume, double-click the first volume in the <strong>Select</strong> dialog and then select <strong>Properties</strong> from the menu. In the <a href="../tutorials/essentials.html#propertiespanel">Properties Panel</a>, select the Volume tab <img alt= "" src="../files/tutorials/shared/volume-entity-tab.png" /> and set the <strong>Name</strong> to <strong>flow-volume</strong>.</p>
+<p><img alt="Flow Volume Name Property" src="../files/tutorials/incomptfht/flowvolumenameprops.png" width="236" height="247" /></p>
+<p>To shade the geometry faces, right-click on the <a href="../tutorials/essentials.html#viewwindow">View Window</a> (<strong>view</strong>) background, double-click <strong>sim-&gt;Faces</strong>, and then select <strong>Properties</strong> from the menu. In the Properties Panel, turn off the <strong>Transparent</strong> property to make all faces visible (shaded).</p>
+<p class="note">Shading the faces in the simulation will make it easier to select them when you configure fluid and boundary conditions.</p>
+<p><img alt="Shaded Faces" src="../files/tutorials/incomptfht/shadedfaces.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Specify the Substance Settings</h2>
+<h3>Specify the Fluid Conditions</h3>
+<p>Select the <strong>Physics</strong> <a href="../tutorials/essentials.html#toolpalette">Tool Palette</a>. Select <strong>Gases-&gt;Air</strong>. The Properties Panel will show the default properties for air. To enable incompressible viscous flow the <strong>State-&gt;Rotational</strong> and <strong>State-&gt;Viscous</strong> properties should be set to <strong>Yes</strong> (their default values). The <strong>State-&gt;Compressible</strong> and <strong>State-&gt;Species</strong> properties should to be set to <strong>No</strong> (their default values).</p>
+<p>For transient flow with heat transfer, set both <strong>State-&gt;Heat Transfer</strong> and <strong>State-&gt;Transient</strong> to <strong>Yes</strong>.</p>
+<p><img alt="Air Properties" src="../files/tutorials/incomptfht/airproperties.png" width="286" height="606" /></p>
+<p>Drag and drop the <strong>Air</strong> tool onto a face of the flow volume. Select <strong>Done</strong> to set air as the fluid inside the flow volume.</p>
+<h3>Set the Turbulence Model for the Simulation</h3>
+<p class="note">For turbulent flow, a turbulence model is an essential part of a <a href="../reynolds-averaged-navier-stokes-equations.html">Reynolds-Averaged Navier-Stokes (RANS)</a> solver. In this tutorial, you will use the <a href="http://www.cfd-online.com/Wiki/K-epsilon_models">k-epsilon turbulence model</a> rather than the default <a href="http://www.cfd-online.com/Wiki/SST_k-omega_model">SST k-omega turbulence model</a>.</p>
+<p>With the volume already selected from the previous step, the Properties Panel will show the <strong>Substance: Air</strong> properties by default. Expand the <strong>Substance: Air-&gt;Solver: RANS Flow</strong> property and set the <strong>Turbulence Model</strong> to be <strong>k-epsilon</strong>.</p>
+<p><img alt="Turbulence Model" src="../files/tutorials/incomptfht/turbprops.png" width="289" height="249" /></p>
+<h3>Set the Initial Velocity for the Simulation</h3>
+<p class="note">Initial values are used by the flow (simulation) solver to initialize its primary fields (e.g., pressure, velocity). For a transient simulation, the initial values should reflect the conditions of the primary fields at time = zero (e.g., velocity = [0 0 0]). For a steady-state simulation the initial values should be as close as possible to the final steady-state conditions of the primary fields (e.g., the inlet or free-stream velocity is typically used to initialize velocity for internal flows).</p>
+<p>In  the Properties Panel expand the <strong>Physics: Initial</strong> property and then set <strong>U</strong> to <strong>Fixed Value</strong>. Set <strong>U: Fixed Value-&gt;Value</strong> to [<strong>0 0 0</strong>] and press Enter on the keyboard.</p>
+<p><img alt="Initial Conditions Properties" src="../files/tutorials/incomptfht/initialproperties.png" width="251" height="249" /></p>
+<h3>Set Reference Properties for the Simulation</h3>
+<p class="note">The reference properties are used by the flow solver, boundary conditions, and initial conditions.</p>
+<p>Set <strong>Substance: Air-&gt;Properties-&gt;Phase: Single-&gt;Reference-&gt;U: Fixed Value-&gt;Value</strong> to [<strong>0 0 1</strong>] and press Enter on the keyboard.</p>
+<p><img alt="Reference Properties" src="../files/tutorials/incomptfht/referenceproperties.png" width="266" height="310" /></p>
+<h3>Set Flow Solver Properties</h3>
+<p>Within the <strong>Substance: Air-&gt;Solver: RANS Flow</strong> property, turn on the <strong>Archive</strong> property.</p>
+<p class="note">The Archive property enables/disables our <strong>Transient Archive Technology</strong>, which stores (archives) simulation time results (e.g., velocity) for rapid review after a simulation is completed. When archiving is enabled, flow field data are stored every time the results are updated. For large models with many updates archiving can be memory intensive and in extreme cases can lead to memory exhaustion. Archiving is best used once you are sure a simulation runs to completion. Best practice would be to run the simulation without archiving first of all and then switch archiving on for a final pass.</p>
+<p>Turn on the <strong>Dual Mesh</strong> property.</p>
+<p class="note">Enabling the Dual Mesh option automatically converts a volume mesh to a <a href="../polyhedral-tetrahedral-hexahedral-mesh-comparison.html">polyhedral mesh</a> - also known as a dual mesh. Solving the RANS equations on the polyhedral mesh compared to the equivalent tetrahedral mesh typically leads to higher accuracy results with both faster and more reliable convergence.</p>
+<p>Set <strong>Iterations</strong> to <strong>10</strong>.</p>
+<p>Expand the <strong>Control</strong> property and set the <strong>Time Step</strong> to <strong>0.05</strong>.</p>
+<p><img alt="Archive and Time-Step Properties" src="../files/tutorials/incomptfht/archivetimestepproperty.png" width="287" height="312" /></p>
+<p class="note">The Time Step property is used by the flow solver to determine how far to advance the simulation in time per iteration. If the time step is too large, the simulation will become unstable and report an error. The Iterations property controls the results update frequency by specifying the number of iterations per simulation time step.</p>
+<h2 class="tutorial-heading">Specify the Boundary Conditions</h2>
+<h3>Wall Conditions</h3>
+<p>Drag and drop the <strong>Faces-&gt;Wall</strong> tool onto a face of the flow volume. Double-click <strong>flow-volume-&gt;Faces</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong> to create walls on the outer surfaces of the flow volume.</p>
+<p class="note">A wall is a solid, impenetrable surface through which fluid cannot flow.</p>
+<h4>Wall Temperature Conditions</h4>
+<p>To change the temperature conditions on the faces shown below, right-click the large geometry-base face (shown below in blue), double-click the first face in the <strong>Select</strong> dialog and select <strong>Select/Deselect</strong>. Right-click the top face (shown below in red), double-click the first face in the <strong>Select</strong> dialog and select <strong>Properties</strong>. In the Properties Panel select the Face tab <img alt= "" src="../files/tutorials/shared/face-entity-tab.png" /> , and set <strong>Physics: Wall-&gt;Type: Default-&gt;T</strong> (temperature) to <strong>Reference</strong>.</p>
+<p><img alt="Reference Temperature Boundary Condition" src="../files/tutorials/incomptfht/temprefproperties.png" width="265" height="246" /></p>
+<p><img alt="Fixed Temperature Faces" src="../files/tutorials/incomptfht/fixedtempfaces.png" width="400" height="305" /></p>
+<p>To set the temperature on the hot source face, right-click the small circular quadrant (shown above in green), double-click the first face in the <strong>Select</strong> dialog and select <strong>Properties</strong>. In the Properties Panel select the Face tab <img alt= "" src="../files/tutorials/shared/face-entity-tab.png" /> , set <strong>Physics: Wall-&gt;Type: Default-&gt;T</strong> (temperature) to <strong>Fixed Value</strong>, then set <strong>T: Fixed Value-&gt;Value</strong> to <strong>200</strong>.</p>
+<p><img alt="Fixed Temperature Boundary Condition" src="../files/tutorials/incomptfht/hottempproperties.png" width="267" height="247" /></p>
+<h3>Symmetry Local Conditions</h3>
+<p>To create the two symmetry conditions, drag and drop the <strong>Faces-&gt;Symmetry Local</strong> tool onto one of the faces highlighted below. Double-click the first face in the <strong>Select</strong> dialog. Then select <strong>Select/Deselect</strong> and right-click on the second face (shown below), double-click the first face in the <strong>Select</strong> dialog and select <strong>Done</strong>.</p>
+<p><img alt="Symmetry Faces" src="../files/tutorials/incomptfht/symmetryfaces.png" width="400" height="263" /></p>
+<h2 class="tutorial-heading">Specify Meshing Parameters</h2>
+<p class="note">You can control the <a href="244.html">mesh</a> resolution in a region of a flow volume by creating additional geometry and using the <a href="723.html">Accuracy tool</a>, as shown in this section.</p>
+<p>For a better view of the face mesh element sizes, select the <strong>Results</strong> Tool Palette and drag and drop the <strong>Scalar Fields-&gt;A</strong> (area) tool onto a face of the flow volume. Double click <strong>flow-volume-&gt;Faces</strong> in the <strong>Select</strong> dialog and select <strong>Color Map</strong>.</p>
+<p>The request for the area color map will cause all the faces to be meshed.</p>
+<p>To see individual elements colored by area, set <strong>Style</strong> to <strong>Flat</strong> in the Properties Panel.</p>
+<p><img alt="Coarse Mesh" src="../files/tutorials/incomptfht/coarsemesh.png" width="484" height="363" /></p>
+<p>To create a region (accuracy source) to control the accuracy (mesh resolution) of the flow simulation, first select the <strong>Geometry</strong> Tool Palette, then select the <strong>Volumes-&gt;Box</strong> tool. In the Properties Panel set <strong>Lengths</strong> to [<strong>0.4 0.4 2</strong>]. Drag and drop the <strong>Volumes-&gt;Box</strong> tool onto the background of the View Window (<strong>view</strong>). Double-click <strong>sim</strong> in the <strong>Select</strong> dialog and then select <strong>Done</strong>.</p>
+<p><img alt="Accuracy Source" src="../files/tutorials/incomptfht/accuracysource.png" width="484" height="363" /></p>
+<p>Right-click on an edge of the new box, select the first volume in the <strong>Select</strong> dialog, click <strong>OK</strong>, and select <strong>Properties</strong> from the menu. In the Properties Panel, select the Volume tab <img alt= "" src="../files/tutorials/shared/volume-entity-tab.png" /> and set the <strong>Name</strong> to <strong>accuracy-source</strong>.</p>
+<p><img alt="Accuracy Source Name Property" src="../files/tutorials/incomptfht/accuracysourcenameprops.png" width="245" height="247" /></p>
+<p>Select the <strong>Physics</strong> Tool Palette and select the <strong>Special-&gt;Accuracy</strong> tool. In the Properties Panel set <strong>Accuracy</strong> to <strong>Custom</strong>, enter <strong>30</strong> for the <strong>Resolution</strong>, and press Enter on the keyboard.</p>
+<p><img alt="Accuracy Property" src="../files/tutorials/incomptfht/accuracyproperty.png" width="248" height="246" /></p>
+<p>Drag and drop the <strong>Accuracy</strong> tool onto an edge of the newly created box, double-click <strong>accuracy-source</strong> in the <strong>Select</strong> dialog and then select <strong>Set Target</strong>. Right-click on a face of the flow volume, double-click <strong>flow-volume-&gt;Faces</strong> in the <strong>Select</strong> dialog and select <strong>Done</strong>.</p>
+<p>Completing the accuracy specification will cause all the faces to be re-meshed.</p>
+<p><img alt="Refined Mesh" src="../files/tutorials/incomptfht/finemesh.png" width="484" height="363" /></p>
+<p class="note">Notice that the smallest mesh elements are clustered around the newly created box.</p>
+<p>To make subsequent geometry selections easier, right-click on an edge of the accuracy source, double-click <strong>accuracy-source-&gt;Edges</strong> in the <strong>Select</strong> dialog, and select <strong>Properties</strong> in the menu. In the Properties Panel turn on the <strong>Transparent</strong> property.</p>
+<p><img alt="Accuracy Source Invisible" src="../files/tutorials/incomptfht/accuracysourceinvisible.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Generate Initial Flow Results</h2>
+<p>To show iso-surfaces of temperature in the flow volume, select the <strong>Results </strong>Tool Palette and drag and drop <strong>Scalar Fields-&gt;T</strong> (temperature) onto a face of the flow volume. Double click <strong>flow-volume</strong> in the <strong>Select</strong> dialog and select <strong>Color Map</strong>.</p>
+<p>The request for the temperature color map will cause the volume to be meshed and may take a few seconds.</p>
+<p><img alt="Temperature Iso-Surfaces" src="../files/tutorials/incomptfht/tempisosurfaces.png" width="484" height="363" /></p>
+<p>In the View Legend left-click on the title <strong>Color Map</strong> <img alt= "" src="../files/tutorials/shared/colormap-legend.png" />, then in the Properties Panel set <strong>Colors</strong> to <strong>30</strong>.</p>
+<p><img alt="Color Map Properties" src="../files/tutorials/incomptfht/colormapproperties.png" width="187" height="247" /></p>
+<p>To show velocity vectors colored by temperature on the symmetry faces, drag and drop the <strong>Vector Fields-&gt;U</strong> (velocity) tool onto one of the symmetry faces. Double click the first face in the <strong>Select</strong> dialog and select <strong>Select/Deselect</strong>. Right-click the other symmetry face, double-click the first face in the <strong>Select</strong> dialog and select <strong>Arrows</strong>. In the <strong>Results</strong> Tool Palette double-click <strong>Scalar Fields-&gt;T</strong> (temperature) and select <strong>Color Map</strong>.</p>
+<p>The arrows will not yet appear because the initial velocity is zero.</p>
+<p>In the View Legend, left-click on the title <strong>Arrows</strong> <img alt= "" src="../files/tutorials/shared/arrows-legend.png" />, then in the Properties Panel set <strong>Scale</strong> to <strong>0.5</strong>.</p>
+<p><img alt="Arrows Properties" src="../files/tutorials/incomptfht/arrowsproperties.png" width="187" height="246" /></p>
+<p>Right-click on a face of the flow volume, double-click <strong>flow-volume-&gt;Faces</strong> in the <strong>Select</strong> dialog and select <strong>Properties</strong>. In the Properties Panel set <strong>Style</strong> to <strong>Smooth</strong> and turn on the <strong>Transparent</strong> property.</p>
+<p><img alt="Transparent Smooth Faces" src="../files/tutorials/incomptfht/transparentsmooth.png" width="484" height="363" /></p>
+<p>To see an XY plot of the temperature against Z along the edge shared by the symmetry faces, select <strong>Vector Fields-&gt;XYZ</strong> (position). In the Properties Panel set <strong>Scalar</strong> to <strong>Z</strong>.</p>
+<p><img alt="XYZ Scalar Properties" src="../files/tutorials/incomptfht/XYZprops.png" width="187" height="496" /></p>
+<p>Drag and drop <strong>Scalar Fields-&gt;T</strong> (temperature) onto the edge shared by the symmetry faces, double-click the first edge in the <strong>Select</strong> dialog and select <strong>XY Plot</strong>.</p>
+<p class="note">By default the plot X-axis will show the XYZ scalar, hence the need to change the XYZ scalar to Z above.</p>
+<p>Left-click <strong>edge_23</strong> in the <strong>T Plot</strong> Legend to select it.  In the Properties Panel, set the <strong>Symbol</strong> to <strong>None</strong>.</p>
+<p><img alt="T Plot Properties" src="../files/tutorials/incomptfht/tplotprops.png" width="202" height="248" /></p>
+<p>Drag and drop the <strong>T Plot</strong> tab over to the right-hand edge of the Caedium application window to split the window into two parts as shown below.</p>
+<p><img alt="Temperature Plot" src="../files/tutorials/incomptfht/tempxyplot.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Create Residuals Monitor</h2>
+<p>Drag and drop the <strong>Special-&gt;Residuals</strong> tool onto an edge of the flow volume. Double-click <strong>flow-volume</strong> in the <strong>Select</strong> dialog and select <strong>Monitor</strong> to create the residuals monitor.</p>
+<p>Drag and drop the <strong>Residuals</strong> tab over to the right-hand edge of the Caedium application window to split the window into three parts as shown below.</p>
+<p><img alt="Residuals Monitor" src="../files/tutorials/incomptfht/residualsmonitor.png" width="484" height="363" /></p>
+<h2 class="tutorial-heading">Run the Flow Solver</h2>
+<p class="note">The number of flow (simulation) solver iterations is determined by multiplying the number of simulation time-steps (default = 5) by the number of iterations per simulation time-step (default = 100). After each simulation time-step (equivalent to 100 iterations by default) the results will be refreshed.</p>
+<p>In the "Set Flow Solver Properties" section you set the number of iterations per simulation time-step (Iterations property) to 10, and so for this simulation you will set the number of simulation time-steps to 60, for a total of 600 iterations.</p>
+<p>This simulation is transient, therefore each iteration is equivalent to the <strong>Solver: RANS Flow-&gt;Control-&gt;Time Step</strong> property (0.05s) you set earlier. In total you will simulate 30s (600 * 0.05s) in real time.</p>
+<p>Right-click on the View Window (<strong>view</strong>) background, double-click <strong>sim</strong>, and then select <strong>Properties</strong> from the menu. Select the Simulation tab <img alt= "" src="../files/tutorials/shared/simulation-tab.png" /> in the Properties Panel. Set the <strong>Time-&gt;Duration</strong> to <strong>60</strong>.</p>
+<p><img alt="Duration Property" src="../files/tutorials/incomptfht/durationproperty.png" width="206" height="247" /></p>
+<p>In the <strong>Home</strong> Toolbar click the <strong>Run</strong> button <img alt="" src="../files/tutorials/shared/play.png" /> to run the flow solver.</p>
+<p class="note">If you wanted to interrupt the flow solver, you would re-click the Run button; the solver would then stop at the end of the current simulation time-step.</p>
+<p>Let the solver complete its run. Note the updates of the velocity vectors, temperature iso-surfaces, the temperature plot, and the residuals monitor as the simulation progresses.</p>
+<p><img alt="Final State" src="../files/tutorials/incomptfht/final.png" width="484" height="363" /></p>
+<p>You can review the entire flow simulation in real-time thanks to the <strong>Archive</strong> property you turned on earlier. In the <strong>Home</strong> Toolbar click the <strong>Start</strong> button <img alt= "" src="../files/tutorials/shared/beginning.png" /> and then the <strong>Run</strong> button. Click the <strong>Loop</strong> button <img alt= "" src="../files/tutorials/shared/loop.png" /> to continually loop the play back.</p>
+<p>The final simulation should resemble the movie shown below:</p>
+<p><iframe width="480" height="360" src="https://www.youtube.com/embed/fupRLafL2Ew" frameborder="0" allowfullscreen></iframe></p>
+  <div id="book-navigation-426" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="818.html" class="page-previous" title="Go to previous page">‹ Incompressible Flow Through a Pipe into a Box</a>
+                    <a href="817.html" class="page-up" title="Go to parent page">up</a>
+                    <a href="819.html" class="page-next" title="Go to next page">Transonic Flow Over the NACA 0012 Airfoil ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="node-links">
+      </div>
+
+  
+</div> <!-- /.node -->
+
+
+
+
+  <div id="comments" class="comment_wrapper">
+      <h2 class="title">Comments</h2>
+  
+  <a id="comment-677"></a>
+<div class="comment comment-published first odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="816.html#comment-677" class="active">Symmetry Clarification</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Ryan Biggs (not verified) on September 19, 2010 - 13:21.  </div>
+
+  <div class="content">
+    <p>It seems that the flow volume is set to be symmetric in X+Y (Specify the Boundary Conditions -&gt; Symmetry Local Conditions above). But if that were the case, one would expect the convection cell to be centered along the Z axis (edge shared by the two symmetry faces) instead of "off the wall" a bit as the simulation results show. What is the nuance in the symmetry specifications here that results in the observed cell position, which means there are 4 cells instead of one if the symmetry tool is used to view the entire simulation?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-678"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="816.html#comment-678" class="active">Clarification</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on September 19, 2010 - 14:28.  </div>
+
+  <div class="content">
+    <p>Good questions.</p>
+<p>The Symmetry Local conditions are used by the RANS Flow solvers. The Symmetry (global) condition is purely for visualization (this is not the case when it is used with the <a href="287.html">Panel Flow solver</a>), so in this tutorial it would provide the ability to display the 3 symmetric quadrants. For more details see the section "Use Symmetry to View the Entire Simulation" in the tutorial <a href="#">"Incompressible Flow Through a Pipe into a Box."</a></p>
+<p>Given that natural convection is sensitive to initial startup conditions I think the strong temperature gradient between the hot spot and the main floor briefly drives the flow laterally before buoyancy takes over and the vertical plumes develop. This could be a nuance of the mesh resolution - with a finer mesh you may see more of the behavior you expect, or it could be the time step is too large.</p>
+<p>Hopefully this tutorial demonstrates how to configure a transient natural convection flow and then for further understanding I would encourage experimenting with the control parameters.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-679"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="816.html#comment-679" class="active">Very helpful</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by Ryan Biggs (not verified) on September 20, 2010 - 11:17.  </div>
+
+  <div class="content">
+    <p>Thanks!</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-767"></a>
+<div class="comment comment-published even clearfix">
+  
+      <h3 class="title">
+      <a href="816.html#comment-767" class="active">Now Turbulent</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on December 12, 2010 - 14:08.  </div>
+
+  <div class="content">
+    <p>We've just updated this tutorial to be turbulent (rather than laminar) with the k-epsilon turbulence model. With this change the hot plume is centered on the symmetry edge rather than slightly detached as previously - which was the focus of this set of comments.</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1074"></a>
+<div class="comment comment-published odd comment-by-anonymous clearfix">
+  
+      <h3 class="title">
+      <a href="816.html#comment-1074" class="active">Vortex shedding</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by <a href="http://www.solvengineer.com/" rel="nofollow">Mihai</a> (not verified) on May 24, 2011 - 14:08.  </div>
+
+  <div class="content">
+    <p>What are the recommended settings to be able to visualize vortex shedding when modeling the air flow around a tall building?</p>
+      </div>
+
+  </div> <!-- /.comment -->
+<a id="comment-1075"></a>
+<div class="comment comment-published last even clearfix">
+  
+      <h3 class="title">
+      <a href="816.html#comment-1075" class="active">Transient Simulation to Capture Vortex Shedding</a>          </h3>
+  
+  
+  <div class="submitted">
+    Submitted by symscape on May 25, 2011 - 08:56.  </div>
+
+  <div class="content">
+    <p>To capture <a href="http://en.wikipedia.org/wiki/Vortex_shedding">vortex shedding</a> you'll need to setup a transient simulation as shown above. However, you'll also need to configure your geometry for external flow similar to the the tutorial <a href="831.html">"Flow Over a Rotating Wheel with Moving Ground,"</a> with the exceptions:</p>
+<ul>
+<li>Use a complete model, not a symmetrical model</li>
+<li>Replace the wheel with the building</li>
+<li>Skip the rotating and moving ground settings</li>
+</ul>
+<p>Vortex shedding is not a certainty even with the setup I've described. It is dependent on the <a href="../reynolds-number.html">Reynolds number</a>, so for airflow around a building it depends on:</p>
+<ul>
+<li>Cross-section diameter (or equivalent) of the building</li>
+<li>Onset velocity</li>
+</ul>
+      </div>
+
+  </div> <!-- /.comment -->
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+      <div id="navigation"><div class="section clearfix">
+
+	           <div id="suckerfishmenu">
+            <ul class="menu"><li class="expanded first"><a href="../products.html">Products</a><ul class="menu"><li class="leaf first"><a href="../product/professional.html" title="Caedium Professional">Professional</a></li>
+<li class="leaf"><a href="../product/rans.html" title="Caedium RANS Flow">RANS Flow</a></li>
+<li class="leaf"><a href="../product/panel.html" title="Caedium Panel Flow">Panel Flow</a></li>
+<li class="leaf"><a href="../product/builder.html" title="Caedium Builder">Builder</a></li>
+<li class="leaf"><a href="../product/transient.html" title="Caedium Transient">Transient</a></li>
+<li class="leaf"><a href="../product/exchange.html" title="Caedium Exchange">Exchange</a></li>
+<li class="leaf"><a href="../product/viz.html" title="Caedium Viz Export">Viz Export</a></li>
+<li class="leaf"><a href="../product/caedium.html">Caedium</a></li>
+<li class="leaf"><a href="../product/comparison.html">Comparison</a></li>
+<li class="leaf last"><a href="../product/testimonials.html" title="Caedium Testimonials">Testimonials</a></li>
+</ul></li>
+<li class="leaf"><a href="../examples.html" title="">Examples</a></li>
+<li class="leaf"><a href="../tutorials.html">Tutorials</a></li>
+<li class="leaf"><a href="../news.html">News</a></li>
+<li class="collapsed"><a href="../blog.html">Blog</a></li>
+<li class="leaf"><a href="../about.html" title="">About</a></li>
+<li class="expanded last"><a href="../resources.html" title="">More »</a><ul class="menu"><li class="leaf first"><a href="../articles.html">Articles</a></li>
+<li class="leaf"><a href="../image.html">Gallery</a></li>
+<li class="leaf"><a href="../support.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="../forum.html">Forums</a></li>
+<li class="leaf"><a href="../downloads.html" title="">Downloads</a></li>
+<li class="leaf"><a href="../newsletters.html" title="">Newsletters</a></li>
+<li class="leaf"><a href="../partners.html">Partners</a></li>
+<li class="leaf"><a href="../poll.html">Polls</a></li>
+<li class="leaf last"><a href="../links.html" title="">Links</a></li>
+</ul></li>
+</ul>          </div>
+        
+        
+        
+      </div></div> <!-- /.section, /#navigation -->
+
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  
+<div id="block-book-0" class="block block-book region-odd odd region-count-1 count-1  block-1"><div class="block-inner">
+
+      <h2 class="title"><a href="../tutorials.html" class="book-title">Tutorials</a></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="collapsed first"><a href="../tutorials/essentials.html">Essentials Manual</a></li>
+<li class="collapsed"><a href="428.html">Builder</a></li>
+<li class="expanded active-trail"><a href="817.html">RANS Flow</a><ul class="menu"><li class="leaf first"><a href="818.html">Incompressible Flow Through a Pipe into a Box</a></li>
+<li class="leaf active-trail"><a href="816.html" class="active">Incompressible Transient Flow with Heat Transfer</a></li>
+<li class="leaf"><a href="819.html">Transonic Flow Over the NACA 0012 Airfoil</a></li>
+<li class="leaf"><a href="831.html">Flow Over a Rotating Wheel with Moving Ground</a></li>
+<li class="leaf"><a href="1082.html">Flow Over a CO2 Dragster</a></li>
+<li class="leaf"><a href="1255.html">Rotating Paddle using Moving Reference Frame</a></li>
+<li class="leaf"><a href="1257.html">Transient Water and Air Flow in a Tank</a></li>
+<li class="leaf"><a href="1718.html">Conjugate Heat Transfer for a Heat Sink</a></li>
+<li class="leaf last"><a href="1281.html">Flow Over a Double-Sided Membrane</a></li>
+</ul></li>
+<li class="collapsed"><a href="430.html">Panel Flow</a></li>
+<li class="collapsed last"><a href="../tips.html">Tips</a></li>
+</ul>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+      <div class="region region-sidebar-second column sidebar"><div class="section">
+  
+<div id="block-block-23" class="block block-block region-odd even region-count-1 count-2  block-1"><div class="block-inner">
+
+      <h2 class="title">Feedback</h2>
+  
+  <div class="content">
+    Questions? Ideas? Problems?<br /><br />
+<a href="../forum.html"><img title="Forums" alt="Forums" src="../files/flair/feedback-button.png" width="177" height="43" /></a>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+<div id="block-views-newsletters_view-block_1" class="block block-views region-even odd region-count-2 count-3  block-2"><div class="block-inner">
+
+      <h2 class="title">Newsletter</h2>
+  
+  <div class="content">
+    <div class="view view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1 view-newsletters-view view-id-newsletters_view view-display-id-block_1 view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/may-2019-new-caedium-release-and-tutorials.html">May 2019: New Caedium Release and Tutorials</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/july-2017-digital-paleontology-with-cfd.html">July 2017: Digital Paleontology with CFD</a></span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="../newsletters/june-2017-runners-insects-and-a-wind-turbine.html">June 2017: Runners, Insects, and a Wind Turbine</a></span>
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="../newsletters.html">
+    more  </a>
+</div>
+  
+  
+  
+</div> <!-- /.view -->
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+</div></div> <!-- /.section, /.region -->
+
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer"><div class="section">
+
+                  <div id="footer-message">Copyright &copy; 2006-2024 Symscape, All rights reserved | <a href="../contact.html">Contact</a> | <a href="../trademarks.html">Trademarks</a> | <a href="../privacy.html">Privacy</a></div>
+        
+        
+      </div></div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  
+</body>
+
+<!-- Mirrored from www.symscape.com/node/816 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2024 15:12:18 GMT -->
+</html>

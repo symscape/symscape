@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.symscape.com/taxonomy/term/57/0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Problems</title>
+    <link>https://www.symscape.com/taxonomy/term/57/0</link>
+    <description></description>
+    <language>en</language>
+          <item>
+    <title>Mac OS X error: shell-init: error retrieving current directory</title>
+    <link>https://www.symscape.com/node/1727</link>
+    <description>&lt;p&gt;To avoid the error &lt;em&gt;&quot;shell-init: error retrieving current directory: getcwd: cannot access parent directories: Operation not permitted&quot;&lt;/em&gt; on Mac OS X you need to give &lt;strong&gt;/bin/sh&lt;/strong&gt; Full Disk Access to enable Caedium solvers and utilities to run in the background. Follow the procedure:&lt;/p&gt;
+&lt;ol&gt;
+&lt;/ol&gt;&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1727&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1727#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Tue, 24 Mar 2020 15:01:28 +0000</pubDate>
+ <dc:creator>symscape</dc:creator>
+ <guid isPermaLink="false">1727 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Fan condition error message</title>
+    <link>https://www.symscape.com/node/1725</link>
+    <description>&lt;p&gt;Hi.&lt;br /&gt;
+I&#039;ve been having some trouble implementing a fan inlet boundary condition. In trying to do so, I got the following error message:&lt;/p&gt;
+&lt;p&gt;&quot;Warning:&lt;br /&gt;
+Flow Volume [www.2035.5] RANS Flow: Failed&lt;br /&gt;
+Failed to open file: &#039;C:\Users\Peter\AppData\Local\Temp/of-507097002/%1/constant/fanCurve-5&#039;&quot;&lt;/p&gt;
+&lt;p&gt;I was curious what this meant. The computer OS is Windows 10.&lt;br /&gt;
+Thanks very much.&lt;/p&gt;
+&lt;p&gt;Peter&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1725#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Thu, 08 Aug 2019 21:53:31 +0000</pubDate>
+ <dc:creator>PeterG</dc:creator>
+ <guid isPermaLink="false">1725 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Panel flow over an aircraft</title>
+    <link>https://www.symscape.com/node/1707</link>
+    <description>&lt;p&gt;Hi. I&#039;m pretty new to Caedium, and I&#039;ve been having some issues trying to model the coefficient of pressure over an aircraft body, which I imported as an STL file. I based the conditions in use off the tutorials available on this website, ie. only specifying fairly limited variables air/ linear velocity/ accuracy. However, when I attempt to map the pressure coefficient I get this error:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1707&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1707#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Mon, 13 Nov 2017 00:35:21 +0000</pubDate>
+ <dc:creator>laminar</dc:creator>
+ <guid isPermaLink="false">1707 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Error on Simulation</title>
+    <link>https://www.symscape.com/node/1705</link>
+    <description>&lt;p&gt;Does anyone has some ideas how i can fix this?&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://imgur.com/a/qKALv&quot; title=&quot;http://imgur.com/a/qKALv&quot;&gt;http://imgur.com/a/qKALv&lt;/a&gt;&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1705#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Fri, 01 Sep 2017 00:59:40 +0000</pubDate>
+ <dc:creator>Pépézinho</dc:creator>
+ <guid isPermaLink="false">1705 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Wavefront export problem</title>
+    <link>https://www.symscape.com/node/1595</link>
+    <description>&lt;p&gt;Import obj file is ok. But export is not correct - mesh is broken&lt;br /&gt;
+In latest version (v2.1.1) obj export make right mesh (but have not some tools).&lt;br /&gt;
+How can I fix this?&lt;br /&gt;
+Sorry for my english. Thanks.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1595#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Mon, 31 Aug 2015 20:35:35 +0000</pubDate>
+ <dc:creator>Siradom</dc:creator>
+ <guid isPermaLink="false">1595 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Doesn&#039;t recognize files on my computer</title>
+    <link>https://www.symscape.com/node/1594</link>
+    <description>&lt;p&gt;I just downloaded Caedium for Mac. I&#039;ve used Rhino to export .stp and .igs files, but Caedium doesn&#039;t reconize these file formats and won&#039;t import them. What am I doing wrong.&lt;/p&gt;
+&lt;p&gt;Thanks&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1594#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Sat, 29 Aug 2015 00:27:15 +0000</pubDate>
+ <dc:creator>slyoung765</dc:creator>
+ <guid isPermaLink="false">1594 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Streamlines problem</title>
+    <link>https://www.symscape.com/node/1587</link>
+    <description>&lt;p&gt;Hello friends. I am learning how to operate with the software. My problem is that I can&#039;t seem to understand how to generate proper streamlines. Mine just go trough to the surface of any geometry I import. They look like this:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://drive.google.com/file/d/0B3KoLy4FwJftbW9McGVCMnNEMmc/view?usp=sharing&quot; title=&quot;https://drive.google.com/file/d/0B3KoLy4FwJftbW9McGVCMnNEMmc/view?usp=sharing&quot;&gt;https://drive.google.com/file/d/0B3KoLy4FwJftbW9McGVCMnNEMmc/view?usp=sh...&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://drive.google.com/file/d/0B3KoLy4FwJftaFR6c3RYMXh4ZTg/view?usp=sharing&quot; title=&quot;https://drive.google.com/file/d/0B3KoLy4FwJftaFR6c3RYMXh4ZTg/view?usp=sharing&quot;&gt;https://drive.google.com/file/d/0B3KoLy4FwJftaFR6c3RYMXh4ZTg/view?usp=sh...&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1587&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1587#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Tue, 14 Jul 2015 11:39:37 +0000</pubDate>
+ <dc:creator>davidsmavrov</dc:creator>
+ <guid isPermaLink="false">1587 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Not applying Velocity Vector Field to model, features greyed out...</title>
+    <link>https://www.symscape.com/node/1577</link>
+    <description>&lt;p&gt;Hi,I&#039;m trying to evaluate the Ceadium software for purchase but am having trouble applying a velocity vector field from the Results panel to my model.  I&#039;ve tried applying to all faces of the flow volume or just a single face.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1577&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1577#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Thu, 30 Apr 2015 16:52:51 +0000</pubDate>
+ <dc:creator>timher</dc:creator>
+ <guid isPermaLink="false">1577 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Simulation doesn&#039;t start, no error messages</title>
+    <link>https://www.symscape.com/node/1566</link>
+    <description>&lt;p&gt;Hi&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1566&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1566#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Sun, 01 Mar 2015 11:04:11 +0000</pubDate>
+ <dc:creator>RV</dc:creator>
+ <guid isPermaLink="false">1566 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Odd error message</title>
+    <link>https://www.symscape.com/node/1561</link>
+    <description>&lt;p&gt;Hello. In working on a simulation, when I attempted to run it, I got the following error message.&lt;/p&gt;
+&lt;p&gt;&quot;Warning:&lt;br /&gt;
+Flow Volume [www.1702.5] RANS Flow: Failed&lt;br /&gt;
+Unexpected process exit.&lt;/p&gt;
+&lt;p&gt;--&amp;gt; FOAM FATAL IO ERROR:&lt;br /&gt;
+Expected a &#039;)&#039; while reading binaryBlock, found on line 14 an error&lt;/p&gt;
+&lt;p&gt;file: /var/folders/h6/bzd4q02j6r1fgrgt2v59hp8c0000gn/T/of-2ac52329B2ac514174/constant/polyMesh/points at line 14.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1561&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1561#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Sun, 01 Feb 2015 00:30:54 +0000</pubDate>
+ <dc:creator>PeterG</dc:creator>
+ <guid isPermaLink="false">1561 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Problem with modelisation of air flow</title>
+    <link>https://www.symscape.com/node/1555</link>
+    <description>&lt;p&gt;Hello !&lt;br /&gt;
+I&#039;m French so my english might do some mistakes sorry for that ! &lt;/p&gt;
+&lt;p&gt;I&#039;m actually studying in post preparatory school and I have to do some kind of project.&lt;/p&gt;
+&lt;p&gt;I am working on a problem in our lab : the fact is that the ventilation is working better when all windows and doors are closed.  It is 10 m*10m*2m, there are two inlets and two outlets in this lab,&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1555&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1555#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Sat, 10 Jan 2015 22:23:28 +0000</pubDate>
+ <dc:creator>PaulH</dc:creator>
+ <guid isPermaLink="false">1555 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Recent onset of several problems</title>
+    <link>https://www.symscape.com/node/1553</link>
+    <description>&lt;p&gt;Hello.&lt;br /&gt;
+I recently started having a number of problems with Caedium, which I have been using for several months now. I am using the latest version.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.symscape.com/node/1553&quot; target=&quot;_blank&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;</description>
+     <comments>https://www.symscape.com/node/1553#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Mon, 05 Jan 2015 15:22:53 +0000</pubDate>
+ <dc:creator>PeterG</dc:creator>
+ <guid isPermaLink="false">1553 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>License Server Error</title>
+    <link>https://www.symscape.com/node/1551</link>
+    <description>&lt;p&gt;I try to activate my software using the fast method, i paste the correct serial number but get the error -&lt;br /&gt;
+License Activation Failed.&lt;br /&gt;
+License server could be busy, try again later,&lt;br /&gt;
+or Activation License Key is invalid.&lt;br /&gt;
+I also tried the email activation, i sent the mail with the information but did not receive any mail back.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1551#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Thu, 25 Dec 2014 08:06:09 +0000</pubDate>
+ <dc:creator>Abdullah Khan</dc:creator>
+ <guid isPermaLink="false">1551 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>Error encountered while subtracting volumes?</title>
+    <link>https://www.symscape.com/node/1542</link>
+    <description>&lt;p&gt;I was trying to subtract a group of volumes from a bigger volume and encountered this following error,&lt;br /&gt;
+&quot;Error:&lt;br /&gt;
+Create Subtract failed.&lt;br /&gt;
+Open Cascade failure: TopOpeBRep_EdgesIntersector : Situation Unknown M&quot;&lt;br /&gt;
+Please explain me about the corrective actions to be taken to avoid this error. Thank you.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1542#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Sat, 01 Nov 2014 09:10:03 +0000</pubDate>
+ <dc:creator>Balaji Ravikanti</dc:creator>
+ <guid isPermaLink="false">1542 at https://www.symscape.com</guid>
+  </item>
+  <item>
+    <title>No 30 day trial key code sent</title>
+    <link>https://www.symscape.com/node/1541</link>
+    <description>&lt;p&gt;I&#039;m trying to see what your program will do, but it appears you think you&#039;ve sent a key code for a 30 day trial but I don&#039;t seem to have received e-mail.  I&#039;ve checked blocked e-mails and can not find any evidence of e-mail.  Please respond.&lt;/p&gt;
+</description>
+     <comments>https://www.symscape.com/node/1541#comments</comments>
+ <category domain="https://www.symscape.com/taxonomy/term/57">Problems</category>
+ <pubDate>Wed, 29 Oct 2014 16:26:55 +0000</pubDate>
+ <dc:creator>John Chronic</dc:creator>
+ <guid isPermaLink="false">1541 at https://www.symscape.com</guid>
+  </item>
+  </channel>
+</rss>
